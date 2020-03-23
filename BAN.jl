@@ -51,6 +51,26 @@ function _sum(a::Ban, b::Ban)
     return c;
 end
 
+# Multiplication of two Bans
+function _mul(a::Ban, b::Ban)
+
+    c = zero(a);
+    c.p = a.p + b.p;
+    
+    for i = 1:SIZE
+        for j = 1:SIZE-i+1
+            c[i+j-1] += a[i] * b[j];
+        end
+    end
+    
+    return c;
+end
+
+# Division of two Bans
+function _div(a::Ban, b::Ban)
+
+end
+
 function _scalar_mul(a::Ban, b::T) where T <: Real
 
     c = Ban(a);
@@ -77,8 +97,14 @@ Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
+Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
+Base.:(/)(a::Ban, b::Ban) = _div(a,b)
+
+# Maintained to speed up the computations
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
+Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
+Base.:(/)(a::T, b::Ban) where T <: Real = _scalar_mul(b,1/a)
 
 end
 
