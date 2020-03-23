@@ -19,6 +19,7 @@ mutable struct Ban <: Number
     # Constructor
     Ban(p::Int64,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
+    Ban(x::Bool) = one(Ban)
 end
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
@@ -30,6 +31,19 @@ function _constraints_satisfaction(p::Int64,num::Array{T,1}) where T <: Real
     length(num) != SIZE && error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."))
     num[1] == 0 && p != 0 && any(x->x!=0, num[2:SIZE]) && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
     return true
+end
+
+function _show(io::IO, a::Ban)
+
+    print(string("α^",a.p,"(",a.num[1]))
+    for i=2:SIZE
+        if a[i] >= 0 
+            print(string(" + ", a[i], "η^", i-1))
+        else
+            print(string(" - ", -a[i], "η^", i-1))
+        end
+    end
+    print(")")
 end
 
 # Sum of two Bans
@@ -128,6 +142,7 @@ principal(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = a.num[1]; Ban(a.p, tmp
 magnitude(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(a.p, tmp))
 degree(a::Ban) = a.p
 
+Base.show(io::IO, a::Ban) = _show(io, a)
 Base.getindex(a::Ban, i::Int64) = a.num[i]
 Base.setindex!(a::Ban, v::T, i::Int64) where T<:Real = (a.num[i] = v)
 
@@ -144,6 +159,8 @@ Base.inv(a::Ban) = 1/a
 Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
 Base.isless(a::Ban, b::Ban) = _isless(a, b)
 
+Base.conj(a::Ban) = a
+
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
@@ -157,7 +174,8 @@ Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
 
 
-#LinearAlgebra.inv(A::AbstractMatrix{Ban}) = _inv()
+#LinearAlgebra.factorize(A::StridedMatrix{Ban})
+#LinearAlgebra.inv(A::AbstractMatrix{Ban}) = _inv(A)
 
 end
 
