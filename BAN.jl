@@ -2,6 +2,7 @@ __precompile__()
 module BAN
 
 export Ban
+export degree, magnitude, principal
 
 # α^p P(η) , P(0) != 0 except for the zero
 
@@ -9,7 +10,7 @@ export Ban
 SIZE = 4;
 
 # Number declaration
-mutable struct Ban
+mutable struct Ban <: Number
 
     # Members
     p::Int64
@@ -57,15 +58,25 @@ function _scalar_mul(a::Ban, b::T) where T <: Real
     return c;
 end
 
+principal(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = a.num[1]; Ban(a.p, tmp))
+magnitude(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(a.p, tmp))
+degree(a::Ban) = a.p
+
 Base.getindex(a::Ban, i::Int64) = a.num[i]
 Base.setindex!(a::Ban, v::T, i::Int64) where T<:Real = (a.num[i] = v)
+
+Base.copy(a::Ban) = Ban(a.p, copy(a.num))
+Base.convert(::Type{Ban}, a::T) where T <: Real = a*one(Ban)
+Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
+
+Base.zero(a::Ban) = Ban(0, zeros(length(a.num)))
+Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
+Base.one(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(0, tmp))
+Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
+
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
-Base.:(+)(a::Ban, b::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = b; _sum(a,Ban(0,tmp)))
-Base.:(+)(a::T, b::Ban) where T <: Real = b+a
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
-Base.:(-)(a::Ban, b::T) where T <: Real = _sum(a,-b)
-Base.:(-)(a::T, b::Ban) where T <: Real = -_sum(b,-a)
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 
