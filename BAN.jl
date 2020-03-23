@@ -77,9 +77,31 @@ function _mul(a::Ban, b::Ban)
     return c;
 end
 
-# Division of two Bans
+# Division of two Bans (Assumed SIZE >= 1)
 function _div(a::Ban, b::Ban)
     
+    # Check validity of operation
+    a == 0 && b == 0 && error("Undef behavior: 0/0")
+    b == 0 && error("Division by zero")
+    
+    c = Ban(a);
+    c.p -= b.p;
+    
+    _b = Ban(b);
+    _b.p = 0; # for overflow avoidance
+    normalizer = _b[1];
+    _b.num = -(_b.num/normalizer);
+    _b += 1;
+    
+    eps = Ban(_b);
+    
+    c.num += (eps*a).num; 
+    for i = 2:SIZE
+        eps *= _b;
+        c.num += (eps*a).num
+    end
+    
+    return c/normalizer # if the scalar division is deleted this must be changed into c.num /= normalizer; return c; (otherwise loop happens)
 end
 
 function _scalar_mul(a::Ban, b::T) where T <: Real
@@ -110,19 +132,16 @@ Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
-#Base.(==)(a::Ban, b::Ban) = (a.p == b.p &&)
+Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
-Base.:(/)(a::T, b::Ban) where T <: Real = _scalar_mul(b,1/a)
 
 end
 
 # TODO
 #
-# Mul
-# Div
 # Pow
-# modification of the SIZE value
+# Let to give an input array smaller than SIZE and fill the remaining with zeros
