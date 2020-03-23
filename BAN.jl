@@ -60,8 +60,12 @@ end
 Base.getindex(a::Ban, i::Int64) = a.num[i]
 Base.setindex!(a::Ban, v::T, i::Int64) where T<:Real = (a.num[i] = v)
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
-Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
+Base.:(+)(a::Ban, b::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = b; _sum(a,Ban(0,tmp)))
+Base.:(+)(a::T, b::Ban) where T <: Real = b+a
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
+Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
+Base.:(-)(a::Ban, b::T) where T <: Real = _sum(a,-b)
+Base.:(-)(a::T, b::Ban) where T <: Real = -_sum(b,-a)
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 
@@ -69,8 +73,6 @@ end
 
 # TODO
 #
-# Sum between real and ban
-# Diff between real and ban
 # Mul
 # Div
 # Pow
