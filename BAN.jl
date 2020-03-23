@@ -111,6 +111,19 @@ function _scalar_mul(a::Ban, b::T) where T <: Real
     return c;
 end
 
+function _isless(a::Ban, b::Ban)
+
+    a.p < b.p && b[1] >= 0 && true
+    a.p > b.p && a[1] <= 0 && true
+    
+    for i=1:SIZE
+        a[i] < b[i] && true
+        a[i] > b[i] && false
+    end
+    
+    false
+end
+
 principal(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = a.num[1]; Ban(a.p, tmp))
 magnitude(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(a.p, tmp))
 degree(a::Ban) = a.p
@@ -127,6 +140,10 @@ Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
 Base.one(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(0, tmp))
 Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 
+Base.inv(a::Ban) = 1/a
+Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
+Base.isless(a::Ban, b::Ban) = _isless(a, b)
+
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
@@ -139,9 +156,15 @@ Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
 
+
+#LinearAlgebra.inv(A::AbstractMatrix{Ban}) = _inv()
+
 end
 
 # TODO
 #
 # Pow
 # Let to give an input array smaller than SIZE and fill the remaining with zeros
+#
+# Matrix factorizations for speeding up computations https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/stdlib/LinearAlgebra/src/dense.jl#L1149-L1195
+# Inverse
