@@ -17,8 +17,19 @@ mutable struct Ban <: Number
     num::Array{Float64,1}
     
     # Constructor
-    Ban(p::Int64,num::Array{T,1}) where T <: Real = (length(num) == SIZE) ? new(p,copy(num)) : error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."));
+    Ban(p::Int64,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
+end
+
+# Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
+# The constraints are:  1) lenght of SIZE; 
+#                       2) the first entry of the array must be non-zero except for the "0"
+#                       3) the "0" is represented with a vector of zero of degree zero
+function _constraints_satisfaction(p::Int64,num::Array{T,1}) where T <: Real
+    
+    length(num) != SIZE && error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."))
+    num[1] == 0 && p != 0 && any(x->x!=0, num[2:SIZE]) && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
+    return true
 end
 
 # Sum of two Bans
@@ -68,7 +79,7 @@ end
 
 # Division of two Bans
 function _div(a::Ban, b::Ban)
-
+    
 end
 
 function _scalar_mul(a::Ban, b::T) where T <: Real
@@ -99,6 +110,7 @@ Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
+#Base.(==)(a::Ban, b::Ban) = (a.p == b.p &&)
 
 # Maintained to speed up the computations
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
