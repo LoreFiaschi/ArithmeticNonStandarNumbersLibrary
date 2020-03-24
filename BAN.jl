@@ -127,15 +127,15 @@ end
 
 function _isless(a::Ban, b::Ban)
 
-    a.p < b.p && b[1] >= 0 && true
-    a.p > b.p && a[1] <= 0 && true
+    a.p < b.p && (b[1] > 0 || b[1] == 0 && a[1] < 0) && return true
+    a.p > b.p && (a[1] < 0 || a[1] == 0 && b[1] > 0) && return true
     
     for i=1:SIZE
-        a[i] < b[i] && true
-        a[i] > b[i] && false
+        a[i] < b[i] && return true
+        a[i] > b[i] && return false
     end
     
-    false
+    return false
 end
 
 principal(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = a.num[1]; Ban(a.p, tmp))
@@ -160,6 +160,7 @@ Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
 Base.isless(a::Ban, b::Ban) = _isless(a, b)
 
 Base.conj(a::Ban) = a
+Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
@@ -172,10 +173,6 @@ Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
-
-
-#LinearAlgebra.factorize(A::StridedMatrix{Ban})
-#LinearAlgebra.inv(A::AbstractMatrix{Ban}) = _inv(A)
 
 end
 
