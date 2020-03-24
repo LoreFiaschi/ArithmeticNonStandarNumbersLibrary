@@ -147,6 +147,7 @@ Base.getindex(a::Ban, i::Int64) = a.num[i]
 Base.setindex!(a::Ban, v::T, i::Int64) where T<:Real = (a.num[i] = v)
 
 Base.copy(a::Ban) = Ban(a.p, copy(a.num))
+Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = a*one(Ban)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 
@@ -167,6 +168,9 @@ Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
+
+Base.:(<<)(a::Ban, b::Int64) = Ban(a.p+=b, a.num)
+Base.:(>>)(a::Ban, b::Int64) = Ban(a.p-=b, a.num)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
@@ -178,8 +182,7 @@ end
 
 # TODO
 #
-# Pow
-# Let to give an input array smaller than SIZE and fill the remaining with zeros
+# 
 #
-# Matrix factorizations for speeding up computations https://github.com/JuliaLang/julia/blob/b8e9a9ecc62ab49003bd4f1834771bdeb8cb1aa2/stdlib/LinearAlgebra/src/dense.jl#L1149-L1195
-# Inverse
+#
+# Let to give an input array smaller than SIZE and fill the remaining with zeros
