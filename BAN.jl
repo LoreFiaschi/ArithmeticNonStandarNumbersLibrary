@@ -159,6 +159,8 @@ Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 Base.inv(a::Ban) = 1/a
 Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
 Base.isless(a::Ban, b::Ban) = _isless(a, b)
+Base.isless(a::Ban, b::T) where T <: Real = _isless(a, convert(Ban,b))
+Base.isless(a::T, b::Ban) where T <: Real = isless(b,a)
 
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
@@ -183,6 +185,6 @@ end
 # TODO
 #
 # 
-#
+# Implementation of isnan for basic operations and arithmetic operations
 #
 # Let to give an input array smaller than SIZE and fill the remaining with zeros
