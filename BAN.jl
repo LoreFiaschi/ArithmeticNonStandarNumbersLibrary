@@ -101,18 +101,14 @@ function _div(a::Ban, b::Ban)
     c = Ban(a);
     c.p -= b.p;
     
-    _b = Ban(b);
-    _b.p = 0; # for overflow avoidance
-    normalizer = _b[1];
-    _b.num = -(_b.num/normalizer);
-    _b += 1;
+    _b, normalizer = _generate_eps_(b);
     
-    eps = Ban(_b);
+    eps = Ban(0, (_b*a).num);
     
-    c.num += (eps*a).num; 
+    c.num += eps.num; 
     for i = 2:SIZE
         eps *= _b;
-        c.num += (eps*a).num
+        c.num += eps.num
     end
     
     return c/normalizer # if the scalar division is deleted this must be changed into c.num /= normalizer; return c; (otherwise loop happens)
@@ -138,6 +134,47 @@ function _isless(a::Ban, b::Ban)
     return false
 end
 
+function _sqrt(a::Ban)
+
+    a < 0 && error("Sqrt of negative number")
+    a.p % 2 != 0 && error("Sqrt of BAN with odd reference power")
+    (a == 0 || a == 1) && return copy(a)
+    
+    _a = one(Ban)<<convert(Int64, floor(a.p/2));
+    
+    eps, normalizer = _generate_eps_(a);
+    eps *= -1;
+    _eps = Ban(eps);
+
+    _a.num += 0.5.*eps.num;
+    
+    fact_i = 1; # factorial(i), kept for speeding up the computation
+    
+    for i=2:SIZE-1
+        fact_i *= i;
+        coef = (-1)^i*factorial(i<<1)/((1-(i<<1))*(fact_i)^2<<(i<<1))
+        eps *= _eps;
+        _a.num += coef.*eps.num
+    end
+    
+    return _a*sqrt(normalizer)
+    
+end
+
+######## UTILITY FUNCTIONS #########
+
+# Compute the eps needed for division or sqrt
+function _generate_eps_(a::Ban)
+
+    eps = Ban(a);
+    eps.p = 0; # for overflow avoidance
+    normalizer = eps[1];
+    eps.num = -(eps.num/normalizer);
+    eps += 1;
+    
+    return eps, normalizer
+end
+
 principal(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = a.num[1]; Ban(a.p, tmp))
 magnitude(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(a.p, tmp))
 degree(a::Ban) = a.p
@@ -150,6 +187,7 @@ Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = a*one(Ban)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
+Base.float(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : 0)
 
 Base.zero(a::Ban) = Ban(0, zeros(length(a.num)))
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
@@ -158,6 +196,9 @@ Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 
 Base.inv(a::Ban) = 1/a
 Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
+Base.abs2(a::Ban) = a*a
+Base.sqrt(a::Ban) = _sqrt(a)
+
 Base.isless(a::Ban, b::Ban) = _isless(a, b)
 Base.isless(a::Ban, b::T) where T <: Real = _isless(a, convert(Ban,b))
 Base.isless(a::T, b::Ban) where T <: Real = isless(b,a)
