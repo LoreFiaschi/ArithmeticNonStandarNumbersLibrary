@@ -161,6 +161,38 @@ function _sqrt(a::Ban)
     
 end
 
+function _zeros(n::Int64, m::Int64)
+
+    (m < 0 || n < 0) && error("Negative matrix dimensions not allowed")
+    
+    A = Matrix{Ban}(undef, n, m);
+    
+    if m > 0 && n > 0
+        for i = 1:m*n
+            A[i] = zero(Ban)
+        end
+    end
+    
+    return A
+
+end
+
+function _ones(n::Int64, m::Int64)
+
+    (m <= 0 || n <= 0) && error("Non-positive matrix dimensions not allowed")
+    
+    A = Matrix{Ban}(undef, n, m);
+    
+    if m > 0 && n > 0
+        for i = 1:m*n
+            A[i] = one(Ban)
+        end
+    end
+    
+    return A
+
+end
+
 ######## UTILITY FUNCTIONS #########
 
 # Compute the eps needed for division or sqrt
@@ -187,12 +219,15 @@ Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = a*one(Ban)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
-Base.float(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : 0)
+Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
+Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.zero(a::Ban) = Ban(0, zeros(length(a.num)))
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
+Base.zeros(::Type{Ban}, n::Int64, m::Int64) = _zeros(n,m)
 Base.one(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(0, tmp))
 Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
+Base.ones(::Type{Ban}, n::Int64, m::Int64) = _ones(n,m)
 
 Base.inv(a::Ban) = 1/a
 Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
@@ -220,7 +255,6 @@ Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
-
 end
 
 # TODO
