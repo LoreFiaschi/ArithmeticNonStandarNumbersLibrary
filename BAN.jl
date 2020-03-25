@@ -157,8 +157,7 @@ function _sqrt(a::Ban)
         _a.num += coef.*eps.num
     end
     
-    return _a*sqrt(normalizer)
-    
+    return _a*sqrt(normalizer)  
 end
 
 function _zeros(n::Int64, m::Int64)
@@ -174,7 +173,21 @@ function _zeros(n::Int64, m::Int64)
     end
     
     return A
+end
 
+function _zeros(n::Int64)
+
+    n <= 0 && error("Non-positive vector dimensions not allowed")
+    
+    a = Array{Ban,1}(undef, n);
+    
+    if n > 0
+        for i = 1:n
+            a[i] = zero(Ban)
+        end
+    end
+    
+    return a
 end
 
 function _ones(n::Int64, m::Int64)
@@ -190,7 +203,21 @@ function _ones(n::Int64, m::Int64)
     end
     
     return A
+end
 
+function _ones(n::Int64)
+
+    n <= 0 && error("Non-positive vector dimensions not allowed")
+    
+    a = Array{Ban,1}(undef, n);
+    
+    if n > 0
+        for i = 1:n
+            a[i] = one(Ban)
+        end
+    end
+    
+    return a
 end
 
 ######## UTILITY FUNCTIONS #########
@@ -224,9 +251,11 @@ Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.zero(a::Ban) = Ban(0, zeros(SIZE))
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
+Base.zeros(::Type{Ban}, n::Int64) = _zeros(n)
 Base.zeros(::Type{Ban}, n::Int64, m::Int64) = _zeros(n,m)
 Base.one(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
+Base.ones(::Type{Ban}, n::Int64) = _ones(n)
 Base.ones(::Type{Ban}, n::Int64, m::Int64) = _ones(n,m)
 
 Base.inv(a::Ban) = 1/a
@@ -236,7 +265,7 @@ Base.sqrt(a::Ban) = _sqrt(a)
 
 Base.isless(a::Ban, b::Ban) = _isless(a, b)
 Base.isless(a::Ban, b::T) where T <: Real = _isless(a, convert(Ban,b))
-Base.isless(a::T, b::Ban) where T <: Real = isless(b,a)
+Base.isless(a::T, b::Ban) where T <: Real = _isless(convert(Ban,a),b)
 
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
