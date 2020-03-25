@@ -207,8 +207,8 @@ function _generate_eps_(a::Ban)
     return eps, normalizer
 end
 
-principal(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = a.num[1]; Ban(a.p, tmp))
-magnitude(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(a.p, tmp))
+principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp))
+magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp))
 degree(a::Ban) = a.p
 
 Base.show(io::IO, a::Ban) = _show(io, a)
@@ -217,15 +217,15 @@ Base.setindex!(a::Ban, v::T, i::Int64) where T<:Real = (a.num[i] = v)
 
 Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
-Base.convert(::Type{Ban}, a::T) where T <: Real = a*one(Ban)
+Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
-Base.zero(a::Ban) = Ban(0, zeros(length(a.num)))
+Base.zero(a::Ban) = Ban(0, zeros(SIZE))
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
 Base.zeros(::Type{Ban}, n::Int64, m::Int64) = _zeros(n,m)
-Base.one(a::Ban) = (tmp = zeros(length(a.num)); tmp[1] = 1; Ban(0, tmp))
+Base.one(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 Base.ones(::Type{Ban}, n::Int64, m::Int64) = _ones(n,m)
 
