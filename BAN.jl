@@ -2,12 +2,13 @@ __precompile__()
 module BAN
 
 export Ban
+export print_ext, print_latex, to_vector
 export degree, magnitude, principal
 
 # α^p P(η) , P(0) != 0 except for the zero
 
 # Number dimension
-SIZE = 4;
+SIZE = 3;
 
 # Number declaration
 mutable struct Ban <: Number
@@ -35,15 +36,71 @@ end
 
 function _show(io::IO, a::Ban)
 
-    print(string("α^",a.p,"(",a.num[1]))
+    print(string("α^{",a.p,"}(",a.num[1]))
     for i=2:SIZE
         if a[i] >= 0 
-            print(string(" + ", a[i], "η^", i-1))
+            print(string(" + ", a[i], "η^{$(i-1)}"))
         else
-            print(string(" - ", -a[i], "η^", i-1))
+            print(string(" - ", -a[i], "η^{$(i-1)}"))
         end
     end
     print(")")
+end
+
+
+function print_ext(a::Ban)
+
+    if a == 0
+        print("0");
+    else
+        q = a.p;
+        print(string(a.num[1], "α^{$q}"));
+        for i=2:SIZE
+            q -= 1;
+            if a[i] > 0 
+                print(string(" + ", a[i], "α^{$q}"));
+            elseif a[i] < 0
+                print(string(" - ", -a[i], "α^{$q}"));
+            end
+        end
+    end
+    println("");
+end
+
+function print_latex(a::Ban)
+    if a == 0
+        print("0");
+    else
+        deg = degree(a);
+        vect = to_vector(a)
+        print("$(vect[1]) \\alpha^{$deg}");
+        for n in vect[2:end]
+            deg -= 1;
+            if n > 0
+                print(" + $n \\alpha^{$deg}");
+            elseif n < 0
+                print(" - $(-n) \\alpha^{$deg}");
+            end
+        end
+    end
+end
+
+function print_latex(a::Array{Ban,1})
+
+    num_elem = length(a);
+
+    print("\\left[");
+    print_latex(a[1]);
+    for i = 2:num_elem
+        print(",\\, ")
+        print_latex(a[i]);
+    end
+    print("\\right]");
+end
+
+function to_vector(a::Ban)
+
+    return copy(a.num);
 end
 
 # Sum of two Bans
