@@ -130,6 +130,24 @@ function _sum(a::Ban, b::Ban)
     # Compute the sum
     c.num += a.num;
     
+    
+    if diff_p == 0
+        all(x->x==0, c.num) && return zero(Ban);
+    
+        # Verify c is in normal form
+        shift = 0;
+        while c[shift+1] == 0
+            c.p -= 1;
+            shift += 1;
+        end
+        
+        # If not put it in normal form (note shift < SIZE)
+        if shift > 0
+            c.num[1:SIZE-shift] = c.num[shift+1:SIZE];        
+            c.num[SIZE-shift+1:SIZE] = zeros(Float64,shift);
+        end
+    end
+    
     return c;
 end
 
