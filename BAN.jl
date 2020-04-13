@@ -36,12 +36,12 @@ end
 
 function _show(io::IO, a::Ban)
 
-    print(string("α^{",a.p,"}(",a.num[1]))
+    print(string("α^",a.p,"(",a.num[1]))
     for i=2:SIZE
         if a[i] >= 0 
-            print(string(" + ", a[i], "η^{$(i-1)}"))
+            print(string(" + ", a[i], "η^$(i-1)"))
         else
-            print(string(" - ", -a[i], "η^{$(i-1)}"))
+            print(string(" - ", -a[i], "η^$(i-1)"))
         end
     end
     print(")")
