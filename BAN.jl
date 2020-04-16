@@ -1,23 +1,33 @@
 __precompile__()
 module BAN
 
+using Random
+
 export Ban
 export print_ext, print_latex, to_vector
 export degree, magnitude, principal
+export set_size
 
 # α^p P(η) , P(0) != 0 except for the zero
 
-# Number dimension
+##########################
+#    BEGIN DEFINITIONS   #
+##########################
+
+abstract type AbstractAlgNum <: Number end
+
+# Ban dimension
 SIZE = 3;
 
-# Number declaration
-mutable struct Ban <: Number
+# Ban declaration
+mutable struct Ban <: AbstractAlgNum
 
     # Members
     p::Int64
     num::Array{Float64,1}
     
     # Constructor
+    Ban(p::Int64,num::Array{T,1},no_ckeck::Bool) where T <: Real = new(p,copy(num))
     Ban(p::Int64,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
@@ -26,13 +36,17 @@ end
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
 #                       2) the first entry of the array must be non-zero except for the "0"
-#                       3) the "0" is represented with a vector of zero of degree zero
+#                       3) the "0" is represented with a vector of zeros of degree zero
 function _constraints_satisfaction(p::Int64,num::Array{T,1}) where T <: Real
     
     length(num) != SIZE && error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."))
     num[1] == 0 && p != 0 && any(x->x!=0, num[2:SIZE]) && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
     return true
 end
+
+##################
+#    BEGIN BASE  #
+##################
 
 function _show(io::IO, a::Ban)
 
@@ -118,13 +132,9 @@ function _sum(a::Ban, b::Ban)
     c.p = a.p;
     
     # Shift right the components
-    for i = SIZE:-1:diff_p+1
-        c[i] = c[i-diff_p];
-    end
-    
-    # Set to zero the highest components
-    for i = diff_p:-1:1
-        c[i] = 0;
+    if diff_p > 0
+        c[diff_p+1:SIZE] = c[1:SIZE-diff_p];
+        c[1:diff_p] = zeros(Float64, diff_p);
     end
     
     # Compute the sum
@@ -132,20 +142,9 @@ function _sum(a::Ban, b::Ban)
     
     
     if diff_p == 0
-        all(x->x==0, c.num) && return zero(Ban);
-    
-        # Verify c is in normal form
-        shift = 0;
-        while c[shift+1] == 0
-            c.p -= 1;
-            shift += 1;
-        end
+        all(x->x==0, c.num) && (c.p=0) && return c;
         
-        # If not put it in normal form (note shift < SIZE)
-        if shift > 0
-            c.num[1:SIZE-shift] = c.num[shift+1:SIZE];        
-            c.num[SIZE-shift+1:SIZE] = zeros(Float64,shift);
-        end
+        _to_normal_form!(c);
     end
     
     return c;
@@ -295,6 +294,14 @@ function _ones(n::Int64)
     return a
 end
 
+function set_size(n::Int64)
+
+    n <= 0 && error("Size must be greater than zero");
+    SIZE = n;
+    
+    return nothing
+end
+
 ######## UTILITY FUNCTIONS #########
 
 # Compute the eps needed for division or sqrt
@@ -308,6 +315,27 @@ function _generate_eps_(a::Ban)
     
     return eps, normalizer
 end
+
+# Bring a Ban to normal form (Notice: Ban.num != zeros is assumed)
+function _to_normal_form!(a::Ban)
+
+    # Verify a is in normal form
+    shift = 0;
+    while a[shift+1] == 0
+        a.p -= 1;
+        shift += 1;
+    end
+    
+    # If not put it in normal form (note shift < SIZE)
+    if shift > 0
+        a.num[1:SIZE-shift] = a.num[shift+1:SIZE];        
+        a.num[SIZE-shift+1:SIZE] = zeros(Float64, shift);
+    end
+    
+    return nothing
+end
+
+###################################
 
 principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp))
 magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp))
@@ -345,6 +373,8 @@ Base.isless(a::T, b::Ban) where T <: Real = _isless(convert(Ban,a),b)
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
 
+#Base.rand(::Type{Ban}) = _rand()
+
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
 Base.:(-)(a::Ban) = _scalar_mul(a,-1)
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
@@ -359,6 +389,47 @@ Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
 Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
 Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
+
+#####################
+#    BEGIN RANDOM   #
+#####################
+
+abstract type AlgNumInterval{T<:AbstractAlgNum} end
+
+struct CloseOpen01{T<:AbstractAlgNum} <: AlgNumInterval{T} end
+struct CloseOpen12{T<:AbstractAlgNum} <: AlgNumInterval{T} end
+
+const CloseOpen01_AN = CloseOpen01{Ban}
+const CloseOpen12_AN = CloseOpen12{Ban}
+
+CloseOpen01(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen01{T}()
+CloseOpen12(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen12{T}()
+
+function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpen12_64})
+
+    num = Array{Float64, 1}(undef, SIZE);
+    Random.reserve(r, SIZE);
+    for i in eachindex(num)
+        num[i] = Random.rand_inbounds(r, sp[])-1;
+    end
+    
+    num = num.*[1;rand([-1,1],SIZE-1)];
+    
+    a = Ban(0, num, false);
+    a[1] == 0 && _to_normal_form!(a)
+    
+    return (a<0) ? -a : a;
+end
+
+Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
+
+Random.rand_inbounds(r::MersenneTwister, ::CloseOpen01_AN=CloseOpen01(Ban)) = _rand(r, 1)
+Random.rand_inbounds(r::MersenneTwister, ::CloseOpen12_AN) = _rand(r, 0)
+
+Random.rand(r::MersenneTwister, sp::Random.SamplerTrivial{CloseOpen01_AN}) = _rand_Ban(r, Random.SamplerTrivial{Random.CloseOpen12{Float64},Float64}(Random.CloseOpen12{Float64}()))
+
+Random.Sampler(::Type{RNG}, ::Type{T}, n::Random.Repetition) where {RNG<:AbstractRNG,T<:AbstractAlgNum} = Random.Sampler(RNG, CloseOpen01(T), n)
+
 end
 
 # TODO
@@ -367,3 +438,7 @@ end
 # Implementation of isnan for basic operations and arithmetic operations
 #
 # Let to give an input array smaller than SIZE and fill the remaining with zeros
+#
+# Remove set_size function
+#
+# Remove non-normal form Ban allocation
