@@ -6,7 +6,6 @@ using Random
 export Ban
 export print_ext, print_latex, to_vector
 export degree, magnitude, principal
-export set_size
 
 # α^p P(η) , P(0) != 0 except for the zero
 
@@ -17,18 +16,18 @@ export set_size
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-SIZE = 3;
+SIZE = 4;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
 
     # Members
-    p::Int64
+    p::Int
     num::Array{Float64,1}
     
     # Constructor
-    Ban(p::Int64,num::Array{T,1},no_ckeck::Bool) where T <: Real = new(p,copy(num))
-    Ban(p::Int64,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
+    Ban(p::Int,num::Array{T,1},no_ckeck::Bool) where T <: Real = new(p,copy(num))
+    Ban(p::Int,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
 end
@@ -37,7 +36,7 @@ end
 # The constraints are:  1) lenght of SIZE; 
 #                       2) the first entry of the array must be non-zero except for the "0"
 #                       3) the "0" is represented with a vector of zeros of degree zero
-function _constraints_satisfaction(p::Int64,num::Array{T,1}) where T <: Real
+function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     
     length(num) != SIZE && error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."))
     num[1] == 0 && p != 0 && any(x->x!=0, num[2:SIZE]) && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
@@ -142,7 +141,7 @@ function _sum(a::Ban, b::Ban)
     
     
     if diff_p == 0
-        all(x->x==0, c.num) && (c.p=0) && return c;
+        all(x->x==0, c.num) && (c.p=0; true;) && return c;
         
         _to_normal_form!(c);
     end
@@ -234,7 +233,7 @@ function _sqrt(a::Ban)
     return _a*sqrt(normalizer)  
 end
 
-function _zeros(n::Int64, m::Int64)
+function _zeros(n::Int, m::Int)
 
     (m < 0 || n < 0) && error("Negative matrix dimensions not allowed")
     
@@ -249,7 +248,7 @@ function _zeros(n::Int64, m::Int64)
     return A
 end
 
-function _zeros(n::Int64)
+function _zeros(n::Int)
 
     n <= 0 && error("Non-positive vector dimensions not allowed")
     
@@ -264,7 +263,7 @@ function _zeros(n::Int64)
     return a
 end
 
-function _ones(n::Int64, m::Int64)
+function _ones(n::Int, m::Int)
 
     (m <= 0 || n <= 0) && error("Non-positive matrix dimensions not allowed")
     
@@ -279,7 +278,7 @@ function _ones(n::Int64, m::Int64)
     return A
 end
 
-function _ones(n::Int64)
+function _ones(n::Int)
 
     n <= 0 && error("Non-positive vector dimensions not allowed")
     
@@ -292,14 +291,6 @@ function _ones(n::Int64)
     end
     
     return a
-end
-
-function set_size(n::Int64)
-
-    n <= 0 && error("Size must be greater than zero");
-    SIZE = n;
-    
-    return nothing
 end
 
 ######## UTILITY FUNCTIONS #########
@@ -342,8 +333,10 @@ magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp))
 degree(a::Ban) = a.p
 
 Base.show(io::IO, a::Ban) = _show(io, a)
-Base.getindex(a::Ban, i::Int64) = a.num[i]
-Base.setindex!(a::Ban, v::T, i::Int64) where T<:Real = (a.num[i] = v)
+Base.getindex(a::Ban, i::Int) = a.num[i]
+Base.getindex(a::Ban, u::UnitRange{T}) where T<:Int = a.num[u]
+Base.setindex!(a::Ban, v::T, i::Int) where T<:Real = (a.num[i] = v)
+Base.setindex!(a::Ban, v::AbstractArray{T}, i::AbstractVector{Int}) where T<:Real = (a.num[i] = v)
 
 Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
@@ -354,12 +347,12 @@ Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.zero(a::Ban) = Ban(0, zeros(SIZE))
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
-Base.zeros(::Type{Ban}, n::Int64) = _zeros(n)
-Base.zeros(::Type{Ban}, n::Int64, m::Int64) = _zeros(n,m)
+Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
+Base.zeros(::Type{Ban}, n::Int, m::Int) = _zeros(n,m)
 Base.one(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
 Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
-Base.ones(::Type{Ban}, n::Int64) = _ones(n)
-Base.ones(::Type{Ban}, n::Int64, m::Int64) = _ones(n,m)
+Base.ones(::Type{Ban}, n::Int) = _ones(n)
+Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 
 Base.inv(a::Ban) = 1/a
 Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
@@ -381,8 +374,8 @@ Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
 
-Base.:(<<)(a::Ban, b::Int64) = Ban(a.p+=b, a.num)
-Base.:(>>)(a::Ban, b::Int64) = Ban(a.p-=b, a.num)
+Base.:(<<)(a::Ban, b::Int) = Ban(a.p+=b, a.num)
+Base.:(>>)(a::Ban, b::Int) = Ban(a.p-=b, a.num)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
