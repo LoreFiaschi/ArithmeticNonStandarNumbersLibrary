@@ -16,7 +16,7 @@ export degree, magnitude, principal
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-SIZE = 4;
+SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -26,7 +26,7 @@ mutable struct Ban <: AbstractAlgNum
     num::Array{Float64,1}
     
     # Constructor
-    Ban(p::Int,num::Array{T,1},no_ckeck::Bool) where T <: Real = new(p,copy(num))
+    Ban(p::Int,num::Array{T,1}, check::Bool) where T <: Real = new(p,copy(num))
     Ban(p::Int,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
@@ -139,9 +139,8 @@ function _sum(a::Ban, b::Ban)
     # Compute the sum
     c.num += a.num;
     
-    
-    if diff_p == 0
-        all(x->x==0, c.num) && (c.p=0; true;) && return c;
+    if diff_p == 0 && c[1] == 0
+        all(x->x==0, c.num[2:end]) && (c.p=0; true;) && return c;
         
         _to_normal_form!(c);
     end
@@ -151,6 +150,9 @@ end
 
 # Multiplication of two Bans
 function _mul(a::Ban, b::Ban)
+
+    # Introduced to guarantee the normal form Bans
+    (a == 0 || b == 0) && return 0;
 
     c = zero(a);
     c.p = a.p + b.p;
@@ -174,6 +176,7 @@ function _div(a::Ban, b::Ban)
     c = Ban(a);
     c.p -= b.p;
     
+    # Notice _b not in normal form to avoid overflow
     _b, normalizer = _generate_eps_(b);
     
     eps = Ban(0, (_b*a).num);
@@ -185,13 +188,6 @@ function _div(a::Ban, b::Ban)
     end
     
     return c/normalizer # if the scalar division is deleted this must be changed into c.num /= normalizer; return c; (otherwise loop happens)
-end
-
-function _scalar_mul(a::Ban, b::T) where T <: Real
-
-    c = Ban(a);
-    c.num *= b;
-    return c;
 end
 
 function _isless(a::Ban, b::Ban)
@@ -215,8 +211,9 @@ function _sqrt(a::Ban)
     
     _a = one(Ban)<<convert(Int64, floor(a.p/2));
     
+    # Notice: eps and _eps are not in normal form to avoid overflow and to speed up the computation
     eps, normalizer = _generate_eps_(a);
-    eps *= -1;
+    eps.num *= -1;
     _eps = Ban(eps);
 
     _a.num += 0.5.*eps.num;
@@ -302,7 +299,9 @@ function _generate_eps_(a::Ban)
     eps.p = 0; # for overflow avoidance
     normalizer = eps[1];
     eps.num = -(eps.num/normalizer);
-    eps += 1;
+    
+    #Notice: eps no more in normal form
+    eps[1] = 0;
     
     return eps, normalizer
 end
@@ -310,18 +309,17 @@ end
 # Bring a Ban to normal form (Notice: Ban.num != zeros is assumed)
 function _to_normal_form!(a::Ban)
 
-    # Verify a is in normal form
+    # We suppose a is not in normal form and
+    # a.num != zeros(SIZE)
     shift = 0;
     while a[shift+1] == 0
         a.p -= 1;
         shift += 1;
     end
     
-    # If not put it in normal form (note shift < SIZE)
-    if shift > 0
-        a.num[1:SIZE-shift] = a.num[shift+1:SIZE];        
-        a.num[SIZE-shift+1:SIZE] = zeros(Float64, shift);
-    end
+    # We have surely shift < SIZE
+    a.num[1:SIZE-shift] = a.num[shift+1:SIZE];        
+    a.num[SIZE-shift+1:SIZE] = zeros(Float64, shift);
     
     return nothing
 end
@@ -345,12 +343,12 @@ Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
-Base.zero(a::Ban) = Ban(0, zeros(SIZE))
-Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE))
+Base.zero(a::Ban) = Ban(0, zeros(SIZE), false)
+Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE), false)
 Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
 Base.zeros(::Type{Ban}, n::Int, m::Int) = _zeros(n,m)
-Base.one(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
-Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp))
+Base.one(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp, false))
+Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp, false))
 Base.ones(::Type{Ban}, n::Int) = _ones(n)
 Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 
@@ -369,19 +367,19 @@ Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
 #Base.rand(::Type{Ban}) = _rand()
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
-Base.:(-)(a::Ban) = _scalar_mul(a,-1)
+Base.:(-)(a::Ban) = a*-1
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
 
-Base.:(<<)(a::Ban, b::Int) = Ban(a.p+=b, a.num)
-Base.:(>>)(a::Ban, b::Int) = Ban(a.p-=b, a.num)
+Base.:(<<)(a::Ban, b::Int) = (a == 0) ? return Ban(a) : Ban(a.p+=b, a.num, false)
+Base.:(>>)(a::Ban, b::Int) = (a == 0) ? return Ban(a) : Ban(a.p-=b, a.num, false)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
-Base.:(*)(a::Ban, b::T) where T <: Real = _scalar_mul(a,b)
-Base.:(*)(a::T, b::Ban) where T <: Real = _scalar_mul(b,a)
-Base.:(/)(a::Ban, b::T) where T <: Real = _scalar_mul(a,1/b)
+Base.:(*)(a::Ban, b::T) where T <: Real = Ban(a.p, a.num.*b, false)
+Base.:(*)(a::T, b::Ban) where T <: Real = a*b
+Base.:(/)(a::Ban, b::T) where T <: Real = a*(1/b)
 
 #####################
 #    BEGIN RANDOM   #
@@ -409,7 +407,7 @@ function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpe
     num = num.*[1;rand([-1,1],SIZE-1)];
     
     a = Ban(0, num, false);
-    a[1] == 0 && _to_normal_form!(a)
+    a[1] == 0 && any(x->x!=0, a[2:SIZE]) && _to_normal_form!(a)
     
     return (a<0) ? -a : a;
 end
@@ -427,11 +425,12 @@ end
 
 # TODO
 #
+# << -> *2 and introduce the constant \alpha
+#
+# Check why in simplex gives non-normal objective functions
 # 
 # Implementation of isnan for basic operations and arithmetic operations
 #
 # Let to give an input array smaller than SIZE and fill the remaining with zeros
-#
-# Remove set_size function
 #
 # Remove non-normal form Ban allocation
