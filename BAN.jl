@@ -151,10 +151,11 @@ end
 # Multiplication of two Bans
 function _mul(a::Ban, b::Ban)
 
-    # Introduced to guarantee the normal form Bans
-    (a == 0 || b == 0) && return 0;
-
     c = zero(a);
+    
+    # Introduced to guarantee the normal form Bans
+    (a == 0 || b == 0) && return c;
+
     c.p = a.p + b.p;
     
     for i = 1:SIZE
@@ -372,8 +373,8 @@ Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
 
-Base.:(<<)(a::Ban, b::Int) = (a == 0) ? return Ban(a) : Ban(a.p+=b, a.num, false)
-Base.:(>>)(a::Ban, b::Int) = (a == 0) ? return Ban(a) : Ban(a.p-=b, a.num, false)
+Base.:(<<)(a::Ban, b::Int) = (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
+Base.:(>>)(a::Ban, b::Int) = (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
@@ -424,6 +425,8 @@ Random.Sampler(::Type{RNG}, ::Type{T}, n::Random.Repetition) where {RNG<:Abstrac
 end
 
 # TODO
+#
+# Improved speed on vector computations using view()
 #
 # << -> *2 and introduce the constant \alpha
 #
