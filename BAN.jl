@@ -1,11 +1,13 @@
 __precompile__()
 module BAN
 
-using Random
+using Random, LinearAlgebra
 
 export Ban
 export print_ext, print_latex, to_vector
 export degree, magnitude, principal
+
+export norm, normInf
 
 # α^p P(η) , P(0) != 0 except for the zero
 
@@ -171,8 +173,8 @@ end
 function _div(a::Ban, b::Ban)
     
     # Check validity of operation
-    a == 0 && b == 0 && error("Undef behavior: 0/0")
-    b == 0 && error("Division by zero")
+    a == 0 && b == 0 && return NaN
+    b == 0 && ifelse(a<0, return -Inf, return Inf)
     
     c = Ban(a);
     c.p -= b.p;
@@ -344,6 +346,11 @@ Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
+Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
+# Maintained to speed up performances
+Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num[1])!=signbit(b), -a, +a)
+Base.copysign(a::Real, b::Ban) = copysign(b,a)
+
 Base.zero(a::Ban) = Ban(0, zeros(SIZE), false)
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE), false)
 Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
@@ -362,10 +369,12 @@ Base.isless(a::Ban, b::Ban) = _isless(a, b)
 Base.isless(a::Ban, b::T) where T <: Real = _isless(a, convert(Ban,b))
 Base.isless(a::T, b::Ban) where T <: Real = _isless(convert(Ban,a),b)
 
+Base.isnan(a::Ban) = ifelse(any(x->isnan(x), a.num), true, false)
+Base.isinf(a::Ban) = ifelse(isinf(a.p) | any(x->isinf(x), a.num), true, false) # must be intended in a standard sense
+Base.isinf(a::Ban) = ifelse(isfinite(a.p) | all(x->isfinite(x), a.num), true, false) # must be intended in a standard sense
+
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
-
-#Base.rand(::Type{Ban}) = _rand()
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b)
 Base.:(-)(a::Ban) = a*-1
@@ -422,9 +431,33 @@ Random.rand(r::MersenneTwister, sp::Random.SamplerTrivial{CloseOpen01_AN}) = _ra
 
 Random.Sampler(::Type{RNG}, ::Type{T}, n::Random.Repetition) where {RNG<:AbstractRNG,T<:AbstractAlgNum} = Random.Sampler(RNG, CloseOpen01(T), n)
 
+##########################
+#  BEGIN LINEAR ALGEBRA  #
+##########################
+
+function _generic_normInf(A::AbstractArray{T}) where T <: Ban
+    (v, s) = iterate(A)::Tuple
+    maxabs = norm(v)
+    while true
+        y = iterate(A, s)
+        y === nothing && break
+        (v, s) = y
+        vnorm = norm(v)
+        maxabs = ifelse(isnan(maxabs) | (maxabs > vnorm), maxabs, vnorm)
+    end
+    return maxabs
+end 
+
+LinearAlgebra.normInf(A::AbstractArray{T}) where T <: Ban = _generic_normInf(A)
+LinearAlgebra.norm(a::Ban) = abs(a)
+
 end
 
 # TODO
+#
+# Check what happens doing Ban + Nan and Ban + Inf
+#
+# Speedup computations with @inbounds
 #
 # I-Big-M: back to original order of x
 #
@@ -436,7 +469,7 @@ end
 #
 # Check why in simplex gives non-normal objective functions and solutions
 # 
-# Implementation of isnan for basic operations and arithmetic operations
+# Speed up isnan with a unique codific
 #
 # Let to give an input array smaller than SIZE and fill the remaining with zeros
 #
