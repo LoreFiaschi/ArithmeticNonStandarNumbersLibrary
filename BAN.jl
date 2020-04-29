@@ -327,8 +327,8 @@ end
 
 ###################################
 
-principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp))
-magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp))
+principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp, false))
+magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp, false))
 degree(a::Ban) = a.p
 
 Base.show(io::IO, a::Ban) = _show(io, a)
@@ -379,7 +379,7 @@ Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
 Base.:(*)(a::Ban, b::T) where T <: Real = Ban(a.p, a.num.*b, false)
-Base.:(*)(a::T, b::Ban) where T <: Real = a*b
+Base.:(*)(a::T, b::Ban) where T <: Real = b*a
 Base.:(/)(a::Ban, b::T) where T <: Real = a*(1/b)
 
 #####################
@@ -426,11 +426,15 @@ end
 
 # TODO
 #
+# I-Big-M: back to original order of x
+#
+# Generalize NA-Simplex and I-Big-M to cases involving both Real and AbstractAlgNum
+#
 # Improved speed on vector computations using view()
 #
 # << -> *2 and introduce the constant \alpha
 #
-# Check why in simplex gives non-normal objective functions
+# Check why in simplex gives non-normal objective functions and solutions
 # 
 # Implementation of isnan for basic operations and arithmetic operations
 #
