@@ -121,6 +121,10 @@ end
 # Sum of two Bans
 function _sum(a::Ban, b::Ban)
 
+    # Sum with zero (in order to avoid precision loss)
+    a == 0 && return Ban(b);
+    b == 0 && return Ban(a);
+
     diff_p = a.p - b.p;
     
     # Assume a.p >= b.p, if not call again the function with the arguments reverted
@@ -174,7 +178,7 @@ function _div(a::Ban, b::Ban)
     
     # Check validity of operation
     a == 0 && b == 0 && return NaN
-    b == 0 && ifelse(a<0, return -Inf, return Inf)
+    b == 0 && return ifelse(a<0, -Inf, Inf)
     
     c = Ban(a);
     c.p -= b.p;
@@ -195,8 +199,8 @@ end
 
 function _isless(a::Ban, b::Ban)
 
-    a.p < b.p && (b[1] > 0 || b[1] == 0 && a[1] < 0) && return true
-    a.p > b.p && (a[1] < 0 || a[1] == 0 && b[1] > 0) && return true
+    a.p < b.p && return ifelse(b[1] > 0 || b[1] == 0 && a[1] < 0, true, false)
+    a.p > b.p && return ifelse(a[1] < 0 || a[1] == 0 && b[1] > 0, true, false)
     
     for i=1:SIZE
         a[i] < b[i] && return true
@@ -225,9 +229,9 @@ function _sqrt(a::Ban)
     
     for i=2:SIZE-1
         fact_i *= i;
-        coef = (-1)^i*factorial(i<<1)/((1-(i<<1))*(fact_i)^2<<(i<<1))
+        coef = (-1)^i*factorial(i<<1)/((1-(i<<1))*(fact_i)^2<<(i<<1));
         eps *= _eps;
-        _a.num += coef.*eps.num
+        _a.num += coef.*eps.num;
     end
     
     return _a*sqrt(normalizer)  
@@ -330,8 +334,11 @@ end
 ###################################
 
 principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp, false))
+principal(a::Real) = one(Ban)*a
 magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp, false))
+magnitude(a::Real) = one(Ban)
 degree(a::Ban) = a.p
+degree(a::Real) = 0
 
 Base.show(io::IO, a::Ban) = _show(io, a)
 Base.getindex(a::Ban, i::Int) = a.num[i]
@@ -454,6 +461,8 @@ LinearAlgebra.norm(a::Ban) = abs(a)
 end
 
 # TODO
+#
+# Generate Packages for BanRandom and BanLinearAlgebra
 #
 # Check what happens doing Ban + Nan and Ban + Inf
 #
