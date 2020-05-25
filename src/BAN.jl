@@ -394,7 +394,7 @@ Base.:(>>)(a::Ban, b::Int) = (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
-Base.:(*)(a::Ban, b::T) where T <: Real = Ban(a.p, a.num.*b, false)
+Base.:(*)(a::Ban, b::T) where T <: Real = ifelse(b==0, zero(Ban), Ban(a.p, a.num.*b, false))
 Base.:(*)(a::T, b::Ban) where T <: Real = b*a
 Base.:(/)(a::Ban, b::T) where T <: Real = a*(1/b)
 
