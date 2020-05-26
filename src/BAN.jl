@@ -6,6 +6,7 @@ using Random, LinearAlgebra
 export Ban
 export print_ext, print_latex, to_vector
 export degree, magnitude, principal
+export α
 
 export norm, normInf
 
@@ -25,7 +26,7 @@ mutable struct Ban <: AbstractAlgNum
 
     # Members
     p::Int
-    num::Array{Float64,1}
+    num::Array{T,1} where T<:Real
     
     # Constructor
     Ban(p::Int,num::Array{T,1}, check::Bool) where T <: Real = new(p,copy(num))
@@ -33,6 +34,9 @@ mutable struct Ban <: AbstractAlgNum
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
 end
+
+# α constant
+const α = Ban(1, [one(Int64); zeros(Int64, SIZE-1)], false);
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
@@ -389,8 +393,8 @@ Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
 
-Base.:(<<)(a::Ban, b::Int) = (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
-Base.:(>>)(a::Ban, b::Int) = (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
+Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num.<<b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
+Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num.>>b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 
 # Maintained to speed up the computations
@@ -462,6 +466,8 @@ end
 
 # TODO
 #
+# Introduce the types BanInt64, BanFloat64 etc...
+#
 # Generate Packages for BanRandom and BanLinearAlgebra
 #
 # Check what happens doing Ban + Nan and Ban + Inf
@@ -470,13 +476,7 @@ end
 #
 # I-Big-M: back to original order of x
 #
-# Generalize NA-Simplex and I-Big-M to cases involving both Real and AbstractAlgNum
-#
 # Improved speed on vector computations using view()
-#
-# << -> *2 and introduce the constant \alpha
-#
-# Check why in simplex gives non-normal objective functions and solutions
 # 
 # Speed up isnan with a unique codific
 #
