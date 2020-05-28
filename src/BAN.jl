@@ -4,9 +4,10 @@ module BAN
 using Random, LinearAlgebra
 
 export Ban
+export α
 export print_ext, print_latex, to_vector
 export degree, magnitude, principal
-export α
+export nextban, prevban
 
 export norm, normInf
 
@@ -33,6 +34,7 @@ mutable struct Ban <: AbstractAlgNum
     Ban(p::Int,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
+    Ban(x::T) where T<:Real = ifelse(isinf(x), Ban(0, ones(SIZE).*x), one(Ban)*x)
 end
 
 # α constant
@@ -220,7 +222,7 @@ function _sqrt(a::Ban)
     a.p % 2 != 0 && error("Sqrt of BAN with odd reference power")
     (a == 0 || a == 1) && return copy(a)
     
-    _a = one(Ban)<<convert(Int64, floor(a.p/2));
+    _a = α^convert(Int64, floor(a.p/2)-1); # -1 since degree(α) = 1
     
     # Notice: eps and _eps are not in normal form to avoid overflow and to speed up the computation
     eps, normalizer = _generate_eps_(a);
@@ -335,6 +337,22 @@ function _to_normal_form!(a::Ban)
     return nothing
 end
 
+function nextban(a::Ban, n::Integer)
+
+    b = copy(a);
+    b.num[SIZE] = nextfloat(b.num[SIZE], n);
+    
+    return b
+end
+
+function prevban(a::Ban, n::Integer)
+
+    b = copy(a);
+    b.num[SIZE] = prevfloat(b.num[SIZE], n);
+    
+    return b
+end
+
 ###################################
 
 principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp, false))
@@ -382,7 +400,7 @@ Base.isless(a::T, b::Ban) where T <: Real = _isless(convert(Ban,a),b)
 
 Base.isnan(a::Ban) = ifelse(any(x->isnan(x), a.num), true, false)
 Base.isinf(a::Ban) = ifelse(isinf(a.p) | any(x->isinf(x), a.num), true, false) # must be intended in a standard sense
-Base.isinf(a::Ban) = ifelse(isfinite(a.p) | all(x->isfinite(x), a.num), true, false) # must be intended in a standard sense
+Base.isfinite(a::Ban) = ifelse(isfinite(a.p) | all(x->isfinite(x), a.num), true, false) # must be intended in a standard sense
 
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
@@ -396,6 +414,9 @@ Base.:(/)(a::Ban, b::Ban) = _div(a,b)
 Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num.<<b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
 Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num.>>b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
 Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
+
+Base.nextfloat(a::Ban, n::Integer=1) = nextban(a, n)
+Base.prevfloat(a::Ban, n::Integer=1) = prevban(a, n)
 
 # Maintained to speed up the computations
 Base.:(*)(a::Ban, b::T) where T <: Real = ifelse(b==0, zero(Ban), Ban(a.p, a.num.*b, false))
