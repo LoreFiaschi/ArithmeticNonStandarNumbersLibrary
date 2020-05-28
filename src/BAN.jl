@@ -373,6 +373,8 @@ Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
+Base.Float64(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
+Base.Int64(a::Ban) = (a.p == 0) ? convert(Int64, a[1]) : ((a.p > 0) ? Inf : zero(Int64))
 Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
@@ -486,6 +488,10 @@ LinearAlgebra.norm(a::Ban) = abs(a)
 end
 
 # TODO
+#
+# Correct print of arrays and matrices of Bans
+#
+# BanPlot -> set same y-axes interval for the plots that share the same y-magnitude
 #
 # Introduce the types BanInt64, BanFloat64 etc...
 #
