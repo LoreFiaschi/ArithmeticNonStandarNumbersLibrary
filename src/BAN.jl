@@ -4,10 +4,11 @@ module BAN
 using Random, LinearAlgebra
 
 export Ban
-export α
-export print_ext, print_latex, to_vector
+export α, η
+export print_ext, print_latex
 export degree, magnitude, principal
 export nextban, prevban
+export denoise, isoverflow
 
 export norm, normInf
 
@@ -39,6 +40,8 @@ end
 
 # α constant
 const α = Ban(1, [one(Int64); zeros(Int64, SIZE-1)], false);
+# η constant
+const η = Ban(-1, [one(Int64); zeros(Int64, SIZE-1)], false);
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
@@ -47,7 +50,7 @@ const α = Ban(1, [one(Int64); zeros(Int64, SIZE-1)], false);
 function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     
     length(num) != SIZE && error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."))
-    num[1] == 0 && p != 0 && any(x->x!=0, num[2:SIZE]) && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
+    num[1] == 0 && p != 0 && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
     return true
 end
 
@@ -57,7 +60,7 @@ end
 
 function _show(io::IO, a::Ban)
 
-    print(string("α^",a.p,"(",a.num[1]))
+    print(string("α^",a.p,"(",a[1]))
     for i=2:SIZE
         if a[i] >= 0 
             print(string(" + ", a[i], "η^$(i-1)"))
@@ -93,7 +96,7 @@ function print_latex(a::Ban)
         print("0");
     else
         deg = degree(a);
-        vect = to_vector(a)
+        vect = a.num
         print("$(vect[1]) \\alpha^{$deg}");
         for n in vect[2:end]
             deg -= 1;
@@ -106,7 +109,7 @@ function print_latex(a::Ban)
     end
 end
 
-function print_latex(a::Array{Ban,1})
+function print_latex(a::Vector{T}) T <: AbstractAlgNum
 
     num_elem = length(a);
 
@@ -117,11 +120,6 @@ function print_latex(a::Array{Ban,1})
         print_latex(a[i]);
     end
     print("\\right]");
-end
-
-function to_vector(a::Ban)
-
-    return copy(a.num);
 end
 
 # Sum of two Bans
@@ -303,6 +301,19 @@ function _ones(n::Int)
     return a
 end
 
+function denoise(a::Ban, tol::Real)
+    
+    b = copy(a);
+    b.num[findall(x->abs(x)<=tol, b.num)] .= 0;
+    
+    if b[1] == 0
+        all(x->x==0, b.num[2:end]) && (b.p = 0; return b;)
+        _to_normal_form!(b);
+    end
+    
+    return b
+end
+
 ######## UTILITY FUNCTIONS #########
 
 # Compute the eps needed for division or sqrt
@@ -353,6 +364,23 @@ function prevban(a::Ban, n::Integer)
     return b
 end
 
+function isoverflow(a::Ban)
+
+    b = copy(a);
+    idx = findfirst(x->isinf(x), b.num);
+    if idx != nothing
+        if idx == 1
+            b.p += 1;
+            b.num = [0.1*sign(b[1]); zeros(SIZE-1)];
+        else
+            b[idx-1] += 0.1*sign(b[idx]);
+            b.num[idx:end] .= 0;
+        end       
+    end
+    
+    return b;
+end
+
 ###################################
 
 principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp, false))
@@ -364,6 +392,7 @@ degree(a::Real) = 0
 
 Base.show(io::IO, a::Ban) = _show(io, a)
 Base.getindex(a::Ban, i::Int) = a.num[i]
+Base.getindex(a::Ban, v::AbstractArray{T}) where T<:Int = a.num[v]
 Base.getindex(a::Ban, u::UnitRange{T}) where T<:Int = a.num[u]
 Base.setindex!(a::Ban, v::T, i::Int) where T<:Real = (a.num[i] = v)
 Base.setindex!(a::Ban, v::AbstractArray{T}, i::AbstractVector{Int}) where T<:Real = (a.num[i] = v)
@@ -488,6 +517,8 @@ LinearAlgebra.norm(a::Ban) = abs(a)
 end
 
 # TODO
+#
+# Omogenize with Tan library
 #
 # Correct print of arrays and matrices of Bans
 #
