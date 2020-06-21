@@ -1,14 +1,15 @@
 __precompile__()
 module BAN
 
+using Printf
 using Random, LinearAlgebra
 
 export Ban
 export α, η
-export print_ext, print_latex
+export print_ext, println_ext, print_latex
 export degree, magnitude, principal
 export nextban, prevban
-export denoise, isoverflow
+export denoise, isoverflow, isoverflow!
 
 export norm, normInf
 
@@ -78,16 +79,21 @@ function print_ext(a::Ban)
         print("0");
     else
         q = a.p;
-        print(string(a.num[1], "α^{$q}"));
+        @printf("%.3gα^%d",a[1], q);
         for i=2:SIZE
             q -= 1;
             if a[i] > 0 
-                print(string(" + ", a[i], "α^{$q}"));
+                @printf(" + %.3gα^%d", a[i], q);
             elseif a[i] < 0
-                print(string(" - ", -a[i], "α^{$q}"));
+                @printf(" - %.3gα^%d", -a[i], q);
             end
         end
     end
+end
+
+function println_ext(a::Ban)
+
+    print_ext(a);
     println("");
 end
 
@@ -109,7 +115,7 @@ function print_latex(a::Ban)
     end
 end
 
-function print_latex(a::Vector{T}) T <: AbstractAlgNum
+function print_latex(a::Vector{T}) where T <: AbstractAlgNum
 
     num_elem = length(a);
 
@@ -220,7 +226,7 @@ function _sqrt(a::Ban)
     a.p % 2 != 0 && error("Sqrt of BAN with odd reference power")
     (a == 0 || a == 1) && return copy(a)
     
-    _a = α^convert(Int64, floor(a.p/2)-1); # -1 since degree(α) = 1
+    _a = Ban(convert(Int64, floor(a.p/2)), [one(Int64);zeros(Int64,SIZE-1)], false); 
     
     # Notice: eps and _eps are not in normal form to avoid overflow and to speed up the computation
     eps, normalizer = _generate_eps_(a);
@@ -370,15 +376,48 @@ function isoverflow(a::Ban)
     idx = findfirst(x->isinf(x), b.num);
     if idx != nothing
         if idx == 1
-            b.p += 1;
-            b.num = [0.1*sign(b[1]); zeros(SIZE-1)];
+            b.p += sign(b[1]);
+            b.num = [ifelse(sign(b[1]) == 1, 0.1, 1e3); zeros(SIZE-1)];
         else
-            b[idx-1] += 0.1*sign(b[idx]);
+            b[idx-1] += 0.2*sign(b[idx]);
             b.num[idx:end] .= 0;
         end       
     end
     
     return b;
+end
+
+function isoverflow!(a::Ban)
+
+    idx = findfirst(x->isinf(x), a.num);
+    if idx != nothing
+        if idx == 1
+            a.p += sign(b[1]);
+            a.num = [ifelse(sign(b[1]) == 1, 0.1, 1e3); zeros(SIZE-1)];
+        else
+            a[idx-1] += 0.5*sign(a[idx]);
+            a.num[idx:end] .= 0;
+        end       
+    end
+    
+    return a;
+end
+
+function isoverflow(a::Array{Ban}) 
+
+    b = copy(a);
+    for i in eachindex(a)
+        b[i] = isoverflow(a[i]);
+    end
+    
+    return b
+end
+
+function isoverflow!(a::Array{Ban}) 
+
+    for i in eachindex(a)
+        a[i] = isoverflow(a[i]);
+    end
 end
 
 ###################################
@@ -402,8 +441,8 @@ Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
-Base.Float64(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
-Base.Int64(a::Ban) = (a.p == 0) ? convert(Int64, a[1]) : ((a.p > 0) ? Inf : zero(Int64))
+#Base.Float64(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
+#Base.Int64(a::Ban) = (a.p == 0) ? convert(Int64, a[1]) : ((a.p > 0) ? Inf : zero(Int64))
 Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
