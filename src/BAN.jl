@@ -4,7 +4,7 @@ module BAN
 using Printf
 using Random, LinearAlgebra
 
-export Ban
+export Ban, AbstractAlgNum
 export α, η
 export print_ext, println_ext, print_latex
 export degree, magnitude, principal
