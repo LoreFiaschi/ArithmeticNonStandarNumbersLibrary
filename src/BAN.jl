@@ -13,7 +13,7 @@ export denoise, isoverflow, isoverflow!
 
 export norm, normInf
 
-# α^p P(η) , P(0) != 0 except for the zero
+# α^p P(η) , P(0) != 0 except for zero
 
 ##########################
 #    BEGIN DEFINITIONS   #
@@ -320,6 +320,26 @@ function denoise(a::Ban, tol::Real)
     return b
 end
 
+function denoise(a::Vector{Ban}, tol::Real)
+
+	b = copy(a);
+	for i in eachindex(b)
+		b[i] = denoise(b[i], tol);
+	end
+	
+	return b
+end
+
+function denoise(a::Matrix{Ban}, tol::Real)
+
+	b = copy(a);
+	for i in eachindex(b)
+		b[i] = denoise(b[i], tol);
+	end
+	
+	return b
+end
+
 ######## UTILITY FUNCTIONS #########
 
 # Compute the eps needed for division or sqrt
@@ -440,10 +460,10 @@ Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
-Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
+#Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 #Base.Float64(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 #Base.Int64(a::Ban) = (a.p == 0) ? convert(Int64, a[1]) : ((a.p > 0) ? Inf : zero(Int64))
-Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
+#Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
 # Maintained to speed up performances
@@ -547,15 +567,57 @@ function _generic_normInf(A::AbstractArray{T}) where T <: Ban
         vnorm = norm(v)
         maxabs = ifelse(isnan(maxabs) | (maxabs > vnorm), maxabs, vnorm)
     end
+	
     return maxabs
 end 
+
+function _cholesky!(A::AbstractMatrix{T}, ::LinearAlgebra.Val{false}=LinearAlgebra.Val(false); check::Bool = true) where T<:AbstractAlgNum
+	LinearAlgebra.checksquare(A)
+    if !LinearAlgebra.ishermitian(A);
+		check && checkpositivedefinite(-1)
+		
+        return Cholesky(A, 'U', convert(LinearAlgebra.BlasInt, -1))
+	else
+		isa(A, Hermitian) && (A = convert(Matrix{T}, A))
+		C, info = LinearAlgebra._chol!(A, UpperTriangular);
+		check && LinearAlgebra.checkpositivedefinite(info);
+	
+		return Cholesky(C.data, 'U', info)
+	end
+end
+
+function _chol!(x::AbstractAlgNum, uplo)
+	rx = abs(x)
+    rxr = sqrt(rx)
+    rval =  convert(promote_type(typeof(x), typeof(rxr)), rxr)
+    x == rx ? (rval, convert(LinearAlgebra.BlasInt, 0)) : (rval, convert(LinearAlgebra.BlasInt, 1))
+end
+
+function _setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}}
+    if i != j
+        throw(ArgumentError("Cannot set a non-diagonal index in a Hermitian matrix"))
+    elseif !isa(v, Number)
+        throw(ArgumentError("Cannot set a diagonal entry in a Hermitian matrix to a non-numeric value"))
+    else
+        setindex!(A.data, v, i, j)
+    end
+end
+
+LinearAlgebra.cholesky!(A::AbstractMatrix{T}, ::LinearAlgebra.Val{false}=LinearAlgebra.Val(false); check::Bool = true) where T<:AbstractAlgNum = _cholesky!(copy(A), LinearAlgebra.Val(false), check=check)
+LinearAlgebra._chol!(x::AbstractAlgNum, uplo) = _chol!(x, uplo)
+
+LinearAlgebra.hermitian(A::AbstractAlgNum, ::Symbol) = convert(typeof(A), A)
 
 LinearAlgebra.normInf(A::AbstractArray{T}) where T <: Ban = _generic_normInf(A)
 LinearAlgebra.norm(a::Ban) = abs(a)
 
+LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}} = _setindex!(A, v, i, j)
+
 end
 
 # TODO
+#
+# Merge denoise for Vectors and Matrices, and extend them to the case of N dimensions
 #
 # Omogenize with Tan library
 #
@@ -577,6 +639,6 @@ end
 # 
 # Speed up isnan with a unique codific
 #
-# Let to give an input array smaller than SIZE and fill the remaining with zeros
+# Allow one to give an input array smaller than SIZE and fill the remaining with zeros
 #
 # Remove non-normal form Ban allocation
