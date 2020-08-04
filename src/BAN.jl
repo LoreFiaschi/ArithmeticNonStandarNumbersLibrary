@@ -320,7 +320,7 @@ function denoise(a::Ban, tol::Real)
     return b
 end
 
-function denoise(a::Vector{Ban}, tol::Real)
+function denoise(a::AbstractVector{Ban}, tol::Real)
 
 	b = copy(a);
 	for i in eachindex(b)
@@ -330,7 +330,7 @@ function denoise(a::Vector{Ban}, tol::Real)
 	return b
 end
 
-function denoise(a::Matrix{Ban}, tol::Real)
+function denoise(a::AbstractMatrix{Ban}, tol::Real)
 
 	b = copy(a);
 	for i in eachindex(b)
@@ -479,6 +479,9 @@ Base.one(::Type{Ban}) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(0, tmp, false))
 Base.ones(::Type{Ban}, n::Int) = _ones(n)
 Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 
+Base.round(a::Ban; digits::Integer = 0) = (b = copy(a); for i=1:SIZE b[i] = round(b[i], digits = digits) end; return b)
+Base.round(A::AbstractMatrix{T}; digits::Integer=0) where T<:AbstractAlgNum =(B = copy(A); for i in eachindex(B) B[i] = round(B[i], digits=digits) end; return B)
+
 Base.inv(a::Ban) = 1/a
 Base.abs(a::Ban) = (a[1] >= 0) ? copy(a) : -copy(a)
 Base.abs2(a::Ban) = a*a
@@ -616,6 +619,12 @@ LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:
 end
 
 # TODO
+#
+# Make IPM stop criterion independent on the optimum magnitude
+#
+# Return IPM to the sparse version
+#
+# Implement cholesky factorization for sparse matrices
 #
 # Merge denoise for Vectors and Matrices, and extend them to the case of N dimensions
 #

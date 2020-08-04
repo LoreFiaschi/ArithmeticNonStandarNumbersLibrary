@@ -1,14 +1,21 @@
 include("../src/BAN.jl")
 using .BAN
 using LinearAlgebra
+include("../../Utils/src/matrix2latex.jl")
 
-A = rand(Ban, 3,3);
+A = rand(Ban, 5,5);
 AA = A*A';
 
-for i in eachindex(AA)
-   AA[i].num .= [floor(AA[i][j]*100)/100 for j in eachindex(AA[i].num)]
-end
-
+A = round(A, digits=3);
+AA = round(AA, digits=7);
 f = cholesky(AA);
 
-println(f.L*f.L'-AA)
+print("G = "); matrix2latex(A);
+println("");
+
+print("A = "); matrix2latex(round(AA, digits=3));
+println("");
+
+print("L = "); matrix2latex(round(f.L, digits=3));
+println("");
+
