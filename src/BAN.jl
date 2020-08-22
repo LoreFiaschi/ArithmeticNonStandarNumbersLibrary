@@ -6,10 +6,12 @@ using Random, LinearAlgebra
 
 export Ban, AbstractAlgNum
 export α, η
+export SIZE
 export print_ext, println_ext, print_latex
 export degree, magnitude, principal
 export nextban, prevban
 export denoise, isoverflow, isoverflow!
+export component_wise_division
 
 export norm, normInf
 
@@ -22,7 +24,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -97,25 +99,25 @@ function println_ext(a::Ban)
     println("");
 end
 
-function print_latex(a::Ban)
+function print_latex(a::Ban; digits::Integer=2)
     if a == 0
         print("0");
     else
         deg = degree(a);
         vect = a.num
-        print("$(vect[1]) \\alpha^{$deg}");
+        print("$(round(vect[1], digits=digits)) \\alpha^{$deg}");
         for n in vect[2:end]
             deg -= 1;
             if n > 0
-                print(" + $n \\alpha^{$deg}");
+                print(" + $(round(n, digits=digits)) \\alpha^{$deg}");
             elseif n < 0
-                print(" - $(-n) \\alpha^{$deg}");
+                print(" - $(-round(n, digits=digits)) \\alpha^{$deg}");
             end
         end
     end
 end
 
-function print_latex(a::Vector{T}) where T <: AbstractAlgNum
+function print_latex(a::Vector{T}; digits::Integer=2) where T <: AbstractAlgNum
 
     num_elem = length(a);
 
@@ -123,7 +125,7 @@ function print_latex(a::Vector{T}) where T <: AbstractAlgNum
     print_latex(a[1]);
     for i = 2:num_elem
         print(",\\, ")
-        print_latex(a[i]);
+        print_latex(a[i], digits=digits);
     end
     print("\\right]");
 end
@@ -187,7 +189,7 @@ end
 function _div(a::Ban, b::Ban)
     
     # Check validity of operation
-    a == 0 && b == 0 && return NaN
+    a == 0 && return ifelse(b == 0, NaN, 0)
     b == 0 && return ifelse(a<0, -Inf, Inf)
     
     c = Ban(a);
@@ -209,6 +211,26 @@ end
 
 function _isless(a::Ban, b::Ban)
 
+	a_inf = isinf(a);
+	b_inf = isinf(b);
+	
+	if a_inf 
+		idx = findfirst(x->abs(x)==Inf, a.num);
+		if b_inf
+			@warn "comparison between overflowed numbers happend";
+			idx_b = findfirst(x->abs(x)==Inf, b.num);
+			return a[idx] < b[idx_b]
+		end
+		a[idx]>0 && return false
+		return true
+	end
+	
+	if b_inf
+		idx = findfirst(x->abs(x)==Inf, b.num);
+		b[idx]<0 && return false
+		return true
+	end
+	
     a.p < b.p && return ifelse(b[1] > 0 || b[1] == 0 && a[1] < 0, true, false)
     a.p > b.p && return ifelse(a[1] < 0 || a[1] == 0 && b[1] > 0, true, false)
     
@@ -338,6 +360,13 @@ function denoise(a::AbstractMatrix{Ban}, tol::Real)
 	end
 	
 	return b
+end
+
+function component_wise_division(a::Ban, b::Ban)
+
+	a.p != b.p && throw(ArgumentError("Bans must have the same degree"));
+
+	return Ban(a.p, a.num./b.num, false)
 end
 
 ######## UTILITY FUNCTIONS #########
@@ -619,6 +648,8 @@ LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:
 end
 
 # TODO
+#
+# Modify print_latex for vectors using bmatrix
 #
 # Make IPM stop criterion independent on the optimum magnitude
 #
