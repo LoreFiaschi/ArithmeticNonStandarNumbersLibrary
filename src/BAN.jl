@@ -24,7 +24,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 2;
+const SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -189,7 +189,7 @@ end
 function _div(a::Ban, b::Ban)
     
     # Check validity of operation
-    a == 0 && return ifelse(b == 0, NaN, 0)
+    a == 0 && return ifelse(b == 0, NaN, Ban(0,zeros(SIZE),false))
     b == 0 && return ifelse(a<0, -Inf, Inf)
     
     c = Ban(a);
@@ -206,7 +206,7 @@ function _div(a::Ban, b::Ban)
         c.num += eps.num
     end
     
-    return c/normalizer # if the scalar division is deleted this must be changed into c.num /= normalizer; return c; (otherwise loop happens)
+    return c/normalizer # if the scalar division is deleted this must be changed into c.num ./= normalizer; return c; (otherwise loop happens)
 end
 
 function _isless(a::Ban, b::Ban)
