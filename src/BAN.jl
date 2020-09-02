@@ -14,6 +14,7 @@ export denoise, isoverflow, isoverflow!
 export component_wise_division
 
 export norm, normInf
+#export reflector!
 
 # α^p P(η) , P(0) != 0 except for zero
 
@@ -633,6 +634,32 @@ function _setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:Abst
     else
         setindex!(A.data, v, i, j)
     end
+end
+
+# Needed beacuse the library one requests real(::Ban)
+# Elementary reflection similar to LAPACK. The reflector is not Hermitian but
+# ensures that tridiagonalization of Hermitian matrices become real. See lawn72
+@inline function LinearAlgebra.reflector!(x::AbstractVector{T}) where T<:Ban
+    Base.require_one_based_indexing(x)
+    n = length(x)
+    @inbounds begin
+        ξ1 = x[1]
+        normu = abs2(ξ1)
+        for i = 2:n
+            normu += abs2(x[i])
+        end
+        if iszero(normu)
+            return zero(ξ1/normu)
+        end
+        normu = sqrt(normu)
+        ν = copysign(normu, ξ1)
+        ξ1 += ν
+        x[1] = -ν
+        for i = 2:n
+            x[i] /= ξ1
+        end
+    end
+    ξ1/ν
 end
 
 LinearAlgebra.cholesky!(A::AbstractMatrix{T}, ::LinearAlgebra.Val{false}=LinearAlgebra.Val(false); check::Bool = true) where T<:AbstractAlgNum = _cholesky!(copy(A), LinearAlgebra.Val(false), check=check)
