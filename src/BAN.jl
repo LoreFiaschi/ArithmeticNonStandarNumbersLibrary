@@ -1,7 +1,7 @@
 __precompile__()
 module BAN
 
-using Printf
+using Printf, Format
 using Random, LinearAlgebra
 
 export Ban, AbstractAlgNum
@@ -25,7 +25,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -100,25 +100,26 @@ function println_ext(a::Ban)
     println("");
 end
 
-function print_latex(a::Ban; digits::Integer=2)
+function print_latex(a::Ban; precision::Integer=16, digits::Integer=2)
+	f = "{1:s} {2:.$(digits)f} {3:s}";
     if a == 0
         print("0");
     else
         deg = degree(a);
         vect = a.num
-        print("$(round(vect[1], digits=digits)) \\alpha^{$deg}");
+        printfmt("{1:.$(digits)f} {2:s}", round(vect[1], digits=precision), "\\alpha^{$deg}");
         for n in vect[2:end]
             deg -= 1;
             if n > 0
-                print(" + $(round(n, digits=digits)) \\alpha^{$deg}");
+                printfmt(f, " +", round(n, digits=precision), "\\alpha^{$deg}");
             elseif n < 0
-                print(" - $(-round(n, digits=digits)) \\alpha^{$deg}");
+                printfmt(f, " -", -round(n, digits=precision), "\\alpha^{$deg}");
             end
         end
     end
 end
 
-function print_latex(a::Vector{T}; digits::Integer=2) where T <: AbstractAlgNum
+function print_latex(a::Vector{T}; precision::Integer=16, digits::Integer=2) where T <: AbstractAlgNum
 
     num_elem = length(a);
 
@@ -126,7 +127,7 @@ function print_latex(a::Vector{T}; digits::Integer=2) where T <: AbstractAlgNum
     print_latex(a[1]);
     for i = 2:num_elem
         print(",\\, ")
-        print_latex(a[i], digits=digits);
+        print_latex(a[i], precision=precision, digits=digits);
     end
     print("\\right]");
 end
@@ -183,6 +184,12 @@ function _mul(a::Ban, b::Ban)
         end
     end
     
+	# Added to guarantee normal form, otherwise: (1e-170*α)*(1e-170*α) = α^2(0+0...)
+	if c[1] == 0
+        all(x->x==0, c.num[2:end]) && (c.p = 0; return c;)
+        _to_normal_form!(c);
+    end
+	
     return c;
 end
 
@@ -246,7 +253,7 @@ end
 function _sqrt(a::Ban)
 
     a < 0 && error("Sqrt of negative number")
-    a.p % 2 != 0 && error("Sqrt of BAN with odd reference power")
+    a.p % 2 != 0 && throw(ArgumentError("Sqrt of BAN with odd reference power"))
     (a == 0 || a == 1) && return copy(a)
     
     _a = Ban(convert(Int64, floor(a.p/2)), [one(Int64);zeros(Int64,SIZE-1)], false); 
@@ -678,15 +685,13 @@ end
 #
 # Modify print_latex for vectors using bmatrix
 #
-# Make IPM stop criterion independent on the optimum magnitude
+# IPM: make scaling parameter dependent on the inputs (0 if lower bounds are zeros and upper Inf, 1 otherwise)
 #
 # Return IPM to the sparse version
 #
 # Implement cholesky factorization for sparse matrices
 #
 # Merge denoise for Vectors and Matrices, and extend them to the case of N dimensions
-#
-# Omogenize with Tan library
 #
 # Correct print of arrays and matrices of Bans
 #
