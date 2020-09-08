@@ -25,7 +25,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 2;
+const SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -206,11 +206,11 @@ function _div(a::Ban, b::Ban)
     # Notice _b not in normal form to avoid overflow
     _b, normalizer = _generate_eps_(b);
     
-    eps = Ban(0, (_b*a).num);
+    eps = Ban(0, (_mul_(_b, a)).num);
     
     c.num += eps.num; 
     for i = 2:SIZE
-        eps *= _b;
+        eps = _mul_(eps, _b);
         c.num += eps.num
     end
     
@@ -379,13 +379,32 @@ end
 
 ######## UTILITY FUNCTIONS #########
 
+# Multiplication of two Bans without checking the normal form (needed in _div)
+function _mul_(a::Ban, b::Ban)
+
+    c = zero(a);
+    
+    # Introduced to guarantee the normal form Bans
+    (a == 0 || b == 0) && return c;
+
+    c.p = a.p + b.p;
+    
+    for i = 1:SIZE
+        for j = 1:SIZE-i+1
+            c[i+j-1] += a[i] * b[j];
+        end
+    end
+	
+    return c;
+end
+
 # Compute the eps needed for division or sqrt
 function _generate_eps_(a::Ban)
 
     eps = Ban(a);
     eps.p = 0; # for overflow avoidance
     normalizer = eps[1];
-    eps.num = -(eps.num/normalizer);
+    eps.num ./= -normalizer;
     
     #Notice: eps no more in normal form
     eps[1] = 0;
