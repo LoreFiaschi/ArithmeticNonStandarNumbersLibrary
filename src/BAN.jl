@@ -738,6 +738,8 @@ end
 
 # TODO
 #
+# NA-Simplex primary: use the correct check for the tolerances.
+#
 # Modify print_latex for vectors using bmatrix
 #
 # IPM: make scaling parameter dependent on the inputs (0 if lower bounds are zeros and upper Inf, 1 otherwise)
