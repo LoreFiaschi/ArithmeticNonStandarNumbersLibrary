@@ -25,7 +25,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -58,9 +58,14 @@ function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     return true
 end
 
-##################
-#    BEGIN BASE  #
-##################
+###################
+#    BEGIN BASE   #
+###################
+
+
+###################
+#    BEGIN I/O    #
+###################
 
 function _show(io::IO, a::Ban)
 
@@ -73,6 +78,28 @@ function _show(io::IO, a::Ban)
         end
     end
     print(")")
+end
+
+function _write(io::IO, a::Ban)
+	# SIZE is supposed known and equal to the current one
+	byte = write(io, a.p);
+	b = convert(Vector{Float64}, a.num);
+	for i=1:SIZE
+		byte += write(io, b[i]);
+	end
+
+	return byte
+end
+
+function _read(io::IO, a::Type{Ban})
+	#SIZE is supposed known and equal to the current one
+	p = read(io, Int64)
+	vec = Vector{Float64}(undef, SIZE);
+	for i=1:SIZE
+		vec[i] = read(io, Float64);
+	end
+
+	return Ban(p, vec)
 end
 
 
@@ -131,6 +158,11 @@ function print_latex(a::Vector{T}; precision::Integer=16, digits::Integer=2) whe
     end
     print("\\right]");
 end
+
+#########################
+#   BEGIN ARITHMETICS   #
+#########################
+
 
 # Sum of two Bans
 function _sum(a::Ban, b::Ban)
@@ -506,6 +538,10 @@ degree(a::Ban) = a.p
 degree(a::Real) = 0
 
 Base.show(io::IO, a::Ban) = _show(io, a)
+Base.write(io::IO, a::Ban) = _write(io, a)
+Base.write(io::IO, A::AbstractArray{T}) where T<:AbstractAlgNum = for i in eachindex(A) write(io, A[i]); end
+Base.read(io::IO, ::Type{T}) where T<:AbstractAlgNum = _read(io, T)
+
 Base.getindex(a::Ban, i::Int) = a.num[i]
 Base.getindex(a::Ban, v::AbstractArray{T}) where T<:Int = a.num[v]
 Base.getindex(a::Ban, u::UnitRange{T}) where T<:Int = a.num[u]
