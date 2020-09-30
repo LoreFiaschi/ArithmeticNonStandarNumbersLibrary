@@ -14,7 +14,6 @@ export denoise, isoverflow, isoverflow!
 export component_wise_division
 
 export norm, normInf
-#export reflector!
 
 # α^p P(η) , P(0) != 0 except for zero
 
@@ -57,10 +56,6 @@ function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     num[1] == 0 && p != 0 && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
     return true
 end
-
-###################
-#    BEGIN BASE   #
-###################
 
 
 ###################
@@ -128,7 +123,7 @@ function println_ext(a::Ban)
 end
 
 function print_latex(a::Ban; precision::Integer=16, digits::Integer=2)
-	f = "{1:s} {2:.$(digits)f} {3:s}";
+	f = "{1:s} {2:.$(digits)e} {3:s}";
     if a == 0
         print("0");
     else
@@ -150,13 +145,13 @@ function print_latex(a::Vector{T}; precision::Integer=16, digits::Integer=2) whe
 
     num_elem = length(a);
 
-    print("\\left[");
+    print("\\begin{bmatrix}");
     print_latex(a[1]);
     for i = 2:num_elem
-        print(",\\, ")
+        print("\\\\ ")
         print_latex(a[i], precision=precision, digits=digits);
     end
-    print("\\right]");
+    print("\\end{bmatrix}");
 end
 
 #########################
@@ -530,6 +525,11 @@ end
 
 ###################################
 
+###################
+#    BEGIN BASE   #
+###################
+
+
 principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp, false))
 principal(a::Real) = one(Ban)*a
 magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp, false))
@@ -539,7 +539,7 @@ degree(a::Real) = 0
 
 Base.show(io::IO, a::Ban) = _show(io, a)
 Base.write(io::IO, a::Ban) = _write(io, a)
-Base.write(io::IO, A::AbstractArray{T}) where T<:AbstractAlgNum = for i in eachindex(A) write(io, A[i]); end
+#Base.write(io::IO, A::AbstractArray{T}) where T<:AbstractAlgNum = for i in eachindex(A) write(io, A[i]); end (Not called because Ban is non-isbits)
 Base.read(io::IO, ::Type{T}) where T<:AbstractAlgNum = _read(io, T)
 
 Base.getindex(a::Ban, i::Int) = a.num[i]
@@ -738,6 +738,10 @@ end
 
 # TODO
 #
+# IPM: quadratic version, improve phaseone to manage unlimited regions
+#
+# Implement Bans as isbitstype in order to guarantee that arrays and matrices are stored continuously in memory
+#
 # NA-Simplex primary: use the correct check for the tolerances.
 #
 # Modify print_latex for vectors using bmatrix
@@ -763,6 +767,8 @@ end
 # Speedup computations with @inbounds
 #
 # I-Big-M: back to original order of x
+#
+# I-Big-M: scaling down objectives coefficient in order to have all of them at most finite
 #
 # Improved speed on vector computations using view()
 # 

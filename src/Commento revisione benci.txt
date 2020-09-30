@@ -1,0 +1,21 @@
+Box 1
+	Vero, però non lo aggiungerei. Dato che siamo molto orientati all'implementazione,
+	all'efficienza e alla standardizzazione, non credo che una tale soluzione sia 
+	significativa per le applicazioni pratiche. In particolare perché, in fin dei conti,
+	un risultato numerico approssimato non siamo comunque in grado di calcolarlo.
+
+
+Section 4.3 - Polynomial like-representation
+	Effettivamente non è corretto dire così. Volevo dire una rappresentazione
+	polinomiale in α. Nel caso in analisi i polinomi sono in e
+	
+	
+Box 2
+	Sicuramente bisogna dire che il tempo di convergenza è infinito. Calcolarlo
+	analiticamente si può e se riteniamo sia utile possiamo aggiungere quanto
+	valga. Per non impazzire con i conti possiamo limitarci a farlo per una 
+	catena più semplice.
+	
+
+Box 3
+	Da ovunque si parta ci vuole un tempo infinito per arrivare a convergenza
