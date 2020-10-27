@@ -11,7 +11,7 @@ export print_ext, println_ext, print_latex
 export degree, magnitude, principal
 export nextban, prevban
 export denoise, isoverflow, isoverflow!
-export component_wise_division
+export component_wise_division, retrieve_infinitesimals 
 
 export norm, normInf
 
@@ -24,7 +24,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -364,6 +364,41 @@ function _ones(n::Int)
     return a
 end
 
+
+###############################
+#  BEGIN EXTERNAL OPERATIONS  #
+###############################
+
+# Given a Ban, it returns some of the infinitesimal componets
+function retrieve_infinitesimals(a::Ban, degree::Integer)
+
+	a == 0 && return zero(Ban)
+	a.p < degree && throw(ArgumentError("The magnitude requested must be smaller than the input degree. Requested $(degree), while $(a.p) given."));
+	a.p == degree && return copy(a)
+	(SIZE-a.p+degree <= 0 || a.num[a.p-degree+1] == 0) && return zero(Ban)
+	
+	return Ban(degree, [a.num[a.p-degree+1:end]; zeros(a.p-degree)], false)
+end
+
+function retrieve_infinitesimals(A::AbstractArray{Ban}, degree::Integer)
+
+	s = size(A);
+	B = Array{Ban}(undef,s);
+	for i in eachindex(A)
+		B[i] = retrieve_infinitesimals(A[i], degree);
+	end
+
+	return B
+end
+
+
+function component_wise_division(a::Ban, b::Ban)
+
+	a.p != b.p && throw(ArgumentError("Bans must have the same degree"));
+
+	return Ban(a.p, a.num./b.num, false)
+end
+
 function denoise(a::Ban, tol::Real)
     
     b = copy(a);
@@ -397,14 +432,10 @@ function denoise(a::AbstractMatrix{Ban}, tol::Real)
 	return b
 end
 
-function component_wise_division(a::Ban, b::Ban)
 
-	a.p != b.p && throw(ArgumentError("Bans must have the same degree"));
-
-	return Ban(a.p, a.num./b.num, false)
-end
-
-######## UTILITY FUNCTIONS #########
+#############################
+#  BEGIN UTILITY FUNCTIONS  #
+#############################
 
 # Multiplication of two Bans without checking the normal form (needed in _div)
 function _mul_(a::Ban, b::Ban)
