@@ -8,12 +8,11 @@ export Ban, AbstractAlgNum
 export α, η
 export SIZE
 export print_ext, println_ext, print_latex
-export degree, magnitude, principal
+export degree, min_degree, magnitude, principal
 export nextban, prevban
 export denoise, isoverflow, isoverflow!
 export component_wise_division, retrieve_infinitesimals 
 
-export norm, normInf
 
 # α^p P(η) , P(0) != 0 except for zero
 
@@ -24,7 +23,7 @@ export norm, normInf
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 2;
+const SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -297,7 +296,7 @@ function _sqrt(a::Ban)
     for i=2:SIZE-1
         fact_i *= i;
         coef = (-1)^i*factorial(i<<1)/((1-(i<<1))*(fact_i)^2<<(i<<1));
-        eps *= _eps;
+        eps = _mul_(eps, _eps);
         _a.num += coef.*eps.num;
     end
     
@@ -373,11 +372,13 @@ end
 function retrieve_infinitesimals(a::Ban, degree::Integer)
 
 	a == 0 && return zero(Ban)
-	a.p < degree && throw(ArgumentError("The magnitude requested must be smaller than the input degree. Requested $(degree), while $(a.p) given."));
-	a.p == degree && return copy(a)
-	(SIZE-a.p+degree <= 0 || a.num[a.p-degree+1] == 0) && return zero(Ban)
+	a.p <= degree && return copy(a)
+	(SIZE-a.p+degree <= 0 || all(x->x==0, a.num[a.p-degree+1:end])) && return zero(Ban)
 	
-	return Ban(degree, [a.num[a.p-degree+1:end]; zeros(a.p-degree)], false)
+	res = Ban(degree, [a.num[a.p-degree+1:end]; zeros(a.p-degree)], false)
+	res[1] == 0 && (_to_normal_form!(res); true)
+	
+	return res
 end
 
 function retrieve_infinitesimals(A::AbstractArray{Ban}, degree::Integer)
@@ -390,7 +391,6 @@ function retrieve_infinitesimals(A::AbstractArray{Ban}, degree::Integer)
 
 	return B
 end
-
 
 function component_wise_division(a::Ban, b::Ban)
 
@@ -567,6 +567,8 @@ magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp, false))
 magnitude(a::Real) = one(Ban)
 degree(a::Ban) = a.p
 degree(a::Real) = 0
+min_degree(a::Ban) = (a==0) ? 0 : a.p-findlast(x->x!=0, a.num)+1
+min_degree(a::Real) = 0
 
 Base.show(io::IO, a::Ban) = _show(io, a)
 Base.write(io::IO, a::Ban) = _write(io, a)
