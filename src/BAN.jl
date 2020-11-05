@@ -243,6 +243,23 @@ function _div(a::Ban, b::Ban)
     return c/normalizer # if the scalar division is deleted this must be changed into c.num ./= normalizer; return c; (otherwise loop happens)
 end
 
+function _pow(a::Ban, p::Integer)
+
+	if a == 0
+		p > 0 && return zero(Ban)
+		p < 0 && return Inf
+		return one(Ban)
+	end
+
+	a == 1 && return one(Ban)
+
+	tmp = _pow_fast_(a, p÷2)	
+	p&1 == 1 && return a*tmp*tmp
+	
+	return tmp*tmp
+	
+end
+
 function _isless(a::Ban, b::Ban)
 
 	a_inf = isinf(a);
@@ -437,6 +454,18 @@ end
 #  BEGIN UTILITY FUNCTIONS  #
 #############################
 
+# Pow algorithm without control operations
+function _pow_fast_(a::Ban, p::Integer)
+
+	p == 0 && return 1
+
+	tmp = _pow_fast_(a, p÷2)	
+	p&1 == 1 && return a*tmp*tmp
+	
+	return tmp*tmp
+	
+end
+
 # Multiplication of two Bans without checking the normal form (needed in _div)
 function _mul_(a::Ban, b::Ban)
 
@@ -628,6 +657,7 @@ Base.:(-)(a::Ban) = a*-1
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
+Base.:(^)(a::Ban, p::Integer) = _pow(a, p)
 
 Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num.<<b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
 Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num.>>b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
