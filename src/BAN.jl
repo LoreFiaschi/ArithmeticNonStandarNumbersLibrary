@@ -145,11 +145,33 @@ function print_latex(a::Vector{T}; precision::Integer=16, digits::Integer=2) whe
     num_elem = length(a);
 
     print("\\begin{bmatrix}");
-    print_latex(a[1]);
+    print_latex(a[1], precision=precision, digits=digits);
     for i = 2:num_elem
         print("\\\\ ")
         print_latex(a[i], precision=precision, digits=digits);
     end
+    print("\\end{bmatrix}");
+end
+
+function print_latex(A::Matrix{T}; precision::Integer=16, digits::Integer=2) where T <: AbstractAlgNum
+
+    num_elem = size(A);
+
+    println("\\begin{bmatrix}");
+	for i=1:num_elem[1]-1
+		for j=1:num_elem[2]-1
+			print_latex(A[i,j], precision=precision, digits=digits);
+			print(" & ");
+		end
+		print_latex(A[i,num_elem[2]], precision=precision, digits=digits);
+		println(" \\\\")
+	end
+	for j=1:num_elem[2]-1
+		print_latex(A[num_elem[1],j], precision=precision, digits=digits);
+		print(" & ");
+	end
+	print_latex(A[num_elem[1],num_elem[2]], precision=precision, digits=digits);
+	println("");
     print("\\end{bmatrix}");
 end
 
@@ -803,15 +825,13 @@ end
 
 # TODO
 #
-# IPM: quadratic version, improve phaseone to manage unlimited regions
+# Speed up using @inline
+#
+# Debug print_latex whixh does not show values of magnitude 10^-4
 #
 # Implement Bans as isbitstype in order to guarantee that arrays and matrices are stored continuously in memory
 #
 # NA-Simplex primary: use the correct check for the tolerances.
-#
-# Modify print_latex for vectors using bmatrix
-#
-# IPM: make scaling parameter dependent on the inputs (0 if lower bounds are zeros and upper Inf, 1 otherwise)
 #
 # Return IPM to the sparse version
 #
@@ -827,8 +847,6 @@ end
 #
 # Generate Packages for BanRandom and BanLinearAlgebra
 #
-# Check what happens doing Ban + Nan and Ban + Inf
-#
 # Speedup computations with @inbounds
 #
 # I-Big-M: back to original order of x
@@ -840,5 +858,3 @@ end
 # Speed up isnan with a unique codific
 #
 # Allow one to give an input array smaller than SIZE and fill the remaining with zeros
-#
-# Remove non-normal form Ban allocation
