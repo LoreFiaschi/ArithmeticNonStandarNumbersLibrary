@@ -825,6 +825,8 @@ end
 
 # TODO
 #
+# Wrapper for IPM in the form Ax <= b
+#
 # Speed up using @inline
 #
 # Debug print_latex whixh does not show values of magnitude 10^-4
