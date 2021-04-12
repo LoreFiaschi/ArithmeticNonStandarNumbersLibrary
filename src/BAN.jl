@@ -8,6 +8,7 @@ export Ban, AbstractAlgNum
 export α, η
 export SIZE
 export print_ext, println_ext, print_latex
+export standard_part
 export degree, min_degree, magnitude, principal
 export nextban, prevban
 export denoise, isoverflow, isoverflow!
@@ -409,6 +410,13 @@ end
 #  BEGIN EXTERNAL OPERATIONS  #
 ###############################
 
+function standard_part(a::Ban)
+
+	a.p > 0 && return Inf*a.num[1]
+	a.p < 0 && return 0
+	return a.num[1]
+end
+
 # Given a Ban, it returns some of the infinitesimal componets
 function retrieve_infinitesimals(a::Ban, degree::Integer)
 
@@ -420,6 +428,11 @@ function retrieve_infinitesimals(a::Ban, degree::Integer)
 	res[1] == 0 && (_to_normal_form!(res); true)
 	
 	return res
+end
+
+function retrieve_infinitesimals(a::Real, degree::Integer)
+	degree < 0 && return 0
+	return a
 end
 
 function retrieve_infinitesimals(A::AbstractArray{Ban}, degree::Integer)
@@ -613,7 +626,6 @@ end
 #    BEGIN BASE   #
 ###################
 
-
 principal(a::Ban) = (tmp = zeros(SIZE); tmp[1] = a.num[1]; Ban(a.p, tmp, false))
 principal(a::Real) = one(Ban)*a
 magnitude(a::Ban) = (tmp = zeros(SIZE); tmp[1] = 1; Ban(a.p, tmp, false))
@@ -638,6 +650,7 @@ Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
+# Never uncomment
 #Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 #Base.Float64(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
 #Base.Int64(a::Ban) = (a.p == 0) ? convert(Int64, a[1]) : ((a.p > 0) ? Inf : zero(Int64))
@@ -785,7 +798,7 @@ function _setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:Abst
     end
 end
 
-# Needed beacuse the library one requests real(::Ban)
+# Needed beacuse the library requests real(::Ban)
 # Elementary reflection similar to LAPACK. The reflector is not Hermitian but
 # ensures that tridiagonalization of Hermitian matrices become real. See lawn72
 @inline function LinearAlgebra.reflector!(x::AbstractVector{T}) where T<:Ban
@@ -825,7 +838,7 @@ end
 
 # TODO
 #
-# Wrapper for IPM in the form Ax <= b
+# Understand and fix why NA-IPM converges slow on s
 #
 # Speed up using @inline
 #
@@ -835,13 +848,13 @@ end
 #
 # NA-Simplex primary: use the correct check for the tolerances.
 #
-# Return IPM to the sparse version
+# Return NA-IPM to the sparse version
 #
 # Implement cholesky factorization for sparse matrices
 #
 # Merge denoise for Vectors and Matrices, and extend them to the case of N dimensions
 #
-# Correct print of arrays and matrices of Bans
+# Correct print of arrays and matrices of Bans (now it prints twice the data, the first time is unformatted) [consider also show()]
 #
 # BanPlot -> set same y-axes interval for the plots that share the same y-magnitude
 #
