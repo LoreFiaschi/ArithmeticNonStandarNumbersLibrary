@@ -801,7 +801,7 @@ end
 # Needed beacuse the library requests real(::Ban)
 # Elementary reflection similar to LAPACK. The reflector is not Hermitian but
 # ensures that tridiagonalization of Hermitian matrices become real. See lawn72
-@inline function LinearAlgebra.reflector!(x::AbstractVector{T}) where T<:Ban
+@inline function LinearAlgebra.reflector!(x::AbstractVector{T}) where T<:AbstractAlgNum
     Base.require_one_based_indexing(x)
     n = length(x)
     @inbounds begin
@@ -833,6 +833,58 @@ LinearAlgebra.normInf(A::AbstractArray{T}) where T <: Ban = _generic_normInf(A)
 LinearAlgebra.norm(a::Ban) = abs(a)
 
 LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}} = _setindex!(A, v, i, j)
+
+LinearAlgebra.generic_lufact!(A::StridedMatrix{T}, pivot::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot} = _generic_lufact!(A, pivot; check=check)
+function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot}
+    m, n = size(A)
+    minmn = min(m,n)
+    info = 0
+    ipiv = Vector{LinearAlgebra.BlasInt}(undef, minmn)
+    @inbounds begin
+        for k = 1:minmn
+            # find index max
+            kp = k
+            if Pivot && k < m
+                amax = abs(A[k, k])
+                for i = k+1:m
+                    absi = abs(A[i,k])
+                    if absi > amax
+                        kp = i
+                        amax = absi
+                    end
+                end
+            end
+            ipiv[k] = kp
+            if !iszero(A[kp,k])
+                if k != kp
+                    # Interchange
+                    for i = 1:n
+                        tmp = A[k,i]
+                        A[k,i] = A[kp,i]
+                        A[kp,i] = tmp
+                    end
+                end
+                # Scale first column
+                Akkinv = inv(A[k,k])
+                for i = k+1:m
+                    A[i,k] *= Akkinv
+					A[i,k] = denoise(A[i,k], 1e-8)
+                end
+            elseif info == 0
+                info = k
+            end
+            # Update the rest
+            for j = k+1:n
+                for i = k+1:m
+                    A[i,j] -= A[i,k]*A[k,j]
+					A[i,j] = denoise(A[i,j], 1e-8)
+                end
+            end
+        end
+    end
+    check && LinearAlgebra.checknonsingular(info, LinearAlgebra.Val{Pivot}())
+    return LinearAlgebra.LU{T,typeof(A)}(A, ipiv, convert(LinearAlgebra.BlasInt, info))
+end
 
 end
 
