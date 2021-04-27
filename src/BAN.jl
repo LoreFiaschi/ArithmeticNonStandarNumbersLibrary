@@ -890,6 +890,8 @@ end
 
 # TODO
 #
+# Cholesky factorization denoised
+#
 # Understand and fix why NA-IPM converges slow on s
 #
 # Speed up using @inline
