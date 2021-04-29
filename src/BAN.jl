@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -333,7 +333,7 @@ function _sqrt(a::Ban)
 
     _a.num += 0.5.*eps.num;
     
-    fact_i = 1; # factorial(i), kept for speeding up the computation
+    fact_i = 1; # factorial(i), kept to speed up the computation
     
     for i=2:SIZE-1
         fact_i *= i;
@@ -503,7 +503,7 @@ function _pow_fast_(a::Ban, p::Integer)
 	
 end
 
-# Multiplication of two Bans without checking the normal form (needed in _div)
+# Multiplication of two Bans without checking the normal form (needed in _div) and _sqrt
 function _mul_(a::Ban, b::Ban)
 
     c = zero(a);
@@ -890,7 +890,9 @@ end
 
 # TODO
 #
-# Cholesky factorization denoised
+# Ban-customized generic_lufact! uses a constant denoise tolerance 1e-8. Let the user set it
+#
+# Cholesky factorization denoised, as well as all the other julia functions (e.g., inv, norms, etc.) if needed
 #
 # Substitute principal() with leading_term()
 #
