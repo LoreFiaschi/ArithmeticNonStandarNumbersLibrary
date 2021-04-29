@@ -892,7 +892,7 @@ end
 #
 # Cholesky factorization denoised
 #
-# Understand and fix why NA-IPM converges slow on s
+# Substitute principal() with leading_term()
 #
 # Speed up using @inline
 #
@@ -914,13 +914,13 @@ end
 #
 # Introduce the types BanInt64, BanFloat64 etc...
 #
-# Generate Packages for BanRandom and BanLinearAlgebra
+# Implement Packages for BanRandom and BanLinearAlgebra
 #
 # Speedup computations with @inbounds
 #
 # I-Big-M: back to original order of x
 #
-# I-Big-M: scaling down objectives coefficient in order to have all of them at most finite
+# I-Big-M: scaling down objectives coefficients in order to have all of them at most finite
 #
 # Improved speed on vector computations using view()
 # 
