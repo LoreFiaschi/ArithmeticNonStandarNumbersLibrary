@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 4;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -52,8 +52,8 @@ const η = Ban(-1, [one(Int64); zeros(Int64, SIZE-1)], false);
 #                       3) the "0" is represented with a vector of zeros of degree zero
 function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     
-    length(num) != SIZE && error(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given."))
-    num[1] == 0 && p != 0 && error("The first entry of the input array can be 0 only if all the other entries and the degree are nil too.")
+    length(num) != SIZE && throw(ArgumentError(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given.")))
+    num[1] == 0 && p != 0 && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
     return true
 end
 
@@ -682,7 +682,7 @@ Base.isless(a::Ban, b::Ban) = _isless(a, b)
 Base.isless(a::Ban, b::T) where T <: Real = _isless(a, convert(Ban,b))
 Base.isless(a::T, b::Ban) where T <: Real = _isless(convert(Ban,a),b)
 
-Base.isnan(a::Ban) = ifelse(any(x->isnan(x), a.num), true, false)
+Base.isnan(a::Ban) = ifelse(isnan(a.p) | any(x->isnan(x), a.num), true, false)
 Base.isinf(a::Ban) = ifelse(isinf(a.p) | any(x->isinf(x), a.num), true, false) # must be intended in a standard sense
 Base.isfinite(a::Ban) = ifelse(isfinite(a.p) | all(x->isfinite(x), a.num), true, false) # must be intended in a standard sense
 
@@ -703,7 +703,7 @@ Base.:(==)(a::Ban, b::Ban) = (a.p == b.p && a.num == b.num)
 Base.nextfloat(a::Ban, n::Integer=1) = nextban(a, n)
 Base.prevfloat(a::Ban, n::Integer=1) = prevban(a, n)
 
-# Maintained to speed up the computations
+# Maintained to speed the computations up
 Base.:(*)(a::Ban, b::T) where T <: Real = ifelse(b==0, zero(Ban), Ban(a.p, a.num.*b, false))
 Base.:(*)(a::T, b::Ban) where T <: Real = b*a
 Base.:(/)(a::Ban, b::T) where T <: Real = a*(1/b)
@@ -890,13 +890,19 @@ end
 
 # TODO
 #
+# Reimplement NA-IPM without levels but with infinitesimal reincrement when some entries of s or x go to zero
+#
+# Implement presolve routine for NA-IPM and manage the split variables issue (or use the idea in Wright 229-230)
+#
+# Solve NA-IPM instabilities due to some variables which go to zero "too early" (see s[3] and s[4] in ipqp_disjunctive_problem_bigM.jl at 3rd-4th iteration
+#
 # Cholesky factorization denoised
 #
 # Substitute principal() with leading_term()
 #
 # Speed up using @inline
 #
-# Debug print_latex whixh does not show values of magnitude 10^-4
+# Debug print_latex which does not show values of magnitude 10^-4
 #
 # Implement Bans as isbitstype in order to guarantee that arrays and matrices are stored continuously in memory
 #

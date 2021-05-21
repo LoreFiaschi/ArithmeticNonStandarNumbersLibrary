@@ -57,9 +57,9 @@ end
 
 function retrieve_args(args)
 
-    figtitle = ifelse(haskey(args, :figtitle), args[:figtitle], "");
-    figsize = ifelse(haskey(args, :figsize), args[:figsize], (10,10));
-    title = ifelse(haskey(args, :title), args[:title], "");
+    figtitle = (haskey(args, :figtitle)) ? args[:figtitle] : "";
+    figsize = (haskey(args, :figsize) ? args[:figsize] : (10,10));
+    title = (haskey(args, :title) ? args[:title] : "");
     
     return figtitle, figsize, title
 end
