@@ -333,7 +333,7 @@ function _sqrt(a::Ban)
 
     _a.num += 0.5.*eps.num;
     
-    fact_i = 1; # factorial(i), kept for speeding up the computation
+    fact_i = 1; # factorial(i), kept to speed up the computation
     
     for i=2:SIZE-1
         fact_i *= i;
@@ -503,7 +503,7 @@ function _pow_fast_(a::Ban, p::Integer)
 	
 end
 
-# Multiplication of two Bans without checking the normal form (needed in _div)
+# Multiplication of two Bans without checking the normal form (needed in _div) and _sqrt
 function _mul_(a::Ban, b::Ban)
 
     c = zero(a);
@@ -897,6 +897,10 @@ end
 # Solve NA-IPM instabilities due to some variables which go to zero "too early" (see s[3] and s[4] in ipqp_disjunctive_problem_bigM.jl at 3rd-4th iteration
 #
 # Cholesky factorization denoised
+#
+# Ban-customized generic_lufact! uses a constant denoise tolerance 1e-8. Let the user set it
+#
+# Cholesky factorization denoised, as well as all the other julia functions (e.g., inv, norms, etc.) if needed
 #
 # Substitute principal() with leading_term()
 #
