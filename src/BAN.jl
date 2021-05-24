@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 4;
+const SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -752,7 +752,7 @@ Random.Sampler(::Type{RNG}, ::Type{T}, n::Random.Repetition) where {RNG<:Abstrac
 #  BEGIN LINEAR ALGEBRA  #
 ##########################
 
-function _generic_normInf(A::AbstractArray{T}) where T <: Ban
+function _generic_normInf(A::AbstractArray{T}) where T <:AbstractAlgNum
     (v, s) = iterate(A)::Tuple
     maxabs = norm(v)
     while true
@@ -886,6 +886,73 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
     return LinearAlgebra.LU{T,typeof(A)}(A, ipiv, convert(LinearAlgebra.BlasInt, info))
 end
 
+# Generalize to the case of Union{AbstractAlgNum, Real}
+LinearAlgebra.naivesub!(A::UpperTriangular{T}, b::AbstractVector{T}, x::AbstractVector{T} = b) where T<:AbstractAlgNum = _naivesub!(A, b, x)
+function _naivesub!(A::UpperTriangular, b::AbstractVector, x::AbstractVector = b)
+    Base.require_one_based_indexing(A, b, x)
+    n = size(A, 2)
+    if !(n == length(b) == length(x))
+        throw(DimensionMismatch("second dimension of left hand side A, $n, length of output x, $(length(x)), and length of right hand side b, $(length(b)), must be equal"))
+    end
+    @inbounds for j in n:-1:1
+        iszero(A.data[j,j]) && throw(SingularException(j))
+        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
+        for i in j-1:-1:1 # counterintuitively 1:j-1 performs slightly better
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+        end
+    end
+    x
+end
+
+LinearAlgebra.naivesub!(A::UnitUpperTriangular{T}, b::AbstractVector{T}, x::AbstractVector{T} = b) where T<:AbstractAlgNum = _naivesub!(A, b, x)
+function _naivesub!(A::UnitUpperTriangular, b::AbstractVector, x::AbstractVector = b)
+    Base.require_one_based_indexing(A, b, x)
+    n = size(A, 2)
+    if !(n == length(b) == length(x))
+        throw(DimensionMismatch("second dimension of left hand side A, $n, length of output x, $(length(x)), and length of right hand side b, $(length(b)), must be equal"))
+    end
+    @inbounds for j in n:-1:1
+        xj = x[j] = b[j]
+        for i in j-1:-1:1 # counterintuitively 1:j-1 performs slightly better
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+        end
+    end
+    x
+end
+
+LinearAlgebra.naivesub!(A::LowerTriangular{T}, b::AbstractVector{T}, x::AbstractVector{T} = b) where T<:AbstractAlgNum = _naivesub!(A, b, x)
+function _naivesub!(A::LowerTriangular, b::AbstractVector, x::AbstractVector = b)
+    Base.require_one_based_indexing(A, b, x)
+    n = size(A, 2)
+    if !(n == length(b) == length(x))
+        throw(DimensionMismatch("second dimension of left hand side A, $n, length of output x, $(length(x)), and length of right hand side b, $(length(b)), must be equal"))
+    end
+    @inbounds for j in 1:n
+        iszero(A.data[j,j]) && throw(SingularException(j))
+        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
+        for i in j+1:n
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+        end
+    end
+    x
+end
+
+LinearAlgebra.naivesub!(A::UnitLowerTriangular{T}, b::AbstractVector{T}, x::AbstractVector{T} = b) where T<:AbstractAlgNum = _naivesub!(A, b, x)
+function _naivesub!(A::UnitLowerTriangular, b::AbstractVector, x::AbstractVector = b)
+    Base.require_one_based_indexing(A, b, x)
+    n = size(A, 2)
+    if !(n == length(b) == length(x))
+        throw(DimensionMismatch("second dimension of left hand side A, $n, length of output x, $(length(x)), and length of right hand side b, $(length(b)), must be equal"))
+    end
+    @inbounds for j in 1:n
+        xj = x[j] = b[j]
+        for i in j+1:n
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+        end
+    end
+    x
+end
+
 end
 
 # TODO
@@ -910,9 +977,9 @@ end
 #
 # Implement Bans as isbitstype in order to guarantee that arrays and matrices are stored continuously in memory
 #
-# NA-Simplex primary: use the correct check for the tolerances.
+# NA-Simplex primary: use the correct check for the tolerances and verify effectiveness in NA-LP
 #
-# Return NA-IPM to the sparse version
+# Revert NA-IPM to the sparse version
 #
 # Implement cholesky factorization for sparse matrices
 #
