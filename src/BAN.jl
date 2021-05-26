@@ -957,7 +957,7 @@ end
 
 # TODO
 #
-# Reimplement NA-IPM without levels but with infinitesimal reincrement when some entries of s or x go to zero
+# Improve use of starting point (with magnitudes) in NA-IPM
 #
 # Implement presolve routine for NA-IPM and manage the split variables issue (or use the idea in Wright 229-230)
 #
