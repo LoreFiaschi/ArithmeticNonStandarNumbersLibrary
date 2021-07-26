@@ -52,5 +52,8 @@ L = [
 LL = L*L'; matrix2latex(round(LL, digits=4));
 println("");
 
+norm_A = norm(A);
+print("Norm A: "); print_ext(norm_A); println("")
+
 norm_diff = norm(A-LL);
 print("Norm diff: "); print_ext(norm_diff);

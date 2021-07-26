@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -64,15 +64,15 @@ end
 
 function _show(io::IO, a::Ban)
 
-    print(string("α^",a.p,"(",a[1]))
+    print(io, string("α^",a.p,"(",a[1]))
     for i=2:SIZE
         if a[i] >= 0 
-            print(string(" + ", a[i], "η^$(i-1)"))
+            print(io, string(" + ", a[i], "η^$(i-1)"))
         else
-            print(string(" - ", -a[i], "η^$(i-1)"))
+            print(io, string(" - ", -a[i], "η^$(i-1)"))
         end
     end
-    print(")")
+    print(io, ")")
 end
 
 function _write(io::IO, a::Ban)
@@ -886,7 +886,7 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
     return LinearAlgebra.LU{T,typeof(A)}(A, ipiv, convert(LinearAlgebra.BlasInt, info))
 end
 
-# Generalize to the case of Union{AbstractAlgNum, Real}
+#Generalize to the case of Union{AbstractAlgNum, Real}
 LinearAlgebra.naivesub!(A::UpperTriangular{T}, b::AbstractVector{T}, x::AbstractVector{T} = b) where T<:AbstractAlgNum = _naivesub!(A, b, x)
 function _naivesub!(A::UpperTriangular, b::AbstractVector, x::AbstractVector = b)
     Base.require_one_based_indexing(A, b, x)
@@ -957,11 +957,23 @@ end
 
 # TODO
 #
-# Improve use of starting point (with magnitudes) in NA-IPM
+# PL-NSGA-II: improvement of crowding distance ordering using a tolerance on each monosemium
+#
+# NA-IPM: lufact and naivesub allow convergence only in floorplanning wasting the one of pyramid. Problems with factorizations or spurious gradients?
+#
+# NA-IPM: It seems that some entries (really??) of s and x become zero before time. Problems with Cholesky
+#
+# Avoid infinitesimal gradients at the wrong level in NA-IPM setting it to 0 or to a small value (e.g., solve_standardqp applied to 2° order pyramid)
+#
+# NA-IPM continues to have issues due to residuals of different magnitudes (e.g., linear kyte with linear=true usng solve_standardqp.jl)
+#
+# Rendere BanFactor compliant con le fattorizzazioni di julia
+#
+# Improve use of starting point (with magnitudes) in NA-IPM ?
 #
 # Implement presolve routine for NA-IPM and manage the split variables issue (or use the idea in Wright 229-230)
 #
-# Solve NA-IPM instabilities due to some variables which go to zero "too early" (see s[3] and s[4] in ipqp_disjunctive_problem_bigM.jl at 3rd-4th iteration
+# Solve NA-IPM instabilities due to some variables which go to zero "too early" (level change at infinite rhos not detected)
 #
 # Cholesky factorization denoised
 #
