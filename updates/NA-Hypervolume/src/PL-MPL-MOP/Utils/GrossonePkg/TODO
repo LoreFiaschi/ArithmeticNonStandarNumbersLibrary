@@ -1,0 +1,8 @@
+TODO_LIST
+
+Medium priority:
+  - implement division
+
+Low priority:
+  - redefine broadcasting using the new API (0.7)
+  - experiments embedding C++ in Julia

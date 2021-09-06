@@ -1,0 +1,5 @@
+https://optimization.mccormick.northwestern.edu/index.php/Disjunctive_inequalities#Illustrative_Example:_Locating_a_Warehouse
+
+https://optimization.mccormick.northwestern.edu/index.php/Convex_Generalized_disjunctive_programming_(GDP)
+
+https://optimization.mccormick.northwestern.edu/index.php/Nonconvex_Generalized_disjunctive_programming_(GDP)#Applications_and_Examples
