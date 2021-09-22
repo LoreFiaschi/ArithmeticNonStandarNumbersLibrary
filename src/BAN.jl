@@ -11,7 +11,7 @@ export print_ext, println_ext, print_latex
 export standard_part
 export degree, min_degree, magnitude, principal
 export nextban, prevban
-export denoise, isoverflow, isoverflow!
+export denoise#, isoverflow, isoverflow!
 export component_wise_division, retrieve_infinitesimals 
 
 
@@ -570,6 +570,7 @@ function prevban(a::Ban, n::Integer)
     return b
 end
 
+# function introuced for benci's bomb
 function isoverflow(a::Ban)
 
     b = copy(a);
@@ -587,6 +588,7 @@ function isoverflow(a::Ban)
     return b;
 end
 
+# function introuced for benci's bomb
 function isoverflow!(a::Ban)
 
     idx = findfirst(x->isinf(x), a.num);
@@ -603,6 +605,7 @@ function isoverflow!(a::Ban)
     return a;
 end
 
+# function introuced for benci's bomb
 function isoverflow(a::Array{Ban}) 
 
     b = copy(a);
@@ -613,6 +616,7 @@ function isoverflow(a::Array{Ban})
     return b
 end
 
+# function introuced for benci's bomb
 function isoverflow!(a::Array{Ban}) 
 
     for i in eachindex(a)
