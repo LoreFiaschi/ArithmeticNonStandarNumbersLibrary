@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 2;
+const SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -53,7 +53,7 @@ const η = Ban(-1, [one(Int64); zeros(Int64, SIZE-1)], false);
 function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     
     length(num) != SIZE && throw(ArgumentError(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given.")))
-    num[1] == 0 && p != 0 && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
+    num[1] == 0 && (p != 0 || !all(x->x==0, num)) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
     return true
 end
 
