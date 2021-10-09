@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -255,7 +255,7 @@ function _div(a::Ban, b::Ban)
     # Notice _b not in normal form to avoid overflow
     _b, normalizer = _generate_eps_(b);
     
-    eps = Ban(0, (_mul_(_b, a)).num);
+    eps = Ban(0, (_mul_(_b, a)).num, false);
     
     c.num += eps.num; 
     for i = 2:SIZE
@@ -961,7 +961,9 @@ end
 
 # TODO
 #
-# PL-NSGA-II: improvement of crowding distance ordering using a tolerance on each monosemium
+# NA-IPM: rename solve_standardqp into solve_qp
+#
+# NA-IPM: after changing level of optimization, some "finite" noisy residuals in "dual rho" appears, their magnitude is e-8 in general. Understand why and fiz it
 #
 # NA-IPM: lufact and naivesub allow convergence only in floorplanning wasting the one of pyramid. Problems with factorizations or spurious gradients?
 #
@@ -983,8 +985,6 @@ end
 #
 # Ban-customized generic_lufact! uses a constant denoise tolerance 1e-8. Let the user set it
 #
-# Cholesky factorization denoised, as well as all the other julia functions (e.g., inv, norms, etc.) if needed
-#
 # Substitute principal() with leading_term()
 #
 # Speed up using @inline
@@ -1000,8 +1000,6 @@ end
 # Implement cholesky factorization for sparse matrices
 #
 # Merge denoise for Vectors and Matrices, and extend them to the case of N dimensions
-#
-# Correct print of arrays and matrices of Bans (now it prints twice the data, the first time is unformatted) [consider also show()]
 #
 # BanPlot -> set same y-axes interval for the plots that share the same y-magnitude
 #
