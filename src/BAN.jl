@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 2;
+const SIZE = 3;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
