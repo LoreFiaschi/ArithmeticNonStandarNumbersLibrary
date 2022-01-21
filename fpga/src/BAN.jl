@@ -1020,11 +1020,3 @@ end
 # Speed up isnan with a unique codific
 #
 # Allow one to give an input array smaller than SIZE and fill the remaining with zeros
-#
-# Computational burden of _sum can be improved with c = Ban(a)
-#
-# Probably in _mul_ the check for zero is redundant (at least if it is used only by _div)
-#
-# Reimplement sqrt using hard-coded coefficients
-#
-# Speed-up deleting epsilon generation and unrolling loops
