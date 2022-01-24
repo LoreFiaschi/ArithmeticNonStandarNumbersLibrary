@@ -698,7 +698,7 @@ Base.:(-)(a::Ban) = a*-1
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
-Base.:(^)(a::Ban, p::Integer) = _pow(a, p)
+Base.:(^)(a::Ban, p::Integer) = _pow(copy(a), p)
 
 Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num.<<b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
 Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num.>>b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)

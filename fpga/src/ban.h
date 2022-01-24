@@ -16,8 +16,12 @@ class Ban{
 
 	// static functions
 	static bool _check_inconsistency(int p, const T num[SIZE]);
+	static Ban _pow_fast(const Ban &b, unsigned e);
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
+	static inline void _mul_trivial(const T num_a[SIZE], T n, T num_res[SIZE]) 
+										{for(unsigned i=0; i<SIZE; ++i)
+											num_res[i] = num_a[i]*n;};
 
 	// constructor without consistency check
 	Ban(int p, const T num[SIZE], bool check);
@@ -35,11 +39,14 @@ class Ban{
 	// algebraic operations
 	Ban operator+(const Ban &b) const;
 	Ban operator-() const;
-	Ban operator-(const Ban &b) const;
+	inline Ban operator-(const Ban &b) const {return *this+(-b);};
 	Ban operator*(const Ban &b) const;
 	Ban operator/(const Ban &b) const;
-	Ban abs() const;
-	Ban sqrt() const;
+	//Ban operator>>(unsigned i) const;
+	//Ban operator<<(unsigned i) const;
+	friend Ban abs(const Ban &b);
+	friend Ban sqrt(const Ban &b);
+	friend Ban pow(const Ban &b, unsigned e);
 
 
 	friend ostream& operator<<(ostream& os, const Ban &b);
@@ -52,12 +59,31 @@ class Ban{
 	inline bool operator>=(const Ban &b) const {return !(*this<b);};
 
 	// speedup functions for compuations with reals
+	Ban operator+(T n) const;
+	inline Ban operator-(T n) const {return *this+(-n);};
+	Ban operator*(T n) const;
+	Ban operator/(T n) const; // make this inline? *this*(1/n)
+
+	inline friend Ban operator+(T n, const Ban &b) {return b+n;};
+	inline friend Ban operator-(T n, const Ban &b) {return -b+n;};
+	inline friend Ban operator*(T n, const Ban &b) {return b*n;};
+	friend Ban operator/(T n, const Ban &b);
+	
 	bool operator==(T n) const;
+	bool operator<(T n) const;
+	inline bool operator>(T n) const {return n<*this;};
+	inline bool operator<=(T n) const {return !(n<*this);};
+	inline bool operator>=(T n) const {return !(*this<n);};
+
+	friend bool operator<(T n, const Ban &b);
+	inline friend bool operator>(T n, const Ban &b)  {return b<n;};
+	inline friend bool operator<=(T n, const Ban &b) {return !(b<n);};
+	inline friend bool operator>=(T n, const Ban &b) {return !(n<b);};
 };
 
 const T _[] = {1.0, 0, 0};
+const T __[] = {0.0, 0, 0};
 const Ban ALPHA(1, _);
 const Ban ETA(-1, _);
-
-// Copy constructor should be useless (default one is enough)
-// Case of Inf needs to be managed?
+const Ban ZERO(0, __);
+const Ban ONE(0, _);

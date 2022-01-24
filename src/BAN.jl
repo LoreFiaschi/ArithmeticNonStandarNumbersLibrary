@@ -262,8 +262,15 @@ function _div(a::Ban, b::Ban)
         eps = _mul_(eps, _b);
         c.num += eps.num
     end
+
+	c /= normalizer;
+
+	if(c.num == 0)
+		all(x->x==0, c.num[2:end]) && (c.p = 0; return c;)
+        _to_normal_form!(c);
+	end
     
-    return c/normalizer # if the scalar division is deleted this must be changed into c.num ./= normalizer; return c; (otherwise loop happens)
+    return c # if the scalar division is deleted this must be changed into c.num ./= normalizer; return c; (otherwise loop happens)
 end
 
 function _pow(a::Ban, p::Integer)
@@ -708,7 +715,19 @@ Base.nextfloat(a::Ban, n::Integer=1) = nextban(a, n)
 Base.prevfloat(a::Ban, n::Integer=1) = prevban(a, n)
 
 # Maintained to speed the computations up
-Base.:(*)(a::Ban, b::T) where T <: Real = ifelse(b==0, zero(Ban), Ban(a.p, a.num.*b, false))
+function _mul(a::Ban, b::T) where T <: Real
+	if(b==0)
+		return zero(Ban);
+	end
+	res = Ban(a.p, a.num.*b, false);
+	if(res.num[1] == 0)
+		all(x->x==0, res.num[2:end]) && (res.p = 0; return res;)
+        _to_normal_form!(res);
+	end
+	return res
+end
+
+Base.:(*)(a::Ban, b::T) where T <: Real = _mul(a, b)
 Base.:(*)(a::T, b::Ban) where T <: Real = b*a
 Base.:(/)(a::Ban, b::T) where T <: Real = a*(1/b)
 

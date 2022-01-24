@@ -36,16 +36,18 @@ int main(){
     Ban b3(0, v3);
     cout<<b1+b3<<endl;
     T v4[] = {-1.0,2,4};
-    b3 = Ban(0, v4);
-    cout<<b1+b3<<endl;
+    Ban b4 = Ban(0, v4);
+    cout<<b1+b4<<endl;
     T v5[] = {-1.0,2,-4};
-    b3 = Ban(0, v5);
-    cout<<b1+b3<<endl;
+    Ban b5 = Ban(0, v5);
+    cout<<b1+b5<<endl;
 
     cout<<endl<<"Check normal form for product"<<endl;
     T v6[] = {1e-30, 0, 0};
     Ban b6(1, v6);
     cout<<b6*b6<<endl;
+
+    // still to check normal form for division
 
     cout<<endl<<"Ordering"<<endl;
     cout<<(b1<b2)<<endl;
@@ -55,6 +57,47 @@ int main(){
     cout<<(b1>b7)<<endl;
     cout<<(b1<-b7)<<endl;
     cout<<(b1>-b7)<<endl;
+
+    cout<<endl<<"Ordering with a real"<<endl;
+    cout<<(b1<2)<<endl;
+    cout<<(2<b1)<<endl;
+    cout<<(b1<0.5)<<endl;
+    cout<<(0.5<b1)<<endl;
+    cout<<(b2<-2)<<endl;
+    cout<<(-2<b2)<<endl;
+    cout<<(b2<-4)<<endl;
+    cout<<(-4<b2)<<endl;
+    cout<<(b3<-1)<<endl;
+    cout<<(-1<b3)<<endl;
+    cout<<(b4<-1)<<endl;
+    cout<<(-1<b4)<<endl;
+
+    T v8[] = {-1.0,2,-4};
+    Ban b8 = Ban(2, v8);
+    Ban b9 = Ban(-2, v8);
+
+    cout<<endl<<"Algebraic operations with reals"<<endl;
+    cout<<b1-3<<endl;
+    cout<<-1+b1<<endl;
+    cout<<b8+3<<endl;
+    cout<<b9+3<<endl;
+    cout<<b9*3<<endl;
+    cout<<-2*b8<<endl;
+    cout<<b8/3<<endl;
+    Ban z = 2/b9;
+    cout<<z<<endl;
+    cout<<z*b9<<endl;
+
+    T v10[] = {3.0, -2, 4};
+    Ban b10(0, v10);
+    
+    cout<<endl<<"Test sqrt"<<endl;
+    Ban s = sqrt(b10);
+    cout<<s<<endl;
+    cout<<s*s<<endl;
+
+    cout<<endl<<"Test power"<<endl;
+    cout<<pow(0,0);
 
     return 0;
 }
