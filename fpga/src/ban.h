@@ -1,13 +1,15 @@
 #include <iostream>
 #include <stdexcept>
 #include <cmath>
+#include <fstream>
+#include <iomanip>
 using namespace std;
 typedef float T;
 
-const int SIZE = 3;
-const int EVEN_SIZE = SIZE & 1u;
+constexpr int SIZE = 3;
+constexpr int EVEN_SIZE = SIZE & 1u;
 // coefficients of the sqrt(1-x) taylor expansion (required for sqrt)
-const T sqrt_exp[5] = {-0.125, -0.0625, -7*0.03125, -21*0.015625};
+constexpr T sqrt_exp[5] = {-0.125, -0.0625, -7*0.03125, -21*0.015625};
 
 class Ban{
 
@@ -18,6 +20,7 @@ class Ban{
 	static bool _check_inconsistency(int p, const T num[SIZE]);
 	static Ban _pow_fast(const Ban &b, unsigned e);
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
+	Ban mul_body(const Ban &b) const;
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
 	static inline void _mul_trivial(const T num_a[SIZE], T n, T num_res[SIZE]) 
 										{for(unsigned i=0; i<SIZE; ++i)
@@ -46,10 +49,11 @@ class Ban{
 	//Ban operator<<(unsigned i) const;
 	friend Ban abs(const Ban &b);
 	friend Ban sqrt(const Ban &b);
-	friend Ban pow(const Ban &b, unsigned e);
+	friend Ban pow(const Ban &b, int e);
 
-
-	friend ostream& operator<<(ostream& os, const Ban &b);
+	// operatori di uscita
+	friend ostream& operator<<(ostream &os, const Ban &b);
+	friend ofstream& operator<<(ofstream &os, const Ban &b);
 
 	// ordering operators
 	bool operator==(const Ban& b) const;
@@ -75,14 +79,15 @@ class Ban{
 	inline bool operator<=(T n) const {return !(n<*this);};
 	inline bool operator>=(T n) const {return !(*this<n);};
 
+	inline friend bool operator==(T n, const Ban &b) {return b == n;};
 	friend bool operator<(T n, const Ban &b);
 	inline friend bool operator>(T n, const Ban &b)  {return b<n;};
 	inline friend bool operator<=(T n, const Ban &b) {return !(b<n);};
 	inline friend bool operator>=(T n, const Ban &b) {return !(n<b);};
 };
 
-const T _[] = {1.0, 0, 0};
-const T __[] = {0.0, 0, 0};
+constexpr T _[] = {1.0, 0, 0};
+constexpr T __[] = {0.0, 0, 0};
 const Ban ALPHA(1, _);
 const Ban ETA(-1, _);
 const Ban ZERO(0, __);

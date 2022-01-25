@@ -58,7 +58,7 @@ bool Ban::operator==(T n) const{
 	if(p != 0 || num[0] != n)
 		return false;
 	
-	for(unsigned i=0; i<SIZE; ++i)
+	for(unsigned i=1; i<SIZE; ++i)
 		if(num[i] != 0)
 			return false;
 	
@@ -149,11 +149,7 @@ void Ban::_mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]){
 			num_res[i+j] += num_a[i]*num_b[j];
 }
 
-Ban Ban::operator*(const Ban &b) const{
-	// introduced for speed-up
-	if(*this == 0 || b == 0)
-		return ZERO;
-
+Ban Ban::mul_body(const Ban &b) const{
 	T num_res[SIZE];
 	_mul(num, b.num, num_res);
 	
@@ -163,6 +159,14 @@ Ban Ban::operator*(const Ban &b) const{
 	c.to_normal_form();
 
 	return c;
+}
+
+Ban Ban::operator*(const Ban &b) const{
+	// introduced for speed-up
+	if(*this == 0 || b == 0)
+		return ZERO;
+
+	return this->mul_body(b);
 }
 
 Ban Ban::operator/(const Ban &b) const{
@@ -222,6 +226,32 @@ ostream& operator<<(ostream& os, const Ban &b){
 			os<<" - "<<-b.num[i]<<"η^"<<i;
 
 	os<<')';
+	
+	return os;
+}
+
+// readable implementation of file writing
+/*
+ofstream& operator<<(ofstream& os, const Ban &b){
+	os<<"α^"<<b.p<<'('<<b.num[0];
+	for(unsigned i=1; i<SIZE; ++i)
+		if(b.num[i] >= 0)
+			os<<" + "<<b.num[i]<<"η^"<<i;
+		else
+			os<<" - "<<-b.num[i]<<"η^"<<i;
+
+	os<<")";
+	
+	return os;
+}
+*/
+
+// file writing implementation for tests
+ofstream& operator<<(ofstream& os, const Ban &b){
+	os<<scientific<<setprecision(6);
+	os<<" "<<b.p<<" "<<b.num[0]; //initial space because disambiguation
+	for(unsigned i=1; i<SIZE; ++i)
+			os<<" "<<b.num[i];
 	
 	return os;
 }
@@ -511,20 +541,30 @@ Ban operator/(T n, const Ban &b){
 	return c;
 }
 
+// Check which implementation of pow is faster
+// I guess the current one is for small powers
+// Because prevents a lot of multiplications by ONE
+// Moreover, this version avoids input check of operator*
+// This code can be further improved avoiding the instantiation
+// of a new Ban each time and computing the final power in pow.
+// However, this may result in a loss of precision in very rare cases
 Ban Ban::_pow_fast(const Ban &b, unsigned e){
-	if(e == 0)
-		return ONE;
+	if(e == 1)
+		return b;
 	
-	Ban res = _pow_fast(b, e/2);
+	if(e == 2)
+		return b.mul_body(b);
+
+	Ban res = _pow_fast(b, e>>1);
 
 	if(e & 1u)
-		return b*res*res;
+		return b.mul_body(res).mul_body(res);
 	
-	return res*res;
+	return res.mul_body(res);
 
 }
 
-Ban pow(const Ban &b, unsigned e){
+Ban pow(const Ban &b, int e){
 	if(b == 0){
 		if(e > 0)
 			return ZERO;
@@ -533,16 +573,96 @@ Ban pow(const Ban &b, unsigned e){
 		return ONE;
 	}
 
+	if(b == 1)
+		return ONE;
+
+	if(e < 0)
+		 return Ban::_pow_fast(1/b, -e);
+
+	return Ban::_pow_fast(b, e);
+}
+
+// Old implementation of pow which uses full multiplcation
+/*
+Ban Ban::_pow_fast(const Ban &b, unsigned e){
 	if(e == 1)
 		return b;
+	
+	if(e == 2)
+		return b*b;
 
-	Ban res((e < 0) ? Ban::_pow_fast(1/res, e/2) : Ban::_pow_fast(res, e/2));
+	Ban res = _pow_fast(b, e>>1);
+
+	if(e & 1u)
+		return b*res*res;
+	
+	return res*res;
+
+}
+
+Ban pow(const Ban &b, int e){
+	if(b == 0){
+		if(e > 0)
+			return ZERO;
+		if(e < 0)
+			throw invalid_argument("Exponentiation of 0 with negative power not implemented yet");
+		return ONE;
+	}
+
+	if(b == 1)
+		return ONE;
+
+	if(e < 0)
+		 return Ban::_pow_fast(1/b, -e);
+
+	return Ban::_pow_fast(b, e);
+}
+*/
+
+// Other possible implementation of pow
+/*
+Ban Ban::_pow_fast(const Ban &b, unsigned e){
+	if(e == 0)
+		return ONE;
+
+	Ban res = _pow_fast_(b, e>>1);
+
+	if(e & 1u)	
+		return b*res*res;
+	
+	return res*res;
+}
+	
+Ban pow(const Ban &b, int e){
+	if(b == 0){
+		if(e > 0)
+			return ZERO;
+		if(e < 0)
+			throw invalid_argument("Exponentiation of 0 with negative power not implemented yet");
+		return ONE;
+	}
+
+	if(b == 1)
+		return ONE;
+	
+	if(e < 0){
+		Ban inv_b = 1/b;
+		Ban res = Ban::_pow_fast(1/b, -e);
+
+		if(e & 1u)
+			return inv_b*res*res;
+		
+		return res*res;
+	}
+
+	Ban res = Ban::_pow_fast_(b, e>>1);	
 	
 	if(e & 1u)
 		return b*res*res;
 	
 	return res*res;
 }
+*/
 
 // only for BanInt
 /*

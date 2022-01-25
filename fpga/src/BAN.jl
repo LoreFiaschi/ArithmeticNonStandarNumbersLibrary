@@ -30,8 +30,8 @@ const SIZE = 3;
 mutable struct Ban <: AbstractAlgNum
 
     # Members
-    p::Int
-    num::Array{T,1} where T<:Real
+    p::Int32
+    num::Array{T,1} where T<:Float32
     
     # Constructor
     Ban(p::Int,num::Array{T,1}, check::Bool) where T <: Real = new(p,copy(num))
@@ -42,9 +42,9 @@ mutable struct Ban <: AbstractAlgNum
 end
 
 # α constant
-const α = Ban(1, [one(Int64); zeros(Int64, SIZE-1)], false);
+const α = Ban(1, [one(Int32); zeros(Int32, SIZE-1)], false);
 # η constant
-const η = Ban(-1, [one(Int64); zeros(Int64, SIZE-1)], false);
+const η = Ban(-1, [one(Int32); zeros(Int32, SIZE-1)], false);
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
@@ -78,7 +78,7 @@ end
 function _write(io::IO, a::Ban)
 	# SIZE is supposed known and equal to the current one
 	byte = write(io, a.p);
-	b = convert(Vector{Float64}, a.num);
+	b = convert(Vector{Float32}, a.num);
 	for i=1:SIZE
 		byte += write(io, b[i]);
 	end
@@ -88,10 +88,10 @@ end
 
 function _read(io::IO, a::Type{Ban})
 	#SIZE is supposed known and equal to the current one
-	p = read(io, Int64)
-	vec = Vector{Float64}(undef, SIZE);
+	p = read(io, Int32)
+	vec = Vector{Float32}(undef, SIZE);
 	for i=1:SIZE
-		vec[i] = read(io, Float64);
+		vec[i] = read(io, Float32);
 	end
 
 	return Ban(p, vec)
@@ -202,7 +202,7 @@ function _sum(a::Ban, b::Ban)
     # Shift right the components
     if diff_p > 0
         c[diff_p+1:SIZE] = c[1:SIZE-diff_p];
-        c[1:diff_p] = zeros(Float64, diff_p);
+        c[1:diff_p] = zeros(Float32, diff_p);
     end
     
     # Compute the sum
@@ -262,8 +262,15 @@ function _div(a::Ban, b::Ban)
         eps = _mul_(eps, _b);
         c.num += eps.num
     end
+
+	c /= normalizer;
+
+	if(c.num == 0)
+		all(x->x==0, c.num[2:end]) && (c.p = 0; return c;)
+        _to_normal_form!(c);
+	end
     
-    return c/normalizer # if the scalar division is deleted this must be changed into c.num ./= normalizer; return c; (otherwise loop happens)
+    return c # if the scalar division is deleted this must be changed into c.num ./= normalizer; return c; (otherwise loop happens)
 end
 
 function _pow(a::Ban, p::Integer)
@@ -276,7 +283,7 @@ function _pow(a::Ban, p::Integer)
 
 	a == 1 && return one(Ban)
 	
-	p < 0 && (a=1/a)
+	p < 0 && (a=1/a; p=-p; true)
 
 	tmp = _pow_fast_(a, p÷2)	
 	p&1 == 1 && return a*tmp*tmp
@@ -324,7 +331,7 @@ function _sqrt(a::Ban)
     a.p % 2 != 0 && throw(ArgumentError("Sqrt of BAN with odd reference power"))
     (a == 0 || a == 1) && return copy(a)
     
-    _a = Ban(convert(Int64, floor(a.p/2)), [one(Int64);zeros(Int64,SIZE-1)], false); 
+    _a = Ban(convert(Int32, floor(a.p/2)), [one(Int32);zeros(Int32,SIZE-1)], false); 
     
     # Notice: eps and _eps are not in normal form to avoid overflow and to speed up the computation
     eps, normalizer = _generate_eps_(a);
@@ -549,7 +556,7 @@ function _to_normal_form!(a::Ban)
     
     # We have surely shift < SIZE
     a.num[1:SIZE-shift] = a.num[shift+1:SIZE];        
-    a.num[SIZE-shift+1:SIZE] = zeros(Float64, shift);
+    a.num[SIZE-shift+1:SIZE] = zeros(Float32, shift);
     
     return nothing
 end
@@ -655,9 +662,9 @@ Base.deepcopy(a::Ban) = copy(a)
 Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 # Never uncomment
-#Base.float(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
-#Base.Float64(a::Ban) = (a.p == 0) ? convert(Float64, a[1]) : ((a.p > 0) ? Inf : zero(Float64))
-#Base.Int64(a::Ban) = (a.p == 0) ? convert(Int64, a[1]) : ((a.p > 0) ? Inf : zero(Int64))
+#Base.float(a::Ban) = (a.p == 0) ? convert(Float32, a[1]) : ((a.p > 0) ? Inf : zero(Float32))
+#Base.Float32(a::Ban) = (a.p == 0) ? convert(Float32, a[1]) : ((a.p > 0) ? Inf : zero(Float32))
+#Base.Int32(a::Ban) = (a.p == 0) ? convert(Int32, a[1]) : ((a.p > 0) ? Inf : zero(Int32))
 #Base.real(a::Ban) = (a.p == 0) ? a[1] : ((a.p > 0) ? Inf : zero(a[1]))
 
 Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
@@ -698,7 +705,7 @@ Base.:(-)(a::Ban) = a*-1
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b)
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b)
 Base.:(/)(a::Ban, b::Ban) = _div(a,b)
-Base.:(^)(a::Ban, p::Integer) = _pow(copy(a), p)
+Base.:(^)(a::Ban, p::Integer) = _pow(a, p)
 
 Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num.<<b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p+=b, a.num, false)
 Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num.>>b, false) # previous behaviour (a == 0) ? Ban(a) : Ban(a.p-=b, a.num, false)
@@ -708,7 +715,19 @@ Base.nextfloat(a::Ban, n::Integer=1) = nextban(a, n)
 Base.prevfloat(a::Ban, n::Integer=1) = prevban(a, n)
 
 # Maintained to speed the computations up
-Base.:(*)(a::Ban, b::T) where T <: Real = ifelse(b==0, zero(Ban), Ban(a.p, a.num.*b, false))
+function _mul(a::Ban, b::T) where T <: Real
+	if(b==0)
+		return zero(Ban);
+	end
+	res = Ban(a.p, a.num.*b, false);
+	if(res.num[1] == 0)
+		all(x->x==0, res.num[2:end]) && (res.p = 0; return res;)
+        _to_normal_form!(res);
+	end
+	return res
+end
+
+Base.:(*)(a::Ban, b::T) where T <: Real = _mul(a, b)
 Base.:(*)(a::T, b::Ban) where T <: Real = b*a
 Base.:(/)(a::Ban, b::T) where T <: Real = a*(1/b)
 
@@ -729,7 +748,7 @@ CloseOpen12(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen12{T}()
 
 function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpen12_64})
 
-    num = Array{Float64, 1}(undef, SIZE);
+    num = Array{Float32, 1}(undef, SIZE);
     Random.reserve(r, SIZE);
     for i in eachindex(num)
         num[i] = Random.rand_inbounds(r, sp[])-1;
@@ -748,7 +767,7 @@ Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
 Random.rand_inbounds(r::MersenneTwister, ::CloseOpen01_AN=CloseOpen01(Ban)) = _rand(r, 1)
 Random.rand_inbounds(r::MersenneTwister, ::CloseOpen12_AN) = _rand(r, 0)
 
-Random.rand(r::MersenneTwister, sp::Random.SamplerTrivial{CloseOpen01_AN}) = _rand_Ban(r, Random.SamplerTrivial{Random.CloseOpen12{Float64},Float64}(Random.CloseOpen12{Float64}()))
+Random.rand(r::MersenneTwister, sp::Random.SamplerTrivial{CloseOpen01_AN}) = _rand_Ban(r, Random.SamplerTrivial{Random.CloseOpen12{Float32},Float32}(Random.CloseOpen12{Float32}()))
 
 Random.Sampler(::Type{RNG}, ::Type{T}, n::Random.Repetition) where {RNG<:AbstractRNG,T<:AbstractAlgNum} = Random.Sampler(RNG, CloseOpen01(T), n)
 
@@ -1005,7 +1024,7 @@ end
 #
 # BanPlot -> set same y-axes interval for the plots that share the same y-magnitude
 #
-# Introduce the types BanInt64, BanFloat64 etc...
+# Introduce the types BanInt32, BanFloat32 etc...
 #
 # Implement Packages for BanRandom and BanLinearAlgebra
 #
@@ -1020,3 +1039,11 @@ end
 # Speed up isnan with a unique codific
 #
 # Allow one to give an input array smaller than SIZE and fill the remaining with zeros
+#
+# Computational burden of _sum can be improved with c = Ban(a)
+#
+# Probably in _mul_ the check for zero is redundant (at least if it is used only by _div)
+#
+# Reimplement sqrt using hard-coded coefficients
+#
+# Speed-up deleting epsilon generation and unrolling loops

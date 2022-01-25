@@ -1,9 +1,14 @@
 #include <iostream>
-#include "../src/ban.h"
+#include <fstream>
+#include <limits>
+#include <cstdlib>
+#include <cmath>
+//#include "../src/ban.h"
 using namespace std;
 
 int main(){
 
+    /*
     T v1[] = {1.0,-2,4};
     Ban b1(0, v1);
     cout<<b1<<endl;
@@ -71,6 +76,8 @@ int main(){
     cout<<(-1<b3)<<endl;
     cout<<(b4<-1)<<endl;
     cout<<(-1<b4)<<endl;
+    cout<<(ONE==1)<<endl;  
+    cout<<(1==ONE)<<endl; 
 
     T v8[] = {-1.0,2,-4};
     Ban b8 = Ban(2, v8);
@@ -96,8 +103,35 @@ int main(){
     cout<<s<<endl;
     cout<<s*s<<endl;
 
-    cout<<endl<<"Test power"<<endl;
-    cout<<pow(0,0);
+    cout<<endl<<"Test pow"<<endl;
+    cout<<pow(b2,2)<<endl;
+    cout<<pow(b2,-2)<<endl;
+    cout<<pow(b6,5)<<endl;
+    cout<<pow(b9,-3)<<endl;
 
+    cout<<endl<<"Test scrittura Ban"<<endl;
+    ofstream ff;
+    ff.open("prova.txt");
+    ff<<b9;
+    ff.close();
+
+    cout<<endl<<"Sizeof int"<<endl;
+    cout<<sizeof(int)<<endl;
+    */
+   /*
+   T max_value = numeric_limits<T>::max();
+   T low_value = -numeric_limits<T>::max();
+   cout<<max_value<<endl;
+   cout<<low_value<<endl;
+   cout<<max_value-low_value<<endl;
+    */
+    srand(1);
+    //cout<<endl<<rand()<<endl<<rand()<<endl<<rand()<<endl;
+    //cout<<RAND_MAX<<endl;
+
+    for(unsigned i=0; i<20; ++i)
+        cout<<round((static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*2-1)<<" ";
+
+    cout<<endl;
     return 0;
 }

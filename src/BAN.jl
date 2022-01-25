@@ -283,7 +283,7 @@ function _pow(a::Ban, p::Integer)
 
 	a == 1 && return one(Ban)
 	
-	p < 0 && (a=1/a)
+	p < 0 && (a=1/a; p=-p; true)
 
 	tmp = _pow_fast_(a, p÷2)	
 	p&1 == 1 && return a*tmp*tmp
