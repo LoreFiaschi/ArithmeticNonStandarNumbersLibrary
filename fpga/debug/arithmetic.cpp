@@ -5,6 +5,7 @@
 #include <cmath>
 //#include "../src/ban.h"
 using namespace std;
+typedef float T;
 
 int main(){
 
@@ -130,7 +131,7 @@ int main(){
     //cout<<RAND_MAX<<endl;
 
     for(unsigned i=0; i<20; ++i)
-        cout<<round((static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*2-1)<<" ";
+        cout<<static_cast <T> (rand()) / static_cast <T> (RAND_MAX)<<" ";
 
     cout<<endl;
     return 0;

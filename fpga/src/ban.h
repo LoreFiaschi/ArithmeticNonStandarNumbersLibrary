@@ -84,6 +84,9 @@ class Ban{
 	inline friend bool operator>(T n, const Ban &b)  {return b<n;};
 	inline friend bool operator<=(T n, const Ban &b) {return !(b<n);};
 	inline friend bool operator>=(T n, const Ban &b) {return !(n<b);};
+
+	// external functions (comment for tests)
+	inline friend int degree(const Ban &b) {return b.p;};
 };
 
 constexpr T _[] = {1.0, 0, 0};
