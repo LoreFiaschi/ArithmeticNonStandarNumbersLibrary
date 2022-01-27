@@ -7,7 +7,7 @@
 using namespace std;
 typedef float T;
 
-const unsigned SAMPLES = 1000000;
+const unsigned SAMPLES = 1500;
 const T MAX_FAR = numeric_limits<T>::max();
 const T MIN_FAR = -numeric_limits<T>::max();
 const T MAX_CLOSE = 10;
@@ -122,7 +122,7 @@ int main(){
     
     srand(1);
     ofstream ff;
-    ff.open("_data.txt");
+    ff.open("data.txt");
     ff<<SAMPLES<<" "<<SIZE<<endl;
     ff<<scientific<<setprecision(6);
 

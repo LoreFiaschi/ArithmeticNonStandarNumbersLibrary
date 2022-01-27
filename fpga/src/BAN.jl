@@ -34,23 +34,23 @@ mutable struct Ban <: AbstractAlgNum
     num::Array{T,1} where T<:Float32
     
     # Constructor
-    Ban(p::Int,num::Array{T,1}, check::Bool) where T <: Real = new(p,copy(num))
-    Ban(p::Int,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
+    Ban(p::Int32,num::Array{T,1}, check::Bool) where T <: Real = new(p,copy(num))
+    Ban(p::Int32,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
     Ban(x::T) where T<:Real = ifelse(isinf(x), Ban(0, ones(SIZE).*x), one(Ban)*x)
 end
 
 # α constant
-const α = Ban(1, [one(Int32); zeros(Int32, SIZE-1)], false);
+const α = Ban(one(Int32), [one(Float32); zeros(Float32, SIZE-1)], false);
 # η constant
-const η = Ban(-1, [one(Int32); zeros(Int32, SIZE-1)], false);
+const η = Ban(-one(Int32), [one(Float32); zeros(Float32, SIZE-1)], false);
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
 #                       2) the first entry of the array must be non-zero except for the "0"
 #                       3) the "0" is represented with a vector of zeros of degree zero
-function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
+function _constraints_satisfaction(p::Int32,num::Array{T,1}) where T <: Real
     
     length(num) != SIZE && throw(ArgumentError(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given.")))
     num[1] == 0 && (p != 0 || !all(x->x==0, num)) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
@@ -93,6 +93,8 @@ function _read(io::IO, a::Type{Ban})
 	for i=1:SIZE
 		vec[i] = read(io, Float32);
 	end
+
+#    println(vec)
 
 	return Ban(p, vec)
 end
