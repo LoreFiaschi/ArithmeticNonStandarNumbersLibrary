@@ -3,13 +3,13 @@
 #include <limits>
 #include <cstdlib>
 #include <cmath>
-//#include "../src/ban.h"
+#include "../src/ban.h"
 using namespace std;
 typedef float T;
 
 int main(){
 
-    /*
+    
     T v1[] = {1.0,-2,4};
     Ban b1(0, v1);
     cout<<b1<<endl;
@@ -47,6 +47,9 @@ int main(){
     T v5[] = {-1.0,2,-4};
     Ban b5 = Ban(0, v5);
     cout<<b1+b5<<endl;
+    T v0[] = {-1.0,-2,-4};
+    Ban b0 = Ban(0, v0);
+    cout<<b1+b0<<endl;
 
     cout<<endl<<"Check normal form for product"<<endl;
     T v6[] = {1e-30, 0, 0};
@@ -118,7 +121,7 @@ int main(){
 
     cout<<endl<<"Sizeof int"<<endl;
     cout<<sizeof(int)<<endl;
-    */
+    
    /*
    T max_value = numeric_limits<T>::max();
    T low_value = -numeric_limits<T>::max();
@@ -126,13 +129,14 @@ int main(){
    cout<<low_value<<endl;
    cout<<max_value-low_value<<endl;
     */
-    srand(1);
+    //srand(1);
     //cout<<endl<<rand()<<endl<<rand()<<endl<<rand()<<endl;
     //cout<<RAND_MAX<<endl;
-
+    /*
     for(unsigned i=0; i<20; ++i)
         cout<<static_cast <T> (rand()) / static_cast <T> (RAND_MAX)<<" ";
 
     cout<<endl;
+    */
     return 0;
 }

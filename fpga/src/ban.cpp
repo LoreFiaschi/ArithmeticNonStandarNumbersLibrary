@@ -77,12 +77,9 @@ void Ban::to_normal_form(){
 			break;
 	
 	// execute the left-to-right shift
-	// zeroing the shifted entries
 	unsigned base = 0;
-	while(idx < SIZE){
-		num[base++] = num[idx];
-		num[idx++] = 0;
-	}
+	while(idx < SIZE)
+		num[base++] = num[idx++];
 
 	// base now memorizes how many shift has been executed
 	// if base == 0, then the inconsistency was on p
@@ -90,6 +87,10 @@ void Ban::to_normal_form(){
 		p = 0;
 	else
 		p += base - SIZE; // equivalent to -= SIZE-base;
+
+	// zeroing the shifted entries
+	while(base<SIZE)
+		num[base++] = 0;
 
 	return;
 }

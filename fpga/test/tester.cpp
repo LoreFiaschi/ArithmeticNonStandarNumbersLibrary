@@ -34,7 +34,7 @@ int main(){
         Ban b1(p, c);
         ifstream ff2;
         ff2.open("data.txt");
-        for(unsigned ii=0; ii <= i; ++ii)
+        for(unsigned ii=0; ii <= i+1; ++ii)
             ff2.ignore(100, '\n');
 
         for(unsigned ii=i+1; ii<SAMPLES; ++ii){           

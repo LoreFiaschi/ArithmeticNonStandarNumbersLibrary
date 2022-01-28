@@ -38,13 +38,15 @@ mutable struct Ban <: AbstractAlgNum
     Ban(p::Int32,num::Array{T,1}) where T <: Real = (_constraints_satisfaction(p,num) && new(p,copy(num)))
     Ban(a::Ban) = new(a.p,copy(a.num))
     Ban(x::Bool) = one(Ban)
-    Ban(x::T) where T<:Real = ifelse(isinf(x), Ban(0, ones(SIZE).*x), one(Ban)*x)
+    Ban(x::T) where T<:Real = ifelse(isinf(x), Ban(zero(Int32), ones(Float32, SIZE).*x), one(Ban)*x)
 end
 
 # α constant
 const α = Ban(one(Int32), [one(Float32); zeros(Float32, SIZE-1)], false);
 # η constant
 const η = Ban(-one(Int32), [one(Float32); zeros(Float32, SIZE-1)], false);
+
+const sqrt_coef = [convert(Float32, -0.125), convert(Float32, -0.0625), convert(Float32, -7*0.03125), convert(Float32, -21*0.015625)];
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
@@ -75,6 +77,7 @@ function _show(io::IO, a::Ban)
     print(io, ")")
 end
 
+#=
 function _write(io::IO, a::Ban)
 	# SIZE is supposed known and equal to the current one
 	byte = write(io, a.p);
@@ -84,6 +87,20 @@ function _write(io::IO, a::Ban)
 	end
 
 	return byte
+end
+=#
+
+function _write(io::IO, a::Ban)
+	# SIZE is supposed known and equal to the current one
+	@printf(io, " %d ", a.p);
+	#b = convert(Vector{Float32}, a.num);
+	for i=1:SIZE
+		#byte += write(io, a.num[i]);
+        @printf(io, "%.6e", a.num[i]);
+        @printf(io, "%s", " ");
+	end
+    @printf(io, "%s", "\n");
+	return 0
 end
 
 function _read(io::IO, a::Type{Ban})
@@ -187,13 +204,13 @@ end
 function _sum(a::Ban, b::Ban)
 
     # Sum with zero (in order to avoid precision loss)
-    a == 0 && return Ban(b);
-    b == 0 && return Ban(a);
+    a == zero(Float32) && return Ban(b);
+    b == zero(Float32) && return Ban(a);
 
     diff_p = a.p - b.p;
     
     # Assume a.p >= b.p, if not call again the function with the arguments reverted
-    diff_p < 0 && return _sum(b, a);
+    diff_p < zero(Float32) && return _sum(b, a);
     
     # If the numbers are too different the precision is not enough to compute the sum
     diff_p >= SIZE && return Ban(a);
@@ -202,7 +219,7 @@ function _sum(a::Ban, b::Ban)
     c.p = a.p;
     
     # Shift right the components
-    if diff_p > 0
+    if diff_p > zero(Float32)
         c[diff_p+1:SIZE] = c[1:SIZE-diff_p];
         c[1:diff_p] = zeros(Float32, diff_p);
     end
@@ -210,8 +227,8 @@ function _sum(a::Ban, b::Ban)
     # Compute the sum
     c.num += a.num;
     
-    if diff_p == 0 && c[1] == 0
-        all(x->x==0, c.num[2:end]) && (c.p=0; true;) && return c;
+    if diff_p == zero(Float32) && c[1] == zero(Float32)
+        all(x->x==zero(Float32), c.num[2:end]) && (c.p=zero(Float32); true;) && return c;
         
         _to_normal_form!(c);
     end
@@ -257,7 +274,7 @@ function _div(a::Ban, b::Ban)
     # Notice _b not in normal form to avoid overflow
     _b, normalizer = _generate_eps_(b);
     
-    eps = Ban(0, (_mul_(_b, a)).num, false);
+    eps = Ban(zero(Int32), (_mul_(_b, a)).num, false);
     
     c.num += eps.num; 
     for i = 2:SIZE
@@ -333,20 +350,20 @@ function _sqrt(a::Ban)
     a.p % 2 != 0 && throw(ArgumentError("Sqrt of BAN with odd reference power"))
     (a == 0 || a == 1) && return copy(a)
     
-    _a = Ban(convert(Int32, floor(a.p/2)), [one(Int32);zeros(Int32,SIZE-1)], false); 
+    _a = Ban(convert(Int32, floor(a.p/2)), [one(Float32);zeros(Float32,SIZE-1)], false); 
     
     # Notice: eps and _eps are not in normal form to avoid overflow and to speed up the computation
     eps, normalizer = _generate_eps_(a);
-    eps.num *= -1;
+    eps.num *= -one(Float32);
     _eps = Ban(eps);
 
-    _a.num += 0.5.*eps.num;
+    _a.num += (one(Float32)/(one(Int32)+one(Int32))).*eps.num; #0.5.*eps.num;
     
     fact_i = 1; # factorial(i), kept to speed up the computation
     
     for i=2:SIZE-1
         fact_i *= i;
-        coef = (-1)^i*factorial(i<<1)/((1-(i<<1))*(fact_i)^2<<(i<<1));
+        coef = sqrt_coef[i-1] #(-1)^i*factorial(i<<1)/((1-(i<<1))*(fact_i)^2<<(i<<1));
         eps = _mul_(eps, _eps);
         _a.num += coef.*eps.num;
     end
@@ -661,7 +678,7 @@ Base.setindex!(a::Ban, v::AbstractArray{T}, i::AbstractVector{Int}) where T<:Rea
 
 Base.copy(a::Ban) = Ban(a.p, copy(a.num))
 Base.deepcopy(a::Ban) = copy(a)
-Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(SIZE); tmp[1] = a; Ban(0, tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
+Base.convert(::Type{Ban}, a::T) where T <: Real = (tmp = zeros(Float32, SIZE); tmp[1] = a; Ban(zero(Int32), tmp)) # No a*one(Ban) because undefined behaviour if a is Inf
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 # Never uncomment
 #Base.float(a::Ban) = (a.p == 0) ? convert(Float32, a[1]) : ((a.p > 0) ? Inf : zero(Float32))
@@ -674,7 +691,7 @@ Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a,
 Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num[1])!=signbit(b), -a, +a)
 Base.copysign(a::Real, b::Ban) = copysign(b,a)
 
-Base.zero(a::Ban) = Ban(0, zeros(SIZE), false)
+Base.zero(a::Ban) = Ban(zero(Int32), zeros(Float32, SIZE), false)
 Base.zero(::Type{Ban}) = Ban(0, zeros(SIZE), false)
 Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
 Base.zeros(::Type{Ban}, n::Int, m::Int) = _zeros(n,m)
