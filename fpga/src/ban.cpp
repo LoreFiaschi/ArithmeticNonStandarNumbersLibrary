@@ -28,10 +28,10 @@ Ban::Ban(int p, const T num[SIZE], bool check){
 }
 
 Ban::Ban(int p, const T num[SIZE]){
-
+	#ifndef FPGA_HLS
 	if(_check_inconsistency(p, num))
 		throw invalid_argument("Inconsistent input for Ban.");
-
+	#endif 
 	init(p, num);
 
 }
@@ -96,10 +96,15 @@ void Ban::to_normal_form(){
 }
 
 Ban Ban::_sum(const Ban &a, const Ban &b, int diff_p){
-	Ban c(a);
-	
+	T num[SIZE];
+
+	for(unsigned i=0; i<diff_p; ++i)
+		num[i] = a.num[i];
+
 	for(unsigned i=diff_p; i<SIZE; ++i)
-		c.num[i] += b.num[i-diff_p];
+		num[i] = a.num[i] + b.num[i-diff_p];
+
+	Ban c(a.p, num, false);
 
 	if(diff_p == 0)
 		c.to_normal_form();
@@ -142,12 +147,15 @@ Ban Ban::operator-() const{
 }
 
 void Ban::_mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]){
+	T tmp;
 	for(unsigned i=0; i<SIZE; ++i)
 		num_res[i] = 0;
 	
 	for(unsigned i=0; i<SIZE; ++i)
-		for(unsigned j=0; j<SIZE-i; ++j)
-			num_res[i+j] += num_a[i]*num_b[j];
+		for(unsigned j=0; j<SIZE-i; ++j){
+			tmp = num_res[i+j] + num_a[i]*num_b[j];
+			num_res[i+j] = tmp;
+		}
 }
 
 Ban Ban::mul_body(const Ban &b) const{
@@ -172,8 +180,10 @@ Ban Ban::operator*(const Ban &b) const{
 
 Ban Ban::operator/(const Ban &b) const{
 	// check division by/of zero
+	#ifndef FPGA_HLS
 	if(b == 0)
 		throw domain_error("division by zero detected");
+	#endif
 
 	if(*this == 0)
 		return ZERO;
@@ -364,11 +374,14 @@ Ban abs(const Ban &b){
 
 
 Ban sqrt(const Ban &b){
+
+	#ifndef FPGA_HLS
 	if(b < 0)
 		throw domain_error("Square root of negative number cannot be computed.");
 
 	if(b.p & 1u)
 		throw domain_error("Impossibile to compute square root of odd magnitude Ban.");
+	#endif
 
 	if(b == 0 || b == 1)
 		return b;
@@ -383,8 +396,10 @@ Ban sqrt(const Ban &b){
 		num_res[i] = 0.5*eps_1[i];
 	}
 	
+	#ifndef FPGA_HLS
 	if constexpr (SIZE >= 8)
 		throw length_error("Square root for Ban7 not implmented yet.");
+	#endif
 
 	if constexpr (SIZE > 3){
 		unsigned i=0;
@@ -478,8 +493,11 @@ Ban Ban::operator*(T n) const{
 }
 
 Ban Ban::operator/(T n) const{
+
+	#ifndef FPGA_HLS
 	if(n == 0)
 		throw domain_error("division by zero detected");
+	#endif
 
 	if(*this == 0)
 		return ZERO;
@@ -496,8 +514,10 @@ Ban Ban::operator/(T n) const{
 // Notice most part equal to division between Bans
 Ban operator/(T n, const Ban &b){
 	// check division by/of zero
+	#ifndef FPGA_HLS
 	if(b == 0)
 		throw domain_error("division by zero detected");
+	#endif
 
 	if(n == 0)
 		return ZERO;
@@ -569,8 +589,10 @@ Ban pow(const Ban &b, int e){
 	if(b == 0){
 		if(e > 0)
 			return ZERO;
+		#ifndef FPGA_HLS
 		if(e < 0)
 			throw invalid_argument("Exponentiation of 0 with negative power not implemented yet");
+		#endif
 		return ONE;
 	}
 

@@ -1,0 +1,39 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jan 31 16:31:48 2022
+| Host         : lorenzo-System-Product-Name running 64-bit Linux Mint 19.3 Tricia
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/main_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------------------------+---------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------+------------+
+|                       Instance                       |                             Module                            | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++------------------------------------------------------+---------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------+------------+
+| bd_0_wrapper                                         |                                                         (top) |         17 |         17 |       0 |    0 |  15 |      0 |      0 |    0 |          0 |
+|   bd_0_i                                             |                                                          bd_0 |         17 |         17 |       0 |    0 |  15 |      0 |      0 |    0 |          0 |
+|     hls_inst                                         |                                               bd_0_hls_inst_0 |         17 |         17 |       0 |    0 |  15 |      0 |      0 |    0 |          0 |
+|       (hls_inst)                                     |                                               bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |    0 |          0 |
+|       inst                                           |                                          bd_0_hls_inst_0_main |         17 |         17 |       0 |    0 |  15 |      0 |      0 |    0 |          0 |
+|         (inst)                                       |                                          bd_0_hls_inst_0_main |          1 |          1 |       0 |    0 |   6 |      0 |      0 |    0 |          0 |
+|         grp_main_Pipeline_VITIS_LOOP_142_1_fu_33     |           bd_0_hls_inst_0_main_main_Pipeline_VITIS_LOOP_142_1 |         10 |         10 |       0 |    0 |   5 |      0 |      0 |    0 |          0 |
+|           (grp_main_Pipeline_VITIS_LOOP_142_1_fu_33) |           bd_0_hls_inst_0_main_main_Pipeline_VITIS_LOOP_142_1 |          4 |          4 |       0 |    0 |   3 |      0 |      0 |    0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U   | bd_0_hls_inst_0_main_flow_control_loop_pipe_sequential_init_0 |          6 |          6 |       0 |    0 |   2 |      0 |      0 |    0 |          0 |
+|         grp_main_Pipeline_VITIS_LOOP_21_1_fu_26      |            bd_0_hls_inst_0_main_main_Pipeline_VITIS_LOOP_21_1 |          6 |          6 |       0 |    0 |   4 |      0 |      0 |    0 |          0 |
+|           (grp_main_Pipeline_VITIS_LOOP_21_1_fu_26)  |            bd_0_hls_inst_0_main_main_Pipeline_VITIS_LOOP_21_1 |          0 |          0 |       0 |    0 |   2 |      0 |      0 |    0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U   |   bd_0_hls_inst_0_main_flow_control_loop_pipe_sequential_init |          6 |          6 |       0 |    0 |   2 |      0 |      0 |    0 |          0 |
++------------------------------------------------------+---------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------+------------+
+
+

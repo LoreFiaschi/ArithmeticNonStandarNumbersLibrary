@@ -45,6 +45,10 @@ class Ban{
 	inline Ban operator-(const Ban &b) const {return *this+(-b);};
 	Ban operator*(const Ban &b) const;
 	Ban operator/(const Ban &b) const;
+	Ban& operator+=(const Ban &b);
+	inline Ban& operator-=(const Ban &b){return *this+=-b;};
+	Ban& operator*=(const Ban &b);
+	Ban& operator/=(const Ban &b);
 	//Ban operator>>(unsigned i) const;
 	//Ban operator<<(unsigned i) const;
 	friend Ban abs(const Ban &b);

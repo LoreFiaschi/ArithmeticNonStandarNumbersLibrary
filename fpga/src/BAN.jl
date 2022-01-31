@@ -92,12 +92,12 @@ end
 
 function _write(io::IO, a::Ban)
 	# SIZE is supposed known and equal to the current one
-	@printf(io, " %d ", a.p);
+	@printf(io, " %d", a.p);
 	#b = convert(Vector{Float32}, a.num);
 	for i=1:SIZE
+        @printf(io, "%s", " ");
 		#byte += write(io, a.num[i]);
         @printf(io, "%.6e", a.num[i]);
-        @printf(io, "%s", " ");
 	end
     @printf(io, "%s", "\n");
 	return 0

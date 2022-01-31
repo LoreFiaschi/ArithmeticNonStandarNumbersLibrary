@@ -113,6 +113,7 @@ int main(){
     cout<<pow(b6,5)<<endl;
     cout<<pow(b9,-3)<<endl;
 
+	/*
     cout<<endl<<"Test scrittura Ban"<<endl;
     ofstream ff;
     ff.open("prova.txt");
@@ -121,7 +122,7 @@ int main(){
 
     cout<<endl<<"Sizeof int"<<endl;
     cout<<sizeof(int)<<endl;
-    
+    */
    /*
    T max_value = numeric_limits<T>::max();
    T low_value = -numeric_limits<T>::max();

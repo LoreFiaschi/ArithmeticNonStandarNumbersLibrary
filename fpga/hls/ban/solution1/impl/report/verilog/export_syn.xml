@@ -1,0 +1,130 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2021.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>0.578</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>0.578</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>0.578</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>9.422</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>9.422</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>9.422</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>9.422</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>0</DSP>
+      <FF>15</FF>
+      <LATCH>0</LATCH>
+      <LUT>17</LUT>
+      <SRL>0</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>624</BRAM>
+      <CLB>0</CLB>
+      <DSP>1728</DSP>
+      <FF>460800</FF>
+      <LUT>230400</LUT>
+      <URAM>96</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="main" DISPNAME="inst" RTLNAME="main">
+      <SubModules count="2">grp_main_Pipeline_VITIS_LOOP_142_1_fu_33 grp_main_Pipeline_VITIS_LOOP_21_1_fu_26</SubModules>
+      <Resources FF="15" LUT="17"/>
+      <LocalResources FF="6" LUT="1"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_main_Pipeline_VITIS_LOOP_142_1_fu_33" DEPTH="1" TYPE="function" MODULENAME="main_Pipeline_VITIS_LOOP_142_1" DISPNAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33" RTLNAME="main_main_Pipeline_VITIS_LOOP_142_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="5" LUT="10"/>
+      <LocalResources FF="3" LUT="4"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/flow_control_loop_pipe_sequential_init_U" BINDMODULE="main_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="main_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="6"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_main_Pipeline_VITIS_LOOP_21_1_fu_26" DEPTH="1" TYPE="function" MODULENAME="main_Pipeline_VITIS_LOOP_21_1" DISPNAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26" RTLNAME="main_main_Pipeline_VITIS_LOOP_21_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+      <Resources FF="4" LUT="6"/>
+      <LocalResources FF="2"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/flow_control_loop_pipe_sequential_init_U" BINDMODULE="main_flow_control_loop_pipe_sequential_init" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="main_flow_control_loop_pipe_sequential_init">
+      <Resources FF="2" LUT="6"/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="0.568" DATAPATH_LOGIC_DELAY="0.215" DATAPATH_NET_DELAY="0.353" ENDPOINT_PIN="ap_CS_fsm_reg[1]/D" LOGIC_LEVELS="2" MAX_FANOUT="8" SLACK="9.422" STARTPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]/C">
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="129"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm[1]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="120"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm[1]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="188"/>
+      <CELL NAME="ap_CS_fsm_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="107"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="0.466" DATAPATH_LOGIC_DELAY="0.115" DATAPATH_NET_DELAY="0.351" ENDPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/i_1_fu_36_reg[0]/R" LOGIC_LEVELS="1" MAX_FANOUT="8" SLACK="9.425" STARTPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33_ap_start_reg_reg/C">
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33_ap_start_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="115"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/flow_control_loop_pipe_sequential_init_U/i_1_fu_36[1]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="75"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/i_1_fu_36_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="91"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="0.466" DATAPATH_LOGIC_DELAY="0.115" DATAPATH_NET_DELAY="0.351" ENDPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/i_1_fu_36_reg[1]/R" LOGIC_LEVELS="1" MAX_FANOUT="8" SLACK="9.425" STARTPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33_ap_start_reg_reg/C">
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33_ap_start_reg_reg" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="115"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/flow_control_loop_pipe_sequential_init_U/i_1_fu_36[1]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="75"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_142_1_fu_33/i_1_fu_36_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="91"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="0.476" DATAPATH_LOGIC_DELAY="0.216" DATAPATH_NET_DELAY="0.260" ENDPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]/CE" LOGIC_LEVELS="1" MAX_FANOUT="8" SLACK="9.428" STARTPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]/C">
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="129"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/flow_control_loop_pipe_sequential_init_U/i_fu_40[1]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="66"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="0.476" DATAPATH_LOGIC_DELAY="0.216" DATAPATH_NET_DELAY="0.260" ENDPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[1]/CE" LOGIC_LEVELS="1" MAX_FANOUT="8" SLACK="9.428" STARTPOINT_PIN="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]/C">
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="129"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/flow_control_loop_pipe_sequential_init_U/i_fu_40[1]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="66"/>
+      <CELL NAME="grp_main_Pipeline_VITIS_LOOP_21_1_fu_26/i_fu_40_reg[1]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="129"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/main_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/main_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/main_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/main_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/main_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/main_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Mon Jan 31 16:32:13 CET 2022"/>
+    <item NAME="Version" VALUE="2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)"/>
+    <item NAME="Project" VALUE="ban"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynquplus"/>
+    <item NAME="Target device" VALUE="xczu7ev-ffvc1156-2-e"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

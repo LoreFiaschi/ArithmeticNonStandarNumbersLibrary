@@ -1,0 +1,213 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Jan 31 16:31:01 2022
+# Process ID: 20153
+# Current directory: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1
+# Command line: vivado -log bd_0_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_wrapper.tcl
+# Log file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/bd_0_wrapper.vds
+# Journal file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/vivado.jou
+# Running On: lorenzo-System-Product-Name, OS: Linux, CPU Frequency: 4537.291 MHz, CPU Physical cores: 8, Host memory: 33511 MB
+#-----------------------------------------------------------
+source bd_0_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/lorenzo/Programs/Vivado/2021.2/data/ip'.
+Command: synth_design -top bd_0_wrapper -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20191
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3267.984 ; gain = 157.793 ; free physical = 6425 ; free virtual = 25567
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_wrapper' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'bd_0' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v:13]
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/.Xil/Vivado-20153-lorenzo-System-Product-Name/realtime/bd_0_hls_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (1#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/.Xil/Vivado-20153-lorenzo-System-Product-Name/realtime/bd_0_hls_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0' (2#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_wrapper' (3#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3316.922 ; gain = 206.730 ; free physical = 6208 ; free virtual = 25327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3334.734 ; gain = 224.543 ; free physical = 6952 ; free virtual = 26073
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3334.734 ; gain = 224.543 ; free physical = 6967 ; free virtual = 26087
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3334.734 ; gain = 0.000 ; free physical = 7120 ; free virtual = 26241
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Finished Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0/bd_0_hls_inst_0_in_context.xdc] for cell 'bd_0_i/hls_inst'
+Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/main.xdc]
+Finished Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/main.xdc]
+Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3429.484 ; gain = 0.000 ; free physical = 7059 ; free virtual = 26160
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3429.484 ; gain = 0.000 ; free physical = 7059 ; free virtual = 26160
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3429.484 ; gain = 319.293 ; free physical = 7138 ; free virtual = 26236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3429.484 ; gain = 319.293 ; free physical = 7138 ; free virtual = 26236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for bd_0_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for bd_0_i/hls_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3429.484 ; gain = 319.293 ; free physical = 7138 ; free virtual = 26236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3429.484 ; gain = 319.293 ; free physical = 7137 ; free virtual = 26236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3429.484 ; gain = 319.293 ; free physical = 7123 ; free virtual = 26224
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3864.062 ; gain = 753.871 ; free physical = 6540 ; free virtual = 25645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3864.062 ; gain = 753.871 ; free physical = 6540 ; free virtual = 25645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3883.094 ; gain = 772.902 ; free physical = 6539 ; free virtual = 25643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |bd_0_hls_inst_0 |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |bd_0_hls_inst |     1|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.031 ; gain = 778.840 ; free physical = 6535 ; free virtual = 25642
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3889.031 ; gain = 684.090 ; free physical = 6573 ; free virtual = 25680
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3889.039 ; gain = 778.840 ; free physical = 6573 ; free virtual = 25680
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3889.039 ; gain = 0.000 ; free physical = 6566 ; free virtual = 25674
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3930.688 ; gain = 0.000 ; free physical = 6594 ; free virtual = 25700
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 834b6e64
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 3930.688 ; gain = 1032.500 ; free physical = 6791 ; free virtual = 25895
+INFO: [Common 17-1381] The checkpoint '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/impl/verilog/project.runs/synth_1/bd_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_wrapper_utilization_synth.rpt -pb bd_0_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 31 16:31:37 2022...

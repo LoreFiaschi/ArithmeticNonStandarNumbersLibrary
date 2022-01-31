@@ -1,0 +1,81 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-997" msg_severity="WARNING" msg_loc="../debug/main.cpp:94:1" msg_body="'/*' within block comment">
+        <args ClangWarningOption="comment"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5277" msg_severity="WARNING" msg_loc="../debug/main.cpp:17:7" msg_body="equality comparison result unused">
+        <args ClangWarningOption="unused-comparison"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4182" msg_severity="INFO" msg_loc="../debug/main.cpp:17:7" msg_body="use '=' to turn this equality comparison into an assignment">
+        <args/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../debug/main.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="main" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=main" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-1421" msg_severity="WARNING" msg_loc="../src/ban.cpp:213:5" msg_body="constexpr if is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-1421" msg_severity="WARNING" msg_loc="../src/ban.cpp:400:5" msg_body="constexpr if is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-1421" msg_severity="WARNING" msg_loc="../src/ban.cpp:415:6" msg_body="constexpr if is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-1421" msg_severity="WARNING" msg_loc="../src/ban.cpp:423:6" msg_body="constexpr if is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-1421" msg_severity="WARNING" msg_loc="../src/ban.cpp:547:5" msg_body="constexpr if is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="../src/ban.cpp:26:41" msg_body="unused parameter 'check'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:30:0" msg_body="Inlining function 'Ban::init(int, float const*) (.25)' into 'Ban::Ban(int, float const*)'">
+        <args Callee="Ban::init(int, float const*) (.25)" Caller="Ban::Ban(int, float const*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:26:0" msg_body="Inlining function 'Ban::init(int, float const*) (.25)' into 'Ban::Ban(int, float const*, bool) (.22)'">
+        <args Callee="Ban::init(int, float const*) (.25)" Caller="Ban::Ban(int, float const*, bool) (.22)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:98:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.22)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.6.32.59)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.22)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.6.32.59)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:98:0" msg_body="Inlining function 'Ban::to_normal_form() (.16)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.6.32.59)'">
+        <args Callee="Ban::to_normal_form() (.16)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.6.32.59)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:115:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../debug/../src/ban.h:45:0" msg_body="Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&amp;) const'">
+        <args Callee="Ban::operator-() const" Caller="Ban::operator-(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:157:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&amp;) const'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::mul_body(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:157:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.22)' into 'Ban::mul_body(Ban const&amp;) const'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.22)" Caller="Ban::mul_body(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:157:0" msg_body="Inlining function 'Ban::to_normal_form() (.16)' into 'Ban::mul_body(Ban const&amp;) const'">
+        <args Callee="Ban::to_normal_form() (.16)" Caller="Ban::mul_body(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:169:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator*(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator*(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:169:0" msg_body="Inlining function 'Ban::mul_body(Ban const&amp;) const' into 'Ban::operator*(Ban const&amp;) const'">
+        <args Callee="Ban::mul_body(Ban const&amp;) const" Caller="Ban::operator*(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:177:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:177:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:177:0" msg_body="Inlining function 'Ban::to_normal_form() (.16)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::to_normal_form() (.16)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../debug/main.cpp:8:0" msg_body="Inlining function 'Ban::Ban(int, float const*)' into 'main'">
+        <args Callee="Ban::Ban(int, float const*)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../debug/main.cpp:8:0" msg_body="Inlining function 'Ban::operator-(Ban const&amp;) const' into 'main'">
+        <args Callee="Ban::operator-(Ban const&amp;) const" Caller="main"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

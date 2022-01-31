@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Jan 31 15:53:43 2022
+# Process ID: 14579
+# Current directory: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/debug
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/debug/vivado.log
+# Journal file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/debug/vivado.jou
+# Running On: lorenzo-System-Product-Name, OS: Linux, CPU Frequency: 4518.954 MHz, CPU Physical cores: 8, Host memory: 33511 MB
+#-----------------------------------------------------------

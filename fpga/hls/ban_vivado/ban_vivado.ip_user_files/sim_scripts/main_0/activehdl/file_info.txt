@@ -1,0 +1,7 @@
+main_flow_control_loop_pipe_sequential_init.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/main_flow_control_loop_pipe_sequential_init.v,
+main_main_Pipeline_VITIS_LOOP_21_1.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/main_main_Pipeline_VITIS_LOOP_21_1.v,
+main_main_Pipeline_VITIS_LOOP_142_1.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/main_main_Pipeline_VITIS_LOOP_142_1.v,
+main_mux_32_32_1_1.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/main_mux_32_32_1_1.v,
+main.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/main.v,
+main_0.v,verilog,xil_defaultlib,../../../../ban_vivado.gen/sources_1/ip/main_0/sim/main_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

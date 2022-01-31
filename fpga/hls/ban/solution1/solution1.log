@@ -1,0 +1,195 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.324 GB.
+INFO: [HLS 200-10] Analyzing design file '../debug/main.cpp' ... 
+WARNING: [HLS 207-997] '/*' within block comment (../debug/main.cpp:94:1)
+WARNING: [HLS 207-5277] equality comparison result unused (../debug/main.cpp:17:7)
+INFO: [HLS 207-4182] use '=' to turn this equality comparison into an assignment (../debug/main.cpp:17:7)
+INFO: [HLS 200-10] Analyzing design file '../src/ban.cpp' ... 
+WARNING: [HLS 207-1421] constexpr if is a C++17 extension (../src/ban.cpp:213:5)
+WARNING: [HLS 207-1421] constexpr if is a C++17 extension (../src/ban.cpp:400:5)
+WARNING: [HLS 207-1421] constexpr if is a C++17 extension (../src/ban.cpp:415:6)
+WARNING: [HLS 207-1421] constexpr if is a C++17 extension (../src/ban.cpp:423:6)
+WARNING: [HLS 207-1421] constexpr if is a C++17 extension (../src/ban.cpp:547:5)
+WARNING: [HLS 207-5287] unused parameter 'check' (../src/ban.cpp:26:41)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.74 seconds. CPU system time: 0.45 seconds. Elapsed time: 3.82 seconds; current allocated memory: 418.793 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'Ban::init(int, float const*) (.25)' into 'Ban::Ban(int, float const*)' (../src/ban.cpp:30:0)
+INFO: [HLS 214-178] Inlining function 'Ban::init(int, float const*) (.25)' into 'Ban::Ban(int, float const*, bool) (.22)' (../src/ban.cpp:26:0)
+INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*, bool) (.22)' into 'Ban::_sum(Ban const&, Ban const&, int) (.6.32.59)' (../src/ban.cpp:98:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.16)' into 'Ban::_sum(Ban const&, Ban const&, int) (.6.32.59)' (../src/ban.cpp:98:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&) const' (../src/ban.cpp:115:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&) const' (../debug/../src/ban.h:45:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&) const' (../src/ban.cpp:157:0)
+INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*, bool) (.22)' into 'Ban::mul_body(Ban const&) const' (../src/ban.cpp:157:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.16)' into 'Ban::mul_body(Ban const&) const' (../src/ban.cpp:157:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator*(Ban const&) const' (../src/ban.cpp:169:0)
+INFO: [HLS 214-178] Inlining function 'Ban::mul_body(Ban const&) const' into 'Ban::operator*(Ban const&) const' (../src/ban.cpp:169:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator/(Ban const&) const' (../src/ban.cpp:177:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::operator/(Ban const&) const' (../src/ban.cpp:177:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.16)' into 'Ban::operator/(Ban const&) const' (../src/ban.cpp:177:0)
+INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*)' into 'main' (../debug/main.cpp:8:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator-(Ban const&) const' into 'main' (../debug/main.cpp:8:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.48 seconds. CPU system time: 0.19 seconds. Elapsed time: 2.67 seconds; current allocated memory: 418.828 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 418.828 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 421.355 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 424.062 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_101_1' (../src/ban.cpp:101) in function 'Ban::_sum' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_103_2' (../src/ban.cpp:103) in function 'Ban::_sum' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (../src/ban.cpp:21) in function 'Ban::_sum' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_75_1' (../src/ban.cpp:74) in function 'Ban::_sum' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_2' (../src/ban.cpp:74) in function 'Ban::_sum' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_92_3' (../src/ban.cpp:80) in function 'Ban::_sum' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_61_1' (../src/ban.cpp:61) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_193_1' (../src/ban.cpp:193) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_149_1' (../src/ban.cpp:149) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_153_3' (../src/ban.cpp:153) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_198_2' (../src/ban.cpp:198) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_149_1' (../src/ban.cpp:149) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_153_3' (../src/ban.cpp:153) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_215_6' (../src/ban.cpp:215) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_219_7' (../src/ban.cpp:219) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_75_1' (../src/ban.cpp:74) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_2' (../src/ban.cpp:74) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_92_3' (../src/ban.cpp:80) in function 'Ban::operator/' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_61_1' (../src/ban.cpp:61) in function 'Ban::operator+' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_61_1' (../src/ban.cpp:61) in function 'Ban::operator+' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_61_1' (../src/ban.cpp:61) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_61_1' (../src/ban.cpp:61) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_149_1' (../src/ban.cpp:149) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_153_3' (../src/ban.cpp:153) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (../src/ban.cpp:21) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_75_1' (../src/ban.cpp:74) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_2' (../src/ban.cpp:74) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_92_3' (../src/ban.cpp:80) in function 'Ban::operator*' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (../src/ban.cpp:21) in function 'main' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (../src/ban.cpp:21) in function 'main' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_142_1' (../src/ban.cpp:142) in function 'main' automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp4.1' automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'v2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'v1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b.num' (../src/ban.cpp:141) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b1.num' (../debug/main.cpp:12) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b2.num' (../debug/main.cpp:15) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'tmp.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'tmp2.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'tmp3.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.num' (../src/ban.cpp:187) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'b_norm' (../src/ban.cpp:191) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'eps' (../src/ban.cpp:191) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'eps_tmp' (../src/ban.cpp:191) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'num_res' (../src/ban.cpp:158) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'num' (../src/ban.cpp:100) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'v2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'v1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b.num' (../src/ban.cpp:141) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b1.num' (../debug/main.cpp:12) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b2.num' (../debug/main.cpp:15) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp2.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp3.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.num' (../src/ban.cpp:187) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b_norm' (../src/ban.cpp:191) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'eps' (../src/ban.cpp:191) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'eps_tmp' (../src/ban.cpp:191) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'num_res' (../src/ban.cpp:158) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'num' (../src/ban.cpp:100) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 448.402 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 458.402 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'main' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 458.879 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 458.879 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main_Pipeline_VITIS_LOOP_142_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_142_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_142_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 459.051 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 459.051 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'main' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 459.051 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 459.051 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main_Pipeline_VITIS_LOOP_21_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 459.051 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'main_Pipeline_VITIS_LOOP_142_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'main_Pipeline_VITIS_LOOP_142_1' pipeline 'VITIS_LOOP_142_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'main_Pipeline_VITIS_LOOP_142_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 459.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
