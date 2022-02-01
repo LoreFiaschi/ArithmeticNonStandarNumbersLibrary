@@ -178,6 +178,40 @@ Ban Ban::operator*(const Ban &b) const{
 	return this->mul_body(b);
 }
 
+void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]){
+	T normalizer = num_den[0];
+	T den_norm[SIZE], eps[SIZE], eps_tmp[SIZE];
+	den_norm[0] = 0;
+	for(unsigned i=1; i<SIZE; ++i)
+		den_norm[i] = -num_den[i]/normalizer;
+	
+	_mul(den_norm, num_num, eps);
+	
+	for(unsigned i=0; i<SIZE; ++i)
+		num_res[i] += eps[i]; // vectorial sum
+	
+	// unrolling of the outer loop to speed up
+	for(unsigned j=1; j<SIZE/2; ++j){
+		_mul(eps, den_norm, eps_tmp);
+		for(unsigned i=0; i<SIZE; ++i)
+			num_res[i] += eps_tmp[i]; // vectorial sum
+
+		_mul(eps_tmp, den_norm, eps);
+		for(unsigned i=0; i<SIZE; ++i)
+			num_res[i] += eps[i]; // vectorial sum
+	}
+
+	// necessary due to unrolling in case SIZE is even
+	if constexpr (EVEN_SIZE){
+		_mul(eps, den_norm, eps_tmp);
+		for(unsigned i=0; i<SIZE; ++i)
+			num_res[i] += eps_tmp[i]; // vectorial sum
+	}
+
+	for(unsigned i=0; i<SIZE; ++i)
+		num_res[i] /= normalizer; // element-wise division by a real
+}
+
 Ban Ban::operator/(const Ban &b) const{
 	// check division by/of zero
 	#ifndef FPGA_HLS
@@ -191,37 +225,7 @@ Ban Ban::operator/(const Ban &b) const{
 	Ban c(*this);
 	c.p -= b.p;
 
-	T normalizer = b.num[0];
-	T b_norm[SIZE], eps[SIZE], eps_tmp[SIZE];
-	b_norm[0] = 0;
-	for(unsigned i=1; i<SIZE; ++i)
-		b_norm[i] = -b.num[i]/normalizer;
-	
-	_mul(b_norm, this->num, eps);
-	
-	for(unsigned i=0; i<SIZE; ++i)
-		c.num[i] += eps[i]; // vectorial sum
-	
-	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<SIZE/2; ++j){
-		_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps_tmp[i]; // vectorial sum
-
-		_mul(eps_tmp, b_norm, eps);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps[i]; // vectorial sum
-	}
-
-	// necessary due to unrolling in case SIZE is even
-	if constexpr (EVEN_SIZE){
-		_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps_tmp[i]; // vectorial sum
-	}
-
-	for(unsigned i=0; i<SIZE; ++i)
-		c.num[i] /= normalizer; // element-wise division by a real
+	_div_body(this->num, b.num, c.num);
 
 	c.to_normal_form();
 

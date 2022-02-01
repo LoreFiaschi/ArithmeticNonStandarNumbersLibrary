@@ -142,12 +142,12 @@ Ban Ban::operator-() const{
 }
 
 void Ban::_mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]){
-	for(unsigned i=0; i<SIZE; ++i)
-		num_res[i] = 0;
-	
-	for(unsigned i=0; i<SIZE; ++i)
-		for(unsigned j=0; j<SIZE-i; ++j)
-			num_res[i+j] += num_a[i]*num_b[j];
+	// improved version which does not requires to initialize num_res
+	for(int i=SIZE-1; i>=0; --i){
+		num_res[i] = num_a[i]*num_b[0];
+		for(unsigned j=1; j<=i; ++j)
+			num_res[i] += num_a[i-j]*num_b[j];
+	}
 }
 
 Ban Ban::mul_body(const Ban &b) const{
@@ -170,6 +170,40 @@ Ban Ban::operator*(const Ban &b) const{
 	return this->mul_body(b);
 }
 
+void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]){
+	T normalizer = num_den[0];
+	T den_norm[SIZE], eps[SIZE], eps_tmp[SIZE];
+	den_norm[0] = 0;
+	for(unsigned i=1; i<SIZE; ++i)
+		den_norm[i] = -num_den[i]/normalizer;
+	
+	_mul(den_norm, num_num, eps);
+	
+	for(unsigned i=0; i<SIZE; ++i)
+		num_res[i] += eps[i]; // vectorial sum
+	
+	// unrolling of the outer loop to speed up
+	for(unsigned j=1; j<SIZE/2; ++j){
+		_mul(eps, den_norm, eps_tmp);
+		for(unsigned i=0; i<SIZE; ++i)
+			num_res[i] += eps_tmp[i]; // vectorial sum
+
+		_mul(eps_tmp, den_norm, eps);
+		for(unsigned i=0; i<SIZE; ++i)
+			num_res[i] += eps[i]; // vectorial sum
+	}
+
+	// necessary due to unrolling in case SIZE is even
+	if constexpr (EVEN_SIZE){
+		_mul(eps, den_norm, eps_tmp);
+		for(unsigned i=0; i<SIZE; ++i)
+			num_res[i] += eps_tmp[i]; // vectorial sum
+	}
+
+	for(unsigned i=0; i<SIZE; ++i)
+		num_res[i] /= normalizer; // element-wise division by a real
+}
+
 Ban Ban::operator/(const Ban &b) const{
 	// check division by/of zero
 	if(b == 0)
@@ -181,37 +215,7 @@ Ban Ban::operator/(const Ban &b) const{
 	Ban c(*this);
 	c.p -= b.p;
 
-	T normalizer = b.num[0];
-	T b_norm[SIZE], eps[SIZE], eps_tmp[SIZE];
-	b_norm[0] = 0;
-	for(unsigned i=1; i<SIZE; ++i)
-		b_norm[i] = -b.num[i]/normalizer;
-	
-	_mul(b_norm, this->num, eps);
-	
-	for(unsigned i=0; i<SIZE; ++i)
-		c.num[i] += eps[i]; // vectorial sum
-	
-	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<(SIZE>>1); ++j){
-		_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps_tmp[i]; // vectorial sum
-
-		_mul(eps_tmp, b_norm, eps);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps[i]; // vectorial sum
-	}
-
-	// necessary due to unrolling in case SIZE is even
-	if constexpr (EVEN_SIZE){
-		_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps_tmp[i]; // vectorial sum
-	}
-
-	for(unsigned i=0; i<SIZE; ++i)
-		c.num[i] /= normalizer; // element-wise division by a real
+	_div_body(this->num, b.num, c.num);
 
 	c.to_normal_form();
 
@@ -309,7 +313,25 @@ Ban& Ban::operator*=(const Ban &b){
 }
 
 Ban& Ban::operator/=(const Ban &b){
-	cout<<"still to implement"<<endl;
+	// check division by/of zero
+	if(b == 0)
+		throw domain_error("division by zero detected");
+
+	if(*this == 0)
+		return *this;
+
+	//alising
+	if(this == &b){
+		*this = ONE;
+		return *this;
+	}
+
+	p -= b.p;
+
+	_div_body(num, b.num, num);
+
+	this->to_normal_form();
+
 	return *this;
 }
 

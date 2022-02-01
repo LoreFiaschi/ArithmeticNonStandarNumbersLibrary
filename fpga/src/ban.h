@@ -16,11 +16,15 @@ class Ban{
 	int p;
 	T num[SIZE];
 
+	// utility functions
+	void to_normal_form();
+	Ban mul_body(const Ban &b) const;
+
 	// static functions
 	static bool _check_inconsistency(int p, const T num[SIZE]);
 	static Ban _pow_fast(const Ban &b, unsigned e);
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
-	Ban mul_body(const Ban &b) const;
+	static void _div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]);
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
 	static void _mul_overwriting(T num[SIZE], const T num_aux[SIZE]);
 	static inline void _mul_trivial(const T num_a[SIZE], T n, T num_res[SIZE]) 
@@ -30,9 +34,6 @@ class Ban{
 	// constructor without consistency check
 	Ban(int p, const T num[SIZE], bool check);
 	void init(int p, const T num[SIZE]);
-
-	// utility functions
-	void to_normal_form();
 
 	public:
 	
@@ -72,6 +73,10 @@ class Ban{
 	inline Ban operator-(T n) const {return *this+(-n);};
 	Ban operator*(T n) const;
 	Ban operator/(T n) const; // make this inline? *this*(1/n)
+	Ban operator+=(T n);
+	inline Ban operator-=(T n){*this += -n;};
+	Ban operator*=(T n);
+	Ban operator/=(T n);
 
 	inline friend Ban operator+(T n, const Ban &b) {return b+n;};
 	inline friend Ban operator-(T n, const Ban &b) {return -b+n;};
