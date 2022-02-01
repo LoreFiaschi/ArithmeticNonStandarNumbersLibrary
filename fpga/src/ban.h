@@ -22,6 +22,7 @@ class Ban{
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
 	Ban mul_body(const Ban &b) const;
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
+	static void _mul_overwriting(T num[SIZE], const T num_aux[SIZE]);
 	static inline void _mul_trivial(const T num_a[SIZE], T n, T num_res[SIZE]) 
 										{for(unsigned i=0; i<SIZE; ++i)
 											num_res[i] = num_a[i]*n;};

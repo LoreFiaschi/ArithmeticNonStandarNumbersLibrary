@@ -12,12 +12,21 @@ int main(){
     
     T v1[] = {1.0,-2,4};
     Ban b1(0, v1);
-    cout<<b1<<endl;
+//    cout<<b1<<endl;
 
     T v2[] = {-3,-5,14.5};
     Ban b2(0, v2);
-    cout<<b2<<endl;
+//    cout<<b2<<endl;
 
+    cout<<b1*b2<<endl;
+    b1 *= b2;
+    cout<<b1<<endl;
+
+    cout<<b1*b1<<endl;
+    b1*= b1;
+    cout<<b1<<endl;
+
+/*
     cout<<endl<<"Equality with real"<<endl;
     cout<<(b1==0)<<endl;
 

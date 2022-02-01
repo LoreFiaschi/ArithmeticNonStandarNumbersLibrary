@@ -193,7 +193,7 @@ Ban Ban::operator/(const Ban &b) const{
 		c.num[i] += eps[i]; // vectorial sum
 	
 	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<SIZE/2; ++j){
+	for(unsigned j=1; j<(SIZE>>1); ++j){
 		_mul(eps, b_norm, eps_tmp);
 		for(unsigned i=0; i<SIZE; ++i)
 			c.num[i] += eps_tmp[i]; // vectorial sum
@@ -219,6 +219,8 @@ Ban Ban::operator/(const Ban &b) const{
 }
 
 Ban& Ban::operator+=(const Ban &b){
+	// no need for anti-alising check
+
 	// check sum with zero to avoid precision loss
 	// example: 0 + η^5  = 0 if SIZE <= 5
 	if(*this == 0){
@@ -266,8 +268,43 @@ Ban& Ban::operator+=(const Ban &b){
 	return *this;
 }
 
+// fast implementation of ovewriting mul
+// it start from less informative monosemia
+void Ban::_mul_overwriting(T num[SIZE], const T num_aux[SIZE]){
+	for(int i=SIZE-1; i>=0; --i){
+		num[i] *= num_aux[0];
+		
+		// maybe some speedup is possible in case of aliasing
+		// because some mul are repeated
+		for(unsigned j=1; j<=i; ++j)
+			num[i] += num[i-j]*num_aux[j];
+	}
+}
+
 Ban& Ban::operator*=(const Ban &b){
-	cout<<"still to implement"<<endl;
+	// introduced for speed-up
+	if(*this == 0)
+		return *this;
+	if(b == 0){
+		*this = b;
+		return *this;
+	}
+
+	// check for aliasing
+	if(this == &b){
+		// gross implementation, to improve
+		T num_aux[SIZE];
+		for(unsigned i=0; i<SIZE; ++i)
+			num_aux[i] = num[i];
+		
+		_mul_overwriting(num, num_aux);
+	}
+	else
+		_mul_overwriting(num, b.num);
+
+	p += b.p;
+	this->to_normal_form();
+
 	return *this;
 }
 
@@ -478,7 +515,7 @@ Ban sqrt(const Ban &b){
 	for (unsigned i=0; i<SIZE; ++i)
 		num_res[i] *= normalizer;
 
-	return Ban(b.p/2, num_res);
+	return Ban(b.p>>1, num_res);
 }
 
 
@@ -574,7 +611,7 @@ Ban operator/(T n, const Ban &b){
 		c.num[i] += eps[i]; // vectorial sum
 	
 	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<SIZE/2; ++j){
+	for(unsigned j=1; j<(SIZE>>1); ++j){
 		Ban::_mul(eps, b_norm, eps_tmp);
 		for(unsigned i=0; i<SIZE; ++i)
 			c.num[i] += eps_tmp[i]; // vectorial sum
