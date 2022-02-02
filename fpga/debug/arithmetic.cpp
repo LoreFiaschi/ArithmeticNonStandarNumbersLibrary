@@ -5,7 +5,6 @@
 #include <cmath>
 #include "../src/ban.h"
 using namespace std;
-typedef float T;
 
 int main(){
 
@@ -25,7 +24,7 @@ int main(){
     cout<<b1/b1<<endl;
     b1/= b1;
     cout<<b1<<endl;
-
+/*
 /*
     cout<<endl<<"Equality with real"<<endl;
     cout<<(b1==0)<<endl;
@@ -92,10 +91,39 @@ int main(){
     cout<<(ONE==1)<<endl;  
     cout<<(1==ONE)<<endl; 
 
+
     T v8[] = {-1.0,2,-4};
     Ban b8 = Ban(2, v8);
     Ban b9 = Ban(-2, v8);
 
+    cout<<b8/b8<<endl;
+
+/*
+    cout<<b8+3<<endl;
+    b8+=3;
+    cout<<b8<<endl;
+    cout<<endl;
+    cout<<b9+3<<endl;
+    b9+=3;
+    cout<<b9<<endl;
+
+    cout<<b8*3<<endl;
+    b8*=3;
+    cout<<b8<<endl;
+    cout<<endl;
+    cout<<b9*3<<endl;
+    b9*=3;
+    cout<<b9<<endl;
+
+    cout<<b8/3<<endl;
+    b8/=3;
+    cout<<b8<<endl;
+    cout<<endl;
+    cout<<b9/3<<endl;
+    b9/=3;
+    cout<<b9<<endl;
+
+/*
     cout<<endl<<"Algebraic operations with reals"<<endl;
     cout<<b1-3<<endl;
     cout<<-1+b1<<endl;

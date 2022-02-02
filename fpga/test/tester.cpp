@@ -4,7 +4,6 @@
 #include "../src/ban.h"
 using namespace std;
 //using namespace std::chrono;
-typedef float T;
 
 // Missing checks with reals (but 0)
 

@@ -28,10 +28,12 @@ Ban::Ban(int p, const T num[SIZE], bool check){
 }
 
 Ban::Ban(int p, const T num[SIZE]){
+	
 	#ifndef FPGA_HLS
 	if(_check_inconsistency(p, num))
 		throw invalid_argument("Inconsistent input for Ban.");
-	#endif 
+	#endif
+	
 	init(p, num);
 
 }
@@ -58,6 +60,9 @@ bool Ban::operator==(T n) const{
 	if(p != 0 || num[0] != n)
 		return false;
 	
+	if(n == 0) // leverages assumption of normal form
+		return true;
+
 	for(unsigned i=1; i<SIZE; ++i)
 		if(num[i] != 0)
 			return false;
@@ -85,9 +90,10 @@ void Ban::to_normal_form(){
 	// if base == 0, then the inconsistency was on p
 	if(base == 0)
 		p = 0;
-	else
-		p += base - SIZE; // equivalent to -= SIZE-base;
-
+	else{
+		int tmp = p + base - SIZE; // equivalent to -= SIZE-base;
+		p = tmp; 
+	}
 	// zeroing the shifted entries
 	while(base<SIZE)
 		num[base++] = 0;
@@ -96,15 +102,13 @@ void Ban::to_normal_form(){
 }
 
 Ban Ban::_sum(const Ban &a, const Ban &b, int diff_p){
-	T num[SIZE];
-
-	for(unsigned i=0; i<diff_p; ++i)
-		num[i] = a.num[i];
-
-	for(unsigned i=diff_p; i<SIZE; ++i)
-		num[i] = a.num[i] + b.num[i-diff_p];
-
-	Ban c(a.p, num, false);
+	Ban c(a);
+	T tmp;
+	
+	for(unsigned i=diff_p; i<SIZE; ++i){
+		tmp = c.num[i] + b.num[i-diff_p];
+		c.num[i] = tmp;
+	}
 
 	if(diff_p == 0)
 		c.to_normal_form();
@@ -140,22 +144,25 @@ Ban Ban::operator+(const Ban &b) const{
 
 Ban Ban::operator-() const{
 	Ban b(*this);
-	for(unsigned i=0; i<SIZE; ++i)
-		b.num[i] *= -1;
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = b.num[i] * -1;
+		b.num[i] = tmp;
+	}
 	
 	return b;
 }
 
 void Ban::_mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]){
+	// improved version which does not requires to initialize num_res
 	T tmp;
-	for(unsigned i=0; i<SIZE; ++i)
-		num_res[i] = 0;
-	
-	for(unsigned i=0; i<SIZE; ++i)
-		for(unsigned j=0; j<SIZE-i; ++j){
-			tmp = num_res[i+j] + num_a[i]*num_b[j];
-			num_res[i+j] = tmp;
+	for(int i=SIZE-1; i>=0; --i){
+		num_res[i] = num_a[i]*num_b[0];
+		for(unsigned j=1; j<=i; ++j){
+			tmp = num_res[i] + num_a[i-j]*num_b[j];
+			num_res[i] = tmp;
 		}
+	}
 }
 
 Ban Ban::mul_body(const Ban &b) const{
@@ -187,29 +194,40 @@ void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE
 	
 	_mul(den_norm, num_num, eps);
 	
-	for(unsigned i=0; i<SIZE; ++i)
-		num_res[i] += eps[i]; // vectorial sum
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = num_res[i] + eps[i]; // vectorial sum
+		num_res[i] = tmp;
+	}
 	
 	// unrolling of the outer loop to speed up
 	for(unsigned j=1; j<SIZE/2; ++j){
 		_mul(eps, den_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			num_res[i] += eps_tmp[i]; // vectorial sum
+		for(unsigned i=0; i<SIZE; ++i){
+			tmp = num_res[i] + eps_tmp[i]; // vectorial sum
+			num_res[i] = tmp;
+		}
 
 		_mul(eps_tmp, den_norm, eps);
-		for(unsigned i=0; i<SIZE; ++i)
-			num_res[i] += eps[i]; // vectorial sum
+		for(unsigned i=0; i<SIZE; ++i){
+			tmp = num_res[i] + eps[i]; // vectorial sum
+			num_res[i] = tmp;
+		}
 	}
 
 	// necessary due to unrolling in case SIZE is even
 	if constexpr (EVEN_SIZE){
 		_mul(eps, den_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			num_res[i] += eps_tmp[i]; // vectorial sum
+		for(unsigned i=0; i<SIZE; ++i){
+			tmp = num_res[i] + eps_tmp[i]; // vectorial sum
+			num_res[i] = tmp;
+		}
 	}
 
-	for(unsigned i=0; i<SIZE; ++i)
-		num_res[i] /= normalizer; // element-wise division by a real
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = num_res[i] / normalizer; // element-wise division by a real
+		num_res[i] = tmp;
+	}
 }
 
 Ban Ban::operator/(const Ban &b) const{
@@ -223,13 +241,139 @@ Ban Ban::operator/(const Ban &b) const{
 		return ZERO;
 
 	Ban c(*this);
-	c.p -= b.p;
+	int tmp = c.p - b.p;
+	c.p = tmp;
 
 	_div_body(this->num, b.num, c.num);
 
 	c.to_normal_form();
 
 	return c;
+}
+
+Ban& Ban::operator+=(const Ban &b){
+	// no need for anti-alising check
+
+	// check sum with zero to avoid precision loss
+	// example: 0 + η^5  = 0 if SIZE <= 5
+	if(*this == 0){
+		*this = b;
+		return *this;
+	}
+	
+	if(b == 0)
+		return *this;
+
+	int diff_p = p - b.p;
+
+	// if the numbers are too different the precision is not enough to compute the sum
+	if(diff_p >= SIZE)
+		return *this;
+
+	if(diff_p <= -SIZE){
+		*this = b;
+		return *this;
+	}
+
+	if(diff_p < 0){
+		// auxiliary vector to store only relevant coefficients of num
+		unsigned dim = SIZE+diff_p;
+		T num_aux[dim];
+		for(unsigned i=0; i<dim; ++i)
+			num_aux[i] = num[i];
+		
+		// plain copy of b in num
+		for(unsigned i=0; i<-diff_p; ++i)
+			num[i] = b.num[i];
+		
+		for(unsigned i=-diff_p; i<SIZE; ++i)
+			num[i] = b.num[i] + num_aux[i+diff_p];
+
+		p = b.p;
+	}
+	else{
+		T tmp;
+		for(unsigned i=diff_p; i<SIZE; ++i){
+			tmp = num[i] + b.num[i-diff_p];
+			num[i] = tmp;
+		}
+	}
+
+	if(diff_p == 0)
+		this->to_normal_form();
+
+	return *this;
+}
+
+// fast implementation of ovewriting mul
+// it start from less informative monosemia
+void Ban::_mul_overwriting(T num[SIZE], const T num_aux[SIZE]){
+	T tmp;
+	for(int i=SIZE-1; i>=0; --i){
+		tmp = num[i] * num_aux[0];
+		num[i] = tmp;
+		
+		// maybe some speedup is possible in case of aliasing
+		// because some mul are repeated
+		for(unsigned j=1; j<=i; ++j){
+			tmp = num[i] + num[i-j]*num_aux[j];
+			num[i] = tmp;
+		}
+	}
+}
+
+Ban& Ban::operator*=(const Ban &b){
+	// introduced for speed-up
+	if(*this == 0)
+		return *this;
+	if(b == 0){
+		*this = b;
+		return *this;
+	}
+
+	// check for aliasing
+	if(this == &b){
+		// gross implementation, to improve
+		T num_aux[SIZE];
+		for(unsigned i=0; i<SIZE; ++i)
+			num_aux[i] = num[i];
+		
+		_mul_overwriting(num, num_aux);
+	}
+	else
+		_mul_overwriting(num, b.num);
+
+	int tmp = p + b.p;
+	p = tmp;
+	this->to_normal_form();
+
+	return *this;
+}
+
+Ban& Ban::operator/=(const Ban &b){
+	// check division by/of zero
+	#ifndef FPGA_HLS
+	if(b == 0)
+		throw domain_error("division by zero detected");
+	#endif
+
+	if(*this == 0)
+		return *this;
+
+	//alising
+	if(this == &b){
+		*this = ONE;
+		return *this;
+	}
+
+	int tmp = p - b.p;
+	p = tmp;
+
+	_div_body(num, b.num, num);
+
+	this->to_normal_form();
+
+	return *this;
 }
 
 ostream& operator<<(ostream& os, const Ban &b){
@@ -254,7 +398,6 @@ ofstream& operator<<(ofstream& os, const Ban &b){
 			os<<" + "<<b.num[i]<<"η^"<<i;
 		else
 			os<<" - "<<-b.num[i]<<"η^"<<i;
-
 	os<<")";
 	
 	return os;
@@ -369,16 +512,10 @@ Ban abs(const Ban &b){
 	if(b.num[0] >= 0)
 		return b;
 
-	Ban res(b);
-	for(unsigned i=0; i<SIZE; ++i)
-		res.num[i] *= -1;
-
-	return res;
+	return -b;
 }
 
-
 Ban sqrt(const Ban &b){
-
 	#ifndef FPGA_HLS
 	if(b < 0)
 		throw domain_error("Square root of negative number cannot be computed.");
@@ -405,17 +542,20 @@ Ban sqrt(const Ban &b){
 		throw length_error("Square root for Ban7 not implmented yet.");
 	#endif
 
+	T tmp;
 	if constexpr (SIZE > 3){
 		unsigned i=0;
 		while(i<SIZE-3){
 			Ban::_mul(eps_1, eps_2, eps_3);
 			for(unsigned j=0; j<SIZE; j++){
-				num_res[j] += sqrt_exp[i]*eps_3[j]; // vectorial sum
+				tmp = num_res[j] + sqrt_exp[i]*eps_3[j]; // vectorial sum
+				num_res[j] = tmp;
 			}
 			++i;
 			Ban::_mul(eps_3, eps_2, eps_1);
 			for(unsigned j=0; j<SIZE; j++){
-				num_res[j] += sqrt_exp[i]*eps_1[j]; // vectorial sum
+				tmp = num_res[j] + sqrt_exp[i]*eps_1[j]; // vectorial sum
+				num_res[j] = tmp;
 			}
 			++i;
 		}
@@ -423,26 +563,42 @@ Ban sqrt(const Ban &b){
 		if constexpr(!EVEN_SIZE){
 			Ban::_mul(eps_1, eps_2, eps_3);
 			for(unsigned j=0; j<SIZE; j++){
-				num_res[j] += sqrt_exp[i]*eps_3[j]; // vectorial sum
+				tmp = num_res[j] + sqrt_exp[i]*eps_3[j]; // vectorial sum
+				num_res[j] = tmp;
 			}
 		}
 	}
 	else{
 		if constexpr(SIZE == 3){
 			Ban::_mul(eps_1, eps_2, eps_3);
-			for(unsigned j=0; j<3; j++)
-				num_res[j] += sqrt_exp[0]*eps_3[j]; // vectorial sum
+			for(unsigned j=0; j<3; j++){
+				tmp = num_res[j] + sqrt_exp[0]*eps_3[j]; // vectorial sum
+				num_res[j] = tmp;
+			}
 		}
 	}
 
 	normalizer = sqrt(normalizer);
 
-	for (unsigned i=0; i<SIZE; ++i)
-		num_res[i] *= normalizer;
+	for (unsigned i=0; i<SIZE; ++i){
+		tmp = num_res[i] * normalizer;
+		num_res[i] = tmp;
+	}
 
-	return Ban(b.p/2, num_res);
+	return Ban(b.p>>1, num_res);
 }
 
+void Ban::sum_infinitesimal_real(T num_res[SIZE], T n) const{
+	// right-shifting the most significant part of *this by -p
+	for(unsigned i=SIZE-1; i>=-p; --i)
+		num_res[i] = num[i+p];
+
+	// zero padding until first monosemium
+	for(unsigned i=-p-1; i>0; --i)
+		num_res[i] = 0;
+
+	num_res[0] = n;
+}
 
 Ban Ban::operator+(T n) const{
 	// check sum with zero to avoid precision loss
@@ -456,40 +612,32 @@ Ban Ban::operator+(T n) const{
 		if(p-SIZE >= 0)
 			return res;
 
-		res.num[p] += n;
+		T tmp = res.num[p] + n;
+		res.num[p]  = tmp;
 		res.to_normal_form();
 
 		return res;
 	}
 
 	T num_res[SIZE];
-	num_res[0] = n;
-
-	// zero padding until *this starts
-	unsigned idx = 1;
-	while(idx<-p){
-		num_res[idx] = 0;
-		++idx;
-	}
-
-
-	// copy of the most significant part of *this
-	for(unsigned i=0; idx<SIZE; ++i){
-		num_res[idx] = num[i];
-		++idx;
-	}
+	this->sum_infinitesimal_real(num_res, n);
 
 	return Ban(0, num_res);
 }
 
 Ban Ban::operator*(T n) const{
+	/*
 	// true speedup ?
 	if(n == 0 || *this == 0)
 		return ZERO;
+	*/
 
 	Ban res(*this);
-	for(unsigned i=0; i<SIZE; ++i)
-		res.num[i] *= n;
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = res.num[i] * n;
+		res.num[i] = tmp;
+	}
 	
 	res.to_normal_form();
 
@@ -497,7 +645,6 @@ Ban Ban::operator*(T n) const{
 }
 
 Ban Ban::operator/(T n) const{
-
 	#ifndef FPGA_HLS
 	if(n == 0)
 		throw domain_error("division by zero detected");
@@ -507,15 +654,79 @@ Ban Ban::operator/(T n) const{
 		return ZERO;
 
 	Ban res(*this);
-	for(unsigned i=0; i<SIZE; ++i)
-		res.num[i] /= n;
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = res.num[i] / n;
+		res.num[i] = tmp;
+	}
 	
 	res.to_normal_form();
 
 	return res;
 }
 
-// Notice most part equal to division between Bans
+Ban& Ban::operator+=(T n){
+	// check sum with zero to avoid precision loss
+	// example: η^5 + 0  = 0 if SIZE <= 5
+	if(n == 0)
+		return *this;
+
+	if(p >= 0){
+		// *this too big to be affected by n
+		if(p-SIZE >= 0)
+			return *this;
+
+		T tmp = num[p] + n;
+		num[p] = tmp;
+		this->to_normal_form();
+
+		return *this;
+	}
+
+	this->sum_infinitesimal_real(num, n);
+	p = 0;
+
+	return *this;
+}
+
+Ban& Ban::operator*=(T n){
+	/*
+	// true speedup ? NO
+	if(n == 0 || *this == 0)
+		return ZERO;
+	*/
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = num[i] * n;
+		num[i] = tmp;
+	}
+	
+	this->to_normal_form();
+
+	return *this;
+}
+
+Ban& Ban::operator/=(T n){
+	#ifndef FPGA_HLS
+	if(n == 0)
+		throw domain_error("division by zero detected");
+	#endif
+
+	if(*this == 0)
+		return *this;
+	
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = num[i] / n;
+		num[i] = tmp;
+	}
+	
+	this->to_normal_form();
+
+	return *this;
+}
+
+// TODO: Notice most part equal to division between Bans
 Ban operator/(T n, const Ban &b){
 	// check division by/of zero
 	#ifndef FPGA_HLS
@@ -537,29 +748,40 @@ Ban operator/(T n, const Ban &b){
 	
 	Ban::_mul_trivial(b_norm, n, eps);
 	
-	for(unsigned i=0; i<SIZE; ++i)
-		c.num[i] += eps[i]; // vectorial sum
+	T tmp;
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = c.num[i] + eps[i]; // vectorial sum
+		c.num[i] = tmp;
+	}
 	
 	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<SIZE/2; ++j){
+	for(unsigned j=1; j<(SIZE>>1); ++j){
 		Ban::_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps_tmp[i]; // vectorial sum
+		for(unsigned i=0; i<SIZE; ++i){
+			tmp = c.num[i] + eps_tmp[i]; // vectorial sum
+			c.num[i] = tmp;
+		}
 
 		Ban::_mul(eps_tmp, b_norm, eps);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps[i]; // vectorial sum
+		for(unsigned i=0; i<SIZE; ++i){
+			tmp = c.num[i] + eps[i]; // vectorial sum
+			c.num[i] = tmp;
+		}
 	}
 
 	// necessary due to unrolling in case SIZE is even
 	if constexpr (EVEN_SIZE){
 		Ban::_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i)
-			c.num[i] += eps_tmp[i]; // vectorial sum
+		for(unsigned i=0; i<SIZE; ++i){
+			tmp = c.num[i] + eps_tmp[i]; // vectorial sum
+			c.num[i] = tmp;
+		}
 	}
 
-	for(unsigned i=0; i<SIZE; ++i)
-		c.num[i] /= normalizer; // element-wise division by a real
+	for(unsigned i=0; i<SIZE; ++i){
+		tmp = c.num[i] / normalizer; // element-wise division by a real
+		c.num[i] = tmp;
+	}
 
 	c.to_normal_form();
 
@@ -617,16 +839,12 @@ Ban Ban::_pow_fast(const Ban &b, unsigned e){
 	
 	if(e == 2)
 		return b*b;
-
 	Ban res = _pow_fast(b, e>>1);
-
 	if(e & 1u)
 		return b*res*res;
 	
 	return res*res;
-
 }
-
 Ban pow(const Ban &b, int e){
 	if(b == 0){
 		if(e > 0)
@@ -635,13 +853,10 @@ Ban pow(const Ban &b, int e){
 			throw invalid_argument("Exponentiation of 0 with negative power not implemented yet");
 		return ONE;
 	}
-
 	if(b == 1)
 		return ONE;
-
 	if(e < 0)
 		 return Ban::_pow_fast(1/b, -e);
-
 	return Ban::_pow_fast(b, e);
 }
 */
@@ -651,9 +866,7 @@ Ban pow(const Ban &b, int e){
 Ban Ban::_pow_fast(const Ban &b, unsigned e){
 	if(e == 0)
 		return ONE;
-
 	Ban res = _pow_fast_(b, e>>1);
-
 	if(e & 1u)	
 		return b*res*res;
 	
@@ -668,20 +881,17 @@ Ban pow(const Ban &b, int e){
 			throw invalid_argument("Exponentiation of 0 with negative power not implemented yet");
 		return ONE;
 	}
-
 	if(b == 1)
 		return ONE;
 	
 	if(e < 0){
 		Ban inv_b = 1/b;
 		Ban res = Ban::_pow_fast(1/b, -e);
-
 		if(e & 1u)
 			return inv_b*res*res;
 		
 		return res*res;
 	}
-
 	Ban res = Ban::_pow_fast_(b, e>>1);	
 	
 	if(e & 1u)
@@ -700,7 +910,6 @@ Ban Ban::operator>>(unsigned i) const{
 	
 	return res;
 }
-
 Ban Ban::operator<<(unsigned i) const{
 	Ban res(*this);
 	for(unsigned j=0; j<SIZE; ++j)

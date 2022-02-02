@@ -123,7 +123,7 @@ int main(){
     srand(1);
     ofstream ff;
     ff.open("data.txt");
-    ff<<SAMPLES<<" "<<SIZE<<endl;
+    ff<<2*SAMPLES<<" "<<SIZE<<endl;
     ff<<scientific<<setprecision(6);
 
     if constexpr (NO_DUPLICATE)

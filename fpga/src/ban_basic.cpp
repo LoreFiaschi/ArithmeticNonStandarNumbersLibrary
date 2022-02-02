@@ -58,6 +58,9 @@ bool Ban::operator==(T n) const{
 	if(p != 0 || num[0] != n)
 		return false;
 	
+	if(n == 0) // leverages assumption of normal form
+		return true;
+
 	for(unsigned i=1; i<SIZE; ++i)
 		if(num[i] != 0)
 			return false;
@@ -183,7 +186,7 @@ void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE
 		num_res[i] += eps[i]; // vectorial sum
 	
 	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<SIZE/2; ++j){
+	for(unsigned j=1; j<(SIZE>>1); ++j){
 		_mul(eps, den_norm, eps_tmp);
 		for(unsigned i=0; i<SIZE; ++i)
 			num_res[i] += eps_tmp[i]; // vectorial sum
@@ -471,13 +474,8 @@ Ban abs(const Ban &b){
 	if(b.num[0] >= 0)
 		return b;
 
-	Ban res(b);
-	for(unsigned i=0; i<SIZE; ++i)
-		res.num[i] *= -1;
-
-	return res;
+	return -b;
 }
-
 
 Ban sqrt(const Ban &b){
 	if(b < 0)
@@ -540,6 +538,17 @@ Ban sqrt(const Ban &b){
 	return Ban(b.p>>1, num_res);
 }
 
+void Ban::sum_infinitesimal_real(T num_res[SIZE], T n) const{
+	// right-shifting the most significant part of *this by -p
+	for(unsigned i=SIZE-1; i>=-p; --i)
+		num_res[i] = num[i+p];
+
+	// zero padding until first monosemium
+	for(unsigned i=-p-1; i>0; --i)
+		num_res[i] = 0;
+
+	num_res[0] = n;
+}
 
 Ban Ban::operator+(T n) const{
 	// check sum with zero to avoid precision loss
@@ -560,29 +569,17 @@ Ban Ban::operator+(T n) const{
 	}
 
 	T num_res[SIZE];
-	num_res[0] = n;
-
-	// zero padding until *this starts
-	unsigned idx = 1;
-	while(idx<-p){
-		num_res[idx] = 0;
-		++idx;
-	}
-
-
-	// copy of the most significant part of *this
-	for(unsigned i=0; idx<SIZE; ++i){
-		num_res[idx] = num[i];
-		++idx;
-	}
+	this->sum_infinitesimal_real(num_res, n);
 
 	return Ban(0, num_res);
 }
 
 Ban Ban::operator*(T n) const{
+	/*
 	// true speedup ?
 	if(n == 0 || *this == 0)
 		return ZERO;
+	*/
 
 	Ban res(*this);
 	for(unsigned i=0; i<SIZE; ++i)
@@ -607,6 +604,59 @@ Ban Ban::operator/(T n) const{
 	res.to_normal_form();
 
 	return res;
+}
+
+Ban& Ban::operator+=(T n){
+	// check sum with zero to avoid precision loss
+	// example: η^5 + 0  = 0 if SIZE <= 5
+	if(n == 0)
+		return *this;
+
+	if(p >= 0){
+		// *this too big to be affected by n
+		if(p-SIZE >= 0)
+			return *this;
+
+		num[p] += n;
+		this->to_normal_form();
+
+		return *this;
+	}
+
+	this->sum_infinitesimal_real(num, n);
+	p = 0;
+
+	return *this;
+}
+
+Ban& Ban::operator*=(T n){
+	/*
+	// true speedup ? NO
+	if(n == 0 || *this == 0)
+		return ZERO;
+	*/
+
+	for(unsigned i=0; i<SIZE; ++i)
+		num[i] *= n;
+	
+	this->to_normal_form();
+
+	return *this;
+}
+
+Ban& Ban::operator/=(T n){
+	if(n == 0)
+		throw domain_error("division by zero detected");
+
+	if(*this == 0)
+		return *this;
+
+	for(unsigned i=0; i<SIZE; ++i)
+		num[i] /= n;
+	
+	this->to_normal_form();
+
+	return *this;
 }
 
 // Notice most part equal to division between Bans

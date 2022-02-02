@@ -4,7 +4,8 @@
 #include <fstream>
 #include <iomanip>
 using namespace std;
-typedef float T;
+typedef float T;     // generates inaccuracies in division proportional to 1e-6
+//typedef double T;  // no generation of inaccuracies in division
 
 constexpr int SIZE = 3;
 constexpr int EVEN_SIZE = SIZE & 1u;
@@ -19,6 +20,7 @@ class Ban{
 	// utility functions
 	void to_normal_form();
 	Ban mul_body(const Ban &b) const;
+	void sum_infinitesimal_real(T num_res[SIZE], T n) const;
 
 	// static functions
 	static bool _check_inconsistency(int p, const T num[SIZE]);
@@ -73,10 +75,10 @@ class Ban{
 	inline Ban operator-(T n) const {return *this+(-n);};
 	Ban operator*(T n) const;
 	Ban operator/(T n) const; // make this inline? *this*(1/n)
-	Ban operator+=(T n);
-	inline Ban operator-=(T n){*this += -n;};
-	Ban operator*=(T n);
-	Ban operator/=(T n);
+	Ban& operator+=(T n);
+	inline Ban& operator-=(T n){*this += -n;};
+	Ban& operator*=(T n);
+	Ban& operator/=(T n);
 
 	inline friend Ban operator+(T n, const Ban &b) {return b+n;};
 	inline friend Ban operator-(T n, const Ban &b) {return -b+n;};
