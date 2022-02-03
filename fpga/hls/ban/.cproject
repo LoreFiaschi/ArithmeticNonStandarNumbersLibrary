@@ -157,17 +157,17 @@
                         					
                     </folderInfo>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1292680217.1167704816" name="main.cpp" rcbsApplicability="disable" resourcePath="source/main.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1933369686.1451229463">
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1292680217.24894985" name="vivado_main.cpp" rcbsApplicability="disable" resourcePath="source/vivado_main.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1933369686.1407900772">
                         						
-                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1933369686.1451229463" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1933369686">
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1933369686.1407900772" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1933369686">
                             							
-                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.881061562" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.234223172" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
                                 								
                                 <listOptionValue builtIn="false" value="FPGA_HLS"/>
                                 							
                             </option>
                             							
-                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.617303467" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1258020822" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
                                 								
                                 <listOptionValue builtIn="false" value="/home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/systemc/include"/>
                                 								
@@ -183,9 +183,9 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.1420580456" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++17 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.81904702" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c/+/+17 -c -fmessage-length=0" valueType="string"/>
                             							
-                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1044987434" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.847037008" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
                         </tool>
                         					
@@ -217,7 +217,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.548997179" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++17 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.548997179" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c/+/+17 -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2057614613" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -227,7 +227,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|version1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -373,17 +373,17 @@
                         					
                     </folderInfo>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.886029847.305534341" name="main.cpp" rcbsApplicability="disable" resourcePath="source/main.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1139237633.177731707">
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.886029847.1475473564" name="vivado_main.cpp" rcbsApplicability="disable" resourcePath="source/vivado_main.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1139237633.118041623">
                         						
-                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1139237633.177731707" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1139237633">
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1139237633.118041623" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1139237633">
                             							
-                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.302247071" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.1382709573" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
                                 								
                                 <listOptionValue builtIn="false" value="FPGA_HLS"/>
                                 							
                             </option>
                             							
-                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.167358622" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1907469448" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
                                 								
                                 <listOptionValue builtIn="false" value="/home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/systemc/include"/>
                                 								
@@ -399,9 +399,9 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.508279445" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++17 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.1007429234" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c/+/+17 -c -fmessage-length=0" valueType="string"/>
                             							
-                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1239182154" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1506194917" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
                         </tool>
                         					
@@ -433,7 +433,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.512774109" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c++17 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.512774109" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-std=c/+/+17 -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.37869790" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -443,7 +443,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|version1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				

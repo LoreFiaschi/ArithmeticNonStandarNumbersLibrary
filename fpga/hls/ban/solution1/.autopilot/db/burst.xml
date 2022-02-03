@@ -1,7 +1,0 @@
-<VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../src/ban.cpp:75:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../src/ban.cpp:75:19" LoopName="VITIS_LOOP_75_1" ParentFunc="Ban::operator*(Ban const&amp;) const"/>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../src/ban.cpp:75:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../src/ban.cpp:75:19" LoopName="VITIS_LOOP_75_1" ParentFunc="Ban::operator/(Ban const&amp;) const"/>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../src/ban.cpp:61:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../src/ban.cpp:61:19" LoopName="VITIS_LOOP_61_1" ParentFunc="Ban::operator+(Ban const&amp;) const"/>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="../src/ban.cpp:75:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="../src/ban.cpp:75:19" LoopName="VITIS_LOOP_75_1" ParentFunc="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.6.32.59)"/>
-</VitisHLS:BurstInfo>
-

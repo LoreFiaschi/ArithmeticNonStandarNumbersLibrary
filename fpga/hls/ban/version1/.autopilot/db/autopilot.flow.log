@@ -1,0 +1,91 @@
+INFO-FLOW: Workspace /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1 opened at Thu Feb 03 12:47:39 CET 2022
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xczu49dr-ffvf1760-2-e 
+Execute       create_platform xczu49dr-ffvf1760-2-e -board  
+DBG:HLSDevice: Trying to load device library: /home/lorenzo/Programs/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/lorenzo/Programs/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xczu49dr-ffvf1760-2-e'
+Command       create_platform done; 1.19 sec.
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xczu49dr-ffvf1760-2-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.29 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 1.29 sec.
+Execute   set_part xczu49dr-ffvf1760-2-e 
+INFO: [HLS 200-1510] Running: set_part xczu49dr-ffvf1760-2-e 
+Execute     create_platform xczu49dr-ffvf1760-2-e -board  
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xczu49dr-ffvf1760-2-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.11 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   source ./ban/version1/directives.tcl 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.324 GB.
+INFO: [HLS 200-10] Analyzing design file '../test/vivado_main.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling ../test/vivado_main.cpp as C++
+Execute       ap_part_info -name xczu49dr-ffvf1760-2-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang ../test/vivado_main.cpp -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/.autopilot/db/vivado_main.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -DFPGA_HLS -std=c/+/+17 -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/.autopilot/db/vivado_main.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/.autopilot/db/vivado_main.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/.autopilot/db/vivado_main.cpp.clang.err.log 
+Command       ap_eval done; error code: 1; 
+Command     elaborate done; error code: 2; 
+Command   csynth_design done; error code: 2; 
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.1 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.08 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; error code: 1; 1.49 sec.
+Execute cleanup_all 

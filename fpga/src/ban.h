@@ -74,9 +74,9 @@ class Ban{
 	Ban operator+(T n) const;
 	inline Ban operator-(T n) const {return *this+(-n);};
 	Ban operator*(T n) const;
-	Ban operator/(T n) const; // make this inline? *this*(1/n)
+	Ban operator/(T n) const; // make inline? *this*(1/n)
 	Ban& operator+=(T n);
-	inline Ban& operator-=(T n){*this += -n;};
+	inline Ban& operator-=(T n){*this += -n; return *this;};
 	Ban& operator*=(T n);
 	Ban& operator/=(T n);
 
@@ -97,7 +97,7 @@ class Ban{
 	inline friend bool operator<=(T n, const Ban &b) {return !(b<n);};
 	inline friend bool operator>=(T n, const Ban &b) {return !(n<b);};
 
-	// external functions (comment for tests)
+	// external functions
 	inline friend int degree(const Ban &b) {return b.p;};
 };
 

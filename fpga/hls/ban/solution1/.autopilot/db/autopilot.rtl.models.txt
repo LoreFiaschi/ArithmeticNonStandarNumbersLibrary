@@ -1,6 +1,0 @@
-main_mux_32_32_1_1
-main_flow_control_loop_pipe_sequential_init
-main_flow_control_loop_pipe_sequential_init
-main_Pipeline_VITIS_LOOP_21_1
-main_Pipeline_VITIS_LOOP_142_1
-main
