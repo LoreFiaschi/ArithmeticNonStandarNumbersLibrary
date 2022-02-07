@@ -1,4 +1,4 @@
-#include "ban.h"
+#include "ban_basic.h"
 
 bool Ban::_check_inconsistency(int p, const T num[SIZE]){
 
@@ -74,9 +74,9 @@ void Ban::to_normal_form(){
 		return;
 	
 	// idx memorizes the entry which must be shifted as first
-	unsigned idx = 0;
+	unsigned idx = 1;
 	while(idx<SIZE)
-		if(num[++idx] != 0)
+		if(num[idx++] != 0)
 			break;
 	
 	// execute the left-to-right shift
@@ -186,7 +186,7 @@ void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE
 		num_res[i] += eps[i]; // vectorial sum
 	
 	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<(SIZE>>1); ++j){
+	for(unsigned j=1; j<=((SIZE-1)>>1); ++j){
 		_mul(eps, den_norm, eps_tmp);
 		for(unsigned i=0; i<SIZE; ++i)
 			num_res[i] += eps_tmp[i]; // vectorial sum
@@ -683,7 +683,7 @@ Ban operator/(T n, const Ban &b){
 		c.num[i] += eps[i]; // vectorial sum
 	
 	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<(SIZE>>1); ++j){
+	for(unsigned j=1; j<=((SIZE-1)>>1); ++j){
 		Ban::_mul(eps, b_norm, eps_tmp);
 		for(unsigned i=0; i<SIZE; ++i)
 			c.num[i] += eps_tmp[i]; // vectorial sum

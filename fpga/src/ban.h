@@ -7,8 +7,8 @@ using namespace std;
 typedef float T;     // generates inaccuracies in division proportional to 1e-6
 //typedef double T;  // no generation of inaccuracies in division
 
-constexpr int SIZE = 3;
-constexpr int EVEN_SIZE = SIZE & 1u;
+#define SIZE 3
+#define EVEN_SIZE !(SIZE & 1u)
 // coefficients of the sqrt(1-x) taylor expansion (required for sqrt)
 constexpr T sqrt_exp[5] = {-0.125, -0.0625, -7*0.03125, -21*0.015625};
 
@@ -37,11 +37,21 @@ class Ban{
 	Ban(int p, const T num[SIZE], bool check);
 	void init(int p, const T num[SIZE]);
 
+	// utility for boolean conversion
+	typedef void (Ban::*bool_type)() const;
+    void this_type_does_not_support_comparisons() const {}
+
 	public:
 	
 	// constructors
 	Ban(int p, const T num[SIZE]);
 	Ban(T n);
+
+	// boolean convertion
+	//inline operator bool() const{return num[0];};
+	inline operator bool_type() const {
+      return num[0] ? &Ban::this_type_does_not_support_comparisons : 0;
+    };
 
 	// algebraic operations
 	Ban operator+(const Ban &b) const;
@@ -65,6 +75,7 @@ class Ban{
 
 	// ordering operators
 	bool operator==(const Ban& b) const;
+	inline bool operator!=(const Ban& b) const{return !(*this == b);};
 	bool operator<(const Ban &b) const;
 	inline bool operator>(const Ban &b)  const {return b<*this;};
 	inline bool operator<=(const Ban &b) const {return !(b<*this);}; // *this <= b <-> !(*this>b) <-> !(b<*this)
@@ -86,12 +97,14 @@ class Ban{
 	friend Ban operator/(T n, const Ban &b);
 	
 	bool operator==(T n) const;
+	inline bool operator!=(T n) const{return !(*this == n);};
 	bool operator<(T n) const;
 	inline bool operator>(T n) const {return n<*this;};
 	inline bool operator<=(T n) const {return !(n<*this);};
 	inline bool operator>=(T n) const {return !(*this<n);};
 
 	inline friend bool operator==(T n, const Ban &b) {return b == n;};
+	inline friend bool operator!=(T n, const Ban &b) {return !(b == n);};
 	friend bool operator<(T n, const Ban &b);
 	inline friend bool operator>(T n, const Ban &b)  {return b<n;};
 	inline friend bool operator<=(T n, const Ban &b) {return !(b<n);};

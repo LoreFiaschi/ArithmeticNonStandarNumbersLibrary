@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.324 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../test/vivado_main.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-997]" key="HLS 207-997" tag="" content="&apos;/*&apos; within block comment (../test/vivado_main.cpp:108:1)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../src/ban.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5287]" key="HLS 207-5287" tag="" content="unused parameter &apos;check&apos; (../src/ban.cpp:26:38)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 3.79 seconds. CPU system time: 0.44 seconds. Elapsed time: 3.88 seconds; current allocated memory: 418.785 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 200-1715]" key="HLS 200-1715" tag="" content="Encountered problem during source synthesis" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 6.46 seconds. CPU system time: 0.71 seconds. Elapsed time: 6.83 seconds; current allocated memory: -937.047 MB." resolution=""/>
+</Messages>

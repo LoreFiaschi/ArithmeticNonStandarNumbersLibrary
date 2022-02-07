@@ -2,7 +2,9 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="ban" solutionName="solution1" date="2022-02-04T18:21:59.394+0100"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
@@ -11,7 +13,10 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'check' (../src/ban.cpp:26:38)" projectName="ban" solutionName="solution1" date="2022-02-04T18:21:56.443+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-997] '/*' within block comment (../test/vivado_main.cpp:108:1)" projectName="ban" solutionName="solution1" date="2022-02-04T18:21:54.425+0100" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

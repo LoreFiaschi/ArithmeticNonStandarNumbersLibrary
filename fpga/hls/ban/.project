@@ -37,6 +37,11 @@
 			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/.apc/.tb</location>
 		</link>
 		<link>
+			<name>solution1/constraints</name>
+			<type>2</type>
+			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/.tcls</location>
+		</link>
+		<link>
 			<name>source/ban.cpp</name>
 			<type>1</type>
 			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban.cpp</location>
@@ -52,24 +57,19 @@
 			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vivado_main.cpp</location>
 		</link>
 		<link>
-			<name>version1/constraints</name>
-			<type>2</type>
-			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/.tcls</location>
+			<name>solution1/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/solution1.directive</location>
 		</link>
 		<link>
-			<name>version1/constraints/.xml.directive</name>
+			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/version1.directive</location>
+			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/directives.tcl</location>
 		</link>
 		<link>
-			<name>version1/constraints/directives.tcl</name>
+			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/directives.tcl</location>
-		</link>
-		<link>
-			<name>version1/constraints/script.tcl</name>
-			<type>1</type>
-			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/version1/script.tcl</location>
+			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

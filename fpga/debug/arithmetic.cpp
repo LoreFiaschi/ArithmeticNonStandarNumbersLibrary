@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <cmath>
 #include "../src/ban.h"
+//#include "../src/ban_basic.h"
 using namespace std;
 
 int main(){

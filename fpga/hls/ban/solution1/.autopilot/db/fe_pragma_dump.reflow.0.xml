@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="../src/ban.cpp" line="241" pragmaType="unroll" parentfunction="_div_body" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/ban.cpp" line="217" pragmaType="unroll" parentfunction="_div_body" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/ban.cpp" line="224" pragmaType="unroll" parentfunction="_div_body" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/ban.cpp" line="208" pragmaType="unroll" parentfunction="_div_body" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/ban.cpp" line="169" pragmaType="unroll" parentfunction="_mul" factor="-1" skip_exit_check="0"/>
+<pragma file="../src/ban.cpp" line="112" pragmaType="unroll" parentfunction="_sum" factor="-1" skip_exit_check="0"/>
+</pragmas>
