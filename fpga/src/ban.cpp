@@ -268,10 +268,7 @@ Ban Ban::operator/(const Ban &b) const{
 		return ZERO;
 
 	Ban c(*this);
-	/*
-	int tmp = c.p - b.p;
-	c.p = tmp;
-	*/
+
 	c.p -= b.p;
 
 	_div_body(this->num, b.num, c.num);
@@ -279,126 +276,6 @@ Ban Ban::operator/(const Ban &b) const{
 	c.to_normal_form();
 
 	return c;
-}
-
-Ban& Ban::operator+=(const Ban &b){
-	// no need for anti-alising check
-
-	// check sum with zero to avoid precision loss
-	// example: 0 + η^5  = 0 if SIZE <= 5
-	if(*this  == 0){ //*this == 0
-		*this = b;
-		return *this;
-	}
-	
-	if(b == 0) // b == 0
-		return *this;
-
-	int diff_p = p - b.p;
-
-	// if the numbers are too different the precision is not enough to compute the sum
-	if(diff_p >= SIZE)
-		return *this;
-
-	if(diff_p <= -SIZE){
-		*this = b;
-		return *this;
-	}
-
-	if(diff_p < 0){
-		// auxiliary vector (old: to store only relevant coefficients of num)
-		T num_aux[SIZE];
-		for(unsigned i=0; i<SIZE; ++i)
-			num_aux[i] = num[i];
-		
-		// plain copy of b in num
-		for(unsigned i=0; i<SIZE; ++i)
-			if(i<-diff_p)
-				num[i] = b.num[i];
-			else
-				num[i] = b.num[i] + num_aux[i+diff_p];
-
-		p = b.p;
-	}
-	else{
-		T tmp;
-		for(unsigned i=0; i<SIZE; ++i){
-			#pragma HLS UNROLL
-			if(i>=diff_p){
-				tmp = num[i] + b.num[i-diff_p];
-				num[i] = tmp;
-			}
-		}
-	}
-
-	if(!diff_p) // diff_p == 0
-		this->to_normal_form();
-
-	return *this;
-}
-
-void Ban::_mul_overwriting(T num_a[SIZE], const T num_b[SIZE]){
-	T aux[(SIZE<<1)-1];
-
-	_mul_conv(num_a, num_b, aux);
-
-	for(unsigned i=0; i<SIZE; ++i)
-		num_a[i] = aux[i];
-}
-
-Ban& Ban::operator*=(const Ban &b){
-	// introduced for speed-up
-	if(*this  == 0) // *this == 0
-		return *this;
-	if(b == 0){ // b == 0
-		*this = b;
-		return *this;
-	}
-
-	// check for aliasing
-	if(this == &b){
-		// gross implementation, to improve
-		T num_aux[SIZE];
-		for(unsigned i=0; i<SIZE; ++i)
-			num_aux[i] = num[i];
-		
-		_mul(num, num_aux, num);
-	}
-	else
-		_mul(num, b.num, num);
-
-	p += b.p;
-	this->to_normal_form();
-
-	return *this;
-}
-
-Ban& Ban::operator/=(const Ban &b){
-	// check division by/of zero
-	#ifndef FPGA_HLS
-	if(b == 0)  // b == 0
-		throw domain_error("division by zero detected");
-	#endif
-
-	if(*this  == 0) // *this == 0
-		return *this;
-
-	//alising
-	if(this == &b){
-		*this = ONE;
-		return *this;
-	}
-	/*
-	int tmp = p - b.p;
-	p = tmp;
-	*/
-	p -= b.p;
-
-	_div_body(num, b.num, num);
-
-	this->to_normal_form();
-
-	return *this;
 }
 
 ostream& operator<<(ostream& os, const Ban &b){
@@ -527,15 +404,17 @@ bool operator<(T n, const Ban &b){
 		return true;
 	if(b.num[0] < n)
 		return false;
+
+	bool res = false, solved = false;
 	// num[0] == n, infinitesimal components are crucial
 	for(unsigned i=1; i<SIZE; ++i)
-		if(b.num[i]){  //b.num[i] != 0
+		if(!solved && b.num[i]){  // solved == false && b.num[i] != 0
+			solved = true;
 			if(b.num[i] > 0)
-				return true;
-			return false;
+				res = true;
 		}
 	// here iff *this == n
-	return false;
+	return res;
 }
 
 Ban abs(const Ban &b){
@@ -704,138 +583,6 @@ Ban Ban::operator/(T n) const{
 	res.to_normal_form();
 
 	return res;
-}
-
-Ban& Ban::operator+=(T n){
-	// check sum with zero to avoid precision loss
-	// example: η^5 + 0  = 0 if SIZE <= 5
-	if(!n) // n == 0
-		return *this;
-
-	if(p >= 0){
-		// *this too big to be affected by n
-		if(p-SIZE >= 0)
-			return *this;
-		/*
-		T tmp = num[p] + n;
-		num[p] = tmp;
-		*/
-		num[p] += n;
-		this->to_normal_form();
-
-		return *this;
-	}
-
-	this->sum_infinitesimal_real(num, n);
-	p = 0;
-
-	return *this;
-}
-
-Ban& Ban::operator*=(T n){
-	/*
-	// true speedup ? NO
-	if(n == 0 || *this == 0)
-		return ZERO;
-	*/
-	T tmp;
-	for(unsigned i=0; i<SIZE; ++i){
-		#pragma HLS UNROLL
-		tmp = num[i] * n;
-		num[i] = tmp;
-	}
-	
-	this->to_normal_form();
-
-	return *this;
-}
-
-Ban& Ban::operator/=(T n){
-	#ifndef FPGA_HLS
-	if(!n)  // n == 0
-		throw domain_error("division by zero detected");
-	#endif
-
-	if(*this  == 0)  // *this == 0
-		return *this;
-	
-	T tmp;
-	for(unsigned i=0; i<SIZE; ++i){
-		#pragma HLS UNROLL
-		tmp = num[i] / n;
-		num[i] = tmp;
-	}
-	
-	this->to_normal_form();
-
-	return *this;
-}
-
-// TODO: Notice most part equal to division between Bans
-Ban operator/(T n, const Ban &b){
-	// check division by/of zero
-	#ifndef FPGA_HLS
-	if(b == 0)  // b == 0
-		throw domain_error("division by zero detected");
-	#endif
-
-	if(!n) // n == 0
-		return ZERO;
-
-	Ban c(-b.p, _, false);
-	c.num[0] = n;
-
-	T normalizer = b.num[0];
-	T b_norm[SIZE], eps[SIZE], eps_tmp[SIZE];
-	b_norm[0] = 0;
-	for(unsigned i=1; i<SIZE; ++i)
-		b_norm[i] = -b.num[i]/normalizer;
-	
-	Ban::_mul_trivial(b_norm, n, eps);
-	
-	T tmp;
-	for(unsigned i=0; i<SIZE; ++i){
-		#pragma HLS UNROLL
-		tmp = c.num[i] + eps[i]; // vectorial sum
-		c.num[i] = tmp;
-	}
-	
-	// unrolling of the outer loop to speed up
-	for(unsigned j=1; j<=((SIZE-1)>>1); ++j){
-		Ban::_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i){
-			#pragma HLS UNROLL
-			tmp = c.num[i] + eps_tmp[i]; // vectorial sum
-			c.num[i] = tmp;
-		}
-
-		Ban::_mul(eps_tmp, b_norm, eps);
-		for(unsigned i=0; i<SIZE; ++i){
-			#pragma HLS UNROLL
-			tmp = c.num[i] + eps[i]; // vectorial sum
-			c.num[i] = tmp;
-		}
-	}
-
-	// necessary due to unrolling in case SIZE is even
-	#if EVEN_SIZE
-		Ban::_mul(eps, b_norm, eps_tmp);
-		for(unsigned i=0; i<SIZE; ++i){
-			#pragma HLS UNROLL
-			tmp = c.num[i] + eps_tmp[i]; // vectorial sum
-			c.num[i] = tmp;
-		}
-	#endif
-
-	for(unsigned i=0; i<SIZE; ++i){
-		#pragma HLS UNROLL
-		tmp = c.num[i] / normalizer; // element-wise division by a real
-		c.num[i] = tmp;
-	}
-
-	c.to_normal_form();
-
-	return c;
 }
 
 // Check which implementation of pow is faster

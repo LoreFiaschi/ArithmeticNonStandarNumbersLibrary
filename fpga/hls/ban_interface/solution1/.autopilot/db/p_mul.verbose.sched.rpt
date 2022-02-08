@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_mul'
+================================================================
+* Date:           Tue Feb  8 15:34:16 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        ban_interface
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.016 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       31|       31|  0.310 us|  0.310 us|   31|   31|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.47>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%num_b_2_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_b_2_read"   --->   Operation 6 'read' 'num_b_2_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%num_b_1_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_b_1_read"   --->   Operation 7 'read' 'num_b_1_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%num_b_0_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_b_0_read"   --->   Operation 8 'read' 'num_b_0_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%num_a_2_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_a_2_read"   --->   Operation 9 'read' 'num_a_2_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%num_a_1_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_a_1_read"   --->   Operation 10 'read' 'num_a_1_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%num_a_0_read_2 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_a_0_read"   --->   Operation 11 'read' 'num_a_0_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%num_res6_06_loc = alloca i64 1"   --->   Operation 12 'alloca' 'num_res6_06_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%write_flag_0_loc = alloca i64 1"   --->   Operation 13 'alloca' 'write_flag_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%write_flag8_0_loc = alloca i64 1"   --->   Operation 14 'alloca' 'write_flag8_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%num_res5_07_loc = alloca i64 1"   --->   Operation 15 'alloca' 'num_res5_07_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%num_res_08_loc = alloca i64 1"   --->   Operation 16 'alloca' 'num_res_08_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%write_flag5_0_loc = alloca i64 1"   --->   Operation 17 'alloca' 'write_flag5_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%aux = alloca i64 1" [../src/ban.cpp:183]   --->   Operation 18 'alloca' 'aux' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (0.47ns)   --->   "%call_ln0 = call void @_mul_Pipeline_VITIS_LOOP_169_1, i32 %num_a_0_read_2, i32 %num_a_1_read_2, i32 %num_a_2_read_2, i32 %num_b_0_read_2, i32 %num_b_1_read_2, i32 %num_b_2_read_2, i32 %aux"   --->   Operation 19 'call' 'call_ln0' <Predicate = true> <Delay = 0.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 20 [1/2] (0.00ns)   --->   "%call_ln0 = call void @_mul_Pipeline_VITIS_LOOP_169_1, i32 %num_a_0_read_2, i32 %num_a_1_read_2, i32 %num_a_2_read_2, i32 %num_b_0_read_2, i32 %num_b_1_read_2, i32 %num_b_2_read_2, i32 %aux"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln0 = call void @_mul_Pipeline_VITIS_LOOP_187_1, i32 %aux, i1 %write_flag5_0_loc, i32 %num_res_08_loc, i32 %num_res5_07_loc, i1 %write_flag8_0_loc, i1 %write_flag_0_loc, i32 %num_res6_06_loc"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.87>
+ST_4 : Operation 22 [1/2] (0.87ns)   --->   "%call_ln0 = call void @_mul_Pipeline_VITIS_LOOP_187_1, i32 %aux, i1 %write_flag5_0_loc, i32 %num_res_08_loc, i32 %num_res5_07_loc, i1 %write_flag8_0_loc, i1 %write_flag_0_loc, i32 %num_res6_06_loc"   --->   Operation 22 'call' 'call_ln0' <Predicate = true> <Delay = 0.87> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.44>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%num_res_2_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_res_2_read"   --->   Operation 23 'read' 'num_res_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%num_res_1_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_res_1_read"   --->   Operation 24 'read' 'num_res_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%num_res_0_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %num_res_0_read"   --->   Operation 25 'read' 'num_res_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%write_flag5_0_loc_load = load i1 %write_flag5_0_loc"   --->   Operation 26 'load' 'write_flag5_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%num_res_08_loc_load = load i32 %num_res_08_loc"   --->   Operation 27 'load' 'num_res_08_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%num_res5_07_loc_load = load i32 %num_res5_07_loc"   --->   Operation 28 'load' 'num_res5_07_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%write_flag8_0_loc_load = load i1 %write_flag8_0_loc"   --->   Operation 29 'load' 'write_flag8_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%write_flag_0_loc_load = load i1 %write_flag_0_loc"   --->   Operation 30 'load' 'write_flag_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%num_res6_06_loc_load = load i32 %num_res6_06_loc"   --->   Operation 31 'load' 'num_res6_06_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.44ns)   --->   "%select_ln189 = select i1 %write_flag_0_loc_load, i32 %num_res_08_loc_load, i32 %num_res_0_read_1" [../src/ban.cpp:189]   --->   Operation 32 'select' 'select_ln189' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 33 [1/1] (0.44ns)   --->   "%select_ln189_1 = select i1 %write_flag5_0_loc_load, i32 %num_res5_07_loc_load, i32 %num_res_1_read_1" [../src/ban.cpp:189]   --->   Operation 33 'select' 'select_ln189_1' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 34 [1/1] (0.44ns)   --->   "%select_ln189_2 = select i1 %write_flag8_0_loc_load, i32 %num_res6_06_loc_load, i32 %num_res_2_read_1" [../src/ban.cpp:189]   --->   Operation 34 'select' 'select_ln189_2' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%mrv = insertvalue i96 <undef>, i32 %select_ln189" [../src/ban.cpp:189]   --->   Operation 35 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i96 %mrv, i32 %select_ln189_1" [../src/ban.cpp:189]   --->   Operation 36 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i96 %mrv_1, i32 %select_ln189_2" [../src/ban.cpp:189]   --->   Operation 37 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%ret_ln189 = ret i96 %mrv_2" [../src/ban.cpp:189]   --->   Operation 38 'ret' 'ret_ln189' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.476ns
+The critical path consists of the following:
+	wire read operation ('num_b[2]') on port 'num_b_2_read' [13]  (0 ns)
+	'call' operation ('call_ln0') to '_mul_Pipeline_VITIS_LOOP_169_1' [26]  (0.476 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0.873ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to '_mul_Pipeline_VITIS_LOOP_187_1' [27]  (0.873 ns)
+
+ <State 5>: 0.449ns
+The critical path consists of the following:
+	wire read operation ('num_res[0]') on port 'num_res_0_read' [12]  (0 ns)
+	'select' operation ('num_res[0]', ../src/ban.cpp:189) [34]  (0.449 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

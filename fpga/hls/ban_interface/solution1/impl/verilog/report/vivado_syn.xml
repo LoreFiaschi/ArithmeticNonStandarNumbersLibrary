@@ -1,0 +1,1067 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2021.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>3.810</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>3.810</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>3.810</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>6.190</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>6.190</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>6.190</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>6.190</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>87</DSP>
+    <FF>29235</FF>
+    <LATCH>0</LATCH>
+    <LUT>32601</LUT>
+    <SRL>469</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>624</BRAM>
+    <CLB>0</CLB>
+    <DSP>1728</DSP>
+    <FF>460800</FF>
+    <LUT>230400</LUT>
+    <URAM>96</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="ban_interface" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="44">fadd_32ns_32ns_32_4_full_dsp_1_U594 fadd_32ns_32ns_32_4_full_dsp_1_U595 fadd_32ns_32ns_32_4_full_dsp_1_U596 fcmp_32ns_32ns_1_2_no_dsp_1_U592 fcmp_32ns_32ns_1_2_no_dsp_1_U593 fdiv_32ns_32ns_32_9_no_dsp_1_U597 fmul_32ns_32ns_32_3_max_dsp_1_U590 fmul_32ns_32ns_32_3_max_dsp_1_U591 grp_ban_interface_Pipeline_VITIS_LOOP_104_310_fu_1949 grp_ban_interface_Pipeline_VITIS_LOOP_104_313_fu_1904 grp_ban_interface_Pipeline_VITIS_LOOP_104_3_fu_1985 grp_ban_interface_Pipeline_VITIS_LOOP_335_15_fu_2015 grp_ban_interface_Pipeline_VITIS_LOOP_335_16_fu_2008 grp_ban_interface_Pipeline_VITIS_LOOP_335_17_fu_2001 grp_ban_interface_Pipeline_VITIS_LOOP_335_1_fu_2022 grp_ban_interface_Pipeline_VITIS_LOOP_374_116_fu_1842 grp_ban_interface_Pipeline_VITIS_LOOP_374_119_fu_1824 grp_ban_interface_Pipeline_VITIS_LOOP_374_121_fu_1812 grp_ban_interface_Pipeline_VITIS_LOOP_374_1_fu_1860 grp_ban_interface_Pipeline_VITIS_LOOP_410_115_fu_1848 grp_ban_interface_Pipeline_VITIS_LOOP_410_120_fu_1818 grp_ban_interface_Pipeline_VITIS_LOOP_410_122_fu_1806 grp_ban_interface_Pipeline_VITIS_LOOP_410_1_fu_1854 grp_ban_interface_Pipeline_VITIS_LOOP_53_14_fu_2029 grp_ban_interface_Pipeline_VITIS_LOOP_53_1_fu_2036 grp_ban_interface_Pipeline_VITIS_LOOP_68_114_fu_1866 grp_ban_interface_Pipeline_VITIS_LOOP_68_117_fu_1836 grp_ban_interface_Pipeline_VITIS_LOOP_68_118_fu_1830 grp_ban_interface_Pipeline_VITIS_LOOP_68_1_fu_1872 grp_ban_interface_Pipeline_VITIS_LOOP_84_111_fu_1884 grp_ban_interface_Pipeline_VITIS_LOOP_84_18_fu_1929 grp_ban_interface_Pipeline_VITIS_LOOP_84_1_fu_1965 grp_ban_interface_Pipeline_VITIS_LOOP_92_212_fu_1892 grp_ban_interface_Pipeline_VITIS_LOOP_92_29_fu_1937 grp_ban_interface_Pipeline_VITIS_LOOP_92_2_fu_1973 grp_mul_body_fu_2048 grp_operator_1_fu_1780 grp_operator_1_s_fu_1798 grp_operator_2_fu_1772 grp_operator_2_s_fu_1764 grp_operator_3_fu_1788 grp_operator_add_fu_1920 grp_operator_div_fu_1878 grp_sqrt_fu_2043</SubModules>
+    <Resources DSP="87" FF="29235" LUT="32601" LUTRAM="160" LogicLUT="31972" SRL="469"/>
+    <LocalResources FF="3098" LUT="498" LogicLUT="498"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_4_full_dsp_1_U594" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="234" LUT="396" LogicLUT="396"/>
+    <LocalResources FF="97" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_4_full_dsp_1_U595" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="234" LUT="236" LogicLUT="236"/>
+    <LocalResources FF="97" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_4_full_dsp_1_U596" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="233" LUT="268" LogicLUT="268"/>
+    <LocalResources FF="96" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U592" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="69" LUT="1014" LogicLUT="1014"/>
+    <LocalResources FF="69" LUT="802" LogicLUT="802"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U593" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="66" LUT="54" LogicLUT="54"/>
+    <LocalResources FF="66" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fdiv_32ns_32ns_32_9_no_dsp_1_U597" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="391" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_3_max_dsp_1_U590" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_3_max_dsp_1_U591" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_104_310_fu_1949" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_104_310">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="291" LogicLUT="291"/>
+    <LocalResources FF="164" LUT="216" LogicLUT="216"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_104_310_fu_1949/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_104_310.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="75" LogicLUT="75"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_104_313_fu_1904" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_104_313">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="245" LogicLUT="245"/>
+    <LocalResources FF="164" LUT="173" LogicLUT="173"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_104_313_fu_1904/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_104_313.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_104_3_fu_1985" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="165" LUT="331" LogicLUT="331"/>
+    <LocalResources FF="163" LUT="259" LogicLUT="259"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_104_3_fu_1985/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_15_fu_2015" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_15">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="77" LUT="94" LogicLUT="94"/>
+    <LocalResources FF="75" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_15_fu_2015/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_15.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_16_fu_2008" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_16">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="77" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="75" LUT="128" LogicLUT="128"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_16_fu_2008/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_16.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_17_fu_2001" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_17">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="77" LUT="199" LogicLUT="199"/>
+    <LocalResources FF="75" LUT="108" LogicLUT="108"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_17_fu_2001/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_17.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_1_fu_2022" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="77" LUT="110" LogicLUT="110"/>
+    <LocalResources FF="75" LUT="19" LogicLUT="19"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_335_1_fu_2022/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_335_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_116_fu_1842" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_116">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="96" LogicLUT="96"/>
+    <LocalResources FF="43" LUT="36" LogicLUT="36"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_116_fu_1842/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_116.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_119_fu_1824" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_119">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="102" LogicLUT="102"/>
+    <LocalResources FF="43" LUT="42" LogicLUT="42"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_119_fu_1824/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_119.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_121_fu_1812" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_121">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="67" LogicLUT="67"/>
+    <LocalResources FF="43" LUT="7" LogicLUT="7"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_121_fu_1812/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_121.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_1_fu_1860" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="75" LogicLUT="75"/>
+    <LocalResources FF="43" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_374_1_fu_1860/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_374_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_115_fu_1848" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_115">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="73" LogicLUT="73"/>
+    <LocalResources FF="43" LUT="13" LogicLUT="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_115_fu_1848/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_115.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_120_fu_1818" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_120">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="114" LogicLUT="114"/>
+    <LocalResources FF="43" LUT="54" LogicLUT="54"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_120_fu_1818/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_120.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_122_fu_1806" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_122">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="102" LogicLUT="102"/>
+    <LocalResources FF="43" LUT="42" LogicLUT="42"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_122_fu_1806/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_122.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_1_fu_1854" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="45" LUT="141" LogicLUT="141"/>
+    <LocalResources FF="43" LUT="81" LogicLUT="81"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_410_1_fu_1854/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_410_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="60" LogicLUT="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_53_14_fu_2029" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_53_14">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="82" LUT="135" LogicLUT="135"/>
+    <LocalResources FF="80" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_53_14_fu_2029/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_53_14.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="115" LogicLUT="115"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_53_1_fu_2036" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_53_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="82" LUT="144" LogicLUT="144"/>
+    <LocalResources FF="80" LUT="29" LogicLUT="29"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_53_1_fu_2036/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_53_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="115" LogicLUT="115"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_114_fu_1866" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_114">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="46" LUT="85" LogicLUT="85"/>
+    <LocalResources FF="44" LUT="24" LogicLUT="24"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_114_fu_1866/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_114.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="61" LogicLUT="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_117_fu_1836" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_117">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="46" LUT="63" LogicLUT="63"/>
+    <LocalResources FF="44" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_117_fu_1836/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_117.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="61" LogicLUT="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_118_fu_1830" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_118">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="46" LUT="72" LogicLUT="72"/>
+    <LocalResources FF="44" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_118_fu_1830/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_118.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="63" LogicLUT="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_1_fu_1872" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="46" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="44" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_68_1_fu_1872/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_68_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="61" LogicLUT="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_84_111_fu_1884" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_84_111">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="75" LUT="185" LogicLUT="185"/>
+    <LocalResources FF="73" LUT="180" LogicLUT="180"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_84_111_fu_1884/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_84_111.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_84_18_fu_1929" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_84_18">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="75" LUT="148" LogicLUT="148"/>
+    <LocalResources FF="73" LUT="143" LogicLUT="143"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_84_18_fu_1929/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_84_18.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_84_1_fu_1965" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="82" LogicLUT="82"/>
+    <LocalResources FF="13" LUT="78" LogicLUT="78"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_84_1_fu_1965/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="4" LogicLUT="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_92_212_fu_1892" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_92_212">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="190" LogicLUT="190"/>
+    <LocalResources FF="101" LUT="99" LogicLUT="99"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_92_212_fu_1892/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_92_212.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_92_29_fu_1937" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_92_29">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="190" LogicLUT="190"/>
+    <LocalResources FF="101" LUT="99" LogicLUT="99"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_92_29_fu_1937/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_92_29.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_92_2_fu_1973" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="190" LogicLUT="190"/>
+    <LocalResources FF="101" LUT="99" LogicLUT="99"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ban_interface_Pipeline_VITIS_LOOP_92_2_fu_1973/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="ban_interface_ban_interface_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_mul_body">
+    <SubModules count="8">aux_U fcmp_32ns_32ns_1_2_no_dsp_1_U493 grp_mul_body_Pipeline_VITIS_LOOP_104_3_fu_279 grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230 grp_mul_body_Pipeline_VITIS_LOOP_187_1_fu_241 grp_mul_body_Pipeline_VITIS_LOOP_21_1_fu_249 grp_mul_body_Pipeline_VITIS_LOOP_84_1_fu_259 grp_mul_body_Pipeline_VITIS_LOOP_92_2_fu_267</SubModules>
+    <Resources DSP="15" FF="2395" LUT="1920" LUTRAM="32" LogicLUT="1872" SRL="16"/>
+    <LocalResources FF="543" LUT="140" LogicLUT="140"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/aux_U" BINDMODULE="ban_interface_mul_body_aux_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_aux_RAM_AUTO_1R1W">
+    <Resources FF="32" LUT="32" LUTRAM="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/fcmp_32ns_32ns_1_2_no_dsp_1_U493" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="20" LogicLUT="20"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_104_3_fu_279" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="165" LUT="192" LogicLUT="192"/>
+    <LocalResources FF="163" LUT="120" LogicLUT="120"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_104_3_fu_279/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1">
+    <SubModules count="7">fadd_32ns_32ns_32_4_full_dsp_1_U448 fadd_32ns_32ns_32_4_full_dsp_1_U449 fadd_32ns_32ns_32_4_full_dsp_1_U450 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_3_max_dsp_1_U451 fmul_32ns_32ns_32_3_max_dsp_1_U452 fmul_32ns_32ns_32_3_max_dsp_1_U453</SubModules>
+    <Resources DSP="15" FF="1270" LUT="1101" LogicLUT="1085" SRL="16"/>
+    <LocalResources FF="463" LUT="183" LogicLUT="167" SRL="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fadd_32ns_32ns_32_4_full_dsp_1_U448" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="136" LUT="208" LogicLUT="208"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fadd_32ns_32ns_32_4_full_dsp_1_U449" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fadd_32ns_32ns_32_4_full_dsp_1_U450" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="177" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="40"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="38" LogicLUT="38"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_187_1_fu_241" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_187_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="44" LogicLUT="44"/>
+    <LocalResources FF="101" LUT="35" LogicLUT="35"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_187_1_fu_241/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_187_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_21_1_fu_249" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_21_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="100" LUT="238" LogicLUT="238"/>
+    <LocalResources FF="98" LUT="230" LogicLUT="230"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_21_1_fu_249/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_21_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_84_1_fu_259" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="2">fcmp_32ns_32ns_1_2_no_dsp_1_U470 flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="47" LUT="43" LogicLUT="43"/>
+    <LocalResources FF="13" LUT="13" LogicLUT="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_84_1_fu_259/fcmp_32ns_32ns_1_2_no_dsp_1_U470" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="25" LogicLUT="25"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_84_1_fu_259/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_92_2_fu_267" DEPTH="2" FILE_NAME="ban_interface_mul_body.v" ORIG_REF_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="141" LogicLUT="141"/>
+    <LocalResources FF="101" LUT="51" LogicLUT="51"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_92_2_fu_267/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_mul_body_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="90" LogicLUT="90"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_1">
+    <SubModules count="13">fadd_32ns_32ns_32_4_full_dsp_1_U439 fadd_32ns_32ns_32_4_full_dsp_1_U440 fadd_32ns_32ns_32_4_full_dsp_1_U441 fcmp_32ns_32ns_1_2_no_dsp_1_U445 fdiv_32ns_32ns_32_9_no_dsp_1_U442 fdiv_32ns_32ns_32_9_no_dsp_1_U443 fdiv_32ns_32ns_32_9_no_dsp_1_U444 grp_operator_1_Pipeline_VITIS_LOOP_104_3_fu_301 grp_operator_1_Pipeline_VITIS_LOOP_215_1_fu_246 grp_operator_1_Pipeline_VITIS_LOOP_84_1_fu_281 grp_operator_1_Pipeline_VITIS_LOOP_92_2_fu_289 grp_p_mul_1_fu_257 grp_p_mul_fu_264</SubModules>
+    <Resources DSP="36" FF="6472" LUT="6795" LUTRAM="64" LogicLUT="6592" SRL="139"/>
+    <LocalResources FF="1111" LUT="217" LogicLUT="217"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fadd_32ns_32ns_32_4_full_dsp_1_U439" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="234" LUT="270" LogicLUT="270"/>
+    <LocalResources FF="97" LUT="50" LogicLUT="50"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fadd_32ns_32ns_32_4_full_dsp_1_U440" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="233" LUT="268" LogicLUT="268"/>
+    <LocalResources FF="96" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fadd_32ns_32ns_32_4_full_dsp_1_U441" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="233" LUT="268" LogicLUT="268"/>
+    <LocalResources FF="96" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fcmp_32ns_32ns_1_2_no_dsp_1_U445" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="32" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fdiv_32ns_32ns_32_9_no_dsp_1_U442" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="390" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fdiv_32ns_32ns_32_9_no_dsp_1_U443" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="359" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/fdiv_32ns_32ns_32_9_no_dsp_1_U444" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="360" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_104_3_fu_301" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="450" LogicLUT="450"/>
+    <LocalResources FF="164" LUT="378" LogicLUT="378"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_104_3_fu_301/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_215_1_fu_246" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_215_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="137" LUT="94" LogicLUT="91" SRL="3"/>
+    <LocalResources FF="135" LUT="54" LogicLUT="51" SRL="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_215_1_fu_246/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_215_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="40" LogicLUT="40"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_84_1_fu_281" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="2">fcmp_32ns_32ns_1_2_no_dsp_1_U416 flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="107" LUT="150" LogicLUT="150"/>
+    <LocalResources FF="73" LUT="88" LogicLUT="88"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_84_1_fu_281/fcmp_32ns_32ns_1_2_no_dsp_1_U416" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" FILE_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="57" LogicLUT="57"/>
+    <LocalResources FF="32" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_84_1_fu_281/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_92_2_fu_289" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="190" LogicLUT="190"/>
+    <LocalResources FF="101" LUT="99" LogicLUT="99"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_operator_1_Pipeline_VITIS_LOOP_92_2_fu_289/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_1_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_p_mul_1">
+    <SubModules count="3">aux_U grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66 grp_p_mul_1_Pipeline_VITIS_LOOP_187_1_fu_79</SubModules>
+    <Resources DSP="15" FF="1529" LUT="1058" LUTRAM="32" LogicLUT="1006" SRL="20"/>
+    <LocalResources FF="103" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/aux_U" BINDMODULE="ban_interface_p_mul_1_aux_RAM_AUTO_1R1W" DEPTH="3" FILE_NAME="ban_interface_p_mul_1.v" ORIG_REF_NAME="ban_interface_p_mul_1_aux_RAM_AUTO_1R1W">
+    <Resources FF="32" LUT="32" LUTRAM="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66" DEPTH="3" FILE_NAME="ban_interface_p_mul_1.v" ORIG_REF_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1">
+    <SubModules count="7">fadd_32ns_32ns_32_4_full_dsp_1_U393 fadd_32ns_32ns_32_4_full_dsp_1_U394 fadd_32ns_32ns_32_4_full_dsp_1_U395 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_3_max_dsp_1_U396 fmul_32ns_32ns_32_3_max_dsp_1_U397 fmul_32ns_32ns_32_3_max_dsp_1_U398</SubModules>
+    <Resources DSP="15" FF="1291" LUT="1012" LogicLUT="992" SRL="20"/>
+    <LocalResources FF="460" LUT="91" LogicLUT="71" SRL="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/fadd_32ns_32ns_32_4_full_dsp_1_U393" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="136" LUT="208" LogicLUT="208"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/fadd_32ns_32ns_32_4_full_dsp_1_U394" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/fadd_32ns_32ns_32_4_full_dsp_1_U395" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="41" LogicLUT="41"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/fmul_32ns_32ns_32_3_max_dsp_1_U396" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/fmul_32ns_32ns_32_3_max_dsp_1_U397" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_169_1_fu_66/fmul_32ns_32ns_32_3_max_dsp_1_U398" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_187_1_fu_79" DEPTH="3" FILE_NAME="ban_interface_p_mul_1.v" ORIG_REF_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_187_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="11" LogicLUT="11"/>
+    <LocalResources FF="101" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_1_fu_257/grp_p_mul_1_Pipeline_VITIS_LOOP_187_1_fu_79/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_mul_1_Pipeline_VITIS_LOOP_187_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264" DEPTH="2" FILE_NAME="ban_interface_operator_1.v" ORIG_REF_NAME="ban_interface_p_mul">
+    <SubModules count="3">aux_U grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110 grp_p_mul_Pipeline_VITIS_LOOP_187_1_fu_128</SubModules>
+    <Resources DSP="15" FF="1478" LUT="1380" LUTRAM="32" LogicLUT="1328" SRL="20"/>
+    <LocalResources FF="103" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/aux_U" BINDMODULE="ban_interface_p_mul_aux_RAM_AUTO_1R1W" DEPTH="3" FILE_NAME="ban_interface_p_mul.v" ORIG_REF_NAME="ban_interface_p_mul_aux_RAM_AUTO_1R1W">
+    <Resources FF="32" LUT="32" LUTRAM="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110" DEPTH="3" FILE_NAME="ban_interface_p_mul.v" ORIG_REF_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1">
+    <SubModules count="7">fadd_32ns_32ns_32_4_full_dsp_1_U52 fadd_32ns_32ns_32_4_full_dsp_1_U53 fadd_32ns_32ns_32_4_full_dsp_1_U54 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_3_max_dsp_1_U55 fmul_32ns_32ns_32_3_max_dsp_1_U56 fmul_32ns_32ns_32_3_max_dsp_1_U57</SubModules>
+    <Resources DSP="15" FF="1237" LUT="1044" LogicLUT="1024" SRL="20"/>
+    <LocalResources FF="445" LUT="171" LogicLUT="151" SRL="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fadd_32ns_32ns_32_4_full_dsp_1_U52" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="136" LUT="208" LogicLUT="208"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fadd_32ns_32ns_32_4_full_dsp_1_U53" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fadd_32ns_32ns_32_4_full_dsp_1_U54" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="42" LogicLUT="42"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fmul_32ns_32ns_32_3_max_dsp_1_U55" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="58" LUT="29" LogicLUT="29"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fmul_32ns_32ns_32_3_max_dsp_1_U56" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fmul_32ns_32ns_32_3_max_dsp_1_U57" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_187_1_fu_128" DEPTH="3" FILE_NAME="ban_interface_p_mul.v" ORIG_REF_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_187_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="106" LUT="301" LogicLUT="301"/>
+    <LocalResources FF="104" LUT="292" LogicLUT="292"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_fu_1780/grp_p_mul_fu_264/grp_p_mul_Pipeline_VITIS_LOOP_187_1_fu_128/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_187_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_1_s">
+    <SubModules count="2">fcmp_32ns_32ns_1_2_no_dsp_1_U587 grp_p_sum_fu_132</SubModules>
+    <Resources DSP="2" FF="1631" LUT="1957" LogicLUT="1957"/>
+    <LocalResources FF="342" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/fcmp_32ns_32ns_1_2_no_dsp_1_U587" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_1_s.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="47" LogicLUT="47"/>
+    <LocalResources FF="32" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132" DEPTH="2" FILE_NAME="ban_interface_operator_1_s.v" ORIG_REF_NAME="ban_interface_p_sum">
+    <SubModules count="5">fadd_32ns_32ns_32_4_full_dsp_1_U582 fcmp_32ns_32ns_1_2_no_dsp_1_U583 grp_p_sum_Pipeline_VITIS_LOOP_104_3_fu_286 grp_p_sum_Pipeline_VITIS_LOOP_84_1_fu_262 grp_p_sum_Pipeline_VITIS_LOOP_92_2_fu_272</SubModules>
+    <Resources DSP="2" FF="1257" LUT="1819" LogicLUT="1819"/>
+    <LocalResources FF="740" LUT="429" LogicLUT="429"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/fadd_32ns_32ns_32_4_full_dsp_1_U582" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="3" FILE_NAME="ban_interface_p_sum.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="383" LogicLUT="383"/>
+    <LocalResources FF="64" LUT="100" LogicLUT="100"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/fcmp_32ns_32ns_1_2_no_dsp_1_U583" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" FILE_NAME="ban_interface_p_sum.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="23" LogicLUT="23"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/grp_p_sum_Pipeline_VITIS_LOOP_104_3_fu_286" DEPTH="3" FILE_NAME="ban_interface_p_sum.v" ORIG_REF_NAME="ban_interface_p_sum_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="604" LogicLUT="604"/>
+    <LocalResources FF="164" LUT="527" LogicLUT="527"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/grp_p_sum_Pipeline_VITIS_LOOP_104_3_fu_286/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_sum_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="77" LogicLUT="77"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/grp_p_sum_Pipeline_VITIS_LOOP_84_1_fu_262" DEPTH="3" FILE_NAME="ban_interface_p_sum.v" ORIG_REF_NAME="ban_interface_p_sum_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="77" LogicLUT="77"/>
+    <LocalResources FF="13" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/grp_p_sum_Pipeline_VITIS_LOOP_84_1_fu_262/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_sum_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/grp_p_sum_Pipeline_VITIS_LOOP_92_2_fu_272" DEPTH="3" FILE_NAME="ban_interface_p_sum.v" ORIG_REF_NAME="ban_interface_p_sum_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="303" LogicLUT="303"/>
+    <LocalResources FF="101" LUT="195" LogicLUT="195"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_1_s_fu_1798/grp_p_sum_fu_132/grp_p_sum_Pipeline_VITIS_LOOP_92_2_fu_272/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_sum_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="108" LogicLUT="108"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_2">
+    <SubModules count="8">fadd_32ns_32ns_32_4_full_dsp_1_U227 fcmp_32ns_32ns_1_2_no_dsp_1_U228 grp_operator_2_Pipeline_VITIS_LOOP_104_3_fu_329 grp_operator_2_Pipeline_VITIS_LOOP_21_1_fu_354 grp_operator_2_Pipeline_VITIS_LOOP_506_1_fu_345 grp_operator_2_Pipeline_VITIS_LOOP_84_1_fu_303 grp_operator_2_Pipeline_VITIS_LOOP_92_2_fu_314 mux_32_32_1_1_U229</SubModules>
+    <Resources DSP="2" FF="1408" LUT="1481" LogicLUT="1481"/>
+    <LocalResources FF="691" LUT="189" LogicLUT="189"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/fadd_32ns_32ns_32_4_full_dsp_1_U227" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="299" LogicLUT="299"/>
+    <LocalResources FF="64" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/fcmp_32ns_32ns_1_2_no_dsp_1_U228" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="223" LogicLUT="223"/>
+    <LocalResources FF="32" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_104_3_fu_329" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="319" LogicLUT="319"/>
+    <LocalResources FF="164" LUT="247" LogicLUT="247"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_104_3_fu_329/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_21_1_fu_354" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_21_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="100" LUT="8" LogicLUT="8"/>
+    <LocalResources FF="98"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_21_1_fu_354/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_21_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_506_1_fu_345" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_506_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="68" LUT="154" LogicLUT="154"/>
+    <LocalResources FF="66" LUT="106" LogicLUT="106"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_506_1_fu_345/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_506_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="48" LogicLUT="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_84_1_fu_303" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="2">fcmp_32ns_32ns_1_2_no_dsp_1_U192 flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="47" LUT="96" LogicLUT="96"/>
+    <LocalResources FF="13" LUT="34" LogicLUT="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_84_1_fu_303/fcmp_32ns_32ns_1_2_no_dsp_1_U192" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="57" LogicLUT="57"/>
+    <LocalResources FF="32" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_84_1_fu_303/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_92_2_fu_314" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="190" LogicLUT="190"/>
+    <LocalResources FF="101" LUT="99" LogicLUT="99"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/grp_operator_2_Pipeline_VITIS_LOOP_92_2_fu_314/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_fu_1772/mux_32_32_1_1_U229" BINDMODULE="ban_interface_mux_32_32_1_1" DEPTH="2" FILE_NAME="ban_interface_operator_2.v" ORIG_REF_NAME="ban_interface_mux_32_32_1_1">
+    <Resources LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_2_s">
+    <SubModules count="7">fcmp_32ns_32ns_1_2_no_dsp_1_U258 fdiv_32ns_32ns_32_9_no_dsp_1_U255 fdiv_32ns_32ns_32_9_no_dsp_1_U256 fdiv_32ns_32ns_32_9_no_dsp_1_U257 grp_operator_2_Pipeline_VITIS_LOOP_104_3_s_fu_244 grp_operator_2_Pipeline_VITIS_LOOP_84_1_s_fu_224 grp_operator_2_Pipeline_VITIS_LOOP_92_2_s_fu_232</SubModules>
+    <Resources FF="2037" LUT="3331" LogicLUT="3235" SRL="96"/>
+    <LocalResources FF="580" LUT="208" LogicLUT="208"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/fcmp_32ns_32ns_1_2_no_dsp_1_U258" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="32" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/fdiv_32ns_32ns_32_9_no_dsp_1_U255" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="390" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/fdiv_32ns_32ns_32_9_no_dsp_1_U256" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="359" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/fdiv_32ns_32ns_32_9_no_dsp_1_U257" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="360" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_104_3_s_fu_244" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_104_3_s">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="388" LogicLUT="388"/>
+    <LocalResources FF="164" LUT="313" LogicLUT="313"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_104_3_s_fu_244/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_104_3_s.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="75" LogicLUT="75"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_84_1_s_fu_224" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_84_1_s">
+    <SubModules count="2">fcmp_32ns_32ns_1_2_no_dsp_1_U232 flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="47" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="13" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_84_1_s_fu_224/fcmp_32ns_32ns_1_2_no_dsp_1_U232" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_84_1_s.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="56" LogicLUT="56"/>
+    <LocalResources FF="32" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_84_1_s_fu_224/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_84_1_s.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_92_2_s_fu_232" DEPTH="2" FILE_NAME="ban_interface_operator_2_s.v" ORIG_REF_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_92_2_s">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="206" LogicLUT="206"/>
+    <LocalResources FF="101" LUT="131" LogicLUT="131"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_2_s_fu_1764/grp_operator_2_Pipeline_VITIS_LOOP_92_2_s_fu_232/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_2_Pipeline_VITIS_LOOP_92_2_s.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="75" LogicLUT="75"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_3">
+    <SubModules count="7">fadd_32ns_32ns_32_4_full_dsp_1_U551 fcmp_32ns_32ns_1_2_no_dsp_1_U552 fcmp_32ns_32ns_1_2_no_dsp_1_U553 grp_operator_3_Pipeline_VITIS_LOOP_104_3_fu_379 grp_operator_3_Pipeline_VITIS_LOOP_84_1_fu_355 grp_operator_3_Pipeline_VITIS_LOOP_92_2_fu_365 grp_p_sum_1_fu_346</SubModules>
+    <Resources DSP="2" FF="2197" LUT="2796" LogicLUT="2796"/>
+    <LocalResources FF="723" LUT="503" LogicLUT="503"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/fadd_32ns_32ns_32_4_full_dsp_1_U551" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="201" LUT="348" LogicLUT="348"/>
+    <LocalResources FF="64" LUT="65" LogicLUT="65"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/fcmp_32ns_32ns_1_2_no_dsp_1_U552" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="287" LogicLUT="287"/>
+    <LocalResources FF="32" LUT="32" LogicLUT="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/fcmp_32ns_32ns_1_2_no_dsp_1_U553" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="32" LUT="21" LogicLUT="21"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_operator_3_Pipeline_VITIS_LOOP_104_3_fu_379" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_operator_3_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="165" LUT="429" LogicLUT="429"/>
+    <LocalResources FF="163" LUT="356" LogicLUT="356"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_operator_3_Pipeline_VITIS_LOOP_104_3_fu_379/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_3_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="73" LogicLUT="73"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_operator_3_Pipeline_VITIS_LOOP_84_1_fu_355" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_operator_3_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="76" LogicLUT="76"/>
+    <LocalResources FF="13" LUT="71" LogicLUT="71"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_operator_3_Pipeline_VITIS_LOOP_84_1_fu_355/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_3_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_operator_3_Pipeline_VITIS_LOOP_92_2_fu_365" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_operator_3_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="142" LogicLUT="142"/>
+    <LocalResources FF="101" LUT="51" LogicLUT="51"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_operator_3_Pipeline_VITIS_LOOP_92_2_fu_365/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_3_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346" DEPTH="2" FILE_NAME="ban_interface_operator_3.v" ORIG_REF_NAME="ban_interface_p_sum_1">
+    <SubModules count="3">grp_p_sum_1_Pipeline_VITIS_LOOP_104_3_fu_278 grp_p_sum_1_Pipeline_VITIS_LOOP_84_1_fu_254 grp_p_sum_1_Pipeline_VITIS_LOOP_92_2_fu_264</SubModules>
+    <Resources FF="926" LUT="991" LogicLUT="991"/>
+    <LocalResources FF="642" LUT="369" LogicLUT="369"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346/grp_p_sum_1_Pipeline_VITIS_LOOP_104_3_fu_278" DEPTH="3" FILE_NAME="ban_interface_p_sum_1.v" ORIG_REF_NAME="ban_interface_p_sum_1_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="242" LogicLUT="242"/>
+    <LocalResources FF="164" LUT="165" LogicLUT="165"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346/grp_p_sum_1_Pipeline_VITIS_LOOP_104_3_fu_278/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_sum_1_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="77" LogicLUT="77"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346/grp_p_sum_1_Pipeline_VITIS_LOOP_84_1_fu_254" DEPTH="3" FILE_NAME="ban_interface_p_sum_1.v" ORIG_REF_NAME="ban_interface_p_sum_1_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="77" LogicLUT="77"/>
+    <LocalResources FF="13" LUT="72" LogicLUT="72"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346/grp_p_sum_1_Pipeline_VITIS_LOOP_84_1_fu_254/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_sum_1_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346/grp_p_sum_1_Pipeline_VITIS_LOOP_92_2_fu_264" DEPTH="3" FILE_NAME="ban_interface_p_sum_1.v" ORIG_REF_NAME="ban_interface_p_sum_1_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="303" LogicLUT="303"/>
+    <LocalResources FF="101" LUT="195" LogicLUT="195"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_3_fu_1788/grp_p_sum_1_fu_346/grp_p_sum_1_Pipeline_VITIS_LOOP_92_2_fu_264/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_sum_1_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="108" LogicLUT="108"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_add">
+    <SubModules count="5">grp_operator_Pipeline_VITIS_LOOP_104_3_s_fu_351 grp_operator_Pipeline_VITIS_LOOP_21_1_fu_367 grp_operator_Pipeline_VITIS_LOOP_506_1_fu_311 grp_operator_Pipeline_VITIS_LOOP_84_1_s_fu_325 grp_operator_Pipeline_VITIS_LOOP_92_2_s_fu_336</SubModules>
+    <Resources FF="1076" LUT="1194" LogicLUT="1194"/>
+    <LocalResources FF="564" LUT="288" LogicLUT="288"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_104_3_s_fu_351" DEPTH="2" FILE_NAME="ban_interface_operator_add.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_104_3_s">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="166" LUT="297" LogicLUT="297"/>
+    <LocalResources FF="164" LUT="220" LogicLUT="220"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_104_3_s_fu_351/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_104_3_s.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="77" LogicLUT="77"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_21_1_fu_367" DEPTH="2" FILE_NAME="ban_interface_operator_add.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_21_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="100" LUT="198" LogicLUT="198"/>
+    <LocalResources FF="98" LUT="190" LogicLUT="190"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_21_1_fu_367/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_21_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_506_1_fu_311" DEPTH="2" FILE_NAME="ban_interface_operator_add.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_506_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="68" LUT="90" LogicLUT="90"/>
+    <LocalResources FF="66" LUT="47" LogicLUT="47"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_506_1_fu_311/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_506_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="43" LogicLUT="43"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_84_1_s_fu_325" DEPTH="2" FILE_NAME="ban_interface_operator_add.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_84_1_s">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="75" LUT="114" LogicLUT="114"/>
+    <LocalResources FF="73" LUT="109" LogicLUT="109"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_84_1_s_fu_325/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_84_1_s.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_92_2_s_fu_336" DEPTH="2" FILE_NAME="ban_interface_operator_add.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_92_2_s">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="207" LogicLUT="207"/>
+    <LocalResources FF="101" LUT="132" LogicLUT="132"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_add_fu_1920/grp_operator_Pipeline_VITIS_LOOP_92_2_s_fu_336/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_92_2_s.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="75" LogicLUT="75"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_operator_div">
+    <SubModules count="7">fdiv_32ns_32ns_32_9_no_dsp_1_U115 fdiv_32ns_32ns_32_9_no_dsp_1_U116 grp_operator_Pipeline_VITIS_LOOP_104_3_fu_281 grp_operator_Pipeline_VITIS_LOOP_215_1_fu_230 grp_operator_Pipeline_VITIS_LOOP_84_1_fu_261 grp_operator_Pipeline_VITIS_LOOP_92_2_fu_269 grp_p_mul_fu_241</SubModules>
+    <Resources DSP="15" FF="3600" LUT="4012" LUTRAM="32" LogicLUT="3893" SRL="87"/>
+    <LocalResources FF="885" LUT="194" LogicLUT="194"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/fdiv_32ns_32ns_32_9_no_dsp_1_U115" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="359" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/fdiv_32ns_32ns_32_9_no_dsp_1_U116" BINDMODULE="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1">
+    <Resources FF="391" LUT="791" LogicLUT="759" SRL="32"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_104_3_fu_281" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_104_3">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="165" LUT="194" LogicLUT="194"/>
+    <LocalResources FF="163" LUT="120" LogicLUT="120"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_104_3_fu_281/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_104_3.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="74" LogicLUT="74"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_215_1_fu_230" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_215_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="105" LUT="238" LogicLUT="235" SRL="3"/>
+    <LocalResources FF="103" LUT="198" LogicLUT="195" SRL="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_215_1_fu_230/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_215_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="40" LogicLUT="40"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_84_1_fu_261" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_84_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="75" LUT="160" LogicLUT="160"/>
+    <LocalResources FF="73" LUT="155" LogicLUT="155"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_84_1_fu_261/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_84_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_92_2_fu_269" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_92_2">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="286" LogicLUT="286"/>
+    <LocalResources FF="101" LUT="195" LogicLUT="195"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_operator_Pipeline_VITIS_LOOP_92_2_fu_269/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_operator_Pipeline_VITIS_LOOP_92_2.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="91" LogicLUT="91"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241" DEPTH="2" FILE_NAME="ban_interface_operator_div.v" ORIG_REF_NAME="ban_interface_p_mul">
+    <SubModules count="3">aux_U grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110 grp_p_mul_Pipeline_VITIS_LOOP_187_1_fu_128</SubModules>
+    <Resources DSP="15" FF="1517" LUT="1358" LUTRAM="32" LogicLUT="1306" SRL="20"/>
+    <LocalResources FF="103" LUT="11" LogicLUT="11"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/aux_U" BINDMODULE="ban_interface_p_mul_aux_RAM_AUTO_1R1W" DEPTH="3" FILE_NAME="ban_interface_p_mul.v" ORIG_REF_NAME="ban_interface_p_mul_aux_RAM_AUTO_1R1W">
+    <Resources FF="32" LUT="32" LUTRAM="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110" DEPTH="3" FILE_NAME="ban_interface_p_mul.v" ORIG_REF_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1">
+    <SubModules count="7">fadd_32ns_32ns_32_4_full_dsp_1_U52 fadd_32ns_32ns_32_4_full_dsp_1_U53 fadd_32ns_32ns_32_4_full_dsp_1_U54 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_3_max_dsp_1_U55 fmul_32ns_32ns_32_3_max_dsp_1_U56 fmul_32ns_32ns_32_3_max_dsp_1_U57</SubModules>
+    <Resources DSP="15" FF="1276" LUT="982" LogicLUT="962" SRL="20"/>
+    <LocalResources FF="470" LUT="91" LogicLUT="71" SRL="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fadd_32ns_32ns_32_4_full_dsp_1_U52" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="136" LUT="208" LogicLUT="208"/>
+    <LocalResources FF="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fadd_32ns_32ns_32_4_full_dsp_1_U53" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="200" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fadd_32ns_32ns_32_4_full_dsp_1_U54" BINDMODULE="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fadd_32ns_32ns_32_4_full_dsp_1">
+    <Resources DSP="2" FF="177" LUT="219" LogicLUT="219"/>
+    <LocalResources FF="40"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fmul_32ns_32ns_32_3_max_dsp_1_U55" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fmul_32ns_32ns_32_3_max_dsp_1_U56" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="79" LogicLUT="79"/>
+    <LocalResources FF="64" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_169_1_fu_110/fmul_32ns_32ns_32_3_max_dsp_1_U57" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_187_1_fu_128" DEPTH="3" FILE_NAME="ban_interface_p_mul.v" ORIG_REF_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_187_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="106" LUT="333" LogicLUT="333"/>
+    <LocalResources FF="104" LUT="324" LogicLUT="324"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_operator_div_fu_1878/grp_p_mul_fu_241/grp_p_mul_Pipeline_VITIS_LOOP_187_1_fu_128/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="4" FILE_NAME="ban_interface_p_mul_Pipeline_VITIS_LOOP_187_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="9" LogicLUT="9"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043" DEPTH="1" FILE_NAME="ban_interface.v" ORIG_REF_NAME="ban_interface_sqrt">
+    <SubModules count="9">aux_U fcmp_32ns_32ns_1_2_no_dsp_1_U379 fmul_32ns_32ns_32_3_max_dsp_1_U378 fsqrt_32ns_32ns_32_8_no_dsp_1_U380 grp_sqrt_Pipeline_VITIS_LOOP_169_1_fu_182 grp_sqrt_Pipeline_VITIS_LOOP_187_1_fu_191 grp_sqrt_Pipeline_VITIS_LOOP_21_1_fu_199 grp_sqrt_Pipeline_VITIS_LOOP_444_1_fu_170 grp_sqrt_Pipeline_VITIS_LOOP_68_1_fu_164</SubModules>
+    <Resources DSP="3" FF="1913" LUT="1888" LUTRAM="32" LogicLUT="1757" SRL="99"/>
+    <LocalResources FF="578" LUT="242" LogicLUT="242"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/aux_U" BINDMODULE="ban_interface_sqrt_aux_RAM_AUTO_1R1W" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_sqrt_aux_RAM_AUTO_1R1W">
+    <Resources FF="32" LUT="32" LUTRAM="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/fcmp_32ns_32ns_1_2_no_dsp_1_U379" BINDMODULE="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1">
+    <Resources FF="33" LUT="42" LogicLUT="42"/>
+    <LocalResources FF="33" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/fmul_32ns_32ns_32_3_max_dsp_1_U378" BINDMODULE="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_fmul_32ns_32ns_32_3_max_dsp_1">
+    <Resources DSP="3" FF="97" LUT="78" LogicLUT="78"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/fsqrt_32ns_32ns_32_8_no_dsp_1_U380" BINDMODULE="ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1">
+    <Resources FF="304" LUT="433" LogicLUT="422" SRL="11"/>
+    <LocalResources FF="65" LUT="17" LogicLUT="17"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_169_1_fu_182" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_169_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="383" LUT="311" LogicLUT="227" SRL="84"/>
+    <LocalResources FF="381" LUT="267" LogicLUT="183" SRL="84"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_169_1_fu_182/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_169_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="44" LogicLUT="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_187_1_fu_191" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_187_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="189" LogicLUT="189"/>
+    <LocalResources FF="101" LUT="179" LogicLUT="179"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_187_1_fu_191/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_187_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="10" LogicLUT="10"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_21_1_fu_199" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_21_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="100" LUT="309" LogicLUT="309"/>
+    <LocalResources FF="98" LUT="267" LogicLUT="267"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_21_1_fu_199/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_21_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="42" LogicLUT="42"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_444_1_fu_170" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_444_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="237" LUT="177" LogicLUT="173" SRL="4"/>
+    <LocalResources FF="235" LUT="137" LogicLUT="133" SRL="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_444_1_fu_170/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_444_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="40" LogicLUT="40"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_68_1_fu_164" DEPTH="2" FILE_NAME="ban_interface_sqrt.v" ORIG_REF_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_68_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="46" LUT="75" LogicLUT="75"/>
+    <LocalResources FF="44" LUT="19" LogicLUT="19"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_sqrt_fu_2043/grp_sqrt_Pipeline_VITIS_LOOP_68_1_fu_164/flow_control_loop_pipe_sequential_init_U" BINDMODULE="ban_interface_flow_control_loop_pipe_sequential_init" DEPTH="3" FILE_NAME="ban_interface_sqrt_Pipeline_VITIS_LOOP_68_1.v" ORIG_REF_NAME="ban_interface_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="56" LogicLUT="56"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="3.800" DATAPATH_LOGIC_DELAY="3.162" DATAPATH_NET_DELAY="0.638" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D" LOGIC_LEVELS="12" MAX_FANOUT="8" SLACK="6.190" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/din1_buf1_reg[15]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/din1_buf1_reg[15]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="55"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U590/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.800" DATAPATH_LOGIC_DELAY="3.162" DATAPATH_NET_DELAY="0.638" ENDPOINT_PIN="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D" LOGIC_LEVELS="12" MAX_FANOUT="8" SLACK="6.190" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/din1_buf1_reg[15]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/din1_buf1_reg[15]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="55"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_3_max_dsp_1_U591/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.800" DATAPATH_LOGIC_DELAY="3.162" DATAPATH_NET_DELAY="0.638" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D" LOGIC_LEVELS="12" MAX_FANOUT="8" SLACK="6.190" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/din1_buf1_reg[15]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/din1_buf1_reg[15]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="55"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U451/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.800" DATAPATH_LOGIC_DELAY="3.162" DATAPATH_NET_DELAY="0.638" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D" LOGIC_LEVELS="12" MAX_FANOUT="8" SLACK="6.190" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/din1_buf1_reg[15]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/din1_buf1_reg[15]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="55"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U452/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.800" DATAPATH_LOGIC_DELAY="3.162" DATAPATH_NET_DELAY="0.638" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]/D" LOGIC_LEVELS="12" MAX_FANOUT="8" SLACK="6.190" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/din1_buf1_reg[15]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/din1_buf1_reg[15]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="55"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/i_no_versal_es1_workaround.DSP/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" LINE_NUMBER=""/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/RESULT_REG.NORMAL.exp_op[7]_i_8" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op[7]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT5" LINE_NUMBER="1"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_mul_body_fu_2048/grp_mul_body_Pipeline_VITIS_LOOP_169_1_fu_230/fmul_32ns_32ns_32_3_max_dsp_1_U453/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.OP/RESULT_REG.NORMAL.exp_op_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="1"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/ban_interface_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/ban_interface_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/ban_interface_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/ban_interface_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/ban_interface_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/ban_interface_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

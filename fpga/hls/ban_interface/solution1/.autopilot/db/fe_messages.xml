@@ -1,0 +1,519 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban_interface.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ban_interface" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ban_interface" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="../src/ban.cpp:26:38" msg_body="unused parameter 'check'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_sum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator-" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:171:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_mul_conv" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:230:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:237:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:487:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sqrt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:497:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sqrt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:556:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator*" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:578:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator/" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:566:0" msg_body="Unrolling loop 'VITIS_LOOP_577_1' (../src/ban.cpp:577:20) in function 'Ban::operator/' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:577:20" LoopName="VITIS_LOOP_577_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:546:0" msg_body="Unrolling loop 'VITIS_LOOP_555_1' (../src/ban.cpp:555:20) in function 'Ban::operator*' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:555:20" LoopName="VITIS_LOOP_555_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:427:0" msg_body="Unrolling loop 'VITIS_LOOP_496_3' (../src/ban.cpp:496:20) in function 'sqrt' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:496:20" LoopName="VITIS_LOOP_496_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:427:0" msg_body="Unrolling loop 'VITIS_LOOP_486_2' (../src/ban.cpp:486:22) in function 'sqrt' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:486:22" LoopName="VITIS_LOOP_486_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_253_6' (../src/ban.cpp:253:20) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:253:20" LoopName="VITIS_LOOP_253_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_229_4' (../src/ban.cpp:229:21) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:229:21" LoopName="VITIS_LOOP_229_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_236_5' (../src/ban.cpp:236:21) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:236:21" LoopName="VITIS_LOOP_236_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_220_2' (../src/ban.cpp:220:20) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:220:20" LoopName="VITIS_LOOP_220_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:166:0" msg_body="Unrolling loop 'VITIS_LOOP_170_2' (../src/ban.cpp:170:21) in function 'Ban::_mul_conv' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:170:21" LoopName="VITIS_LOOP_170_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Unrolling loop 'VITIS_LOOP_114_1' (../src/ban.cpp:114:20) in function 'Ban::_sum' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:114:20" LoopName="VITIS_LOOP_114_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:154:0" msg_body="Unrolling loop 'VITIS_LOOP_157_1' (../src/ban.cpp:157:20) in function 'Ban::operator-' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:157:20" LoopName="VITIS_LOOP_157_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.36)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.36)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.33)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.33)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.36)' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.36)" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:75:0" msg_body="Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&amp;) const'">
+        <args Callee="Ban::operator-() const" Caller="Ban::operator-(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:182:0" msg_body="Inlining function 'Ban::_mul_conv(float const*, float const*, float*)' into 'Ban::_mul(float const*, float const*, float*)'">
+        <args Callee="Ban::_mul_conv(float const*, float const*, float*)" Caller="Ban::_mul(float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:26:0" msg_body="Inlining function 'Ban::init(int, float const*) (.48)' into 'Ban::Ban(int, float const*, bool) (.45)'">
+        <args Callee="Ban::init(int, float const*) (.48)" Caller="Ban::Ban(int, float const*, bool) (.45)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&amp;) const (.42)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::mul_body(Ban const&amp;) const (.42)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.45)' into 'Ban::mul_body(Ban const&amp;) const (.42)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.45)" Caller="Ban::mul_body(Ban const&amp;) const (.42)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::mul_body(Ban const&amp;) const (.42)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::mul_body(Ban const&amp;) const (.42)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:203:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator*(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator*(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::_div_body(float const*, float const*, float*)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::_div_body(float const*, float const*, float*)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:79:0" msg_body="Inlining function 'Ban::operator-() const' into 'Ban::operator-=(Ban const&amp;)'">
+        <args Callee="Ban::operator-() const" Caller="Ban::operator-=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:79:0" msg_body="Inlining function 'Ban::operator+=(Ban const&amp;) (.27)' into 'Ban::operator-=(Ban const&amp;)'">
+        <args Callee="Ban::operator+=(Ban const&amp;) (.27)" Caller="Ban::operator-=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:80:0" msg_body="Inlining function 'Ban::operator*(Ban const&amp;) const' into 'Ban::operator*=(Ban const&amp;)'">
+        <args Callee="Ban::operator*(Ban const&amp;) const" Caller="Ban::operator*=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:420:0" msg_body="Inlining function 'Ban::operator-() const' into 'abs(Ban const&amp;)'">
+        <args Callee="Ban::operator-() const" Caller="abs(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:30:0" msg_body="Inlining function 'Ban::init(int, float const*) (.48)' into 'Ban::Ban(int, float const*) (.57)'">
+        <args Callee="Ban::init(int, float const*) (.48)" Caller="Ban::Ban(int, float const*) (.57)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:427:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'sqrt(Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:427:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'sqrt(Ban const&amp;)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:427:0" msg_body="Inlining function 'std::sqrt(float)' into 'sqrt(Ban const&amp;)'">
+        <args Callee="std::sqrt(float)" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:427:0" msg_body="Inlining function 'Ban::Ban(int, float const*) (.57)' into 'sqrt(Ban const&amp;)'">
+        <args Callee="Ban::Ban(int, float const*) (.57)" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:94:0" msg_body="Inlining function 'Ban::operator==(Ban const&amp;) const' into 'Ban::operator!=(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(Ban const&amp;) const" Caller="Ban::operator!=(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:96:0" msg_body="Inlining function 'Ban::operator&lt;(Ban const&amp;) const' into 'Ban::operator&gt;(Ban const&amp;) const'">
+        <args Callee="Ban::operator&lt;(Ban const&amp;) const" Caller="Ban::operator&gt;(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:97:0" msg_body="Inlining function 'Ban::operator&lt;(Ban const&amp;) const' into 'Ban::operator&lt;=(Ban const&amp;) const'">
+        <args Callee="Ban::operator&lt;(Ban const&amp;) const" Caller="Ban::operator&lt;=(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:98:0" msg_body="Inlining function 'Ban::operator&lt;(Ban const&amp;) const' into 'Ban::operator&gt;=(Ban const&amp;) const'">
+        <args Callee="Ban::operator&lt;(Ban const&amp;) const" Caller="Ban::operator&gt;=(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:518:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator+(float) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:518:0" msg_body="Inlining function 'Ban::sum_infinitesimal_real(float*, float) const' into 'Ban::operator+(float) const'">
+        <args Callee="Ban::sum_infinitesimal_real(float*, float) const" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:518:0" msg_body="Inlining function 'Ban::Ban(int, float const*) (.57)' into 'Ban::operator+(float) const'">
+        <args Callee="Ban::Ban(int, float const*) (.57)" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:546:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator*(float) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator*(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:566:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/(float) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:566:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(float) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:107:0" msg_body="Inlining function 'Ban::operator*(float) const' into 'Ban::operator*=(float)'">
+        <args Callee="Ban::operator*(float) const" Caller="Ban::operator*=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:518:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator+(float) const (.66)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator+(float) const (.66)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:518:0" msg_body="Inlining function 'Ban::sum_infinitesimal_real(float*, float) const (.69)' into 'Ban::operator+(float) const (.66)'">
+        <args Callee="Ban::sum_infinitesimal_real(float*, float) const (.69)" Caller="Ban::operator+(float) const (.66)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:518:0" msg_body="Inlining function 'Ban::Ban(int, float const*) (.57)' into 'Ban::operator+(float) const (.66)'">
+        <args Callee="Ban::Ban(int, float const*) (.57)" Caller="Ban::operator+(float) const (.66)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:111:0" msg_body="Inlining function 'Ban::operator-() const' into 'operator-(float, Ban const&amp;)'">
+        <args Callee="Ban::operator-() const" Caller="operator-(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:112:0" msg_body="Inlining function 'Ban::operator*(float) const' into 'operator*(float, Ban const&amp;)'">
+        <args Callee="Ban::operator*(float) const" Caller="operator*(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator/(Ban const&amp;) const (.72)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator/(Ban const&amp;) const (.72)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::_div_body(float const*, float const*, float*)' into 'Ban::operator/(Ban const&amp;) const (.72)'">
+        <args Callee="Ban::_div_body(float const*, float const*, float*)" Caller="Ban::operator/(Ban const&amp;) const (.72)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&amp;) const (.72)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(Ban const&amp;) const (.72)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:113:0" msg_body="Inlining function 'Ban::Ban(float)' into 'operator/(float, Ban const&amp;)'">
+        <args Callee="Ban::Ban(float)" Caller="operator/(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:116:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator!=(float) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator!=(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:118:0" msg_body="Inlining function 'operator&lt;(float, Ban const&amp;)' into 'Ban::operator&gt;(float) const'">
+        <args Callee="operator&lt;(float, Ban const&amp;)" Caller="Ban::operator&gt;(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:119:0" msg_body="Inlining function 'operator&lt;(float, Ban const&amp;)' into 'Ban::operator&lt;=(float) const'">
+        <args Callee="operator&lt;(float, Ban const&amp;)" Caller="Ban::operator&lt;=(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:120:0" msg_body="Inlining function 'Ban::operator&lt;(float) const' into 'Ban::operator&gt;=(float) const'">
+        <args Callee="Ban::operator&lt;(float) const" Caller="Ban::operator&gt;=(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:122:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'operator==(float, Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="operator==(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:123:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'operator!=(float, Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="operator!=(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:126:0" msg_body="Inlining function 'Ban::operator&lt;(float) const' into 'operator&lt;=(float, Ban const&amp;)'">
+        <args Callee="Ban::operator&lt;(float) const" Caller="operator&lt;=(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.h:127:0" msg_body="Inlining function 'operator&lt;(float, Ban const&amp;)' into 'operator&gt;=(float, Ban const&amp;)'">
+        <args Callee="operator&lt;(float, Ban const&amp;)" Caller="operator&gt;=(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator-() const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator-() const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator-(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator-(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator*(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator*(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator+=(Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator+=(Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator-=(Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator-=(Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator*=(Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator*=(Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator/=(Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator/=(Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'abs(Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="abs(Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator==(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator==(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator!=(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator!=(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&lt;(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&lt;(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&gt;(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&gt;(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&lt;=(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&lt;=(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&gt;=(Ban const&amp;) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&gt;=(Ban const&amp;) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator-(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator-(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator*(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator*(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator+=(float)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator+=(float)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator-=(float)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator-=(float)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator*=(float)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator*=(float)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator/=(float)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator/=(float)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator+(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator+(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator-(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator-(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator*(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator*(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator/(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator/(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator==(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator!=(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator!=(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&lt;(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&lt;(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&gt;(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&gt;(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&lt;=(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&lt;=(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'Ban::operator&gt;=(float) const' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="Ban::operator&gt;=(float) const" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator==(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator==(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator!=(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator!=(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator&lt;=(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator&lt;=(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Inlining function 'operator&gt;=(float, Ban const&amp;)' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="operator&gt;=(float, Ban const&amp;)" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Aggregating scalar variable 'b_op2' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="b_op2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:3:0" msg_body="Aggregating scalar variable 'b_op1' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="scalar" Name="b_op1"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:111:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.112.136)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.112.136)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:117:21" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.112.136)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.112.136)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:61:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:133:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:145:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:142:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:136:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:111:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.33.155)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.24.33.155)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:61:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:136:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:117:21" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:142:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:173:19" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::mul_body(Ban const&amp;) const (.42)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::mul_body(Ban const&amp;) const (.42)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:173:30" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_mul(float const*, float const*, float*) (.130)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::_mul(float const*, float const*, float*) (.130)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:61:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:270:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:212:17" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:216:18" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:61:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:445:25" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:437:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:69:13" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:522:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:509:17" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:525:7" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:61:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(float) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(float) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:575:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(float) const'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(float) const"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:212:17" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(Ban const&amp;) const (.72)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(Ban const&amp;) const (.72)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:216:18" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/(Ban const&amp;) const (.72)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="Ban::operator/(Ban const&amp;) const (.72)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:155:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban_interface.cpp:176:5" msg_body="Inlining function '_llvm.fpga.pack.none.i128.s_union.outputs' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.none.i128.s_union.outputs" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:411:17" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:403:5" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:397:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:386:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:375:17" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:367:5" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:361:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:350:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:69:13" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:61:10" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:553:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:108:37" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:107:37" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:106:37" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:105:37" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:78:46" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:336:26" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:336:17" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:328:32" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:328:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:321:36" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:321:6" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:54:24" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:54:14" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.cpp:421:5" msg_body="Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.unpack.bits.f32.i32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:81:46" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="../src/ban.h:80:46" msg_body="Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&amp;, Ban&amp;, float, op_type)'">
+        <args Callee="_llvm.fpga.pack.bits.i32.f32" Caller="ban_interface(Ban&amp;, Ban&amp;, float, op_type)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

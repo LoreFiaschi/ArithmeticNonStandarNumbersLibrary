@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644330881244">
+  <ports id="1" name="this_p_read" type="PortType" originalName="this.p" coreId="3621216858" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="p_read3" type="PortType" originalName="this.num[0]" coreId="4294967293" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="p_read10" type="PortType" originalName="this.num[1]" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="p_read11" type="PortType" originalName="this.num[2]" coreId="48" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="n" type="PortType" originalName="n" coreId="23354896" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="16" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="17" name="ap_return_2" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="18" name="ap_return_3" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="123" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="125" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="127" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="129" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="132" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="146" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="154" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="155" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="162" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="166" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="167" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="170" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="173" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="176" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="177" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="178" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="184" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="186" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="187" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="188" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="189" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="193" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="194" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="195" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="196" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="197" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="198" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="199" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="202" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="205" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="206" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="208" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="210" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="211" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="212" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="214" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="215" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="217" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="218" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="220" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="221" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="222" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="223" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="224" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="226" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="229" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.5"/>
+  <edges id="230" source_obj="//@blocks.6/@node_objs.4" sink_obj="//@blocks.6/@node_objs.6"/>
+  <edges id="232" source_obj="//@blocks.6/@node_objs.5" sink_obj="//@blocks.6/@node_objs.7"/>
+  <edges id="234" source_obj="//@blocks.6/@node_objs.7" sink_obj="//@blocks.6/@node_objs.8"/>
+  <edges id="235" source_obj="//@blocks.6/@node_objs.6" sink_obj="//@blocks.6/@node_objs.8"/>
+  <edges id="236" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.9"/>
+  <edges id="238" source_obj="//@blocks.6/@node_objs.8" sink_obj="//@blocks.6/@node_objs.10"/>
+  <edges id="239" source_obj="//@blocks.6/@node_objs.9" sink_obj="//@blocks.6/@node_objs.10"/>
+  <edges id="240" source_obj="//@blocks.6/@node_objs.10" sink_obj="//@blocks.6/@node_objs.11"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.6/@node_objs.11"/>
+  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.11"/>
+  <edges id="245" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="246" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="247" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="248" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="249" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="250" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="251" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="254" source_obj="//@blocks.7/@node_objs.3" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="255" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="256" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="257" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="262" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="263" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="264" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="265" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="266" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="267" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="268" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="269" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="270" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="271" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="272" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="275" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.8/@node_objs.5"/>
+  <edges id="276" source_obj="//@blocks.8/@node_objs.5" sink_obj="//@blocks.8/@node_objs.6"/>
+  <edges id="278" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="279" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.8/@node_objs.8"/>
+  <edges id="282" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.8/@node_objs.9"/>
+  <edges id="283" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@blocks.8/@node_objs.10"/>
+  <edges id="284" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.8/@node_objs.10"/>
+  <edges id="285" source_obj="//@blocks.8/@node_objs.9" sink_obj="//@blocks.8/@node_objs.11"/>
+  <edges id="286" source_obj="//@blocks.8/@node_objs.8" sink_obj="//@blocks.8/@node_objs.11"/>
+  <edges id="287" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.8/@node_objs.12"/>
+  <edges id="289" source_obj="//@blocks.8/@node_objs.12" sink_obj="//@blocks.8/@node_objs.13"/>
+  <edges id="290" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.13"/>
+  <edges id="291" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.8/@node_objs.13"/>
+  <edges id="292" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="293" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="294" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="295" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="296" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="297" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="298" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="299" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="300" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.9/@node_objs.2"/>
+  <edges id="301" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9/@node_objs.2"/>
+  <edges id="302" source_obj="//@blocks.8/@node_objs.4" sink_obj="//@blocks.9/@node_objs.2"/>
+  <edges id="303" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.2"/>
+  <edges id="306" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="307" source_obj="//@blocks.8/@node_objs.11" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="308" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="310" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="311" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="312" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="313" source_obj="//@blocks.9/@node_objs.3" sink_obj="//@blocks.9/@node_objs.5"/>
+  <edges id="314" source_obj="//@blocks.9/@node_objs.4" sink_obj="//@blocks.9/@node_objs.6"/>
+  <edges id="315" source_obj="//@blocks.9/@node_objs.4" sink_obj="//@blocks.9/@node_objs.7"/>
+  <edges id="317" source_obj="//@blocks.9/@node_objs.6" sink_obj="//@blocks.9/@node_objs.8"/>
+  <edges id="320" source_obj="//@blocks.9/@node_objs.7" sink_obj="//@blocks.9/@node_objs.9"/>
+  <edges id="323" source_obj="//@blocks.9/@node_objs.8" sink_obj="//@blocks.9/@node_objs.9"/>
+  <edges id="326" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="327" source_obj="//@blocks.9/@node_objs.1" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="328" source_obj="//@blocks.9/@node_objs.2" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="329" source_obj="//@blocks.9/@node_objs.4" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="330" source_obj="//@blocks.9/@node_objs.9" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="331" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="332" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="333" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.9/@node_objs.10"/>
+  <edges id="334" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.9/@node_objs.11"/>
+  <edges id="335" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.9/@node_objs.12"/>
+  <edges id="336" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.9/@node_objs.13"/>
+  <edges id="337" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.9/@node_objs.14"/>
+  <edges id="340" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="341" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="344" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="345" source_obj="//@blocks.10/@node_objs.1" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="346" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="347" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="348" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="349" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="350" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="351" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="352" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.10/@node_objs.4"/>
+  <edges id="355" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="356" source_obj="//@blocks.10/@node_objs.3" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="357" source_obj="//@blocks.10/@node_objs.4" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="358" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="359" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="360" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="361" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.10/@node_objs.6"/>
+  <edges id="362" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.10/@node_objs.7"/>
+  <edges id="363" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.10/@node_objs.8"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.10/@node_objs.9"/>
+  <edges id="365" source_obj="//@blocks.10/@node_objs.6" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="367" source_obj="//@blocks.9/@node_objs.11" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="368" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="369" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="371" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="372" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="373" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="374" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="375" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="376" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="377" source_obj="//@blocks.10/@node_objs.7" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="378" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="379" source_obj="//@blocks.9/@node_objs.12" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="380" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="381" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="382" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="383" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="384" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="385" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="386" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="387" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="388" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="389" source_obj="//@blocks.10/@node_objs.8" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="390" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="391" source_obj="//@blocks.9/@node_objs.13" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="392" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="393" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="394" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="395" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="396" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="397" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="398" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="399" source_obj="//@blocks.8/@node_objs.4" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="400" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="402" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="403" source_obj="//@blocks.9/@node_objs.5" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="404" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="405" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="407" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="408" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="409" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="410" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="411" source_obj="//@blocks.8/@node_objs.10" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="415" source_obj="//@blocks.11/@node_objs.3" sink_obj="//@blocks.11/@node_objs.4"/>
+  <edges id="416" source_obj="//@blocks.11/@node_objs.4" sink_obj="//@blocks.11/@node_objs.5"/>
+  <edges id="417" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.11/@node_objs.5"/>
+  <edges id="418" source_obj="//@blocks.11/@node_objs.5" sink_obj="//@blocks.11/@node_objs.6"/>
+  <edges id="419" source_obj="//@blocks.11/@node_objs.1" sink_obj="//@blocks.11/@node_objs.6"/>
+  <edges id="420" source_obj="//@blocks.11/@node_objs.6" sink_obj="//@blocks.11/@node_objs.7"/>
+  <edges id="421" source_obj="//@blocks.11/@node_objs.2" sink_obj="//@blocks.11/@node_objs.7"/>
+  <edges id="422" source_obj="//@blocks.11/@node_objs.7" sink_obj="//@blocks.11/@node_objs.8"/>
+  <edges id="423" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="425" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.11"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.10"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="430" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.11"/>
+  <edges id="431" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="432" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.6"/>
+  <edges id="433" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="434" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.6"/>
+  <edges id="435" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="436" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="437" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.11"/>
+  <edges id="438" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="439" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9"/>
+  <edges id="440" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.11"/>
+  <edges id="441" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="442" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11"/>
+  <edges id="443" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.11"/>
+  <edges id="444" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="445" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="446" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="447" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="448" edge_type="VirtEdge" source_obj="//@blocks.9/@node_objs.10" sink_obj="//@blocks.9/@node_objs.11"/>
+  <edges id="449" edge_type="VirtEdge" source_obj="//@blocks.9/@node_objs.10" sink_obj="//@blocks.9/@node_objs.12"/>
+  <edges id="450" edge_type="VirtEdge" source_obj="//@blocks.9/@node_objs.10" sink_obj="//@blocks.9/@node_objs.13"/>
+  <edges id="451" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.5" sink_obj="//@blocks.10/@node_objs.6"/>
+  <edges id="452" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.5" sink_obj="//@blocks.10/@node_objs.7"/>
+  <edges id="453" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.5" sink_obj="//@blocks.10/@node_objs.8"/>
+  <edges id="454" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="455" edge_type="VirtEdge" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@blocks.10/@node_objs.4"/>
+  <edges source_obj="//@blocks.11/@node_objs.8" sink_obj="//@ports.5"/>
+  <edges source_obj="//@blocks.11/@node_objs.8" sink_obj="//@ports.6"/>
+  <edges source_obj="//@blocks.11/@node_objs.8" sink_obj="//@ports.7"/>
+  <edges source_obj="//@blocks.11/@node_objs.8" sink_obj="//@ports.8"/>
+  <blocks id="32" name="block_32" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3BanC2EiPKf.57.exit</controlOutputObjs>
+    <controlOutputObjs>block_35</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="n_read" coreId="24432224" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>n</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="p_read" originalName="this.num[2]" coreId="19424560" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <dataInputObjs>p_read11</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="p_read108" originalName="this.num[1]" coreId="21309024" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <dataInputObjs>p_read10</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="p_read37" originalName="this.num[0]" coreId="23354896" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <dataInputObjs>p_read3</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="this_p_read_1" originalName="this.p" coreId="4294967040" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <dataInputObjs>this_p_read</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="agg_result_num2_6_loc" coreId="24174992" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="agg_result_num16_6_loc" coreId="22858928" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="agg_result_num_6_loc" coreId="23354896" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="num_res_2_01_loc" coreId="1397508187" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="num_res_1_02_loc" coreId="24423136" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="agg_result_num2_4_loc" coreId="24423136" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="agg_result_num16_4_loc" coreId="23354896" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="agg_result_num_4_loc" coreId="23341136" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="agg_result_num2_1_loc" coreId="22056192" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="agg_result_num16_1_loc" coreId="21570464" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="agg_result_num_1_loc" coreId="23354896" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="idx_tmp_loc" coreId="25139488" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="bitcast_ln521" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="bitcast_ln521_fu_388_p1" coreId="25138880" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="tmp" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="tmp_fu_391_p4" coreId="23354896" contextFuncName="operator_add" bitwidth="8" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="trunc_ln521" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="trunc_ln521_fu_401_p1" coreId="25244928" contextFuncName="operator_add" bitwidth="23" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="icmp_ln521" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln521_fu_405_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_add" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.84" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln521_2" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln521_2_fu_411_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_add" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.05" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="or_ln521" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="or_ln521_fu_417_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_add" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_s" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_add" bitwidth="1" opcode="fcmp" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="and_ln521" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." rtlName="and_ln521_fu_423_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_add" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.28" m_topoIndex="25" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln521" lineNumber="521" fileName="../src/ban.cpp" fileDirectory=".." coreId="23354896" contextFuncName="operator_add" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.57" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="521" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>block_35</controlInputObjs>
+      <controlInputObjs>_ZN3BanC2EiPKf.57.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>521</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="35" name="block_35" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>codeRepl4</controlOutputObjs>
+    <controlOutputObjs>block_40</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_68" lineNumber="524" fileName="../src/ban.cpp" fileDirectory=".." rtlName="tmp_68_reg_802" coreId="20992400" contextFuncName="operator_add" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="524" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln524" lineNumber="524" fileName="../src/ban.cpp" fileDirectory=".." coreId="23968224" contextFuncName="operator_add" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="524" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>codeRepl4</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>524</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="40" name="block_40" type="BlockType">
+    <controlInputObjs>block_35</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_45</controlOutputObjs>
+    <controlOutputObjs>_ZN3BanC2EiPKf.57.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="trunc_ln527" lineNumber="527" fileName="../src/ban.cpp" fileDirectory=".." rtlName="trunc_ln527_fu_437_p1" coreId="320" contextFuncName="operator_add" bitwidth="3" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="527" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="add_ln527" lineNumber="527" fileName="../src/ban.cpp" fileDirectory=".." rtlName="add_ln527_fu_441_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add" bitwidth="32" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.01" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="527" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp_69" lineNumber="527" fileName="../src/ban.cpp" fileDirectory=".." rtlName="tmp_69_reg_816" coreId="24648016" contextFuncName="operator_add" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="527" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln527" lineNumber="527" fileName="../src/ban.cpp" fileDirectory=".." coreId="22207536" contextFuncName="operator_add" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.57" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="527" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <controlInputObjs>_ZN3BanC2EiPKf.57.exit</controlInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>527</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="45" name="block_45" type="BlockType">
+    <controlInputObjs>block_40</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>branch11</controlOutputObjs>
+    <controlOutputObjs>branch9</controlOutputObjs>
+    <controlOutputObjs>branch10</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="trunc_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." rtlName="trunc_ln534_fu_455_p1" coreId="24648384" contextFuncName="operator_add" bitwidth="2" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp_67" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." rtlName="mux_32_32_1_1_U185" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="operator_add" bitwidth="32" opcode="mux" nodeLabel="1.0" m_display="0" m_delay="0.47" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="operator_add" bitwidth="32" opcode="fadd" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="25408128" contextFuncName="operator_add" opcode="switch" nodeLabel="4.0" m_display="0" m_delay="0.58" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <controlInputObjs>branch11</controlInputObjs>
+      <controlInputObjs>branch9</controlInputObjs>
+      <controlInputObjs>branch10</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="47" name="branch10" type="BlockType">
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>branch9</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="25408736" contextFuncName="operator_add" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.42" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <controlInputObjs>branch9</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="49" name="branch11" type="BlockType">
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>branch9</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="23051040" contextFuncName="operator_add" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.42" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <controlInputObjs>branch9</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="62" name="branch9" type="BlockType">
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlInputObjs>branch10</controlInputObjs>
+    <controlInputObjs>branch11</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader.preheader</controlOutputObjs>
+    <controlOutputObjs>_ZN3BanC2EiPKf.57.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="agg_result_num_0" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="23051648" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="5.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>branch11</controlInputObjs>
+      <controlInputObjs>branch10</controlInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="agg_result_num16_0" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="26144448" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="6.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>branch11</controlInputObjs>
+      <controlInputObjs>branch10</controlInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="agg_result_num2_0" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="542329928" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="6.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>branch11</controlInputObjs>
+      <controlInputObjs>branch10</controlInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="bitcast_ln77" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="bitcast_ln77_fu_484_p1" coreId="26281216" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="6.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="tmp_70" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="tmp_70_fu_488_p4" coreId="26281344" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="trunc_ln77" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="trunc_ln77_fu_498_p1" coreId="23269136" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="6.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="icmp_ln77" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln77_fu_502_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="6.0" m_display="0" m_delay="0.84" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="icmp_ln77_7" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln77_7_fu_508_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="6.0" m_display="0" m_delay="1.05" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="or_ln77" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="or_ln77_fu_514_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="6.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_71" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="and_ln77" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." rtlName="and_ln77_fu_520_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="6.0" m_display="0" m_delay="0.28" m_topoIndex="52" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="br_ln77" lineNumber="77" fileName="../src/ban.cpp" fileDirectory=".." coreId="24197440" contextFuncName="to_normal_form" opcode="br" nodeLabel="6.0" m_display="0" m_delay="0.57" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>_ZN3BanC2EiPKf.57.exit</controlInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="68" name=".preheader.preheader" type="BlockType">
+    <controlInputObjs>branch9</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.lr.ph7.i</controlOutputObjs>
+    <controlOutputObjs>.lr.ph.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." rtlName="grp_operator_Pipeline_VITIS_LOOP_84_1_s_fu_325" coreId="23354896" contextFuncName="operator_add" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>operator_Pipeline_VITIS_LOOP_84_1_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="idx_tmp_loc_load" coreId="23354896" bitwidth="32" opcode="load" nodeLabel="8.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="empty" rtlName="empty_fu_529_p1" coreId="25965568" bitwidth="2" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="icmp_ln92" lineNumber="92" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln92_fu_534_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="8.0" m_display="0" m_delay="0.99" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="92" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln92" lineNumber="92" fileName="../src/ban.cpp" fileDirectory=".." coreId="20576048" contextFuncName="to_normal_form" opcode="br" nodeLabel="8.0" m_display="0" m_delay="0.42" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="92" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.lr.ph.i</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+      <validLinenumbers>92</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="83" name=".lr.ph7.i" type="BlockType">
+    <controlInputObjs>.preheader.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3BanC2EiPKf.57.exit</controlOutputObjs>
+    <controlOutputObjs>.lr.ph.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="xor_ln92" lineNumber="92" fileName="../src/ban.cpp" fileDirectory=".." rtlName="xor_ln92_fu_540_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="2" opcode="xor" nodeLabel="8.0" m_display="0" m_delay="0.28" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="92" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." rtlName="grp_operator_Pipeline_VITIS_LOOP_92_2_s_fu_336" coreId="23816896" contextFuncName="operator_add" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="0.42" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>operator_Pipeline_VITIS_LOOP_92_2_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="agg_result_num_1_loc_load" coreId="144" bitwidth="32" opcode="load" nodeLabel="10.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="agg_result_num16_1_loc_load" coreId="25607552" bitwidth="32" opcode="load" nodeLabel="10.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="agg_result_num2_1_loc_load" coreId="23354896" bitwidth="32" opcode="load" nodeLabel="10.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="sub_ln92" lineNumber="92" fileName="../src/ban.cpp" fileDirectory=".." rtlName="sub_ln92_fu_559_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="to_normal_form" bitwidth="2" opcode="sub" nodeLabel="10.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="92" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="base" lineNumber="97" originalName="base" fileName="../src/ban.cpp" fileDirectory=".." rtlName="base_fu_564_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="to_normal_form" bitwidth="2" opcode="add" nodeLabel="10.0" m_display="0" m_delay="0.14" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="97" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="zext_ln91" lineNumber="91" fileName="../src/ban.cpp" fileDirectory=".." rtlName="zext_ln91_fu_571_p1" coreId="22515504" contextFuncName="to_normal_form" bitwidth="32" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="91" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln100" lineNumber="100" fileName="../src/ban.cpp" fileDirectory=".." rtlName="add_ln100_fu_575_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="to_normal_form" bitwidth="3" opcode="add" nodeLabel="10.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="100" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="zext_ln100" lineNumber="100" fileName="../src/ban.cpp" fileDirectory=".." rtlName="zext_ln100_fu_580_p1" coreId="23354896" contextFuncName="to_normal_form" bitwidth="3" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="100" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="tmp_73" lineNumber="100" originalName="tmp" fileName="../src/ban.cpp" fileDirectory=".." rtlName="tmp_73_fu_584_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="to_normal_form" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="1.01" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="100" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="add_ln100_4" lineNumber="100" fileName="../src/ban.cpp" fileDirectory=".." rtlName="add_ln100_4_fu_589_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="to_normal_form" bitwidth="3" opcode="add" nodeLabel="10.0" m_display="0" m_delay="0.3" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="100" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="icmp_ln104" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln104_fu_595_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="10.0" m_display="0" m_delay="0.44" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="br_ln104" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." coreId="23354896" contextFuncName="to_normal_form" opcode="br" nodeLabel="10.0" m_display="0" m_delay="0.57" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.lr.ph.i</controlInputObjs>
+      <controlInputObjs>_ZN3BanC2EiPKf.57.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>92</validLinenumbers>
+      <validLinenumbers>534</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
+      <validLinenumbers>91</validLinenumbers>
+      <validLinenumbers>100</validLinenumbers>
+      <validLinenumbers>104</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="99" name=".lr.ph.i" type="BlockType">
+    <controlInputObjs>.preheader.preheader</controlInputObjs>
+    <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3BanC2EiPKf.57.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="agg_result_num_3" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="144" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="agg_result_num16_3" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="24216672" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="agg_result_num2_3" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." coreId="21269536" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="agg_result_p_0" lineNumber="100" fileName="../src/ban.cpp" fileDirectory=".." coreId="117" contextFuncName="to_normal_form" bitwidth="3" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="100" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="base_0_lcssa_i2023" originalName="base" coreId="20482944" bitwidth="2" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="sext_ln104" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." rtlName="sext_ln104_fu_626_p1" coreId="20483440" contextFuncName="to_normal_form" bitwidth="32" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="zext_ln104" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." rtlName="zext_ln104_fu_601_p1" coreId="88" contextFuncName="to_normal_form" bitwidth="3" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="icmp_ln104_6" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln104_6_fu_605_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="10.0" m_display="0" m_delay="0.44" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="add_ln104" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." rtlName="add_ln104_fu_611_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="to_normal_form" bitwidth="3" opcode="add" nodeLabel="10.0" m_display="0" m_delay="0.54" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="select_ln104" lineNumber="104" fileName="../src/ban.cpp" fileDirectory=".." rtlName="select_ln104_fu_617_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="3" opcode="select" nodeLabel="10.0" m_display="0" m_delay="0.2" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="104" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="_ln534" lineNumber="534" fileName="../src/ban.cpp" fileDirectory=".." rtlName="grp_operator_Pipeline_VITIS_LOOP_104_3_s_fu_351" coreId="20580560" contextFuncName="operator_add" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="0.42" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>operator_Pipeline_VITIS_LOOP_104_3_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="agg_result_num_4_loc_load" coreId="23354896" bitwidth="32" opcode="load" nodeLabel="12.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="agg_result_num16_4_loc_load" coreId="176" bitwidth="32" opcode="load" nodeLabel="12.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="agg_result_num2_4_loc_load" coreId="22284368" bitwidth="32" opcode="load" nodeLabel="12.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="br_ln0" coreId="22285136" opcode="br" nodeLabel="12.0" m_display="0" m_delay="0.57" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <controlInputObjs>_ZN3BanC2EiPKf.57.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+      <validLinenumbers>100</validLinenumbers>
+      <validLinenumbers>104</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="110" name="codeRepl4" type="BlockType">
+    <controlInputObjs>block_35</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3BanC2EiPKf.57.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="sub_i1" rtlName="sub_i1_fu_472_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" bitwidth="32" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="1.01" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="trunc_ln509" lineNumber="509" fileName="../src/ban.cpp" fileDirectory=".." rtlName="trunc_ln509_fu_479_p1" coreId="22492288" contextFuncName="sum_infinitesimal_real" bitwidth="2" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="509" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="sum_infinitesimal_real"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="_ln509" lineNumber="509" fileName="../src/ban.cpp" fileDirectory=".." rtlName="grp_operator_Pipeline_VITIS_LOOP_506_1_fu_311" coreId="95" contextFuncName="sum_infinitesimal_real" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.92" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="509" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="sum_infinitesimal_real"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>operator_Pipeline_VITIS_LOOP_506_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="num_res_1_02_loc_load" coreId="22326480" bitwidth="32" opcode="load" nodeLabel="14.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="num_res_2_01_loc_load" coreId="542329928" bitwidth="32" opcode="load" nodeLabel="14.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="_ln0" rtlName="grp_operator_Pipeline_VITIS_LOOP_21_1_fu_367" coreId="20581120" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_delay="0.47" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>operator_Pipeline_VITIS_LOOP_21_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="agg_result_num_6_loc_load" coreId="304" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="agg_result_num16_6_loc_load" coreId="23201568" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="agg_result_num2_6_loc_load" coreId="1869833586" bitwidth="32" opcode="load" nodeLabel="22.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="br_ln0" coreId="23354896" opcode="br" nodeLabel="22.0" m_display="0" m_delay="0.57" m_topoIndex="103" m_clusterGroupNumber="-1">
+      <controlInputObjs>_ZN3BanC2EiPKf.57.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>509</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="120" name="_ZN3BanC2EiPKf.57.exit" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlInputObjs>block_40</controlInputObjs>
+    <controlInputObjs>branch9</controlInputObjs>
+    <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    <controlInputObjs>.lr.ph.i</controlInputObjs>
+    <controlInputObjs>codeRepl4</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="agg_result_num_8" lineNumber="534" originalName="this.num[0]" fileName="../src/ban.cpp" fileDirectory=".." coreId="23361232" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>codeRepl4</controlInputObjs>
+      <controlInputObjs>.lr.ph.i</controlInputObjs>
+      <controlInputObjs>block_32</controlInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>branch9</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="agg_result_num16_8" lineNumber="534" originalName="this.num[1]" fileName="../src/ban.cpp" fileDirectory=".." coreId="23354896" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>codeRepl4</controlInputObjs>
+      <controlInputObjs>.lr.ph.i</controlInputObjs>
+      <controlInputObjs>block_32</controlInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>branch9</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="agg_result_num2_8" lineNumber="534" originalName="this.num[2]" fileName="../src/ban.cpp" fileDirectory=".." coreId="25802784" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="534" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>codeRepl4</controlInputObjs>
+      <controlInputObjs>.lr.ph.i</controlInputObjs>
+      <controlInputObjs>block_32</controlInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>branch9</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="this_p_write_assign" originalName="tmp" coreId="25003296" bitwidth="32" opcode="phi" nodeLabel="12.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>codeRepl4</controlInputObjs>
+      <controlInputObjs>.lr.ph.i</controlInputObjs>
+      <controlInputObjs>block_32</controlInputObjs>
+      <controlInputObjs>block_40</controlInputObjs>
+      <controlInputObjs>branch9</controlInputObjs>
+      <controlInputObjs>.lr.ph7.i</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="mrv" lineNumber="544" fileName="../src/ban.cpp" fileDirectory=".." coreId="1819113532" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="12.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="544" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="mrv_1" lineNumber="544" fileName="../src/ban.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="12.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="544" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="mrv_2" lineNumber="544" fileName="../src/ban.cpp" fileDirectory=".." coreId="25271760" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="12.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="544" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="mrv_3" lineNumber="544" fileName="../src/ban.cpp" fileDirectory=".." coreId="23354896" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="12.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="544" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="_ln544" lineNumber="544" fileName="../src/ban.cpp" fileDirectory=".." coreId="23643552" contextFuncName="operator_add" opcode="ret" nodeLabel="12.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban.cpp" linenumber="544" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+      <dataOutputObjs>ap_return_2</dataOutputObjs>
+      <dataOutputObjs>ap_return_3</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/ban.cpp">
+      <validLinenumbers>534</validLinenumbers>
+      <validLinenumbers>544</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <regnodes realName="p_read108_reg_773">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num_1_loc_reg_752">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num_4_loc_reg_734">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read_reg_764">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="num_res_2_01_loc_reg_710">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read37_reg_782">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="base_0_lcssa_i2023_reg_215">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num_3_reg_182">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln521_reg_798">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="idx_tmp_loc_reg_758">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln104_reg_888">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="add_reg_839">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num16_1_loc_reg_746">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln92_reg_856">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num_0_reg_146">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln527_reg_806">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num16_0_reg_158">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_p_0_reg_227">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num2_3_reg_204">
+    <nodeIds>86</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num2_0_reg_170">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="n_read_reg_684">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num16_3_reg_193">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num2_6_loc_reg_692">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="xor_ln92_reg_860">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln77_reg_846">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num16_4_loc_reg_728">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_67_reg_824">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num2_4_loc_reg_722">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num_6_loc_reg_704">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="this_p_read_1_reg_791">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_68_reg_802">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln527_reg_811">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num2_1_loc_reg_740">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln534_reg_820">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln100_4_reg_879">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="this_p_write_assign_reg_292">
+    <nodeIds>114</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num16_8_reg_256">
+    <nodeIds>112</nodeIds>
+  </regnodes>
+  <regnodes realName="num_res_1_02_loc_reg_716">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num2_8_reg_274">
+    <nodeIds>113</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln104_reg_884">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln509_reg_834">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num_8_reg_238">
+    <nodeIds>111</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_i1_reg_829">
+    <nodeIds>100</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_num16_6_loc_reg_698">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_reg_850">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_69_reg_816">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_73_reg_874">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <expressionNodes realName="num_res_2_01_loc_fu_80">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln100_fu_580">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num2_3_phi_fu_207">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln77_7_fu_508">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num2_0_phi_fu_173">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num_0_phi_fu_149">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln521_fu_388">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num16_6_loc_fu_72">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln92_fu_559">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln100_4_fu_589">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num16_4_loc_fu_92">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln521_fu_423">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln77_fu_502">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_70_fu_488">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num_1_loc_fu_108">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln77_fu_520">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_68_fu_429">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln91_fu_571">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln77_fu_498">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num16_1_loc_fu_104">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num16_8_phi_fu_259">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln104_fu_626">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_p_0_phi_fu_231">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num_8_phi_fu_241">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_3_fu_661">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num_6_loc_fu_76">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln509_fu_479">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln92_fu_534">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln521_fu_417">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num_3_phi_fu_185">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln521_2_fu_411">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_i1_fu_472">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num2_1_loc_fu_100">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln104_fu_601">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_67_fu_459">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln527_fu_441">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num2_8_phi_fu_277">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_1_fu_649">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln104_6_fu_605">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_391">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num16_3_phi_fu_196">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num_4_loc_fu_96">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="this_p_write_assign_phi_fu_296">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num16_0_phi_fu_161">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idx_tmp_loc_fu_112">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln527_fu_437">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln534_fu_455">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_529">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln521_fu_405">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln77_fu_514">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_73_fu_584">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="num_res_1_02_loc_fu_84">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln104_fu_617">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_69_fu_447">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln92_fu_540">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num2_6_loc_fu_68">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln77_fu_484">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_2_fu_655">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="base_0_lcssa_i2023_phi_fu_219">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln104_fu_595">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln521_fu_401">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_643">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_num2_4_loc_fu_88">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln100_fu_575">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln104_fu_611">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="base_fu_564">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_operator_Pipeline_VITIS_LOOP_506_1_fu_311">
+    <nodeIds>102</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_381">
+    <nodeIds>29</nodeIds>
+    <nodeIds>59</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_operator_Pipeline_VITIS_LOOP_92_2_s_fu_336">
+    <nodeIds>70</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_operator_Pipeline_VITIS_LOOP_21_1_fu_367">
+    <nodeIds>105</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_377">
+    <nodeIds>43</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_operator_Pipeline_VITIS_LOOP_104_3_s_fu_351">
+    <nodeIds>94</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_operator_Pipeline_VITIS_LOOP_84_1_s_fu_325">
+    <nodeIds>63</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="agg_result_num_4_loc_load_load_fu_631">
+    <nodeIds>95</nodeIds>
+  </ioNodes>
+  <ioNodes realName="n_read_read_fu_116">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_read_fu_122">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num16_1_loc_load_load_fu_551">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num2_1_loc_load_load_fu_555">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num_1_loc_load_load_fu_547">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num16_6_loc_load_load_fu_678">
+    <nodeIds>107</nodeIds>
+  </ioNodes>
+  <ioNodes realName="num_res_2_01_loc_load_load_fu_671">
+    <nodeIds>104</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num2_6_loc_load_load_fu_681">
+    <nodeIds>108</nodeIds>
+  </ioNodes>
+  <ioNodes realName="this_p_read_1_read_fu_140">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num_6_loc_load_load_fu_675">
+    <nodeIds>106</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num16_4_loc_load_load_fu_635">
+    <nodeIds>96</nodeIds>
+  </ioNodes>
+  <ioNodes realName="idx_tmp_loc_load_load_fu_526">
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="num_res_1_02_loc_load_load_fu_667">
+    <nodeIds>103</nodeIds>
+  </ioNodes>
+  <ioNodes realName="agg_result_num2_4_loc_load_load_fu_639">
+    <nodeIds>97</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read37_read_fu_134">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read108_read_fu_128">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioPorts name="n">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read10">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read11">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read3">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="this_p_read">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>119</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>119</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_2">
+    <contents name="ret">
+      <nodeIds>119</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_3">
+    <contents name="ret">
+      <nodeIds>119</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="29" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="2"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="4" latency="4"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="43" stage="3" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="43" stage="2" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="43" stage="1" latency="4"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="59" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="2"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="63" stage="1" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="70" stage="1" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="94" stage="1" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="102" stage="1" latency="2"/>
+    </states>
+    <states id="15">
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="2" latency="2"/>
+    </states>
+    <states id="16">
+      <operations id="105" stage="1" latency="2"/>
+    </states>
+    <states id="17"/>
+    <states id="18"/>
+    <states id="19"/>
+    <states id="20"/>
+    <states id="21"/>
+    <states id="22"/>
+    <states id="23">
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="13">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="operator_add" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <basicBlocks>32</basicBlocks>
+      <basicBlocks>35</basicBlocks>
+      <basicBlocks>40</basicBlocks>
+      <basicBlocks>45</basicBlocks>
+      <basicBlocks>47</basicBlocks>
+      <basicBlocks>49</basicBlocks>
+      <basicBlocks>62</basicBlocks>
+      <basicBlocks>68</basicBlocks>
+      <basicBlocks>83</basicBlocks>
+      <basicBlocks>99</basicBlocks>
+      <basicBlocks>110</basicBlocks>
+      <basicBlocks>120</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

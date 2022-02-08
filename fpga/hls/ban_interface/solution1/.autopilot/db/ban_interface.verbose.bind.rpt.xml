@@ -1,0 +1,81 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ban_interface'" level="0">
+<item name = "Date">Tue Feb  8 15:34:33 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">ban_interface</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.644 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_operator_2_s_fu_1764">operator_2_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_2_fu_1772">operator_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_1_fu_1780">operator_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_3_fu_1788">operator_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_1_s_fu_1798">operator_1_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_410_122_fu_1806">ban_interface_Pipeline_VITIS_LOOP_410_122, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_374_121_fu_1812">ban_interface_Pipeline_VITIS_LOOP_374_121, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_410_120_fu_1818">ban_interface_Pipeline_VITIS_LOOP_410_120, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_374_119_fu_1824">ban_interface_Pipeline_VITIS_LOOP_374_119, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_68_118_fu_1830">ban_interface_Pipeline_VITIS_LOOP_68_118, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_68_117_fu_1836">ban_interface_Pipeline_VITIS_LOOP_68_117, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_374_116_fu_1842">ban_interface_Pipeline_VITIS_LOOP_374_116, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_410_115_fu_1848">ban_interface_Pipeline_VITIS_LOOP_410_115, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_410_1_fu_1854">ban_interface_Pipeline_VITIS_LOOP_410_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_374_1_fu_1860">ban_interface_Pipeline_VITIS_LOOP_374_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_68_114_fu_1866">ban_interface_Pipeline_VITIS_LOOP_68_114, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_68_1_fu_1872">ban_interface_Pipeline_VITIS_LOOP_68_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_operator_div_fu_1878">operator_div, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_84_111_fu_1884">ban_interface_Pipeline_VITIS_LOOP_84_111, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_92_212_fu_1892">ban_interface_Pipeline_VITIS_LOOP_92_212, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_104_313_fu_1904">ban_interface_Pipeline_VITIS_LOOP_104_313, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_add_fu_1920">operator_add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_84_18_fu_1929">ban_interface_Pipeline_VITIS_LOOP_84_18, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_92_29_fu_1937">ban_interface_Pipeline_VITIS_LOOP_92_29, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_104_310_fu_1949">ban_interface_Pipeline_VITIS_LOOP_104_310, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_84_1_fu_1965">ban_interface_Pipeline_VITIS_LOOP_84_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_92_2_fu_1973">ban_interface_Pipeline_VITIS_LOOP_92_2, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_104_3_fu_1985">ban_interface_Pipeline_VITIS_LOOP_104_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_335_17_fu_2001">ban_interface_Pipeline_VITIS_LOOP_335_17, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_335_16_fu_2008">ban_interface_Pipeline_VITIS_LOOP_335_16, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_335_15_fu_2015">ban_interface_Pipeline_VITIS_LOOP_335_15, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_335_1_fu_2022">ban_interface_Pipeline_VITIS_LOOP_335_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_53_14_fu_2029">ban_interface_Pipeline_VITIS_LOOP_53_14, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_ban_interface_Pipeline_VITIS_LOOP_53_1_fu_2036">ban_interface_Pipeline_VITIS_LOOP_53_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_sqrt_fu_2043">sqrt, 3, 75, 30.000 ns, 0.750 us, 3, 75, no</column>
+<column name="grp_mul_body_fu_2048">mul_body, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

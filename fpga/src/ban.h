@@ -12,6 +12,20 @@ typedef float T;     // generates inaccuracies in division proportional to 1e-6
 // coefficients of the sqrt(1-x) taylor expansion (required for sqrt)
 constexpr T sqrt_exp[5] = {-0.125, -0.0625, -7*0.03125, -21*0.015625};
 
+union output;
+
+enum op_type{
+	SUM, OPP, DIF, MUL, DIV, SUM_EQ, DIF_EQ, MUL_EQ, DIV_EQ, ABS, SQRT,
+	EQ,  NEQ, LES, LAR, LES_EQ, LAR_EQ,
+
+	SUM_R, DIF_R, MUL_R, DIV_R, SUM_EQ_R, DIF_EQ_R, MUL_EQ_R, DIV_EQ_R,
+	SUM_RB, DIF_RB, MUL_RB, DIV_RB,
+	
+	EQ_R, NEQ_R, LES_R, LAR_R, LES_EQ_R, LAR_EQ_R,
+	EQ_RB, NEQ_RB, LES_RB, LAR_RB, LES_EQ_RB, LAR_EQ_RB
+};
+
+
 class Ban{
 
 	int p;
@@ -29,10 +43,6 @@ class Ban{
 	static void _div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]);
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
 	static void _mul_conv(const T num_a[SIZE], const T num_b[SIZE], T aux[]);
-	static void _mul_overwriting(T num[SIZE], const T num_aux[SIZE]);
-	static inline void _mul_trivial(const T num_a[SIZE], T n, T num_res[SIZE]) 
-										{for(unsigned i=0; i<SIZE; ++i)
-											num_res[i] = num_a[i]*n;};
 
 	// constructor without consistency check
 	Ban(int p, const T num[SIZE], bool check);
@@ -50,6 +60,9 @@ class Ban{
 	Ban(int p, const T num[SIZE]);
 	Ban(T n);
 
+	// interface for Vitis
+	friend output ban_interface(Ban b_op1, const Ban b_op2, T f_op, op_type op);
+
 	// boolean convertion
 	//explicit inline operator bool() const{return num[0];};
 	//inline operator bool_type() const {
@@ -62,10 +75,10 @@ class Ban{
 	inline Ban operator-(const Ban &b) const {return *this+(-b);};
 	Ban operator*(const Ban &b) const;
 	Ban operator/(const Ban &b) const;
-	Ban& operator+=(const Ban &b);
-	inline Ban& operator-=(const Ban &b){return *this+=-b;};
-	Ban& operator*=(const Ban &b);
-	Ban& operator/=(const Ban &b);
+	inline Ban& operator+=(const Ban &b) {*this = *this + b; return *this;};
+	inline Ban& operator-=(const Ban &b) {return *this+=-b;};
+	inline Ban& operator*=(const Ban &b) {*this = *this * b; return *this;};
+	inline Ban& operator/=(const Ban &b) {*this = *this / b; return *this;};
 	//Ban operator>>(unsigned i) const;
 	//Ban operator<<(unsigned i) const;
 	friend Ban abs(const Ban &b);
@@ -78,7 +91,7 @@ class Ban{
 
 	// ordering operators
 	bool operator==(const Ban& b) const;
-	inline bool operator!=(const Ban& b) const{return !(*this == b);};
+	inline bool operator!=(const Ban& b) const {return !(*this == b);};
 	bool operator<(const Ban &b) const;
 	inline bool operator>(const Ban &b)  const {return b<*this;};
 	inline bool operator<=(const Ban &b) const {return !(b<*this);}; // *this <= b <-> !(*this>b) <-> !(b<*this)
@@ -89,15 +102,15 @@ class Ban{
 	inline Ban operator-(T n) const {return *this+(-n);};
 	Ban operator*(T n) const;
 	Ban operator/(T n) const; // make inline? *this*(1/n)
-	Ban& operator+=(T n);
-	inline Ban& operator-=(T n){*this += -n; return *this;};
-	Ban& operator*=(T n);
-	Ban& operator/=(T n);
+	inline Ban& operator+=(T n) {*this = *this + n; return *this;};
+	inline Ban& operator-=(T n) {*this = *this + (-n); return *this;};
+	inline Ban& operator*=(T n) {*this = *this * n; return *this;};
+	inline Ban& operator/=(T n) {*this = *this / n; return *this;};
 
 	inline friend Ban operator+(T n, const Ban &b) {return b+n;};
 	inline friend Ban operator-(T n, const Ban &b) {return -b+n;};
 	inline friend Ban operator*(T n, const Ban &b) {return b*n;};
-	friend Ban operator/(T n, const Ban &b);
+	inline friend Ban operator/(T n, const Ban &b) {Ban c(n); return c/b;};
 	
 	bool operator==(T n) const;
 	inline bool operator!=(T n) const{return !(*this == n);};
@@ -115,6 +128,14 @@ class Ban{
 
 	// external functions
 	inline friend int degree(const Ban &b) {return b.p;};
+};
+
+union output{
+
+	bool l;
+	Ban b;
+
+	output(){};
 };
 
 constexpr T _[] = {1.0, 0, 0};

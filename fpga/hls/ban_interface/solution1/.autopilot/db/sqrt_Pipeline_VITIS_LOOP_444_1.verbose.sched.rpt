@@ -1,0 +1,307 @@
+
+
+================================================================
+== Vitis HLS Report for 'sqrt_Pipeline_VITIS_LOOP_444_1'
+================================================================
+* Date:           Tue Feb  8 15:34:22 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        ban_interface
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   16|   16|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_444_1  |       14|       14|        14|          1|          1|     2|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 14
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 14, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.64>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 17 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%eps_2_2 = alloca i32 1"   --->   Operation 18 'alloca' 'eps_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%eps_2_2_3 = alloca i32 1"   --->   Operation 19 'alloca' 'eps_2_2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%num_res_load_1 = alloca i32 1"   --->   Operation 20 'alloca' 'num_res_load_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%num_res_load_2 = alloca i32 1"   --->   Operation 21 'alloca' 'num_res_load_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%eps_1_2 = alloca i32 1"   --->   Operation 22 'alloca' 'eps_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%eps_1_2_3 = alloca i32 1"   --->   Operation 23 'alloca' 'eps_1_2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%normalizer_1_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %normalizer_1"   --->   Operation 24 'read' 'normalizer_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read13"   --->   Operation 25 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.42ns)   --->   "%store_ln0 = store i2 1, i2 %i_1"   --->   Operation 26 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 27 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%i = load i2 %i_1" [../src/ban.cpp:444]   --->   Operation 28 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 29 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.44ns)   --->   "%icmp_ln444 = icmp_eq  i2 %i, i2 3" [../src/ban.cpp:444]   --->   Operation 30 'icmp' 'icmp_ln444' <Predicate = true> <Delay = 0.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 2, i64 2, i64 2"   --->   Operation 31 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln444 = br i1 %icmp_ln444, void %.split6_ifconv, void %.preheader5.preheader.exitStub" [../src/ban.cpp:444]   --->   Operation 32 'br' 'br_ln444' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i2.i5, i2 %i, i5 0" [../src/ban.cpp:445]   --->   Operation 33 'bitconcatenate' 'shl_ln1' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.77ns)   --->   "%add_ln445 = add i7 %shl_ln1, i7 32" [../src/ban.cpp:445]   --->   Operation 34 'add' 'add_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.77ns)   --->   "%add_ln445_1 = add i7 %shl_ln1, i7 63" [../src/ban.cpp:445]   --->   Operation 35 'add' 'add_ln445_1' <Predicate = (!icmp_ln444)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln445)   --->   "%zext_ln445 = zext i7 %add_ln445" [../src/ban.cpp:445]   --->   Operation 36 'zext' 'zext_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%zext_ln445_1 = zext i7 %add_ln445" [../src/ban.cpp:445]   --->   Operation 37 'zext' 'zext_ln445_1' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln445_2 = zext i7 %add_ln445_1" [../src/ban.cpp:445]   --->   Operation 38 'zext' 'zext_ln445_2' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.77ns)   --->   "%add_ln445_2 = add i8 %zext_ln445_2, i8 1" [../src/ban.cpp:445]   --->   Operation 39 'add' 'add_ln445_2' <Predicate = (!icmp_ln444)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%zext_ln445_3 = zext i8 %add_ln445_2" [../src/ban.cpp:445]   --->   Operation 40 'zext' 'zext_ln445_3' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%shl_ln445 = shl i128 1, i128 %zext_ln445_3" [../src/ban.cpp:445]   --->   Operation 41 'shl' 'shl_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %add_ln445_2, i32 7" [../src/ban.cpp:445]   --->   Operation 42 'bitselect' 'tmp' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%select_ln445 = select i1 %tmp, i128 0, i128 %shl_ln445" [../src/ban.cpp:445]   --->   Operation 43 'select' 'select_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%shl_ln445_1 = shl i97 1, i97 %zext_ln445_1" [../src/ban.cpp:445]   --->   Operation 44 'shl' 'shl_ln445_1' <Predicate = (!icmp_ln444)> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node sub_ln445)   --->   "%zext_ln445_4 = zext i97 %shl_ln445_1" [../src/ban.cpp:445]   --->   Operation 45 'zext' 'zext_ln445_4' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (1.57ns) (out node of the LUT)   --->   "%sub_ln445 = sub i128 %select_ln445, i128 %zext_ln445_4" [../src/ban.cpp:445]   --->   Operation 46 'sub' 'sub_ln445' <Predicate = (!icmp_ln444)> <Delay = 1.57> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln445)   --->   "%and_ln445 = and i128 %sub_ln445, i128 %p_read" [../src/ban.cpp:445]   --->   Operation 47 'and' 'and_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (1.51ns) (out node of the LUT)   --->   "%lshr_ln445 = lshr i128 %and_ln445, i128 %zext_ln445" [../src/ban.cpp:445]   --->   Operation 48 'lshr' 'lshr_ln445' <Predicate = (!icmp_ln444)> <Delay = 1.51> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln445 = trunc i128 %lshr_ln445" [../src/ban.cpp:445]   --->   Operation 49 'trunc' 'trunc_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.44ns)   --->   "%icmp_ln445 = icmp_eq  i2 %i, i2 1" [../src/ban.cpp:445]   --->   Operation 50 'icmp' 'icmp_ln445' <Predicate = (!icmp_ln444)> <Delay = 0.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.54ns)   --->   "%add_ln444 = add i2 %i, i2 1" [../src/ban.cpp:444]   --->   Operation 51 'add' 'add_ln444' <Predicate = (!icmp_ln444)> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.42ns)   --->   "%store_ln444 = store i2 %add_ln444, i2 %i_1" [../src/ban.cpp:444]   --->   Operation 52 'store' 'store_ln444' <Predicate = (!icmp_ln444)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 7.05>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%bitcast_ln445 = bitcast i32 %trunc_ln445" [../src/ban.cpp:445]   --->   Operation 53 'bitcast' 'bitcast_ln445' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [9/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 54 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 7.05>
+ST_3 : Operation 55 [8/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 55 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.05>
+ST_4 : Operation 56 [7/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 56 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.05>
+ST_5 : Operation 57 [6/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 57 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.05>
+ST_6 : Operation 58 [5/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 58 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.05>
+ST_7 : Operation 59 [4/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 59 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.05>
+ST_8 : Operation 60 [3/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 60 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.05>
+ST_9 : Operation 61 [2/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 61 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.05>
+ST_10 : Operation 62 [1/9] (7.05ns)   --->   "%eps_2_1 = fdiv i32 %bitcast_ln445, i32 %normalizer_1_read" [../src/ban.cpp:446]   --->   Operation 62 'fdiv' 'eps_2_1' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.01>
+ST_11 : Operation 63 [1/1] (0.00ns)   --->   "%eps_2_2_load_1 = load i32 %eps_2_2" [../src/ban.cpp:445]   --->   Operation 63 'load' 'eps_2_2_load_1' <Predicate = (icmp_ln445)> <Delay = 0.00>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "%eps_2_2_3_load_1 = load i32 %eps_2_2_3" [../src/ban.cpp:445]   --->   Operation 64 'load' 'eps_2_2_3_load_1' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (0.00ns)   --->   "%eps_1_2_load_1 = load i32 %eps_1_2" [../src/ban.cpp:445]   --->   Operation 65 'load' 'eps_1_2_load_1' <Predicate = (icmp_ln445)> <Delay = 0.00>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "%eps_1_2_3_load_1 = load i32 %eps_1_2_3" [../src/ban.cpp:445]   --->   Operation 66 'load' 'eps_1_2_3_load_1' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_11 : Operation 67 [1/1] (0.44ns)   --->   "%eps_2_2_5 = select i1 %icmp_ln445, i32 %eps_2_1, i32 %eps_2_2_3_load_1" [../src/ban.cpp:445]   --->   Operation 67 'select' 'eps_2_2_5' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 68 [1/1] (0.44ns)   --->   "%eps_2_2_6 = select i1 %icmp_ln445, i32 %eps_2_2_load_1, i32 %eps_2_1" [../src/ban.cpp:445]   --->   Operation 68 'select' 'eps_2_2_6' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 69 [1/1] (0.44ns)   --->   "%eps_1_2_5 = select i1 %icmp_ln445, i32 %eps_2_1, i32 %eps_1_2_3_load_1" [../src/ban.cpp:445]   --->   Operation 69 'select' 'eps_1_2_5' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 70 [1/1] (0.44ns)   --->   "%eps_1_2_6 = select i1 %icmp_ln445, i32 %eps_1_2_load_1, i32 %eps_2_1" [../src/ban.cpp:445]   --->   Operation 70 'select' 'eps_1_2_6' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 71 [3/3] (7.01ns)   --->   "%conv = fmul i32 %eps_2_1, i32 0.5" [../src/ban.cpp:446]   --->   Operation 71 'fmul' 'conv' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 72 [1/1] (0.00ns)   --->   "%store_ln445 = store i32 %eps_1_2_5, i32 %eps_1_2_3" [../src/ban.cpp:445]   --->   Operation 72 'store' 'store_ln445' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 73 [1/1] (0.00ns)   --->   "%store_ln445 = store i32 %eps_1_2_6, i32 %eps_1_2" [../src/ban.cpp:445]   --->   Operation 73 'store' 'store_ln445' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 74 [1/1] (0.00ns)   --->   "%store_ln445 = store i32 %eps_2_2_5, i32 %eps_2_2_3" [../src/ban.cpp:445]   --->   Operation 74 'store' 'store_ln445' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%store_ln445 = store i32 %eps_2_2_6, i32 %eps_2_2" [../src/ban.cpp:445]   --->   Operation 75 'store' 'store_ln445' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 7.01>
+ST_12 : Operation 76 [2/3] (7.01ns)   --->   "%conv = fmul i32 %eps_2_1, i32 0.5" [../src/ban.cpp:446]   --->   Operation 76 'fmul' 'conv' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.01>
+ST_13 : Operation 77 [1/3] (7.01ns)   --->   "%conv = fmul i32 %eps_2_1, i32 0.5" [../src/ban.cpp:446]   --->   Operation 77 'fmul' 'conv' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 86 [1/1] (0.00ns)   --->   "%eps_2_2_load = load i32 %eps_2_2"   --->   Operation 86 'load' 'eps_2_2_load' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 87 [1/1] (0.00ns)   --->   "%eps_2_2_3_load = load i32 %eps_2_2_3"   --->   Operation 87 'load' 'eps_2_2_3_load' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 88 [1/1] (0.00ns)   --->   "%num_res_load = load i32 %num_res_load_1"   --->   Operation 88 'load' 'num_res_load' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 89 [1/1] (0.00ns)   --->   "%num_res_load_3 = load i32 %num_res_load_2"   --->   Operation 89 'load' 'num_res_load_3' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 90 [1/1] (0.00ns)   --->   "%eps_1_2_load = load i32 %eps_1_2"   --->   Operation 90 'load' 'eps_1_2_load' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 91 [1/1] (0.00ns)   --->   "%eps_1_2_3_load = load i32 %eps_1_2_3"   --->   Operation 91 'load' 'eps_1_2_3_load' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 92 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %eps_1_1_02_out, i32 %eps_1_2_3_load"   --->   Operation 92 'write' 'write_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 93 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %eps_1_2_01_out, i32 %eps_1_2_load"   --->   Operation 93 'write' 'write_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 94 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %num_res_load_2_out, i32 %num_res_load_3"   --->   Operation 94 'write' 'write_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 95 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %num_res_load_1_out, i32 %num_res_load"   --->   Operation 95 'write' 'write_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 96 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %eps_2_1_08_out, i32 %eps_2_2_3_load"   --->   Operation 96 'write' 'write_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 97 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %eps_2_2_07_out, i32 %eps_2_2_load"   --->   Operation 97 'write' 'write_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+ST_13 : Operation 98 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 98 'ret' 'ret_ln0' <Predicate = (icmp_ln444)> <Delay = 0.00>
+
+State 14 <SV = 13> <Delay = 0.44>
+ST_14 : Operation 78 [1/1] (0.00ns)   --->   "%num_res_load_4 = load i32 %num_res_load_1" [../src/ban.cpp:446]   --->   Operation 78 'load' 'num_res_load_4' <Predicate = (!icmp_ln445)> <Delay = 0.00>
+ST_14 : Operation 79 [1/1] (0.00ns)   --->   "%num_res_load_5 = load i32 %num_res_load_2" [../src/ban.cpp:446]   --->   Operation 79 'load' 'num_res_load_5' <Predicate = (icmp_ln445)> <Delay = 0.00>
+ST_14 : Operation 80 [1/1] (0.00ns)   --->   "%specloopname_ln444 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [../src/ban.cpp:444]   --->   Operation 80 'specloopname' 'specloopname_ln444' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 81 [1/1] (0.44ns)   --->   "%select_ln446 = select i1 %icmp_ln445, i32 %num_res_load_5, i32 %conv" [../src/ban.cpp:446]   --->   Operation 81 'select' 'select_ln446' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 82 [1/1] (0.44ns)   --->   "%select_ln446_1 = select i1 %icmp_ln445, i32 %conv, i32 %num_res_load_4" [../src/ban.cpp:446]   --->   Operation 82 'select' 'select_ln446_1' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 83 [1/1] (0.00ns)   --->   "%store_ln446 = store i32 %select_ln446, i32 %num_res_load_2" [../src/ban.cpp:446]   --->   Operation 83 'store' 'store_ln446' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 84 [1/1] (0.00ns)   --->   "%store_ln446 = store i32 %select_ln446_1, i32 %num_res_load_1" [../src/ban.cpp:446]   --->   Operation 84 'store' 'store_ln446' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 85 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.64ns
+The critical path consists of the following:
+	'alloca' operation ('i') [9]  (0 ns)
+	'load' operation ('i', ../src/ban.cpp:444) on local variable 'i' [21]  (0 ns)
+	'add' operation ('add_ln445_1', ../src/ban.cpp:445) [36]  (0.773 ns)
+	'add' operation ('add_ln445_2', ../src/ban.cpp:445) [40]  (0.773 ns)
+	'select' operation ('select_ln445', ../src/ban.cpp:445) [44]  (0 ns)
+	'sub' operation ('sub_ln445', ../src/ban.cpp:445) [47]  (1.58 ns)
+	'and' operation ('and_ln445', ../src/ban.cpp:445) [48]  (0 ns)
+	'lshr' operation ('lshr_ln445', ../src/ban.cpp:445) [49]  (1.52 ns)
+
+ <State 2>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 3>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 4>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 5>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 6>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 7>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 8>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 9>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 10>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('eps_2[1]', ../src/ban.cpp:446) [52]  (7.06 ns)
+
+ <State 11>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('conv', ../src/ban.cpp:446) [58]  (7.02 ns)
+
+ <State 12>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('conv', ../src/ban.cpp:446) [58]  (7.02 ns)
+
+ <State 13>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('conv', ../src/ban.cpp:446) [58]  (7.02 ns)
+
+ <State 14>: 0.449ns
+The critical path consists of the following:
+	'load' operation ('num_res_load_5', ../src/ban.cpp:446) on local variable 'num_res_load_2' [30]  (0 ns)
+	'select' operation ('select_ln446', ../src/ban.cpp:446) [59]  (0.449 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
