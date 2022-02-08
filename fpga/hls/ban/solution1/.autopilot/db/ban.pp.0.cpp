@@ -40635,9 +40635,10 @@ class Ban{
  static Ban _sum(const Ban &a, const Ban &b, int diff_p);
  static void _div_body(const T num_num[3], const T num_den[3], T num_res[3]);
  static void _mul(const T num_a[3], const T num_b[3], T num_res[3]);
+ static void _mul_conv(const T num_a[3], const T num_b[3], T aux[]);
  static void _mul_overwriting(T num[3], const T num_aux[3]);
  static inline void _mul_trivial(const T num_a[3], T n, T num_res[3])
-          {VITIS_LOOP_33_1: for(unsigned i=0; i<3; ++i)
+          {VITIS_LOOP_34_1: for(unsigned i=0; i<3; ++i)
            num_res[i] = num_a[i]*n;};
 
 
@@ -40645,22 +40646,17 @@ class Ban{
  void init(int p, const T num[3]);
 
 
- typedef void (Ban::*bool_type)() const;
-    void this_type_does_not_support_comparisons() const {}
+
+
+
 
  public:
 
 
+ Ban(){};
  Ban(int p, const T num[3]);
  Ban(T n);
-
-
-
- inline operator bool_type() const {
-      return num[0] ? &Ban::this_type_does_not_support_comparisons : 0;
-    };
-
-
+# 60 "../src/ban.h"
  Ban operator+(const Ban &b) const;
  Ban operator-() const;
  inline Ban operator-(const Ban &b) const {return *this+(-b);};
@@ -40778,11 +40774,12 @@ bool Ban::operator==(const Ban &b) const{
  if(p != b.p)
   return false;
 
- VITIS_LOOP_52_1: for(unsigned i=0; i<3; ++i)
-  if(num[i] != b.num[i])
-   return false;
+ bool res = true;
+ VITIS_LOOP_53_1: for(unsigned i=0; i<3; ++i)
+  if(res && (num[i] != b.num[i]))
+   res = false;
 
- return true;
+ return res;
 }
 
 bool Ban::operator==(T n) const{
@@ -40792,11 +40789,12 @@ bool Ban::operator==(T n) const{
  if(!n)
   return true;
 
- VITIS_LOOP_66_1: for(unsigned i=1; i<3; ++i)
-  if(num[i])
-   return false;
+ bool res = true;
+ VITIS_LOOP_68_1: for(unsigned i=1; i<3; ++i)
+  if(res && num[i])
+   res = false;
 
- return true;
+ return res;
 }
 
 
@@ -40808,7 +40806,7 @@ void Ban::to_normal_form(){
  unsigned idx = 1;
  unsigned idx_tmp = 0;
 
- VITIS_LOOP_82_1: while(idx<3)
+ VITIS_LOOP_84_1: while(idx<3)
   if(!idx_tmp && num[idx++])
    idx_tmp = idx;
 
@@ -40816,7 +40814,7 @@ void Ban::to_normal_form(){
 
 
  unsigned base = 0;
- VITIS_LOOP_90_2: while(idx < 3)
+ VITIS_LOOP_92_2: while(idx < 3)
   num[base++] = num[idx++];
 
 
@@ -40828,7 +40826,7 @@ void Ban::to_normal_form(){
   p = tmp;
  }
 
- VITIS_LOOP_102_3: while(base<3)
+ VITIS_LOOP_104_3: while(base<3)
   num[base++] = 0;
 
  return;
@@ -40838,10 +40836,12 @@ Ban Ban::_sum(const Ban &a, const Ban &b, int diff_p){
  Ban c(a);
  T tmp;
 
- VITIS_LOOP_112_1: for(unsigned i=diff_p; i<3; ++i){
+ VITIS_LOOP_114_1: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
- tmp = c.num[i] + b.num[i-diff_p];
-  c.num[i] = tmp;
+ if(i>=diff_p){
+   tmp = c.num[i] + b.num[i-diff_p];
+   c.num[i] = tmp;
+  }
  }
 
  if(!diff_p)
@@ -40854,10 +40854,10 @@ Ban Ban::_sum(const Ban &a, const Ban &b, int diff_p){
 Ban Ban::operator+(const Ban &b) const{
 
 
- if(!*this)
+ if(*this == 0)
   return b;
 
- if(!b)
+ if(b == 0)
   return *this;
 
  int diff_p = p - b.p;
@@ -40879,7 +40879,7 @@ Ban Ban::operator+(const Ban &b) const{
 Ban Ban::operator-() const{
  Ban b(*this);
  T tmp;
- VITIS_LOOP_153_1: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_157_1: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = b.num[i] * -1;
   b.num[i] = tmp;
@@ -40888,20 +40888,28 @@ Ban Ban::operator-() const{
  return b;
 }
 
-void Ban::_mul(const T num_a[3], const T num_b[3], T num_res[3]){
- T tmp;
- T aux[(3<<1)-1];
- VITIS_LOOP_165_1: for(unsigned i=0; i<((3<<1)-1); ++i)
-  aux[i] = 0;
+void Ban::_mul_conv(const T num_a[3], const T num_b[3], T aux[(3<<1)-1]){
+ T tmp = 0, tmp2;
 
- VITIS_LOOP_168_2: for(unsigned i=0; i<3; ++i){
-  VITIS_LOOP_169_3: for(unsigned j=0; j<3; ++j){
+ VITIS_LOOP_169_1: for(unsigned i=0; i<(3<<1)-1; ++i){
+  VITIS_LOOP_170_2: for(unsigned j=0; j<3; ++j){
 #pragma HLS UNROLL
- tmp = aux[i+j] + num_a[i]*num_b[j];
-    aux[i+j] = tmp;
+ if((i-j)>=0 && (i-j)<3){
+     tmp2 = tmp + num_a[i-j]*num_b[j];
+     tmp = tmp2;
+    }
   }
+  aux[i] = tmp;
+  tmp = 0;
  }
- VITIS_LOOP_175_4: for(unsigned i=0; i<3; ++i)
+}
+
+void Ban::_mul(const T num_a[3], const T num_b[3], T num_res[3]){
+ T aux[(3<<1)-1];
+
+ _mul_conv(num_a, num_b, aux);
+
+ VITIS_LOOP_187_1: for(unsigned i=0; i<3; ++i)
   num_res[i] = aux[i];
 }
 
@@ -40919,7 +40927,7 @@ Ban Ban::mul_body(const Ban &b) const{
 
 Ban Ban::operator*(const Ban &b) const{
 
- if(!*this || !b)
+ if(*this == 0 || b == 0)
   return ZERO;
 
  return this->mul_body(b);
@@ -40929,35 +40937,35 @@ void Ban::_div_body(const T num_num[3], const T num_den[3], T num_res[3]){
  T normalizer = num_den[0];
  T den_norm[3], eps[3], eps_tmp[3];
  den_norm[0] = 0;
- VITIS_LOOP_203_1: for(unsigned i=1; i<3; ++i)
+ VITIS_LOOP_215_1: for(unsigned i=1; i<3; ++i)
   den_norm[i] = -num_den[i]/normalizer;
 
  _mul(den_norm, num_num, eps);
  T tmp;
- VITIS_LOOP_208_2: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_220_2: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num_res[i] + eps[i];
   num_res[i] = tmp;
  }
 
 
- VITIS_LOOP_215_3: for(unsigned j=1; j<=((3 -1)>>1); ++j){
+ VITIS_LOOP_227_3: for(unsigned j=1; j<=((3 -1)>>1); ++j){
   _mul(eps, den_norm, eps_tmp);
-  VITIS_LOOP_217_4: for(unsigned i=0; i<3; ++i){
+  VITIS_LOOP_229_4: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num_res[i] + eps_tmp[i];
    num_res[i] = tmp;
   }
 
   _mul(eps_tmp, den_norm, eps);
-  VITIS_LOOP_224_5: for(unsigned i=0; i<3; ++i){
+  VITIS_LOOP_236_5: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num_res[i] + eps[i];
    num_res[i] = tmp;
   }
  }
-# 241 "../src/ban.cpp"
- VITIS_LOOP_241_6: for(unsigned i=0; i<3; ++i){
+# 253 "../src/ban.cpp"
+ VITIS_LOOP_253_6: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num_res[i] / normalizer;
   num_res[i] = tmp;
@@ -40971,7 +40979,7 @@ Ban Ban::operator/(const Ban &b) const{
 
 
 
- if(!*this)
+ if(*this == 0)
   return ZERO;
 
  Ban c(*this);
@@ -40993,12 +41001,12 @@ Ban& Ban::operator+=(const Ban &b){
 
 
 
- if(!*this){
+ if(*this == 0){
   *this = b;
   return *this;
  }
 
- if(!b)
+ if(b == 0)
   return *this;
 
  int diff_p = p - b.p;
@@ -41014,26 +41022,27 @@ Ban& Ban::operator+=(const Ban &b){
 
  if(diff_p < 0){
 
-  unsigned dim = 3 +diff_p;
-  T num_aux[dim];
-  VITIS_LOOP_300_1: for(unsigned i=0; i<dim; ++i)
+  T num_aux[3];
+  VITIS_LOOP_311_1: for(unsigned i=0; i<3; ++i)
    num_aux[i] = num[i];
 
 
-  VITIS_LOOP_304_2: for(unsigned i=0; i<-diff_p; ++i)
-   num[i] = b.num[i];
-
-  VITIS_LOOP_307_3: for(unsigned i=-diff_p; i<3; ++i)
-   num[i] = b.num[i] + num_aux[i+diff_p];
+  VITIS_LOOP_315_2: for(unsigned i=0; i<3; ++i)
+   if(i<-diff_p)
+    num[i] = b.num[i];
+   else
+    num[i] = b.num[i] + num_aux[i+diff_p];
 
   p = b.p;
  }
  else{
   T tmp;
-  VITIS_LOOP_314_4: for(unsigned i=diff_p; i<3; ++i){
+  VITIS_LOOP_325_3: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
- tmp = num[i] + b.num[i-diff_p];
-   num[i] = tmp;
+ if(i>=diff_p){
+    tmp = num[i] + b.num[i-diff_p];
+    num[i] = tmp;
+   }
   }
  }
 
@@ -41043,29 +41052,20 @@ Ban& Ban::operator+=(const Ban &b){
  return *this;
 }
 
+void Ban::_mul_overwriting(T num_a[3], const T num_b[3]){
+ T aux[(3<<1)-1];
 
+ _mul_conv(num_a, num_b, aux);
 
-void Ban::_mul_overwriting(T num[3], const T num_aux[3]){
- T tmp;
- VITIS_LOOP_331_1: for(int i=3 -1; i>=0; --i){
-#pragma HLS UNROLL
- tmp = num[i] * num_aux[0];
-  num[i] = tmp;
-
-
-
-  VITIS_LOOP_338_2: for(unsigned j=1; j<=i; ++j){
-   tmp = num[i] + num[i-j]*num_aux[j];
-   num[i] = tmp;
-  }
- }
+ VITIS_LOOP_345_1: for(unsigned i=0; i<3; ++i)
+  num_a[i] = aux[i];
 }
 
 Ban& Ban::operator*=(const Ban &b){
 
- if(!*this)
+ if(*this == 0)
   return *this;
- if(!b){
+ if(b == 0){
   *this = b;
   return *this;
  }
@@ -41074,17 +41074,13 @@ Ban& Ban::operator*=(const Ban &b){
  if(this == &b){
 
   T num_aux[3];
-  VITIS_LOOP_358_1: for(unsigned i=0; i<3; ++i)
+  VITIS_LOOP_362_1: for(unsigned i=0; i<3; ++i)
    num_aux[i] = num[i];
 
-  _mul_overwriting(num, num_aux);
+  _mul(num, num_aux, num);
  }
  else
-  _mul_overwriting(num, b.num);
-
-
-
-
+  _mul(num, b.num, num);
 
  p += b.p;
  this->to_normal_form();
@@ -41099,7 +41095,7 @@ Ban& Ban::operator/=(const Ban &b){
 
 
 
- if(!*this)
+ if(*this == 0)
   return *this;
 
 
@@ -41157,15 +41153,18 @@ bool Ban::operator<(const Ban &b) const{
   return false;
  }
 
- VITIS_LOOP_457_1: for(unsigned i=0; i<3; ++i){
-  if(num[i] < b.num[i])
-   return true;
+ bool res = false, solved = false;
+ VITIS_LOOP_458_1: for(unsigned i=0; i<3; ++i){
+  if(!solved && num[i] < b.num[i]){
+   res = true;
+   solved = true;
+  }
 
-  if(num[i] > b.num[i])
-   return false;
+  if(!solved && num[i] > b.num[i])
+   solved = true;
  }
 
- return false;
+ return res;
 }
 
 bool Ban::operator<(T n) const{
@@ -41192,14 +41191,16 @@ bool Ban::operator<(T n) const{
  if(num[0] > n)
   return false;
 
- VITIS_LOOP_492_1: for(unsigned i=1; i<3; ++i)
-  if(num[i]){
+ bool res = false, solved = false;
+
+ VITIS_LOOP_497_1: for(unsigned i=1; i<3; ++i)
+  if(!solved && num[i]){
+   solved = true;
    if(num[i] < 0)
-    return true;
-   return false;
+    res = true;
   }
 
- return false;
+ return res;
 }
 
 bool operator<(T n, const Ban &b){
@@ -41226,7 +41227,7 @@ bool operator<(T n, const Ban &b){
  if(b.num[0] < n)
   return false;
 
- VITIS_LOOP_526_1: for(unsigned i=1; i<3; ++i)
+ VITIS_LOOP_531_1: for(unsigned i=1; i<3; ++i)
   if(b.num[i]){
    if(b.num[i] > 0)
     return true;
@@ -41244,8 +41245,8 @@ Ban abs(const Ban &b){
 }
 
 Ban sqrt(const Ban &b){
-# 552 "../src/ban.cpp"
- if(!b || b == 1)
+# 557 "../src/ban.cpp"
+ if(b == 0 || b == 1)
   return b;
 
  T normalizer;
@@ -41253,7 +41254,7 @@ Ban sqrt(const Ban &b){
  T num_res[3], eps_1[3], eps_2[3], eps_3[3];
  num_res[0] = 1;
  eps_1[0] = eps_2[0] = 0;
- VITIS_LOOP_560_1: for(unsigned i=1; i<3; ++i){
+ VITIS_LOOP_565_1: for(unsigned i=1; i<3; ++i){
   eps_1[i] = eps_2[i] = b.num[i]/normalizer;
   num_res[i] = 0.5*eps_1[i];
  }
@@ -41265,9 +41266,9 @@ Ban sqrt(const Ban &b){
 
 
  T tmp;
-# 601 "../src/ban.cpp"
+# 606 "../src/ban.cpp"
    Ban::_mul(eps_1, eps_2, eps_3);
-   VITIS_LOOP_602_2: for(unsigned j=0; j<3; j++){
+   VITIS_LOOP_607_2: for(unsigned j=0; j<3; j++){
 #pragma HLS UNROLL
  tmp = num_res[j] + sqrt_exp[0]*eps_3[j];
     num_res[j] = tmp;
@@ -41277,7 +41278,7 @@ Ban sqrt(const Ban &b){
 
  normalizer = sqrt(normalizer);
 
- VITIS_LOOP_612_3: for (unsigned i=0; i<3; ++i){
+ VITIS_LOOP_617_3: for (unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num_res[i] * normalizer;
   num_res[i] = tmp;
@@ -41287,13 +41288,14 @@ Ban sqrt(const Ban &b){
 }
 
 void Ban::sum_infinitesimal_real(T num_res[3], T n) const{
+ VITIS_LOOP_627_1: for(unsigned i=3 -1; i>0; --i)
 
- VITIS_LOOP_623_1: for(unsigned i=3 -1; i>=-p; --i)
-  num_res[i] = num[i+p];
+  if(i>=-p)
+   num_res[i] = num[i+p];
 
 
- VITIS_LOOP_627_2: for(unsigned i=-p-1; i>0; --i)
-  num_res[i] = 0;
+  else
+   num_res[i] = 0;
 
  num_res[0] = n;
 }
@@ -41335,7 +41337,7 @@ Ban Ban::operator*(T n) const{
 
  Ban res(*this);
  T tmp;
- VITIS_LOOP_670_1: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_676_1: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = res.num[i] * n;
   res.num[i] = tmp;
@@ -41352,12 +41354,12 @@ Ban Ban::operator/(T n) const{
 
 
 
- if(!*this)
+ if(*this == 0)
   return ZERO;
 
  Ban res(*this);
  T tmp;
- VITIS_LOOP_692_1: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_698_1: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = res.num[i] / n;
   res.num[i] = tmp;
@@ -41401,7 +41403,7 @@ Ban& Ban::operator*=(T n){
 
 
  T tmp;
- VITIS_LOOP_736_1: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_742_1: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num[i] * n;
   num[i] = tmp;
@@ -41418,11 +41420,11 @@ Ban& Ban::operator/=(T n){
 
 
 
- if(!*this)
+ if(*this == 0)
   return *this;
 
  T tmp;
- VITIS_LOOP_757_1: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_763_1: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = num[i] / n;
   num[i] = tmp;
@@ -41450,36 +41452,36 @@ Ban operator/(T n, const Ban &b){
  T normalizer = b.num[0];
  T b_norm[3], eps[3], eps_tmp[3];
  b_norm[0] = 0;
- VITIS_LOOP_785_1: for(unsigned i=1; i<3; ++i)
+ VITIS_LOOP_791_1: for(unsigned i=1; i<3; ++i)
   b_norm[i] = -b.num[i]/normalizer;
 
  Ban::_mul_trivial(b_norm, n, eps);
 
  T tmp;
- VITIS_LOOP_791_2: for(unsigned i=0; i<3; ++i){
+ VITIS_LOOP_797_2: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = c.num[i] + eps[i];
   c.num[i] = tmp;
  }
 
 
- VITIS_LOOP_798_3: for(unsigned j=1; j<=((3 -1)>>1); ++j){
+ VITIS_LOOP_804_3: for(unsigned j=1; j<=((3 -1)>>1); ++j){
   Ban::_mul(eps, b_norm, eps_tmp);
-  VITIS_LOOP_800_4: for(unsigned i=0; i<3; ++i){
+  VITIS_LOOP_806_4: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = c.num[i] + eps_tmp[i];
    c.num[i] = tmp;
   }
 
   Ban::_mul(eps_tmp, b_norm, eps);
-  VITIS_LOOP_807_5: for(unsigned i=0; i<3; ++i){
+  VITIS_LOOP_813_5: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = c.num[i] + eps[i];
    c.num[i] = tmp;
   }
  }
-# 824 "../src/ban.cpp"
- VITIS_LOOP_824_6: for(unsigned i=0; i<3; ++i){
+# 830 "../src/ban.cpp"
+ VITIS_LOOP_830_6: for(unsigned i=0; i<3; ++i){
 #pragma HLS UNROLL
  tmp = c.num[i] / normalizer;
   c.num[i] = tmp;
@@ -41489,7 +41491,7 @@ Ban operator/(T n, const Ban &b){
 
  return c;
 }
-# 842 "../src/ban.cpp"
+# 848 "../src/ban.cpp"
 Ban Ban::_pow_fast(const Ban &b, unsigned e){
  if(e == 1)
   return b;
@@ -41507,7 +41509,7 @@ Ban Ban::_pow_fast(const Ban &b, unsigned e){
 }
 
 Ban pow(const Ban &b, int e){
- if(!b){
+ if(b == 0){
   if(e > 0)
    return ZERO;
 

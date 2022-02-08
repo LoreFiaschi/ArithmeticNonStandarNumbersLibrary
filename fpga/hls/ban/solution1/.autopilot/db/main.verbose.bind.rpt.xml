@@ -1,0 +1,134 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'main'" level="0">
+<item name = "Date">Tue Feb  8 11:02:14 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">ban</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_1_fu_3381">main_Pipeline_VITIS_LOOP_21_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_125_fu_3388">main_Pipeline_VITIS_LOOP_21_125, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_126_fu_3395">main_Pipeline_VITIS_LOOP_21_126, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_127_fu_3402">main_Pipeline_VITIS_LOOP_21_127, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_128_fu_3409">main_Pipeline_VITIS_LOOP_21_128, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_129_fu_3416">main_Pipeline_VITIS_LOOP_21_129, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_130_fu_3423">main_Pipeline_VITIS_LOOP_21_130, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_131_fu_3430">main_Pipeline_VITIS_LOOP_21_131, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_132_fu_3437">main_Pipeline_VITIS_LOOP_21_132, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_133_fu_3447">main_Pipeline_VITIS_LOOP_21_133, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_134_fu_3454">main_Pipeline_VITIS_LOOP_21_134, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_135_fu_3461">main_Pipeline_VITIS_LOOP_21_135, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_45_1_fu_3468">main_Pipeline_VITIS_LOOP_45_1, 4264, 4264, 42.640 us, 42.640 us, 4264, 4264, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_163_fu_3476">main_Pipeline_VITIS_LOOP_21_163, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_164_fu_3484">main_Pipeline_VITIS_LOOP_21_164, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_165_fu_3491">main_Pipeline_VITIS_LOOP_21_165, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_sqrt_fu_3498">sqrt, 5, 149, 50.000 ns, 1.490 us, 5, 149, no</column>
+<column name="grp_operator_add_fu_3509">operator_add, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_2_fu_3520">operator_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_mul_body_fu_3531">mul_body, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_1_1_fu_3543">operator_1_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_53_1_fu_3552">main_Pipeline_VITIS_LOOP_53_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_458_1_fu_3560">main_Pipeline_VITIS_LOOP_458_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_operator_1_fu_3568">operator_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_1_fu_3579">main_Pipeline_VITIS_LOOP_84_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_2_fu_3587">main_Pipeline_VITIS_LOOP_92_2, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_3_fu_3599">main_Pipeline_VITIS_LOOP_104_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_1_2_fu_3615">operator_1_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_div_fu_3623">operator_div, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_68_1_fu_3631">main_Pipeline_VITIS_LOOP_68_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_497_1_fu_3638">main_Pipeline_VITIS_LOOP_497_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_311_1_fu_3645">main_Pipeline_VITIS_LOOP_311_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_315_2_fu_3657">main_Pipeline_VITIS_LOOP_315_2, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_136_fu_3669">main_Pipeline_VITIS_LOOP_84_136, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_237_fu_3676">main_Pipeline_VITIS_LOOP_92_237, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_338_fu_3684">main_Pipeline_VITIS_LOOP_104_338, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_311_139_fu_3693">main_Pipeline_VITIS_LOOP_311_139, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_315_240_fu_3705">main_Pipeline_VITIS_LOOP_315_240, 9, 9, 90.000 ns, 90.000 ns, 9, 9, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_141_fu_3719">main_Pipeline_VITIS_LOOP_84_141, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_242_fu_3726">main_Pipeline_VITIS_LOOP_92_242, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_343_fu_3734">main_Pipeline_VITIS_LOOP_104_343, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_169_1_fu_3743">main_Pipeline_VITIS_LOOP_169_1, 23, 23, 0.230 us, 0.230 us, 23, 23, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_187_1_fu_3753">main_Pipeline_VITIS_LOOP_187_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_144_fu_3760">main_Pipeline_VITIS_LOOP_84_144, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_245_fu_3767">main_Pipeline_VITIS_LOOP_92_245, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_346_fu_3775">main_Pipeline_VITIS_LOOP_104_346, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_215_1_fu_3784">main_Pipeline_VITIS_LOOP_215_1, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_p_mul_1_fu_3799">p_mul_1, 94, 94, 0.940 us, 0.940 us, 94, 94, no</column>
+<column name="grp_p_mul_161_fu_3810">p_mul_161, 94, 94, 0.940 us, 0.940 us, 94, 94, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_147_fu_3824">main_Pipeline_VITIS_LOOP_84_147, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_248_fu_3831">main_Pipeline_VITIS_LOOP_92_248, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_349_fu_3839">main_Pipeline_VITIS_LOOP_104_349, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_150_fu_3848">main_Pipeline_VITIS_LOOP_84_150, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_251_fu_3855">main_Pipeline_VITIS_LOOP_92_251, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_352_fu_3863">main_Pipeline_VITIS_LOOP_104_352, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_627_1_fu_3872">main_Pipeline_VITIS_LOOP_627_1, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_153_fu_3880">main_Pipeline_VITIS_LOOP_84_153, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_254_fu_3887">main_Pipeline_VITIS_LOOP_92_254, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_355_fu_3895">main_Pipeline_VITIS_LOOP_104_355, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_627_156_fu_3904">main_Pipeline_VITIS_LOOP_627_156, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_157_fu_3912">main_Pipeline_VITIS_LOOP_84_157, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_258_fu_3919">main_Pipeline_VITIS_LOOP_92_258, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_359_fu_3927">main_Pipeline_VITIS_LOOP_104_359, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_160_fu_3936">main_Pipeline_VITIS_LOOP_84_160, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_261_fu_3943">main_Pipeline_VITIS_LOOP_92_261, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_362_fu_3951">main_Pipeline_VITIS_LOOP_104_362, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_mul_body_1_fu_3960">mul_body_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_169_166_fu_3970">main_Pipeline_VITIS_LOOP_169_166, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_187_167_fu_3981">main_Pipeline_VITIS_LOOP_187_167, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_168_fu_3992">main_Pipeline_VITIS_LOOP_84_168, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_269_fu_4000">main_Pipeline_VITIS_LOOP_92_269, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_370_fu_4012">main_Pipeline_VITIS_LOOP_104_370, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_21_171_fu_4028">main_Pipeline_VITIS_LOOP_21_171, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_362_1_fu_4035">main_Pipeline_VITIS_LOOP_362_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_operator_1_s_fu_4045">operator_1_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_operator_2_s_fu_4052">operator_2_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_169_172_fu_4062">main_Pipeline_VITIS_LOOP_169_172, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_187_173_fu_4073">main_Pipeline_VITIS_LOOP_187_173, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_174_fu_4090">main_Pipeline_VITIS_LOOP_84_174, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_275_fu_4098">main_Pipeline_VITIS_LOOP_92_275, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_376_fu_4113">main_Pipeline_VITIS_LOOP_104_376, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_84_177_fu_4129">main_Pipeline_VITIS_LOOP_84_177, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_92_278_fu_4137">main_Pipeline_VITIS_LOOP_92_278, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_104_379_fu_4149">main_Pipeline_VITIS_LOOP_104_379, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_main_Pipeline_VITIS_LOOP_44_1_fu_4165">main_Pipeline_VITIS_LOOP_44_1, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+<column name="grp_operator_3_fu_4171">operator_3, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_50_2">?, ?, ?, -, -, 10, no</column>
+<column name=" + VITIS_LOOP_54_3">?, ?, ?, -, -, 1 ~ 10, no</column>
+<column name="- VITIS_LOOP_111_4">?, ?, ?, -, -, 2131, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

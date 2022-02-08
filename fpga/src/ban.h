@@ -28,6 +28,7 @@ class Ban{
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
 	static void _div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]);
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
+	static void _mul_conv(const T num_a[SIZE], const T num_b[SIZE], T aux[]);
 	static void _mul_overwriting(T num[SIZE], const T num_aux[SIZE]);
 	static inline void _mul_trivial(const T num_a[SIZE], T n, T num_res[SIZE]) 
 										{for(unsigned i=0; i<SIZE; ++i)
@@ -38,20 +39,22 @@ class Ban{
 	void init(int p, const T num[SIZE]);
 
 	// utility for boolean conversion
-	typedef void (Ban::*bool_type)() const;
-    void this_type_does_not_support_comparisons() const {}
+	//typedef void (Ban::*bool_type)() const;
+    //void this_type_does_not_support_comparisons() const {}
+	//explicit operator int() const = delete;
 
 	public:
 	
 	// constructors
+	Ban(){};
 	Ban(int p, const T num[SIZE]);
 	Ban(T n);
 
 	// boolean convertion
-	//inline operator bool() const{return num[0];};
-	inline operator bool_type() const {
-      return num[0] ? &Ban::this_type_does_not_support_comparisons : 0;
-    };
+	//explicit inline operator bool() const{return num[0];};
+	//inline operator bool_type() const {
+    //  return num[0] ? &Ban::this_type_does_not_support_comparisons : 0;
+    //};
 
 	// algebraic operations
 	Ban operator+(const Ban &b) const;

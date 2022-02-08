@@ -1,0 +1,234 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'mul_body_1'" level="0">
+<item name = "Date">Tue Feb  8 11:02:39 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">ban</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_169_1_fu_248">mul_body_1_Pipeline_VITIS_LOOP_169_1, 22, 22, 0.220 us, 0.220 us, 22, 22, no</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_187_1_fu_266">mul_body_1_Pipeline_VITIS_LOOP_187_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_21_1_fu_274">mul_body_1_Pipeline_VITIS_LOOP_21_1, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_84_1_fu_284">mul_body_1_Pipeline_VITIS_LOOP_84_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_92_2_fu_292">mul_body_1_Pipeline_VITIS_LOOP_92_2, 3, 5, 30.000 ns, 50.000 ns, 3, 5, no</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_104_3_fu_304">mul_body_1_Pipeline_VITIS_LOOP_104_3, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 104, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 1360, 1048, -</column>
+<column name="Memory">0, -, 64, 3, 0</column>
+<column name="Multiplexer">-, -, -, 347, -</column>
+<column name="Register">-, -, 356, -, -</column>
+<specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_104_3_fu_304">mul_body_1_Pipeline_VITIS_LOOP_104_3, 0, 0, 166, 162, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_169_1_fu_248">mul_body_1_Pipeline_VITIS_LOOP_169_1, 0, 0, 780, 474, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_187_1_fu_266">mul_body_1_Pipeline_VITIS_LOOP_187_1, 0, 0, 103, 55, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_21_1_fu_274">mul_body_1_Pipeline_VITIS_LOOP_21_1, 0, 0, 100, 58, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_84_1_fu_284">mul_body_1_Pipeline_VITIS_LOOP_84_1, 0, 0, 75, 178, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_92_2_fu_292">mul_body_1_Pipeline_VITIS_LOOP_92_2, 0, 0, 136, 121, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="aux_U">sqrt_aux_RAM_AUTO_1R1W, 0, 64, 3, 0, 5, 32, 1, 160</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln104_fu_457_p2">+, 0, 0, 10, 3, 1</column>
+<column name="base_fu_428_p2">+, 0, 0, 9, 2, 1</column>
+<column name="sub_ln92_fu_423_p2">-, 0, 0, 10, 3, 2</column>
+<column name="and_ln77_fu_384_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln104_6_fu_451_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln104_fu_441_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln77_6_fu_372_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln77_fu_366_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="icmp_ln92_fu_398_p2">icmp, 0, 0, 20, 32, 2</column>
+<column name="or_ln77_fu_378_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln104_fu_463_p3">select, 0, 0, 3, 1, 2</column>
+<column name="tmp_fu_435_p2">xor, 0, 0, 3, 2, 3</column>
+<column name="xor_ln92_fu_404_p2">xor, 0, 0, 2, 2, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="agg_result_num12_4_reg_158">9, 2, 32, 64</column>
+<column name="agg_result_num12_7_reg_212">14, 3, 32, 96</column>
+<column name="agg_result_num2_4_reg_168">9, 2, 32, 64</column>
+<column name="agg_result_num2_7_reg_223">14, 3, 32, 96</column>
+<column name="agg_result_num_4_reg_148">9, 2, 32, 64</column>
+<column name="agg_result_num_7_reg_201">14, 3, 32, 96</column>
+<column name="agg_result_p_0_reg_190">9, 2, 2, 4</column>
+<column name="ap_NS_fsm">65, 15, 1, 15</column>
+<column name="ap_phi_mux_agg_result_num12_7_phi_fu_215_p6">9, 2, 32, 64</column>
+<column name="ap_phi_mux_agg_result_num2_7_phi_fu_226_p6">9, 2, 32, 64</column>
+<column name="ap_phi_mux_agg_result_num_7_phi_fu_204_p6">9, 2, 32, 64</column>
+<column name="ap_phi_mux_base_0_lcssa_i3336_phi_fu_182_p4">9, 2, 2, 4</column>
+<column name="ap_phi_mux_this_p_write_assign_phi_fu_238_p6">9, 2, 2, 4</column>
+<column name="ap_return_0">9, 2, 32, 64</column>
+<column name="ap_return_1">9, 2, 32, 64</column>
+<column name="ap_return_2">9, 2, 32, 64</column>
+<column name="ap_return_3">9, 2, 32, 64</column>
+<column name="aux_address0">14, 3, 3, 9</column>
+<column name="aux_ce0">14, 3, 1, 3</column>
+<column name="aux_we0">9, 2, 1, 2</column>
+<column name="base_0_lcssa_i3336_reg_178">9, 2, 2, 4</column>
+<column name="grp_fu_681_ce">9, 2, 1, 2</column>
+<column name="grp_fu_685_ce">9, 2, 1, 2</column>
+<column name="grp_fu_689_ce">9, 2, 1, 2</column>
+<column name="grp_fu_693_ce">9, 2, 1, 2</column>
+<column name="grp_fu_697_ce">9, 2, 1, 2</column>
+<column name="grp_fu_701_ce">9, 2, 1, 2</column>
+<column name="grp_fu_705_ce">9, 2, 1, 2</column>
+<column name="this_p_write_assign_reg_234">14, 3, 2, 6</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="agg_result_num12_4_reg_158">32, 0, 32, 0</column>
+<column name="agg_result_num12_7_reg_212">32, 0, 32, 0</column>
+<column name="agg_result_num2_4_reg_168">32, 0, 32, 0</column>
+<column name="agg_result_num2_7_reg_223">32, 0, 32, 0</column>
+<column name="agg_result_num_4_reg_148">32, 0, 32, 0</column>
+<column name="agg_result_num_7_reg_201">32, 0, 32, 0</column>
+<column name="agg_result_p_0_reg_190">2, 0, 2, 0</column>
+<column name="and_ln77_reg_638">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">14, 0, 14, 0</column>
+<column name="ap_return_0_preg">32, 0, 32, 0</column>
+<column name="ap_return_1_preg">32, 0, 32, 0</column>
+<column name="ap_return_2_preg">32, 0, 32, 0</column>
+<column name="ap_return_3_preg">32, 0, 32, 0</column>
+<column name="base_0_lcssa_i3336_reg_178">2, 0, 2, 0</column>
+<column name="empty_reg_642">2, 0, 2, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_104_3_fu_304_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_169_1_fu_248_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_187_1_fu_266_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_21_1_fu_274_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_84_1_fu_284_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_mul_body_1_Pipeline_VITIS_LOOP_92_2_fu_292_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln104_reg_672">1, 0, 1, 0</column>
+<column name="icmp_ln92_reg_648">1, 0, 1, 0</column>
+<column name="select_ln104_reg_676">3, 0, 3, 0</column>
+<column name="this_p_write_assign_reg_234">2, 0, 2, 0</column>
+<column name="xor_ln92_reg_652">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_return_0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_return_1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_return_2">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="ap_return_3">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12737_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12737_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12737_p_opcode">out, 5, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12737_p_dout0">in, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12737_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12725_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12725_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12725_p_opcode">out, 2, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12725_p_dout0">in, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12725_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4183_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4183_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4183_p_opcode">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4183_p_dout0">in, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4183_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4190_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4190_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4190_p_opcode">out, 2, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4190_p_dout0">in, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4190_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4198_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4198_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4198_p_dout0">in, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4198_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4204_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4204_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4204_p_dout0">in, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_4204_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12729_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12729_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12729_p_dout0">in, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12729_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12733_p_din0">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12733_p_din1">out, 32, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12733_p_opcode">out, 5, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12733_p_dout0">in, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="grp_fu_12733_p_ce">out, 1, ap_ctrl_hs, mul_body.1, return value</column>
+<column name="p_read3">in, 32, ap_none, p_read3, scalar</column>
+<column name="p_read5">in, 32, ap_none, p_read5, scalar</column>
+<column name="p_read6">in, 32, ap_none, p_read6, scalar</column>
+<column name="p_read7">in, 32, ap_none, p_read7, scalar</column>
+<column name="p_read24">in, 32, ap_none, p_read24, scalar</column>
+<column name="p_read35">in, 32, ap_none, p_read35, scalar</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,155 @@
+
+
+================================================================
+== Vitis HLS Report for 'operator_1_1_Pipeline_VITIS_LOOP_104_3'
+================================================================
+* Date:           Tue Feb  8 11:02:25 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        ban
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.557 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_104_3  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     108|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      54|    -|
+|Register         |        -|     -|     166|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     166|     162|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln105_fu_149_p2   |         +|   0|  0|  71|          64|           1|
+    |ap_condition_170      |       and|   0|  0|   2|           1|           1|
+    |ap_condition_174      |       and|   0|  0|   2|           1|           1|
+    |ap_condition_177      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln104_fu_144_p2  |      icmp|   0|  0|  29|          64|          64|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 108|         132|          70|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1     |   9|          2|    1|          2|
+    |base_fu_46                  |   9|          2|   64|        128|
+    |c_num_load12_fu_54          |   9|          2|   32|         64|
+    |c_num_load_218_fu_58        |   9|          2|   32|         64|
+    |num_res_assign_load6_fu_50  |   9|          2|   32|         64|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  54|         12|  162|        324|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+----+----+-----+-----------+
+    |            Name            | FF | LUT| Bits| Const Bits|
+    +----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                   |   1|   0|    1|          0|
+    |ap_done_reg                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1     |   1|   0|    1|          0|
+    |base_fu_46                  |  64|   0|   64|          0|
+    |c_num_load12_fu_54          |  32|   0|   32|          0|
+    |c_num_load_218_fu_58        |  32|   0|   32|          0|
+    |num_res_assign_load6_fu_50  |  32|   0|   32|          0|
+    |zext_ln104_6_cast_reg_219   |   3|   0|   64|         61|
+    +----------------------------+----+----+-----+-----------+
+    |Total                       | 166|   0|  227|         61|
+    +----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++---------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|  operator/.1.1_Pipeline_VITIS_LOOP_104_3|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|  operator/.1.1_Pipeline_VITIS_LOOP_104_3|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|  operator/.1.1_Pipeline_VITIS_LOOP_104_3|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|  operator/.1.1_Pipeline_VITIS_LOOP_104_3|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|  operator/.1.1_Pipeline_VITIS_LOOP_104_3|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|  operator/.1.1_Pipeline_VITIS_LOOP_104_3|  return value|
+|c_num_load_219                   |   in|   32|     ap_none|                           c_num_load_219|        scalar|
+|c_num_load13                     |   in|   32|     ap_none|                             c_num_load13|        scalar|
+|num_res_assign_load7             |   in|   32|     ap_none|                     num_res_assign_load7|        scalar|
+|zext_ln104                       |   in|    2|     ap_none|                               zext_ln104|        scalar|
+|zext_ln104_6                     |   in|    3|     ap_none|                             zext_ln104_6|        scalar|
+|c_num_load_218_out               |  out|   32|      ap_vld|                       c_num_load_218_out|       pointer|
+|c_num_load_218_out_ap_vld        |  out|    1|      ap_vld|                       c_num_load_218_out|       pointer|
+|c_num_load12_out                 |  out|   32|      ap_vld|                         c_num_load12_out|       pointer|
+|c_num_load12_out_ap_vld          |  out|    1|      ap_vld|                         c_num_load12_out|       pointer|
+|num_res_assign_load6_out         |  out|   32|      ap_vld|                 num_res_assign_load6_out|       pointer|
+|num_res_assign_load6_out_ap_vld  |  out|    1|      ap_vld|                 num_res_assign_load6_out|       pointer|
++---------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

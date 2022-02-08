@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644314539353">
+  <ports id="1" name="b9_num_2_0903_out" type="PortType" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="2" name="b9_num_1_0902_out" type="PortType" coreId="997420912" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="3" name="b9_num_0_0901_out" type="PortType" coreId="2119482256" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="49" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="50" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="56" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="57" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="59" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@ports.1"/>
+  <edges id="60" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="62" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@ports.2"/>
+  <edges id="63" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="71" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="72" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="73" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="76" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="87" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="91" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="100" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="122" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="124" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="126" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="131" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="132" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="133" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <blocks id="10" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>_ZN3BanC2EiPKf.exit499</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="2120915568" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="b9_num_1" originalName="b9.num[1]" coreId="2121191024" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="b9_num_1_1" originalName="b9.num[1]" coreId="2121191024" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="b9_num_1_2" originalName="b9.num[1]" coreId="2118883840" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_write_ln0" coreId="2121191024" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="2121193552" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <controlInputObjs>_ZN3BanC2EiPKf.exit499</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="41" name="Ban.exit102.preheader.exitStub" type="BlockType">
+    <controlInputObjs>_ZN3BanC2EiPKf.exit499</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="b9_num_1_load" coreId="2121370432" bitwidth="32" opcode="load" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="b9_num_1_1_load" coreId="1330007625" bitwidth="32" opcode="load" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="b9_num_1_2_load" coreId="2119565072" bitwidth="32" opcode="load" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="b9_num_2_0903_out_write_ln0" coreId="2121370432" opcode="write" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>b9_num_2_0903_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="b9_num_1_0902_out_write_ln0" coreId="1397508187" opcode="write" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>b9_num_1_0902_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="b9_num_0_0901_out_write_ln0" coreId="2119648752" opcode="write" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>b9_num_0_0901_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln0" coreId="2120876608" opcode="ret" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="142" pipe_depth="1" RegionName="VITIS_LOOP_21_1">
+    <basic_blocks id="17" name="_ZN3BanC2EiPKf.exit499" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.split.i101498</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>Ban.exit102.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split.i101</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="i_47" lineNumber="21" originalName="i" fileName="../src/ban.cpp" fileDirectory=".." coreId="2118883840" contextFuncName="init" bitwidth="2" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="21" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>mux</dataOutputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="icmp_ln21" lineNumber="21" fileName="../src/ban.cpp" fileDirectory=".." rtlName="icmp_ln21_fu_85_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="init" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.44" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="21" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="add_ln21" lineNumber="21" fileName="../src/ban.cpp" fileDirectory=".." rtlName="add_ln21_fu_91_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="init" bitwidth="2" opcode="add" m_display="0" m_delay="0.54" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="21" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln21" lineNumber="21" fileName="../src/ban.cpp" fileDirectory=".." coreId="2119896560" contextFuncName="init" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="21" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.i101</controlInputObjs>
+        <controlInputObjs>Ban.exit102.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/ban.cpp">
+        <validLinenumbers>21</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="21" name=".split.i101" type="BlockType">
+      <controlInputObjs>_ZN3BanC2EiPKf.exit499</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>branch59</controlOutputObjs>
+      <controlOutputObjs>.split.i101..split.i101498_crit_edge</controlOutputObjs>
+      <controlOutputObjs>.split.i101..split.i101498_crit_edge1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="b9_num_1_4" lineNumber="22" originalName="b9.num[1]" fileName="../src/ban.cpp" fileDirectory=".." rtlName="mux_32_32_1_1_U41" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="init" bitwidth="32" opcode="mux" m_display="0" m_delay="0.47" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2121370432" contextFuncName="init" opcode="switch" m_display="0" m_delay="0.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>load</dataInputObjs>
+        <controlInputObjs>branch59</controlInputObjs>
+        <controlInputObjs>.split.i101..split.i101498_crit_edge</controlInputObjs>
+        <controlInputObjs>.split.i101..split.i101498_crit_edge1</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/ban.cpp">
+        <validLinenumbers>22</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="24" name=".split.i101..split.i101498_crit_edge1" type="BlockType">
+      <controlInputObjs>.split.i101</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split.i101498</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="b9_num_1_1_write_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2117965520" contextFuncName="init" opcode="store" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2121527312" contextFuncName="init" opcode="br" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <controlInputObjs>.split.i101498</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/ban.cpp">
+        <validLinenumbers>22</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="27" name=".split.i101..split.i101498_crit_edge" type="BlockType">
+      <controlInputObjs>.split.i101</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split.i101498</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="b9_num_1_write_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2121093136" contextFuncName="init" opcode="store" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2122656544" contextFuncName="init" opcode="br" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <controlInputObjs>.split.i101498</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/ban.cpp">
+        <validLinenumbers>22</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="30" name="branch59" type="BlockType">
+      <controlInputObjs>.split.i101</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>.split.i101498</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="b9_num_1_2_write_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2118751152" contextFuncName="init" opcode="store" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>mux</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln22" lineNumber="22" fileName="../src/ban.cpp" fileDirectory=".." coreId="2120875712" contextFuncName="init" opcode="br" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <controlInputObjs>.split.i101498</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/ban.cpp">
+        <validLinenumbers>22</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="33" name=".split.i101498" type="BlockType">
+      <controlInputObjs>.split.i101..split.i101498_crit_edge1</controlInputObjs>
+      <controlInputObjs>.split.i101..split.i101498_crit_edge</controlInputObjs>
+      <controlInputObjs>branch59</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN3BanC2EiPKf.exit499</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="i_write_ln21" lineNumber="21" fileName="../src/ban.cpp" fileDirectory=".." coreId="2119351312" contextFuncName="init" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/ban.cpp" linenumber="21" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="init"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln0" coreId="542329928" opcode="br" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <controlInputObjs>_ZN3BanC2EiPKf.exit499</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/ban.cpp">
+        <validLinenumbers>21</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="b9_num_1_reg_148">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_141">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="b9_num_1_1_reg_154">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="b9_num_1_2_reg_160">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <expressionNodes realName="add_ln21_fu_91">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln21_fu_85">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_40">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b9_num_1_fu_44">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b9_num_1_1_fu_48">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b9_num_1_2_fu_52">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b9_num_1_4_fu_97">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="b9_num_1_2_load_load_fu_137">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b9_num_1_load_load_fu_129">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_63">
+    <nodeIds>38</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b9_num_1_1_load_load_fu_133">
+    <nodeIds>35</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln22_store_fu_114">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln21_store_fu_124">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln22_store_fu_109">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_70">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln22_store_fu_119">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_47_load_fu_82">
+    <nodeIds>11</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_56">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_77">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioPorts name="b9_num_0_0901_out">
+    <contents name="write">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b9_num_1_0902_out">
+    <contents name="write">
+      <nodeIds>38</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b9_num_2_0903_out">
+    <contents name="write">
+      <nodeIds>37</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="main_Pipeline_VITIS_LOOP_21_133" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="5" mMaxLatency="5">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>10</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_21_1" mII="1" mDepth="1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="3" mMaxLatency="3" mType="1">
+      <basicBlocks>17</basicBlocks>
+      <basicBlocks>21</basicBlocks>
+      <basicBlocks>24</basicBlocks>
+      <basicBlocks>27</basicBlocks>
+      <basicBlocks>30</basicBlocks>
+      <basicBlocks>33</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

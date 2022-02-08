@@ -40635,9 +40635,10 @@ class Ban{
  static Ban _sum(const Ban &a, const Ban &b, int diff_p);
  static void _div_body(const T num_num[3], const T num_den[3], T num_res[3]);
  static void _mul(const T num_a[3], const T num_b[3], T num_res[3]);
+ static void _mul_conv(const T num_a[3], const T num_b[3], T aux[]);
  static void _mul_overwriting(T num[3], const T num_aux[3]);
  static inline void _mul_trivial(const T num_a[3], T n, T num_res[3])
-          {VITIS_LOOP_33_1: for(unsigned i=0; i<3; ++i)
+          {VITIS_LOOP_34_1: for(unsigned i=0; i<3; ++i)
            num_res[i] = num_a[i]*n;};
 
 
@@ -40645,22 +40646,17 @@ class Ban{
  void init(int p, const T num[3]);
 
 
- typedef void (Ban::*bool_type)() const;
-    void this_type_does_not_support_comparisons() const {}
+
+
+
 
  public:
 
 
+ Ban(){};
  Ban(int p, const T num[3]);
  Ban(T n);
-
-
-
- inline operator bool_type() const {
-      return num[0] ? &Ban::this_type_does_not_support_comparisons : 0;
-    };
-
-
+# 60 "../test/../src/ban.h"
  Ban operator+(const Ban &b) const;
  Ban operator-() const;
  inline Ban operator-(const Ban &b) const {return *this+(-b);};
@@ -40760,44 +40756,90 @@ __attribute__((sdx_kernel("main", 0))) int main(){
     Ban b10(0, v10);
     T v11[] = {5.31606, 6.39979, 1.65974};
     Ban b11(0, v11);
-    T v12[] = {8.29201, -2.28968, 3.5036};
-    Ban b12(-1, v12);
-    T v13[] = {6.57304, 4.3956, 3.98437};
-    Ban b13(-1, v13);
-    T v14[] = {6.57304, 4.3956, 3.98437};
-    Ban b14(-1, v14);
-    T v15[] = {-9.50252, 1.4766, 6.41081};
-    Ban b15(2, v15);
-    T v16[] = {-7.86002, -4.47034, -1.87533};
-    Ban b16(0, v16);
-    T v17[] = {-1.69607, 1.03171, -4.95444};
-    Ban b17(0, v17);
-    T v18[] = {-1.69607, 1.03171, -4.95444};
-    Ban b18(0, v18);
-    T v19[] = {-7.49771, -2.9416, -5.84488};
-    Ban b19(0, v19);
 
     Ban r0(4.23);
     Ban r1(-0.12);
 
-    Ban b[20] = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10,
-                 b11,b12,b13,b14,b15,b16,b17,b18,b19};
-    T v[20] = { 0.12206904275516295, 0.28799600890478416,
+    Ban b[12] = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10,
+                 b11};
+    T v[12] = { 0.12206904275516295, 0.28799600890478416,
                 0.14322700970458468, 0.9063116229386647,
                 0.49329425660064974, 0.9727821857683874,
                 0.4195340242501362, 0.9549555667212839,
                 0.08883873678021437, 0.8672012452748497,
-                0.6995445401636919, 0.1466392244069572,
-                0.2160444333910696, 0.5710901724473414,
-                0.1439315407501347, 0.0037679553251768194,
-                0.36171314571174906, 0.5664475539609168,
-                0.4303275119956622, 0.21353333663835938};
+                0.6995445401636919, 0.1466392244069572};
 
-    Ban bb = b[1]+b[2];
-    Ban bb1 = b[1]*b[2];
-    Ban bb2 = b[1]/b[2];
-    Ban bb3 = b[1]+b[0];
-    Ban bb4 = b[1]/b[0];
-# 135 "../test/vivado_main.cpp"
+    Ban r[2131];
+    VITIS_LOOP_45_1: for(unsigned i=0; i<2131; ++i)
+     r[i] = 0;
+
+    unsigned idx = 0;
+
+    VITIS_LOOP_50_2: for(unsigned i=0; i<10; ++i){
+        r[idx++] = abs(b[i]);
+        r[idx++] = sqrt(b[i]);
+
+        VITIS_LOOP_54_3: for(unsigned j=i+1; j<11; ++j){
+            r[idx++] = b[i]+b[j];
+            r[idx++] = b[i]-b[j];
+            r[idx++] = b[i]*b[j];
+            r[idx++] = b[i]/b[j];
+            r[idx++] = b[i]==b[j];
+            r[idx++] = b[i]<b[j];
+
+            r[idx++] = b[i]+v[j];
+            r[idx++] = b[i]-v[j];
+            r[idx++] = b[i]*v[j];
+            r[idx++] = b[i]/v[j];
+            r[idx++] = v[j]/b[i];
+            r[idx++] = b[i]==v[j];
+            r[idx++] = b[i]<v[j];
+
+            r[idx++] = b[i]+=b[j+1];
+            r[idx++] = b[i]-=b[j+1];
+            r[idx++] = b[i]*=b[j+1];
+            r[idx++] = b[i]/=b[j+1];
+
+            r[idx++] = b[i]+=v[j+1];
+            r[idx++] = b[i]-=v[j+1];
+            r[idx++] = b[i]*=v[j+1];
+            r[idx++] = b[i]/=v[j+1];
+        }
+    }
+
+
+    T v1500[] = {-5.74785e-37, -1.78091e-38, -1.9105e-38};
+    Ban b1500(0, v1500);
+    T v1501[] = {-5.74785e-37, 8.63334e-37, 3.03011e-38};
+    Ban b1501(0, v1501);
+    T v1502[] = {-1.70461e-38, -2.92053e+3, -1.34118e+8};
+    Ban b1502(2, v1502);
+
+    r[idx++] = b1500*b1501;
+    r[idx++] = b1500*=b1502;
+
+    T v1503[] = {2.94887e+38, 7.73246e+37, -2.95885e+38};
+    Ban b1503(1, v1503);
+
+    r[idx++] = 1e-3/b1503;
+    r[idx++] = b1502/b1503;
+
+
+
+    r[idx++] = b3+ZERO;
+    r[idx++] = b7/=b7;
+    r[idx++] = b8*=b8;
+    r[idx++] = 0+b4;
+    r[idx++] = b5*=0;
+    r[idx++] = ZERO*b6;
+    r[idx++] = ZERO/b1;
+
+    Ban f = 0, tmp;
+
+    VITIS_LOOP_111_4: for(unsigned i=0; i<2131; ++i){
+     tmp = f+r[i];
+     f = tmp;
+    }
+
     return 0;
 }

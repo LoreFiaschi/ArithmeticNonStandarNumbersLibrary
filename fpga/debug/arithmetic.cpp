@@ -18,6 +18,9 @@ int main(){
     Ban b2(0, v2);
 //    cout<<b2<<endl;
 
+    cout<<(pow(b1,4))<<endl;
+
+/*
     cout<<b1/b2<<endl;
     b1 /= b2;
     cout<<b1<<endl;

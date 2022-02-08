@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644314539701">
+  <ports id="1" name="r_num" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="6393">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="r_p" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="2131">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="43" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="44" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="45" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="48" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="51" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="52" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="53" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@ports.0"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@ports.0"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@ports.1"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="98" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="120" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="122" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="123" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="124" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <blocks id="6" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>block_13</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i_28" originalName="i" coreId="0" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i_28_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_13</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="37" name=".preheader1043.preheader.exitStub" type="BlockType">
+    <controlInputObjs>block_13</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="_ln0" coreId="2123003696" opcode="ret" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" iiViolation="Resource Limitation;mFailedII=1;mDependenceDistancedII=-1;mLimitedResource=1;nodes=32__core/RAM/r_num//load/store,30__core/RAM/r_num//load/store,31__;" id="141" pipe_depth="2" RegionName="VITIS_LOOP_45_1">
+    <basic_blocks id="13" name="block_13" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.split151</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader1043.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split151</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" lineNumber="46" originalName="i" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="0" contextFuncName="main" bitwidth="12" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="icmp_ln45" lineNumber="45" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="icmp_ln45_fu_101_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="main" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.97" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="45" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="add_ln45" lineNumber="45" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="add_ln45_fu_107_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="main" bitwidth="12" opcode="add" m_display="0" m_delay="0.8" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="45" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="br_ln45" lineNumber="45" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="0" contextFuncName="main" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="45" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split151</controlInputObjs>
+        <controlInputObjs>.preheader1043.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../test/vivado_main.cpp">
+        <validLinenumbers>46</validLinenumbers>
+        <validLinenumbers>45</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="35" name=".split151" type="BlockType">
+      <controlInputObjs>block_13</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_13</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_28_cast" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="i_28_cast_fu_113_p1" coreId="2123504032" contextFuncName="main" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="zext_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="zext_ln46_fu_118_p1" coreId="2122994048" contextFuncName="main" bitwidth="13" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="trunc_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="trunc_ln46_fu_122_p1" coreId="2122851984" contextFuncName="main" bitwidth="11" opcode="trunc" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tmp_146_cast" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="tmp_146_cast_fu_126_p3" coreId="2122828448" contextFuncName="main" bitwidth="13" opcode="bitconcatenate" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sub_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="sub_ln46_fu_134_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="main" bitwidth="13" opcode="sub" m_display="0" m_delay="0.82" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln46_1" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="zext_ln46_1_fu_140_p1" coreId="2117984544" contextFuncName="main" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="r_num_addr" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="2117983984" contextFuncName="main" bitwidth="13" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>r_num</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="add_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="add_ln46_fu_145_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="main" bitwidth="13" opcode="add" m_display="0" m_delay="0.82" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="zext_ln46_2" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="zext_ln46_2_fu_151_p1" coreId="2117984544" contextFuncName="main" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="r_num_addr_1" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="2122030672" contextFuncName="main" bitwidth="13" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>r_num</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="add_ln46_1" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="add_ln46_1_fu_161_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="main" bitwidth="13" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.82" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln46_3" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." rtlName="zext_ln46_3_fu_166_p1" coreId="320" contextFuncName="main" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="r_num_addr_2" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="2117984544" contextFuncName="main" bitwidth="13" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>r_num</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="r_p_addr" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="2123459536" contextFuncName="main" bitwidth="12" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>r_p</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="r_p_addr_write_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="main" opcode="store" m_display="0" m_delay="1.23" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="r_num_addr_write_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="main" opcode="store" m_display="0" m_delay="1.23" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="r_num_addr_1_write_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="main" opcode="store" m_display="0" m_delay="1.23" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="r_num_addr_2_write_ln46" lineNumber="46" fileName="../test/vivado_main.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="main" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.23" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="46" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="i_28_write_ln45" lineNumber="45" fileName="../test/vivado_main.cpp" fileDirectory=".." coreId="2121596064" contextFuncName="main" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../test/vivado_main.cpp" linenumber="45" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="main"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln0" coreId="2122499216" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_13</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../test/vivado_main.cpp">
+        <validLinenumbers>46</validLinenumbers>
+        <validLinenumbers>45</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="i_28_reg_171">
+    <nodeIds>3</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_ln46_reg_181">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <expressionNodes realName="zext_ln46_2_fu_151">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln46_1_fu_140">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln46_1_fu_161">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_28_fu_40">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_p_addr_gep_fu_58">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln46_fu_118">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln45_fu_107">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_28_cast_fu_113">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln46_fu_122">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln46_fu_134">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln46_fu_145">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_146_cast_fu_126">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln45_fu_101">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_num_addr_1_gep_fu_51">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_num_addr_2_gep_fu_85">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln46_3_fu_166">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_num_addr_gep_fu_44">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_93">
+    <nodeIds>4</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_load_fu_98">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln45_store_fu_156">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="r_num">
+    <nodeIds>31</nodeIds>
+    <nodeIds>32</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="r_num" portID="1">
+    <nodeIds>30</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="r_p">
+    <nodeIds>29</nodeIds>
+  </memoryPorts>
+  <ioPorts name="r_num(p0)">
+    <contents name="store">
+      <nodeIds>31</nodeIds>
+      <nodeIds>32</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="r_num(p1)">
+    <contents name="store">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="r_p(p0)">
+    <contents name="store">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="main_Pipeline_VITIS_LOOP_45_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4264" mMaxLatency="4264">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>6</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_45_1" mII="2" mDepth="2" mMinTripCount="2131" mMaxTripCount="2131" mMinLatency="4262" mMaxLatency="4262" mType="1">
+      <basicBlocks>13</basicBlocks>
+      <basicBlocks>35</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>37</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -187,7 +187,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.81904702" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-O2 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.81904702" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.847037008" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -221,7 +221,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.548997179" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-O2 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.548997179" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2057614613" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -407,7 +407,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.1007429234" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-O2 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.1007429234" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1506194917" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -441,7 +441,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.512774109" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-O2 -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.512774109" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.37869790" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						

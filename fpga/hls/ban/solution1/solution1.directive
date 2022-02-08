@@ -5,11 +5,6 @@
                 <option name="name" value="main"/>
             </pragma>
         </directive>
-        <directive functionName="main" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="main"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

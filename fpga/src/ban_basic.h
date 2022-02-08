@@ -40,6 +40,7 @@ class Ban{
 	public:
 	
 	// constructors
+	Ban(){};
 	Ban(int p, const T num[SIZE]);
 	Ban(T n);
 

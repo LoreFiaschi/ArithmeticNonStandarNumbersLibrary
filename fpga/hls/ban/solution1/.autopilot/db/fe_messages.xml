@@ -1,69 +1,414 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="" msg_id="207-997" msg_severity="WARNING" msg_loc="../test/vivado_main.cpp:108:1" msg_body="'/*' within block comment">
-        <args ClangWarningOption="comment"/>
-    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../test/vivado_main.cpp:5:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="main" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=main" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="" msg_id="207-5287" msg_severity="WARNING" msg_loc="../src/ban.cpp:26:38" msg_body="unused parameter 'check'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:113:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:115:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="_sum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:154:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:158:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator-" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:170:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="_mul" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:171:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="_mul_conv" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:209:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:221:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:218:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:230:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:225:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:237:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:242:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:254:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="_div_body" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:315:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:326:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator+=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:332:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="_mul_overwriting" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:603:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:608:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sqrt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:613:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:618:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sqrt" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:671:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:677:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator*" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:693:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:699:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator/" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:737:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:743:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator*=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:758:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:764:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator/=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:792:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:798:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator/" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:801:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:807:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator/" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:808:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:814:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator/" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:825:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/ban.cpp:831:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="operator/" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Unrolling loop 'VITIS_LOOP_114_1' (../src/ban.cpp:114:20) in function 'Ban::_sum' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:114:20" LoopName="VITIS_LOOP_114_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Unrolling loop 'VITIS_LOOP_830_6' (../src/ban.cpp:830:20) in function 'operator/' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:830:20" LoopName="VITIS_LOOP_830_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Unrolling loop 'VITIS_LOOP_806_4' (../src/ban.cpp:806:21) in function 'operator/' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:806:21" LoopName="VITIS_LOOP_806_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Unrolling loop 'VITIS_LOOP_813_5' (../src/ban.cpp:813:21) in function 'operator/' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:813:21" LoopName="VITIS_LOOP_813_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Unrolling loop 'VITIS_LOOP_797_2' (../src/ban.cpp:797:20) in function 'operator/' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:797:20" LoopName="VITIS_LOOP_797_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:753:0" msg_body="Unrolling loop 'VITIS_LOOP_763_1' (../src/ban.cpp:763:20) in function 'Ban::operator/=' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:763:20" LoopName="VITIS_LOOP_763_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:735:0" msg_body="Unrolling loop 'VITIS_LOOP_742_1' (../src/ban.cpp:742:20) in function 'Ban::operator*=' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:742:20" LoopName="VITIS_LOOP_742_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:284:0" msg_body="Unrolling loop 'VITIS_LOOP_325_3' (../src/ban.cpp:325:21) in function 'Ban::operator+=' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:325:21" LoopName="VITIS_LOOP_325_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:687:0" msg_body="Unrolling loop 'VITIS_LOOP_698_1' (../src/ban.cpp:698:20) in function 'Ban::operator/' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:698:20" LoopName="VITIS_LOOP_698_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:667:0" msg_body="Unrolling loop 'VITIS_LOOP_676_1' (../src/ban.cpp:676:20) in function 'Ban::operator*' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:676:20" LoopName="VITIS_LOOP_676_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_253_6' (../src/ban.cpp:253:20) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:253:20" LoopName="VITIS_LOOP_253_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_229_4' (../src/ban.cpp:229:21) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:229:21" LoopName="VITIS_LOOP_229_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_236_5' (../src/ban.cpp:236:21) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:236:21" LoopName="VITIS_LOOP_236_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:211:0" msg_body="Unrolling loop 'VITIS_LOOP_220_2' (../src/ban.cpp:220:20) in function 'Ban::_div_body' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:220:20" LoopName="VITIS_LOOP_220_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:548:0" msg_body="Unrolling loop 'VITIS_LOOP_617_3' (../src/ban.cpp:617:20) in function 'sqrt' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:617:20" LoopName="VITIS_LOOP_617_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:548:0" msg_body="Unrolling loop 'VITIS_LOOP_607_2' (../src/ban.cpp:607:22) in function 'sqrt' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:607:22" LoopName="VITIS_LOOP_607_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:166:0" msg_body="Unrolling loop 'VITIS_LOOP_170_2' (../src/ban.cpp:170:21) in function 'Ban::_mul_conv' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:170:21" LoopName="VITIS_LOOP_170_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/ban.cpp:154:0" msg_body="Unrolling loop 'VITIS_LOOP_157_1' (../src/ban.cpp:157:20) in function 'Ban::operator-' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../src/ban.cpp:157:20" LoopName="VITIS_LOOP_157_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:30:0" msg_body="Inlining function 'Ban::init(int, float const*) (.24)' into 'Ban::Ban(int, float const*) (.61)'">
+        <args Callee="Ban::init(int, float const*) (.24)" Caller="Ban::Ban(int, float const*) (.61)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:30:0" msg_body="Inlining function 'Ban::init(int, float const*)' into 'Ban::Ban(int, float const*)'">
+        <args Callee="Ban::init(int, float const*)" Caller="Ban::Ban(int, float const*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:541:0" msg_body="Inlining function 'Ban::operator-() const' into 'abs(Ban const&amp;)'">
+        <args Callee="Ban::operator-() const" Caller="abs(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:182:0" msg_body="Inlining function 'Ban::_mul_conv(float const*, float const*, float*)' into 'Ban::_mul(float const*, float const*, float*)'">
+        <args Callee="Ban::_mul_conv(float const*, float const*, float*)" Caller="Ban::_mul(float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:548:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'sqrt(Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:548:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'sqrt(Ban const&amp;)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:548:0" msg_body="Inlining function 'std::sqrt(float)' into 'sqrt(Ban const&amp;)'">
+        <args Callee="std::sqrt(float)" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:548:0" msg_body="Inlining function 'Ban::Ban(int, float const*) (.61)' into 'sqrt(Ban const&amp;)'">
+        <args Callee="Ban::Ban(int, float const*) (.61)" Caller="sqrt(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator+(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.39)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.39)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.42)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.42)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.39)' into 'Ban::operator+(Ban const&amp;) const (.3)'">
+        <args Callee="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.39)" Caller="Ban::operator+(Ban const&amp;) const (.3)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/../src/ban.h:62:0" msg_body="Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&amp;) const'">
+        <args Callee="Ban::operator-() const" Caller="Ban::operator-(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:26:0" msg_body="Inlining function 'Ban::init(int, float const*) (.24)' into 'Ban::Ban(int, float const*, bool) (.21)'">
+        <args Callee="Ban::init(int, float const*) (.24)" Caller="Ban::Ban(int, float const*, bool) (.21)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&amp;) const (.54)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::mul_body(Ban const&amp;) const (.54)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.21)' into 'Ban::mul_body(Ban const&amp;) const (.54)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.21)" Caller="Ban::mul_body(Ban const&amp;) const (.54)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::mul_body(Ban const&amp;) const (.54)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::mul_body(Ban const&amp;) const (.54)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:203:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator*(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator*(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::_div_body(float const*, float const*, float*)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::_div_body(float const*, float const*, float*)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&amp;) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(Ban const&amp;) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:639:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator+(float) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:639:0" msg_body="Inlining function 'Ban::sum_infinitesimal_real(float*, float) const' into 'Ban::operator+(float) const'">
+        <args Callee="Ban::sum_infinitesimal_real(float*, float) const" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:639:0" msg_body="Inlining function 'Ban::Ban(int, float const*) (.61)' into 'Ban::operator+(float) const'">
+        <args Callee="Ban::Ban(int, float const*) (.61)" Caller="Ban::operator+(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:667:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator*(float) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator*(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:687:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/(float) const'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:687:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(float) const'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(float) const"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.21)' into 'operator/(float, Ban const&amp;)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.21)" Caller="operator/(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::_mul_trivial(float const*, float, float*)' into 'operator/(float, Ban const&amp;)'">
+        <args Callee="Ban::_mul_trivial(float const*, float, float*)" Caller="operator/(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'operator/(float, Ban const&amp;)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="operator/(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'operator/(float, Ban const&amp;)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="operator/(float, Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:284:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator+=(Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator+=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:284:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator+=(Ban const&amp;)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator+=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:284:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator+=(Ban const&amp;) (.27)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator+=(Ban const&amp;) (.27)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:284:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+=(Ban const&amp;) (.27)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator+=(Ban const&amp;) (.27)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:284:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator+=(Ban const&amp;) (.27)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator+=(Ban const&amp;) (.27)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/../src/ban.h:66:0" msg_body="Inlining function 'Ban::operator-() const' into 'Ban::operator-=(Ban const&amp;)'">
+        <args Callee="Ban::operator-() const" Caller="Ban::operator-=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/../src/ban.h:66:0" msg_body="Inlining function 'Ban::operator+=(Ban const&amp;) (.27)' into 'Ban::operator-=(Ban const&amp;)'">
+        <args Callee="Ban::operator+=(Ban const&amp;) (.27)" Caller="Ban::operator-=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:349:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator*=(Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator*=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:349:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::operator*=(Ban const&amp;)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::operator*=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:349:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator*=(Ban const&amp;)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator*=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:376:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/=(Ban const&amp;)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:376:0" msg_body="Inlining function 'Ban::_div_body(float const*, float const*, float*)' into 'Ban::operator/=(Ban const&amp;)'">
+        <args Callee="Ban::_div_body(float const*, float const*, float*)" Caller="Ban::operator/=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:376:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator/=(Ban const&amp;)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator/=(Ban const&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:709:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator+=(float)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator+=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:709:0" msg_body="Inlining function 'Ban::sum_infinitesimal_real(float*, float) const' into 'Ban::operator+=(float)'">
+        <args Callee="Ban::sum_infinitesimal_real(float*, float) const" Caller="Ban::operator+=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/../src/ban.h:93:0" msg_body="Inlining function 'Ban::operator+=(float)' into 'Ban::operator-=(float)'">
+        <args Callee="Ban::operator+=(float)" Caller="Ban::operator-=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:735:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator*=(float)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator*=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:753:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/=(float)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:753:0" msg_body="Inlining function 'Ban::to_normal_form()' into 'Ban::operator/=(float)'">
+        <args Callee="Ban::to_normal_form()" Caller="Ban::operator/=(float)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&amp;) const (.54.76)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::mul_body(Ban const&amp;) const (.54.76)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.21)' into 'Ban::mul_body(Ban const&amp;) const (.54.76)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.21)" Caller="Ban::mul_body(Ban const&amp;) const (.54.76)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::mul_body(Ban const&amp;) const (.54.76)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::mul_body(Ban const&amp;) const (.54.76)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:203:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator*(Ban const&amp;) const (.51.73)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator*(Ban const&amp;) const (.51.73)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:203:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator*(Ban const&amp;) const (.51.73)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator*(Ban const&amp;) const (.51.73)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.21)' into 'operator/(float, Ban const&amp;) (.64)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.21)" Caller="operator/(float, Ban const&amp;) (.64)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::_mul_trivial(float const*, float, float*)' into 'operator/(float, Ban const&amp;) (.64)'">
+        <args Callee="Ban::_mul_trivial(float const*, float, float*)" Caller="operator/(float, Ban const&amp;) (.64)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'operator/(float, Ban const&amp;) (.64)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="operator/(float, Ban const&amp;) (.64)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:775:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'operator/(float, Ban const&amp;) (.64)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="operator/(float, Ban const&amp;) (.64)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'Ban::operator/(Ban const&amp;) const (.48.70)'">
+        <args Callee="Ban::operator==(float) const" Caller="Ban::operator/(Ban const&amp;) const (.48.70)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::_div_body(float const*, float const*, float*)' into 'Ban::operator/(Ban const&amp;) const (.48.70)'">
+        <args Callee="Ban::_div_body(float const*, float const*, float*)" Caller="Ban::operator/(Ban const&amp;) const (.48.70)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&amp;) const (.48.70)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(Ban const&amp;) const (.48.70)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:110:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.39.98)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::_sum(Ban const&amp;, Ban const&amp;, int) (.33.39.98)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:129:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&amp;) const (.30.95)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator+(Ban const&amp;) const (.30.95)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:639:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator+(float) const (.102)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator+(float) const (.102)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:639:0" msg_body="Inlining function 'Ban::sum_infinitesimal_real(float*, float) const (.105)' into 'Ban::operator+(float) const (.102)'">
+        <args Callee="Ban::sum_infinitesimal_real(float*, float) const (.105)" Caller="Ban::operator+(float) const (.102)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:639:0" msg_body="Inlining function 'Ban::Ban(int, float const*) (.61)' into 'Ban::operator+(float) const (.102)'">
+        <args Callee="Ban::Ban(int, float const*) (.61)" Caller="Ban::operator+(float) const (.102)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&amp;) const (.54.76.115)'">
+        <args Callee="Ban::_mul(float const*, float const*, float*)" Caller="Ban::mul_body(Ban const&amp;) const (.54.76.115)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::Ban(int, float const*, bool) (.21)' into 'Ban::mul_body(Ban const&amp;) const (.54.76.115)'">
+        <args Callee="Ban::Ban(int, float const*, bool) (.21)" Caller="Ban::mul_body(Ban const&amp;) const (.54.76.115)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:191:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::mul_body(Ban const&amp;) const (.54.76.115)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::mul_body(Ban const&amp;) const (.54.76.115)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:203:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator*(Ban const&amp;) const (.51.73.112)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator*(Ban const&amp;) const (.51.73.112)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator/(Ban const&amp;) const (.48.70.108)'">
+        <args Callee="Ban::operator==(float) const (.12)" Caller="Ban::operator/(Ban const&amp;) const (.48.70.108)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::_div_body(float const*, float const*, float*)' into 'Ban::operator/(Ban const&amp;) const (.48.70.108)'">
+        <args Callee="Ban::_div_body(float const*, float const*, float*)" Caller="Ban::operator/(Ban const&amp;) const (.48.70.108)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/ban.cpp:260:0" msg_body="Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&amp;) const (.48.70.108)'">
+        <args Callee="Ban::to_normal_form() (.18)" Caller="Ban::operator/(Ban const&amp;) const (.48.70.108)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::Ban(int, float const*)' into 'main'">
+        <args Callee="Ban::Ban(int, float const*)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'abs(Ban const&amp;)' into 'main'">
+        <args Callee="abs(Ban const&amp;)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator-(Ban const&amp;) const' into 'main'">
+        <args Callee="Ban::operator-(Ban const&amp;) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator*(Ban const&amp;) const' into 'main'">
+        <args Callee="Ban::operator*(Ban const&amp;) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator==(Ban const&amp;) const' into 'main'">
+        <args Callee="Ban::operator==(Ban const&amp;) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::Ban(float)' into 'main'">
+        <args Callee="Ban::Ban(float)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator&lt;(Ban const&amp;) const' into 'main'">
+        <args Callee="Ban::operator&lt;(Ban const&amp;) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator-(float) const' into 'main'">
+        <args Callee="Ban::operator-(float) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator*(float) const' into 'main'">
+        <args Callee="Ban::operator*(float) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator==(float) const' into 'main'">
+        <args Callee="Ban::operator==(float) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator&lt;(float) const' into 'main'">
+        <args Callee="Ban::operator&lt;(float) const" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator+=(Ban const&amp;)' into 'main'">
+        <args Callee="Ban::operator+=(Ban const&amp;)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator-=(Ban const&amp;)' into 'main'">
+        <args Callee="Ban::operator-=(Ban const&amp;)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator*=(Ban const&amp;)' into 'main'">
+        <args Callee="Ban::operator*=(Ban const&amp;)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator/=(Ban const&amp;)' into 'main'">
+        <args Callee="Ban::operator/=(Ban const&amp;)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator+=(float)' into 'main'">
+        <args Callee="Ban::operator+=(float)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator-=(float)' into 'main'">
+        <args Callee="Ban::operator-=(float)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator*=(float)' into 'main'">
+        <args Callee="Ban::operator*=(float)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator/=(float)' into 'main'">
+        <args Callee="Ban::operator/=(float)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator*(Ban const&amp;) const (.51.73)' into 'main'">
+        <args Callee="Ban::operator*(Ban const&amp;) const (.51.73)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'operator+(float, Ban const&amp;)' into 'main'">
+        <args Callee="operator+(float, Ban const&amp;)" Caller="main"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../test/vivado_main.cpp:4:0" msg_body="Inlining function 'Ban::operator*(Ban const&amp;) const (.51.73.112)' into 'main'">
+        <args Callee="Ban::operator*(Ban const&amp;) const (.51.73.112)" Caller="main"/>
     </msg>
 </xilinx:hls_fe_msgs>
 
