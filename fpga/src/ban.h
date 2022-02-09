@@ -10,7 +10,7 @@ typedef float T;     // generates inaccuracies in division proportional to 1e-6
 #define SIZE 3
 #define EVEN_SIZE !(SIZE & 1u)
 // coefficients of the sqrt(1-x) taylor expansion (required for sqrt)
-constexpr T sqrt_exp[5] = {-0.125, -0.0625, -7*0.03125, -21*0.015625};
+constexpr T sqrt_exp[4] = {-0.125, -0.0625, -7*0.03125, -21*0.015625};
 
 union output;
 

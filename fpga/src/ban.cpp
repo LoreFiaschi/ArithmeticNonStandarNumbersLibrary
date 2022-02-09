@@ -430,7 +430,7 @@ Ban sqrt(const Ban &b){
 		throw domain_error("Square root of negative number cannot be computed.");
 
 	if(b.p & 1u)
-		throw domain_error("Impossibile to compute square root of odd magnitude Ban.");
+		throw domain_error("Impossible to compute square root of odd magnitude Ban.");
 	#endif
 
 	if(b == 0 || b == 1)  // b == 0

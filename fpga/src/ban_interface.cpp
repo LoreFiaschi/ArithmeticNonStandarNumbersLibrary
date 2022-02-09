@@ -1,4 +1,5 @@
-#include "ban.h"
+//#include "ban.h"
+#include "ban_s3.h"
 
 output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
 

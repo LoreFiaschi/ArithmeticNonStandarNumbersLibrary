@@ -3,7 +3,8 @@
 #include <limits>
 #include <cstdlib>
 #include <cmath>
-#include "../src/ban.h"
+#include "../src/ban_s3.h"
+//#include "../src/ban.h"
 //#include "../src/ban_basic.h"
 using namespace std;
 
@@ -18,7 +19,7 @@ int main(){
     Ban b2(0, v2);
 //    cout<<b2<<endl;
 
-    cout<<(pow(b1,4))<<endl;
+//    cout<<(pow(b1,4))<<endl;
 
 /*
     cout<<b1/b2<<endl;
@@ -28,8 +29,8 @@ int main(){
     cout<<b1/b1<<endl;
     b1/= b1;
     cout<<b1<<endl;
-/*
-/*
+*/
+
     cout<<endl<<"Equality with real"<<endl;
     cout<<(b1==0)<<endl;
 
@@ -102,7 +103,7 @@ int main(){
 
     cout<<b8/b8<<endl;
 
-/*
+
     cout<<b8+3<<endl;
     b8+=3;
     cout<<b8<<endl;
@@ -127,7 +128,7 @@ int main(){
     b9/=3;
     cout<<b9<<endl;
 
-/*
+
     cout<<endl<<"Algebraic operations with reals"<<endl;
     cout<<b1-3<<endl;
     cout<<-1+b1<<endl;
@@ -147,13 +148,13 @@ int main(){
     Ban s = sqrt(b10);
     cout<<s<<endl;
     cout<<s*s<<endl;
-
+/*
     cout<<endl<<"Test pow"<<endl;
     cout<<pow(b2,2)<<endl;
     cout<<pow(b2,-2)<<endl;
     cout<<pow(b6,5)<<endl;
     cout<<pow(b9,-3)<<endl;
-
+*/
 	/*
     cout<<endl<<"Test scrittura Ban"<<endl;
     ofstream ff;
