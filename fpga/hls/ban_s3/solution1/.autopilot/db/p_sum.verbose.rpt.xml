@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'p_sum'" level="0">
-<item name = "Date">Wed Feb  9 15:34:39 2022
+<item name = "Date">Wed Feb  9 16:08:41 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">ban_s3</item>
@@ -61,12 +61,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U89">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U90">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U91">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U92">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U93">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U94">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U21">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U22">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U23">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U24">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U25">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U26">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -84,20 +84,20 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln58_fu_478_p2">+, 0, 0, 39, 32, 32</column>
-<column name="and_ln32_10_fu_461_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln32_9_fu_360_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln32_4_fu_360_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln32_5_fu_461_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln32_fu_254_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln35_18_fu_365_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln35_12_fu_365_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln35_fu_301_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln43_14_fu_377_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln43_15_fu_383_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln43_8_fu_377_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln43_9_fu_383_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln43_fu_348_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln58_fu_201_p2">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln32_15_fu_242_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln32_8_fu_242_p2">icmp, 0, 0, 16, 23, 1</column>
 <column name="icmp_ln32_fu_236_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln35_15_fu_289_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln35_8_fu_289_p2">icmp, 0, 0, 16, 23, 1</column>
 <column name="icmp_ln35_fu_283_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln43_15_fu_336_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln43_8_fu_336_p2">icmp, 0, 0, 16, 23, 1</column>
 <column name="icmp_ln43_fu_330_p2">icmp, 0, 0, 11, 8, 2</column>
 <column name="icmp_ln58_1_fu_195_p2">icmp, 0, 0, 8, 2, 3</column>
 <column name="icmp_ln58_2_fu_207_p2">icmp, 0, 0, 8, 2, 3</column>
@@ -105,15 +105,15 @@
 <column name="icmp_ln58_fu_189_p2">icmp, 0, 0, 8, 2, 1</column>
 <column name="or_ln32_fu_248_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln35_fu_295_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln43_13_fu_434_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln43_8_fu_434_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln43_fu_342_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln58_1_fu_497_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln58_fu_466_p2">or, 0, 0, 2, 1, 1</column>
-<column name="c_p_11_fu_503_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln35_8_fu_408_p3">select, 0, 0, 32, 1, 32</column>
+<column name="c_p_14_fu_503_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln35_3_fu_408_p3">select, 0, 0, 32, 1, 32</column>
 <column name="select_ln35_fu_371_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln43_31_fu_414_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln43_32_fu_440_p3">select, 0, 0, 32, 1, 1</column>
+<column name="select_ln43_21_fu_414_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln43_22_fu_440_p3">select, 0, 0, 32, 1, 1</column>
 <column name="select_ln43_fu_389_p3">select, 0, 0, 32, 1, 32</column>
 <column name="select_ln58_1_fu_402_p3">select, 0, 0, 32, 1, 32</column>
 <column name="select_ln58_2_fu_421_p3">select, 0, 0, 32, 1, 32</column>
@@ -144,9 +144,9 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add2_reg_600">32, 0, 32, 0</column>
-<column name="add3_reg_607">32, 0, 32, 0</column>
-<column name="add4_reg_616">32, 0, 32, 0</column>
+<column name="add1_reg_600">32, 0, 32, 0</column>
+<column name="add2_reg_607">32, 0, 32, 0</column>
+<column name="add3_reg_616">32, 0, 32, 0</column>
 <column name="and_ln58_reg_578">1, 0, 1, 0</column>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
 <column name="ap_return_0_preg">32, 0, 32, 0</column>

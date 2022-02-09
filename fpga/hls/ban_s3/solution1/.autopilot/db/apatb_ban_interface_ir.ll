@@ -9,8 +9,8 @@ target triple = "fpga64-xilinx-none"
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_in(%class.Ban* readonly, i128* noalias align 512, %class.Ban* readonly, i128* noalias align 512) unnamed_addr #0 {
 entry:
-  call fastcc void @onebyonecpy_hls.p0class.Ban.116(i128* align 512 %1, %class.Ban* %0)
-  call fastcc void @onebyonecpy_hls.p0class.Ban.116(i128* align 512 %3, %class.Ban* %2)
+  call fastcc void @onebyonecpy_hls.p0class.Ban.67(i128* align 512 %1, %class.Ban* %0)
+  call fastcc void @onebyonecpy_hls.p0class.Ban.67(i128* align 512 %3, %class.Ban* %2)
   ret void
 }
 
@@ -72,7 +72,7 @@ define internal float @_llvm.fpga.unpack.bits.f32.i32(i32 %A) #3 {
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0class.Ban.116(i128* noalias align 512, %class.Ban* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0class.Ban.67(i128* noalias align 512, %class.Ban* noalias readonly) unnamed_addr #2 {
 entry:
   %2 = icmp eq i128* %0, null
   %3 = icmp eq %class.Ban* %1, null

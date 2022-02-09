@@ -14,14 +14,11 @@ constexpr T sqrt_exp = -0.125;
 union output;
 
 enum op_type{
-	SUM, OPP, DIF, MUL, DIV, SUM_EQ, DIF_EQ, MUL_EQ, DIV_EQ, ABS, SQRT,
+	SUM, OPP, DIF, MUL, DIV, ABS, SQRT,
 	EQ,  NEQ, LES, LAR, LES_EQ, LAR_EQ,
 
-	SUM_R, DIF_R, MUL_R, DIV_R, SUM_EQ_R, DIF_EQ_R, MUL_EQ_R, DIV_EQ_R,
-	SUM_RB, DIF_RB, MUL_RB, DIV_RB,
-	
+	SUM_R, DIF_R, MUL_R, DIV_R,
 	EQ_R, NEQ_R, LES_R, LAR_R, LES_EQ_R, LAR_EQ_R,
-	EQ_RB, NEQ_RB, LES_RB, LAR_RB, LES_EQ_RB, LAR_EQ_RB
 };
 
 
@@ -70,10 +67,6 @@ class Ban{
 	inline Ban operator-(const Ban &b) const {return *this+(-b);};
 	Ban operator*(const Ban &b) const;
 	Ban operator/(const Ban &b) const;
-	inline Ban& operator+=(const Ban &b) {*this = *this + b; return *this;};
-	inline Ban& operator-=(const Ban &b) {return *this+=-b;};
-	inline Ban& operator*=(const Ban &b) {*this = *this * b; return *this;};
-	inline Ban& operator/=(const Ban &b) {*this = *this / b; return *this;};
 	friend Ban abs(const Ban &b);
 	friend Ban sqrt(const Ban &b);
 
@@ -94,15 +87,6 @@ class Ban{
 	inline Ban operator-(T n) const {return *this+(-n);};
 	Ban operator*(T n) const;
 	Ban operator/(T n) const; // make inline? *this*(1/n)
-	inline Ban& operator+=(T n) {*this = *this + n; return *this;};
-	inline Ban& operator-=(T n) {*this = *this + (-n); return *this;};
-	inline Ban& operator*=(T n) {*this = *this * n; return *this;};
-	inline Ban& operator/=(T n) {*this = *this / n; return *this;};
-
-	inline friend Ban operator+(T n, const Ban &b) {return b+n;};
-	inline friend Ban operator-(T n, const Ban &b) {return -b+n;};
-	inline friend Ban operator*(T n, const Ban &b) {return b*n;};
-	inline friend Ban operator/(T n, const Ban &b) {Ban c(n); return c/b;};
 	
 	bool operator==(T n) const;
 	inline bool operator!=(T n) const{return !(*this == n);};
@@ -110,16 +94,6 @@ class Ban{
 	inline bool operator>(T n) const {return !(*this==n || *this<n);};
 	inline bool operator<=(T n) const {return (*this==n || *this<n);};
 	inline bool operator>=(T n) const {return !(*this<n);};
-
-	inline friend bool operator==(T n, const Ban &b) {return b == n;};
-	inline friend bool operator!=(T n, const Ban &b) {return !(b == n);};
-	inline friend bool operator<(T n, const Ban &b)  {return !(b==n || b<n);};
-	inline friend bool operator>(T n, const Ban &b)  {return b<n;};
-	inline friend bool operator<=(T n, const Ban &b) {return !(b<n);};
-	inline friend bool operator>=(T n, const Ban &b) {return (b==n || b<n);};
-
-	// external functions
-	inline friend int degree(const Ban &b) {return b.p;};
 };
 
 union output{

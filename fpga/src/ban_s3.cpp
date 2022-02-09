@@ -129,10 +129,6 @@ Ban Ban::mul_body(const Ban &b) const{
 }
 
 Ban Ban::operator*(const Ban &b) const{
-	// introduced for speed-up
-	if(*this  == 0 || b == 0) // *this == 0 || b == 0
-		return ZERO;
-
 	return this->mul_body(b);
 }
 
@@ -164,9 +160,6 @@ void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE
 }
 
 Ban Ban::operator/(const Ban &b) const{
-	if(*this  == 0) // *this == 0
-		return ZERO;
-
 	Ban c(*this);
 
 	c.p -= b.p;
@@ -268,9 +261,6 @@ Ban abs(const Ban &b){
 }
 
 Ban sqrt(const Ban &b){
-	if(b == 0 || b == 1)  // b == 0
-		return b;
-
 	T normalizer;
 	normalizer = b.num[0];
 	T num_res[SIZE], eps_1[SIZE], eps_2[SIZE], eps_3[SIZE];

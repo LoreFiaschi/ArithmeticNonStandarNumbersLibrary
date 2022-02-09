@@ -1,6 +1,6 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/home/lorenzo/Programs/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'lorenzo' on host 'lorenzo-System-Product-Name' (Linux_x86_64 version 5.4.0-97-generic) on Wed Feb 09 15:34:14 CET 2022
+INFO: [HLS 200-10] For user 'lorenzo' on host 'lorenzo-System-Product-Name' (Linux_x86_64 version 5.4.0-97-generic) on Wed Feb 09 16:08:24 CET 2022
 INFO: [HLS 200-10] On os Linux Mint 19.3 Tricia
 INFO: [HLS 200-10] In directory '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls'
 Sourcing Tcl script '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/csynth.tcl'
@@ -25,71 +25,49 @@ INFO: [HLS 200-1510] Running: csynth_design
 INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.324 GB.
 INFO: [HLS 200-10] Analyzing design file '../src/ban_s3.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file '../src/ban_interface.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.42 seconds. CPU system time: 0.52 seconds. Elapsed time: 3.6 seconds; current allocated memory: 418.816 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.44 seconds. CPU system time: 0.44 seconds. Elapsed time: 3.53 seconds; current allocated memory: 418.816 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-284] Auto array partition mode is set into default.
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&, Ban const&, int) (.24)' (../src/ban_s3.cpp:55:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::_sum(Ban const&, Ban const&, int)' (../src/ban_s3.cpp:55:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.36)' (../src/ban_s3.cpp:55:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.33)' (../src/ban_s3.cpp:55:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::_sum(Ban const&, Ban const&, int) (.9.46)' (../src/ban_s3.cpp:55:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::_sum(Ban const&, Ban const&, int) (.6.43)' (../src/ban_s3.cpp:55:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_sum(Ban const&, Ban const&, int) (.24.36)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_sum(Ban const&, Ban const&, int) (.24.33)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&) const' (../src/ban_s3.h:70:0)
-INFO: [HLS 214-178] Inlining function 'Ban::init(int, float const*) (.48)' into 'Ban::Ban(int, float const*) (.45)' (../src/ban_s3.cpp:11:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&) const (.42)' (../src/ban_s3.cpp:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.45)' into 'Ban::mul_body(Ban const&) const (.42)' (../src/ban_s3.cpp:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::mul_body(Ban const&) const (.42)' (../src/ban_s3.cpp:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:131:0)
-INFO: [HLS 214-178] Inlining function 'Ban::mul_body(Ban const&) const (.42)' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:131:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:139:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator/(Ban const&) const' (../src/ban_s3.cpp:166:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&) const' (../src/ban_s3.cpp:166:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'Ban::operator-=(Ban const&)' (../src/ban_s3.h:74:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator+=(Ban const&) (.27)' into 'Ban::operator-=(Ban const&)' (../src/ban_s3.h:74:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator/(Ban const&) const' into 'Ban::operator/=(Ban const&)' (../src/ban_s3.h:76:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'abs(Ban const&)' (../src/ban_s3.cpp:263:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:270:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:270:0)
-INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:270:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.45)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:270:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(Ban const&) const' into 'Ban::operator!=(Ban const&) const' (../src/ban_s3.h:86:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator>(Ban const&) const' (../src/ban_s3.h:88:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator<=(Ban const&) const' (../src/ban_s3.h:89:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator>=(Ban const&) const' (../src/ban_s3.h:90:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:300:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.45)' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:300:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator*(float) const' (../src/ban_s3.cpp:341:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(float) const' (../src/ban_s3.cpp:353:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator*(float) const' into 'Ban::operator*=(float)' (../src/ban_s3.h:99:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator/(float) const' into 'Ban::operator/=(float)' (../src/ban_s3.h:100:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator+(float) const (.63)' (../src/ban_s3.cpp:300:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.45)' into 'Ban::operator+(float) const (.63)' (../src/ban_s3.cpp:300:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'operator-(float, Ban const&)' (../src/ban_s3.h:103:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator*(float) const' into 'operator*(float, Ban const&)' (../src/ban_s3.h:104:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator/(Ban const&) const (.66)' (../src/ban_s3.cpp:166:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.18)' into 'Ban::operator/(Ban const&) const (.66)' (../src/ban_s3.cpp:166:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(float)' into 'operator/(float, Ban const&)' (../src/ban_s3.h:105:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator/(Ban const&) const (.66)' into 'operator/(float, Ban const&)' (../src/ban_s3.h:105:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator!=(float) const' (../src/ban_s3.h:108:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator>(float) const' (../src/ban_s3.h:110:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator>(float) const' (../src/ban_s3.h:110:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator<=(float) const' (../src/ban_s3.h:111:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator<=(float) const' (../src/ban_s3.h:111:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator>=(float) const' (../src/ban_s3.h:112:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'operator==(float, Ban const&)' (../src/ban_s3.h:114:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'operator!=(float, Ban const&)' (../src/ban_s3.h:115:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'operator<=(float, Ban const&)' (../src/ban_s3.h:118:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'operator>=(float, Ban const&)' (../src/ban_s3.h:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'operator>=(float, Ban const&)' (../src/ban_s3.h:119:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_sum(Ban const&, Ban const&, int) (.9.46)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_sum(Ban const&, Ban const&, int) (.6.43)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&) const' (../src/ban_s3.h:67:0)
+INFO: [HLS 214-178] Inlining function 'Ban::init(int, float const*) (.30)' into 'Ban::Ban(int, float const*) (.27)' (../src/ban_s3.cpp:11:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&) const' (../src/ban_s3.cpp:119:0)
+INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.27)' into 'Ban::mul_body(Ban const&) const' (../src/ban_s3.cpp:119:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::mul_body(Ban const&) const' (../src/ban_s3.cpp:119:0)
+INFO: [HLS 214-178] Inlining function 'Ban::mul_body(Ban const&) const' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:131:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:135:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator/(Ban const&) const' (../src/ban_s3.cpp:162:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'abs(Ban const&)' (../src/ban_s3.cpp:256:0)
+INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:263:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:263:0)
+INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.27)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:263:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(Ban const&) const' into 'Ban::operator!=(Ban const&) const' (../src/ban_s3.h:79:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator>(Ban const&) const' (../src/ban_s3.h:81:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator<=(Ban const&) const' (../src/ban_s3.h:82:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator>=(Ban const&) const' (../src/ban_s3.h:83:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:290:0)
+INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.27)' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:290:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator*(float) const' (../src/ban_s3.cpp:331:0)
+INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator/(float) const' (../src/ban_s3.cpp:343:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator!=(float) const' (../src/ban_s3.h:92:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator>(float) const' (../src/ban_s3.h:94:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator>(float) const' (../src/ban_s3.h:94:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator<=(float) const' (../src/ban_s3.h:95:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator<=(float) const' (../src/ban_s3.h:95:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator>=(float) const' (../src/ban_s3.h:96:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator-(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'Ban::operator*(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator/(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator+=(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-=(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator*=(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'abs(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'sqrt(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator==(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator!=(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
@@ -99,30 +77,20 @@ INFO: [HLS 214-178] Inlining function 'Ban::operator>=(Ban const&) const' into '
 INFO: [HLS 214-178] Inlining function 'Ban::operator-(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator*(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator/(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator+=(float)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-=(float)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator*=(float)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator/=(float)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'operator+(float, Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'operator-(float, Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'operator*(float, Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator!=(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator>(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator<=(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-178] Inlining function 'Ban::operator>=(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'operator==(float, Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'operator!=(float, Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'operator<=(float, Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-241] Aggregating scalar variable 'b_op2' with compact=bit mode in 128-bits (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-241] Aggregating scalar variable 'b_op1' with compact=bit mode in 128-bits (../src/ban_interface.cpp:4:0)
 INFO: [HLS 214-270] Starting automatic array partition analysis...
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.103.131)' (../src/ban_s3.cpp:56:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.103.131)' (../src/ban_s3.cpp:71:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.103.131)' (../src/ban_s3.cpp:70:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.103.131)' (../src/ban_s3.cpp:61:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.24.103.131)' (../src/ban_s3.cpp:60:16)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:56:6)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:71:16)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:70:16)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:61:16)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:60:16)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:27:18)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:27:39)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:27:49)
@@ -140,293 +108,157 @@ INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:86:10)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:27:49)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:116:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:116:15)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:115:15)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:114:15)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*) (.109.122)' (../src/ban_s3.cpp:140:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*) (.109.122)' (../src/ban_s3.cpp:116:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*) (.109.122)' (../src/ban_s3.cpp:115:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*) (.109.122)' (../src/ban_s3.cpp:114:26)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*) (.109.122)' (../src/ban_s3.cpp:144:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*) (.109.122)' (../src/ban_s3.cpp:143:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/=(Ban const&)' (../src/ban_s3.cpp:170:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'Ban::operator/=(Ban const&)' (../src/ban_s3.h:76:46)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/=(Ban const&)' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator/=(Ban const&)' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:280:24)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:279:24)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:272:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:304:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:328:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:324:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:323:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:307:7)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:136:17)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:116:48)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:115:48)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:114:26)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:140:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:144:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:143:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'operator>=(float, Ban const&)' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'operator>=(float, Ban const&)' (../src/ban_s3.cpp:246:134)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'operator>=(float, Ban const&)' (../src/ban_s3.cpp:246:107)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'operator>=(float, Ban const&)' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'operator>=(float, Ban const&)' (../src/ban_s3.cpp:27:39)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:139:17)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:294:10)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:318:17)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:314:17)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:313:17)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:297:7)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:105:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.s_union.outputs' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:177:5)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:246:134)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:246:107)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:243:12)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.s_union.outputs' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:105:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:239:134)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:239:107)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:236:12)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:27:49)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:27:39)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:342:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.h:100:37)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:358:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.h:99:37)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.h:98:37)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:170:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.h:97:37)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:225:128)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:225:119)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:222:23)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:222:13)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:221:13)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:216:94)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:216:56)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:221:23)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:348:6)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:332:6)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:218:128)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:218:119)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:215:23)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:215:13)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:214:13)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:209:94)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:209:56)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:214:23)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:82)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:72)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:58)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:48)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:34)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:24)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.h:73:46)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:264:5)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i32.f32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.h:75:46)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.88 seconds. CPU system time: 0.25 seconds. Elapsed time: 4.14 seconds; current allocated memory: 422.102 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 422.141 MB.
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:270:24)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:269:24)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:265:15)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:257:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:163:6)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:116:48)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:116:15)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:115:48)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:115:15)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:114:26)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:114:15)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.34 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.58 seconds; current allocated memory: 420.836 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 420.879 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 427.441 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 423.949 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body.1' into 'Ban::operator/=' (../src/ban_s3.cpp:174) automatically.
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'operator/' (../src/ban_s3.cpp:174) automatically.
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body.1' into 'ban_interface' (../src/ban_s3.cpp:174) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 432.742 MB.
-INFO: [XFORM 203-102] Partitioning array 'c.num' (../src/ban_s3.cpp:170) automatically.
-INFO: [XFORM 203-102] Partitioning array 'c.num' (../src/ban_s3.cpp:170) automatically.
-INFO: [XFORM 203-102] Partitioning array 'c.num.2' (../src/ban_s3.h:105) automatically.
+INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'ban_interface' (../src/ban_s3.cpp:167) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 426.496 MB.
 INFO: [XFORM 203-102] Partitioning array 'b.num' (../src/ban_s3.cpp:105) automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp.1.i244' automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp.1.i.i' automatically.
-INFO: [XFORM 203-102] Partitioning array 'b.num.1' (../src/ban_s3.cpp:105) automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp.1.i218' automatically.
-INFO: [XFORM 203-102] Partitioning array 'c.num' (../src/ban_s3.cpp:170) automatically.
-INFO: [XFORM 203-102] Partitioning array 'b.num.2' (../src/ban_s3.cpp:105) automatically.
 INFO: [XFORM 203-102] Partitioning array 'ref.tmp.1' automatically.
 INFO: [XFORM 203-102] Partitioning array 'ref.tmp3.1' automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp5.1' automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp14.1' automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp45.1' automatically.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp.1.i417' completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp.1.i404' completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp27.1' completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp29.1' completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp39.1' completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp41.1' completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp.1.i417' in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp.1.i404' in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp27.1' in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp29.1' in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp39.1' in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp41.1' in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body.1' into 'Ban::operator/=' (../src/ban_s3.cpp:174) automatically.
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'operator/' (../src/ban_s3.cpp:174) automatically.
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body.1' into 'ban_interface' (../src/ban_s3.cpp:174) automatically.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:119:34) to (../src/ban_s3.h:119:52) in function 'operator>='... converting 14 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:264:5) to (../src/ban_interface.cpp:47:13) in function 'ban_interface'... converting 3 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:23:11) to (../src/ban_interface.cpp:55:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:23:11) to (../src/ban_interface.cpp:59:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:214:13) to (../src/ban_interface.cpp:63:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:214:13) to (../src/ban_interface.cpp:67:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:214:13) to (../src/ban_interface.cpp:71:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:214:13) to (../src/ban_interface.cpp:75:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:341:22) to (../src/ban_interface.cpp:87:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:353:22) to (../src/ban_interface.cpp:91:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:341:22) to (../src/ban_interface.cpp:103:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:353:22) to (../src/ban_interface.cpp:107:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:104:32) to (../src/ban_interface.cpp:119:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:26:24) to (../src/ban_interface.cpp:127:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:108:27) to (../src/ban_interface.cpp:131:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:239:23) to (../src/ban_interface.cpp:135:13) in function 'ban_interface'... converting 10 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:110:26) to (../src/ban_interface.cpp:139:13) in function 'ban_interface'... converting 14 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:111:27) to (../src/ban_interface.cpp:143:13) in function 'ban_interface'... converting 14 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:112:27) to (../src/ban_interface.cpp:147:13) in function 'ban_interface'... converting 10 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:114:34) to (../src/ban_interface.cpp:151:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:115:34) to (../src/ban_interface.cpp:155:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:118:34) to (../src/ban_interface.cpp:159:13) in function 'ban_interface'... converting 10 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:118:34) to (../src/ban_interface.cpp:167:13) in function 'ban_interface'... converting 10 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:170:6) to (../src/ban_s3.cpp:178:2) in function 'Ban::operator/='... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:79:31) to (../src/ban_s3.cpp:102:1) in function 'Ban::operator+.3'... converting 24 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:300:22) to (../src/ban_s3.cpp:339:1) in function 'Ban::operator+.2'... converting 18 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:0) to (../src/ban_s3.cpp:339:1) in function 'Ban::operator+'... converting 18 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:27:13) to (../src/ban_s3.cpp:137:1) in function 'Ban::operator*'... converting 13 basic blocks.
+INFO: [XFORM 203-102] Partitioning array 'c.num' (../src/ban_s3.cpp:163) automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp23.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp25.1' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'ref.tmp23.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref.tmp25.1' in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'ban_interface' (../src/ban_s3.cpp:167) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:114:15) to (../src/ban_interface.cpp:23:13) in function 'ban_interface'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:163:6) to (../src/ban_interface.cpp:27:13) in function 'ban_interface'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:257:5) to (../src/ban_interface.cpp:31:13) in function 'ban_interface'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:23:11) to (../src/ban_interface.cpp:39:13) in function 'ban_interface'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:23:11) to (../src/ban_interface.cpp:43:13) in function 'ban_interface'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:47:13) in function 'ban_interface'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:51:13) in function 'ban_interface'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:55:13) in function 'ban_interface'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:59:13) in function 'ban_interface'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:331:22) to (../src/ban_interface.cpp:71:13) in function 'ban_interface'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:343:22) to (../src/ban_interface.cpp:75:13) in function 'ban_interface'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:26:24) to (../src/ban_interface.cpp:79:13) in function 'ban_interface'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:92:27) to (../src/ban_interface.cpp:83:13) in function 'ban_interface'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:232:23) to (../src/ban_interface.cpp:87:13) in function 'ban_interface'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:94:26) to (../src/ban_interface.cpp:91:13) in function 'ban_interface'... converting 14 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:95:27) to (../src/ban_interface.cpp:95:13) in function 'ban_interface'... converting 14 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:96:27) to (../src/ban_interface.cpp:99:13) in function 'ban_interface'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:290:22) to (../src/ban_s3.cpp:329:1) in function 'Ban::operator+.2'... converting 18 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:79:31) to (../src/ban_s3.cpp:102:1) in function 'Ban::operator+.1'... converting 24 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (../src/ban_s3.cpp:76:2) in function 'Ban::_sum'... converting 9 basic blocks.
-INFO: [XFORM 203-602] Inlining function 'Ban::operator+' into 'ban_interface' (../src/ban_s3.h:103) automatically.
-INFO: [XFORM 203-11] Balancing expressions in function 'operator>=' (../src/ban_s3.h:27:52)...3 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'ban_interface' (../src/ban_s3.cpp:8:3)...36 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'Ban::operator*' (../src/ban_s3.cpp:27:1)...6 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.49 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.52 seconds; current allocated memory: 463.082 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.26 seconds; current allocated memory: 553.590 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'ban_interface' (../src/ban_interface.cpp:8:13)...30 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.28 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 451.957 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 489.281 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'ban_interface' ...
-WARNING: [SYN 201-103] Legalizing function name 'operator>=' to 'operator_ge'.
-WARNING: [SYN 201-103] Legalizing function name 'operator/' to 'operator_div'.
 WARNING: [SYN 201-103] Legalizing function name 'operator+.2' to 'operator_2'.
-WARNING: [SYN 201-103] Legalizing function name 'operator/=' to 'operator_div_assign'.
-WARNING: [SYN 201-103] Legalizing function name 'operator*' to 'operator_mul'.
-WARNING: [SYN 201-103] Legalizing function name 'operator+.3' to 'operator_3'.
-WARNING: [SYN 201-103] Legalizing function name '_sum' to 'p_sum'.
 WARNING: [SYN 201-103] Legalizing function name 'operator+.1' to 'operator_1'.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_ge' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 556.266 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 556.266 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_div' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 557.516 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 557.516 MB.
+WARNING: [SYN 201-103] Legalizing function name '_sum' to 'p_sum'.
+WARNING: [SYN 201-103] Legalizing function name 'operator+' to 'operator_add'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'operator_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 558.320 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 491.562 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 558.320 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'sqrt' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 559.195 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 559.195 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_div_assign' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 560.633 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 560.633 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_mul' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 561.707 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 561.707 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_3' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 563.574 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 563.574 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'p_sum' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 564.086 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 564.086 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 491.562 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'operator_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 565.312 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 493.395 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 565.312 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 493.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 493.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 493.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 495.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 495.078 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'ban_interface' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.24 seconds. CPU system time: 0 seconds. Elapsed time: 1.24 seconds; current allocated memory: 583.164 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.05 seconds. CPU system time: 0 seconds. Elapsed time: 1.05 seconds; current allocated memory: 507.422 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.07 seconds; current allocated memory: 583.164 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_ge' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 10 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_ge'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.55 seconds; current allocated memory: 583.164 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_div' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_div'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.54 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 583.164 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.56 seconds. CPU system time: 0 seconds. Elapsed time: 1.56 seconds; current allocated memory: 507.422 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'operator_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -434,58 +266,31 @@ INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 585.922 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.34 seconds. CPU system time: 0 seconds. Elapsed time: 2.34 seconds; current allocated memory: 507.422 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'sqrt' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_8_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 589.211 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_div_assign' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_div_assign'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 592.855 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_mul' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_mul'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.51 seconds. CPU system time: 0 seconds. Elapsed time: 0.52 seconds; current allocated memory: 596.895 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_3' 
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.62 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.63 seconds; current allocated memory: 601.109 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 508.672 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_sum' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_sum'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 604.859 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 512.363 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_add' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 607.867 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_add'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.35 seconds; current allocated memory: 515.297 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'ban_interface' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/b_op1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/b_op1' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/b_op2' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/f_op' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/op' to 'ap_none'.
@@ -494,13 +299,13 @@ INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 10 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_8_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ban_interface'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.57 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.58 seconds; current allocated memory: 622.789 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 10.03 seconds. CPU system time: 0.06 seconds. Elapsed time: 10.1 seconds; current allocated memory: 661.102 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.49 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.5 seconds; current allocated memory: 666.031 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 527.359 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 7.02 seconds. CPU system time: 0.04 seconds. Elapsed time: 7.06 seconds; current allocated memory: 556.824 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 560.387 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for ban_interface.
 INFO: [VLOG 209-307] Generating Verilog RTL for ban_interface.
-INFO: [HLS 200-789] **** Estimated Fmax: 130.81 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 33.98 seconds. CPU system time: 1.04 seconds. Elapsed time: 34.7 seconds; current allocated memory: -688.680 MB.
-INFO: [HLS 200-112] Total CPU user time: 36.43 seconds. Total CPU system time: 1.46 seconds. Total elapsed time: 36.39 seconds; peak allocated memory: 1.324 GB.
+INFO: [HLS 200-789] **** Estimated Fmax: 134.58 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 22.58 seconds. CPU system time: 0.83 seconds. Elapsed time: 23.06 seconds; current allocated memory: -794.879 MB.
+INFO: [HLS 200-112] Total CPU user time: 25.05 seconds. Total CPU system time: 1.21 seconds. Total elapsed time: 24.78 seconds; peak allocated memory: 1.324 GB.

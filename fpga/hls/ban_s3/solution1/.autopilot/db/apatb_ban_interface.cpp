@@ -249,55 +249,6 @@ static AESL_FILE_HANDLER aesl_fh;
         } // end transaction
       } // end file is good
     } // end post check logic bolck
-  {
-      static ifstream rtl_tv_out_file;
-      if (!rtl_tv_out_file.is_open()) {
-        rtl_tv_out_file.open(AUTOTB_TVOUT_PC_b_op1);
-        if (rtl_tv_out_file.good()) {
-          rtl_tv_out_file >> AESL_token;
-          if (AESL_token != "[[[runtime]]]")
-            exit(1);
-        }
-      }
-  
-      if (rtl_tv_out_file.good()) {
-        rtl_tv_out_file >> AESL_token; 
-        rtl_tv_out_file >> AESL_num;  // transaction number
-        if (AESL_token != "[[transaction]]") {
-          cerr << "Unexpected token: " << AESL_token << endl;
-          exit(1);
-        }
-        if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<128> > b_op1_pc_buffer(1);
-          int i = 0;
-          bool has_unknown_value = false;
-          rtl_tv_out_file >> AESL_token; //data
-          while (AESL_token != "[[/transaction]]"){
-
-            has_unknown_value |= RTLOutputCheckAndReplacement(AESL_token, "b_op1");
-  
-            // push token into output port buffer
-            if (AESL_token != "") {
-              b_op1_pc_buffer[i] = AESL_token.c_str();;
-              i++;
-            }
-  
-            rtl_tv_out_file >> AESL_token; //data or [[/transaction]]
-            if (AESL_token == "[[[/runtime]]]" || rtl_tv_out_file.eof())
-              exit(1);
-          }
-          if (has_unknown_value) {
-            cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'x' or 'X' on port " 
-                 << "b_op1" << ", possible cause: There are uninitialized variables in the C design."
-                 << endl; 
-          }
-  
-          if (i > 0) {((long long*)__xlx_apatb_param_b_op1)[0*2+0] = b_op1_pc_buffer[0].range(63,0).to_int64();
-((long long*)__xlx_apatb_param_b_op1)[0*2+1] = b_op1_pc_buffer[0].range(127,64).to_int64();
-}
-        } // end transaction
-      } // end file is good
-    } // end post check logic bolck
   
     AESL_transaction_pc++;
     return ;
@@ -358,19 +309,6 @@ aesl_fh.write(AUTOTB_TVIN_op, end_str());
 CodeState = CALL_C_DUT;
 ban_interface_hw_stub_wrapper(ap_return, __xlx_apatb_param_b_op1, __xlx_apatb_param_b_op2, __xlx_apatb_param_f_op, __xlx_apatb_param_op);
 CodeState = DUMP_OUTPUTS;
-// print b_op1 Transactions
-{
-aesl_fh.write(AUTOTB_TVOUT_b_op1, begin_str(AESL_transaction));
-{
-    sc_bv<128> __xlx_tmp_lv;
-__xlx_tmp_lv.range(63,0) = ((long long*)__xlx_apatb_param_b_op1)[0*2+0];
-__xlx_tmp_lv.range(127,64) = ((long long*)__xlx_apatb_param_b_op1)[0*2+1];
-aesl_fh.write(AUTOTB_TVOUT_b_op1, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
-}
-  tcl_file.set_num(1, &tcl_file.b_op1_depth);
-aesl_fh.write(AUTOTB_TVOUT_b_op1, end_str());
-}
-
 // print return Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_return, begin_str(AESL_transaction));

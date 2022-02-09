@@ -26,22 +26,6 @@ output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
             out.b = b_op1 / b_op2;
             break;
 
-        case SUM_EQ:
-            b_op1 += b_op2;
-            break;
-
-        case DIF_EQ:
-            b_op1 -= b_op2;
-            break;
-
-        case MUL_EQ:
-            b_op1 *= b_op2;
-            break;
-
-        case DIV_EQ:
-            b_op1 /= b_op2;
-            break;
-
         case ABS:
             out.b = abs(b_op1);
             break;
@@ -90,38 +74,6 @@ output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
             out.b = b_op1 / f_op;
             break;
 
-        case SUM_EQ_R:
-            b_op1 += f_op;
-            break;
-
-        case DIF_EQ_R:
-            b_op1 -= f_op;
-            break;
-
-        case MUL_EQ_R:
-            b_op1 *= f_op;
-            break;
-
-        case DIV_EQ_R:
-            b_op1 /= f_op;
-            break;
-        
-        case SUM_RB: 
-            out.b = f_op + b_op1;
-            break;
-
-        case DIF_RB:
-            out.b = f_op - b_op1;
-            break;
-
-        case MUL_RB:
-            out.b = f_op * b_op1;
-            break;
-
-        case DIV_RB:
-            out.b = f_op / b_op1;
-            break;
-
         case EQ_R:
             out.l = b_op1 == f_op;
             break;
@@ -144,30 +96,6 @@ output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
 
         case LAR_EQ_R:
             out.l = b_op1 >= f_op;
-            break;
-
-        case EQ_RB:
-            out.l = f_op == b_op1;
-            break;
-
-        case NEQ_RB:
-            out.l = f_op != b_op1;
-            break;
-
-        case LES_RB:
-            out.l = f_op <= b_op1;
-            break;
-        
-        case LAR_RB:
-            out.l = f_op >= b_op1;
-            break;
-
-        case LES_EQ_RB:
-            out.l = f_op <= b_op1;
-            break;
-
-        case LAR_EQ_RB:
-            out.l = f_op >= b_op1;
             break;
 
         default:

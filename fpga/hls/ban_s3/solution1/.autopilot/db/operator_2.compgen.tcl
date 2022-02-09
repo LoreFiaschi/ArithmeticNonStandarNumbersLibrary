@@ -1,6 +1,18 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 33
+set name ban_interface_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+}
+
+
+set id 6
 set name ban_interface_mux_32_32_1_1
 set corename simcore_mux
 set op mux
@@ -57,7 +69,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 35 \
+    id 10 \
     name p_read13 \
     type other \
     dir I \
@@ -72,7 +84,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 36 \
+    id 11 \
     name n \
     type other \
     dir I \

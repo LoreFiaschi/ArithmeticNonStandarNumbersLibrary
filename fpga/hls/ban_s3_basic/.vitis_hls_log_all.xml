@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.1' to 'operator_1'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.191+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name '_sum' to 'p_sum'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.180+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.3' to 'operator_3'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.178+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator*' to 'operator_mul'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.175+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator/=' to 'operator_div_assign'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.173+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.2' to 'operator_2'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.170+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator/' to 'operator_div'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.168+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator>=' to 'operator_ge'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T15:34:25.164+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -17,32 +17,16 @@
   "Args": {
     "b_op1": {
       "index": "0",
-      "direction": "inout",
+      "direction": "in",
       "srcType": "Ban&",
       "srcSize": "128",
-      "hwRefs": [
-        {
+      "hwRefs": [{
           "type": "port",
-          "interface": "b_op1_i",
-          "name": "b_op1_i",
+          "interface": "b_op1",
+          "name": "b_op1",
           "usage": "data",
           "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "b_op1_o",
-          "name": "b_op1_o",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "b_op1_o_ap_vld",
-          "name": "b_op1_o_ap_vld",
-          "usage": "control",
-          "direction": "out"
-        }
-      ]
+        }]
     },
     "b_op2": {
       "index": "1",
@@ -110,7 +94,7 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "2 ~ 63",
+    "II": "2 ~ 58",
     "Latency": "1"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -141,6 +125,7 @@
       "impl\/vhdl\/ban_interface_operator_1.vhd",
       "impl\/vhdl\/ban_interface_operator_2.vhd",
       "impl\/vhdl\/ban_interface_operator_3.vhd",
+      "impl\/vhdl\/ban_interface_operator_add.vhd",
       "impl\/vhdl\/ban_interface_operator_div.vhd",
       "impl\/vhdl\/ban_interface_operator_div_assign.vhd",
       "impl\/vhdl\/ban_interface_operator_ge.vhd",
@@ -159,6 +144,7 @@
       "impl\/verilog\/ban_interface_operator_1.v",
       "impl\/verilog\/ban_interface_operator_2.v",
       "impl\/verilog\/ban_interface_operator_3.v",
+      "impl\/verilog\/ban_interface_operator_add.v",
       "impl\/verilog\/ban_interface_operator_div.v",
       "impl\/verilog\/ban_interface_operator_div_assign.v",
       "impl\/verilog\/ban_interface_operator_ge.v",
@@ -256,29 +242,14 @@
       "portMap": {"ap_return": "DATA"},
       "ports": ["ap_return"]
     },
-    "b_op1_i": {
+    "b_op1": {
       "type": "data",
       "busTypeName": "data",
-      "protocol": "ap_ovld",
+      "protocol": "ap_none",
       "mode": "slave",
       "dataWidth": "128",
-      "portMap": {"b_op1_i": "DATA"},
-      "ports": ["b_op1_i"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "b_op1"
-        }]
-    },
-    "b_op1_o": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_ovld",
-      "mode": "master",
-      "dataWidth": "128",
-      "portMap": {"b_op1_o": "DATA"},
-      "ports": ["b_op1_o"],
+      "portMap": {"b_op1": "DATA"},
+      "ports": ["b_op1"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_none",
@@ -371,17 +342,9 @@
       "dir": "out",
       "width": "128"
     },
-    "b_op1_i": {
+    "b_op1": {
       "dir": "in",
       "width": "128"
-    },
-    "b_op1_o": {
-      "dir": "out",
-      "width": "128"
-    },
-    "b_op1_o_ap_vld": {
-      "dir": "out",
-      "width": "1"
     },
     "b_op2": {
       "dir": "in",
@@ -402,57 +365,23 @@
       "Instances": [
         {
           "ModuleName": "operator_2",
-          "InstanceName": "grp_operator_2_fu_868"
-        },
-        {
-          "ModuleName": "operator_div_assign",
-          "InstanceName": "grp_operator_div_assign_fu_876"
-        },
-        {
-          "ModuleName": "operator_mul",
-          "InstanceName": "grp_operator_mul_fu_885"
-        },
-        {
-          "ModuleName": "operator_3",
-          "InstanceName": "grp_operator_3_fu_893"
+          "InstanceName": "grp_operator_2_fu_505"
         },
         {
           "ModuleName": "operator_1",
-          "InstanceName": "grp_operator_1_fu_903",
+          "InstanceName": "grp_operator_1_fu_511"
+        },
+        {
+          "ModuleName": "operator_add",
+          "InstanceName": "grp_operator_add_fu_520",
           "Instances": [{
               "ModuleName": "p_sum",
               "InstanceName": "grp_p_sum_fu_144"
             }]
-        },
-        {
-          "ModuleName": "operator_ge",
-          "InstanceName": "grp_operator_ge_fu_911"
-        },
-        {
-          "ModuleName": "operator_div",
-          "InstanceName": "grp_operator_div_fu_917"
-        },
-        {
-          "ModuleName": "sqrt",
-          "InstanceName": "grp_sqrt_fu_923"
         }
       ]
     },
     "Info": {
-      "operator_ge": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "operator_div": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "operator_2": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
@@ -460,28 +389,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "sqrt": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "operator_div_assign": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "operator_mul": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "operator_3": {
+      "operator_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
@@ -495,7 +403,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "operator_1": {
+      "operator_add": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
@@ -511,72 +419,6 @@
       }
     },
     "Metrics": {
-      "operator_ge": {
-        "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "1",
-          "LatencyWorst": "1",
-          "PipelineII": "1",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "5.652"
-        },
-        "Area": {
-          "FF": "10",
-          "AVAIL_FF": "460800",
-          "UTIL_FF": "~0",
-          "LUT": "309",
-          "AVAIL_LUT": "230400",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "96",
-          "UTIL_URAM": "0"
-        }
-      },
-      "operator_div": {
-        "Latency": {
-          "LatencyBest": "2",
-          "LatencyAvg": "45",
-          "LatencyWorst": "59",
-          "PipelineIIMin": "2",
-          "PipelineIIMax": "59",
-          "PipelineII": "2 ~ 59",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "7.419"
-        },
-        "Area": {
-          "FF": "1023",
-          "AVAIL_FF": "460800",
-          "UTIL_FF": "~0",
-          "LUT": "1127",
-          "AVAIL_LUT": "230400",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "96",
-          "UTIL_URAM": "0"
-        }
-      },
       "operator_2": {
         "Latency": {
           "LatencyBest": "5",
@@ -609,107 +451,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "sqrt": {
-        "Latency": {
-          "LatencyBest": "6",
-          "LatencyAvg": "21",
-          "LatencyWorst": "36",
-          "PipelineIIMin": "6",
-          "PipelineIIMax": "36",
-          "PipelineII": "6 ~ 36",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "7.360"
-        },
-        "Area": {
-          "FF": "780",
-          "AVAIL_FF": "460800",
-          "UTIL_FF": "~0",
-          "LUT": "596",
-          "AVAIL_LUT": "230400",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "96",
-          "UTIL_URAM": "0"
-        }
-      },
-      "operator_div_assign": {
-        "Latency": {
-          "LatencyBest": "3",
-          "LatencyAvg": "31",
-          "LatencyWorst": "59",
-          "PipelineIIMin": "3",
-          "PipelineIIMax": "59",
-          "PipelineII": "3 ~ 59",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "7.419"
-        },
-        "Area": {
-          "DSP": "9",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "~0",
-          "FF": "1506",
-          "AVAIL_FF": "460800",
-          "UTIL_FF": "~0",
-          "LUT": "1694",
-          "AVAIL_LUT": "230400",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
-          "UTIL_BRAM": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "96",
-          "UTIL_URAM": "0"
-        }
-      },
-      "operator_mul": {
-        "Latency": {
-          "LatencyBest": "12",
-          "LatencyAvg": "12",
-          "LatencyWorst": "12",
-          "PipelineII": "12",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "7.016"
-        },
-        "Area": {
-          "DSP": "22",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "1",
-          "FF": "1699",
-          "AVAIL_FF": "460800",
-          "UTIL_FF": "~0",
-          "LUT": "2251",
-          "AVAIL_LUT": "230400",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
-          "UTIL_BRAM": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "96",
-          "UTIL_URAM": "0"
-        }
-      },
-      "operator_3": {
+      "operator_1": {
         "Latency": {
           "LatencyBest": "4",
           "LatencyAvg": "9",
@@ -726,18 +468,18 @@
           "Estimate": "7.207"
         },
         "Area": {
-          "DSP": "4",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "~0",
-          "FF": "1070",
+          "FF": "616",
           "AVAIL_FF": "460800",
           "UTIL_FF": "~0",
-          "LUT": "1515",
+          "LUT": "1087",
           "AVAIL_LUT": "230400",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "624",
           "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1728",
+          "UTIL_DSP": "0",
           "URAM": "0",
           "AVAIL_URAM": "96",
           "UTIL_URAM": "0"
@@ -775,7 +517,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "operator_1": {
+      "operator_add": {
         "Latency": {
           "LatencyBest": "4",
           "LatencyAvg": "8",
@@ -813,28 +555,28 @@
         "Latency": {
           "LatencyBest": "1",
           "LatencyAvg": "9",
-          "LatencyWorst": "62",
+          "LatencyWorst": "57",
           "PipelineIIMin": "2",
-          "PipelineIIMax": "63",
-          "PipelineII": "2 ~ 63",
+          "PipelineIIMax": "58",
+          "PipelineII": "2 ~ 58",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "7.644"
+          "Estimate": "7.431"
         },
         "Area": {
-          "DSP": "67",
+          "DSP": "32",
           "AVAIL_DSP": "1728",
-          "UTIL_DSP": "3",
-          "FF": "12033",
+          "UTIL_DSP": "1",
+          "FF": "6088",
           "AVAIL_FF": "460800",
-          "UTIL_FF": "2",
-          "LUT": "23183",
+          "UTIL_FF": "1",
+          "LUT": "13298",
           "AVAIL_LUT": "230400",
-          "UTIL_LUT": "10",
+          "UTIL_LUT": "5",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "624",
           "UTIL_BRAM": "0",
@@ -848,7 +590,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-02-09 15:34:50 CET",
+    "Time": "2022-02-09 16:08:49 CET",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }
