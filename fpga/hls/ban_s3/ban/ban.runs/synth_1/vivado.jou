@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Feb  9 16:30:37 2022
+# Process ID: 1091294
+# Current directory: /home/federico/vivado/ban/ban.runs/synth_1
+# Command line: vivado -log ban_interface.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ban_interface.tcl
+# Log file: /home/federico/vivado/ban/ban.runs/synth_1/ban_interface.vds
+# Journal file: /home/federico/vivado/ban/ban.runs/synth_1/vivado.jou
+# Running On: blacklab, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 8, Host memory: 33506 MB
+#-----------------------------------------------------------
+source ban_interface.tcl -notrace

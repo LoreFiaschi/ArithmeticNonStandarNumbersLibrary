@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1644420739">
+  <File Type="RCFI_FILE" Name="ban_interface.rcfi"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ban_interface_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ban_interface_postroute_physopt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="ban_interface_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ban_interface_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="ban_interface_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="ban_interface_placed.dcp"/>
+  <File Type="OPT-DCP" Name="ban_interface_opt.dcp"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ban_interface.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ban_interface.sysdef"/>
+  <File Type="BITSTR-MMI" Name="ban_interface.mmi"/>
+  <File Type="BITSTR-BMM" Name="ban_interface_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="ban_interface.nky"/>
+  <File Type="BITSTR-RBT" Name="ban_interface.rbt"/>
+  <File Type="REPORTS-TCL" Name="ban_interface_reports.tcl"/>
+  <File Type="RBD_FILE" Name="ban_interface.rbd"/>
+  <File Type="BITSTR-MSK" Name="ban_interface.msk"/>
+  <File Type="PA-TCL" Name="ban_interface.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="ban_interface_timing_summary_routed.pb"/>
+  <File Type="NPI_FILE" Name="ban_interface.npi"/>
+  <File Type="BG-BIN" Name="ban_interface.bin"/>
+  <File Type="RNPI_FILE" Name="ban_interface.rnpi"/>
+  <File Type="BG-BGN" Name="ban_interface.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ban_interface_routed_bb.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="ban_interface.vdi"/>
+  <File Type="CFI_FILE" Name="ban_interface.cfi"/>
+  <File Type="BG-DRC" Name="ban_interface.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ban_interface_routed_error.dcp"/>
+  <File Type="PDI-FILE" Name="ban_interface.pdi"/>
+  <File Type="BG-BIT" Name="ban_interface.bit"/>
+  <File Type="OPT-HWDEF" Name="ban_interface.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ban_interface_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="ban_interface_routed.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_mux_32_32_1_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_operator_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_operator_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_operator_add.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface_p_sum.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../solution1/syn/vhdl/ban_interface.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ban_interface"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
+    <File Path="$PSRCDIR/constrs_2/new/ban_interface.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/new/ban_interface.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/ban_interface.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>

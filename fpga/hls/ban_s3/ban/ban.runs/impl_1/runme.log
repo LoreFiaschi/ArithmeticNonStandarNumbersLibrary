@@ -1,0 +1,88 @@
+
+*** Running vivado
+    with args -log ban_interface.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ban_interface.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source ban_interface.tcl -notrace
+Command: link_design -top ban_interface -part xczu7ev-ffvc1156-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3083.031 ; gain = 0.000 ; free physical = 10730 ; free virtual = 19243
+INFO: [Netlist 29-17] Analyzing 455 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/federico/vivado/ban/ban.srcs/constrs_2/new/ban_interface.xdc]
+Finished Parsing XDC File [/home/federico/vivado/ban/ban.srcs/constrs_2/new/ban_interface.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' instantiated as 'fadd_32ns_32ns_32_4_full_dsp_1_U33/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u'. 7 instances of this cell are unresolved black boxes. [/home/federico/cppWorkspace/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.vhd:57]
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' instantiated as 'fcmp_32ns_32ns_1_2_no_dsp_1_U45/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u'. 17 instances of this cell are unresolved black boxes. [/home/federico/cppWorkspace/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.vhd:76]
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' instantiated as 'fdiv_32ns_32ns_32_9_no_dsp_1_U42/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u'. 3 instances of this cell are unresolved black boxes. [/home/federico/cppWorkspace/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1.vhd:57]
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' instantiated as 'fmul_32ns_32ns_32_3_max_dsp_1_U36/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u'. 6 instances of this cell are unresolved black boxes. [/home/federico/cppWorkspace/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1.vhd:57]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' instantiated as 'fsqrt_32ns_32ns_32_8_no_dsp_1_U55/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u' [/home/federico/cppWorkspace/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1.vhd:52]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3138.984 ; gain = 0.000 ; free physical = 10625 ; free virtual = 19143
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 323 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 323 instances
+
+7 Infos, 0 Warnings, 5 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3138.984 ; gain = 265.027 ; free physical = 10625 ; free virtual = 19143
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fadd_32ns_32ns_32_4_full_dsp_1_U33/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fadd_32ns_32ns_32_4_full_dsp_1_U34/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fadd_32ns_32ns_32_4_full_dsp_1_U35/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U45/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U46/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U47/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U48/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U49/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U50/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U51/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U52/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U53/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fcmp_32ns_32ns_1_2_no_dsp_1_U54/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fdiv_32ns_32ns_32_9_no_dsp_1_U42/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u' of type 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fdiv_32ns_32ns_32_9_no_dsp_1_U43/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u' of type 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fdiv_32ns_32ns_32_9_no_dsp_1_U44/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u' of type 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fmul_32ns_32ns_32_3_max_dsp_1_U36/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u' of type 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fmul_32ns_32ns_32_3_max_dsp_1_U37/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u' of type 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fmul_32ns_32ns_32_3_max_dsp_1_U38/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u' of type 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fmul_32ns_32ns_32_3_max_dsp_1_U39/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u' of type 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fmul_32ns_32ns_32_3_max_dsp_1_U40/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u' of type 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fmul_32ns_32ns_32_3_max_dsp_1_U41/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u' of type 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'fsqrt_32ns_32ns_32_8_no_dsp_1_U55/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u' of type 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_2_fu_505/fadd_32ns_32ns_32_4_full_dsp_1_U1/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_2_fu_505/fcmp_32ns_32ns_1_2_no_dsp_1_U2/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_2_fu_505/fcmp_32ns_32ns_1_2_no_dsp_1_U3/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_2_fu_505/fcmp_32ns_32ns_1_2_no_dsp_1_U4/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_2_fu_505/fcmp_32ns_32ns_1_2_no_dsp_1_U5/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_add_fu_520/grp_p_sum_fu_144/fadd_32ns_32ns_32_4_full_dsp_1_U21/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_add_fu_520/grp_p_sum_fu_144/fadd_32ns_32ns_32_4_full_dsp_1_U22/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_add_fu_520/grp_p_sum_fu_144/fadd_32ns_32ns_32_4_full_dsp_1_U23/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u' of type 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_add_fu_520/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U24/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_add_fu_520/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U25/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'grp_operator_add_fu_520/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U26/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u' of type 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 34 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.80 . Memory (MB): peak = 3203.016 ; gain = 64.031 ; free physical = 10624 ; free virtual = 19141
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 5 Critical Warnings and 35 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  9 16:32:38 2022...
