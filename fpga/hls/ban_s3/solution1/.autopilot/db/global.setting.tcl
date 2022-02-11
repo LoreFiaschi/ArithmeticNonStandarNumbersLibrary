@@ -41,8 +41,8 @@ set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
-set TargetInfo xczu7ev:-ffvc1156:-2-e
-set SourceFiles {sc {} c {../../../src/ban_s3.cpp ../../../src/ban_interface.cpp}}
+set TargetInfo xc7vx690t:-ffg1761:-2
+set SourceFiles {sc {} c {../../../src/ban_interface.cpp ../../../src/ban_s3.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/solution1.directive
 set TBFiles {verilog ../../../test/vitis_test.cpp bc ../../../test/vitis_test.cpp vhdl ../../../test/vitis_test.cpp sc ../../../test/vitis_test.cpp cas ../../../test/vitis_test.cpp c {}}
@@ -61,5 +61,5 @@ set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}
 set intNbAccess 0
-set PlatformFiles {{DefaultPlatform {xilinx/zynquplus/zynquplus}}}
+set PlatformFiles {{DefaultPlatform {xilinx/virtex7/virtex7}}}
 set HPFPO 0

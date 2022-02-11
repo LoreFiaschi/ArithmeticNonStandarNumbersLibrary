@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="ban_interface.cpp" path="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_interface.cpp"/>
-    <originFiles name="ban_s3.cpp" path="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.cpp"/>
     <originFiles name="ban_s3.h" path="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.h"/>
+    <originFiles name="ban_s3.cpp" path="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.cpp"/>
+    <originFiles name="ban_interface.cpp" path="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_interface.cpp"/>
   </source>
   <testbench>
     <originFiles name="vitis_test.cpp" path="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"/>

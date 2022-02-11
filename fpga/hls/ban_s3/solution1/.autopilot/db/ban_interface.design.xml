@@ -41,35 +41,35 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.913</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.274</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>5</Best-caseLatency>
-<Average-caseLatency>5</Average-caseLatency>
-<Worst-caseLatency>5</Worst-caseLatency>
-<Best-caseRealTimeLatency>50.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>50.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>50.000 ns</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>5</PipelineInitiationInterval>
+<Best-caseLatency>6</Best-caseLatency>
+<Average-caseLatency>6</Average-caseLatency>
+<Worst-caseLatency>6</Worst-caseLatency>
+<Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>6</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
 <DSP>2</DSP>
-<AVAIL_DSP>1728</AVAIL_DSP>
+<AVAIL_DSP>3600</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>651</FF>
-<AVAIL_FF>460800</AVAIL_FF>
+<FF>685</FF>
+<AVAIL_FF>866400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
 <LUT>1620</LUT>
-<AVAIL_LUT>230400</AVAIL_LUT>
+<AVAIL_LUT>433200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>624</AVAIL_BRAM>
+<AVAIL_BRAM>2940</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
 <URAM>0</URAM>
-<AVAIL_URAM>96</AVAIL_URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
 </Resources>
 </AreaEstimates>
@@ -214,35 +214,35 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.207</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.311</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>4</Best-caseLatency>
-<Average-caseLatency>9</Average-caseLatency>
-<Worst-caseLatency>12</Worst-caseLatency>
+<Average-caseLatency>10</Average-caseLatency>
+<Worst-caseLatency>14</Worst-caseLatency>
 <Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>4 ~ 12</PipelineInitiationInterval>
+<Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>4 ~ 14</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>616</FF>
-<AVAIL_FF>460800</AVAIL_FF>
+<FF>781</FF>
+<AVAIL_FF>866400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>1087</LUT>
-<AVAIL_LUT>230400</AVAIL_LUT>
+<LUT>1043</LUT>
+<AVAIL_LUT>433200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>624</AVAIL_BRAM>
+<AVAIL_BRAM>2940</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
 <DSP>0</DSP>
-<AVAIL_DSP>1728</AVAIL_DSP>
+<AVAIL_DSP>3600</AVAIL_DSP>
 <UTIL_DSP>0</UTIL_DSP>
 <URAM>0</URAM>
-<AVAIL_URAM>96</AVAIL_URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
 </Resources>
 </AreaEstimates>
@@ -640,7 +640,7 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.886</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.771</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>5</Best-caseLatency>
@@ -656,19 +656,19 @@
 <AreaEstimates>
 <Resources>
 <DSP>6</DSP>
-<AVAIL_DSP>1728</AVAIL_DSP>
+<AVAIL_DSP>3600</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>1106</FF>
-<AVAIL_FF>460800</AVAIL_FF>
+<FF>1170</FF>
+<AVAIL_FF>866400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>1416</LUT>
-<AVAIL_LUT>230400</AVAIL_LUT>
+<LUT>1399</LUT>
+<AVAIL_LUT>433200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>624</AVAIL_BRAM>
+<AVAIL_BRAM>2940</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
 <URAM>0</URAM>
-<AVAIL_URAM>96</AVAIL_URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
 </Resources>
 </AreaEstimates>
@@ -824,7 +824,7 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.886</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>4</Best-caseLatency>
@@ -840,19 +840,19 @@
 <AreaEstimates>
 <Resources>
 <DSP>6</DSP>
-<AVAIL_DSP>1728</AVAIL_DSP>
+<AVAIL_DSP>3600</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>1714</FF>
-<AVAIL_FF>460800</AVAIL_FF>
+<FF>1778</FF>
+<AVAIL_FF>866400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>2105</LUT>
-<AVAIL_LUT>230400</AVAIL_LUT>
+<LUT>2037</LUT>
+<AVAIL_LUT>433200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>624</AVAIL_BRAM>
+<AVAIL_BRAM>2940</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
 <URAM>0</URAM>
-<AVAIL_URAM>96</AVAIL_URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
 </Resources>
 </AreaEstimates>
@@ -1052,7 +1052,7 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.419</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.603</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>1</Best-caseLatency>
@@ -1068,19 +1068,19 @@
 <AreaEstimates>
 <Resources>
 <DSP>32</DSP>
-<AVAIL_DSP>1728</AVAIL_DSP>
-<UTIL_DSP>1</UTIL_DSP>
-<FF>6692</FF>
-<AVAIL_FF>460800</AVAIL_FF>
-<UTIL_FF>1</UTIL_FF>
-<LUT>12278</LUT>
-<AVAIL_LUT>230400</AVAIL_LUT>
-<UTIL_LUT>5</UTIL_LUT>
+<AVAIL_DSP>3600</AVAIL_DSP>
+<UTIL_DSP>~0</UTIL_DSP>
+<FF>7095</FF>
+<AVAIL_FF>866400</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>11922</LUT>
+<AVAIL_LUT>433200</AVAIL_LUT>
+<UTIL_LUT>2</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>624</AVAIL_BRAM>
+<AVAIL_BRAM>2940</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
 <URAM>0</URAM>
-<AVAIL_URAM>96</AVAIL_URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>
 </Resources>
 </AreaEstimates>

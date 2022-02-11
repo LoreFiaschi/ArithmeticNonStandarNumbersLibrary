@@ -24,6 +24,18 @@
                 "value": "ban_interface"
               }]
           }
+        },
+        {
+          "functionName": "ban_interface",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ban_interface"
+              }]
+          }
         }
       ]
     }]}

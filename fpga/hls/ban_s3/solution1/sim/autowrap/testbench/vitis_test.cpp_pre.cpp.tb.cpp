@@ -41494,226 +41494,319 @@ int main(){
     Ban b11(0,v11);
 
     Ban b[12] = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11};
-    T v[5] = {-2.0, 0, 5, 12, -4};
+    T v[5] = {-2.0, 0.1, 5, 12, -4};
+
+    bool ok = true;
+    output out;
 
     for(unsigned i=0; i<12; ++i){
-        
+        out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 42 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 45 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, 0.0, OPP);
 #undef ban_interface
-# 42 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 45 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-        
+        ok &= (out.b == -b[i]);
+        if(!ok)
+            return OPP+1;
+
+        out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 43 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 50 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, 0.0, ABS);
 #undef ban_interface
-# 43 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 50 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-        
+        ok &= (out.b == abs(b[i]));
+        if(!ok)
+            return ABS+1;
+
+        out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 44 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 55 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, 0.0, SQRT);
 #undef ban_interface
-# 44 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 55 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+
+        ok &= (out.b == sqrt(b[i]));
+        if(!ok)
+            ok = true;
 
 
         for(unsigned j=0; j<12; ++j){
-            
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 47 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 62 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, SUM);
 #undef ban_interface
-# 47 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 62 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]+b[j]));
+            if(!ok)
+                return SUM+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 48 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 67 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, DIF);
 #undef ban_interface
-# 48 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 67 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]-b[j]));
+            if(!ok)
+                return DIF+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 49 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 72 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, MUL);
 #undef ban_interface
-# 49 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 72 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]*b[j]));
+            if(!ok)
+                return MUL+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 50 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 77 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, DIV);
 #undef ban_interface
-# 50 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 77 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]/b[j]));
+            if(!ok)
+                return DIV+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 51 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 82 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, EQ);
 #undef ban_interface
-# 51 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 82 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]==b[j]));
+            if(!ok)
+                return EQ+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 52 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 87 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, NEQ);
 #undef ban_interface
-# 52 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 87 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]!=b[j]));
+            if(!ok)
+                return NEQ+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 53 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 92 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, LES);
 #undef ban_interface
-# 53 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 92 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]<b[j]));
+            if(!ok)
+                return LES+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 54 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 97 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, LAR);
 #undef ban_interface
-# 54 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 97 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]>b[j]));
+            if(!ok)
+                return LAR+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 55 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 102 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, LES_EQ);
 #undef ban_interface
-# 55 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 102 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]<=b[j]));
+            if(!ok)
+                return LES_EQ+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 56 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 107 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], b[j], 0.0, LAR_EQ);
 #undef ban_interface
-# 56 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 107 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
+            ok &= (out.l == (b[i]>=b[j]));
+            if(!ok)
+                return LAR_EQ+1;
         }
 
         for(unsigned j=0; j<5; ++j){
-            
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 60 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 114 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], SUM_R);
 #undef ban_interface
-# 60 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 114 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]+v[j]));
+            if(!ok)
+                return SUM_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 61 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 119 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], DIF_R);
 #undef ban_interface
-# 61 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 119 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]-v[j]));
+            if(!ok)
+                return DIF_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 62 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 124 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], MUL_R);
 #undef ban_interface
-# 62 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 124 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]*v[j]));
+            if(!ok)
+                return MUL_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 63 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 129 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], DIV_R);
 #undef ban_interface
-# 63 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 129 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.b == (b[i]/v[j]));
+            if(!ok)
+                return DIV_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 64 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 134 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], EQ_R);
 #undef ban_interface
-# 64 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 134 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]==v[j]));
+            if(!ok)
+                return EQ_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 65 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 139 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], NEQ_R);
 #undef ban_interface
-# 65 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 139 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]!=v[j]));
+            if(!ok)
+                return NEQ_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 66 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 144 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], LES_R);
 #undef ban_interface
-# 66 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 144 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]<v[j]));
+            if(!ok)
+                return LES_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 67 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 149 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], LAR_R);
 #undef ban_interface
-# 67 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 149 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]>v[j]));
+            if(!ok)
+                return LAR_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 68 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 154 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], LES_EQ_R);
 #undef ban_interface
-# 68 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 154 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
-            
+            ok &= (out.l == (b[i]<=v[j]));
+            if(!ok)
+                return LES_EQ_R+1;
+
+            out = 
 #ifndef HLS_FASTSIM
 #define ban_interface apatb_ban_interface_sw
 #endif
-# 69 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 159 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 ban_interface(b[i], 0.0, v[j], LAR_EQ_R);
 #undef ban_interface
-# 69 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 159 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 
+            ok &= (out.l == (b[i]>=v[j]));
+            if(!ok)
+                return LAR_EQ_R+1;
         }
     }
 
-    return 0;
+    return !ok;
 }
 #endif
-# 74 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
+# 167 "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp"
 

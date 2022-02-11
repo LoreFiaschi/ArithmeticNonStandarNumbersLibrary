@@ -1,7 +1,0 @@
-Running: xsim.dir/ban_interface/xsimk -simmode gui -wdb ban_interface.wdb -simrunnum 0 -socket 53143
-Design successfully loaded
-Design Loading Memory Usage: 68624 KB (Peak: 68756 KB)
-Design Loading CPU Usage: 50 ms
-Simulation completed
-Simulation Memory Usage: 167272 KB (Peak: 207892 KB)
-Simulation CPU Usage: 9740 ms

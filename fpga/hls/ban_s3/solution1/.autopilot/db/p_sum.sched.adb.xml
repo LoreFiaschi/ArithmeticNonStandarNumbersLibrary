@@ -47,6 +47,21 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
+<Node id="4" bw="2" op_0_bw="2" op_1_bw="2">
+<![CDATA[
+_ifconv:0 %diff_p_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %diff_p
+
+]]></Node>
+<StgValue><ssdm name="diff_p_read"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
 <Node id="5" bw="128" op_0_bw="128" op_1_bw="128">
 <![CDATA[
 _ifconv:1 %p_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read25
@@ -55,7 +70,7 @@ _ifconv:1 %p_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read25
 <StgValue><ssdm name="p_read"/></StgValue>
 </operation>
 
-<operation id="8" st_id="1" stage="1" lat="1">
+<operation id="9" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -70,7 +85,7 @@ _ifconv:2 %p_read_5 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read14
 <StgValue><ssdm name="p_read_5"/></StgValue>
 </operation>
 
-<operation id="9" st_id="1" stage="1" lat="1">
+<operation id="10" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -85,7 +100,7 @@ _ifconv:3 %c_p = trunc i128 %p_read_5
 <StgValue><ssdm name="c_p"/></StgValue>
 </operation>
 
-<operation id="10" st_id="1" stage="1" lat="1">
+<operation id="11" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -100,7 +115,7 @@ _ifconv:4 %trunc_ln51_2 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, 
 <StgValue><ssdm name="trunc_ln51_2"/></StgValue>
 </operation>
 
-<operation id="11" st_id="1" stage="1" lat="1">
+<operation id="12" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -115,7 +130,7 @@ _ifconv:5 %bitcast_ln51 = bitcast i32 %trunc_ln51_2
 <StgValue><ssdm name="bitcast_ln51"/></StgValue>
 </operation>
 
-<operation id="12" st_id="1" stage="1" lat="1">
+<operation id="13" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -130,7 +145,7 @@ _ifconv:6 %trunc_ln51_3 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, 
 <StgValue><ssdm name="trunc_ln51_3"/></StgValue>
 </operation>
 
-<operation id="13" st_id="1" stage="1" lat="1">
+<operation id="14" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -145,7 +160,7 @@ _ifconv:7 %bitcast_ln51_2 = bitcast i32 %trunc_ln51_3
 <StgValue><ssdm name="bitcast_ln51_2"/></StgValue>
 </operation>
 
-<operation id="14" st_id="1" stage="1" lat="1">
+<operation id="15" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -160,7 +175,7 @@ _ifconv:8 %trunc_ln51_4 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, 
 <StgValue><ssdm name="trunc_ln51_4"/></StgValue>
 </operation>
 
-<operation id="15" st_id="1" stage="1" lat="1">
+<operation id="16" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -175,7 +190,7 @@ _ifconv:9 %bitcast_ln51_3 = bitcast i32 %trunc_ln51_4
 <StgValue><ssdm name="bitcast_ln51_3"/></StgValue>
 </operation>
 
-<operation id="16" st_id="1" stage="1" lat="1">
+<operation id="17" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -190,7 +205,7 @@ _ifconv:10 %trunc_ln = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i12
 <StgValue><ssdm name="trunc_ln"/></StgValue>
 </operation>
 
-<operation id="17" st_id="1" stage="1" lat="1">
+<operation id="18" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -205,7 +220,7 @@ _ifconv:11 %bitcast_ln55 = bitcast i32 %trunc_ln
 <StgValue><ssdm name="bitcast_ln55"/></StgValue>
 </operation>
 
-<operation id="18" st_id="1" stage="4" lat="4">
+<operation id="19" st_id="1" stage="4" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -220,7 +235,7 @@ _ifconv:12 %add1 = fadd i32 %bitcast_ln51, i32 %bitcast_ln55
 <StgValue><ssdm name="add1"/></StgValue>
 </operation>
 
-<operation id="19" st_id="1" stage="1" lat="1">
+<operation id="20" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -235,7 +250,7 @@ _ifconv:13 %trunc_ln18 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i
 <StgValue><ssdm name="trunc_ln18"/></StgValue>
 </operation>
 
-<operation id="20" st_id="1" stage="1" lat="1">
+<operation id="21" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -250,7 +265,7 @@ _ifconv:14 %bitcast_ln65 = bitcast i32 %trunc_ln18
 <StgValue><ssdm name="bitcast_ln65"/></StgValue>
 </operation>
 
-<operation id="21" st_id="1" stage="4" lat="4">
+<operation id="22" st_id="1" stage="4" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -265,7 +280,7 @@ _ifconv:15 %add2 = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln65
 <StgValue><ssdm name="add2"/></StgValue>
 </operation>
 
-<operation id="22" st_id="1" stage="1" lat="1">
+<operation id="23" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -280,7 +295,7 @@ _ifconv:16 %trunc_ln19 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i
 <StgValue><ssdm name="trunc_ln19"/></StgValue>
 </operation>
 
-<operation id="23" st_id="1" stage="1" lat="1">
+<operation id="24" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -295,70 +310,7 @@ _ifconv:17 %bitcast_ln66 = bitcast i32 %trunc_ln19
 <StgValue><ssdm name="bitcast_ln66"/></StgValue>
 </operation>
 
-<operation id="24" st_id="1" stage="4" lat="4">
-<core>FAddSub_fulldsp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-_ifconv:18 %add3 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln66
-
-]]></Node>
-<StgValue><ssdm name="add3"/></StgValue>
-</operation>
-</state>
-
-<state id="2" st_id="2">
-
-<operation id="25" st_id="2" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="4" bw="2" op_0_bw="2" op_1_bw="2">
-<![CDATA[
-_ifconv:0 %diff_p_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %diff_p
-
-]]></Node>
-<StgValue><ssdm name="diff_p_read"/></StgValue>
-</operation>
-
-<operation id="26" st_id="2" stage="3" lat="4">
-<core>FAddSub_fulldsp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="16" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-_ifconv:12 %add1 = fadd i32 %bitcast_ln51, i32 %bitcast_ln55
-
-]]></Node>
-<StgValue><ssdm name="add1"/></StgValue>
-</operation>
-
-<operation id="27" st_id="2" stage="3" lat="4">
-<core>FAddSub_fulldsp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="19" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-_ifconv:15 %add2 = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln65
-
-]]></Node>
-<StgValue><ssdm name="add2"/></StgValue>
-</operation>
-
-<operation id="28" st_id="2" stage="3" lat="4">
+<operation id="25" st_id="1" stage="4" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -373,7 +325,7 @@ _ifconv:18 %add3 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln66
 <StgValue><ssdm name="add3"/></StgValue>
 </operation>
 
-<operation id="29" st_id="2" stage="1" lat="1">
+<operation id="26" st_id="1" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -388,7 +340,7 @@ _ifconv:49 %icmp_ln53 = icmp_ne  i2 %diff_p_read, i2 1
 <StgValue><ssdm name="icmp_ln53"/></StgValue>
 </operation>
 
-<operation id="30" st_id="2" stage="1" lat="1">
+<operation id="27" st_id="1" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -403,7 +355,7 @@ _ifconv:50 %icmp_ln53_1 = icmp_ne  i2 %diff_p_read, i2 2
 <StgValue><ssdm name="icmp_ln53_1"/></StgValue>
 </operation>
 
-<operation id="31" st_id="2" stage="1" lat="1">
+<operation id="28" st_id="1" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -418,7 +370,7 @@ _ifconv:51 %and_ln53 = and i1 %icmp_ln53, i1 %icmp_ln53_1
 <StgValue><ssdm name="and_ln53"/></StgValue>
 </operation>
 
-<operation id="32" st_id="2" stage="1" lat="1">
+<operation id="29" st_id="1" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -433,7 +385,7 @@ _ifconv:58 %icmp_ln53_2 = icmp_eq  i2 %diff_p_read, i2 2
 <StgValue><ssdm name="icmp_ln53_2"/></StgValue>
 </operation>
 
-<operation id="33" st_id="2" stage="1" lat="1">
+<operation id="30" st_id="1" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -449,9 +401,9 @@ _ifconv:60 %icmp_ln53_3 = icmp_eq  i2 %diff_p_read, i2 1
 </operation>
 </state>
 
-<state id="3" st_id="3">
+<state id="2" st_id="2">
 
-<operation id="34" st_id="3" stage="2" lat="4">
+<operation id="31" st_id="2" stage="3" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -466,7 +418,7 @@ _ifconv:12 %add1 = fadd i32 %bitcast_ln51, i32 %bitcast_ln55
 <StgValue><ssdm name="add1"/></StgValue>
 </operation>
 
-<operation id="35" st_id="3" stage="2" lat="4">
+<operation id="32" st_id="2" stage="3" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -481,7 +433,7 @@ _ifconv:15 %add2 = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln65
 <StgValue><ssdm name="add2"/></StgValue>
 </operation>
 
-<operation id="36" st_id="3" stage="2" lat="4">
+<operation id="33" st_id="2" stage="3" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -496,7 +448,7 @@ _ifconv:18 %add3 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln66
 <StgValue><ssdm name="add3"/></StgValue>
 </operation>
 
-<operation id="37" st_id="3" stage="4" lat="4">
+<operation id="34" st_id="2" stage="4" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -512,7 +464,7 @@ _ifconv:28 %add = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln55
 <StgValue><ssdm name="add"/></StgValue>
 </operation>
 
-<operation id="38" st_id="3" stage="4" lat="4">
+<operation id="35" st_id="2" stage="4" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -528,7 +480,104 @@ _ifconv:29 %add7 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln65
 <StgValue><ssdm name="add7"/></StgValue>
 </operation>
 
-<operation id="39" st_id="3" stage="4" lat="4">
+<operation id="36" st_id="2" stage="4" lat="4">
+<core>FAddSub_fulldsp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln53_2" val="1"/>
+<literal name="icmp_ln53_3" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:30 %add4 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln55
+
+]]></Node>
+<StgValue><ssdm name="add4"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="37" st_id="3" stage="2" lat="4">
+<core>FAddSub_fulldsp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:12 %add1 = fadd i32 %bitcast_ln51, i32 %bitcast_ln55
+
+]]></Node>
+<StgValue><ssdm name="add1"/></StgValue>
+</operation>
+
+<operation id="38" st_id="3" stage="2" lat="4">
+<core>FAddSub_fulldsp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:15 %add2 = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln65
+
+]]></Node>
+<StgValue><ssdm name="add2"/></StgValue>
+</operation>
+
+<operation id="39" st_id="3" stage="2" lat="4">
+<core>FAddSub_fulldsp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:18 %add3 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln66
+
+]]></Node>
+<StgValue><ssdm name="add3"/></StgValue>
+</operation>
+
+<operation id="40" st_id="3" stage="3" lat="4">
+<core>FAddSub_fulldsp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln53_3" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:28 %add = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln55
+
+]]></Node>
+<StgValue><ssdm name="add"/></StgValue>
+</operation>
+
+<operation id="41" st_id="3" stage="3" lat="4">
+<core>FAddSub_fulldsp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="icmp_ln53_3" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:29 %add7 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln65
+
+]]></Node>
+<StgValue><ssdm name="add7"/></StgValue>
+</operation>
+
+<operation id="42" st_id="3" stage="3" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -548,7 +597,7 @@ _ifconv:30 %add4 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln55
 
 <state id="4" st_id="4">
 
-<operation id="40" st_id="4" stage="1" lat="4">
+<operation id="43" st_id="4" stage="1" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -563,7 +612,7 @@ _ifconv:12 %add1 = fadd i32 %bitcast_ln51, i32 %bitcast_ln55
 <StgValue><ssdm name="add1"/></StgValue>
 </operation>
 
-<operation id="41" st_id="4" stage="1" lat="4">
+<operation id="44" st_id="4" stage="1" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -578,7 +627,7 @@ _ifconv:15 %add2 = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln65
 <StgValue><ssdm name="add2"/></StgValue>
 </operation>
 
-<operation id="42" st_id="4" stage="1" lat="4">
+<operation id="45" st_id="4" stage="1" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -593,7 +642,7 @@ _ifconv:18 %add3 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln66
 <StgValue><ssdm name="add3"/></StgValue>
 </operation>
 
-<operation id="43" st_id="4" stage="3" lat="4">
+<operation id="46" st_id="4" stage="2" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -609,7 +658,7 @@ _ifconv:28 %add = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln55
 <StgValue><ssdm name="add"/></StgValue>
 </operation>
 
-<operation id="44" st_id="4" stage="3" lat="4">
+<operation id="47" st_id="4" stage="2" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -625,7 +674,7 @@ _ifconv:29 %add7 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln65
 <StgValue><ssdm name="add7"/></StgValue>
 </operation>
 
-<operation id="45" st_id="4" stage="3" lat="4">
+<operation id="48" st_id="4" stage="2" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -645,7 +694,7 @@ _ifconv:30 %add4 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln55
 
 <state id="5" st_id="5">
 
-<operation id="46" st_id="5" stage="2" lat="2">
+<operation id="49" st_id="5" stage="2" lat="2">
 <core>FCompare</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -660,7 +709,7 @@ _ifconv:25 %tmp_178 = fcmp_oeq  i32 %add1, i32 0
 <StgValue><ssdm name="tmp_178"/></StgValue>
 </operation>
 
-<operation id="47" st_id="5" stage="2" lat="4">
+<operation id="50" st_id="5" stage="1" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -676,7 +725,7 @@ _ifconv:28 %add = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln55
 <StgValue><ssdm name="add"/></StgValue>
 </operation>
 
-<operation id="48" st_id="5" stage="2" lat="4">
+<operation id="51" st_id="5" stage="1" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -692,7 +741,7 @@ _ifconv:29 %add7 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln65
 <StgValue><ssdm name="add7"/></StgValue>
 </operation>
 
-<operation id="49" st_id="5" stage="2" lat="4">
+<operation id="52" st_id="5" stage="1" lat="4">
 <core>FAddSub_fulldsp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -709,7 +758,7 @@ _ifconv:30 %add4 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln55
 <StgValue><ssdm name="add4"/></StgValue>
 </operation>
 
-<operation id="50" st_id="5" stage="2" lat="2">
+<operation id="53" st_id="5" stage="2" lat="2">
 <core>FCompare</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -724,7 +773,7 @@ _ifconv:37 %tmp_180 = fcmp_oeq  i32 %add2, i32 0
 <StgValue><ssdm name="tmp_180"/></StgValue>
 </operation>
 
-<operation id="51" st_id="5" stage="2" lat="2">
+<operation id="54" st_id="5" stage="2" lat="2">
 <core>FCompare</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -742,7 +791,7 @@ _ifconv:46 %tmp_182 = fcmp_oeq  i32 %add3, i32 0
 
 <state id="6" st_id="6">
 
-<operation id="52" st_id="6" stage="1" lat="1">
+<operation id="55" st_id="6" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -757,7 +806,7 @@ _ifconv:19 %bitcast_ln27 = bitcast i32 %add1
 <StgValue><ssdm name="bitcast_ln27"/></StgValue>
 </operation>
 
-<operation id="53" st_id="6" stage="1" lat="1">
+<operation id="56" st_id="6" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -772,7 +821,7 @@ _ifconv:20 %tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitc
 <StgValue><ssdm name="tmp_s"/></StgValue>
 </operation>
 
-<operation id="54" st_id="6" stage="1" lat="1">
+<operation id="57" st_id="6" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -787,7 +836,7 @@ _ifconv:21 %trunc_ln27 = trunc i32 %bitcast_ln27
 <StgValue><ssdm name="trunc_ln27"/></StgValue>
 </operation>
 
-<operation id="55" st_id="6" stage="1" lat="1">
+<operation id="58" st_id="6" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -802,7 +851,7 @@ _ifconv:22 %icmp_ln27 = icmp_ne  i8 %tmp_s, i8 255
 <StgValue><ssdm name="icmp_ln27"/></StgValue>
 </operation>
 
-<operation id="56" st_id="6" stage="1" lat="1">
+<operation id="59" st_id="6" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -817,7 +866,7 @@ _ifconv:23 %icmp_ln27_8 = icmp_eq  i23 %trunc_ln27, i23 0
 <StgValue><ssdm name="icmp_ln27_8"/></StgValue>
 </operation>
 
-<operation id="57" st_id="6" stage="1" lat="1">
+<operation id="60" st_id="6" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -832,7 +881,7 @@ _ifconv:24 %or_ln27 = or i1 %icmp_ln27_8, i1 %icmp_ln27
 <StgValue><ssdm name="or_ln27"/></StgValue>
 </operation>
 
-<operation id="58" st_id="6" stage="1" lat="2">
+<operation id="61" st_id="6" stage="1" lat="2">
 <core>FCompare</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -847,7 +896,7 @@ _ifconv:25 %tmp_178 = fcmp_oeq  i32 %add1, i32 0
 <StgValue><ssdm name="tmp_178"/></StgValue>
 </operation>
 
-<operation id="59" st_id="6" stage="1" lat="1">
+<operation id="62" st_id="6" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -862,7 +911,7 @@ _ifconv:26 %and_ln27 = and i1 %or_ln27, i1 %tmp_178
 <StgValue><ssdm name="and_ln27"/></StgValue>
 </operation>
 
-<operation id="60" st_id="6" stage="1" lat="1">
+<operation id="63" st_id="6" stage="1" lat="1">
 <core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -875,55 +924,6 @@ _ifconv:27 %xor_ln27 = xor i1 %and_ln27, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln27"/></StgValue>
-</operation>
-
-<operation id="61" st_id="6" stage="1" lat="4">
-<core>FAddSub_fulldsp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln53_3" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="32" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-_ifconv:28 %add = fadd i32 %bitcast_ln51_2, i32 %bitcast_ln55
-
-]]></Node>
-<StgValue><ssdm name="add"/></StgValue>
-</operation>
-
-<operation id="62" st_id="6" stage="1" lat="4">
-<core>FAddSub_fulldsp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln53_3" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="33" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-_ifconv:29 %add7 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln65
-
-]]></Node>
-<StgValue><ssdm name="add7"/></StgValue>
-</operation>
-
-<operation id="63" st_id="6" stage="1" lat="4">
-<core>FAddSub_fulldsp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp><literal name="icmp_ln53_2" val="1"/>
-<literal name="icmp_ln53_3" val="0"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="34" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-_ifconv:30 %add4 = fadd i32 %bitcast_ln51_3, i32 %bitcast_ln55
-
-]]></Node>
-<StgValue><ssdm name="add4"/></StgValue>
 </operation>
 
 <operation id="64" st_id="6" stage="1" lat="1">

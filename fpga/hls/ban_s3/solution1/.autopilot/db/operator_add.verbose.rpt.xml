@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'operator_add'" level="0">
-<item name = "Date">Fri Feb 11 12:36:23 2022
+<item name = "Date">Fri Feb 11 17:22:40 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">ban_s3</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
-<item name = "Product family">zynquplus</item>
-<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+<item name = "Product family">virtex7</item>
+<item name = "Target device">xc7vx690t-ffg1761-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.886 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -48,13 +48,13 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 318, -</column>
+<column name="Expression">-, -, 0, 305, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 6, 1106, 1416, -</column>
+<column name="Instance">-, 6, 1170, 1399, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 371, -</column>
+<column name="Multiplexer">-, -, -, 333, -</column>
 <column name="Register">-, -, 608, -, -</column>
-<specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
+<specialColumn name="Available">2940, 3600, 866400, 433200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_p_sum_fu_144">p_sum, 0, 6, 1106, 1416, 0</column>
+<column name="grp_p_sum_fu_144">p_sum, 0, 6, 1170, 1399, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,7 +80,7 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="diff_p_fu_528_p2">-, 0, 0, 39, 32, 32</column>
-<column name="sub_ln94_fu_556_p2">-, 0, 0, 9, 1, 2</column>
+<column name="sub_ln94_fu_556_p2">-, 0, 0, 10, 1, 2</column>
 <column name="and_ln22_10_fu_522_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln22_6_fu_325_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln22_7_fu_372_p2">and, 0, 0, 2, 1, 1</column>
@@ -88,21 +88,21 @@
 <column name="and_ln22_9_fu_475_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln22_fu_278_p2">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln22_12_fu_260_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln22_13_fu_266_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln22_13_fu_266_p2">icmp, 0, 0, 15, 23, 1</column>
 <column name="icmp_ln22_14_fu_307_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln22_15_fu_313_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln22_15_fu_313_p2">icmp, 0, 0, 15, 23, 1</column>
 <column name="icmp_ln22_16_fu_354_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln22_17_fu_360_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln22_17_fu_360_p2">icmp, 0, 0, 15, 23, 1</column>
 <column name="icmp_ln22_18_fu_410_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln22_19_fu_416_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln22_19_fu_416_p2">icmp, 0, 0, 15, 23, 1</column>
 <column name="icmp_ln22_20_fu_457_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln22_21_fu_463_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln22_21_fu_463_p2">icmp, 0, 0, 15, 23, 1</column>
 <column name="icmp_ln22_22_fu_504_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="icmp_ln22_23_fu_510_p2">icmp, 0, 0, 16, 23, 1</column>
-<column name="icmp_ln22_5_fu_381_p2">icmp, 0, 0, 20, 32, 1</column>
-<column name="icmp_ln22_fu_231_p2">icmp, 0, 0, 20, 32, 1</column>
-<column name="icmp_ln86_fu_536_p2">icmp, 0, 0, 20, 32, 2</column>
-<column name="icmp_ln89_fu_542_p2">icmp, 0, 0, 20, 32, 3</column>
+<column name="icmp_ln22_23_fu_510_p2">icmp, 0, 0, 15, 23, 1</column>
+<column name="icmp_ln22_5_fu_381_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="icmp_ln22_fu_231_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="icmp_ln86_fu_536_p2">icmp, 0, 0, 18, 32, 2</column>
+<column name="icmp_ln89_fu_542_p2">icmp, 0, 0, 18, 32, 3</column>
 <column name="ap_condition_366">or, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_399">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln22_5_fu_319_p2">or, 0, 0, 2, 1, 1</column>
@@ -115,23 +115,23 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="agg_result_01_0_reg_127">26, 5, 32, 160</column>
-<column name="agg_result_1_0_0_reg_76">31, 6, 32, 192</column>
-<column name="agg_result_1_1_0_reg_93">31, 6, 32, 192</column>
-<column name="agg_result_1_2_0_reg_110">31, 6, 32, 192</column>
+<column name="agg_result_01_0_reg_127">21, 5, 32, 160</column>
+<column name="agg_result_1_0_0_reg_76">25, 6, 32, 192</column>
+<column name="agg_result_1_1_0_reg_93">25, 6, 32, 192</column>
+<column name="agg_result_1_2_0_reg_110">25, 6, 32, 192</column>
 <column name="ap_NS_fsm">81, 17, 1, 17</column>
-<column name="ap_phi_mux_agg_result_01_0_phi_fu_130_p12">14, 3, 32, 96</column>
-<column name="ap_phi_mux_agg_result_1_0_0_phi_fu_79_p12">14, 3, 32, 96</column>
-<column name="ap_phi_mux_agg_result_1_1_0_phi_fu_96_p12">14, 3, 32, 96</column>
-<column name="ap_phi_mux_agg_result_1_2_0_phi_fu_113_p12">14, 3, 32, 96</column>
+<column name="ap_phi_mux_agg_result_01_0_phi_fu_130_p12">13, 3, 32, 96</column>
+<column name="ap_phi_mux_agg_result_1_0_0_phi_fu_79_p12">13, 3, 32, 96</column>
+<column name="ap_phi_mux_agg_result_1_1_0_phi_fu_96_p12">13, 3, 32, 96</column>
+<column name="ap_phi_mux_agg_result_1_2_0_phi_fu_113_p12">13, 3, 32, 96</column>
 <column name="ap_return_0">9, 2, 32, 64</column>
 <column name="ap_return_1">9, 2, 32, 64</column>
 <column name="ap_return_2">9, 2, 32, 64</column>
 <column name="ap_return_3">9, 2, 32, 64</column>
-<column name="grp_fu_151_p0">37, 7, 32, 224</column>
-<column name="grp_p_sum_fu_144_diff_p">14, 3, 2, 6</column>
-<column name="grp_p_sum_fu_144_p_read14">14, 3, 128, 384</column>
-<column name="grp_p_sum_fu_144_p_read25">14, 3, 128, 384</column>
+<column name="grp_fu_151_p0">29, 7, 32, 224</column>
+<column name="grp_p_sum_fu_144_diff_p">13, 3, 2, 6</column>
+<column name="grp_p_sum_fu_144_p_read14">13, 3, 128, 384</column>
+<column name="grp_p_sum_fu_144_p_read25">13, 3, 128, 384</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">

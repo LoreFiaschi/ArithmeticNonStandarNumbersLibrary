@@ -3,13 +3,16 @@
         <value string="false"/>
     </checksum>
     <downStreamTool>
-        <DownStreamTool name="vivado"/>
+        <DownStreamTool name=""/>
     </downStreamTool>
     <synthesis askAgain="true"/>
-    <config/>
+    <config>
+        <config_export output="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1" format="ip_catalog" rtl="verilog"/>
+    </config>
     <UIConfigurations>
-        <UIAutosynConf boardInfo="Zynq UltraScale+ ZCU106 Evaluation Platform (xczu7ev-ffvc1156-2-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
-            <Platform>xilinx/zynquplus/zynquplus</Platform>
+        <UIAutosynConf boardInfo="Virtex-7 VC709 Evaluation Platform (xc7vx690tffg1761-2) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="true" showDetailDesignViewer="false">
+            <Platform>xilinx/virtex7/virtex7</Platform>
+            <Platform>xilinx/virtex7/virtex7_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -38,16 +41,16 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="false" rtlCombo="verilog">
-        <Format formatName="ip_catalog"/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="ban_interface" version="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
         <Format formatName="pcore" use_netlist="none"/>
         <Format formatName="xo"/>
     </ExportDesign>
-    <Simulation argv="">
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="true" dumpTrace="port" enableDataflowProfiling="true" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="auto" waveDebug="true" ldflags="" mflags="" compiledLibrary="">
+    <Simulation>
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="true" dumpTrace="port" enableDataflowProfiling="true" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="Auto" waveDebug="true">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -61,10 +64,10 @@
     </project>
     <flowTarget value="vivado"/>
     <targetInfo>
-        <TargetInfo value="xczu7ev:-ffvc1156:-2-e"/>
+        <TargetInfo value="xc7vx690t:-ffg1761:-2"/>
     </targetInfo>
     <libraryList>
-        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+        <library value="xilinx/virtex7/virtex7" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
         <clock name="default" default="false" period="10"/>

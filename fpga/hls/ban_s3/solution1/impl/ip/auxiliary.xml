@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ban_interface" xd:componentRef="ban_interface" xd:initiationInterval="x" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="ap_return" xd:busTypeRef="register" xd:dataWidth="160"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="b_op1" xd:originalName="b_op1" xd:direction="in" xd:interfaceRef="b_op1" xd:busTypeRef="register" xd:dataWidth="128"/>
+  <xd:arg xd:name="b_op2" xd:originalName="b_op2" xd:direction="in" xd:interfaceRef="b_op2" xd:busTypeRef="register" xd:dataWidth="128"/>
+  <xd:arg xd:name="f_op" xd:originalName="f_op" xd:direction="in" xd:interfaceRef="f_op" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:arg xd:name="op" xd:originalName="op" xd:direction="in" xd:interfaceRef="op" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="59" xd:average-case="8"/>
+  <xd:resourceEstimates xd:LUT="11922" xd:FF="7095" xd:BRAM="0" xd:DSP="32"/>
+</xd:acceleratorMap>

@@ -6,8 +6,8 @@
 
 <UserAssignments>
 <unit>ns</unit>
-<ProductFamily>zynquplus</ProductFamily>
-<Part>xczu7ev-ffvc1156-2-e</Part>
+<ProductFamily>virtex7</ProductFamily>
+<Part>xc7vx690t-ffg1761-2</Part>
 <TopModelName>operator_add</TopModelName>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.886</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -36,17 +36,17 @@
 <AreaEstimates>
 <Resources>
 <DSP>6</DSP>
-<FF>1714</FF>
-<LUT>2105</LUT>
+<FF>1778</FF>
+<LUT>2037</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
-<BRAM_18K>624</BRAM_18K>
-<DSP>1728</DSP>
-<FF>460800</FF>
-<LUT>230400</LUT>
-<URAM>96</URAM>
+<BRAM_18K>2940</BRAM_18K>
+<DSP>3600</DSP>
+<FF>866400</FF>
+<LUT>433200</LUT>
+<URAM>0</URAM>
 </AvailableResources>
 </AreaEstimates>
 

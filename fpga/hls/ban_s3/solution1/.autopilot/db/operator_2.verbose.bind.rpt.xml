@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'operator_2'" level="0">
-<item name = "Date">Fri Feb 11 12:36:16 2022
+<item name = "Date">Fri Feb 11 17:22:33 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">ban_s3</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
-<item name = "Product family">zynquplus</item>
-<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+<item name = "Product family">virtex7</item>
+<item name = "Target device">xc7vx690t-ffg1761-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.913 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.274 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="">6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
 </table>
 </item>
 <item name = "Detail">

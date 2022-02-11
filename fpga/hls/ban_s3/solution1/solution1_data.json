@@ -8,10 +8,10 @@
   "FunctionProtocol": "ap_ctrl_hs",
   "ResetStyle": "control",
   "Target": {
-    "Family": "zynquplus",
-    "Device": "xczu7ev",
-    "Package": "-ffvc1156",
-    "Speed": "-2-e",
+    "Family": "virtex7",
+    "Device": "xc7vx690t",
+    "Package": "-ffg1761",
+    "Speed": "-2",
     "Triple": "fpga64-xilinx-none"
   },
   "Args": {
@@ -81,10 +81,12 @@
   },
   "HlsSolution": {
     "FlowTarget": "vivado",
-    "DirectiveTcl": [
-      "set_directive_top ban_interface -name ban_interface",
-      "set_directive_top ban_interface -name ban_interface"
+    "ConfigTcl": [
+      "config_export -output=\/home\/lorenzo\/Documents\/PhD\/GitHub\/ArithmeticNonStandarNumbersLibrary\/fpga\/hls\/ban_s3\/solution1",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
     ],
+    "DirectiveTcl": ["set_directive_top ban_interface -name ban_interface"],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "ban_interface"
@@ -112,8 +114,8 @@
   },
   "Files": {
     "CSource": [
-      "..\/..\/..\/src\/ban_s3.cpp",
-      "..\/..\/..\/src\/ban_interface.cpp"
+      "..\/..\/..\/src\/ban_interface.cpp",
+      "..\/..\/..\/src\/ban_s3.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.vhd",
@@ -448,67 +450,67 @@
     "Metrics": {
       "operator_2": {
         "Latency": {
-          "LatencyBest": "5",
-          "LatencyAvg": "5",
-          "LatencyWorst": "5",
-          "PipelineII": "5",
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
+          "LatencyWorst": "6",
+          "PipelineII": "6",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.913"
+          "Estimate": "7.274"
         },
         "Area": {
           "DSP": "2",
-          "AVAIL_DSP": "1728",
+          "AVAIL_DSP": "3600",
           "UTIL_DSP": "~0",
-          "FF": "651",
-          "AVAIL_FF": "460800",
+          "FF": "685",
+          "AVAIL_FF": "866400",
           "UTIL_FF": "~0",
           "LUT": "1620",
-          "AVAIL_LUT": "230400",
+          "AVAIL_LUT": "433200",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
+          "AVAIL_BRAM": "2940",
           "UTIL_BRAM": "0",
           "URAM": "0",
-          "AVAIL_URAM": "96",
+          "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       },
       "operator_1": {
         "Latency": {
           "LatencyBest": "4",
-          "LatencyAvg": "9",
-          "LatencyWorst": "12",
+          "LatencyAvg": "10",
+          "LatencyWorst": "14",
           "PipelineIIMin": "4",
-          "PipelineIIMax": "12",
-          "PipelineII": "4 ~ 12",
+          "PipelineIIMax": "14",
+          "PipelineII": "4 ~ 14",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "7.207"
+          "Estimate": "7.311"
         },
         "Area": {
-          "FF": "616",
-          "AVAIL_FF": "460800",
+          "FF": "781",
+          "AVAIL_FF": "866400",
           "UTIL_FF": "~0",
-          "LUT": "1087",
-          "AVAIL_LUT": "230400",
+          "LUT": "1043",
+          "AVAIL_LUT": "433200",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
+          "AVAIL_BRAM": "2940",
           "UTIL_BRAM": "0",
           "DSP": "0",
-          "AVAIL_DSP": "1728",
+          "AVAIL_DSP": "3600",
           "UTIL_DSP": "0",
           "URAM": "0",
-          "AVAIL_URAM": "96",
+          "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       },
@@ -524,23 +526,23 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.886"
+          "Estimate": "6.771"
         },
         "Area": {
           "DSP": "6",
-          "AVAIL_DSP": "1728",
+          "AVAIL_DSP": "3600",
           "UTIL_DSP": "~0",
-          "FF": "1106",
-          "AVAIL_FF": "460800",
+          "FF": "1170",
+          "AVAIL_FF": "866400",
           "UTIL_FF": "~0",
-          "LUT": "1416",
-          "AVAIL_LUT": "230400",
+          "LUT": "1399",
+          "AVAIL_LUT": "433200",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
+          "AVAIL_BRAM": "2940",
           "UTIL_BRAM": "0",
           "URAM": "0",
-          "AVAIL_URAM": "96",
+          "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       },
@@ -558,23 +560,23 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.886"
+          "Estimate": "7.300"
         },
         "Area": {
           "DSP": "6",
-          "AVAIL_DSP": "1728",
+          "AVAIL_DSP": "3600",
           "UTIL_DSP": "~0",
-          "FF": "1714",
-          "AVAIL_FF": "460800",
+          "FF": "1778",
+          "AVAIL_FF": "866400",
           "UTIL_FF": "~0",
-          "LUT": "2105",
-          "AVAIL_LUT": "230400",
+          "LUT": "2037",
+          "AVAIL_LUT": "433200",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
+          "AVAIL_BRAM": "2940",
           "UTIL_BRAM": "0",
           "URAM": "0",
-          "AVAIL_URAM": "96",
+          "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       },
@@ -592,23 +594,23 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "7.419"
+          "Estimate": "7.603"
         },
         "Area": {
           "DSP": "32",
-          "AVAIL_DSP": "1728",
-          "UTIL_DSP": "1",
-          "FF": "6692",
-          "AVAIL_FF": "460800",
-          "UTIL_FF": "1",
-          "LUT": "12278",
-          "AVAIL_LUT": "230400",
-          "UTIL_LUT": "5",
+          "AVAIL_DSP": "3600",
+          "UTIL_DSP": "~0",
+          "FF": "7095",
+          "AVAIL_FF": "866400",
+          "UTIL_FF": "~0",
+          "LUT": "11922",
+          "AVAIL_LUT": "433200",
+          "UTIL_LUT": "2",
           "BRAM_18K": "0",
-          "AVAIL_BRAM": "624",
+          "AVAIL_BRAM": "2940",
           "UTIL_BRAM": "0",
           "URAM": "0",
-          "AVAIL_URAM": "96",
+          "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       }
@@ -617,7 +619,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-02-11 12:36:29 CET",
+    "Time": "2022-02-11 17:23:24 CET",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }

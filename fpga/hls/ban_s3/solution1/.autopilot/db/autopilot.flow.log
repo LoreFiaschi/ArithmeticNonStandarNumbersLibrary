@@ -1,15 +1,15 @@
-INFO-FLOW: Workspace /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 opened at Fri Feb 11 12:36:07 CET 2022
+INFO-FLOW: Workspace /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 opened at Fri Feb 11 17:22:24 CET 2022
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xczu7ev-ffvc1156-2-e 
-Execute       create_platform xczu7ev-ffvc1156-2-e -board  
+Execute     set_part xc7vx690tffg1761-2 
+Execute       create_platform xc7vx690tffg1761-2 -board  
 DBG:HLSDevice: Trying to load device library: /home/lorenzo/Programs/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/lorenzo/Programs/Vivado/2021.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
-Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
-INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
-Command       create_platform done; 1.24 sec.
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xc7vx690t-ffg1761-2'
+Command       create_platform done; 1.19 sec.
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
@@ -23,9 +23,9 @@ Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.34 sec.
+Command     set_part done; 1.27 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -33,12 +33,15 @@ Execute     get_config_interface -m_axi_alignment_byte_size
 Execute     get_config_interface -m_axi_max_widen_bitwidth 
 Execute     get_config_interface -default_interface 
 Execute     get_config_rtl -register_reset_num 
-Command   open_solution done; 1.35 sec.
-Execute   set_part xczu7ev-ffvc1156-2-e 
-INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
-Execute     create_platform xczu7ev-ffvc1156-2-e -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1
+Execute     config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+Command   open_solution done; 1.27 sec.
+Execute   set_part xc7vx690tffg1761-2 
+INFO: [HLS 200-1510] Running: set_part xc7vx690tffg1761-2 
+Execute     create_platform xc7vx690tffg1761-2 -board  
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
-Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
 Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
@@ -52,11 +55,16 @@ Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/x
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
 Command   set_part done; 0.11 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+INFO: [HLS 200-1510] Running: config_export -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+Execute   source ./ban_s3/solution1/directives.tcl 
+Execute     set_directive_top -name ban_interface ban_interface 
+INFO: [HLS 200-1510] Running: set_directive_top -name ban_interface ban_interface 
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute     get_config_compile -effort 
@@ -71,15 +79,15 @@ Execute     get_config_compile -skip_transform
 Execute     get_config_compile -pre_tcl 
 Execute     get_config_compile -keep_printf 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.324 GB.
-INFO: [HLS 200-10] Analyzing design file '../src/ban_s3.cpp' ... 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.324 GB.
+INFO: [HLS 200-10] Analyzing design file '../src/ban_interface.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       get_config_compile -pragma_strict_mode 
-INFO-FLOW: Handling ../src/ban_s3.cpp as C++
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+INFO-FLOW: Handling ../src/ban_interface.cpp as C++
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang ../src/ban_s3.cpp -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.cpp.clang.err.log 
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang ../src/ban_interface.cpp -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.cpp.clang.err.log 
 INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
 Execute       set_directive_top ban_interface -name=ban_interface 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
@@ -87,76 +95,76 @@ Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute       list_core -type functional_unit 
 INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.22 sec.
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.2 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/.systemc_flag -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.2 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/all.directive.json -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.31 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert -desc constantarray_remove-assert /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.21 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.23 sec.
+Command       clang_tidy done; 0.23 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.18 sec.
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.bc -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.2 sec.
+INFO: [HLS 200-10] Analyzing design file '../src/ban_s3.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling ../src/ban_s3.cpp as C++
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang ../src/ban_s3.cpp -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.cpp.clang.err.log 
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute       set_directive_top ban_interface -name=ban_interface 
+Execute       list_core -type functional_unit 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.2 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/.systemc_flag -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
 Command       clang_tidy done; 0.18 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/all.directive.json -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.19 sec.
+Command       clang_tidy done; 0.18 sec.
 Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert -desc constantarray_remove-assert /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.21 sec.
+Command       clang_tidy done; 0.22 sec.
 INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 0.35 sec.
+Command         ap_eval done; 0.36 sec.
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.37 sec.
+Command       clang_tidy done; 0.36 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
 Command       ap_eval done; 0.18 sec.
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
 INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.bc -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang.err.log 
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.bc -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.pp.0.cpp.clang.err.log 
 Command       ap_eval done; 0.22 sec.
-INFO: [HLS 200-10] Analyzing design file '../src/ban_interface.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       get_config_compile -pragma_strict_mode 
-INFO-FLOW: Handling ../src/ban_interface.cpp as C++
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang ../src/ban_interface.cpp -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.cpp.clang.err.log 
-INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
-Execute       set_directive_top ban_interface -name=ban_interface 
-Execute       list_core -type functional_unit 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.21 sec.
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/.systemc_flag -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.18 sec.
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/all.directive.json -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.32 sec.
-Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert -desc constantarray_remove-assert /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  
-INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.22 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp std=gnu++14 -target fpga  
-Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 0.24 sec.
-Command       clang_tidy done; 0.24 sec.
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 0.17 sec.
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot -I /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.bc -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 0.21 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.28 seconds. CPU system time: 0.36 seconds. Elapsed time: 3.34 seconds; current allocated memory: 418.762 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.3 seconds. CPU system time: 0.37 seconds. Elapsed time: 3.31 seconds; current allocated memory: 418.750 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
-Execute       run_link_or_opt -out /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.g.bc" "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.g.bc"  
-Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.g.bc /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.g.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+Execute       run_link_or_opt -out /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.g.bc" "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.g.bc"  
+Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.g.bc /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_s3.g.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
 INFO-FLOW: 
 Execute       run_link_or_opt -opt -out /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
 Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
@@ -164,14 +172,14 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/lib/libhlsm_39.bc /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/lib/libhlsm_39.bc /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/lib/libhlsmc++_39.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 1.71 sec.
+Command         ap_eval done; 1.66 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.71 sec.
+Command       run_link_or_opt done; 1.66 sec.
 Execute       run_link_or_opt -opt -out /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=ban_interface -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=ban_interface -reflow-float-conversion -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 0.61 sec.
+Command         ap_eval done; 0.59 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.61 sec.
+Command       run_link_or_opt done; 0.59 sec.
 Execute       run_link_or_opt -out /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/lib/libfloatconversion_39.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -217,7 +225,7 @@ Execute       send_msg_by_id INFO @200-777@%s Vivado
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
-Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=ban_interface -mllvm -hls-db-dir -mllvm /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshhold=200000 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-disaggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Execute       ap_eval exec -ignorestderr /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=ban_interface -mllvm -hls-db-dir -mllvm /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshhold=200000 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-disaggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtex7_medium > /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
 Command       ap_eval done; 0.25 sec.
 INFO: [HLS 214-284] Auto array partition mode is set into default.
 INFO: [HLS 214-178] Inlining function 'Ban::Ban(float)' into 'output::output()' (../src/ban_s3.h:96:0)
@@ -347,21 +355,21 @@ INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban const&, Ban const&, float, op_type)' (../src/ban_s3.cpp:109:26)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban const&, Ban const&, float, op_type)' (../src/ban_s3.cpp:109:15)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.23 seconds. CPU system time: 0.25 seconds. Elapsed time: 3.48 seconds; current allocated memory: 420.434 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 420.477 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.22 seconds. CPU system time: 0.17 seconds. Elapsed time: 3.39 seconds; current allocated memory: 420.477 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 420.520 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top ban_interface -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.0.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 423.418 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 423.508 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.1.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'ban_interface' (../src/ban_s3.cpp:158) automatically.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 425.816 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 425.789 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.g.1.bc to /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -388,17 +396,17 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:74:31) to (../src/ban_s3.cpp:97:1) in function 'Ban::operator+.1'... converting 24 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (../src/ban_s3.cpp:71:2) in function 'Ban::_sum'... converting 9 basic blocks.
 INFO: [XFORM 203-11] Balancing expressions in function 'ban_interface' (../src/ban_s3.cpp:8:141)...15 expression(s) balanced.
-Command         transform done; 0.12 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 451.453 MB.
+Command         transform done; 0.11 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 451.469 MB.
 Execute         get_config_compile -enable_auto_rewind 
 Execute         get_config_compile -enable_loop_extract 
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation2 -deadargelim -globaldce -mem2reg -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.o.2.bc -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Command         transform done; 0.19 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 488.828 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 488.844 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.58 sec.
-Command     elaborate done; 7.4 sec.
+Command       opt_and_import_c done; 0.57 sec.
+Command     elaborate done; 7.27 sec.
 Execute     ap_eval exec zip -j /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -461,7 +469,7 @@ Execute       set_default_model operator+.2
 Execute       schedule -model operator+.2 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 490.859 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 490.844 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -474,11 +482,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 490.859 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 490.844 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.17 sec.
+Command       syn_report done; 0.15 sec.
 Execute       db_write -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.bind.adb -f 
 INFO-FLOW: Finish binding operator+.2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -488,10 +496,11 @@ Execute       set_default_model operator+.1
 Execute       schedule -model operator+.1 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 492.742 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 492.695 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
+Command       syn_report done; 0.11 sec.
 Execute       db_write -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.sched.adb -f 
 INFO-FLOW: Finish scheduling operator+.1.
 Execute       set_default_model operator+.1 
@@ -501,7 +510,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 492.742 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 492.695 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -515,7 +524,7 @@ Execute       set_default_model _sum
 Execute       schedule -model _sum 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 492.746 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 492.781 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -528,11 +537,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 492.746 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 492.781 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.13 sec.
+Command       syn_report done; 0.12 sec.
 Execute       db_write -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.bind.adb -f 
 INFO-FLOW: Finish binding _sum.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -542,7 +551,7 @@ Execute       set_default_model operator+
 Execute       schedule -model operator+ 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 494.309 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 494.398 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_add.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -555,7 +564,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 494.309 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 494.398 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_add.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -569,12 +578,12 @@ Execute       set_default_model ban_interface
 Execute       schedule -model ban_interface 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.88 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.06 seconds. CPU system time: 0 seconds. Elapsed time: 1.07 seconds; current allocated memory: 507.012 MB.
+Command       schedule done; 0.92 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.1 seconds; current allocated memory: 507.066 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.88 sec.
+Command       syn_report done; 0.86 sec.
 Execute       db_write -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.sched.adb -f 
 INFO-FLOW: Finish scheduling ban_interface.
 Execute       set_default_model ban_interface 
@@ -584,12 +593,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.69 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.62 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.62 seconds; current allocated memory: 507.012 MB.
+Command       bind done; 0.67 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.57 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.58 seconds; current allocated memory: 507.066 MB.
 Execute       syn_report -verbosereport -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 1.89 sec.
+Command       syn_report done; 1.83 sec.
 Execute       db_write -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.bind.adb -f 
 INFO-FLOW: Finish binding ban_interface.
 Execute       get_model_list ban_interface -filter all-wo-channel 
@@ -609,10 +618,10 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model operator+.2 -top_prefix ban_interface_ -sub_prefix ban_interface_ -mg_file /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.98 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.99 seconds; current allocated memory: 507.012 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.91 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.92 seconds; current allocated memory: 507.066 MB.
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute       gen_rtl operator+.2 -style xilinx -f -lang vhdl -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_operator_2 
 Execute       gen_rtl operator+.2 -style xilinx -f -lang vlog -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/verilog/ban_interface_operator_2 
@@ -640,7 +649,7 @@ Execute       create_rtl_model operator+.1 -top_prefix ban_interface_ -sub_prefi
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 507.902 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 507.969 MB.
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute       gen_rtl operator+.1 -style xilinx -f -lang vhdl -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_operator_1 
 Execute       gen_rtl operator+.1 -style xilinx -f -lang vlog -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/verilog/ban_interface_operator_1 
@@ -653,7 +662,7 @@ Execute           get_solution -flow_target
 Execute       syn_report -verbosereport -model operator+.1 -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.19 sec.
+Command       syn_report done; 0.18 sec.
 Execute       db_write -model operator+.1 -f -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.adb 
 Execute       db_write -model operator+.1 -bindview -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info operator+.1 -p /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1 
@@ -668,7 +677,7 @@ Execute       create_rtl_model _sum -top_prefix ban_interface_ -sub_prefix ban_i
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 3 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_sum'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 511.582 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 511.676 MB.
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute       gen_rtl _sum -style xilinx -f -lang vhdl -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_p_sum 
 Execute       gen_rtl _sum -style xilinx -f -lang vlog -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/verilog/ban_interface_p_sum 
@@ -681,7 +690,7 @@ Execute           get_solution -flow_target
 Execute       syn_report -verbosereport -model _sum -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.15 sec.
+Command       syn_report done; 0.16 sec.
 Execute       db_write -model _sum -f -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.adb 
 Execute       db_write -model _sum -bindview -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info _sum -p /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum 
@@ -695,7 +704,7 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       create_rtl_model operator+ -top_prefix ban_interface_ -sub_prefix ban_interface_ -mg_file /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_add.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_add'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 514.523 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 514.602 MB.
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute       gen_rtl operator+ -style xilinx -f -lang vhdl -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface_operator_add 
 Execute       gen_rtl operator+ -style xilinx -f -lang vlog -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/verilog/ban_interface_operator_add 
@@ -731,7 +740,7 @@ INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 6 
 INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_8_no_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ban_interface'.
 Command       create_rtl_model done; 0.17 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.5 seconds; current allocated memory: 526.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 526.840 MB.
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ban_interface -istop -style xilinx -f -lang vhdl -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/vhdl/ban_interface 
 Command       gen_rtl done; 0.65 sec.
@@ -748,15 +757,15 @@ Command       syn_report done; 0.32 sec.
 Execute       syn_report -verbosereport -model ban_interface -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 2.26 sec.
+Command       syn_report done; 2.19 sec.
 Execute       db_write -model ban_interface -f -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.adb 
-Command       db_write done; 0.39 sec.
+Command       db_write done; 0.4 sec.
 Execute       db_write -model ban_interface -bindview -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/design.bindinfo.xml 
-Command       db_write done; 0.16 sec.
+Command       db_write done; 0.15 sec.
 Execute       gen_tb_info ban_interface -p /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface 
 Execute       export_constraint_db -f -tool general -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.constraint.tcl 
 Execute       syn_report -designview -model ban_interface -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.design.xml 
-Command       syn_report done; 0.91 sec.
+Command       syn_report done; 0.89 sec.
 Execute       syn_report -csynthDesign -model ban_interface -o /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/syn/report/csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -859,18 +868,18 @@ operator_add
 ban_interface
 ' expOnly='0'
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.compgen.tcl 
-Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
-Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute         ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.compgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.compgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_add.compgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.compgen.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 5.62 seconds. CPU system time: 0.02 seconds. Elapsed time: 5.63 seconds; current allocated memory: 554.543 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 5.5 seconds. CPU system time: 0.04 seconds. Elapsed time: 5.54 seconds; current allocated memory: 555.074 MB.
 INFO-FLOW: DBG:PROC: ::AP::create_csynth_xml bind_adapter_nodes_var='bind_adapter_nodes' bind_report_dict_var='bind_report_dict' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -1071,16 +1080,16 @@ Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumb
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.compgen.dataonly.tcl 
 Execute       get_config_export -format 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.tbgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.tbgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.tbgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_add.tbgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
 Execute       get_solution -flow_target 
 Execute       get_config_rtl -kernel_profile 
 Execute       get_config_rtl -kernel_profile 
@@ -1099,34 +1108,34 @@ Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumb
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/topf_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
 Execute       source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/topf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
-INFO-FLOW: DBG:PROC: ::AP::add_csynth_report_sections bind_adapter_nodes='' bind_report_dict='TOP ban_interface DATA {ban_interface {DEPTH 1 CHILDREN {operator_2 operator_1 operator_add} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:341 VARIABLE res_num_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:342 VARIABLE res_num_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U43 SOURCE ../src/ban_s3.cpp:343 VARIABLE res_num_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_17_fu_2895_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE res_p_17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_16_fu_2941_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE res_p_16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:325 VARIABLE res_num LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:326 VARIABLE res_num_1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:327 VARIABLE res_num_4 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_15_fu_3070_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE res_p_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_14_fu_3117_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE res_p_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:263 VARIABLE eps_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:264 VARIABLE eps_2_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:263 VARIABLE conv14_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:264 VARIABLE conv19_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:110 VARIABLE eps_3 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i_i1 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:111 VARIABLE eps_3_1 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:269 VARIABLE mul27_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:269 VARIABLE add29_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U39 SOURCE ../src/ban_s3.cpp:270 VARIABLE mul31_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:270 VARIABLE add33_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 7 OPTYPE fsqrt PRAGMA {} RTLNAME fsqrt_32ns_32ns_32_8_no_dsp_1_U54 SOURCE /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:487 VARIABLE normalizer_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fsqrt}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:275 VARIABLE num_res_9 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:276 VARIABLE num_res_4 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME c_p_3_fu_4632_p2 SOURCE ../src/ban_s3.cpp:156 VARIABLE c_p_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:130 VARIABLE div_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:131 VARIABLE div6_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:109 VARIABLE mul_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i_i2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:110 VARIABLE add_i_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i_i2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i_i2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i_i2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add20_i_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:134 VARIABLE add_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:135 VARIABLE add5_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:136 VARIABLE add6_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:109 VARIABLE mul_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i3_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i5_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:110 VARIABLE add_i6_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i9_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i1_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:111 VARIABLE add20_i1_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:139 VARIABLE add7_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:140 VARIABLE add8_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:141 VARIABLE add9_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:109 VARIABLE mul_i2_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:110 VARIABLE add_i2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U39 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U40 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i2_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U41 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i2_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add20_i2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U35 SOURCE ../src/ban_s3.cpp:144 VARIABLE add1_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:145 VARIABLE add2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:146 VARIABLE add3_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:148 VARIABLE c_num_0_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:149 VARIABLE c_num_1_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U43 SOURCE ../src/ban_s3.cpp:150 VARIABLE c_num_0_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_7_fu_4720_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE c_p_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_6_fu_4766_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE c_p_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:109 VARIABLE num_res LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:110 VARIABLE num_res_8 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U39 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE c_num_2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_fu_4830_p2 SOURCE ../src/ban_s3.cpp:118 VARIABLE c_p LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_5_fu_4919_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE c_p_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_4_fu_4966_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE c_p_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 32 BRAM 0 URAM 0}} operator_2 {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln290_fu_269_p2 SOURCE ../src/ban_s3.cpp:290 VARIABLE add_ln290 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U1 SOURCE ../src/ban_s3.cpp:293 VARIABLE add LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_1_fu_413_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE res_p_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_2_fu_465_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE res_p_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} operator_1 {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME diff_p_fu_571_p2 SOURCE ../src/ban_s3.cpp:83 VARIABLE diff_p LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_2_fu_696_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE c_p_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_1_fu_742_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE c_p_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} operator_add {DEPTH 2 CHILDREN p_sum BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME diff_p_fu_528_p2 SOURCE ../src/ban_s3.cpp:83 VARIABLE diff_p LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln94_fu_556_p2 SOURCE ../src/ban_s3.cpp:94 VARIABLE sub_ln94 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 6 BRAM 0 URAM 0}} p_sum {DEPTH 3 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U21 SOURCE ../src/ban_s3.cpp:64 VARIABLE add1 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U22 SOURCE ../src/ban_s3.cpp:65 VARIABLE add2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U23 SOURCE ../src/ban_s3.cpp:66 VARIABLE add3 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U21 SOURCE ../src/ban_s3.cpp:55 VARIABLE add LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U22 SOURCE ../src/ban_s3.cpp:56 VARIABLE add7 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U21 SOURCE ../src/ban_s3.cpp:60 VARIABLE add4 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_478_p2 SOURCE ../src/ban_s3.cpp:53 VARIABLE add_ln53 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 6 BRAM 0 URAM 0}}}'
+INFO-FLOW: DBG:PROC: ::AP::add_csynth_report_sections bind_adapter_nodes='' bind_report_dict='TOP ban_interface DATA {ban_interface {DEPTH 1 CHILDREN {operator_2 operator_1 operator_add} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:341 VARIABLE res_num_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:342 VARIABLE res_num_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:343 VARIABLE res_num_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_17_fu_2885_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE res_p_17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_16_fu_2931_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE res_p_16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:325 VARIABLE res_num LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:326 VARIABLE res_num_1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:327 VARIABLE res_num_4 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_15_fu_3060_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE res_p_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_14_fu_3107_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE res_p_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:263 VARIABLE eps_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:264 VARIABLE eps_2_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:263 VARIABLE conv14_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:264 VARIABLE conv19_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:110 VARIABLE eps_3 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i_i1 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE eps_3_1 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:269 VARIABLE mul27_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:269 VARIABLE add29_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:270 VARIABLE mul31_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:270 VARIABLE add33_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 7 OPTYPE fsqrt PRAGMA {} RTLNAME fsqrt_32ns_32ns_32_8_no_dsp_1_U53 SOURCE /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:487 VARIABLE normalizer_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fsqrt}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:275 VARIABLE num_res_9 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:276 VARIABLE num_res_4 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME c_p_3_fu_4622_p2 SOURCE ../src/ban_s3.cpp:156 VARIABLE c_p_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:130 VARIABLE div_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:131 VARIABLE div6_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:109 VARIABLE mul_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i_i2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:110 VARIABLE add_i_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i_i2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i_i1 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i_i2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i_i2 LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:111 VARIABLE add20_i_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:134 VARIABLE add_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:135 VARIABLE add5_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:136 VARIABLE add6_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:109 VARIABLE mul_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i3_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i5_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:110 VARIABLE add_i6_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i9_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i1_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add20_i1_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:139 VARIABLE add7_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:140 VARIABLE add8_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:141 VARIABLE add9_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:109 VARIABLE mul_i2_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:110 VARIABLE add_i2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i1_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U39 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i2_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U40 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i2_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:111 VARIABLE add20_i2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ../src/ban_s3.cpp:144 VARIABLE add1_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:145 VARIABLE add2_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:146 VARIABLE add3_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:148 VARIABLE c_num_0_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U41 SOURCE ../src/ban_s3.cpp:149 VARIABLE c_num_1_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 8 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_9_no_dsp_1_U42 SOURCE ../src/ban_s3.cpp:150 VARIABLE c_num_0_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_7_fu_4710_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE c_p_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_6_fu_4756_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE c_p_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:109 VARIABLE num_res LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul5_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U37 SOURCE ../src/ban_s3.cpp:110 VARIABLE mul8_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:110 VARIABLE num_res_8 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U35 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul12_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U36 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul15_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ../src/ban_s3.cpp:111 VARIABLE add16_i_i LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U38 SOURCE ../src/ban_s3.cpp:111 VARIABLE mul19_i_i LOOP {} BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ../src/ban_s3.cpp:111 VARIABLE c_num_2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_fu_4820_p2 SOURCE ../src/ban_s3.cpp:118 VARIABLE c_p LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_5_fu_4909_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE c_p_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_4_fu_4956_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE c_p_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 32 BRAM 0 URAM 0}} operator_2 {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln290_fu_262_p2 SOURCE ../src/ban_s3.cpp:290 VARIABLE add_ln290 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U1 SOURCE ../src/ban_s3.cpp:293 VARIABLE add LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_1_fu_406_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE res_p_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME res_p_2_fu_458_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE res_p_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} operator_1 {DEPTH 2 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME diff_p_fu_570_p2 SOURCE ../src/ban_s3.cpp:83 VARIABLE diff_p LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_2_fu_695_p2 SOURCE ../src/ban_s3.cpp:34 VARIABLE c_p_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME c_p_1_fu_741_p2 SOURCE ../src/ban_s3.cpp:41 VARIABLE c_p_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} operator_add {DEPTH 2 CHILDREN p_sum BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME diff_p_fu_528_p2 SOURCE ../src/ban_s3.cpp:83 VARIABLE diff_p LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln94_fu_556_p2 SOURCE ../src/ban_s3.cpp:94 VARIABLE sub_ln94 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 6 BRAM 0 URAM 0}} p_sum {DEPTH 3 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U20 SOURCE ../src/ban_s3.cpp:64 VARIABLE add1 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U21 SOURCE ../src/ban_s3.cpp:65 VARIABLE add2 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U22 SOURCE ../src/ban_s3.cpp:66 VARIABLE add3 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U20 SOURCE ../src/ban_s3.cpp:55 VARIABLE add LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U21 SOURCE ../src/ban_s3.cpp:56 VARIABLE add7 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U20 SOURCE ../src/ban_s3.cpp:60 VARIABLE add4 LOOP {} BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_fu_481_p2 SOURCE ../src/ban_s3.cpp:53 VARIABLE add_ln53 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 6 BRAM 0 URAM 0}}}'
 INFO-FLOW: DBG:PUTS:       update_csynth_reports json2reportxml
 INFO-FLOW: Running: gen_csynth_pragma_report_xml
 INFO-FLOW: Done: gen_csynth_pragma_report_xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:       update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:       update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 557.703 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 558.273 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for ban_interface.
 INFO: [VLOG 209-307] Generating Verilog RTL for ban_interface.
 Execute       syn_report -model ban_interface -printsummary 
-INFO: [HLS 200-789] **** Estimated Fmax: 134.79 MHz
-Command     autosyn done; 13.62 sec.
-Command   csynth_design done; 21.05 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 20.63 seconds. CPU system time: 0.71 seconds. Elapsed time: 21.05 seconds; current allocated memory: -797.543 MB.
-Command ap_source done; 22.52 sec.
+INFO: [HLS 200-789] **** Estimated Fmax: 131.53 MHz
+Command     autosyn done; 13.38 sec.
+Command   csynth_design done; 20.67 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 20.37 seconds. CPU system time: 0.67 seconds. Elapsed time: 20.67 seconds; current allocated memory: -796.941 MB.
+Command ap_source done; 22.06 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 opened at Fri Feb 11 12:36:57 CET 2022
+INFO-FLOW: Workspace /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 opened at Fri Feb 11 17:23:23 CET 2022
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xczu7ev-ffvc1156-2-e 
-Execute       create_platform xczu7ev-ffvc1156-2-e -board  
+Execute     set_part xc7vx690tffg1761-2 
+Execute       create_platform xc7vx690tffg1761-2 -board  
 DBG:HLSDevice: Trying to load device library: /home/lorenzo/Programs/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/lorenzo/Programs/Vivado/2021.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
-Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
-INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
-Command       create_platform done; 1.26 sec.
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xc7vx690t-ffg1761-2'
+Command       create_platform done; 1.25 sec.
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
@@ -1140,9 +1149,9 @@ Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       ap_part_info -name xc7vx690t-ffg1761-2 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.36 sec.
+Command     set_part done; 1.35 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -1150,12 +1159,15 @@ Execute     get_config_interface -m_axi_alignment_byte_size
 Execute     get_config_interface -m_axi_max_widen_bitwidth 
 Execute     get_config_interface -default_interface 
 Execute     get_config_rtl -register_reset_num 
-Command   open_solution done; 1.37 sec.
-Execute   set_part xczu7ev-ffvc1156-2-e 
-INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
-Execute     create_platform xczu7ev-ffvc1156-2-e -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1
+Execute     config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+Command   open_solution done; 1.35 sec.
+Execute   set_part xc7vx690tffg1761-2 
+INFO: [HLS 200-1510] Running: set_part xc7vx690tffg1761-2 
+Execute     create_platform xc7vx690tffg1761-2 -board  
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
-Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynquplus_dsp48e2.hlp 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
 Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
@@ -1169,15 +1181,57 @@ Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/x
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
 Command   set_part done; 0.11 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   cosim_design -wave_debug -disable_deadlock_detection -enable_dataflow_profiling -trace_level port 
-INFO: [HLS 200-1510] Running: cosim_design -wave_debug -disable_deadlock_detection -enable_dataflow_profiling -trace_level port 
+Execute   config_export -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+INFO: [HLS 200-1510] Running: config_export -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+Execute   source ./ban_s3/solution1/directives.tcl 
+Execute     set_directive_top -name ban_interface ban_interface 
+INFO: [HLS 200-1510] Running: set_directive_top -name ban_interface ban_interface 
+Execute   export_design -rtl verilog -format ip_catalog -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1 -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:PUTS: read_platform_lib /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl
 Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/generic/autopilot/common.gen 
@@ -1200,93 +1254,146 @@ Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/x
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=ban_interface xml_exists=0
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     get_config_export -deadlock_detection 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-INFO-FLOW: TB processing: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/vitis_test.cpp_pre.cpp
-Execute     clang_tidy xilinx-tb-process -desc tb-process /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/vitis_test.cpp_pre.cpp.tb.cpp std=c++11 
-INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/vitis_test.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     clang_tidy done; 0.47 sec.
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-INFO-FLOW: TB processing: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.cpp /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_s3.cpp_pre.cpp
-Execute     clang_tidy xilinx-tb-process -desc tb-process /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_s3.cpp_pre.cpp.tb.cpp std=c++11 
-INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_s3.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     clang_tidy done; 0.19 sec.
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-INFO-FLOW: TB processing: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_interface.cpp /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_interface.cpp_pre.cpp
-Execute     clang_tidy xilinx-tb-process -desc tb-process /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_interface.cpp_pre.cpp.tb.cpp std=c++11 
-INFO-FLOW: exec /home/lorenzo/Programs/Vitis_HLS/2021.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_interface.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     clang_tidy done; 0.32 sec.
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to ban_interface
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=5
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=11 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='ban_interface_fadd_32ns_32ns_32_4_full_dsp_1
+ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1
+ban_interface_mux_32_32_1_1
+ban_interface_fmul_32ns_32ns_32_3_max_dsp_1
+ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1
+ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1
+operator_2
+operator_1
+p_sum
+operator_add
+ban_interface
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.compgen.dataonly.tcl 
+Execute     get_config_export -format 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_2.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_1.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/p_sum.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/operator_add.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     get_solution -flow_target 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -kernel_profile 
+Execute     get_config_rtl -stall_sig_gen 
+Execute     get_config_rtl -profile 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.constraint.tcl 
+Execute     sc_get_clocks ban_interface 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_file 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_debug -directory 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/topf_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/misc/topf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute     get_config_export -deadlock_detection 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to ban_interface
+Execute     get_config_export -format 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=ban_interface
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.rtl_wrap.cfg.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-Execute     source .run_sim.tcl 
-INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.22 sec.
-INFO: [COSIM 212-333] Generating C post check test bench ...
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
-INFO: [COSIM 212-12] Generating RTL test bench ...
-Execute     source ../tv/cdatafile/ref.tcl 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -ip_xdc_ooc_file 
+Execute     get_config_export -ip_xdc_file 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.constraint.tcl 
 Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
-Execute     ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
-Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/ban_interface.tbgen.tcl 
-INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
-Execute     source .run_sim.tcl 
-Execute       source check_sim.tcl 
-Execute       source dataflow_monitor_API.tcl 
-Execute       source .sim.status.tcl 
-INFO: [COSIM 212-323] Starting verilog simulation. 
-INFO: [COSIM 212-15] Starting XSIM ...
-INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 369.99 sec.
-INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-Command   cosim_design done; 390.09 sec.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 165.04 seconds. CPU system time: 5.41 seconds. Elapsed time: 390.09 seconds; current allocated memory: -932.914 MB.
-Command ap_source done; 391.58 sec.
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data names -quiet 
+Execute     ap_part_info -name xc7vx690t-ffg1761-2 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/lorenzo/Programs/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/impl/ip/pack.sh
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s ban_s3/solution1/export.zip 
+INFO: [HLS 200-802] Generated output file ban_s3/solution1/export.zip
+Command   export_design done; 20.09 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 18.4 seconds. CPU system time: 0.86 seconds. Elapsed time: 20.09 seconds; current allocated memory: -930.301 MB.
+Command ap_source done; 21.56 sec.
 Execute cleanup_all 

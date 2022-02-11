@@ -95,12 +95,12 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_read14", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_read25", "Type" : "None", "Direction" : "I"},
 			{"Name" : "diff_p", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fadd_32ns_32ns_32_4_full_dsp_1_U21", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fadd_32ns_32ns_32_4_full_dsp_1_U22", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fadd_32ns_32ns_32_4_full_dsp_1_U23", "Parent" : "1"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fcmp_32ns_32ns_1_2_no_dsp_1_U24", "Parent" : "1"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fcmp_32ns_32ns_1_2_no_dsp_1_U25", "Parent" : "1"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fcmp_32ns_32ns_1_2_no_dsp_1_U26", "Parent" : "1"}]}
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fadd_32ns_32ns_32_4_full_dsp_1_U20", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fadd_32ns_32ns_32_4_full_dsp_1_U21", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fadd_32ns_32ns_32_4_full_dsp_1_U22", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fcmp_32ns_32ns_1_2_no_dsp_1_U23", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fcmp_32ns_32ns_1_2_no_dsp_1_U24", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_p_sum_fu_144.fcmp_32ns_32ns_1_2_no_dsp_1_U25", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -110,7 +110,7 @@ set ArgLastReadFirstWriteLatency {
 	p_sum {
 		p_read14 {Type I LastRead 0 FirstWrite -1}
 		p_read25 {Type I LastRead 0 FirstWrite -1}
-		diff_p {Type I LastRead 1 FirstWrite -1}}}
+		diff_p {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

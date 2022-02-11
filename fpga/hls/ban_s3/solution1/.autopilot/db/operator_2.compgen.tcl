@@ -12,7 +12,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 6
+set id 5
 set name ban_interface_mux_32_32_1_1
 set corename simcore_mux
 set op mux
@@ -69,7 +69,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 9 \
     name p_read13 \
     type other \
     dir I \
@@ -84,7 +84,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 11 \
+    id 10 \
     name n \
     type other \
     dir I \

@@ -5,11 +5,6 @@
                 <option name="name" value="ban_interface"/>
             </pragma>
         </directive>
-        <directive functionName="ban_interface" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="ban_interface"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

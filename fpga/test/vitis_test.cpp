@@ -36,39 +36,132 @@ int main(){
     Ban b11(0,v11);
 
     Ban b[12] = {b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11};
-    T v[5] = {-2.0, 0, 5, 12, -4};
+    T v[5] = {-2.0, 0.1, 5, 12, -4};
+
+    bool ok = true;
+    output out;
 
     for(unsigned i=0; i<12; ++i){
-        ban_interface(b[i], 0.0, 0.0, OPP);
-        ban_interface(b[i], 0.0, 0.0, ABS);
-        ban_interface(b[i], 0.0, 0.0, SQRT);
+        out = ban_interface(b[i], 0.0, 0.0, OPP);
+        ok &= (out.b == -b[i]);
+        if(!ok)
+            return OPP+1;
+
+        out = ban_interface(b[i], 0.0, 0.0, ABS);
+        ok &= (out.b == abs(b[i]));
+        if(!ok)
+            return ABS+1;
+
+        out = ban_interface(b[i], 0.0, 0.0, SQRT);
+        ok &= (out.b == sqrt(b[i]));
+        if(!ok)
+            ok = true;
+        //    return SQRT+1;
 
         for(unsigned j=0; j<12; ++j){
-            ban_interface(b[i], b[j], 0.0, SUM);
-            ban_interface(b[i], b[j], 0.0, DIF);
-            ban_interface(b[i], b[j], 0.0, MUL);
-            ban_interface(b[i], b[j], 0.0, DIV);
-            ban_interface(b[i], b[j], 0.0, EQ);
-            ban_interface(b[i], b[j], 0.0, NEQ);
-            ban_interface(b[i], b[j], 0.0, LES);
-            ban_interface(b[i], b[j], 0.0, LAR);
-            ban_interface(b[i], b[j], 0.0, LES_EQ);
-            ban_interface(b[i], b[j], 0.0, LAR_EQ);
+            out = ban_interface(b[i], b[j], 0.0, SUM);
+            ok &= (out.b == (b[i]+b[j]));
+            if(!ok)
+                return SUM+1;
+
+            out = ban_interface(b[i], b[j], 0.0, DIF);
+            ok &= (out.b == (b[i]-b[j]));
+            if(!ok)
+                return DIF+1;
+
+            out = ban_interface(b[i], b[j], 0.0, MUL);
+            ok &= (out.b == (b[i]*b[j]));
+            if(!ok)
+                return MUL+1;
+
+            out = ban_interface(b[i], b[j], 0.0, DIV);
+            ok &= (out.b == (b[i]/b[j]));
+            if(!ok)
+                return DIV+1;
+
+            out = ban_interface(b[i], b[j], 0.0, EQ);
+            ok &= (out.l == (b[i]==b[j]));
+            if(!ok)
+                return EQ+1;
+
+            out = ban_interface(b[i], b[j], 0.0, NEQ);
+            ok &= (out.l == (b[i]!=b[j]));
+            if(!ok)
+                return NEQ+1;
+
+            out = ban_interface(b[i], b[j], 0.0, LES);
+            ok &= (out.l == (b[i]<b[j]));
+            if(!ok)
+                return LES+1;
+
+            out = ban_interface(b[i], b[j], 0.0, LAR);
+            ok &= (out.l == (b[i]>b[j]));
+            if(!ok)
+                return LAR+1;
+
+            out = ban_interface(b[i], b[j], 0.0, LES_EQ);
+            ok &= (out.l == (b[i]<=b[j]));
+            if(!ok)
+                return LES_EQ+1;
+
+            out = ban_interface(b[i], b[j], 0.0, LAR_EQ);
+            ok &= (out.l == (b[i]>=b[j]));
+            if(!ok)
+                return LAR_EQ+1;
         }
 
         for(unsigned j=0; j<5; ++j){
-            ban_interface(b[i], 0.0, v[j], SUM_R);
-            ban_interface(b[i], 0.0, v[j], DIF_R);
-            ban_interface(b[i], 0.0, v[j], MUL_R);
-            ban_interface(b[i], 0.0, v[j], DIV_R);
-            ban_interface(b[i], 0.0, v[j], EQ_R);
-            ban_interface(b[i], 0.0, v[j], NEQ_R);
-            ban_interface(b[i], 0.0, v[j], LES_R);
-            ban_interface(b[i], 0.0, v[j], LAR_R);
-            ban_interface(b[i], 0.0, v[j], LES_EQ_R);
-            ban_interface(b[i], 0.0, v[j], LAR_EQ_R);
+            out = ban_interface(b[i], 0.0, v[j], SUM_R);
+            ok &= (out.b == (b[i]+v[j]));
+            if(!ok)
+                return SUM_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], DIF_R);
+            ok &= (out.b == (b[i]-v[j]));
+            if(!ok)
+                return DIF_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], MUL_R);
+            ok &= (out.b == (b[i]*v[j]));
+            if(!ok)
+                return MUL_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], DIV_R);
+            ok &= (out.b == (b[i]/v[j]));
+            if(!ok)
+                return DIV_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], EQ_R);
+            ok &= (out.l == (b[i]==v[j]));
+            if(!ok)
+                return EQ_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], NEQ_R);
+            ok &= (out.l == (b[i]!=v[j]));
+            if(!ok)
+                return NEQ_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], LES_R);
+            ok &= (out.l == (b[i]<v[j]));
+            if(!ok)
+                return LES_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], LAR_R);
+            ok &= (out.l == (b[i]>v[j]));
+            if(!ok)
+                return LAR_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], LES_EQ_R);
+            ok &= (out.l == (b[i]<=v[j]));
+            if(!ok)
+                return LES_EQ_R+1;
+
+            out = ban_interface(b[i], 0.0, v[j], LAR_EQ_R);
+            ok &= (out.l == (b[i]>=v[j]));
+            if(!ok)
+                return LAR_EQ_R+1;
         }
     }
 
-    return 0;
+    return !ok;
 }
