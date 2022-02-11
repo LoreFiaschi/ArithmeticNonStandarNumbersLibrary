@@ -5,22 +5,22 @@
 <ModuleName>ban_interface</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_operator_2_fu_505</InstName>
+<InstName>grp_operator_2_fu_1118</InstName>
 <ModuleName>operator_2</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>505</ID>
+<ID>1118</ID>
 </Instance>
 <Instance>
-<InstName>grp_operator_1_fu_511</InstName>
+<InstName>grp_operator_1_fu_1124</InstName>
 <ModuleName>operator_1</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>511</ID>
+<ID>1124</ID>
 </Instance>
 <Instance>
-<InstName>grp_operator_add_fu_520</InstName>
+<InstName>grp_operator_add_fu_1133</InstName>
 <ModuleName>operator_add</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>520</ID>
+<ID>1133</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_p_sum_fu_144</InstName>
@@ -358,7 +358,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_526_p_din0</name>
+<name>grp_fu_1139_p_din0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -369,7 +369,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_526_p_din1</name>
+<name>grp_fu_1139_p_din1</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -380,7 +380,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_526_p_opcode</name>
+<name>grp_fu_1139_p_opcode</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -391,7 +391,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_526_p_dout0</name>
+<name>grp_fu_1139_p_dout0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -402,7 +402,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_526_p_ce</name>
+<name>grp_fu_1139_p_ce</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -413,7 +413,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_530_p_din0</name>
+<name>grp_fu_1143_p_din0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -424,7 +424,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_530_p_din1</name>
+<name>grp_fu_1143_p_din1</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -435,7 +435,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_530_p_opcode</name>
+<name>grp_fu_1143_p_opcode</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -446,7 +446,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_530_p_dout0</name>
+<name>grp_fu_1143_p_dout0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -457,7 +457,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_530_p_ce</name>
+<name>grp_fu_1143_p_ce</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -468,7 +468,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_din0</name>
+<name>grp_fu_1191_p_din0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -479,7 +479,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_din1</name>
+<name>grp_fu_1191_p_din1</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -490,7 +490,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_opcode</name>
+<name>grp_fu_1191_p_opcode</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -501,7 +501,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_dout0</name>
+<name>grp_fu_1191_p_dout0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -512,7 +512,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_ce</name>
+<name>grp_fu_1191_p_ce</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -523,7 +523,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_587_p_din0</name>
+<name>grp_fu_1197_p_din0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -534,7 +534,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_587_p_din1</name>
+<name>grp_fu_1197_p_din1</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -545,7 +545,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_587_p_opcode</name>
+<name>grp_fu_1197_p_opcode</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -556,7 +556,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_587_p_dout0</name>
+<name>grp_fu_1197_p_dout0</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -567,7 +567,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_587_p_ce</name>
+<name>grp_fu_1197_p_ce</name>
 <Object>operator+.1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -968,7 +968,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_din0</name>
+<name>grp_fu_1191_p_din0</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -979,7 +979,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_din1</name>
+<name>grp_fu_1191_p_din1</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -990,7 +990,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_opcode</name>
+<name>grp_fu_1191_p_opcode</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1001,7 +1001,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_dout0</name>
+<name>grp_fu_1191_p_dout0</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1012,7 +1012,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_ce</name>
+<name>grp_fu_1191_p_ce</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1052,16 +1052,16 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.431</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.419</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>1</Best-caseLatency>
-<Average-caseLatency>9</Average-caseLatency>
-<Worst-caseLatency>57</Worst-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>59</Worst-caseLatency>
 <Best-caseRealTimeLatency>10.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.570 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>2 ~ 58</PipelineInitiationInterval>
+<Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.590 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>2 ~ 60</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
@@ -1070,10 +1070,10 @@
 <DSP>32</DSP>
 <AVAIL_DSP>1728</AVAIL_DSP>
 <UTIL_DSP>1</UTIL_DSP>
-<FF>6088</FF>
+<FF>6692</FF>
 <AVAIL_FF>460800</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
-<LUT>13298</LUT>
+<LUT>12278</LUT>
 <AVAIL_LUT>230400</AVAIL_LUT>
 <UTIL_LUT>5</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -1181,7 +1181,7 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>128</Bits>
+<Bits>160</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>

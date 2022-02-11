@@ -40619,7 +40619,7 @@ typedef float T;
 
 constexpr T sqrt_exp = -0.125;
 
-union output;
+struct output;
 
 enum op_type{
  SUM, OPP, DIF, MUL, DIV, ABS, SQRT,
@@ -40629,7 +40629,6 @@ enum op_type{
  EQ_R, NEQ_R, LES_R, LAR_R, LES_EQ_R, LAR_EQ_R,
 };
 
-
 class Ban{
 
  int p;
@@ -40637,16 +40636,12 @@ class Ban{
 
 
  void to_normal_form();
- Ban mul_body(const Ban &b) const;
 
 
  static Ban _pow_fast(const Ban &b, unsigned e);
  static Ban _sum(const Ban &a, const Ban &b, int diff_p);
  static void _div_body(const T num_num[3], const T num_den[3], T num_res[3]);
  static void _mul(const T num_a[3], const T num_b[3], T num_res[3]);
-
-
- void init(int p, const T num[3]);
 
 
 
@@ -40659,10 +40654,7 @@ class Ban{
  Ban(){};
  Ban(int p, const T num[3]);
  Ban(T n);
-
-
- friend output ban_interface(Ban b_op1, const Ban b_op2, T f_op, op_type op);
-# 65 "../src/ban_s3.h"
+# 57 "../src/ban_s3.h"
  Ban operator+(const Ban &b) const;
  Ban operator-() const;
  inline Ban operator-(const Ban &b) const {return *this+(-b);};
@@ -40697,13 +40689,18 @@ class Ban{
  inline bool operator>=(T n) const {return !(*this<n);};
 };
 
-union output{
+struct output{
 
  bool l;
  Ban b;
 
- output(){};
+ output():l(0),b(0){};
+ output(Ban a):l(0){b = a;};
+ output(bool a):b(0){l = a;};
 };
+
+
+__attribute__((sdx_kernel("ban_interface", 0))) output ban_interface(const Ban &b_op1, const Ban &b_op2, T f_op, op_type op);
 
 constexpr T _[] = {1.0, 0, 0};
 constexpr T __[] = {0.0, 0, 0};
@@ -40713,7 +40710,7 @@ const Ban ZERO(0, __);
 const Ban ONE(0, _);
 # 3 "../src/ban_interface.cpp" 2
 
-__attribute__((sdx_kernel("ban_interface", 0))) output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
+__attribute__((sdx_kernel("ban_interface", 0))) output ban_interface(const Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
 #pragma HLSDIRECTIVE TOP name=ban_interface
 # 4 "../src/ban_interface.cpp"
 
@@ -40809,11 +40806,13 @@ __attribute__((sdx_kernel("ban_interface", 0))) output ban_interface(Ban &b_op1,
             out.l = b_op1 <= f_op;
             break;
 
-        case LAR_EQ_R:
-            out.l = b_op1 >= f_op;
-            break;
+
+
+
+
 
         default:
+            out.l = b_op1 >= f_op;
             break;
     }
 

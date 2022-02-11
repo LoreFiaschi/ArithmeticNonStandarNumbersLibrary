@@ -45,12 +45,12 @@ set TargetInfo xczu7ev:-ffvc1156:-2-e
 set SourceFiles {sc {} c {../../../src/ban_s3.cpp ../../../src/ban_interface.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/solution1.directive
-set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
+set TBFiles {verilog ../../../test/vitis_test.cpp bc ../../../test/vitis_test.cpp vhdl ../../../test/vitis_test.cpp sc ../../../test/vitis_test.cpp cas ../../../test/vitis_test.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
-set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

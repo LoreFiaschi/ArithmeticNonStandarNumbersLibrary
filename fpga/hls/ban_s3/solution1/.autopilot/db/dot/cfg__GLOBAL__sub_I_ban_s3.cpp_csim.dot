@@ -1,0 +1,7 @@
+digraph "CFG for '_GLOBAL__sub_I_ban_s3.cpp' function" {
+	label="CFG for '_GLOBAL__sub_I_ban_s3.cpp' function";
+
+	Node0x4e69980 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="0",label="{.predFake}"];
+	Node0x4e69980 -> Node0x4e40910[ callList="__cxx_global_var_init.1.21:0; __cxx_global_var_init.2.22:0; __cxx_global_var_init.3.23:0; __cxx_global_var_init.4.24:0" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x4e40910 [shape=record,filename="",linenumber="",label="{.succFake}"];
+}

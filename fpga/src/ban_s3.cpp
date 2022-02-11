@@ -1,15 +1,10 @@
 // Assumed constant SIZE = 3
 #include "ban_s3.h"
-// body of any constructor
-void Ban::init(int p, const T num[SIZE]){
+Ban::Ban(int p, const T num[SIZE]){
 	this->p = p;
 	this->num[0] = num[0];
 	this->num[1] = num[1];
 	this->num[2] = num[2];
-}
-
-Ban::Ban(int p, const T num[SIZE]){
-	init(p, num);
 }
 
 Ban::Ban(T n){
@@ -116,7 +111,7 @@ void Ban::_mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]){
 	num_res[2] = num_a[2] * num_b[0] + num_a[0] * num_b[2] + num_a[1] * num_b[1];
 }
 
-Ban Ban::mul_body(const Ban &b) const{
+Ban Ban::operator*(const Ban &b) const{
 	T num_res[SIZE];
 	_mul(num, b.num, num_res);
 	
@@ -126,10 +121,6 @@ Ban Ban::mul_body(const Ban &b) const{
 	c.to_normal_form();
 
 	return c;
-}
-
-Ban Ban::operator*(const Ban &b) const{
-	return this->mul_body(b);
 }
 
 void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]){

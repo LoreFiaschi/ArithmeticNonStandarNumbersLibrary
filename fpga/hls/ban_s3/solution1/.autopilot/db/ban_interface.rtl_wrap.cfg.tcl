@@ -53,7 +53,7 @@ set DataType "int"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "return"
-set BitWidth "128"
+set BitWidth "160"
 set ArrayOpt ""
 set Const "0"
 set Volatile "0"
@@ -61,7 +61,7 @@ set Pointer "0"
 set Reference "0"
 set Dims [list 0]
 set Interface "wire"
-set DataType "__cosim_s10__"
+set DataType "__cosim_s14__"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set globalAPint "" 

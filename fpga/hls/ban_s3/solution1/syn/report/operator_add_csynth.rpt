@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'operator_add'
 ================================================================
-* Date:           Wed Feb  9 16:08:41 2022
+* Date:           Fri Feb 11 12:36:23 2022
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        ban_s3
@@ -92,37 +92,37 @@
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
     |diff_p_fu_528_p2        |         -|   0|  0|  39|          32|          32|
-    |sub_ln99_fu_556_p2      |         -|   0|  0|   9|           1|           2|
-    |and_ln27_10_fu_522_p2   |       and|   0|  0|   2|           1|           1|
-    |and_ln27_6_fu_325_p2    |       and|   0|  0|   2|           1|           1|
-    |and_ln27_7_fu_372_p2    |       and|   0|  0|   2|           1|           1|
-    |and_ln27_8_fu_428_p2    |       and|   0|  0|   2|           1|           1|
-    |and_ln27_9_fu_475_p2    |       and|   0|  0|   2|           1|           1|
-    |and_ln27_fu_278_p2      |       and|   0|  0|   2|           1|           1|
-    |icmp_ln27_12_fu_260_p2  |      icmp|   0|  0|  11|           8|           2|
-    |icmp_ln27_13_fu_266_p2  |      icmp|   0|  0|  16|          23|           1|
-    |icmp_ln27_14_fu_307_p2  |      icmp|   0|  0|  11|           8|           2|
-    |icmp_ln27_15_fu_313_p2  |      icmp|   0|  0|  16|          23|           1|
-    |icmp_ln27_16_fu_354_p2  |      icmp|   0|  0|  11|           8|           2|
-    |icmp_ln27_17_fu_360_p2  |      icmp|   0|  0|  16|          23|           1|
-    |icmp_ln27_18_fu_410_p2  |      icmp|   0|  0|  11|           8|           2|
-    |icmp_ln27_19_fu_416_p2  |      icmp|   0|  0|  16|          23|           1|
-    |icmp_ln27_20_fu_457_p2  |      icmp|   0|  0|  11|           8|           2|
-    |icmp_ln27_21_fu_463_p2  |      icmp|   0|  0|  16|          23|           1|
-    |icmp_ln27_22_fu_504_p2  |      icmp|   0|  0|  11|           8|           2|
-    |icmp_ln27_23_fu_510_p2  |      icmp|   0|  0|  16|          23|           1|
-    |icmp_ln27_5_fu_381_p2   |      icmp|   0|  0|  20|          32|           1|
-    |icmp_ln27_fu_231_p2     |      icmp|   0|  0|  20|          32|           1|
-    |icmp_ln91_fu_536_p2     |      icmp|   0|  0|  20|          32|           2|
-    |icmp_ln94_fu_542_p2     |      icmp|   0|  0|  20|          32|           3|
+    |sub_ln94_fu_556_p2      |         -|   0|  0|   9|           1|           2|
+    |and_ln22_10_fu_522_p2   |       and|   0|  0|   2|           1|           1|
+    |and_ln22_6_fu_325_p2    |       and|   0|  0|   2|           1|           1|
+    |and_ln22_7_fu_372_p2    |       and|   0|  0|   2|           1|           1|
+    |and_ln22_8_fu_428_p2    |       and|   0|  0|   2|           1|           1|
+    |and_ln22_9_fu_475_p2    |       and|   0|  0|   2|           1|           1|
+    |and_ln22_fu_278_p2      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln22_12_fu_260_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_13_fu_266_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_14_fu_307_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_15_fu_313_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_16_fu_354_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_17_fu_360_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_18_fu_410_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_19_fu_416_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_20_fu_457_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_21_fu_463_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_22_fu_504_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_23_fu_510_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_5_fu_381_p2   |      icmp|   0|  0|  20|          32|           1|
+    |icmp_ln22_fu_231_p2     |      icmp|   0|  0|  20|          32|           1|
+    |icmp_ln86_fu_536_p2     |      icmp|   0|  0|  20|          32|           2|
+    |icmp_ln89_fu_542_p2     |      icmp|   0|  0|  20|          32|           3|
     |ap_condition_366        |        or|   0|  0|   2|           1|           1|
     |ap_condition_399        |        or|   0|  0|   2|           1|           1|
-    |or_ln27_5_fu_319_p2     |        or|   0|  0|   2|           1|           1|
-    |or_ln27_6_fu_366_p2     |        or|   0|  0|   2|           1|           1|
-    |or_ln27_7_fu_422_p2     |        or|   0|  0|   2|           1|           1|
-    |or_ln27_8_fu_469_p2     |        or|   0|  0|   2|           1|           1|
-    |or_ln27_9_fu_516_p2     |        or|   0|  0|   2|           1|           1|
-    |or_ln27_fu_272_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln22_5_fu_319_p2     |        or|   0|  0|   2|           1|           1|
+    |or_ln22_6_fu_366_p2     |        or|   0|  0|   2|           1|           1|
+    |or_ln22_7_fu_422_p2     |        or|   0|  0|   2|           1|           1|
+    |or_ln22_8_fu_469_p2     |        or|   0|  0|   2|           1|           1|
+    |or_ln22_9_fu_516_p2     |        or|   0|  0|   2|           1|           1|
+    |or_ln22_fu_272_p2       |        or|   0|  0|   2|           1|           1|
     +------------------------+----------+----+---+----+------------+------------+
     |Total                   |          |   0|  0| 318|         361|          73|
     +------------------------+----------+----+---+----+------------+------------+
@@ -166,12 +166,12 @@
     |agg_result_1_2_0_reg_110       |  32|   0|   32|          0|
     |agg_result_1_2_ret1_reg_781    |  32|   0|   32|          0|
     |agg_result_1_2_ret_reg_801     |  32|   0|   32|          0|
-    |and_ln27_10_reg_740            |   1|   0|    1|          0|
-    |and_ln27_6_reg_694             |   1|   0|    1|          0|
-    |and_ln27_7_reg_703             |   1|   0|    1|          0|
-    |and_ln27_8_reg_722             |   1|   0|    1|          0|
-    |and_ln27_9_reg_731             |   1|   0|    1|          0|
-    |and_ln27_reg_685               |   1|   0|    1|          0|
+    |and_ln22_10_reg_740            |   1|   0|    1|          0|
+    |and_ln22_6_reg_694             |   1|   0|    1|          0|
+    |and_ln22_7_reg_703             |   1|   0|    1|          0|
+    |and_ln22_8_reg_722             |   1|   0|    1|          0|
+    |and_ln22_9_reg_731             |   1|   0|    1|          0|
+    |and_ln22_reg_685               |   1|   0|    1|          0|
     |ap_CS_fsm                      |  16|   0|   16|          0|
     |ap_return_0_preg               |  32|   0|   32|          0|
     |ap_return_1_preg               |  32|   0|   32|          0|
@@ -180,15 +180,15 @@
     |call_ret5_reg_786              |  32|   0|   32|          0|
     |call_ret_reg_766               |  32|   0|   32|          0|
     |grp_p_sum_fu_144_ap_start_reg  |   1|   0|    1|          0|
-    |icmp_ln27_5_reg_713            |   1|   0|    1|          0|
-    |icmp_ln27_reg_676              |   1|   0|    1|          0|
-    |icmp_ln91_reg_749              |   1|   0|    1|          0|
-    |icmp_ln94_reg_753              |   1|   0|    1|          0|
-    |sub_ln99_reg_761               |   2|   0|    2|          0|
+    |icmp_ln22_5_reg_713            |   1|   0|    1|          0|
+    |icmp_ln22_reg_676              |   1|   0|    1|          0|
+    |icmp_ln86_reg_749              |   1|   0|    1|          0|
+    |icmp_ln89_reg_753              |   1|   0|    1|          0|
+    |sub_ln94_reg_761               |   2|   0|    2|          0|
     |tmp_12_reg_757                 |   1|   0|    1|          0|
-    |trunc_ln27_10_reg_707          |  32|   0|   32|          0|
-    |trunc_ln27_reg_669             |  32|   0|   32|          0|
-    |trunc_ln88_reg_744             |   2|   0|    2|          0|
+    |trunc_ln22_10_reg_707          |  32|   0|   32|          0|
+    |trunc_ln22_reg_669             |  32|   0|   32|          0|
+    |trunc_ln83_reg_744             |   2|   0|    2|          0|
     +-------------------------------+----+----+-----+-----------+
     |Total                          | 608|   0|  608|          0|
     +-------------------------------+----+----+-----+-----------+
@@ -199,25 +199,25 @@
 == Interface
 ================================================================
 * Summary: 
-+---------------------+-----+-----+------------+--------------+--------------+
-|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+---------------------+-----+-----+------------+--------------+--------------+
-|ap_clk               |   in|    1|  ap_ctrl_hs|     operator+|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|     operator+|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|     operator+|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|     operator+|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|     operator+|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|     operator+|  return value|
-|ap_return_0          |  out|   32|  ap_ctrl_hs|     operator+|  return value|
-|ap_return_1          |  out|   32|  ap_ctrl_hs|     operator+|  return value|
-|ap_return_2          |  out|   32|  ap_ctrl_hs|     operator+|  return value|
-|ap_return_3          |  out|   32|  ap_ctrl_hs|     operator+|  return value|
-|grp_fu_582_p_din0    |  out|   32|  ap_ctrl_hs|     operator+|  return value|
-|grp_fu_582_p_din1    |  out|   32|  ap_ctrl_hs|     operator+|  return value|
-|grp_fu_582_p_opcode  |  out|    5|  ap_ctrl_hs|     operator+|  return value|
-|grp_fu_582_p_dout0   |   in|    1|  ap_ctrl_hs|     operator+|  return value|
-|grp_fu_582_p_ce      |  out|    1|  ap_ctrl_hs|     operator+|  return value|
-|p_read14             |   in|  128|     ap_none|      p_read14|        scalar|
-|p_read12             |   in|  128|     ap_none|      p_read12|        scalar|
-+---------------------+-----+-----+------------+--------------+--------------+
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|     operator+|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|     operator+|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|     operator+|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|     operator+|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|     operator+|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|     operator+|  return value|
+|ap_return_0           |  out|   32|  ap_ctrl_hs|     operator+|  return value|
+|ap_return_1           |  out|   32|  ap_ctrl_hs|     operator+|  return value|
+|ap_return_2           |  out|   32|  ap_ctrl_hs|     operator+|  return value|
+|ap_return_3           |  out|   32|  ap_ctrl_hs|     operator+|  return value|
+|grp_fu_1191_p_din0    |  out|   32|  ap_ctrl_hs|     operator+|  return value|
+|grp_fu_1191_p_din1    |  out|   32|  ap_ctrl_hs|     operator+|  return value|
+|grp_fu_1191_p_opcode  |  out|    5|  ap_ctrl_hs|     operator+|  return value|
+|grp_fu_1191_p_dout0   |   in|    1|  ap_ctrl_hs|     operator+|  return value|
+|grp_fu_1191_p_ce      |  out|    1|  ap_ctrl_hs|     operator+|  return value|
+|p_read14              |   in|  128|     ap_none|      p_read14|        scalar|
+|p_read12              |   in|  128|     ap_none|      p_read12|        scalar|
++----------------------+-----+-----+------------+--------------+--------------+
 

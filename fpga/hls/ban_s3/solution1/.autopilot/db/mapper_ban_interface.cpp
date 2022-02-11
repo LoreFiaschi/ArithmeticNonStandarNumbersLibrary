@@ -32,9 +32,10 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
+struct __cosim_s14__ { char data[20]; };
 struct __cosim_s10__ { char data[16]; };
-extern "C" __cosim_s10__ ban_interface(volatile void *, volatile void *, float, int);
-extern "C" void  apatb_ban_interface_hw(__cosim_s10__* ap_return, volatile void * __xlx_apatb_param_b_op1, volatile void * __xlx_apatb_param_b_op2, float __xlx_apatb_param_f_op, int __xlx_apatb_param_op) {
+extern "C" __cosim_s14__ ban_interface(volatile void *, volatile void *, float, int);
+extern "C" void  apatb_ban_interface_hw(__cosim_s14__* ap_return, volatile void * __xlx_apatb_param_b_op1, volatile void * __xlx_apatb_param_b_op2, float __xlx_apatb_param_f_op, int __xlx_apatb_param_op) {
   // DUT call
   *ap_return = ban_interface(__xlx_apatb_param_b_op1, __xlx_apatb_param_b_op2, __xlx_apatb_param_f_op, __xlx_apatb_param_op);
 }

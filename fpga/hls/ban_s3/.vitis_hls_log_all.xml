@@ -12,12 +12,19 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+' to 'operator_add'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T16:08:34.250+0100" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name '_sum' to 'p_sum'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T16:08:34.242+0100" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.1' to 'operator_1'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T16:08:34.241+0100" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.2' to 'operator_2'." projectName="ban_s3" solutionName="solution1" date="2022-02-09T16:08:34.238+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+' to 'operator_add'." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:36:16.159+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name '_sum' to 'p_sum'." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:36:16.153+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.1' to 'operator_1'." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:36:16.151+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'operator+.2' to 'operator_2'." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:36:16.148+0100" type="Warning"/>
       </synLog>
-      <simLog/>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:37:19.783+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:37:15.466+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:37:15.164+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:37:14.849+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:37:14.500+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="ban_s3" solutionName="solution1" date="2022-02-11T12:37:14.160+0100" type="Warning"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>

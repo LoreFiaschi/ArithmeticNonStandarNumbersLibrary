@@ -1,0 +1,7 @@
+digraph "CFG for 'Ban::init' function" {
+	label="CFG for 'Ban::init' function";
+
+	Node0x4e500a0 [shape=record,filename="",linenumber="",label="{.predFake}"];
+	Node0x4e500a0 -> Node0x4dec500[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="14"];
+	Node0x4dec500 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="9",label="{.succFake}"];
+}

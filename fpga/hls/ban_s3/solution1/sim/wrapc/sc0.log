@@ -1,0 +1,7 @@
+   Build using "/home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling vitis_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ban_interface.cpp
+   Compiling ban_interface.cpp_pre.cpp.tb.cpp
+   Compiling ban_s3.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ban_interface_ir.ll
+   Generating cosim.tv.exe

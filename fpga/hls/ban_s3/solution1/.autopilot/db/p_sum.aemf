@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644419321641">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1644579383253">
   <ports id="1" name="p_read14" type="PortType" coreId="3621216858" bitwidth="128">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="p_read25" type="PortType" coreId="1808662384" bitwidth="128">
+  <ports id="2" name="p_read25" type="PortType" coreId="1717924464" bitwidth="128">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="diff_p" type="PortType" originalName="diff_p" coreId="1807040432" bitwidth="2">
+  <ports id="3" name="diff_p" type="PortType" originalName="diff_p" coreId="195564544" bitwidth="2">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="13" name="ap_return_0" direction="DirOut">
@@ -160,364 +160,364 @@
   <edges source_obj="//@blocks.0/@node_objs.82" sink_obj="//@ports.5"/>
   <edges source_obj="//@blocks.0/@node_objs.82" sink_obj="//@ports.6"/>
   <blocks id="87" name="_sum" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="diff_p_read" coreId="1807217136" bitwidth="2" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="diff_p_read" coreId="197445377" bitwidth="2" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>diff_p</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="p_read" coreId="1808437264" bitwidth="128" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="p_read" coreId="196886960" bitwidth="128" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataInputObjs>p_read25</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_read_5" coreId="0" bitwidth="128" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_read_5" coreId="960" bitwidth="128" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>p_read14</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="c_p" lineNumber="56" originalName="c.p" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_fu_95_p1" coreId="1808278752" contextFuncName="p_sum" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="c_p" lineNumber="51" originalName="c.p" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_fu_95_p1" coreId="197002832" contextFuncName="p_sum" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="trunc_ln56_2" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln56_2_fu_99_p4" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="trunc_ln51_2" lineNumber="51" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln51_2_fu_99_p4" coreId="4294967295" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="bitcast_ln56" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln56_fu_109_p1" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="bitcast_ln51" lineNumber="51" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln51_fu_109_p1" coreId="196880320" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="trunc_ln56_3" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln56_3_fu_114_p4" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="trunc_ln51_3" lineNumber="51" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln51_3_fu_114_p4" coreId="196883808" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="bitcast_ln56_2" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln56_2_fu_124_p1" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="bitcast_ln51_2" lineNumber="51" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln51_2_fu_124_p1" coreId="197240464" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="trunc_ln56_4" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln56_4_fu_129_p4" coreId="48" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="trunc_ln51_4" lineNumber="51" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln51_4_fu_129_p4" coreId="196884832" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="bitcast_ln56_3" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_76_p0" coreId="1808284784" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="bitcast_ln51_3" lineNumber="51" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_76_p0" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="trunc_ln" lineNumber="60" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln_fu_144_p4" coreId="1807363776" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="60" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="trunc_ln" lineNumber="55" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln_fu_144_p4" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="55" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="bitcast_ln60" lineNumber="60" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln60_fu_154_p1" coreId="1808286304" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="60" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="bitcast_ln55" lineNumber="55" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln55_fu_154_p1" coreId="196886960" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="55" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="add1" lineNumber="69" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U21" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="69" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="add1" lineNumber="64" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U21" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="64" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="trunc_ln18" lineNumber="70" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln18_fu_159_p4" coreId="1768318322" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="70" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="trunc_ln18" lineNumber="65" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln18_fu_159_p4" coreId="197460384" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="65" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="bitcast_ln70" lineNumber="70" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln70_fu_169_p1" coreId="2416" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="70" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="bitcast_ln65" lineNumber="65" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln65_fu_169_p1" coreId="197461264" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="65" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
       <dataOutputObjs>fadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="add2" lineNumber="70" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U22" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="70" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataOutputObjs>bitcast</dataOutputObjs>
-      <dataOutputObjs>fcmp</dataOutputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="trunc_ln19" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln19_fu_174_p4" coreId="1808303800" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
-      <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>bitcast</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="bitcast_ln71" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_76_p1" coreId="1668183398" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
-      <dataInputObjs>partselect</dataInputObjs>
-      <dataOutputObjs>fadd</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="add3" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U23" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataOutputObjs>bitcast</dataOutputObjs>
-      <dataOutputObjs>fcmp</dataOutputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="bitcast_ln32" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln32_fu_219_p1" coreId="448" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>fadd</dataInputObjs>
-      <dataOutputObjs>partselect</dataOutputObjs>
-      <dataOutputObjs>trunc</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="tmp_s" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_s_fu_222_p4" coreId="448" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="trunc_ln32" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln32_fu_232_p1" coreId="1809399136" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataOutputObjs>icmp</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="icmp_ln32" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln32_fu_236_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.84" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>partselect</dataInputObjs>
-      <dataOutputObjs>or</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln32_8" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln32_8_fu_242_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.05" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>trunc</dataInputObjs>
-      <dataOutputObjs>or</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="or_ln32" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln32_fu_248_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>icmp</dataInputObjs>
-      <dataInputObjs>icmp</dataInputObjs>
-      <dataOutputObjs>and</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_172" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U24" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>fadd</dataInputObjs>
-      <dataOutputObjs>and</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="and_ln32" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln32_fu_254_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="37" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>or</dataInputObjs>
-      <dataInputObjs>fcmp</dataInputObjs>
-      <dataOutputObjs>xor</dataOutputObjs>
-      <dataOutputObjs>and</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="xor_ln32" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="xor_ln32_fu_260_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
-      <dataInputObjs>and</dataInputObjs>
-      <dataOutputObjs>and</dataOutputObjs>
-      <constName>empty</constName>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add" lineNumber="60" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U21" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="25" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="60" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add7" lineNumber="61" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U22" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="61" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataInputObjs>bitcast</dataInputObjs>
-      <dataOutputObjs>select</dataOutputObjs>
-    </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="add4" lineNumber="65" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U21" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="add2" lineNumber="65" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U22" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="65" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="bitcast_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln35_fu_266_p1" coreId="6775156" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="trunc_ln19" lineNumber="66" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln19_fu_174_p4" coreId="197445392" contextFuncName="p_sum" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="66" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="bitcast_ln66" lineNumber="66" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_76_p1" coreId="784" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="66" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="add3" lineNumber="66" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U23" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="66" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="bitcast_ln27" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln27_fu_219_p1" coreId="448" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="tmp_173" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_173_fu_269_p4" coreId="0" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="tmp_s" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_s_fu_222_p4" coreId="448" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="trunc_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln35_fu_279_p1" coreId="0" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="trunc_ln27" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln27_fu_232_p1" coreId="1919906913" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="icmp_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln35_fu_283_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.84" m_topoIndex="42" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="icmp_ln27" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln27_fu_236_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.84" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="icmp_ln35_8" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln35_8_fu_289_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.05" m_topoIndex="43" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="icmp_ln27_8" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln27_8_fu_242_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.05" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="or_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln35_fu_295_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="or_ln27" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln27_fu_248_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tmp_174" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U25" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="29" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_178" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U24" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="and_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln35_fu_301_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="45" m_clusterGroupNumber="3">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="and_ln27" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln27_fu_254_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="37" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="xor_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="xor_ln35_fu_307_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="4">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="xor_ln27" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="xor_ln27_fu_260_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="bitcast_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln43_fu_313_p1" coreId="1809478240" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add" lineNumber="55" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U21" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="55" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add7" lineNumber="56" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U22" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="add4" lineNumber="60" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U21" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="60" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="bitcast_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln30_fu_266_p1" coreId="198002448" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_175" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_175_fu_316_p4" coreId="1809479792" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="tmp_179" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_179_fu_269_p4" coreId="198003584" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="trunc_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln43_fu_326_p1" coreId="1809470512" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="trunc_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln30_fu_279_p1" coreId="197971088" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="icmp_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln43_fu_330_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.84" m_topoIndex="50" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="icmp_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln30_fu_283_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.84" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln43_8" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln43_8_fu_336_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.05" m_topoIndex="51" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="icmp_ln30_8" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln30_8_fu_289_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.05" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="or_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln43_fu_342_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="5">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="or_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln30_fu_295_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_176" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U26" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tmp_180" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U25" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="and_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln43_fu_348_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="5">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="and_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln30_fu_301_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="45" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="xor_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="xor_ln30_fu_307_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="bitcast_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln38_fu_313_p1" coreId="480" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_181" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_181_fu_316_p4" coreId="0" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="trunc_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln38_fu_326_p1" coreId="304" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="icmp_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln38_fu_330_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="0.84" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln38_8" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln38_8_fu_336_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.05" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="or_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln38_fu_342_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_182" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U26" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="and_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln38_fu_348_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="xor_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="xor_ln43_fu_354_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="5">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="xor_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="xor_ln38_fu_354_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="xor" nodeLabel="5.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="icmp_ln58" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln58_fu_189_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="icmp_ln53" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln53_fu_189_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="icmp_ln58_1" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln58_1_fu_195_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="icmp_ln53_1" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln53_1_fu_195_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="and_ln58" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln58_fu_201_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="p_sum" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.28" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="and_ln53" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln53_fu_201_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="p_sum" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.28" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="and_ln32_4" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln32_4_fu_360_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="55" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="and_ln27_4" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln27_4_fu_360_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="and_ln35_12" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln35_12_fu_365_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="56" m_clusterGroupNumber="4">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="and_ln30_4" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln30_4_fu_365_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="56" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>or</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="select_ln35" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln35_fu_371_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="6">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="select_ln30" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln30_fu_371_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="and_ln43_8" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln43_8_fu_377_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="5">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="and_ln38_4" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln38_4_fu_377_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="and_ln43_9" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln43_9_fu_383_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="59" m_clusterGroupNumber="5">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="and_ln38_5" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln38_5_fu_383_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="59" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -525,15 +525,15 @@
       <dataOutputObjs>or</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="select_ln43" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln43_fu_389_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="60" m_clusterGroupNumber="6">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="select_ln38" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln38_fu_389_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="60" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln58_2" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln58_2_fu_207_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln53_2" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln53_2_fu_207_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -541,15 +541,15 @@
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="select_ln58" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_fu_396_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="7">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="select_ln53" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_fu_396_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="icmp_ln58_3" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln58_3_fu_213_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="icmp_ln53_3" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln53_3_fu_213_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.44" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -557,147 +557,147 @@
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="select_ln58_1" lineNumber="58" originalName="this.num[0]" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_1_fu_402_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="62" m_clusterGroupNumber="7">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="select_ln53_1" lineNumber="53" originalName="this.num[0]" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_1_fu_402_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="62" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="select_ln35_3" lineNumber="35" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln35_3_fu_408_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="8">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="select_ln30_3" lineNumber="30" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln30_3_fu_408_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="select_ln43_21" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln43_21_fu_414_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="64" m_clusterGroupNumber="8">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="select_ln38_12" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln38_12_fu_414_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="64" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="select_ln58_2" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_2_fu_421_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="9">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="select_ln53_2" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_2_fu_421_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="select_ln58_3" lineNumber="58" originalName="this.num[1]" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_3_fu_427_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="66" m_clusterGroupNumber="9">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="select_ln53_3" lineNumber="53" originalName="this.num[1]" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_3_fu_427_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="66" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="or_ln43_8" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln43_8_fu_434_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="67" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="or_ln38_4" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln38_4_fu_434_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>or</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="select_ln43_22" lineNumber="43" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln43_22_fu_440_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="10">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="43" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="select_ln38_13" lineNumber="38" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln38_13_fu_440_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="select_ln58_4" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_4_fu_447_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="10">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="select_ln53_4" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_4_fu_447_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="select_ln58_5" lineNumber="58" originalName="this.num[2]" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_5_fu_454_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="70" m_clusterGroupNumber="10">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="select_ln53_5" lineNumber="53" originalName="this.num[2]" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_5_fu_454_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="70" m_clusterGroupNumber="10">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>fadd</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="and_ln32_5" lineNumber="32" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln32_5_fu_461_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="32" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="and_ln27_5" lineNumber="27" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln27_5_fu_461_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="to_normal_form"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="or_ln58" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln58_fu_466_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="p_sum" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="72" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="or_ln53" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln53_fu_466_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="p_sum" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_delay="0.28" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <dataOutputObjs>or</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="select_ln58_6" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_6_fu_470_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="11">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="select_ln53_6" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_6_fu_470_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="11">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln58" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="add_ln58_fu_478_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="p_sum" bitwidth="32" opcode="add" nodeLabel="5.0" m_display="0" m_delay="1.01" m_topoIndex="74" m_clusterGroupNumber="11">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="add_ln53" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="add_ln53_fu_478_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="p_sum" bitwidth="32" opcode="add" nodeLabel="5.0" m_display="0" m_delay="1.01" m_topoIndex="74" m_clusterGroupNumber="11">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="select_ln58_7" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_7_fu_483_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="75" m_clusterGroupNumber="2">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="select_ln53_7" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_7_fu_483_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="75" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>and</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="select_ln58_8" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln58_8_fu_490_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="12">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="select_ln53_8" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln53_8_fu_490_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="12">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="or_ln58_1" lineNumber="58" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln58_1_fu_497_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="p_sum" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="12">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="or_ln53_1" lineNumber="53" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln53_1_fu_497_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="p_sum" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="12">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>or</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="c_p_14" lineNumber="58" originalName="c.p" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_14_fu_503_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="78" m_clusterGroupNumber="12">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="58" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="c_p_8" lineNumber="53" originalName="c.p" fileName="../src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_8_fu_503_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_sum" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.44" m_topoIndex="78" m_clusterGroupNumber="12">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="mrv" lineNumber="76" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="1702258035" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="76" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="mrv" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="198058560" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="mrv_1" lineNumber="76" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="76" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="mrv_1" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="198060112" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="mrv_2" lineNumber="76" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="76" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="mrv_2" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="198061248" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="mrv_3" lineNumber="76" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="1809527568" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="76" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="mrv_3" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="198062576" contextFuncName="p_sum" bitwidth="128" opcode="insertvalue" nodeLabel="5.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>ret</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="_ln76" lineNumber="76" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="1808304320" contextFuncName="p_sum" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="76" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="_ln71" lineNumber="71" fileName="../src/ban_s3.cpp" fileDirectory=".." coreId="198063600" contextFuncName="p_sum" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/ban_s3.cpp" linenumber="71" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls" functionName="_sum"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataOutputObjs>ap_return_0</dataOutputObjs>
       <dataOutputObjs>ap_return_1</dataOutputObjs>
@@ -705,18 +705,18 @@
       <dataOutputObjs>ap_return_3</dataOutputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../src/ban_s3.cpp">
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>65</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
       <validLinenumbers>56</validLinenumbers>
       <validLinenumbers>60</validLinenumbers>
-      <validLinenumbers>69</validLinenumbers>
-      <validLinenumbers>70</validLinenumbers>
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>38</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
       <validLinenumbers>71</validLinenumbers>
-      <validLinenumbers>32</validLinenumbers>
-      <validLinenumbers>61</validLinenumbers>
-      <validLinenumbers>65</validLinenumbers>
-      <validLinenumbers>35</validLinenumbers>
-      <validLinenumbers>43</validLinenumbers>
-      <validLinenumbers>58</validLinenumbers>
-      <validLinenumbers>76</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -725,14 +725,14 @@
   <ScheduleInfo time="3"/>
   <ScheduleInfo time="4"/>
   <ScheduleInfo time="5"/>
-  <regnodes realName="and_ln58_reg_578">
-    <nodeIds>55</nodeIds>
+  <regnodes realName="bitcast_ln51_2_reg_549">
+    <nodeIds>11</nodeIds>
   </regnodes>
-  <regnodes realName="bitcast_ln71_reg_573">
-    <nodeIds>21</nodeIds>
+  <regnodes realName="icmp_ln53_3_reg_592">
+    <nodeIds>64</nodeIds>
   </regnodes>
-  <regnodes realName="bitcast_ln56_reg_542">
-    <nodeIds>9</nodeIds>
+  <regnodes realName="bitcast_ln51_3_reg_556">
+    <nodeIds>13</nodeIds>
   </regnodes>
   <regnodes realName="c_p_reg_535">
     <nodeIds>7</nodeIds>
@@ -740,158 +740,167 @@
   <regnodes realName="add1_reg_600">
     <nodeIds>16</nodeIds>
   </regnodes>
-  <regnodes realName="icmp_ln58_3_reg_592">
-    <nodeIds>64</nodeIds>
-  </regnodes>
-  <regnodes realName="icmp_ln58_2_reg_584">
+  <regnodes realName="icmp_ln53_2_reg_584">
     <nodeIds>62</nodeIds>
   </regnodes>
-  <regnodes realName="bitcast_ln56_2_reg_549">
-    <nodeIds>11</nodeIds>
-  </regnodes>
-  <regnodes realName="bitcast_ln60_reg_563">
+  <regnodes realName="bitcast_ln55_reg_563">
     <nodeIds>15</nodeIds>
   </regnodes>
-  <regnodes realName="bitcast_ln70_reg_568">
-    <nodeIds>18</nodeIds>
+  <regnodes realName="and_ln53_reg_578">
+    <nodeIds>55</nodeIds>
   </regnodes>
-  <regnodes realName="bitcast_ln56_3_reg_556">
-    <nodeIds>13</nodeIds>
+  <regnodes realName="bitcast_ln51_reg_542">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln66_reg_573">
+    <nodeIds>21</nodeIds>
   </regnodes>
   <regnodes realName="add3_reg_616">
     <nodeIds>22</nodeIds>
   </regnodes>
+  <regnodes realName="bitcast_ln65_reg_568">
+    <nodeIds>18</nodeIds>
+  </regnodes>
   <regnodes realName="add2_reg_607">
     <nodeIds>19</nodeIds>
   </regnodes>
-  <expressionNodes realName="or_ln58_fu_466">
-    <nodeIds>75</nodeIds>
+  <expressionNodes realName="trunc_ln51_4_fu_129">
+    <nodeIds>12</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln56_3_fu_114">
-    <nodeIds>10</nodeIds>
+  <expressionNodes realName="bitcast_ln38_fu_313">
+    <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln35_3_fu_408">
-    <nodeIds>66</nodeIds>
+  <expressionNodes realName="bitcast_ln55_fu_154">
+    <nodeIds>15</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xor_ln43_fu_354">
-    <nodeIds>52</nodeIds>
+  <expressionNodes realName="or_ln38_fu_342">
+    <nodeIds>49</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln32_4_fu_360">
-    <nodeIds>56</nodeIds>
+  <expressionNodes realName="select_ln38_13_fu_440">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln53_8_fu_490">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln53_fu_478">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln27_fu_219">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln30_fu_295">
+    <nodeIds>40</nodeIds>
   </expressionNodes>
   <expressionNodes realName="c_p_fu_95">
     <nodeIds>7</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln58_fu_478">
-    <nodeIds>77</nodeIds>
+  <expressionNodes realName="select_ln53_7_fu_483">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln51_2_fu_124">
+    <nodeIds>11</nodeIds>
   </expressionNodes>
   <expressionNodes realName="mrv_fu_511">
     <nodeIds>82</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln58_3_fu_213">
-    <nodeIds>64</nodeIds>
+  <expressionNodes realName="select_ln53_4_fu_447">
+    <nodeIds>72</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln43_8_fu_434">
-    <nodeIds>70</nodeIds>
+  <expressionNodes realName="and_ln30_4_fu_365">
+    <nodeIds>57</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_2_fu_421">
-    <nodeIds>68</nodeIds>
+  <expressionNodes realName="select_ln53_1_fu_402">
+    <nodeIds>65</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_7_fu_483">
-    <nodeIds>78</nodeIds>
+  <expressionNodes realName="and_ln27_fu_254">
+    <nodeIds>30</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_175_fu_316">
-    <nodeIds>45</nodeIds>
+  <expressionNodes realName="icmp_ln27_8_fu_242">
+    <nodeIds>27</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln43_fu_330">
-    <nodeIds>47</nodeIds>
+  <expressionNodes realName="icmp_ln27_fu_236">
+    <nodeIds>26</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln58_2_fu_207">
-    <nodeIds>62</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln43_fu_389">
-    <nodeIds>61</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="bitcast_ln70_fu_169">
-    <nodeIds>18</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="bitcast_ln56_3_fu_139">
-    <nodeIds>13</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="and_ln35_fu_301">
-    <nodeIds>42</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="and_ln58_fu_201">
-    <nodeIds>55</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln43_8_fu_336">
-    <nodeIds>48</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="bitcast_ln35_fu_266">
-    <nodeIds>35</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln56_4_fu_129">
-    <nodeIds>12</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln35_fu_279">
-    <nodeIds>37</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln43_fu_326">
-    <nodeIds>46</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln35_8_fu_289">
+  <expressionNodes realName="icmp_ln30_8_fu_289">
     <nodeIds>39</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln35_fu_283">
-    <nodeIds>38</nodeIds>
+  <expressionNodes realName="trunc_ln38_fu_326">
+    <nodeIds>46</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln58_fu_189">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="and_ln43_9_fu_383">
-    <nodeIds>60</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="or_ln32_fu_248">
+  <expressionNodes realName="or_ln27_fu_248">
     <nodeIds>28</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln56_2_fu_99">
-    <nodeIds>8</nodeIds>
+  <expressionNodes realName="bitcast_ln51_fu_109">
+    <nodeIds>9</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xor_ln32_fu_260">
-    <nodeIds>31</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="bitcast_ln71_fu_184">
+  <expressionNodes realName="bitcast_ln66_fu_184">
     <nodeIds>21</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_6_fu_470">
-    <nodeIds>76</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="bitcast_ln56_2_fu_124">
-    <nodeIds>11</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln58_5_fu_454">
-    <nodeIds>73</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_173_fu_269">
-    <nodeIds>36</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln43_21_fu_414">
-    <nodeIds>67</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln35_fu_371">
-    <nodeIds>58</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln58_1_fu_195">
+  <expressionNodes realName="icmp_ln53_1_fu_195">
     <nodeIds>54</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln58_1_fu_497">
-    <nodeIds>80</nodeIds>
+  <expressionNodes realName="select_ln53_6_fu_470">
+    <nodeIds>76</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xor_ln35_fu_307">
+  <expressionNodes realName="or_ln38_4_fu_434">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln38_4_fu_377">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln53_5_fu_454">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln65_fu_169">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln53_fu_466">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln27_fu_260">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln53_fu_396">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln30_fu_283">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln53_3_fu_427">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln53_2_fu_421">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln51_2_fu_99">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln38_fu_354">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln51_3_fu_139">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln53_2_fu_207">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln53_3_fu_213">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln30_fu_371">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_p_8_fu_503">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln38_8_fu_336">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln30_fu_307">
     <nodeIds>43</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln32_5_fu_461">
-    <nodeIds>74</nodeIds>
+  <expressionNodes realName="and_ln38_5_fu_383">
+    <nodeIds>60</nodeIds>
   </expressionNodes>
   <expressionNodes realName="mrv_2_fu_523">
     <nodeIds>84</nodeIds>
@@ -899,80 +908,71 @@
   <expressionNodes realName="tmp_s_fu_222">
     <nodeIds>24</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_1_fu_402">
-    <nodeIds>65</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="bitcast_ln32_fu_219">
-    <nodeIds>23</nodeIds>
+  <expressionNodes realName="icmp_ln38_fu_330">
+    <nodeIds>47</nodeIds>
   </expressionNodes>
   <expressionNodes realName="mrv_3_fu_529">
     <nodeIds>85</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln35_12_fu_365">
-    <nodeIds>57</nodeIds>
+  <expressionNodes realName="select_ln38_fu_389">
+    <nodeIds>61</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="bitcast_ln43_fu_313">
-    <nodeIds>44</nodeIds>
+  <expressionNodes realName="trunc_ln51_3_fu_114">
+    <nodeIds>10</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln32_fu_254">
-    <nodeIds>30</nodeIds>
+  <expressionNodes realName="select_ln30_3_fu_408">
+    <nodeIds>66</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="bitcast_ln60_fu_154">
-    <nodeIds>15</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln32_fu_236">
-    <nodeIds>26</nodeIds>
+  <expressionNodes realName="tmp_181_fu_316">
+    <nodeIds>45</nodeIds>
   </expressionNodes>
   <expressionNodes realName="trunc_ln_fu_144">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln43_8_fu_377">
-    <nodeIds>59</nodeIds>
+  <expressionNodes realName="and_ln27_4_fu_360">
+    <nodeIds>56</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="c_p_14_fu_503">
-    <nodeIds>81</nodeIds>
+  <expressionNodes realName="or_ln53_1_fu_497">
+    <nodeIds>80</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="bitcast_ln56_fu_109">
-    <nodeIds>9</nodeIds>
+  <expressionNodes realName="and_ln27_5_fu_461">
+    <nodeIds>74</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln35_fu_295">
-    <nodeIds>40</nodeIds>
+  <expressionNodes realName="and_ln38_fu_348">
+    <nodeIds>51</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln43_22_fu_440">
-    <nodeIds>71</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln58_4_fu_447">
-    <nodeIds>72</nodeIds>
+  <expressionNodes realName="trunc_ln30_fu_279">
+    <nodeIds>37</nodeIds>
   </expressionNodes>
   <expressionNodes realName="mrv_1_fu_517">
     <nodeIds>83</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_3_fu_427">
-    <nodeIds>69</nodeIds>
+  <expressionNodes realName="and_ln53_fu_201">
+    <nodeIds>55</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln43_fu_348">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln32_8_fu_242">
-    <nodeIds>27</nodeIds>
+  <expressionNodes realName="bitcast_ln30_fu_266">
+    <nodeIds>35</nodeIds>
   </expressionNodes>
   <expressionNodes realName="trunc_ln18_fu_159">
     <nodeIds>17</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln43_fu_342">
-    <nodeIds>49</nodeIds>
+  <expressionNodes realName="and_ln30_fu_301">
+    <nodeIds>42</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln32_fu_232">
-    <nodeIds>25</nodeIds>
+  <expressionNodes realName="icmp_ln53_fu_189">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_179_fu_269">
+    <nodeIds>36</nodeIds>
   </expressionNodes>
   <expressionNodes realName="trunc_ln19_fu_174">
     <nodeIds>20</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_fu_396">
-    <nodeIds>63</nodeIds>
+  <expressionNodes realName="trunc_ln27_fu_232">
+    <nodeIds>25</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="select_ln58_8_fu_490">
-    <nodeIds>79</nodeIds>
+  <expressionNodes realName="select_ln38_12_fu_414">
+    <nodeIds>67</nodeIds>
   </expressionNodes>
   <moduleNodes realName="grp_fu_68">
     <nodeIds>16</nodeIds>

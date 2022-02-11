@@ -162,7 +162,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_din0</name>
+<name>grp_fu_1191_p_din0</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -173,7 +173,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_din1</name>
+<name>grp_fu_1191_p_din1</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -184,7 +184,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_opcode</name>
+<name>grp_fu_1191_p_opcode</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -195,7 +195,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_dout0</name>
+<name>grp_fu_1191_p_dout0</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -206,7 +206,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_582_p_ce</name>
+<name>grp_fu_1191_p_ce</name>
 <Object>operator+</Object>
 <Type>return value</Type>
 <Scope></Scope>

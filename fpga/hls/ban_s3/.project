@@ -57,6 +57,11 @@
 			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.h</location>
 		</link>
 		<link>
+			<name>testbench/vitis_test.cpp</name>
+			<type>1</type>
+			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/solution1.directive</location>

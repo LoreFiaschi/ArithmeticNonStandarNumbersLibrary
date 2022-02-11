@@ -11,7 +11,7 @@ typedef float T;     // generates inaccuracies in division proportional to 1e-6
 // coefficients of the sqrt(1-x) taylor expansion (required for sqrt)
 constexpr T sqrt_exp = -0.125;
 
-union output;
+struct output;
 
 enum op_type{
 	SUM, OPP, DIF, MUL, DIV, ABS, SQRT,
@@ -21,7 +21,6 @@ enum op_type{
 	EQ_R, NEQ_R, LES_R, LAR_R, LES_EQ_R, LAR_EQ_R,
 };
 
-
 class Ban{
 
 	int p;
@@ -29,16 +28,12 @@ class Ban{
 
 	// utility functions
 	void to_normal_form();
-	Ban mul_body(const Ban &b) const;
 
 	// static functions
 	static Ban _pow_fast(const Ban &b, unsigned e);
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
 	static void _div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]);
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
-
-	// constructor without consistency check
-	void init(int p, const T num[SIZE]);
 
 	// utility for boolean conversion
 	//typedef void (Ban::*bool_type)() const;
@@ -51,9 +46,6 @@ class Ban{
 	Ban(){};
 	Ban(int p, const T num[SIZE]);
 	Ban(T n);
-
-	// interface for Vitis
-	friend output ban_interface(Ban b_op1, const Ban b_op2, T f_op, op_type op);
 
 	// boolean convertion
 	//explicit inline operator bool() const{return num[0];};
@@ -96,13 +88,18 @@ class Ban{
 	inline bool operator>=(T n) const {return !(*this<n);};
 };
 
-union output{
+struct output{
 
 	bool l;
 	Ban b;
 
-	output(){};
+	output():l(0),b(0){};
+	output(Ban a):l(0){b = a;};
+	output(bool a):b(0){l = a;};
 };
+
+// interface for Vitis
+output ban_interface(const Ban &b_op1, const Ban &b_op2, T f_op, op_type op);
 
 constexpr T _[] = {1.0, 0, 0};
 constexpr T __[] = {0.0, 0, 0};

@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808236816</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808236480</coreId>
+						<coreId>196522160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869182051</coreId>
+						<coreId>196504848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -203,7 +203,7 @@
 						<name>p_read</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -219,7 +219,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>79</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -260,7 +260,7 @@
 						<name>p_read_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -276,7 +276,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>79</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -317,7 +317,7 @@
 						<name>p_read_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -333,7 +333,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>79</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -374,7 +374,7 @@
 						<name>b_p_read_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -390,7 +390,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>79</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -403,7 +403,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807799952</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -431,7 +431,7 @@
 						<name>p_read_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -447,7 +447,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>79</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -460,7 +460,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807929728</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -488,7 +488,7 @@
 						<name>c_p</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -504,7 +504,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -517,7 +517,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>128</coreId>
+						<coreId>448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -541,10 +541,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>icmp_ln27</name>
+						<name>icmp_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -560,7 +560,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -573,7 +573,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>448</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -598,10 +598,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>br_ln27</name>
+						<name>br_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -617,7 +617,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -630,7 +630,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808237104</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -656,10 +656,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>trunc_ln27_s</name>
+						<name>trunc_ln22_s</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -675,7 +675,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -688,7 +688,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808128016</coreId>
+						<coreId>196504032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -715,10 +715,10 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>bitcast_ln27</name>
+						<name>bitcast_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -734,7 +734,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -747,7 +747,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -774,7 +774,7 @@
 						<name>tmp</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -790,7 +790,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -803,7 +803,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808239072</coreId>
+						<coreId>196739984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -830,10 +830,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>trunc_ln27_1</name>
+						<name>trunc_ln22_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -849,7 +849,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -862,7 +862,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808238592</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -889,10 +889,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>icmp_ln27_1</name>
+						<name>icmp_ln22_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -908,7 +908,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -921,7 +921,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807938624</coreId>
+						<coreId>196755920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -946,10 +946,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>icmp_ln27_2</name>
+						<name>icmp_ln22_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -965,7 +965,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -978,7 +978,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196373232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1003,10 +1003,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>or_ln27</name>
+						<name>or_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1022,7 +1022,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1035,7 +1035,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>197265984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1063,7 +1063,7 @@
 						<name>tmp_s</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1079,7 +1079,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1092,7 +1092,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807938624</coreId>
+						<coreId>197293448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1117,10 +1117,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>and_ln27</name>
+						<name>and_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1136,7 +1136,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1149,7 +1149,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808522600</coreId>
+						<coreId>196752752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1174,10 +1174,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>br_ln27</name>
+						<name>br_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1193,7 +1193,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1206,7 +1206,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808206032</coreId>
+						<coreId>196460672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1232,10 +1232,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>br_ln82</name>
+						<name>br_ln77</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>82</lineNumber>
+						<lineNumber>77</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -1251,7 +1251,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>82</second>
+										<second>77</second>
 									</item>
 								</second>
 							</item>
@@ -1264,7 +1264,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>757935405</coreId>
+						<coreId>1763715379</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1288,10 +1288,10 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>trunc_ln27_2</name>
+						<name>trunc_ln22_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1307,7 +1307,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1320,7 +1320,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808205520</coreId>
+						<coreId>574453865</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1347,10 +1347,10 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>bitcast_ln27_1</name>
+						<name>bitcast_ln22_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1366,7 +1366,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1379,7 +1379,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808238592</coreId>
+						<coreId>909729585</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1406,7 +1406,7 @@
 						<name>tmp_9</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1422,7 +1422,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1435,7 +1435,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1109945600</coreId>
+						<coreId>1030647657</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1462,10 +1462,10 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>trunc_ln27_3</name>
+						<name>trunc_ln22_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1481,7 +1481,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1494,7 +1494,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808201216</coreId>
+						<coreId>196759680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -1521,10 +1521,10 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>icmp_ln27_3</name>
+						<name>icmp_ln22_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1540,7 +1540,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1553,7 +1553,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807938624</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1578,10 +1578,10 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>icmp_ln27_5</name>
+						<name>icmp_ln22_5</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1597,7 +1597,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1610,7 +1610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>196759008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1635,10 +1635,10 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>or_ln27_1</name>
+						<name>or_ln22_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1654,7 +1654,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1667,7 +1667,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196457728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1695,7 +1695,7 @@
 						<name>tmp_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1711,7 +1711,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1724,7 +1724,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>840979276</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1749,10 +1749,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>and_ln27_1</name>
+						<name>and_ln22_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1768,7 +1768,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1781,7 +1781,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808521120</coreId>
+						<coreId>1850286653</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1806,10 +1806,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>br_ln27</name>
+						<name>br_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1825,7 +1825,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1838,7 +1838,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>196745520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1864,10 +1864,10 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>trunc_ln27_4</name>
+						<name>trunc_ln22_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1883,7 +1883,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1896,7 +1896,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196747896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1923,10 +1923,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>bitcast_ln27_2</name>
+						<name>bitcast_ln22_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1942,7 +1942,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -1955,7 +1955,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808773776</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1982,7 +1982,7 @@
 						<name>tmp_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -1998,7 +1998,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2011,7 +2011,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196748896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2038,10 +2038,10 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>trunc_ln27_5</name>
+						<name>trunc_ln22_5</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2057,7 +2057,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2070,7 +2070,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>197319616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -2097,10 +2097,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>icmp_ln27_6</name>
+						<name>icmp_ln22_6</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2116,7 +2116,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2129,7 +2129,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808795208</coreId>
+						<coreId>1145981250</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2154,10 +2154,10 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>icmp_ln27_7</name>
+						<name>icmp_ln22_7</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2173,7 +2173,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2186,7 +2186,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808796016</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2211,10 +2211,10 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>or_ln27_2</name>
+						<name>or_ln22_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2230,7 +2230,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2243,7 +2243,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2271,7 +2271,7 @@
 						<name>tmp_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2287,7 +2287,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2300,7 +2300,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808798352</coreId>
+						<coreId>197341984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2325,10 +2325,10 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>and_ln27_2</name>
+						<name>and_ln22_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2344,7 +2344,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2357,7 +2357,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808788640</coreId>
+						<coreId>197343096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2382,10 +2382,10 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>br_ln82</name>
+						<name>br_ln77</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>82</lineNumber>
+						<lineNumber>77</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -2401,7 +2401,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>82</second>
+										<second>77</second>
 									</item>
 								</second>
 							</item>
@@ -2414,7 +2414,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197343744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2440,10 +2440,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>icmp_ln27_4</name>
+						<name>icmp_ln22_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2459,7 +2459,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2472,7 +2472,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>197345792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2497,10 +2497,10 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>bitcast_ln27_3</name>
+						<name>bitcast_ln22_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2516,7 +2516,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2529,7 +2529,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>185</coreId>
+						<coreId>197346752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2556,7 +2556,7 @@
 						<name>tmp_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2572,7 +2572,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2585,7 +2585,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>758329394</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2612,10 +2612,10 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>trunc_ln27_6</name>
+						<name>trunc_ln22_6</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2631,7 +2631,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2644,7 +2644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1478638969</coreId>
+						<coreId>196504464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -2668,10 +2668,10 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>icmp_ln27_8</name>
+						<name>icmp_ln22_8</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2687,7 +2687,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2700,7 +2700,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1931502951</coreId>
+						<coreId>196728064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2725,10 +2725,10 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>icmp_ln27_9</name>
+						<name>icmp_ln22_9</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2744,7 +2744,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2757,7 +2757,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808213176</coreId>
+						<coreId>1007225406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2782,10 +2782,10 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>or_ln27_3</name>
+						<name>or_ln22_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2801,7 +2801,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2814,7 +2814,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808213696</coreId>
+						<coreId>1936683105</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2842,7 +2842,7 @@
 						<name>tmp_5</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2858,7 +2858,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2871,7 +2871,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808215328</coreId>
+						<coreId>196732104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2896,10 +2896,10 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>and_ln27_3</name>
+						<name>and_ln22_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2915,7 +2915,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2928,7 +2928,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1869635878</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2953,10 +2953,10 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>and_ln27_4</name>
+						<name>and_ln22_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -2972,7 +2972,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -2985,7 +2985,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1763716155</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3010,10 +3010,10 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>br_ln27</name>
+						<name>br_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3029,7 +3029,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3042,7 +3042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808218752</coreId>
+						<coreId>128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3068,10 +3068,10 @@
 					<Obj>
 						<type>0</type>
 						<id>62</id>
-						<name>bitcast_ln85</name>
+						<name>bitcast_ln80</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3087,7 +3087,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3127,7 +3127,7 @@
 						<name>tmp_6</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3143,7 +3143,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3156,7 +3156,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808220208</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3183,10 +3183,10 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>trunc_ln85</name>
+						<name>trunc_ln80</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3202,7 +3202,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3215,7 +3215,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1109933345</coreId>
+						<coreId>196738912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -3239,10 +3239,10 @@
 					<Obj>
 						<type>0</type>
 						<id>65</id>
-						<name>icmp_ln85</name>
+						<name>icmp_ln80</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3258,7 +3258,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3271,7 +3271,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769239916</coreId>
+						<coreId>128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3296,10 +3296,10 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>icmp_ln85_1</name>
+						<name>icmp_ln80_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3315,7 +3315,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3328,7 +3328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808236480</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3353,10 +3353,10 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>or_ln85</name>
+						<name>or_ln80</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3372,7 +3372,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3385,7 +3385,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808236480</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3413,7 +3413,7 @@
 						<name>tmp_7</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3429,7 +3429,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3442,7 +3442,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808226784</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3467,10 +3467,10 @@
 					<Obj>
 						<type>0</type>
 						<id>69</id>
-						<name>and_ln85_1</name>
+						<name>and_ln80_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3486,7 +3486,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -3499,7 +3499,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197021584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3524,10 +3524,10 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>bitcast_ln27_4</name>
+						<name>bitcast_ln22_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3543,7 +3543,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3556,7 +3556,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>197023144</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3583,7 +3583,7 @@
 						<name>tmp_8</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3599,7 +3599,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3612,7 +3612,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>197024712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3639,10 +3639,10 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>trunc_ln27_7</name>
+						<name>trunc_ln22_7</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3658,7 +3658,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3695,10 +3695,10 @@
 					<Obj>
 						<type>0</type>
 						<id>73</id>
-						<name>icmp_ln27_10</name>
+						<name>icmp_ln22_10</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3714,7 +3714,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3727,7 +3727,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197027024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3752,10 +3752,10 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>icmp_ln27_11</name>
+						<name>icmp_ln22_11</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3771,7 +3771,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3784,7 +3784,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807938624</coreId>
+						<coreId>196336304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3809,10 +3809,10 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>or_ln27_4</name>
+						<name>or_ln22_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3828,7 +3828,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3841,7 +3841,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808478912</coreId>
+						<coreId>197029408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3869,7 +3869,7 @@
 						<name>tmp_10</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3885,7 +3885,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3898,7 +3898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808480464</coreId>
+						<coreId>197030720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3923,10 +3923,10 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>and_ln27_5</name>
+						<name>and_ln22_5</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -3942,7 +3942,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -3955,7 +3955,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808481600</coreId>
+						<coreId>197031376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3980,10 +3980,10 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>and_ln85</name>
+						<name>and_ln80</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>85</lineNumber>
+						<lineNumber>80</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -3999,7 +3999,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>85</second>
+										<second>80</second>
 									</item>
 								</second>
 							</item>
@@ -4012,7 +4012,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>256</coreId>
+						<coreId>197034512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4037,10 +4037,10 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>br_ln27</name>
+						<name>br_ln22</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>22</lineNumber>
 						<contextFuncName>operator==</contextFuncName>
 						<contextNormFuncName>operator_eq</contextNormFuncName>
 						<inlineStackInfo>
@@ -4056,7 +4056,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator==</second>
 										</first>
-										<second>27</second>
+										<second>22</second>
 									</item>
 								</second>
 							</item>
@@ -4098,7 +4098,7 @@
 						<name>diff_p</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>88</lineNumber>
+						<lineNumber>83</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4114,7 +4114,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>88</second>
+										<second>83</second>
 									</item>
 								</second>
 							</item>
@@ -4127,7 +4127,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808485760</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4152,10 +4152,10 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>icmp_ln91</name>
+						<name>icmp_ln86</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>91</lineNumber>
+						<lineNumber>86</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4171,7 +4171,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>91</second>
+										<second>86</second>
 									</item>
 								</second>
 							</item>
@@ -4209,10 +4209,10 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>br_ln91</name>
+						<name>br_ln86</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>91</lineNumber>
+						<lineNumber>86</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4228,7 +4228,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>91</second>
+										<second>86</second>
 									</item>
 								</second>
 							</item>
@@ -4241,7 +4241,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808488008</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4267,10 +4267,10 @@
 					<Obj>
 						<type>0</type>
 						<id>85</id>
-						<name>icmp_ln94</name>
+						<name>icmp_ln89</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>94</lineNumber>
+						<lineNumber>89</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4286,7 +4286,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>94</second>
+										<second>89</second>
 									</item>
 								</second>
 							</item>
@@ -4299,7 +4299,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6775156</coreId>
+						<coreId>197041368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4324,10 +4324,10 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>br_ln94</name>
+						<name>br_ln89</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>94</lineNumber>
+						<lineNumber>89</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4343,7 +4343,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>94</second>
+										<second>89</second>
 									</item>
 								</second>
 							</item>
@@ -4385,7 +4385,7 @@
 						<name>tmp_11</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>98</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4401,7 +4401,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>98</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -4414,7 +4414,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808492432</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4443,7 +4443,7 @@
 						<name>trunc_ln8</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4459,7 +4459,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>69</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -4472,7 +4472,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819113532</coreId>
+						<coreId>197041584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4499,10 +4499,10 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>bitcast_ln69</name>
+						<name>bitcast_ln64</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4518,7 +4518,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>69</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -4531,7 +4531,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808494112</coreId>
+						<coreId>197044960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4555,10 +4555,10 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>br_ln98</name>
+						<name>br_ln93</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>98</lineNumber>
+						<lineNumber>93</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -4574,7 +4574,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>98</second>
+										<second>93</second>
 									</item>
 								</second>
 							</item>
@@ -4587,7 +4587,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808495024</coreId>
+						<coreId>196491632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4616,7 +4616,7 @@
 						<name>trunc_ln9</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>56</lineNumber>
+						<lineNumber>51</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4632,7 +4632,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>56</second>
+										<second>51</second>
 									</item>
 								</second>
 							</item>
@@ -4645,7 +4645,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808497264</coreId>
+						<coreId>197047520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4672,10 +4672,10 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>bitcast_ln56</name>
+						<name>bitcast_ln51</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>56</lineNumber>
+						<lineNumber>51</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4691,7 +4691,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>56</second>
+										<second>51</second>
 									</item>
 								</second>
 							</item>
@@ -4704,7 +4704,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808498384</coreId>
+						<coreId>197048552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4728,10 +4728,10 @@
 					<Obj>
 						<type>0</type>
 						<id>95</id>
-						<name>trunc_ln56_1</name>
+						<name>trunc_ln51_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>56</lineNumber>
+						<lineNumber>51</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4747,7 +4747,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>56</second>
+										<second>51</second>
 									</item>
 								</second>
 							</item>
@@ -4760,7 +4760,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197265984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4787,10 +4787,10 @@
 					<Obj>
 						<type>0</type>
 						<id>96</id>
-						<name>bitcast_ln56_1</name>
+						<name>bitcast_ln51_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>56</lineNumber>
+						<lineNumber>51</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4806,7 +4806,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>56</second>
+										<second>51</second>
 									</item>
 								</second>
 							</item>
@@ -4819,7 +4819,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1763714866</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4843,10 +4843,10 @@
 					<Obj>
 						<type>0</type>
 						<id>97</id>
-						<name>_ln58</name>
+						<name>_ln53</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4862,7 +4862,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>58</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -4875,7 +4875,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4907,7 +4907,7 @@
 						<name>add12_i1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>65</lineNumber>
+						<lineNumber>60</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4923,7 +4923,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>65</second>
+										<second>60</second>
 									</item>
 								</second>
 							</item>
@@ -4936,7 +4936,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808503200</coreId>
+						<coreId>197298792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4961,10 +4961,10 @@
 					<Obj>
 						<type>0</type>
 						<id>100</id>
-						<name>br_ln66</name>
+						<name>br_ln61</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>66</lineNumber>
+						<lineNumber>61</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -4980,7 +4980,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>66</second>
+										<second>61</second>
 									</item>
 								</second>
 							</item>
@@ -5020,7 +5020,7 @@
 						<name>add_i1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -5036,7 +5036,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>60</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -5077,7 +5077,7 @@
 						<name>add7_i1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -5093,7 +5093,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>61</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -5106,7 +5106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808507056</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5131,10 +5131,10 @@
 					<Obj>
 						<type>0</type>
 						<id>104</id>
-						<name>br_ln62</name>
+						<name>br_ln57</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>62</lineNumber>
+						<lineNumber>57</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -5150,7 +5150,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>62</second>
+										<second>57</second>
 									</item>
 								</second>
 							</item>
@@ -5163,7 +5163,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1599294536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5190,7 +5190,7 @@
 						<name>add17_i1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -5206,7 +5206,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>69</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -5219,7 +5219,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1807938624</coreId>
+						<coreId>197305248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5247,7 +5247,7 @@
 						<name>add22_i1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>70</lineNumber>
+						<lineNumber>65</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -5263,7 +5263,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>70</second>
+										<second>65</second>
 									</item>
 								</second>
 							</item>
@@ -5276,7 +5276,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1763714866</coreId>
+						<coreId>197306360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5304,7 +5304,7 @@
 						<name>add27_i1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>71</lineNumber>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -5320,7 +5320,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>71</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -5333,7 +5333,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808513480</coreId>
+						<coreId>197309664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5358,10 +5358,10 @@
 					<Obj>
 						<type>0</type>
 						<id>109</id>
-						<name>bitcast_ln32</name>
+						<name>bitcast_ln27</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5377,7 +5377,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5390,7 +5390,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808515968</coreId>
+						<coreId>197311928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5417,7 +5417,7 @@
 						<name>tmp_12</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5433,7 +5433,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5446,7 +5446,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197311600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -5473,10 +5473,10 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>trunc_ln32</name>
+						<name>trunc_ln27</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5492,7 +5492,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5505,7 +5505,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197310080</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -5529,10 +5529,10 @@
 					<Obj>
 						<type>0</type>
 						<id>112</id>
-						<name>icmp_ln32</name>
+						<name>icmp_ln27</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5548,7 +5548,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5561,7 +5561,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197313712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -5586,10 +5586,10 @@
 					<Obj>
 						<type>0</type>
 						<id>113</id>
-						<name>icmp_ln32_2</name>
+						<name>icmp_ln27_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5605,7 +5605,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5618,7 +5618,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808691632</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -5643,10 +5643,10 @@
 					<Obj>
 						<type>0</type>
 						<id>114</id>
-						<name>or_ln32</name>
+						<name>or_ln27</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5662,7 +5662,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5703,7 +5703,7 @@
 						<name>tmp_13</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5719,7 +5719,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5732,7 +5732,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197317024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -5757,10 +5757,10 @@
 					<Obj>
 						<type>0</type>
 						<id>116</id>
-						<name>and_ln32</name>
+						<name>and_ln27</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5776,7 +5776,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5789,7 +5789,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>784</coreId>
+						<coreId>197319664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -5814,10 +5814,10 @@
 					<Obj>
 						<type>0</type>
 						<id>117</id>
-						<name>br_ln32</name>
+						<name>br_ln27</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5833,7 +5833,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>32</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -5846,7 +5846,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197319072</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5872,10 +5872,10 @@
 					<Obj>
 						<type>0</type>
 						<id>119</id>
-						<name>bitcast_ln35</name>
+						<name>bitcast_ln30</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5891,7 +5891,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -5904,7 +5904,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5931,7 +5931,7 @@
 						<name>tmp_14</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -5947,7 +5947,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -5960,7 +5960,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808755712</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -5987,10 +5987,10 @@
 					<Obj>
 						<type>0</type>
 						<id>121</id>
-						<name>trunc_ln35</name>
+						<name>trunc_ln30</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6006,7 +6006,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6019,7 +6019,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -6043,10 +6043,10 @@
 					<Obj>
 						<type>0</type>
 						<id>122</id>
-						<name>icmp_ln35</name>
+						<name>icmp_ln30</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6062,7 +6062,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6075,7 +6075,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808758344</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6100,10 +6100,10 @@
 					<Obj>
 						<type>0</type>
 						<id>123</id>
-						<name>icmp_ln35_2</name>
+						<name>icmp_ln30_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6119,7 +6119,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6157,10 +6157,10 @@
 					<Obj>
 						<type>0</type>
 						<id>124</id>
-						<name>or_ln35</name>
+						<name>or_ln30</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6176,7 +6176,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6189,7 +6189,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808760368</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6217,7 +6217,7 @@
 						<name>tmp_15</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6233,7 +6233,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6246,7 +6246,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>512</coreId>
+						<coreId>197327552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6271,10 +6271,10 @@
 					<Obj>
 						<type>0</type>
 						<id>126</id>
-						<name>and_ln35</name>
+						<name>and_ln30</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6290,7 +6290,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6303,7 +6303,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1969516397</coreId>
+						<coreId>197328928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6328,10 +6328,10 @@
 					<Obj>
 						<type>0</type>
 						<id>127</id>
-						<name>br_ln35</name>
+						<name>br_ln30</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>35</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6347,7 +6347,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>35</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -6360,7 +6360,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808764432</coreId>
+						<coreId>197330160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -6389,7 +6389,7 @@
 						<name>c_p_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>39</lineNumber>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6405,7 +6405,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>39</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -6418,7 +6418,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808766368</coreId>
+						<coreId>42</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6443,10 +6443,10 @@
 					<Obj>
 						<type>0</type>
 						<id>130</id>
-						<name>br_ln40</name>
+						<name>br_ln35</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>40</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6462,7 +6462,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>40</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
@@ -6499,10 +6499,10 @@
 					<Obj>
 						<type>0</type>
 						<id>132</id>
-						<name>bitcast_ln43</name>
+						<name>bitcast_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6518,7 +6518,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6531,7 +6531,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>20112</coreId>
+						<coreId>197334592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -6558,7 +6558,7 @@
 						<name>tmp_16</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6574,7 +6574,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6587,7 +6587,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>236</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -6614,10 +6614,10 @@
 					<Obj>
 						<type>0</type>
 						<id>134</id>
-						<name>trunc_ln43</name>
+						<name>trunc_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6633,7 +6633,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6646,7 +6646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197236816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -6670,10 +6670,10 @@
 					<Obj>
 						<type>0</type>
 						<id>135</id>
-						<name>icmp_ln43</name>
+						<name>icmp_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6689,7 +6689,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6702,7 +6702,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>197246032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6727,10 +6727,10 @@
 					<Obj>
 						<type>0</type>
 						<id>136</id>
-						<name>icmp_ln43_2</name>
+						<name>icmp_ln38_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6746,7 +6746,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6759,7 +6759,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197247248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6784,10 +6784,10 @@
 					<Obj>
 						<type>0</type>
 						<id>137</id>
-						<name>or_ln43</name>
+						<name>or_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6803,7 +6803,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6816,7 +6816,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197247104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6844,7 +6844,7 @@
 						<name>tmp_17</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6860,7 +6860,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6873,7 +6873,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197249568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -6898,10 +6898,10 @@
 					<Obj>
 						<type>0</type>
 						<id>139</id>
-						<name>and_ln43</name>
+						<name>and_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6917,7 +6917,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -6958,7 +6958,7 @@
 						<name>c_p_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>46</lineNumber>
+						<lineNumber>41</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -6974,7 +6974,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>46</second>
+										<second>41</second>
 									</item>
 								</second>
 							</item>
@@ -7012,10 +7012,10 @@
 					<Obj>
 						<type>0</type>
 						<id>141</id>
-						<name>select_ln43</name>
+						<name>select_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -7031,7 +7031,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -7044,7 +7044,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808765648</coreId>
+						<coreId>197243600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7070,10 +7070,10 @@
 					<Obj>
 						<type>0</type>
 						<id>142</id>
-						<name>select_ln43_4</name>
+						<name>select_ln38_4</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -7089,7 +7089,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -7102,7 +7102,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197252064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7128,10 +7128,10 @@
 					<Obj>
 						<type>0</type>
 						<id>143</id>
-						<name>select_ln43_5</name>
+						<name>select_ln38_5</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -7147,7 +7147,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -7160,7 +7160,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819113532</coreId>
+						<coreId>197255440</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7186,10 +7186,10 @@
 					<Obj>
 						<type>0</type>
 						<id>144</id>
-						<name>br_ln43</name>
+						<name>br_ln38</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>to_normal_form</contextFuncName>
 						<contextNormFuncName>to_normal_form</contextNormFuncName>
 						<inlineStackInfo>
@@ -7205,7 +7205,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>to_normal_form</second>
 										</first>
-										<second>43</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -7218,7 +7218,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>375</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7242,10 +7242,10 @@
 					<Obj>
 						<type>0</type>
 						<id>146</id>
-						<name>icmp_ln58</name>
+						<name>icmp_ln53</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7261,7 +7261,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>58</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -7274,7 +7274,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808786320</coreId>
+						<coreId>197251120</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -7299,10 +7299,10 @@
 					<Obj>
 						<type>0</type>
 						<id>147</id>
-						<name>br_ln58</name>
+						<name>br_ln53</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>58</lineNumber>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7318,7 +7318,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>58</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -7331,7 +7331,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808786208</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7360,7 +7360,7 @@
 						<name>add_i</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7376,7 +7376,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>60</second>
+										<second>55</second>
 									</item>
 								</second>
 							</item>
@@ -7417,7 +7417,7 @@
 						<name>trunc_ln</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7433,7 +7433,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>61</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -7446,7 +7446,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808788832</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7473,10 +7473,10 @@
 					<Obj>
 						<type>0</type>
 						<id>151</id>
-						<name>bitcast_ln61</name>
+						<name>bitcast_ln56</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>61</lineNumber>
+						<lineNumber>56</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7492,7 +7492,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>61</second>
+										<second>56</second>
 									</item>
 								</second>
 							</item>
@@ -7505,7 +7505,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808789968</coreId>
+						<coreId>197263696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7529,10 +7529,10 @@
 					<Obj>
 						<type>0</type>
 						<id>152</id>
-						<name>br_ln62</name>
+						<name>br_ln57</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>62</lineNumber>
+						<lineNumber>57</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7548,7 +7548,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>62</second>
+										<second>57</second>
 									</item>
 								</second>
 							</item>
@@ -7561,7 +7561,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808662464</coreId>
+						<coreId>197264944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7588,7 +7588,7 @@
 						<name>agg_result_1_1_0</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>79</lineNumber>
+						<lineNumber>74</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -7604,7 +7604,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>79</second>
+										<second>74</second>
 									</item>
 								</second>
 							</item>
@@ -7617,7 +7617,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6775156</coreId>
+						<coreId>176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7644,10 +7644,10 @@
 					<Obj>
 						<type>0</type>
 						<id>155</id>
-						<name>bitcast_ln61_pn</name>
+						<name>bitcast_ln56_pn</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>69</lineNumber>
+						<lineNumber>64</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7663,7 +7663,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>69</second>
+										<second>64</second>
 									</item>
 								</second>
 							</item>
@@ -7676,7 +7676,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808675712</coreId>
+						<coreId>197269296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7706,7 +7706,7 @@
 						<name>storemerge</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>65</lineNumber>
+						<lineNumber>60</lineNumber>
 						<contextFuncName>_sum</contextFuncName>
 						<contextNormFuncName>p_sum</contextNormFuncName>
 						<inlineStackInfo>
@@ -7722,7 +7722,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>_sum</second>
 										</first>
-										<second>65</second>
+										<second>60</second>
 									</item>
 								</second>
 							</item>
@@ -7735,7 +7735,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808676736</coreId>
+						<coreId>197291968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7760,10 +7760,10 @@
 					<Obj>
 						<type>0</type>
 						<id>157</id>
-						<name>br_ln99</name>
+						<name>br_ln94</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>99</lineNumber>
+						<lineNumber>94</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -7779,7 +7779,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>99</second>
+										<second>94</second>
 									</item>
 								</second>
 							</item>
@@ -7792,7 +7792,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197271648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7819,7 +7819,7 @@
 						<name>trunc_ln7</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -7835,7 +7835,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -7875,10 +7875,10 @@
 					<Obj>
 						<type>0</type>
 						<id>160</id>
-						<name>bitcast_ln92</name>
+						<name>bitcast_ln87</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -7894,7 +7894,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -7907,7 +7907,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -7931,10 +7931,10 @@
 					<Obj>
 						<type>0</type>
 						<id>161</id>
-						<name>trunc_ln92_1</name>
+						<name>trunc_ln87_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -7950,7 +7950,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -7990,10 +7990,10 @@
 					<Obj>
 						<type>0</type>
 						<id>162</id>
-						<name>bitcast_ln92_1</name>
+						<name>bitcast_ln87_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8009,7 +8009,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8022,7 +8022,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197267032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8046,10 +8046,10 @@
 					<Obj>
 						<type>0</type>
 						<id>163</id>
-						<name>trunc_ln92_2</name>
+						<name>trunc_ln87_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8065,7 +8065,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8078,7 +8078,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808679232</coreId>
+						<coreId>23</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8105,10 +8105,10 @@
 					<Obj>
 						<type>0</type>
 						<id>164</id>
-						<name>bitcast_ln92_2</name>
+						<name>bitcast_ln87_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8124,7 +8124,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8137,7 +8137,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808685600</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8161,10 +8161,10 @@
 					<Obj>
 						<type>0</type>
 						<id>165</id>
-						<name>br_ln92</name>
+						<name>br_ln87</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8180,7 +8180,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8193,7 +8193,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808686896</coreId>
+						<coreId>197280464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -8220,7 +8220,7 @@
 						<name>trunc_ln6</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8236,7 +8236,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8249,7 +8249,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197282352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8276,10 +8276,10 @@
 					<Obj>
 						<type>0</type>
 						<id>168</id>
-						<name>bitcast_ln86</name>
+						<name>bitcast_ln81</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8295,7 +8295,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8308,7 +8308,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>197281872</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8332,10 +8332,10 @@
 					<Obj>
 						<type>0</type>
 						<id>169</id>
-						<name>trunc_ln86_1</name>
+						<name>trunc_ln81_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8351,7 +8351,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8364,7 +8364,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808684192</coreId>
+						<coreId>197281984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8391,10 +8391,10 @@
 					<Obj>
 						<type>0</type>
 						<id>170</id>
-						<name>bitcast_ln86_1</name>
+						<name>bitcast_ln81_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8410,7 +8410,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8423,7 +8423,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>59</coreId>
+						<coreId>197285840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8447,10 +8447,10 @@
 					<Obj>
 						<type>0</type>
 						<id>171</id>
-						<name>trunc_ln86_2</name>
+						<name>trunc_ln81_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8466,7 +8466,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8479,7 +8479,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702258035</coreId>
+						<coreId>352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8506,10 +8506,10 @@
 					<Obj>
 						<type>0</type>
 						<id>172</id>
-						<name>bitcast_ln86_2</name>
+						<name>bitcast_ln81_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8525,7 +8525,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8538,7 +8538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197287808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8562,10 +8562,10 @@
 					<Obj>
 						<type>0</type>
 						<id>173</id>
-						<name>br_ln86</name>
+						<name>br_ln81</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>86</lineNumber>
+						<lineNumber>81</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8581,7 +8581,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>86</second>
+										<second>81</second>
 									</item>
 								</second>
 							</item>
@@ -8594,7 +8594,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1851875887</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -8621,7 +8621,7 @@
 						<name>this_num_0_write_assign</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8637,7 +8637,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8696,7 +8696,7 @@
 						<name>this_num_1_write_assign</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8712,7 +8712,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8725,7 +8725,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808698672</coreId>
+						<coreId>196491632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8771,7 +8771,7 @@
 						<name>this_num_2_write_assign</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>87</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8787,7 +8787,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>92</second>
+										<second>87</second>
 									</item>
 								</second>
 							</item>
@@ -8800,7 +8800,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808699440</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8907,7 +8907,7 @@
 						<name>mrv</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8923,7 +8923,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>102</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -8936,7 +8936,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808701568</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -8964,7 +8964,7 @@
 						<name>mrv_1</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -8980,7 +8980,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>102</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -9021,7 +9021,7 @@
 						<name>mrv_2</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -9037,7 +9037,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>102</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -9050,7 +9050,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196491632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -9078,7 +9078,7 @@
 						<name>mrv_3</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -9094,7 +9094,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>102</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -9107,7 +9107,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808702480</coreId>
+						<coreId>196414464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -9132,10 +9132,10 @@
 					<Obj>
 						<type>0</type>
 						<id>183</id>
-						<name>_ln102</name>
+						<name>_ln97</name>
 						<fileName>../src/ban_s3.cpp</fileName>
 						<fileDirectory>/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>97</lineNumber>
 						<contextFuncName>operator+</contextFuncName>
 						<contextNormFuncName>operator_add</contextNormFuncName>
 						<inlineStackInfo>
@@ -9151,7 +9151,7 @@
 											<first>../src/ban_s3.cpp</first>
 											<second>operator+</second>
 										</first>
-										<second>102</second>
+										<second>97</second>
 									</item>
 								</second>
 							</item>
@@ -9210,7 +9210,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808224176</coreId>
+						<coreId>197017904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9241,7 +9241,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196491632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9272,7 +9272,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>196491632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9303,7 +9303,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808709280</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9334,7 +9334,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808710704</coreId>
+						<coreId>197063536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9365,7 +9365,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808711864</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9396,7 +9396,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197066952</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -9427,7 +9427,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808712544</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -9458,7 +9458,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808713312</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9489,7 +9489,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808714080</coreId>
+						<coreId>197064592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9520,7 +9520,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808559584</coreId>
+						<coreId>197068080</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9551,7 +9551,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808715920</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9582,7 +9582,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808716528</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9613,7 +9613,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808689152</coreId>
+						<coreId>197067168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9644,7 +9644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808689152</coreId>
+						<coreId>116</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9675,7 +9675,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808689152</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9706,7 +9706,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9737,7 +9737,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869833586</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9768,7 +9768,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808717584</coreId>
+						<coreId>197070976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9799,7 +9799,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808721104</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9830,7 +9830,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808721712</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9861,7 +9861,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808726048</coreId>
+						<coreId>196491632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9892,7 +9892,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808727104</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9923,7 +9923,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>976435258</coreId>
+						<coreId>197081248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9954,7 +9954,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>197084896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -9985,7 +9985,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1808717584</coreId>
+						<coreId>197070976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -10016,7 +10016,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>795046515</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>128</bitwidth>
@@ -10159,7 +10159,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>64</coreId>
+					<coreId>2</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10199,7 +10199,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>448</coreId>
+					<coreId>64</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10239,7 +10239,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>197334480</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10280,7 +10280,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808219864</coreId>
+					<coreId>196736184</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10328,7 +10328,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808484832</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10393,7 +10393,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808491984</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10427,7 +10427,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808496816</coreId>
+					<coreId>176</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10462,7 +10462,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808502664</coreId>
+					<coreId>1397508187</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10494,7 +10494,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808505408</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10527,7 +10527,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>197293792</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10569,7 +10569,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808754560</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10640,7 +10640,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>197333568</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10683,7 +10683,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808784160</coreId>
+					<coreId>197251104</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10731,7 +10731,7 @@
 				<Obj>
 					<type>3</type>
 					<id>158</id>
-					<name>_ZN3Ban4_sumERKS_S1_i.9.46.exit</name>
+					<name>_ZN3Ban4_sumERKS_S1_i.9.42.exit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -10749,7 +10749,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808673728</coreId>
+					<coreId>40</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10783,7 +10783,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808669248</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10820,7 +10820,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1808688048</coreId>
+					<coreId>197281712</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -10839,7 +10839,7 @@
 				<Obj>
 					<type>3</type>
 					<id>184</id>
-					<name>_ZN3Ban4_sumERKS_S1_i.6.43.exit</name>
+					<name>_ZN3Ban4_sumERKS_S1_i.6.39.exit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -10857,7 +10857,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>197287088</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

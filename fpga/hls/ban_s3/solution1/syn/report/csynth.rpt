@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'ban_interface'
 ================================================================
 + General Information: 
-    * Date:           Wed Feb  9 16:08:48 2022
+    * Date:           Fri Feb 11 12:36:29 2022
     * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
     * Project:        ban_s3
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     |     Modules     |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |         |            |            |     |
     |     & Loops     |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
     +-----------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
-    |+ ban_interface  |  Timing|  -0.13|       57|  570.000|         -|       58|     -|        no|     -|  32 (1%)|   6088 (1%)|  13298 (5%)|    -|
+    |+ ban_interface  |  Timing|  -0.12|       59|  590.000|         -|       60|     -|        no|     -|  32 (1%)|   6692 (1%)|  12278 (5%)|    -|
     | + operator_2    |       -|   0.39|        5|   50.000|         -|        5|     -|        no|     -|  2 (~0%)|   651 (~0%)|  1620 (~0%)|    -|
     | + operator_1    |       -|   0.09|       12|  120.000|         -|       12|     -|        no|     -|        -|   616 (~0%)|  1087 (~0%)|    -|
     | + operator_add  |       -|   0.41|       14|  140.000|         -|       14|     -|        no|     -|  6 (~0%)|  1714 (~0%)|  2105 (~0%)|    -|
@@ -34,7 +34,7 @@
 +-----------+---------+----------+
 | Interface | Mode    | Bitwidth |
 +-----------+---------+----------+
-| ap_return |         | 128      |
+| ap_return |         | 160      |
 | b_op1     | ap_none | 128      |
 | b_op2     | ap_none | 128      |
 | f_op      | ap_none | 32       |
@@ -58,7 +58,7 @@
 +----------+-----------+-------------+
 | Argument | Direction | Datatype    |
 +----------+-----------+-------------+
-| b_op1    | in        | Ban&        |
+| b_op1    | in        | Ban const & |
 | b_op2    | in        | Ban const & |
 | f_op     | in        | float       |
 | op       | in        | op_type     |
@@ -78,13 +78,6 @@
 
 
 ================================================================
-== M_AXI Burst Information
-================================================================
- Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
-
-  No burst in design
-
-================================================================
 == Bind Op Report
 ================================================================
 +----------------------------------------+-----+--------+--------------+-------+---------+---------+
@@ -92,43 +85,43 @@
 +----------------------------------------+-----+--------+--------------+-------+---------+---------+
 | + ban_interface                        | 32  |        |              |       |         |         |
 |   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | res_num_2    | fdiv  | fabric  | 8       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U43     | -   |        | res_num_3    | fdiv  | fabric  | 8       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U44     | -   |        | res_num_5    | fdiv  | fabric  | 8       |
-|   res_p_15_fu_3002_p2                  | -   |        | res_p_15     | add   | fabric  | 0       |
-|   res_p_16_fu_3056_p2                  | -   |        | res_p_16     | add   | fabric  | 0       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | res_num_3    | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U43     | -   |        | res_num_5    | fdiv  | fabric  | 8       |
+|   res_p_17_fu_2895_p2                  | -   |        | res_p_17     | add   | fabric  | 0       |
+|   res_p_16_fu_2941_p2                  | -   |        | res_p_16     | add   | fabric  | 0       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | res_num      | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | res_num_1    | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U38    | 3   |        | res_num_4    | fmul  | maxdsp  | 2       |
-|   res_p_9_fu_3296_p2                   | -   |        | res_p_9      | add   | fabric  | 0       |
-|   res_p_10_fu_3350_p2                  | -   |        | res_p_10     | add   | fabric  | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | res_num_1    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | res_num_4    | fmul  | maxdsp  | 2       |
+|   res_p_15_fu_3070_p2                  | -   |        | res_p_15     | add   | fabric  | 0       |
+|   res_p_14_fu_3117_p2                  | -   |        | res_p_14     | add   | fabric  | 0       |
 |   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | eps_2        | fdiv  | fabric  | 8       |
 |   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | eps_2_1      | fdiv  | fabric  | 8       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | conv14_i     | fmul  | maxdsp  | 2       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | conv19_i     | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul5_i_i     | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul5_i_i1    | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | eps_3        | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul12_i_i    | fmul  | maxdsp  | 2       |
-|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add16_i_i    | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul19_i_i    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul12_i_i1   | fmul  | maxdsp  | 2       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add16_i_i1   | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul19_i_i1   | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U34   | 2   |        | eps_3_1      | fadd  | fulldsp | 3       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U38    | 3   |        | mul27_i      | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add29_i      | fadd  | fulldsp | 3       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U39    | 3   |        | mul31_i      | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U34   | 2   |        | add33_i      | fadd  | fulldsp | 3       |
-|   fsqrt_32ns_32ns_32_8_no_dsp_1_U55    | -   |        | normalizer_3 | fsqrt | fabric  | 7       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | num_res_10   | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | num_res_11   | fmul  | maxdsp  | 2       |
-|   c_p_8_fu_5290_p2                     | -   |        | c_p_8        | sub   | fabric  | 0       |
+|   fsqrt_32ns_32ns_32_8_no_dsp_1_U54    | -   |        | normalizer_3 | fsqrt | fabric  | 7       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | num_res_9    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | num_res_4    | fmul  | maxdsp  | 2       |
+|   c_p_3_fu_4632_p2                     | -   |        | c_p_3        | sub   | fabric  | 0       |
 |   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | div_i        | fdiv  | fabric  | 8       |
 |   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | div6_i       | fdiv  | fabric  | 8       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul_i_i      | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul5_i_i1    | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U38    | 3   |        | mul8_i_i     | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul5_i_i2    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U38    | 3   |        | mul8_i_i1    | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add_i_i      | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul12_i_i1   | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul15_i_i    | fmul  | maxdsp  | 2       |
-|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add16_i_i1   | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul19_i_i1   | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul12_i_i2   | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul15_i_i1   | fmul  | maxdsp  | 2       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add16_i_i2   | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul19_i_i2   | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add20_i_i    | fadd  | fulldsp | 3       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add_i        | fadd  | fulldsp | 3       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add5_i       | fadd  | fulldsp | 3       |
@@ -158,24 +151,24 @@
 |   fadd_32ns_32ns_32_4_full_dsp_1_U34   | 2   |        | add2_i       | fadd  | fulldsp | 3       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add3_i       | fadd  | fulldsp | 3       |
 |   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | c_num_0_1    | fdiv  | fabric  | 8       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U43     | -   |        | c_num_1_3    | fdiv  | fabric  | 8       |
-|   fdiv_32ns_32ns_32_9_no_dsp_1_U44     | -   |        | c_num_2_2    | fdiv  | fabric  | 8       |
-|   c_p_9_fu_5385_p2                     | -   |        | c_p_9        | add   | fabric  | 0       |
-|   c_p_10_fu_5438_p2                    | -   |        | c_p_10       | add   | fabric  | 0       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U42     | -   |        | c_num_1_3    | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U43     | -   |        | c_num_0_4    | fdiv  | fabric  | 8       |
+|   c_p_7_fu_4720_p2                     | -   |        | c_p_7        | add   | fabric  | 0       |
+|   c_p_6_fu_4766_p2                     | -   |        | c_p_6        | add   | fabric  | 0       |
 |   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | num_res      | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul5_i_i_i   | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U38    | 3   |        | mul8_i_i_i   | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul5_i_i     | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U38    | 3   |        | mul8_i_i     | fmul  | maxdsp  | 2       |
 |   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | num_res_8    | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul12_i_i_i  | fmul  | maxdsp  | 2       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul15_i_i_i  | fmul  | maxdsp  | 2       |
-|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add16_i_i_i  | fadd  | fulldsp | 3       |
-|   fmul_32ns_32ns_32_3_max_dsp_1_U39    | 3   |        | mul19_i_i_i  | fmul  | maxdsp  | 2       |
-|   fadd_32ns_32ns_32_4_full_dsp_1_U34   | 2   |        | num_res_9    | fadd  | fulldsp | 3       |
-|   c_p_fu_5613_p2                       | -   |        | c_p          | add   | fabric  | 0       |
-|   c_p_3_fu_5708_p2                     | -   |        | c_p_3        | add   | fabric  | 0       |
-|   c_p_4_fu_5762_p2                     | -   |        | c_p_4        | add   | fabric  | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U36    | 3   |        | mul12_i_i    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U37    | 3   |        | mul15_i_i    | fmul  | maxdsp  | 2       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add16_i_i    | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U39    | 3   |        | mul19_i_i    | fmul  | maxdsp  | 2       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | c_num_2      | fadd  | fulldsp | 3       |
+|   c_p_fu_4830_p2                       | -   |        | c_p          | add   | fabric  | 0       |
+|   c_p_5_fu_4919_p2                     | -   |        | c_p_5        | add   | fabric  | 0       |
+|   c_p_4_fu_4966_p2                     | -   |        | c_p_4        | add   | fabric  | 0       |
 |  + operator_2                          | 2   |        |              |       |         |         |
-|    add_ln299_fu_269_p2                 | -   |        | add_ln299    | add   | fabric  | 0       |
+|    add_ln290_fu_269_p2                 | -   |        | add_ln290    | add   | fabric  | 0       |
 |    fadd_32ns_32ns_32_4_full_dsp_1_U1   | 2   |        | add          | fadd  | fulldsp | 3       |
 |    res_p_1_fu_413_p2                   | -   |        | res_p_1      | add   | fabric  | 0       |
 |    res_p_2_fu_465_p2                   | -   |        | res_p_2      | add   | fabric  | 0       |
@@ -185,7 +178,7 @@
 |    c_p_1_fu_742_p2                     | -   |        | c_p_1        | add   | fabric  | 0       |
 |  + operator_add                        | 6   |        |              |       |         |         |
 |    diff_p_fu_528_p2                    | -   |        | diff_p       | sub   | fabric  | 0       |
-|    sub_ln99_fu_556_p2                  | -   |        | sub_ln99     | sub   | fabric  | 0       |
+|    sub_ln94_fu_556_p2                  | -   |        | sub_ln94     | sub   | fabric  | 0       |
 |   + p_sum                              | 6   |        |              |       |         |         |
 |     fadd_32ns_32ns_32_4_full_dsp_1_U21 | 2   |        | add1         | fadd  | fulldsp | 3       |
 |     fadd_32ns_32ns_32_4_full_dsp_1_U22 | 2   |        | add2         | fadd  | fulldsp | 3       |
@@ -193,7 +186,7 @@
 |     fadd_32ns_32ns_32_4_full_dsp_1_U21 | 2   |        | add          | fadd  | fulldsp | 3       |
 |     fadd_32ns_32ns_32_4_full_dsp_1_U22 | 2   |        | add7         | fadd  | fulldsp | 3       |
 |     fadd_32ns_32ns_32_4_full_dsp_1_U21 | 2   |        | add4         | fadd  | fulldsp | 3       |
-|     add_ln58_fu_478_p2                 | -   |        | add_ln58     | add   | fabric  | 0       |
+|     add_ln53_fu_478_p2                 | -   |        | add_ln53     | add   | fabric  | 0       |
 +----------------------------------------+-----+--------+--------------+-------+---------+---------+
 
 

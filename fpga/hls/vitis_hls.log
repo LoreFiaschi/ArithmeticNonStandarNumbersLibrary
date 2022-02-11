@@ -1,9 +1,9 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/home/lorenzo/Programs/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'lorenzo' on host 'lorenzo-System-Product-Name' (Linux_x86_64 version 5.4.0-97-generic) on Wed Feb 09 16:08:24 CET 2022
+INFO: [HLS 200-10] For user 'lorenzo' on host 'lorenzo-System-Product-Name' (Linux_x86_64 version 5.4.0-99-generic) on Fri Feb 11 12:36:57 CET 2022
 INFO: [HLS 200-10] On os Linux Mint 19.3 Tricia
 INFO: [HLS 200-10] In directory '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls'
-Sourcing Tcl script '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/csynth.tcl'
+Sourcing Tcl script '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/cosim.tcl'
 INFO: [HLS 200-1510] Running: open_project ban_s3 
 INFO: [HLS 200-10] Opening project '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3'.
 INFO: [HLS 200-1510] Running: set_top ban_interface 
@@ -13,6 +13,8 @@ INFO: [HLS 200-1510] Running: add_files ../src/ban_s3.cpp
 INFO: [HLS 200-10] Adding design file '../src/ban_s3.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files ../src/ban_s3.h 
 INFO: [HLS 200-10] Adding design file '../src/ban_s3.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../test/vitis_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '../test/vitis_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -21,291 +23,457 @@ INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.324 GB.
-INFO: [HLS 200-10] Analyzing design file '../src/ban_s3.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file '../src/ban_interface.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.44 seconds. CPU system time: 0.44 seconds. Elapsed time: 3.53 seconds; current allocated memory: 418.816 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-284] Auto array partition mode is set into default.
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::_sum(Ban const&, Ban const&, int)' (../src/ban_s3.cpp:55:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::_sum(Ban const&, Ban const&, int) (.9.46)' (../src/ban_s3.cpp:55:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::_sum(Ban const&, Ban const&, int) (.6.43)' (../src/ban_s3.cpp:55:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const (.12)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_sum(Ban const&, Ban const&, int) (.9.46)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_sum(Ban const&, Ban const&, int) (.6.43)' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'Ban::operator-(Ban const&) const' (../src/ban_s3.h:67:0)
-INFO: [HLS 214-178] Inlining function 'Ban::init(int, float const*) (.30)' into 'Ban::Ban(int, float const*) (.27)' (../src/ban_s3.cpp:11:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::mul_body(Ban const&) const' (../src/ban_s3.cpp:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.27)' into 'Ban::mul_body(Ban const&) const' (../src/ban_s3.cpp:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::mul_body(Ban const&) const' (../src/ban_s3.cpp:119:0)
-INFO: [HLS 214-178] Inlining function 'Ban::mul_body(Ban const&) const' into 'Ban::operator*(Ban const&) const' (../src/ban_s3.cpp:131:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:135:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator/(Ban const&) const' (../src/ban_s3.cpp:162:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'abs(Ban const&)' (../src/ban_s3.cpp:256:0)
-INFO: [HLS 214-178] Inlining function 'Ban::_mul(float const*, float const*, float*)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:263:0)
-INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:263:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.27)' into 'sqrt(Ban const&)' (../src/ban_s3.cpp:263:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(Ban const&) const' into 'Ban::operator!=(Ban const&) const' (../src/ban_s3.h:79:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator>(Ban const&) const' (../src/ban_s3.h:81:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator<=(Ban const&) const' (../src/ban_s3.h:82:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'Ban::operator>=(Ban const&) const' (../src/ban_s3.h:83:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:290:0)
-INFO: [HLS 214-178] Inlining function 'Ban::Ban(int, float const*) (.27)' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:290:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator*(float) const' (../src/ban_s3.cpp:331:0)
-INFO: [HLS 214-178] Inlining function 'Ban::to_normal_form() (.19)' into 'Ban::operator/(float) const' (../src/ban_s3.cpp:343:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator!=(float) const' (../src/ban_s3.h:92:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator>(float) const' (../src/ban_s3.h:94:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator>(float) const' (../src/ban_s3.h:94:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'Ban::operator<=(float) const' (../src/ban_s3.h:95:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator<=(float) const' (../src/ban_s3.h:95:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'Ban::operator>=(float) const' (../src/ban_s3.h:96:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-() const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator*(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator/(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'abs(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'sqrt(Ban const&)' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator!=(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator>(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<=(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator>=(Ban const&) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator-(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator*(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator/(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator==(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator!=(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator>(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator<=(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-178] Inlining function 'Ban::operator>=(float) const' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-241] Aggregating scalar variable 'b_op2' with compact=bit mode in 128-bits (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-241] Aggregating scalar variable 'b_op1' with compact=bit mode in 128-bits (../src/ban_interface.cpp:4:0)
-INFO: [HLS 214-270] Starting automatic array partition analysis...
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:56:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:71:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:70:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:61:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_sum(Ban const&, Ban const&, int) (.62)' (../src/ban_s3.cpp:60:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:95:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:92:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:86:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const' (../src/ban_s3.cpp:83:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:56:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:71:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:70:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:61:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:69:16)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:92:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:86:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(Ban const&) const (.3)' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:136:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:116:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:115:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:114:26)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:140:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::_div_body(float const*, float const*, float*)' (../src/ban_s3.cpp:139:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:294:10)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:318:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:314:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:313:17)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'Ban::operator+(float) const' (../src/ban_s3.cpp:297:7)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:105:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.s_union.outputs' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_interface.cpp:105:5)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:239:134)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:239:107)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:236:12)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:27:49)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:27:39)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:27:18)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:348:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:332:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:218:128)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:218:119)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:215:23)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:215:13)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:214:13)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:209:94)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:209:56)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:214:23)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:82)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:72)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:58)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:34)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:23:24)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:270:24)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:269:24)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:265:15)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:257:5)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:163:6)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:116:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:116:15)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:115:48)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:115:15)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:114:26)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.f32.i32' into 'ban_interface(Ban&, Ban const&, float, op_type)' (../src/ban_s3.cpp:114:15)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.34 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.58 seconds; current allocated memory: 420.836 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 420.879 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 423.949 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'ban_interface' (../src/ban_s3.cpp:167) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 426.496 MB.
-INFO: [XFORM 203-102] Partitioning array 'b.num' (../src/ban_s3.cpp:105) automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp.1' automatically.
-INFO: [XFORM 203-102] Partitioning array 'ref.tmp3.1' automatically.
-INFO: [XFORM 203-102] Partitioning array 'c.num' (../src/ban_s3.cpp:163) automatically.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp23.1' completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'ref.tmp25.1' completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp23.1' in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'ref.tmp25.1' in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'Ban::_div_body' into 'ban_interface' (../src/ban_s3.cpp:167) automatically.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:114:15) to (../src/ban_interface.cpp:23:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:163:6) to (../src/ban_interface.cpp:27:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:257:5) to (../src/ban_interface.cpp:31:13) in function 'ban_interface'... converting 3 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:23:11) to (../src/ban_interface.cpp:39:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:23:11) to (../src/ban_interface.cpp:43:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:47:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:51:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:55:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:207:13) to (../src/ban_interface.cpp:59:13) in function 'ban_interface'... converting 17 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:331:22) to (../src/ban_interface.cpp:71:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:343:22) to (../src/ban_interface.cpp:75:13) in function 'ban_interface'... converting 6 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:26:24) to (../src/ban_interface.cpp:79:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:92:27) to (../src/ban_interface.cpp:83:13) in function 'ban_interface'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:232:23) to (../src/ban_interface.cpp:87:13) in function 'ban_interface'... converting 10 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:94:26) to (../src/ban_interface.cpp:91:13) in function 'ban_interface'... converting 14 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:95:27) to (../src/ban_interface.cpp:95:13) in function 'ban_interface'... converting 14 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.h:96:27) to (../src/ban_interface.cpp:99:13) in function 'ban_interface'... converting 10 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:290:22) to (../src/ban_s3.cpp:329:1) in function 'Ban::operator+.2'... converting 18 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/ban_s3.cpp:79:31) to (../src/ban_s3.cpp:102:1) in function 'Ban::operator+.1'... converting 24 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (../src/ban_s3.cpp:76:2) in function 'Ban::_sum'... converting 9 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'ban_interface' (../src/ban_interface.cpp:8:13)...30 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.28 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 451.957 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 489.281 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'ban_interface' ...
-WARNING: [SYN 201-103] Legalizing function name 'operator+.2' to 'operator_2'.
-WARNING: [SYN 201-103] Legalizing function name 'operator+.1' to 'operator_1'.
-WARNING: [SYN 201-103] Legalizing function name '_sum' to 'p_sum'.
-WARNING: [SYN 201-103] Legalizing function name 'operator+' to 'operator_add'.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 491.562 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 491.562 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 493.395 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 493.395 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'p_sum' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 493.500 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 493.500 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'operator_add' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 495.078 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 495.078 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'ban_interface' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.05 seconds. CPU system time: 0 seconds. Elapsed time: 1.05 seconds; current allocated memory: 507.422 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.56 seconds. CPU system time: 0 seconds. Elapsed time: 1.56 seconds; current allocated memory: 507.422 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_32_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.34 seconds. CPU system time: 0 seconds. Elapsed time: 2.34 seconds; current allocated memory: 507.422 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 508.672 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'p_sum' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'p_sum'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 512.363 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'operator_add' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_add'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.35 seconds; current allocated memory: 515.297 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'ban_interface' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/b_op1' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/b_op2' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/f_op' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'ban_interface/op' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'ban_interface' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 10 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_9_no_dsp_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_8_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'ban_interface'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 527.359 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 7.02 seconds. CPU system time: 0.04 seconds. Elapsed time: 7.06 seconds; current allocated memory: 556.824 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 560.387 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for ban_interface.
-INFO: [VLOG 209-307] Generating Verilog RTL for ban_interface.
-INFO: [HLS 200-789] **** Estimated Fmax: 134.58 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 22.58 seconds. CPU system time: 0.83 seconds. Elapsed time: 23.06 seconds; current allocated memory: -794.879 MB.
-INFO: [HLS 200-112] Total CPU user time: 25.05 seconds. Total CPU system time: 1.21 seconds. Total elapsed time: 24.78 seconds; peak allocated memory: 1.324 GB.
+INFO: [HLS 200-1510] Running: cosim_design -wave_debug -disable_deadlock_detection -enable_dataflow_profiling -trace_level port 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling vitis_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ban_interface.cpp
+   Compiling ban_interface.cpp_pre.cpp.tb.cpp
+   Compiling ban_s3.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ban_interface_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/lorenzo/Programs/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 11 12:37:15 2022...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home/lorenzo/Programs/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_ban_interface_top glbl -Oenable_linking_all_libraries -prj ban_interface.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib ieee_proposed=./ieee_proposed -s ban_interface -debug wave 
+Multi-threading is on. Using 6 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ip/xil_defaultlib/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ip/xil_defaultlib/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ip/xil_defaultlib/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ip/xil_defaultlib/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ip/xil_defaultlib/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_operator_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_operator_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fadd_32ns_32ns_32_4_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_operator_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_operator_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_operator_add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_operator_add
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_p_sum.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_p_sum
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_mux_32_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_mux_32_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_ban_interface_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ban_interface_fmul_32ns_32ns_32_3_max_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_viv_comp
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_exp_table...
+Compiling package mult_gen_v12_0_17.mult_gen_v12_0_17_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_pkg
+Compiling package floating_point_v7_1_13.flt_utils
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=7,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=24,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=16,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=48,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=24,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xczu7ev...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=13,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=27,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_13.align_add_dsp48e1_sgl [\align_add_dsp48e1_sgl(c_xdevice...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=27)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=5,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.lead_zero_encode_shift [\lead_zero_encode_shift(ab_fw=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=25,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_13.norm_and_round_dsp48e1_sgl [\norm_and_round_dsp48e1_sgl(c_mu...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=9,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=10,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare [\compare(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=12,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_add_exp_sp [\flt_add_exp_sp(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=23)\]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_add [\flt_add(c_xdevicefamily="zynqup...]
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=32,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.ban_interface_fadd_32ns_32ns_32_...
+Compiling module xil_defaultlib.ban_interface_fadd_32ns_32ns_32_...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=11,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_13.fp_cmp [\fp_cmp(c_xdevicefamily="zynqupl...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.ban_interface_fcmp_32ns_32ns_1_2...
+Compiling module xil_defaultlib.ban_interface_fcmp_32ns_32ns_1_2...
+Compiling module xil_defaultlib.ban_interface_mux_32_32_1_1(ID=1...
+Compiling module xil_defaultlib.ban_interface_operator_2
+Compiling module xil_defaultlib.ban_interface_operator_1
+Compiling module xil_defaultlib.ban_interface_p_sum
+Compiling module xil_defaultlib.ban_interface_operator_add
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=17,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_13.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.fix_mult [\fix_mult(c_xdevicefamily="zynqu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=30,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=18,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_13.flt_round_dsp_opt_full [\flt_round_dsp_opt_full(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult [\flt_mult(c_xdevicefamily="zynqu...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.ban_interface_fmul_32ns_32ns_32_...
+Compiling module xil_defaultlib.ban_interface_fmul_32ns_32ns_32_...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=23,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=25,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=25,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.flt_div_mant [\flt_div_mant(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=10,length=0,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=6,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=6)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=6,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=6,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_13.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture virtex of entity floating_point_v7_1_13.flt_div [\flt_div(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.ban_interface_fdiv_32ns_32ns_32_...
+Compiling module xil_defaultlib.ban_interface_fdiv_32ns_32ns_32_...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=5,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=22,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=7,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=20,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=18)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=9,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=6)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=11,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=13,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=14,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=11)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=6,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=15,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=16,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=17,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=18,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=15,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=19,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=16)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=20,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=21,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=22,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=19,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=23,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=24,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=21)\]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=27,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=28,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=28,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=29,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_sqrt_mant [\flt_sqrt_mant(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=5,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=5,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=5,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_sqrt_exp [\flt_sqrt_exp(c_xdevicefamily="n...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_13.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture virtex of entity floating_point_v7_1_13.flt_sqrt [\flt_sqrt(c_xdevicefamily="zynqu...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.ban_interface_fsqrt_32ns_32ns_32...
+Compiling module xil_defaultlib.ban_interface_fsqrt_32ns_32ns_32...
+Compiling module xil_defaultlib.ban_interface
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_ban_interface_top
+Compiling module work.glbl
+Built simulation snapshot ban_interface
+
+****** xsim v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+start_gui
+INFO: [Common 17-206] Exiting xsim at Fri Feb 11 12:43:25 2022...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 165.04 seconds. CPU system time: 5.41 seconds. Elapsed time: 390.09 seconds; current allocated memory: -932.914 MB.
+INFO: [HLS 200-112] Total CPU user time: 167.46 seconds. Total CPU system time: 5.79 seconds. Total elapsed time: 391.75 seconds; peak allocated memory: 423.109 MB.

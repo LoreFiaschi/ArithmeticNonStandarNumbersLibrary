@@ -40619,7 +40619,7 @@ typedef float T;
 
 constexpr T sqrt_exp = -0.125;
 
-union output;
+struct output;
 
 enum op_type{
  SUM, OPP, DIF, MUL, DIV, ABS, SQRT,
@@ -40629,7 +40629,6 @@ enum op_type{
  EQ_R, NEQ_R, LES_R, LAR_R, LES_EQ_R, LAR_EQ_R,
 };
 
-
 class Ban{
 
  int p;
@@ -40637,16 +40636,12 @@ class Ban{
 
 
  void to_normal_form();
- Ban mul_body(const Ban &b) const;
 
 
  static Ban _pow_fast(const Ban &b, unsigned e);
  static Ban _sum(const Ban &a, const Ban &b, int diff_p);
  static void _div_body(const T num_num[3], const T num_den[3], T num_res[3]);
  static void _mul(const T num_a[3], const T num_b[3], T num_res[3]);
-
-
- void init(int p, const T num[3]);
 
 
 
@@ -40659,10 +40654,7 @@ class Ban{
  Ban(){};
  Ban(int p, const T num[3]);
  Ban(T n);
-
-
- friend output ban_interface(Ban b_op1, const Ban b_op2, T f_op, op_type op);
-# 65 "../src/ban_s3.h"
+# 57 "../src/ban_s3.h"
  Ban operator+(const Ban &b) const;
  Ban operator-() const;
  inline Ban operator-(const Ban &b) const {return *this+(-b);};
@@ -40697,13 +40689,18 @@ class Ban{
  inline bool operator>=(T n) const {return !(*this<n);};
 };
 
-union output{
+struct output{
 
  bool l;
  Ban b;
 
- output(){};
+ output():l(0),b(0){};
+ output(Ban a):l(0){b = a;};
+ output(bool a):b(0){l = a;};
 };
+
+
+output ban_interface(const Ban &b_op1, const Ban &b_op2, T f_op, op_type op);
 
 constexpr T _[] = {1.0, 0, 0};
 constexpr T __[] = {0.0, 0, 0};
@@ -40712,16 +40709,11 @@ const Ban ETA(-1, _);
 const Ban ZERO(0, __);
 const Ban ONE(0, _);
 # 3 "../src/ban_s3.cpp" 2
-
-void Ban::init(int p, const T num[3]){
+Ban::Ban(int p, const T num[3]){
  this->p = p;
  this->num[0] = num[0];
  this->num[1] = num[1];
  this->num[2] = num[2];
-}
-
-Ban::Ban(int p, const T num[3]){
- init(p, num);
 }
 
 Ban::Ban(T n){
@@ -40828,7 +40820,7 @@ void Ban::_mul(const T num_a[3], const T num_b[3], T num_res[3]){
  num_res[2] = num_a[2] * num_b[0] + num_a[0] * num_b[2] + num_a[1] * num_b[1];
 }
 
-Ban Ban::mul_body(const Ban &b) const{
+Ban Ban::operator*(const Ban &b) const{
  T num_res[3];
  _mul(num, b.num, num_res);
 
@@ -40838,10 +40830,6 @@ Ban Ban::mul_body(const Ban &b) const{
  c.to_normal_form();
 
  return c;
-}
-
-Ban Ban::operator*(const Ban &b) const{
- return this->mul_body(b);
 }
 
 void Ban::_div_body(const T num_num[3], const T num_den[3], T num_res[3]){
@@ -40885,7 +40873,7 @@ Ban Ban::operator/(const Ban &b) const{
 
 ostream& operator<<(ostream& os, const Ban &b){
  os<<"α^"<<b.p<<'('<<b.num[0];
- VITIS_LOOP_176_1: for(unsigned i=1; i<3; ++i)
+ VITIS_LOOP_167_1: for(unsigned i=1; i<3; ++i)
   if(b.num[i] >= 0)
    os<<" + "<<b.num[i]<<"η^"<<i;
   else
@@ -40900,14 +40888,14 @@ ostream& operator<<(ostream& os, const Ban &b){
 ofstream& operator<<(ofstream& os, const Ban &b){
  os<<scientific<<setprecision(6);
  os<<" "<<b.p<<" "<<b.num[0];
- VITIS_LOOP_191_1: for(unsigned i=1; i<3; ++i)
+ VITIS_LOOP_182_1: for(unsigned i=1; i<3; ++i)
    os<<" "<<b.num[i];
 
  return os;
 }
 
 bool Ban::operator<(const Ban &b) const{
-# 207 "../src/ban_s3.cpp"
+# 198 "../src/ban_s3.cpp"
  bool pbp = p < b.p;
  bool bpp = b.p < p;
  bool deq_p = ( pbp && ( b.num[0] > 0 || (!b.num[0] && num[0] < 0) ) ) || ( !pbp && bpp && ( num[0] < 0 || (!num[0] && b.num[0] > 0) ) );
@@ -40920,7 +40908,7 @@ bool Ban::operator<(const Ban &b) const{
 
 
  return ( deq_p || (!pbp && !bpp && ( (!eq0 && num[0] < b.num[0]) || (eq0 && ( (!eq1 && num[1] < b.num[1]) || (eq1 && num[2] < b.num[2]) ) ) ) ) );
-# 230 "../src/ban_s3.cpp"
+# 221 "../src/ban_s3.cpp"
 }
 
 bool Ban::operator<(T n) const{
@@ -40931,7 +40919,7 @@ bool Ban::operator<(T n) const{
 
 
  return ( ( pg && n0 ) || ( pl && ( n > 0 || ( !n && n0) ) ) || ( !p && ( num[0] < n || (num[0] == n && ( num[1] < 0 || ( !num[1] && num[2] < 0 ) ) ) ) ) );
-# 254 "../src/ban_s3.cpp"
+# 245 "../src/ban_s3.cpp"
 }
 
 Ban abs(const Ban &b){

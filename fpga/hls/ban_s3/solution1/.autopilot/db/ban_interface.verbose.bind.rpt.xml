@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ban_interface'" level="0">
-<item name = "Date">Wed Feb  9 16:08:38 2022
+<item name = "Date">Fri Feb 11 12:36:20 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">ban_s3</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.431 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 57, 10.000 ns, 0.570 us, 2, 58, no</column>
+<column name="">1, 59, 10.000 ns, 0.590 us, 2, 60, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_operator_2_fu_505">operator_2, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
-<column name="grp_operator_1_fu_511">operator_1, 4, 12, 40.000 ns, 0.120 us, 4, 12, no</column>
-<column name="grp_operator_add_fu_520">operator_add, 4, 14, 40.000 ns, 0.140 us, 4, 14, no</column>
+<column name="grp_operator_2_fu_1118">operator_2, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_operator_1_fu_1124">operator_1, 4, 12, 40.000 ns, 0.120 us, 4, 12, no</column>
+<column name="grp_operator_add_fu_1133">operator_add, 4, 14, 40.000 ns, 0.140 us, 4, 14, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

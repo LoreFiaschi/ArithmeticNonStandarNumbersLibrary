@@ -4,13 +4,13 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 %class.Ban = type { i32, [3 x float] }
-%union.output = type { %class.Ban }
+%struct.output = type { i1, %class.Ban }
 
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_in(%class.Ban* readonly, i128* noalias align 512, %class.Ban* readonly, i128* noalias align 512) unnamed_addr #0 {
 entry:
-  call fastcc void @onebyonecpy_hls.p0class.Ban.67(i128* align 512 %1, %class.Ban* %0)
-  call fastcc void @onebyonecpy_hls.p0class.Ban.67(i128* align 512 %3, %class.Ban* %2)
+  call fastcc void @onebyonecpy_hls.p0class.Ban.66(i128* align 512 %1, %class.Ban* %0)
+  call fastcc void @onebyonecpy_hls.p0class.Ban.66(i128* align 512 %3, %class.Ban* %2)
   ret void
 }
 
@@ -72,7 +72,7 @@ define internal float @_llvm.fpga.unpack.bits.f32.i32(i32 %A) #3 {
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0class.Ban.67(i128* noalias align 512, %class.Ban* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0class.Ban.66(i128* noalias align 512, %class.Ban* noalias readonly) unnamed_addr #2 {
 entry:
   %2 = icmp eq i128* %0, null
   %3 = icmp eq %class.Ban* %1, null
@@ -129,33 +129,33 @@ define internal i32 @_llvm.fpga.pack.bits.i32.f32(float %A) #3 {
   ret i32 %A.cast
 }
 
-declare void @apatb_ban_interface_hw(%union.output*, i128*, i128*, float, i32)
+declare void @apatb_ban_interface_hw(%struct.output*, i128*, i128*, float, i32)
 
-define void @ban_interface_hw_stub_wrapper(%union.output*, i128*, i128*, float, i32) #4 {
+define void @ban_interface_hw_stub_wrapper(%struct.output*, i128*, i128*, float, i32) #4 {
 entry:
   %5 = alloca %class.Ban
   %6 = alloca %class.Ban
   call void @copy_out(%class.Ban* %5, i128* %1, %class.Ban* %6, i128* %2)
-  call void @ban_interface_hw_stub(%union.output* %0, %class.Ban* %5, %class.Ban* %6, float %3, i32 %4)
+  call void @ban_interface_hw_stub(%struct.output* %0, %class.Ban* %5, %class.Ban* %6, float %3, i32 %4)
   call void @copy_in(%class.Ban* %5, i128* %1, %class.Ban* %6, i128* %2)
   ret void
 }
 
-declare void @ban_interface_hw_stub(%union.output*, %class.Ban*, %class.Ban*, float, i32)
+declare void @ban_interface_hw_stub(%struct.output*, %class.Ban*, %class.Ban*, float, i32)
 
 ; Function Attrs: argmemonly noinline
-define void @apatb_ban_interface_ir(i128* %ret, %class.Ban* %b_op1, %class.Ban* %b_op2, float %f_op, i32 %op) #5 {
+define void @apatb_ban_interface_ir(i160* %ret, %class.Ban* %b_op1, %class.Ban* %b_op2, float %f_op, i32 %op) #5 {
 entry:
   %b_op1_copy = alloca i128, align 512
   %b_op2_copy = alloca i128, align 512
   call fastcc void @copy_in(%class.Ban* %b_op1, i128* nonnull align 512 %b_op1_copy, %class.Ban* %b_op2, i128* nonnull align 512 %b_op2_copy)
-  %0 = alloca %union.output
-  call void @apatb_ban_interface_hw(%union.output* %0, i128* %b_op1_copy, i128* %b_op2_copy, float %f_op, i32 %op)
-  %1 = load volatile %union.output, %union.output* %0
+  %0 = alloca %struct.output
+  call void @apatb_ban_interface_hw(%struct.output* %0, i128* %b_op1_copy, i128* %b_op2_copy, float %f_op, i32 %op)
+  %1 = load volatile %struct.output, %struct.output* %0
   call fastcc void @copy_out(%class.Ban* %b_op1, i128* nonnull align 512 %b_op1_copy, %class.Ban* %b_op2, i128* nonnull align 512 %b_op2_copy)
-  %2 = bitcast %union.output* %0 to i128*
-  %3 = load volatile i128, i128* %2
-  store i128 %3, i128* %ret
+  %2 = bitcast %struct.output* %0 to i160*
+  %3 = load volatile i160, i160* %2
+  store i160 %3, i160* %ret
   ret void
 }
 

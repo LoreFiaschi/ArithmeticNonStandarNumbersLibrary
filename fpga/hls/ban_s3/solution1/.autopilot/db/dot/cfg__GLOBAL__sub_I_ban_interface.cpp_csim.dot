@@ -1,0 +1,7 @@
+digraph "CFG for '_GLOBAL__sub_I_ban_interface.cpp' function" {
+	label="CFG for '_GLOBAL__sub_I_ban_interface.cpp' function";
+
+	Node0x4e4b6f0 [shape=record,filename="../../../../../src/ban_interface.cpp",linenumber="0",label="{.predFake}"];
+	Node0x4e4b6f0 -> Node0x4e46f90[ callList="__cxx_global_var_init.1.6:0; __cxx_global_var_init.2.7:0; __cxx_global_var_init.3.8:0; __cxx_global_var_init.4.9:0" memoryops="" filename="../../../../../src/ban_interface.cpp" execusionnum="0"];
+	Node0x4e46f90 [shape=record,filename="",linenumber="",label="{.succFake}"];
+}

@@ -1,7 +1,7 @@
 //#include "ban.h"
 #include "ban_s3.h"
 
-output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
+output ban_interface(const Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
 
     output out;
 
@@ -94,11 +94,13 @@ output ban_interface(Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
             out.l = b_op1 <= f_op;
             break;
 
+/* default
         case LAR_EQ_R:
             out.l = b_op1 >= f_op;
             break;
-
+*/
         default:
+            out.l = b_op1 >= f_op;
             break;
     }
 

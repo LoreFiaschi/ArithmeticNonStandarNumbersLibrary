@@ -1,0 +1,18 @@
+digraph "CFG for 'Ban::to_normal_form' function" {
+	label="CFG for 'Ban::to_normal_form' function";
+
+	Node0x4e74260 [shape=record,filename="",linenumber="",label="{.predFake}"];
+	Node0x4e74260 -> Node0x4e00a50[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="1"];
+	Node0x4e00a50 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="32",label="{.succFake|{<s0>T|<s1>F}}"];
+	Node0x4e00a50:s0 -> Node0x4e74490[label="W:2" callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="1"];
+	Node0x4e00a50:s1 -> Node0x4e414d0[label="W:1" callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x4e414d0 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="35",label="{.succFake1|{<s0>T|<s1>F}}"];
+	Node0x4e414d0:s0 -> Node0x4e74490[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x4e414d0:s1 -> Node0x4e00f40[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x4e00f40 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="43",label="{.succFake2|{<s0>T|<s1>F}}"];
+	Node0x4e00f40:s0 -> Node0x4e74490[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x4e00f40:s1 -> Node0x4e74490[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x4e74490 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="53",label="{.predFake3}"];
+	Node0x4e74490 -> Node0x4e41360[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="1"];
+	Node0x4e41360 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="53",label="{.succFake4}"];
+}

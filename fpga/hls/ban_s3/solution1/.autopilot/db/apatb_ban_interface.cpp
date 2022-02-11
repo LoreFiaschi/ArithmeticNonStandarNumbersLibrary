@@ -184,10 +184,11 @@ static bool RTLOutputCheckAndReplacement(std::string &AESL_token, std::string Po
     err = true, AESL_token.replace(x_found, 1, "0");
   
   return err;}
+struct __cosim_s14__ { char data[20]; };
 struct __cosim_s10__ { char data[16]; };
-extern "C" void ban_interface_hw_stub_wrapper(__cosim_s10__*, volatile void *, volatile void *, float, int);
+extern "C" void ban_interface_hw_stub_wrapper(__cosim_s14__*, volatile void *, volatile void *, float, int);
 
-extern "C" void  apatb_ban_interface_hw(__cosim_s10__* ap_return, volatile void * __xlx_apatb_param_b_op1, volatile void * __xlx_apatb_param_b_op2, float __xlx_apatb_param_f_op, int __xlx_apatb_param_op) {
+extern "C" void  apatb_ban_interface_hw(__cosim_s14__* ap_return, volatile void * __xlx_apatb_param_b_op1, volatile void * __xlx_apatb_param_b_op2, float __xlx_apatb_param_f_op, int __xlx_apatb_param_op) {
   refine_signal_handler();
   fstream wrapc_switch_file_token;
   wrapc_switch_file_token.open(".hls_cosim_wrapc_switch.log");
@@ -219,7 +220,7 @@ static AESL_FILE_HANDLER aesl_fh;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<128> > return_pc_buffer(1);
+          std::vector<sc_bv<160> > return_pc_buffer(1);
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -245,6 +246,7 @@ static AESL_FILE_HANDLER aesl_fh;
   
           if (i > 0) {((long long*)ap_return)[0*2+0] = return_pc_buffer[0].range(63,0).to_int64();
 ((long long*)ap_return)[0*2+1] = return_pc_buffer[0].range(127,64).to_int64();
+((long long*)ap_return)[0*2+2] = return_pc_buffer[0].range(159,128).to_int64();
 }
         } // end transaction
       } // end file is good
@@ -312,9 +314,10 @@ CodeState = DUMP_OUTPUTS;
 // print return Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_return, begin_str(AESL_transaction));
-sc_bv<128> __xlx_tmp_lv;
+sc_bv<160> __xlx_tmp_lv;
 __xlx_tmp_lv.range(63,0) = ((long long*)ap_return)[0*2+0];
 __xlx_tmp_lv.range(127,64) = ((long long*)ap_return)[0*2+1];
+__xlx_tmp_lv.range(159,128) = ((long long*)ap_return)[0*2+2];
 aesl_fh.write(AUTOTB_TVOUT_return, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 
   tcl_file.set_num(1, &tcl_file.return_depth);
