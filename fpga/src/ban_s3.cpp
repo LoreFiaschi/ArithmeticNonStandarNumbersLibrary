@@ -19,7 +19,7 @@ bool Ban::operator==(const Ban &b) const{
 }
 
 bool Ban::operator==(T n) const{
-	return ( !(p || num[0] != n) ) && !( num[1] || num[2] ); // at least one nonzero
+	return ((p == 0) && (num[0] == n) && (num[1] == 0) && (num[2] == 0)); //( !(p || num[0] != n) ) && !( num[1] || num[2] ); // at least one nonzero
 }
 
 // bring a Ban to normal form
@@ -151,6 +151,9 @@ void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE
 }
 
 Ban Ban::operator/(const Ban &b) const{
+	if(*this == 0)
+		return ZERO;
+	
 	Ban c(*this);
 
 	c.p -= b.p;
