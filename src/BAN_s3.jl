@@ -12,9 +12,9 @@ export Ban, AbstractAlgNum
 export α, η
 #export SIZE
 export print_ext, println_ext, print_latex
-#export standard_part
-#export degree, min_degree, magnitude, principal
-#export nextban, prevban
+export standard_part
+export degree, min_degree, magnitude, principal
+export nextban, prevban
 #export denoise#, isoverflow, isoverflow!
 #export component_wise_division, retrieve_infinitesimals 
 
@@ -49,6 +49,8 @@ end
 const α = Ban(1, [one(Int64); zeros(Int64, SIZE-1)], false);
 # η constant
 const η = Ban(-1, [one(Int64); zeros(Int64, SIZE-1)], false);
+# coefficient to compute sqrt
+const sqrt_coef = -0.125;
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
 # The constraints are:  1) lenght of SIZE; 
@@ -193,9 +195,7 @@ end
 
 
 # Sum of two Bans
-function _sum_body(a::Ban, b::Ban, diff_p)
-	
-	res = Ban(a);
+function _sum_body!(res::Ban, b::Ban, diff_p)
 	
 	if diff_p == 0
 		res.num[1] += b.num[1];
@@ -217,17 +217,17 @@ end
 
 function _sum(a::Ban, b::Ban)
 	# Sum with zero (in order to avoid precision loss)
-    a == 0 && return Ban(b);
-    b == 0 && return Ban(a);
+    a == 0 && return b;
+    b == 0 && return a;
 	
 	diff_p = a.p - b.p;
 	
-	diff_p >= SIZE  && return Ban(a);
-	diff_p <= -SIZE && return Ban(b);
+	diff_p >= SIZE  && return a;
+	diff_p <= -SIZE && return b;
 	
-	diff_p < 0 && return _sum_body(b, a, -diff_p);
+	diff_p < 0 && return _sum_body!(Ban(b), a, -diff_p);
 	
-	return _sum_body(a, b, diff_p);
+	return _sum_body!(Ban(a), b, diff_p);
 	
 end
 
@@ -293,7 +293,7 @@ end
 # Sum of ban and real
 function _sum(a::Ban, b::T) where T<:Real
 	# Sum with zero (in order to avoid precision loss)
-    a == 0 && return Ban(b);
+    a == 0 && return b;
     b == 0 && return a;
 	
 	if a.p >= 0
@@ -302,7 +302,7 @@ function _sum(a::Ban, b::T) where T<:Real
 			return res
 		end
 		
-		res.num[p+1] += n;
+		res.num[a.p+1] += b;
 		to_normal_form!(res);
 		return res;
 	end
@@ -328,20 +328,122 @@ function _sum(a::Ban, b::T) where T<:Real
 	
 end
 
+# Multiplication of ban and real
 function _mul(a::Ban, b::T) where T<:Real
-	res = Ban(a.p, [a.num[1]*n, a.num[2]*n, a.num[3]*n], false);
+	res = Ban(a.p, [a.num[1]*b, a.num[2]*b, a.num[3]*b], false);
 	to_normal_form!(res);
 	return res;
 end
 
+# Division of ban and real
 function _div(a::Ban, b::T) where T<:Real
 	b == 0 && throw(ArgumentError("Division by zero detected."));
 	a == 0 && return zero(Ban);
 	
-	res = Ban(a.p, [a.num[1]/n, a.num[2]/n, a.num[3]/n], false);
+	res = Ban(a.p, [a.num[1]/b, a.num[2]/b, a.num[3]/b], false);
 	to_normal_form!(res);
 	return res;
 end
+
+# Power function
+function _pow_fast(b::Ban, e::Unsigned)
+	e == 1 && return b;
+	
+	num_res = Vector{Float64}(undef, SIZE);
+	
+	if e == 2
+		_mul_body!(b.num, b.num, num_res);
+		return Ban(b.p*2, num_res);
+	end
+
+	res = _pow_fast(b, e>>1);
+	_mul_body!(res.num, res.num, num_res);
+	res.num[1] = num_res[1];
+	res.num[2] = num_res[2];
+	res.num[3] = num_res[3];
+	res.p *= 2;
+
+	if e & 1
+		_mul_body!(b.num, res.num, num_res);
+		res.num[1] = num_res[1];
+		res.num[2] = num_res[2];
+		res.num[3] = num_res[3];
+		res.p += b.p;
+	end
+	
+	return res;
+
+end
+
+function _pow(b::Ban, e::Signed)
+	if b == 0
+		if e > 0
+			return zero(Ban);
+		end
+		if e < 0
+			throw(ArgumentError("Exponentiation of 0 with negative power not implemented yet"));
+		end
+		return one(Ban);
+	end
+
+	if b == 1
+		return one(Ban);
+	end
+
+	if e < 0
+		return _pow_fast(1/b, -e);
+	end
+
+	return _pow_fast(b, e);
+
+end
+
+# Square root function
+function _sqrt(a::Ban)
+	if a < 0
+		throw(ArgumentError("Square root of negative number cannot be computed."));
+	end
+	
+	if a.p & 1
+		throw(ArgumentError("Impossibile to compute square root of odd magnitude Ban."));
+	end
+	
+	if (a == 0) || (a == 1)
+		return a;
+	end
+	
+	normalizer = a.num[1];
+	num_res = Vector{Float64}(undef, SIZE);
+	eps1 = Vector{Float64}(undef, SIZE);
+	eps2 = Vector{Float64}(undef, SIZE);
+	eps3 = Vector{Float64}(undef, SIZE);
+	num_res[1] = 1;
+	eps1[1] = 0;
+	eps2[1] = 0;
+	eps_1[2] = eps_2[2] = a.num[2]/normalizer;
+	eps_1[3] = eps_2[3] = a.num[3]/normalizer;
+	num_res[1] = 1;
+	num_res[2] = 0.5*eps_1[2];
+	num_res[3] = 0.5*eps_1[3];
+	
+	_mul_body!(eps1, eps2, eps3);
+	
+	num_res[1] += sqrt_exp*eps_3[1];
+	num_res[2] += sqrt_exp*eps_3[2];
+	num_res[3] += sqrt_exp*eps_3[3];
+	
+	normalizer = sqrt(normalizer);
+
+	num_res[1] *= normalizer;
+	num_res[2] *= normalizer;
+	num_res[3] *= normalizer;
+	
+	return Ban(a.p>>1, num_res);
+end
+
+#####################
+#  BEGIN ORDERING   #
+#####################
 
 function _isless(a::Ban, b::Ban)
 	pbp = a.p < b.p;
@@ -372,6 +474,96 @@ function _isless(a::T, b::Ban) where T<:Real
 	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0 || ( !a && n0) ) ) || ( !b.p && ( b.num[0] < a || (b.num[0] == a && ( b.num[1] < 0 || ( !b.num[1] && b.num[2] < 0 ) ) ) ) ) ); 
 end
 
+#####################
+#    END ORDERING   #
+#####################
+
+#####################
+#  BEGIN GENERATORS #
+#####################
+
+function _zeros(n::Int, m::Int)
+
+    (m <= 0 || n <= 0) && throw(ArgumentError("Non-positive matrix dimensions not allowed."));
+    
+    A = Matrix{Ban}(undef, n, m);
+    
+	for i = 1:m*n
+		A[i] = zero(Ban)
+	end
+    
+    return A
+end
+
+function _zeros(n::Int)
+
+    n <= 0 && throw(ArgumentError("Non-positive vector dimensions not allowed"));
+    
+    a = Vector{Ban}(undef, n);
+
+	for i = 1:n
+		a[i] = zero(Ban)
+	end
+    
+    return a
+end
+
+function _ones(n::Int, m::Int)
+
+    (m <= 0 || n <= 0) &&  throw(ArgumentError("Non-positive matrix dimensions not allowed"));
+    
+    A = Matrix{Ban}(undef, n, m);
+    
+
+	for i = 1:m*n
+		A[i] = one(Ban)
+	end
+    
+    return A
+end
+
+function _ones(n::Int)
+
+    n <= 0 &&  throw(ArgumentError("Non-positive vector dimensions not allowed"));
+    
+    a = Array{Ban,1}(undef, n);
+
+	for i = 1:n
+		a[i] = one(Ban)
+	end
+    
+    return a
+end
+
+#####################
+#   END GENERATORS  #
+#####################
+
+###############################
+#  BEGIN EXTERNAL OPERATIONS  #
+###############################
+
+function standard_part(a::Ban)
+
+	a.p > 0 && return Inf*a.num[1]
+	a.p < 0 && return 0
+	return a.num[1]
+end
+
+principal(a::Ban) = (res = Ban(a.p, [a.num[1], 0.0, 0.0], false); to_normal_form!(res); return res;)
+principal(a::Real) = a
+magnitude(a::Ban) = Ban(a.p, [1.0, 0.0, 0.0], false)
+magnitude(a::Real) = one(Ban)
+degree(a::Ban) = a.p
+degree(a::Real) = 0
+min_degree(a::Ban) = (a==0) ? 0 : a.p-findlast(x->x!=0, a.num)+1
+min_degree(a::Real) = 0
+
+################################
+#    END EXTERNAL OPERATIONS   #
+################################
+
+
 function to_normal_form!(a::Ban)
 	a.num[1] != 0 && return ;
 	
@@ -394,12 +586,28 @@ function to_normal_form!(a::Ban)
 	return ;
 end
 
+function nextban(a::Ban, n::Integer)
+
+    b = copy(a);
+    b.num[SIZE] = nextfloat(b.num[SIZE], n);
+    
+    return b
+end
+
+function prevban(a::Ban, n::Integer)
+
+    b = copy(a);
+    b.num[SIZE] = prevfloat(b.num[SIZE], n);
+    
+    return b
+end
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b);
 Base.:(-)(a::Ban) = Ban(a.p, [-a.num[1], -a.num[2], -a.num[3]], false);
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b);
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b);
 Base.:(/)(a::Ban, b::Ban) = _div(a,b);
+Base.:(^)(a::Ban, p::Signed) = _pow(a, p);
 
 Base.:(+)(a::Ban, b::T) where T<:Real = _sum(a,b);
 Base.:(-)(a::Ban, b::T) where T<:Real = _sum(a,-b);
@@ -410,12 +618,162 @@ Base.:(+)(a::T, b::Ban) where T<:Real = _sum(b,a);
 Base.:(-)(a::T, b::Ban) where T<:Real = _sum(-b, a);
 Base.:(*)(a::T, b::Ban) where T<:Real = _mul(b,a);
 Base.:(/)(a::T, b::Ban) where T<:Real = _div(Ban(a),b);
-#Base.:(^)(a::Ban, p::Integer) = _pow(a, p);
 
 Base.isless(a::Ban, b::Ban) = _isless(a, b);
 Base.isless(a::Ban, b::T) where T<:Real = _isless(a, b);
 Base.isless(a::T, b::Ban) where T<:Real = _isless(a, b);
 Base.:(==)(a::Ban, b::Ban) = ((a.p == b.p) && (a.num[1] == b.num[1]) && (a.num[2] == b.num[2]) && (a.num[3] == b.num[3]));
 Base.:(==)(a::Ban, b::T) where T<:Real = ((a.p == 0) && (a.num[1] == b) && (a.num[2] == 0) && (a.num[3] == 0));
+
+Base.inv(a::Ban) = 1/a
+Base.abs(a::Ban) = (a[1] >= 0) ? Ban(a) : -a
+Base.abs2(a::Ban) = a*a
+Base.sqrt(a::Ban) = _sqrt(a)
+
+Base.conj(a::Ban) = a
+Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
+
+Base.:(<<)(a::Ban, b::Int) = Ban(a.p, [a.num[1]<<b, a.num[2]<<b, a.num[3]<<b], false)
+Base.:(>>)(a::Ban, b::Int) = Ban(a.p, [a.num[1]<<b, a.num[2]<<b, a.num[3]<<b], false)
+
+Base.zero(::Type{Ban}) = Ban(0, [0.0, 0.0, 0.0], false)
+Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
+Base.zeros(::Type{Ban}, n::Int, m::Int) = _zeros(n,m)
+Base.one(::Type{Ban}) = Ban(0, [1.0, 0.0, 0.0], false)
+Base.ones(::Type{Ban}, n::Int) = _ones(n)
+Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
+
+Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, [1.0, 0.0, 0.0], false)
+Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
+
+Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
+Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num[1])!=signbit(b), -a, +a)
+Base.copysign(a::Real, b::Ban) = copysign(b,a)
+
+#####################
+#    BEGIN RANDOM   #
+#####################
+
+abstract type AlgNumInterval{T<:AbstractAlgNum} end
+
+struct CloseOpen01{T<:AbstractAlgNum} <: AlgNumInterval{T} end
+struct CloseOpen12{T<:AbstractAlgNum} <: AlgNumInterval{T} end
+
+const CloseOpen01_AN = CloseOpen01{Ban}
+const CloseOpen12_AN = CloseOpen12{Ban}
+
+CloseOpen01(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen01{T}()
+CloseOpen12(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen12{T}()
+
+function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpen12_64})
+
+    num = Array{Float64, 1}(undef, SIZE);
+    Random.reserve(r, SIZE);
+    for i in eachindex(num)
+        num[i] = Random.rand_inbounds(r, sp[])-1;
+    end
+    
+    num = num.*[1;rand([-1,1],SIZE-1)];
+    
+    a = Ban(0, num, false);
+    to_normal_form!(a)
+    
+    return (a<0) ? -a : a;
+end
+
+Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
+
+Random.rand_inbounds(r::MersenneTwister, ::CloseOpen01_AN=CloseOpen01(Ban)) = _rand(r, 1)
+Random.rand_inbounds(r::MersenneTwister, ::CloseOpen12_AN) = _rand(r, 0)
+
+Random.rand(r::MersenneTwister, sp::Random.SamplerTrivial{CloseOpen01_AN}) = _rand_Ban(r, Random.SamplerTrivial{Random.CloseOpen12{Float64},Float64}(Random.CloseOpen12{Float64}()))
+
+Random.Sampler(::Type{RNG}, ::Type{T}, n::Random.Repetition) where {RNG<:AbstractRNG,T<:AbstractAlgNum} = Random.Sampler(RNG, CloseOpen01(T), n)
+
+##########################
+#  BEGIN LINEAR ALGEBRA  #
+##########################
+
+function _generic_normInf(A::AbstractArray{T}) where T <:AbstractAlgNum
+    (v, s) = iterate(A)::Tuple
+    maxabs = norm(v)
+    while true
+        y = iterate(A, s)
+        y === nothing && break
+        (v, s) = y
+        vnorm = norm(v)
+        maxabs = ifelse(isnan(maxabs) | (maxabs > vnorm), maxabs, vnorm)
+    end
+	
+    return maxabs
+end 
+
+function _cholesky!(A::AbstractMatrix{T}, ::LinearAlgebra.Val{false}=LinearAlgebra.Val(false); check::Bool = true) where T<:AbstractAlgNum
+	LinearAlgebra.checksquare(A)
+    if !LinearAlgebra.ishermitian(A);
+		check && checkpositivedefinite(-1)
+		
+        return Cholesky(A, 'U', convert(LinearAlgebra.BlasInt, -1))
+	else
+		isa(A, Hermitian) && (A = convert(Matrix{T}, A))
+		C, info = LinearAlgebra._chol!(A, UpperTriangular);
+		check && LinearAlgebra.checkpositivedefinite(info);
+	
+		return Cholesky(C.data, 'U', info)
+	end
+end
+
+function _chol!(x::AbstractAlgNum, uplo)
+	rx = abs(x)
+    rxr = sqrt(rx)
+    rval =  convert(promote_type(typeof(x), typeof(rxr)), rxr)
+    x == rx ? (rval, convert(LinearAlgebra.BlasInt, 0)) : (rval, convert(LinearAlgebra.BlasInt, 1))
+end
+
+function _setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}}
+    if i != j
+        throw(ArgumentError("Cannot set a non-diagonal index in a Hermitian matrix"))
+    elseif !isa(v, Number)
+        throw(ArgumentError("Cannot set a diagonal entry in a Hermitian matrix to a non-numeric value"))
+    else
+        setindex!(A.data, v, i, j)
+    end
+end
+
+# Needed beacuse the library requests real(::Ban)
+# Elementary reflection similar to LAPACK. The reflector is not Hermitian but
+# ensures that tridiagonalization of Hermitian matrices become real. See lawn72
+@inline function LinearAlgebra.reflector!(x::AbstractVector{T}) where T<:AbstractAlgNum
+    Base.require_one_based_indexing(x)
+    n = length(x)
+    @inbounds begin
+        ξ1 = x[1]
+        normu = abs2(ξ1)
+        for i = 2:n
+            normu += abs2(x[i])
+        end
+        if iszero(normu)
+            return zero(ξ1/normu)
+        end
+        normu = sqrt(normu)
+        ν = copysign(normu, ξ1)
+        ξ1 += ν
+        x[1] = -ν
+        for i = 2:n
+            x[i] /= ξ1
+        end
+    end
+    ξ1/ν
+end
+
+LinearAlgebra.cholesky!(A::AbstractMatrix{T}, ::LinearAlgebra.Val{false}=LinearAlgebra.Val(false); check::Bool = true) where T<:AbstractAlgNum = _cholesky!(copy(A), LinearAlgebra.Val(false), check=check)
+LinearAlgebra._chol!(x::AbstractAlgNum, uplo) = _chol!(x, uplo)
+
+LinearAlgebra.hermitian(A::AbstractAlgNum, ::Symbol) = convert(typeof(A), A)
+
+LinearAlgebra.normInf(A::AbstractArray{T}) where T <: Ban = _generic_normInf(A)
+LinearAlgebra.norm(a::Ban) = abs(a)
+
+LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}} = _setindex!(A, v, i, j)
 
 end
