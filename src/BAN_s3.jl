@@ -4,6 +4,7 @@ module BAN
 # Library for HPC fixing SIZE = 3
 # Next step: use only Float32
 # Next Next step: use non-mutable struct
+# Next Next Next step: avoid use of constructors as much as possible
 
 using Printf, Format
 using Random, LinearAlgebra
@@ -69,18 +70,18 @@ end
 
 function _show(io::IO, a::Ban)
 
-    print(io, string("α^",a.p,"(",a[1]))
+    print(io, string("α^",a.p,"(",a.num[1]))
 
-    if a[2] >= 0 
-        print(io, string(" + ", a[2], "η^1"))
+    if a.num[2] >= 0 
+        print(io, string(" + ", a.num[2], "η^1"))
     else
-        print(io, string(" - ", -a[2], "η^1"))
+        print(io, string(" - ", -a.num[2], "η^1"))
     end
 
-    if a[3] >= 0 
-        print(io, string(" + ", a[3], "η^2"))
+    if a.num[3] >= 0 
+        print(io, string(" + ", a.num[3], "η^2"))
     else
-        print(io, string(" - ", -a[3], "η^2"))
+        print(io, string(" - ", -a.num[3], "η^2"))
     end
 
     print(io, ")")
@@ -106,24 +107,29 @@ function _read(io::IO, a::Type{Ban})
     vec[2] = read(io, Float64);
     vec[3] = read(io, Float64);
 
-	return Ban(p, vec)
+	return Ban(p, vec, false)
 end
 
-## the following I/O functions left unaltered
 function print_ext(a::Ban)
 
     if a == 0
         print("0");
     else
         q = a.p;
-        @printf("%.3gα^%d",a[1], q);
-        for i=2:SIZE
-            q -= 1;
-            if a[i] > 0 
-                @printf(" + %.3gα^%d", a[i], q);
-            elseif a[i] < 0
-                @printf(" - %.3gα^%d", -a[i], q);
-            end
+        @printf("%.3gα^%d",a.num[1], q);
+		
+		q -= 1
+		if a.num[2] > 0 
+                @printf(" + %.3gα^%d", a.num[2], q);
+		elseif a.num[2] < 0
+                @printf(" - %.3gα^%d", -a.num[2], q);
+        end
+			
+		q -= 1
+		if a.num[3] > 0 
+                @printf(" + %.3gα^%d", a.num[3], q);
+		elseif a.num[3] < 0
+                @printf(" - %.3gα^%d", -a.num[3], q);
         end
     end
 end
@@ -139,17 +145,22 @@ function print_latex(a::Ban; precision::Integer=16, digits::Integer=2)
     if a == 0
         print("0");
     else
-        deg = degree(a);
-        vect = a.num
-        printfmt("{1:.$(digits)f} {2:s}", round(vect[1], digits=precision), "\\alpha^{$deg}");
-        for n in vect[2:end]
-            deg -= 1;
-            if n > 0
-                printfmt(f, " +", round(n, digits=precision), "\\alpha^{$deg}");
-            elseif n < 0
-                printfmt(f, " -", -round(n, digits=precision), "\\alpha^{$deg}");
-            end
-        end
+        deg = a.p;
+        printfmt("{1:.$(digits)f} {2:s}", round(a.num[1], digits=precision), "\\alpha^{$deg}");
+		
+		deg -= 1;
+		if a.num[2] > 0
+			printfmt(f, " +", round(a.num[2], digits=precision), "\\alpha^{$deg}");
+		elseif a.num[2] < 0
+			printfmt(f, " -", -round(a.num[2], digits=precision), "\\alpha^{$deg}");
+		end
+		
+		deg -= 1;
+		if a.num[3] > 0
+			printfmt(f, " +", round(a.num[3], digits=precision), "\\alpha^{$deg}");
+		elseif a.num[3] < 0
+			printfmt(f, " -", -round(a.num[3], digits=precision), "\\alpha^{$deg}");
+		end
     end
 end
 
@@ -187,7 +198,6 @@ function print_latex(A::Matrix{T}; precision::Integer=16, digits::Integer=2) whe
 	println("");
     print("\\end{bmatrix}");
 end
-## end unaltered functions
 
 #########################
 #   BEGIN ARITHMETICS   #
@@ -353,7 +363,7 @@ function _pow_fast(b::Ban, e::Unsigned)
 	
 	if e == 2
 		_mul_body!(b.num, b.num, num_res);
-		return Ban(b.p*2, num_res);
+		return Ban(b.p*2, num_res, false);
 	end
 
 	res = _pow_fast(b, e>>1);
@@ -438,7 +448,7 @@ function _sqrt(a::Ban)
 	num_res[2] *= normalizer;
 	num_res[3] *= normalizer;
 	
-	return Ban(a.p>>1, num_res);
+	return Ban(a.p>>1, num_res, false);
 end
 
 #####################
@@ -630,7 +640,7 @@ Base.abs(a::Ban) = (a[1] >= 0) ? Ban(a) : -a
 Base.abs2(a::Ban) = a*a
 Base.sqrt(a::Ban) = _sqrt(a)
 
-Base.conj(a::Ban) = a
+Base.conj(a::Ban) = Ban(a)
 Base.sign(a::Ban) = (a[1] == 0) ? 0 : sign(a[1])
 
 Base.:(<<)(a::Ban, b::Int) = Ban(a.p, [a.num[1]<<b, a.num[2]<<b, a.num[3]<<b], false)
@@ -646,9 +656,13 @@ Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, [1.0, 0.0, 0.0], false)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 
-Base.copysign(a::Ban, b::Ban) = ifelse(signbit(a.num[1])!=signbit(b.num[1]), -a, +a)
-Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num[1])!=signbit(b), -a, +a)
-Base.copysign(a::Real, b::Ban) = copysign(b,a)
+Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num[1])!=signbit(b.num[1]),  -a, Ban(a))
+Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num[1])!=signbit(b), -a, Ban(a))
+Base.copysign(a::Real, b::Ban) = ifelse(signbit(a)!=signbit(b.num[1]), -a, Ban(a));
+
+Base.show(io::IO, a::Ban) = _show(io, a)
+Base.write(io::IO, a::Ban) = _write(io, a)
+Base.read(io::IO, ::Type{T}) where T<:AbstractAlgNum = _read(io, T)
 
 #####################
 #    BEGIN RANDOM   #
@@ -667,18 +681,20 @@ CloseOpen12(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen12{T}()
 
 function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpen12_64})
 
-    num = Array{Float64, 1}(undef, SIZE);
+    num = Vector{Float64}(undef, SIZE);
     Random.reserve(r, SIZE);
-    for i in eachindex(num)
-        num[i] = Random.rand_inbounds(r, sp[])-1;
-    end
-    
-    num = num.*[1;rand([-1,1],SIZE-1)];
+	num[1] =  Random.rand_inbounds(r, sp[])-1;
+	num[2] = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
+	num[3] = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
     
     a = Ban(0, num, false);
-    to_normal_form!(a)
-    
-    return (a<0) ? -a : a;
+	
+	if a.num[1] == 0
+		to_normal_form!(a)
+		a < 0 && (a *= -1);
+	end
+	
+    return a;
 end
 
 Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
