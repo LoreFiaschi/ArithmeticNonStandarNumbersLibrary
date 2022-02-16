@@ -60,7 +60,7 @@ const sqrt_coef = -0.125;
 function _constraints_satisfaction(p::Int,num::Array{T,1}) where T <: Real
     
     length(num) != SIZE && throw(ArgumentError(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given.")))
-    num[1] == 0 && (p != 0 || num[1]!=0 || num[2] != 0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
+    num[1] == 0 && (p != 0 || num[2]!=0 || num[3] != 0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
     return true
 end
 
@@ -430,17 +430,17 @@ function _sqrt(a::Ban)
 	num_res[1] = 1;
 	eps1[1] = 0;
 	eps2[1] = 0;
-	eps_1[2] = eps_2[2] = a.num[2]/normalizer;
-	eps_1[3] = eps_2[3] = a.num[3]/normalizer;
+	eps1[2] = eps2[2] = a.num[2]/normalizer;
+	eps1[3] = eps2[3] = a.num[3]/normalizer;
 	num_res[1] = 1;
-	num_res[2] = 0.5*eps_1[2];
-	num_res[3] = 0.5*eps_1[3];
+	num_res[2] = 0.5*eps1[2];
+	num_res[3] = 0.5*eps1[3];
 	
 	_mul_body!(eps1, eps2, eps3);
 	
-	num_res[1] += sqrt_exp*eps_3[1];
-	num_res[2] += sqrt_exp*eps_3[2];
-	num_res[3] += sqrt_exp*eps_3[3];
+	num_res[1] += sqrt_coef*eps3[1];
+	num_res[2] += sqrt_coef*eps3[2];
+	num_res[3] += sqrt_coef*eps3[3];
 	
 	normalizer = sqrt(normalizer);
 
@@ -458,30 +458,30 @@ end
 function _isless(a::Ban, b::Ban)
 	pbp = a.p < b.p;
 	bpp = b.p < a.p;
-	deq_p = ( pbp && ( b.num[0] > 0 || (!b.num[0] && a.num[0] < 0) ) ) || ( !pbp && bpp && ( a.num[0] < 0 || (!a.num[0] && b.num[0] > 0) ) );
+	deq_p = ( pbp && ( b.num[1] > 0 || (b.num[1] == 0 && a.num[1] < 0) ) ) || ( !pbp && bpp && ( a.num[1] < 0 || (a.num[1] == 0 && b.num[1] > 0) ) );
 
 	#same leading power (i.e., magnitude)
 
-	eq0 = a.num[0] == b.num[0];
-	eq1 = a.num[1] == b.num[1];
+	eq0 = a.num[1] == b.num[1];
+	eq1 = a.num[2] == b.num[2];
 
-	return ( deq_p || (!pbp && !bpp && ( (!eq0 && num[0] < b.num[0]) || (eq0 && ( (!eq1 && a.num[1] < b.num[1]) || (eq1 && a.num[2] < b.num[2]) ) ) ) ) );
+	return ( deq_p || (!pbp && !bpp && ( (!eq0 && a.num[1] < b.num[1]) || (eq0 && ( (!eq1 && a.num[2] < b.num[2]) || (eq1 && a.num[3] < b.num[3]) ) ) ) ) );
 end
 
 function _isless(a::Ban, b::T) where T<:Real
 	pg = a.p > 0;
 	pl = a.p < 0;
-	n0 = a.num[0] < 0;
+	n0 = a.num[1] < 0;
 
-	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0 || ( !b && n0) ) ) || ( !a.p && ( a.num[0] < b || (a.num[0] == b && ( a.num[1] < 0 || ( !a.num[1] && a.num[2] < 0 ) ) ) ) ) ); 
+	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0 || ( !b && n0) ) ) || ( a.p == 0 && ( a.num[1] < b || (a.num[1] == b && ( a.num[2] < 0 || ( a.num[2] == 0 && a.num[3] < 0 ) ) ) ) ) ); 
 end
 
 function _isless(a::T, b::Ban) where T<:Real
 	pg = b.p > 0;
 	pl = b.p < 0;
-	n0 = b.num[0] > 0;
+	n0 = b.num[1] > 0;
 
-	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0 || ( !a && n0) ) ) || ( !b.p && ( b.num[0] < a || (b.num[0] == a && ( b.num[1] < 0 || ( !b.num[1] && b.num[2] < 0 ) ) ) ) ) ); 
+	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0 || ( a == 0 && n0) ) ) || ( b.p == 0 && ( a < b.num[1] || (b.num[1] == a && ( 0 < b.num[2] || ( b.num[2] == 0 && 0 < b.num[3] ) ) ) ) ) ); 
 end
 
 #####################
@@ -560,7 +560,7 @@ function standard_part(a::Ban)
 	return a.num[1]
 end
 
-principal(a::Ban) = (res = Ban(a.p, [a.num[1], 0.0, 0.0], false); to_normal_form!(res); return res;)
+principal(a::Ban) = Ban(a.p, [a.num[1], 0.0, 0.0], false)
 principal(a::Real) = a
 magnitude(a::Ban) = Ban(a.p, [1.0, 0.0, 0.0], false)
 magnitude(a::Real) = one(Ban)

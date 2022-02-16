@@ -2,8 +2,6 @@ __precompile__()
 module BAN
 
 # Library for HPC fixing SIZE = 3
-# Next Next step: use non-mutable struct
-# Next Next Next step: avoid use of constructors as much as possible
 
 using Printf, Format
 using Random, LinearAlgebra
@@ -18,7 +16,6 @@ export nextban, prevban
 #export denoise#, isoverflow, isoverflow!
 #export component_wise_division, retrieve_infinitesimals 
 
-
 # α^p P(η) , P(0) != 0 except for zero
 
 ##########################
@@ -31,24 +28,28 @@ abstract type AbstractAlgNum <: Number end
 const SIZE = Int32(3);
 
 # Ban declaration
-mutable struct Ban <: AbstractAlgNum
+struct Ban <: AbstractAlgNum
 
     # Members
     p::Int32
-    num::Vector{Float32}
+    num1::Float32
+	num2::Float32
+	num3::Float32
     
     # Constructor
-    Ban(p::Int32,num::Vector{Float32}, check::Bool) = new(p,copy(num))
-    Ban(p::Int32,num::Vector{Float32}) = (_constraints_satisfaction(p,num) && new(p,copy(num)))
-    Ban(a::Ban) = new(a.p,copy(a.num))
+    Ban(p::Int32,num::Vector{Float32}, check::Bool) = new(p,num[1],num[2],num[3])
+	Ban(p::Int32,num1::T,num2::T,num3::T, check::Bool) where T<:Float32 = new(p,num1,num2,num3)
+    Ban(p::Int32,num::Vector{Float32}) = (_constraints_satisfaction(p,num) && new(p,num[1],num[2],num[3]))
+	Ban(p::Int32,num1::T,num2::T,num3::T) where T<:Float32 = (_constraints_satisfaction(p,num1,num2,num3) && new(p,num1,num2,num3))
+    Ban(a::Ban) = new(a.p,a.num1,a.num2,a.num3)
     Ban(x::Bool) = one(Ban)
-    Ban(x::Float32) = ifelse(isinf(x), Ban(zero32, ones(Float32, SIZE).*x, false), Ban(zero32, [x, 0f0, 0f0], false))
+    Ban(x::Float32) = Ban(zero32, x, 0f0, 0f0, false)
 end
 
 # α constant
-const α = Ban(one(Int32), [1f0, 0f0, 0f0], false);
+const α = Ban(one(Int32), 1f0, 0f0, 0f0, false);
 # η constant
-const η = Ban(-one(Int32), [1f0, 0f0, 0f0], false);
+const η = Ban(-one(Int32), 1f0, 0f0, 0f0, false);
 # coefficient to compute sqrt
 const sqrt_coef = -0.125f0;
 # 0 on 32 bits
@@ -67,24 +68,30 @@ function _constraints_satisfaction(p::Int32,num::Vector{Float32})
     return true
 end
 
+function _constraints_satisfaction(p::Int32,num1::T,num2::T,num3::T) where T<:Float32
+
+    num1 == 0f0 && (p != zero32 || num2 != 0f0 || num3 != 0f0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
+    return true
+end
+
 ###################
 #    BEGIN I/O    #
 ###################
 
 function _show(io::IO, a::Ban)
 
-    print(io, string("α^",a.p,"(",a.num[1]))
+    print(io, string("α^",a.p,"(",a.num1))
 
-    if a.num[2] >= 0f0
-        print(io, string(" + ", a.num[2], "η^1"))
+    if a.num2 >= 0f0
+        print(io, string(" + ", a.num2, "η^1"))
     else
-        print(io, string(" - ", -a.num[2], "η^1"))
+        print(io, string(" - ", -a.num2, "η^1"))
     end
 
-    if a.num[3] >= 0f0
-        print(io, string(" + ", a.num[3], "η^2"))
+    if a.num3 >= 0f0
+        print(io, string(" + ", a.num3, "η^2"))
     else
-        print(io, string(" - ", -a.num[3], "η^2"))
+        print(io, string(" - ", -a.num3, "η^2"))
     end
 
     print(io, ")")
@@ -94,9 +101,9 @@ end
 function _write(io::IO, a::Ban)
 	# SIZE is supposed known and equal to the current one
 	byte = write(io, a.p);
-	byte += write(io, a.num[1]);
-    byte += write(io, a.num[2]);
-    byte += write(io, a.num[3]);
+	byte += write(io, a.num1);
+    byte += write(io, a.num2);
+    byte += write(io, a.num3);
 
 	return byte
 end
@@ -118,20 +125,20 @@ function print_ext(a::Ban)
         print("0");
     else
         q = a.p;
-        @printf("%.3gα^%d",a.num[1], q);
+        @printf("%.3gα^%d",a.num1, q);
 		
 		q -= one32
-		if a.num[2] > 0f0 
-                @printf(" + %.3gα^%d", a.num[2], q);
-		elseif a.num[2] < 0f0
-                @printf(" - %.3gα^%d", -a.num[2], q);
+		if a.num2 > 0f0 
+                @printf(" + %.3gα^%d", a.num2, q);
+		elseif a.num2 < 0f0
+                @printf(" - %.3gα^%d", -a.num2, q);
         end
 			
 		q -= one32
-		if a.num[3] > 0f0 
-                @printf(" + %.3gα^%d", a.num[3], q);
-		elseif a.num[3] < 0f0
-                @printf(" - %.3gα^%d", -a.num[3], q);
+		if a.num3 > 0f0 
+                @printf(" + %.3gα^%d", a.num3, q);
+		elseif a.num3 < 0f0
+                @printf(" - %.3gα^%d", -a.num3, q);
         end
     end
 end
@@ -148,20 +155,20 @@ function print_latex(a::Ban; precision::Integer=16, digits::Integer=2)
         print("0");
     else
         deg = a.p;
-        printfmt("{1:.$(digits)f} {2:s}", round(a.num[1], digits=precision), "\\alpha^{$deg}");
+        printfmt("{1:.$(digits)f} {2:s}", round(a.num1, digits=precision), "\\alpha^{$deg}");
 		
 		deg -= one32;
-		if a.num[2] > 0f0
-			printfmt(f, " +", round(a.num[2], digits=precision), "\\alpha^{$deg}");
-		elseif a.num[2] < 0f0
-			printfmt(f, " -", -round(a.num[2], digits=precision), "\\alpha^{$deg}");
+		if a.num2 > 0f0
+			printfmt(f, " +", round(a.num2, digits=precision), "\\alpha^{$deg}");
+		elseif a.num2 < 0f0
+			printfmt(f, " -", -round(a.num2, digits=precision), "\\alpha^{$deg}");
 		end
 		
 		deg -= one32;
-		if a.num[3] > 0f0
-			printfmt(f, " +", round(a.num[3], digits=precision), "\\alpha^{$deg}");
-		elseif a.num[3] < 0f0
-			printfmt(f, " -", -round(a.num[3], digits=precision), "\\alpha^{$deg}");
+		if a.num3 > 0f0
+			printfmt(f, " +", round(a.num3, digits=precision), "\\alpha^{$deg}");
+		elseif a.num3 < 0f0
+			printfmt(f, " -", -round(a.num3, digits=precision), "\\alpha^{$deg}");
 		end
     end
 end
@@ -207,24 +214,20 @@ end
 
 
 # Sum of two Bans
-function _sum_body!(res::Ban, b::Ban, diff_p::Int32)
+function _sum_body!(res::Vector{T}, b::Vector{T}, diff_p::Int32) where T <: Float32
 	
 	if diff_p == zero32
-		res.num[1] += b.num[1];
-		res.num[2] += b.num[2];
-		res.num[3] += b.num[3];
-		to_normal_form!(res);
+		res[1] += b[1];
+		res[2] += b[2];
+		res[3] += b[3];
 	
 	elseif diff_p == one32
-		res.num[2] += b.num[1];
-		res.num[3] += b.num[2];
+		res[2] += b[1];
+		res[3] += b[2];
 	
 	else # diff_p ==2
-		res.num[3] += b.num[1];
+		res[3] += b[1];
 	end
-	
-	return res;
-	
 end
 
 function _sum(a::Ban, b::Ban)
@@ -237,9 +240,17 @@ function _sum(a::Ban, b::Ban)
 	diff_p >= SIZE  && return a;
 	diff_p <= -SIZE && return b;
 	
-	diff_p < 0f0 && return _sum_body!(Ban(b), a, -diff_p);
+	if diff_p < 0f0 
+		num_res = to_vector(b);
+		_sum_body!(num_res, to_vector(a), -diff_p)
+		return Ban(b.p, num_res, false); # no need tp check normal form diff_p < 0
+	end
 	
-	return _sum_body!(Ban(a), b, diff_p);
+	num_res = to_vector(a);
+	_sum_body!(num_res, to_vector(b), diff_p);
+	shift = to_normal_form!(num_res);
+	
+	return Ban(a.p-shift, num_res, false);
 	
 end
 
@@ -252,15 +263,15 @@ end
 
 function _mul(a::Ban, b::Ban)
 	num = Vector{Float32}(undef, SIZE);
-	_mul_body!(a.num, b.num, num);
-	res = Ban(a.p+b.p, num, false);
-	to_normal_form!(res);
+	_mul_body!(to_vector(a), to_vector(b), num);
+	shift = to_normal_form!(num);
 	
-	return res;
+	return Ban(a.p+b.p-shift, num, false);
 end
 
 # Division of two Bans
-function _div_body!(num_num::Vector{T}, num_den::Vector{T}, num_res::Vector{T}) where T<:Float32
+function _div_body(num_num::Vector{T}, num_den::Vector{T}) where T<:Float32
+	num_res = copy(num_num);
 	normalizer = num_den[1];
 	den_norm = Vector{T}(undef, SIZE);
 	eps1 = Vector{T}(undef, SIZE);
@@ -288,18 +299,17 @@ function _div_body!(num_num::Vector{T}, num_den::Vector{T}, num_res::Vector{T}) 
 	num_res[2] /= normalizer;
 	num_res[3] /= normalizer;
 	
+	return num_res;
 end
 
 function _div(a::Ban, b::Ban)
 	b == 0f0 && throw(ArgumentError("Division by zero detected."));
-	a == 0f0 && return zero(Ban);
+	a == 0f0 && return a;
+
+	num_res = _div_body(to_vector(a), to_vector(b));
+	shift = to_normal_form!(num_res);
 	
-	res = Ban(a);
-	res.p -= b.p;
-	_div_body!(a.num, b.num, res.num);
-	to_normal_form!(res);
-	
-	return res;
+	return Ban(a.p - b.p - shift, num_res, false);;
 end
 
 # Sum of ban and real
@@ -309,14 +319,14 @@ function _sum(a::Ban, b::T) where T<:Float32
     b == 0f0 && return a;
 	
 	if a.p >= 0f0
-		res = Ban(a);
 		if a.p-SIZE >= 0f0
-			return res
+			return a;
 		end
 		
-		res.num[a.p+one32] += b;
-		to_normal_form!(res);
-		return res;
+		num_res = to_vector(a)
+		num_res[a.p+one32] += b;
+		shift = to_normal_form!(num_res);
+		return Ban(a.p - shift, num_res, false);;
 	end
 	
 	num_res = Vector{T}(undef, SIZE);
@@ -342,55 +352,48 @@ end
 
 # Multiplication of ban and real
 function _mul(a::Ban, b::T) where T<:Float32
-	res = Ban(a.p, [a.num[1]*b, a.num[2]*b, a.num[3]*b], false);
-	to_normal_form!(res);
-	return res;
+	num_res = [a.num1*b, a.num2*b, a.num3*b];
+	shift = to_normal_form!(num_res);
+	return Ban(a.p - shift, num_res, false);
 end
 
 # Division of ban and real
 function _div(a::Ban, b::T) where T<:Float32
 	b == 0f0 && throw(ArgumentError("Division by zero detected."));
-	a == 0f0 && return zero(Ban);
+	a == 0f0 && return a;
 	
-	res = Ban(a.p, [a.num[1]/b, a.num[2]/b, a.num[3]/b], false);
-	to_normal_form!(res);
-	return res;
+	num_res = [a.num1/b, a.num2/b, a.num3/b];
+	shift = to_normal_form!(num_res);
+	return Ban(a.p - shift, num_res, false);
 end
 
 # Power function
-function _pow_fast(b::Ban, e::Int32)
+function _pow_fast(b::Vector{Float32}, e::Int32)
 	e == one32 && return b;
 	
 	num_res = Vector{Float32}(undef, SIZE);
 	
 	if e == Int32(2)
-		_mul_body!(b.num, b.num, num_res);
-		return Ban(b.p*Int32(2), num_res, false);
+		_mul_body!(b, b, num_res);
+		return num_res;
 	end
 
-	res = _pow_fast(b, e>>one32);
-	_mul_body!(res.num, res.num, num_res);
-	res.num[1] = num_res[1];
-	res.num[2] = num_res[2];
-	res.num[3] = num_res[3];
-	res.p *= 2;
+	num_tmp = _pow_fast(b, e>>one32);
+	_mul_body!(num_tmp, num_tmp, num_res);
 
 	if convert(Bool, e & one32)
-		_mul_body!(b.num, res.num, num_res);
-		res.num[1] = num_res[1];
-		res.num[2] = num_res[2];
-		res.num[3] = num_res[3];
-		res.p += b.p;
+		_mul_body!(b, num_res, num_tmp);
+		return num_tmp;
 	end
 	
-	return res;
+	return num_res;
 
 end
 
 function _pow(b::Ban, e::Int32)
 	if b == 0f0
 		if e > zero32
-			return zero(Ban);
+			return b; #zero(Ban);
 		end
 		if e < zero32
 			throw(ArgumentError("Exponentiation of 0 with negative power not implemented yet"));
@@ -399,14 +402,14 @@ function _pow(b::Ban, e::Int32)
 	end
 
 	if b == 1f0
-		return one(Ban);
+		return b; #one(Ban);
 	end
 
 	if e < zero32
-		return _pow_fast(1/b, -e);
+		return Ban(b.p*e, _pow_fast(to_vector(1/b), -e), false);
 	end
 
-	return _pow_fast(b, e);
+	return Ban(b.p*e, _pow_fast(to_vector(b), e), false);
 
 end
 
@@ -424,7 +427,7 @@ function _sqrt(a::Ban)
 		return a;
 	end
 	
-	normalizer = a.num[1];
+	normalizer = a.num1;
 	num_res = Vector{Float32}(undef, SIZE);
 	eps1 = Vector{Float32}(undef, SIZE);
 	eps2 = Vector{Float32}(undef, SIZE);
@@ -432,8 +435,8 @@ function _sqrt(a::Ban)
 	num_res[1] = 1f0;
 	eps1[1] = 0f0;
 	eps2[1] = 0f0;
-	eps1[2] = eps2[2] = a.num[2]/normalizer;
-	eps1[3] = eps2[3] = a.num[3]/normalizer;
+	eps1[2] = eps2[2] = a.num2/normalizer;
+	eps1[3] = eps2[3] = a.num3/normalizer;
 	num_res[1] = 1;
 	num_res[2] = 0.5f0*eps1[2];
 	num_res[3] = 0.5f0*eps1[3];
@@ -460,30 +463,30 @@ end
 function _isless(a::Ban, b::Ban)
 	pbp = a.p < b.p;
 	bpp = b.p < a.p;
-	deq_p = ( pbp && ( b.num[1] > 0f0 || (b.num[1] == 0f0 && a.num[1] < 0f0) ) ) || ( !pbp && bpp && ( a.num[1] < 0f0 || (a.num[1] == 0f0 && b.num[1] > 0f0) ) );
+	deq_p = ( pbp && ( b.num1 > 0f0 || (b.num1 == 0f0 && a.num1 < 0f0) ) ) || ( !pbp && bpp && ( a.num1 < 0f0 || (a.num1 == 0f0 && b.num1 > 0f0) ) );
 
 	#same leading power (i.e., magnitude)
 
-	eq0 = a.num[1] == b.num[1];
-	eq1 = a.num[2] == b.num[2];
+	eq0 = a.num1 == b.num1;
+	eq1 = a.num2 == b.num2;
 
-	return ( deq_p || (!pbp && !bpp && ( (!eq0 && a.num[1] < b.num[1]) || (eq0 && ( (!eq1 && a.num[2] < b.num[2]) || (eq1 && a.num[3] < b.num[3]) ) ) ) ) );
+	return ( deq_p || (!pbp && !bpp && ( (!eq0 && a.num1 < b.num1) || (eq0 && ( (!eq1 && a.num2 < b.num2) || (eq1 && a.num3 < b.num3) ) ) ) ) );
 end
 
 function _isless(a::Ban, b::T) where T<:Float32
 	pg = a.p > zero32;
 	pl = a.p < zero32;
-	n0 = a.num[1] < 0f0;
-
-	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0f0 || ( b == 0f0 && n0) ) ) || ( a.p == zero32 && ( a.num[1] < b || (a.num[1] == b && ( a.num[2] < 0f0 || ( a.num[2] == 0f0 && a.num[3] < 0f0 ) ) ) ) ) ); 
+	n0 = a.num1 < 0f0;
+	
+	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0f0 || ( b == 0f0 && n0) ) ) || ( a.p == zero32 && ( a.num1 < b || (a.num1 == b && ( a.num2 < 0f0 || ( a.num2 == 0f0 && a.num3 < 0f0 ) ) ) ) ) ); 
 end
 
 function _isless(a::T, b::Ban) where T<:Float32
 	pg = b.p > zero32;
 	pl = b.p < zero32;
-	n0 = b.num[1] > 0f0;
+	n0 = b.num1 > 0f0;
 
-	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0f0 || ( a  == 0f0 && n0) ) ) || ( b.p == zero32 && ( a < b.num[1] || (b.num[1] == a && ( 0f0 < b.num[2] || ( b.num[2] == 0f0 && 0f0 < b.num[3] ) ) ) ) ) ); 
+	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0f0 || ( a == 0f0 && n0) ) ) || ( b.p == zero32 && ( a < b.num1 || (b.num1 == a && ( 0f0 < b.num2  || ( b.num2 == 0f0 && 0f0 < b.num3 ) ) ) ) ) ); 
 end
 
 #####################
@@ -557,18 +560,39 @@ end
 
 function standard_part(a::Ban)
 
-	a.p > zero32 && return Inf32*a.num[1]
+	a.p > zero32 && return Inf32*a.num1
 	a.p < zero32 && return Int32(0);
-	return a.num[1]
+	return a.num1
 end
 
-principal(a::Ban) = Ban(a.p, [a.num[1], 0f0, 0f0], false)
+function _min_degree(a::Ban)
+	if a.num1 == 0f0 # a == 0
+		return Int32(0);
+	end
+	
+	if a.num3 != 0f0
+		return a.p-Int32(2);
+	end
+	
+	if a.num2 != 0f0
+		return a.p-Int32(1);
+	end
+	
+	return a.p;
+end
+
+function to_vector(a::Ban)
+
+	return [a.num1, a.num2, a.num3];
+end
+
+principal(a::Ban) = Ban(a.p, [a.num1, 0f0, 0f0], false);
 principal(a::Real) = a
 magnitude(a::Ban) = Ban(a.p, [1f0, 0f0, 0f0], false)
 magnitude(a::Real) = one(Ban)
 degree(a::Ban) = a.p
 degree(a::Real) = Int32(0)
-min_degree(a::Ban) = (a == 0f0) ? Int32(0) : a.p-findlast(x->x!=0f0, a.num)+one32
+min_degree(a::Ban) = _min_degree(a)
 min_degree(a::Real) = Int32(0)
 
 ################################
@@ -576,47 +600,38 @@ min_degree(a::Real) = Int32(0)
 ################################
 
 
-function to_normal_form!(a::Ban)
-	a.num[1] != 0f0 && return ;
+function to_normal_form!(a::Vector{Float32})
+	a[1] != 0f0 && return zero32;
 	
-	if a.num[2] != 0f0
-		a.num[1] = a.num[2];
-		a.num[2] = a.num[3];
-		a.num[3] = 0f0;
-		a.p -= one32;
-		return ;
+	if a[2] != 0f0
+		a[1] = a[2];
+		a[2] = a[3];
+		a[3] = 0f0;
+		return one32;
 	end
 	
-	if a.num[3] != 0f0
-		a.num[1] = a.num[3];
-		a.num[3] = 0f0;
-		a.p -= Int32(2);
-		return ;
+	if a[3] != 0f0
+		a[1] = a[3];
+		a[3] = 0f0;
+		return Int32(2);
 	end
 	
 	# all zero
-	a.p = Int32(0);
-	return ;
+	return zero32;
 end
 
 function nextban(a::Ban, n::Integer)
-
-    b = copy(a);
-    b.num[SIZE] = nextfloat(b.num[SIZE], n);
     
-    return b
+    return Ban(a.p, [a.num1, a.num2, nextfloat(a.num3, n)]);
 end
 
 function prevban(a::Ban, n::Integer)
-
-    b = copy(a);
-    b.num[SIZE] = prevfloat(b.num[SIZE], n);
     
-    return b
+    return Ban(a.p, [a.num1, a.num2, prevfloat(a.num3, n)]);
 end
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b);
-Base.:(-)(a::Ban) = Ban(a.p, [-a.num[1], -a.num[2], -a.num[3]], false);
+Base.:(-)(a::Ban) = Ban(a.p, [-a.num1, -a.num2, -a.num3], false);
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b);
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b);
 Base.:(/)(a::Ban, b::Ban) = _div(a,b);
@@ -635,19 +650,19 @@ Base.:(/)(a::T, b::Ban) where T<: Float32 = _div(Ban(a),b);
 Base.isless(a::Ban, b::Ban) = _isless(a, b);
 Base.isless(a::Ban, b::T) where T<: Float32 = _isless(a, b);
 Base.isless(a::T, b::Ban) where T<: Float32 = _isless(a, b);
-Base.:(==)(a::Ban, b::Ban) = ((a.p == b.p) && (a.num[1] == b.num[1]) && (a.num[2] == b.num[2]) && (a.num[3] == b.num[3]));
-Base.:(==)(a::Ban, b::T) where T<: Float32 = ((a.p == zero32) && (a.num[1] == b) && (a.num[2] == 0f0) && (a.num[3] == 0f0));
+Base.:(==)(a::Ban, b::Ban) = ((a.p == b.p) && (a.num1 == b.num1) && (a.num2 == b.num2) && (a.num3 == b.num3));
+Base.:(==)(a::Ban, b::T) where T<: Float32 = ((a.p == zero32) && (a.num1 == b) && (a.num2 == 0f0) && (a.num3 == 0f0));
 
 Base.inv(a::Ban) = one32/a
-Base.abs(a::Ban) = (a[1] >= 0f0) ? Ban(a) : -a
+Base.abs(a::Ban) = (a[1] >= 0f0) ? a : -a
 Base.abs2(a::Ban) = a*a
 Base.sqrt(a::Ban) = _sqrt(a)
 
-Base.conj(a::Ban) = Ban(a)
+Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0f0) ? 0 : sign(a[1])
 
-Base.:(<<)(a::Ban, b::Int) = Ban(a.p, [a.num[1]<<b, a.num[2]<<b, a.num[3]<<b], false)
-Base.:(>>)(a::Ban, b::Int) = Ban(a.p, [a.num[1]<<b, a.num[2]<<b, a.num[3]<<b], false)
+Base.:(<<)(a::Ban, b::Int) = Ban(a.p, [a.num1<<b, a.num2<<b, a.num3<<b], false)
+Base.:(>>)(a::Ban, b::Int) = Ban(a.p, [a.num1<<b, a.num2<<b, a.num3<<b], false)
 
 Base.zero(::Type{Ban}) = Ban(zero32, [0f0, 0f0, 0f0], false)
 Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
@@ -659,9 +674,9 @@ Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 Base.convert(::Type{Ban}, a::T) where T <: Float32 =  Ban(zero32, [a, 0f0, 0f0], false)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Float32 = Ban
 
-Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num[1])!=signbit(b.num[1]),  -a, Ban(a))
-Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num[1])!=signbit(b), -a, Ban(a))
-Base.copysign(a::Real, b::Ban) = ifelse(signbit(a)!=signbit(b.num[1]), -a, Ban(a));
+Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num1)!=signbit(b.num1),  -a, a)
+Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num1)!=signbit(b), -a, a)
+Base.copysign(a::Real, b::Ban) = ifelse(signbit(a)!=signbit(b.num1), -a, a);
 
 Base.show(io::IO, a::Ban) = _show(io, a)
 Base.write(io::IO, a::Ban) = _write(io, a)
@@ -689,15 +704,11 @@ function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpe
 	num[1] =  Random.rand_inbounds(r, sp[])-1f0;
 	num[2] = (Random.rand_inbounds(r, sp[])-1f0)*rand([-1f0,1f0]);
 	num[3] = (Random.rand_inbounds(r, sp[])-1f0)*rand([-1f0,1f0]);
-    
-    a = Ban(zero32, num, false);
+
+	shift = to_normal_form!(num)
+	num[1] < 0f0 && (num .*= -1f0);
 	
-	if a.num[1] == 0f0
-		to_normal_form!(a)
-		a < 0f0 && (a *= -1f0);
-	end
-	
-    return a;
+    return Ban(-shift, num, false);
 end
 
 Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
