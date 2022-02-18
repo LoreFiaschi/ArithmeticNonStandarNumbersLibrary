@@ -1,4 +1,4 @@
-include("../../src/BAN.jl")
+include("../../src/BAN_s3.jl")
 using .BAN
 
     b1 = Ban(0, [1.0,-2,4]);
@@ -130,9 +130,9 @@ using .BAN
     println(b8+3)
     println(b9+3)
     println(b9*3)
-    println(-2*b8)
-    println(b8/3)
-    z = 2/b9;
+    println(-2.0*b8)
+    println(b8/3.0)
+    z = 2.0/b9;
     println(z)
     println(z*b9)
 
