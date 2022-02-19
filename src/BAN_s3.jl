@@ -47,9 +47,9 @@ mutable struct Ban <: AbstractAlgNum
 end
 
 # α constant
-const α = Ban(1, [one(Int64); zeros(Int64, SIZE-1)], false);
+const α = Ban(1, [one(Float64); zeros(Float64, SIZE-1)], false);
 # η constant
-const η = Ban(-1, [one(Int64); zeros(Int64, SIZE-1)], false);
+const η = Ban(-1, [one(Float64); zeros(Float64, SIZE-1)], false);
 # coefficient to compute sqrt
 const sqrt_coef = -0.125;
 
@@ -321,13 +321,13 @@ function _sum(a::Ban, b::T) where T<:Real
 	num_res[1] = b;
 	
 	if a.p == -1
-		num_res[3] = num[2];
-		num_res[2] = num[1];
+		num_res[3] = a.num[2];
+		num_res[2] = a.num[1];
 	else
 		num_res[2] = 0;
 		
 		if a.p == -2
-			num_res[3] = num[1];
+			num_res[3] = a.num[1];
 		else
 			num_res[3] = 0;
 		end
@@ -473,7 +473,7 @@ function _isless(a::Ban, b::T) where T<:Real
 	pl = a.p < 0;
 	n0 = a.num[1] < 0;
 
-	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0 || ( !b && n0) ) ) || ( a.p == 0 && ( a.num[1] < b || (a.num[1] == b && ( a.num[2] < 0 || ( a.num[2] == 0 && a.num[3] < 0 ) ) ) ) ) ); 
+	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0 || ( b == 0 && n0) ) ) || ( a.p == 0 && ( a.num[1] < b || (a.num[1] == b && ( a.num[2] < 0 || ( a.num[2] == 0 && a.num[3] < 0 ) ) ) ) ) ); 
 end
 
 function _isless(a::T, b::Ban) where T<:Real
@@ -589,6 +589,7 @@ function to_normal_form!(a::Ban)
 		a.num[1] = a.num[3];
 		a.num[3] = 0;
 		a.p -= 2;
+		return ;
 	end
 	
 	# all zero
