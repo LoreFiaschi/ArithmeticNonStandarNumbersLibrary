@@ -326,7 +326,7 @@ function _sum(a::Ban, b::T) where T<:Real
 		return Ban(a.p - shift, num_res, false);;
 	end
 	
-	num_res = Vector{T}(undef, SIZE);
+	num_res = Vector{Float64}(undef, SIZE);
 	num_res[1] = b;
 	
 	if a.p == -1
