@@ -43,7 +43,7 @@ struct Ban <: AbstractAlgNum
 	Ban(p::Int64,num1::T,num2::T,num3::T) where T<:Float64 = (_constraints_satisfaction(p,num1,num2,num3) && new(p,num1,num2,num3))
     Ban(a::Ban) = new(a.p,a.num1,a.num2,a.num3)
     Ban(x::Bool) = one(Ban)
-    Ban(x::Float64) = Ban(0, x, 0.0, 0.0, false)
+    Ban(x::T) where T<:Real= Ban(0, Float64(x), 0.0, 0.0, false)
 end
 
 # α constant
@@ -310,7 +310,7 @@ function _div(a::Ban, b::Ban)
 end
 
 # Sum of ban and real
-function _sum(a::Ban, b::T) where T<:Float64
+function _sum(a::Ban, b::T) where T<:Real
 	# Sum with zero (in order to avoid precision loss)
     a == 0.0 && return b;
     b == 0.0 && return a;
@@ -330,13 +330,13 @@ function _sum(a::Ban, b::T) where T<:Float64
 	num_res[1] = b;
 	
 	if a.p == -1
-		num_res[3] = num[2];
-		num_res[2] = num[1];
+		num_res[3] = a.num2;
+		num_res[2] = a.num1;
 	else
 		num_res[2] = 0.0 ;
 		
 		if a.p == -2
-			num_res[3] = num[1];
+			num_res[3] = a.num1;
 		else
 			num_res[3] = 0.0 ;
 		end
@@ -348,14 +348,14 @@ function _sum(a::Ban, b::T) where T<:Float64
 end
 
 # Multiplication of ban and real
-function _mul(a::Ban, b::T) where T<:Float64
+function _mul(a::Ban, b::T) where T<:Real
 	num_res = [a.num1*b, a.num2*b, a.num3*b];
 	shift = to_normal_form!(num_res);
 	return Ban(a.p - shift, num_res, false);
 end
 
 # Division of ban and real
-function _div(a::Ban, b::T) where T<:Float64
+function _div(a::Ban, b::T) where T<:Real
 	b == 0.0 && throw(ArgumentError("Division by zero detected."));
 	a == 0.0 && return a;
 	
@@ -470,7 +470,7 @@ function _isless(a::Ban, b::Ban)
 	return ( deq_p || (!pbp && !bpp && ( (!eq0 && a.num1 < b.num1) || (eq0 && ( (!eq1 && a.num2 < b.num2) || (eq1 && a.num3 < b.num3) ) ) ) ) );
 end
 
-function _isless(a::Ban, b::T) where T<:Float64
+function _isless(a::Ban, b::T) where T<:Real
 	pg = a.p > 0;
 	pl = a.p < 0;
 	n0 = a.num1 < 0;
@@ -478,7 +478,7 @@ function _isless(a::Ban, b::T) where T<:Float64
 	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0.0 || ( b == 0.0 && n0) ) ) || ( a.p == 0 && ( a.num1 < b || (a.num1 == b && ( a.num2 < 0.0 || ( a.num2 == 0.0 && a.num3 < 0.0 ) ) ) ) ) ); 
 end
 
-function _isless(a::T, b::Ban) where T<:Float64
+function _isless(a::T, b::Ban) where T<:Real
 	pg = b.p > 0;
 	pl = b.p < 0;
 	n0 = b.num1 > 0;
@@ -614,7 +614,7 @@ function to_normal_form!(a::Vector{Float64})
 	end
 	
 	# all zero
-	return 0 ;
+	return 0;
 end
 
 function nextban(a::Ban, n::Integer)
@@ -634,21 +634,21 @@ Base.:(*)(a::Ban, b::Ban) = _mul(a,b);
 Base.:(/)(a::Ban, b::Ban) = _div(a,b);
 Base.:(^)(a::Ban, p::Int64) = _pow(a, p);
 
-Base.:(+)(a::Ban, b::T) where T<: Float64 = _sum(a,b);
-Base.:(-)(a::Ban, b::T) where T<: Float64 = _sum(a,-b);
-Base.:(*)(a::Ban, b::T) where T<: Float64 = _mul(a,b);
-Base.:(/)(a::Ban, b::T) where T<: Float64 = _div(a,b);
+Base.:(+)(a::Ban, b::T) where T<: Real = _sum(a,b);
+Base.:(-)(a::Ban, b::T) where T<: Real = _sum(a,-b);
+Base.:(*)(a::Ban, b::T) where T<: Real = _mul(a,b);
+Base.:(/)(a::Ban, b::T) where T<: Real = _div(a,b);
 
-Base.:(+)(a::T, b::Ban) where T<: Float64 = _sum(b,a);
-Base.:(-)(a::T, b::Ban) where T<: Float64 = _sum(-b, a);
-Base.:(*)(a::T, b::Ban) where T<: Float64 = _mul(b,a);
-Base.:(/)(a::T, b::Ban) where T<: Float64 = _div(Ban(a),b);
+Base.:(+)(a::T, b::Ban) where T<: Real = _sum(b,a);
+Base.:(-)(a::T, b::Ban) where T<: Real = _sum(-b, a);
+Base.:(*)(a::T, b::Ban) where T<: Real = _mul(b,a);
+Base.:(/)(a::T, b::Ban) where T<: Real = _div(Ban(a),b);
 
 Base.isless(a::Ban, b::Ban) = _isless(a, b);
-Base.isless(a::Ban, b::T) where T<: Float64 = _isless(a, b);
-Base.isless(a::T, b::Ban) where T<: Float64 = _isless(a, b);
+Base.isless(a::Ban, b::T) where T<: Real = _isless(a, b);
+Base.isless(a::T, b::Ban) where T<: Real = _isless(a, b);
 Base.:(==)(a::Ban, b::Ban) = ((a.p == b.p) && (a.num1 == b.num1) && (a.num2 == b.num2) && (a.num3 == b.num3));
-Base.:(==)(a::Ban, b::T) where T<: Float64 = ((a.p == 0) && (a.num1 == b) && (a.num2 == 0.0) && (a.num3 == 0.0));
+Base.:(==)(a::Ban, b::T) where T<: Real = ((a.p == 0) && (a.num1 == b) && (a.num2 == 0.0) && (a.num3 == 0.0));
 
 Base.inv(a::Ban) = 1.0/a
 Base.abs(a::Ban) = (a[1] >= 0.0) ? a : -a
@@ -668,8 +668,8 @@ Base.one(::Type{Ban}) = Ban(0, [1.0, 0.0, 0.0], false)
 Base.ones(::Type{Ban}, n::Int) = _ones(n)
 Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 
-Base.convert(::Type{Ban}, a::T) where T <: Float64 =  Ban(0, [a, 0.0, 0.0], false)
-Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Float64 = Ban
+Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, [Float64(a), 0.0, 0.0], false)
+Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 
 Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num1)!=signbit(b.num1),  -a, a)
 Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num1)!=signbit(b), -a, a)

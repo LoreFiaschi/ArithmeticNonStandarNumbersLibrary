@@ -594,7 +594,7 @@ function to_normal_form!(a::Ban)
 	
 	# all zero
 	a.p = 0;
-	return ;
+	return 0;
 end
 
 function nextban(a::Ban, n::Integer)
