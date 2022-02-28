@@ -857,6 +857,7 @@ LinearAlgebra.norm(a::Ban) = abs(a)
 
 LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}} = _setindex!(A, v, i, j)
 
+#=
 LinearAlgebra.generic_lufact!(A::StridedMatrix{T}, pivot::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot} = _generic_lufact!(A, pivot; check=check)
 function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot}
     m, n = size(A)
@@ -975,8 +976,9 @@ function _naivesub!(A::UnitLowerTriangular, b::AbstractVector, x::AbstractVector
     end
     x
 end
-
+=#
 end
+
 
 # TODO
 #
