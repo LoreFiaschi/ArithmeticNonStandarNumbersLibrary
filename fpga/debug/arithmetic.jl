@@ -1,4 +1,6 @@
-include("../../src/BAN_s3.jl")
+include("../../src/BAN.jl")
+#include("../../src/BAN_s3_isbits.jl")
+#include("../../src/BAN_s3_isbits_v3.jl")
 using .BAN
 
     b1 = Ban(0, [1.0,-2,4]);
