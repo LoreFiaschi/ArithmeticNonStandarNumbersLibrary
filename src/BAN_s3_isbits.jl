@@ -38,8 +38,14 @@ struct Ban <: AbstractAlgNum
     
     # Constructor
     Ban(p::Int64,num::Vector{Float64}, check::Bool) = new(p,num[1],num[2],num[3])
+    Ban(p::Int64,num::Vector{T}, check::Bool) where T<:Real = Ban(p, Vector{Float64}(num), check)
+	Ban(p::Int64,num::Tuple{T,T,T}, check::Bool) where T<:Float64 = new(p,num[1],num[2],num[3])
+	Ban(p::Int64,num::Tuple{R,S,T}, check::Bool) where {R<:Real,S<:Real,T<:Real} = Ban(p, Tuple{Float64,Float64,Float64}(num), check)
 	Ban(p::Int64,num1::T,num2::T,num3::T, check::Bool) where T<:Float64 = new(p,num1,num2,num3)
     Ban(p::Int64,num::Vector{Float64}) = (_constraints_satisfaction(p,num) && new(p,num[1],num[2],num[3]))
+    Ban(p::Int64,num::Vector{T}) where T<:Real = Ban(p, Vector{Float64}(num))
+    Ban(p::Int64,num::Tuple{T,T,T}) where T<:Float64 = (_constraints_satisfaction(p,num) && new(p,num[1],num[2],num[3]))
+    Ban(p::Int64,num::Tuple{R,S,T}) where {R<:Real,S<:Real,T<:Real} = Ban(p, Tuple{Float64,Float64,Float64}(num))
 	Ban(p::Int64,num1::T,num2::T,num3::T) where T<:Float64 = (_constraints_satisfaction(p,num1,num2,num3) && new(p,num1,num2,num3))
     Ban(a::Ban) = new(a.p,a.num1,a.num2,a.num3)
     Ban(x::Bool) = one(Ban)
@@ -211,20 +217,14 @@ end
 
 
 # Sum of two Bans
-function _sum_body!(res::Vector{T}, b::Vector{T}, diff_p::Int64) where T <: Float64
+function _sum_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}, diff_p::Int64) where T <: Float64
 	
-	if diff_p == 0
-		res[1] += b[1];
-		res[2] += b[2];
-		res[3] += b[3];
+	diff_p == 0 && return a[1]+b[1], a[2]+b[2], a[3]+b[3]
 	
-	elseif diff_p == 1
-		res[2] += b[1];
-		res[3] += b[2];
-	
-	else # diff_p ==2
-		res[3] += b[1];
-	end
+	diff_p == 1 && return a[1], a[2]+b[1], a[3]+b[2]
+
+	# diff_p == 2
+	return a[1], a[2], a[3]+b[1];
 end
 
 function _sum(a::Ban, b::Ban)
@@ -238,75 +238,65 @@ function _sum(a::Ban, b::Ban)
 	diff_p <= -SIZE && return b;
 	
 	if diff_p < 0 
-		num_res = to_vector(b);
-		_sum_body!(num_res, to_vector(a), -diff_p)
-		return Ban(b.p, num_res, false); # no need tp check normal form diff_p < 0
+		num =_sum_body(get_monosemia(b), get_monosemia(a), -diff_p)
+		return Ban(b.p, num, false); # no need tp check normal form diff_p < 0
 	end
 	
-	num_res = to_vector(a);
-	_sum_body!(num_res, to_vector(b), diff_p);
-	shift = to_normal_form!(num_res);
+	# TODO put all in a single row
+	num = _sum_body(get_monosemia(a), get_monosemia(b), diff_p);
+	p, num = to_normal_form(a.p, num);
 	
-	return Ban(a.p-shift, num_res, false);
+	return Ban(p, num, false);
 	
 end
 
 # Multiplication of two Bans
-function _mul_body!(num_a::Vector{T}, num_b::Vector{T}, num_res::Vector{T}) where T<:Float64
-	num_res[1] = num_a[1] * num_b[1];
-	num_res[2] = num_a[2] * num_b[1] + num_a[1] * num_b[2];
-	num_res[3] = num_a[3] * num_b[1] + num_a[1] * num_b[3] + num_a[2] * num_b[2];
+function _mul_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}) where T<:Float64
+	return a[1] * b[1], a[2] * b[1] + a[1] * b[2], a[3] * b[1] + a[1] * b[3] + a[2] * b[2]
 end
 
 function _mul(a::Ban, b::Ban)
-	num = Vector{Float64}(undef, SIZE);
-	_mul_body!(to_vector(a), to_vector(b), num);
-	shift = to_normal_form!(num);
+	num = _mul_body(get_monosemia(a), get_monosemia(b));
+	p, num = to_normal_form(a.p+b.p, num);
 	
-	return Ban(a.p+b.p-shift, num, false);
+	return Ban(p, num, false);
 end
 
 # Division of two Bans
-function _div_body(num_num::Vector{T}, num_den::Vector{T}) where T<:Float64
-	num_res = copy(num_num);
-	normalizer = num_den[1];
-	den_norm = Vector{T}(undef, SIZE);
-	eps1 = Vector{T}(undef, SIZE);
-	eps2 = Vector{T}(undef, SIZE);
-	den_norm[1] = 0;
-	den_norm[2] = -num_den[2]/normalizer;
-	den_norm[3] = -num_den[3]/normalizer;
+function _div_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}) where T<:Float64
+	normalizer = b[1];
+	b_norm = (0.0,-b[2]/normalizer, -b[3]/normalizer);
 	
-	_mul_body!(den_norm, num_num, eps1);
-	num_res[1] += eps1[1];
-	num_res[2] += eps1[2];
-	num_res[3] += eps1[3];
+	eps_ = _mul_body(b_norm, a);
+	num1 = a[1] + eps_[1];
+	num2 = a[2] + eps_[2];
+	num3 = a[3] + eps_[3];
 	
-	_mul_body!(eps1, den_norm, eps2);
-	num_res[1] += eps2[1];
-	num_res[2] += eps2[2];
-	num_res[3] += eps2[3];
+	eps_ = _mul_body(eps_, b_norm);
+	num1 += eps_[1];
+	num2 += eps_[2];
+	num3 += eps_[3];
 	
-	_mul_body!(eps2, den_norm, eps1);
-	num_res[1] += eps1[1];
-	num_res[2] += eps1[2];
-	num_res[3] += eps1[3];
+	eps_ = _mul_body(eps_, b_norm);
+	num1 += eps_[1];
+	num2 += eps_[2];
+	num3 += eps_[3];
 	
-	num_res[1] /= normalizer;
-	num_res[2] /= normalizer;
-	num_res[3] /= normalizer;
+	num1 /= normalizer;
+	num2 /= normalizer;
+	num3 /= normalizer;
 	
-	return num_res;
+	return num1, num2, num3;
 end
 
 function _div(a::Ban, b::Ban)
 	b == 0.0 && throw(ArgumentError("Division by zero detected."));
 	a == 0.0 && return a;
 
-	num_res = _div_body(to_vector(a), to_vector(b));
-	shift = to_normal_form!(num_res);
+	num = _div_body(get_monosemia(a), get_monosemia(b));
+	p, num = to_normal_form(a.p - b.p, num);
 	
-	return Ban(a.p - b.p - shift, num_res, false);;
+	return Ban(p, num, false);
 end
 
 # Sum of ban and real
@@ -320,67 +310,64 @@ function _sum(a::Ban, b::T) where T<:Real
 			return a;
 		end
 		
-		num_res = to_vector(a)
-		num_res[a.p+1] += b;
-		shift = to_normal_form!(num_res);
-		return Ban(a.p - shift, num_res, false);;
+		num1, num2, num3 = get_monosemia(a)
+		if a.p == 0
+			num1 += b
+		elseif a.p == 1
+			num2 += b
+		else
+			num3 += b
+		end
+		p, num = to_normal_form(a.p, (num1, num2, num3));
+		return Ban(p, num, false);
 	end
 	
-	num_res = Vector{Float64}(undef, SIZE);
-	num_res[1] = b;
+	num1 = b;
 	
 	if a.p == -1
-		num_res[3] = a.num2;
-		num_res[2] = a.num1;
+		num3 = a.num2;
+		num2 = a.num1;
 	else
-		num_res[2] = 0.0 ;
+		num2 = 0.0 ;
 		
 		if a.p == -2
-			num_res[3] = a.num1;
+			num3 = a.num1;
 		else
-			num_res[3] = 0.0 ;
+			num3 = 0.0 ;
 		end
 	
 	end
 	
-	return Ban(0, num_res, false);
+	return Ban(0, (num1, num2, num3), false);
 	
 end
 
 # Multiplication of ban and real
 function _mul(a::Ban, b::T) where T<:Real
-	num_res = [a.num1*b, a.num2*b, a.num3*b];
-	shift = to_normal_form!(num_res);
-	return Ban(a.p - shift, num_res, false);
+	p, num = to_normal_form(a.p, (a.num1*b, a.num2*b, a.num3*b));
+	return Ban(p, num, false);
 end
 
 # Division of ban and real
 function _div(a::Ban, b::T) where T<:Real
 	b == 0.0 && throw(ArgumentError("Division by zero detected."));
 	a == 0.0 && return a;
-	
-	num_res = [a.num1/b, a.num2/b, a.num3/b];
-	shift = to_normal_form!(num_res);
-	return Ban(a.p - shift, num_res, false);
+
+	p, num = to_normal_form(a.p, (a.num1/b, a.num2/b, a.num3/b));
+	return Ban(p, num, false);
 end
 
 # Power function
-function _pow_fast(b::Vector{Float64}, e::Int64)
+function _pow_fast(b::Tuple{T,T,T}, e::Int64) where T<:Float64
 	e == 1 && return b;
 	
-	num_res = Vector{Float64}(undef, SIZE);
-	
-	if e == 2
-		_mul_body!(b, b, num_res);
-		return num_res;
-	end
+	e == 2 && return _mul_body(b, b);
 
 	num_tmp = _pow_fast(b, e>>1);
-	_mul_body!(num_tmp, num_tmp, num_res);
+	num_res = _mul_body(num_tmp, num_tmp);
 
 	if convert(Bool, e & 1)
-		_mul_body!(b, num_res, num_tmp);
-		return num_tmp;
+		return _mul_body(b, num_res);
 	end
 	
 	return num_res;
@@ -403,10 +390,10 @@ function _pow(b::Ban, e::Int64)
 	end
 
 	if e < 0
-		return Ban(b.p*e, _pow_fast(to_vector(1.0/b), -e), false);
+		return Ban(b.p*e, _pow_fast(get_monosemia(1.0/b), -e), false);
 	end
 
-	return Ban(b.p*e, _pow_fast(to_vector(b), e), false);
+	return Ban(b.p*e, _pow_fast(get_monosemia(b), e), false);
 
 end
 
@@ -425,32 +412,24 @@ function _sqrt(a::Ban)
 	end
 	
 	normalizer = a.num1;
-	num_res = Vector{Float64}(undef, SIZE);
-	eps1 = Vector{Float64}(undef, SIZE);
-	eps2 = Vector{Float64}(undef, SIZE);
-	eps3 = Vector{Float64}(undef, SIZE);
-	num_res[1] = 1.0 ;
-	eps1[1] = 0.0 ;
-	eps2[1] = 0.0 ;
-	eps1[2] = eps2[2] = a.num2/normalizer;
-	eps1[3] = eps2[3] = a.num3/normalizer;
-	num_res[1] = 1.0 ;
-	num_res[2] = 0.5*eps1[2];
-	num_res[3] = 0.5*eps1[3];
+	eps_ = (0.0, a.num2/normalizer, a.num3/normalizer) ;
+	num1 = 1.0 ;
+	num2 = 0.5*eps_[2];
+	num3 = 0.5*eps_[3];
 	
-	_mul_body!(eps1, eps2, eps3);
+	eps_ = _mul_body(eps_, eps_);
 	
-	num_res[1] += sqrt_coef*eps3[1];
-	num_res[2] += sqrt_coef*eps3[2];
-	num_res[3] += sqrt_coef*eps3[3];
+	num1 += sqrt_coef*eps_[1];
+	num2 += sqrt_coef*eps_[2];
+	num3 += sqrt_coef*eps_[3];
 	
 	normalizer = sqrt(normalizer);
 
-	num_res[1] *= normalizer;
-	num_res[2] *= normalizer;
-	num_res[3] *= normalizer;
+	num1 *= normalizer;
+	num2 *= normalizer;
+	num3 *= normalizer;
 	
-	return Ban(a.p>>1, num_res, false);
+	return Ban(a.p>>1, (num1, num2, num3), false);
 end
 
 #####################
@@ -578,14 +557,16 @@ function _min_degree(a::Ban)
 	return a.p;
 end
 
-function to_vector(a::Ban)
+function get_monosemia(a::Ban)
 
-	return [a.num1, a.num2, a.num3];
+	return a.num1, a.num2, a.num3;
 end
 
-principal(a::Ban) = Ban(a.p, [a.num1, 0.0, 0.0], false);
+
+
+principal(a::Ban) = Ban(a.p, a.num1, 0.0, 0.0, false);
 principal(a::Real) = a
-magnitude(a::Ban) = Ban(a.p, [1.0, 0.0, 0.0], false)
+magnitude(a::Ban) = Ban(a.p, 1.0, 0.0, 0.0, false)
 magnitude(a::Real) = one(Ban)
 degree(a::Ban) = a.p
 degree(a::Real) = 0
@@ -597,38 +578,29 @@ min_degree(a::Real) = 0
 ################################
 
 
-function to_normal_form!(a::Vector{Float64})
-	a[1] != 0.0 && return 0 ;
+function to_normal_form(p::Int64, num::Tuple{T,T,T}) where T<:Float64
+	num[1] != 0.0 && return p, num ;
 	
-	if a[2] != 0.0
-		a[1] = a[2];
-		a[2] = a[3];
-		a[3] = 0.0 ;
-		return 1 ;
-	end
+	num[2] != 0.0 && return p-1, (num[2], num[3], 0.0)
 	
-	if a[3] != 0.0
-		a[1] = a[3];
-		a[3] = 0.0 ;
-		return 2 ;
-	end
+	num[3] != 0.0 && return p-2, (num[3], 0.0, 0.0) ;
 	
 	# all zero
-	return 0;
+	return 0, num;
 end
 
 function nextban(a::Ban, n::Integer)
     
-    return Ban(a.p, [a.num1, a.num2, nextfloat(a.num3, n)]);
+    return Ban(a.p, (a.num1, a.num2, nextfloat(a.num3, n)));
 end
 
 function prevban(a::Ban, n::Integer)
     
-    return Ban(a.p, [a.num1, a.num2, prevfloat(a.num3, n)]);
+    return Ban(a.p, (a.num1, a.num2, prevfloat(a.num3, n)));
 end
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b);
-Base.:(-)(a::Ban) = Ban(a.p, [-a.num1, -a.num2, -a.num3], false);
+Base.:(-)(a::Ban) = Ban(a.p, -a.num1, -a.num2, -a.num3, false);
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b);
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b);
 Base.:(/)(a::Ban, b::Ban) = _div(a,b);
@@ -658,17 +630,17 @@ Base.sqrt(a::Ban) = _sqrt(a)
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0.0) ? 0 : sign(a[1])
 
-Base.:(<<)(a::Ban, b::Int) = Ban(a.p, [a.num1<<b, a.num2<<b, a.num3<<b], false)
-Base.:(>>)(a::Ban, b::Int) = Ban(a.p, [a.num1<<b, a.num2<<b, a.num3<<b], false)
+#Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num1<<b, a.num2<<b, a.num3<<b, false)
+#Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num1<<b, a.num2<<b, a.num3<<b, false)
 
-Base.zero(::Type{Ban}) = Ban(0, [0.0, 0.0, 0.0], false)
+Base.zero(::Type{Ban}) = Ban(0, 0.0, 0.0, 0.0, false)
 Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
 Base.zeros(::Type{Ban}, n::Int, m::Int) = _zeros(n,m)
-Base.one(::Type{Ban}) = Ban(0, [1.0, 0.0, 0.0], false)
+Base.one(::Type{Ban}) = Ban(0, 1.0, 0.0, 0.0, false)
 Base.ones(::Type{Ban}, n::Int) = _ones(n)
 Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 
-Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, [Float64(a), 0.0, 0.0], false)
+Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, Float64(a), 0.0, 0.0, false)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 
 Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num1)!=signbit(b.num1),  -a, a)
@@ -695,17 +667,18 @@ CloseOpen01(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen01{T}()
 CloseOpen12(::Type{T}) where {T<:AbstractAlgNum} = CloseOpen12{T}()
 
 function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpen12_64})
-
-    num = Vector{Float64}(undef, SIZE);
-    Random.reserve(r, SIZE);
-	num[1] =  Random.rand_inbounds(r, sp[])-1;
-	num[2] = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
-	num[3] = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
-
-	shift = to_normal_form!(num)
-	num[1] < 0 && (num .*= -1);
 	
-    return Ban(-shift, num, false);
+    Random.reserve(r, SIZE);
+	num1 =  Random.rand_inbounds(r, sp[])-1;
+	num2 = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
+	num3 = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
+
+	p, num = to_normal_form(0, (num1, num2, num3))
+	if num[1] < 0
+		p, num = to_normal_form(0, (-num[1], -num[2], -num[3]))
+	end
+	
+    return Ban(p, (num1, num2, num3), false);
 end
 
 Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
