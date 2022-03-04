@@ -13,8 +13,8 @@ export print_ext, println_ext, print_latex
 export standard_part
 export degree, min_degree, magnitude, principal
 export nextban, prevban
-#export denoise#, isoverflow, isoverflow!
-#export component_wise_division, retrieve_infinitesimals 
+export denoise
+export retrieve_infinitesimals, retrieve_most_informative
 
 # α^p P(η) , P(0) != 0 except for zero
 
@@ -562,6 +562,104 @@ function get_monosemia(a::Ban)
 	return a.num1, a.num2, a.num3;
 end
 
+@inline function denoise_check(a::Float64, tol::Real)
+	return (abs(a) <= tol) ? 0.0 : a
+end
+
+function denoise(a::Ban, tol::Real)
+	num = (denoise_check(a.num1, tol), denoise_check(a.num2, tol), denoise_check(a.num3, tol))
+	p, num = to_normal_form(p, num)
+	return Ban(p, num, false)
+end
+
+# check if similar initializes B, it should not
+function denoise(A::AbstractArray{Ban}, tol::Real)
+	B = similar(A)
+	
+	for i in eachindex(B)
+		B[i] = denoise(A[i], tol);
+	end
+	
+	return B
+end
+
+#function denoise(a::AbstractVector{Ban}, tol::Real)
+
+#	b = Vector{Ban}(undef, length(a))
+#	for i in eachindex(b)
+#		b[i] = denoise(a[i], tol);
+#	end
+	
+#	return b
+#end
+
+#function denoise(A::AbstractMatrix{Ban}, tol::Real)
+
+#	B = Matrix{Ban}(undef, length(A))
+#	for i in eachindex(B)
+#		B[i] = denoise(A[i], tol);
+#	end
+	
+#	return B
+#end
+
+function retrieve_infinitesimals(a::Ban, degree::Integer)
+	base_idx = a.p-degree
+	base_idx <= 0 && return a
+	base_idx >= SIZE && return 0
+	if base_idx == 1
+		num = (a.num2, a.num3, 0.0)
+	else # base_idx == 2
+		num = (a.num1, 0.0, 0.0)
+	end
+	
+	p, num = to_normal_form(a.p-base_idx, num)
+	
+	return Ban(p, num, false)
+end
+
+function retrieve_infinitesimals(a::Real, degree::Integer)
+	degree < 0 && return 0
+	return a
+end
+
+function retrieve_infinitesimals(A::AbstractArray{Ban}, degree::Integer)
+
+	B = similar(A)
+	for i in eachindex(A)
+		B[i] = retrieve_infinitesimals(A[i], degree);
+	end
+
+	return B
+end
+
+function retrieve_most_informative(a::Ban, degree::Integer)
+	base_idx = a.p-degree
+	base_idx < 0 && return 0
+	base_idx >= SIZE-1 && return a
+	if base_idx == 0
+		num = (a.num1, 0.0, 0.0)
+	else # base_idx == 1
+		num = (a.num1, a.num2, 0.0)
+	end
+	
+	return Ban(a.p, num, false)
+end
+
+function retrieve_most_informative(a::Real, degree::Integer)
+	degree > 0 && return 0
+	return a
+end
+
+function retrieve_most_informative(A::AbstractArray{Ban}, degree::Integer)
+
+	B = similar(A)
+	for i in eachindex(A)
+		B[i] = retrieve_most_informative(A[i], degree);
+	end
+
+	return B
+end
 
 
 principal(a::Ban) = Ban(a.p, a.num1, 0.0, 0.0, false);
@@ -675,7 +773,7 @@ function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpe
 
 	p, num = to_normal_form(0, (num1, num2, num3))
 	if num[1] < 0
-		p, num = to_normal_form(0, (-num[1], -num[2], -num[3]))
+		num = (-num[1], -num[2], -num[3])
 	end
 	
     return Ban(p, num, false);
