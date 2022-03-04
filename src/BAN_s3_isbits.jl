@@ -678,7 +678,7 @@ function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpe
 		p, num = to_normal_form(0, (-num[1], -num[2], -num[3]))
 	end
 	
-    return Ban(p, (num1, num2, num3), false);
+    return Ban(p, num, false);
 end
 
 Random.gentype(::Type{<:AlgNumInterval{T}}) where {T<:AbstractAlgNum} = T
