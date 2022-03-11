@@ -1,7 +1,0 @@
-digraph "CFG for 'Ban::_mul' function" {
-	label="CFG for 'Ban::_mul' function";
-
-	Node0x4e7f330 [shape=record,filename="",linenumber="",label="{.predFake}"];
-	Node0x4e7f330 -> Node0x4e43c10[ callList="" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
-	Node0x4e43c10 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="117",label="{.succFake}"];
-}

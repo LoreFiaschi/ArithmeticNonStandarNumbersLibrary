@@ -1,7 +1,0 @@
-digraph "CFG for 'Ban::mul_body' function" {
-	label="CFG for 'Ban::mul_body' function";
-
-	Node0x4e80780 [shape=record,filename="",linenumber="",label="{.predFake}"];
-	Node0x4e80780 -> Node0x4e43e30[ callList="10:121; 5:126" memoryops="" filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
-	Node0x4e43e30 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="128",label="{.succFake}"];
-}

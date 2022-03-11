@@ -1,7 +1,0 @@
-digraph "CFG for 'Ban::operator\>=' function" {
-	label="CFG for 'Ban::operator\>=' function";
-
-	Node0x4e69880 [shape=record,filename="",linenumber="",label="{.predFake}"];
-	Node0x4e69880 -> Node0x4debb60[ callList="26:92" memoryops="" filename="../../../../../src/ban_s3.h" execusionnum="0"];
-	Node0x4debb60 [shape=record,filename="../../../../../src/ban_s3.h",linenumber="92",label="{.succFake}"];
-}

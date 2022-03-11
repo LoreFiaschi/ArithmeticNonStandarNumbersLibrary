@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/hls/ban_s3/solution1/./sim/autowrap/testbench/ban_interface.cpp_pre.cpp.tb.cpp

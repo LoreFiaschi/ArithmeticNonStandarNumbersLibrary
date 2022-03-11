@@ -857,9 +857,10 @@ LinearAlgebra.norm(a::Ban) = abs(a)
 
 LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}} = _setindex!(A, v, i, j)
 
-#=
 LinearAlgebra.generic_lufact!(A::StridedMatrix{T}, pivot::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot} = _generic_lufact!(A, pivot; check=check)
 function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot}
+	#println("custom lu")
+	#println("")
     m, n = size(A)
     minmn = min(m,n)
     info = 0
@@ -909,6 +910,7 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
     check && LinearAlgebra.checknonsingular(info, LinearAlgebra.Val{Pivot}())
     return LinearAlgebra.LU{T,typeof(A)}(A, ipiv, convert(LinearAlgebra.BlasInt, info))
 end
+
 
 #Generalize to the case of Union{AbstractAlgNum, Real}
 LinearAlgebra.naivesub!(A::UpperTriangular{T}, b::AbstractVector{T}, x::AbstractVector{T} = b) where T<:AbstractAlgNum = _naivesub!(A, b, x)
@@ -976,7 +978,7 @@ function _naivesub!(A::UnitLowerTriangular, b::AbstractVector, x::AbstractVector
     end
     x
 end
-=#
+
 end
 
 

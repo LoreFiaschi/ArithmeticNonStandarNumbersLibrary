@@ -1,7 +1,0 @@
-digraph "CFG for '_GLOBAL__sub_I_vitis_test.cpp' function" {
-	label="CFG for '_GLOBAL__sub_I_vitis_test.cpp' function";
-
-	Node0x4dfb9d0 [shape=record,filename="../../../../../test/vitis_test.cpp",linenumber="0",label="{.predFake}"];
-	Node0x4dfb9d0 -> Node0x4dc9110[ callList="__cxx_global_var_init.1:0; __cxx_global_var_init.2:0; __cxx_global_var_init.3:0; __cxx_global_var_init.4:0" memoryops="" filename="../../../../../test/vitis_test.cpp" execusionnum="0"];
-	Node0x4dc9110 [shape=record,filename="",linenumber="",label="{.succFake}"];
-}

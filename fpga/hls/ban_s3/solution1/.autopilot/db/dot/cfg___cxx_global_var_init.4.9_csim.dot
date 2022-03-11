@@ -1,7 +1,0 @@
-digraph "CFG for '__cxx_global_var_init.4.9' function" {
-	label="CFG for '__cxx_global_var_init.4.9' function";
-
-	Node0x4e027a0 [shape=record,filename="../../../../../src/ban_s3.h",linenumber="111",label="{.predFake}"];
-	Node0x4e027a0 -> Node0x4e460b0[ callList="" memoryops="" filename="../../../../../src/ban_s3.h" execusionnum="0"];
-	Node0x4e460b0 [shape=record,filename="../../../../../src/ban_s3.h",linenumber="111",label="{.succFake}"];
-}

@@ -1,7 +1,0 @@
-digraph "CFG for 'main' function" {
-	label="CFG for 'main' function";
-
-	Node0x4e3e610 [shape=record,filename="",linenumber="",label="{.predFake}"];
-	Node0x4e3e610 -> Node0x4e46c70[ callList="1:11" memoryops="" filename="../../../../../test/vitis_test.cpp" execusionnum="1"];
-	Node0x4e46c70 [shape=record,filename="../../../../../test/vitis_test.cpp",linenumber="13",label="{.succFake}"];
-}

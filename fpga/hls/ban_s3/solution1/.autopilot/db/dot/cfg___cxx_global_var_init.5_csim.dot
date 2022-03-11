@@ -1,7 +1,0 @@
-digraph "CFG for '__cxx_global_var_init.5' function" {
-	label="CFG for '__cxx_global_var_init.5' function";
-
-	Node0x4e01c80 [shape=record,filename="/home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/iostream",linenumber="74",label="{.predFake}"];
-	Node0x4e01c80 -> Node0x4e470a0[ callList="" memoryops="" filename="/home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/iostream" execusionnum="0"];
-	Node0x4e470a0 [shape=record,filename="/home/lorenzo/Programs/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/iostream",linenumber="74",label="{.succFake}"];
-}

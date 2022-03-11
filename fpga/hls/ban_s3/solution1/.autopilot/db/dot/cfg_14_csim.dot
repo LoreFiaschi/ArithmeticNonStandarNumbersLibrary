@@ -1,7 +1,0 @@
-digraph "CFG for 'sqrt' function" {
-	label="CFG for 'sqrt' function";
-
-	Node0x4ea8bd0 [shape=record,filename="",linenumber="",label="{.predFake}"];
-	Node0x4ea8bd0 -> Node0x4ee6d50[ callList="10:275" memoryops="; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; " filename="../../../../../src/ban_s3.cpp" execusionnum="0"];
-	Node0x4ee6d50 [shape=record,filename="../../../../../src/ban_s3.cpp",linenumber="287",label="{.succFake}"];
-}
