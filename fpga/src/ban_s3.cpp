@@ -123,42 +123,16 @@ Ban Ban::operator*(const Ban &b) const{
 	return c;
 }
 
-void Ban::_div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]){
-	T normalizer = num_den[0];
-	T den_norm[SIZE], eps[SIZE], eps_tmp[SIZE];
-	den_norm[0] = 0;
-	den_norm[1] = -num_den[1]/normalizer;
-	den_norm[2] = -num_den[2]/normalizer;
-	
-	_mul(den_norm, num_num, eps);
-	num_res[0] += eps[0];
-	num_res[1] += eps[1];
-	num_res[2] += eps[2];
-
-	_mul(eps, den_norm, eps_tmp);
-	num_res[0] += eps_tmp[0];
-	num_res[1] += eps_tmp[1];
-	num_res[2] += eps_tmp[2];
-
-	_mul(eps_tmp, den_norm, eps);
-	num_res[0] += eps[0];
-	num_res[1] += eps[1];
-	num_res[2] += eps[2];
-
-	num_res[0] /= normalizer;
-	num_res[1] /= normalizer;
-	num_res[2] /= normalizer;
-}
-
 Ban Ban::operator/(const Ban &b) const{
 	if(*this == 0)
 		return ZERO;
 	
-	Ban c(*this);
+	T num_res[SIZE];
+	num_res[0] = num[0]/b.num[0];
+	num_res[1] = (num[1] - num_res[0]*b.num[1])/b.num[0];
+	num_res[2] = (num[2] - num_res[0]*b.num[2] - num_res[1]*b.num[1])/b.num[0];
 
-	c.p -= b.p;
-
-	_div_body(this->num, b.num, c.num);
+	Ban c(p-b.p, num_res, false);
 
 	c.to_normal_form();
 
@@ -167,8 +141,8 @@ Ban Ban::operator/(const Ban &b) const{
 
 Ban operator/(T n, const Ban &b){
 
-	T num2 = -n*b.num[2]/b.num[1];
-	T num[] = {a/b.num[1], num2/b.num[1], n*(-b.num[3]/b.num[1]+num2*num2)/b.num[1]};
+	T num2 = -b.num[1]/b.num[0];
+	T num[] = {n/b.num[0], n*num2/b.num[0], n*(-b.num[2]/b.num[0]+num2*num2)/b.num[0]};
 
 	Ban c(-b.p, num, false);
 

@@ -32,7 +32,6 @@ class Ban{
 	// static functions
 	static Ban _pow_fast(const Ban &b, unsigned e);
 	static Ban _sum(const Ban &a, const Ban &b, int diff_p);
-	static void _div_body(const T num_num[SIZE], const T num_den[SIZE], T num_res[SIZE]);
 	static void _mul(const T num_a[SIZE], const T num_b[SIZE], T num_res[SIZE]);
 
 	// utility for boolean conversion

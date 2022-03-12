@@ -264,28 +264,9 @@ end
 
 # Division of two Bans
 function _div_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}) where T<:Float64
-	normalizer = b[1];
-	b_norm = (0.0,-b[2]/normalizer, -b[3]/normalizer);
-	
-	eps_ = _mul_body(b_norm, a);
-	num1 = a[1] + eps_[1];
-	num2 = a[2] + eps_[2];
-	num3 = a[3] + eps_[3];
-	
-	eps_ = _mul_body(eps_, b_norm);
-	num1 += eps_[1];
-	num2 += eps_[2];
-	num3 += eps_[3];
-	
-	eps_ = _mul_body(eps_, b_norm);
-	num1 += eps_[1];
-	num2 += eps_[2];
-	num3 += eps_[3];
-	
-	num1 /= normalizer;
-	num2 /= normalizer;
-	num3 /= normalizer;
-	
+	num1 = a[1]/b[1];
+	num2 = (a[2]-num1*b[2])/b[1];
+	num3 = (a[3] - num1*b[3] - num2*b[2])/b[1];
 	return num1, num2, num3;
 end
 
