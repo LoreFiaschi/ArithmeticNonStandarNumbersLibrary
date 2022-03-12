@@ -74,6 +74,10 @@ output ban_interface(const Ban &b_op1, const Ban &b_op2, T f_op, op_type op){
             out.b = b_op1 / f_op;
             break;
 
+        case DIV_RB:
+            out.b =  f_op / b_op1;
+            break;
+
         case EQ_R:
             out.l = b_op1 == f_op;
             break;

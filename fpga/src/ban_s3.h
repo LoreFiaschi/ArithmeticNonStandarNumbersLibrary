@@ -17,7 +17,7 @@ enum op_type{
 	SUM, OPP, DIF, MUL, DIV, ABS, SQRT,
 	EQ,  NEQ, LES, LAR, LES_EQ, LAR_EQ,
 
-	SUM_R, DIF_R, MUL_R, DIV_R,
+	SUM_R, DIF_R, MUL_R, DIV_R, DIV_RB,
 	EQ_R, NEQ_R, LES_R, LAR_R, LES_EQ_R, LAR_EQ_R,
 };
 
@@ -79,6 +79,7 @@ class Ban{
 	inline Ban operator-(T n) const {return *this+(-n);};
 	Ban operator*(T n) const;
 	Ban operator/(T n) const; // make inline? *this*(1/n)
+	friend Ban operator/(T n, const Ban &b);
 	
 	bool operator==(T n) const;
 	inline bool operator!=(T n) const{return !(*this == n);};

@@ -357,6 +357,18 @@ function _div(a::Ban, b::T) where T<:Real
 	return Ban(p, num, false);
 end
 
+# Division real by ban
+function _div(a::T, b::Ban) where T<:Real
+	b == 0.0 && throw(ArgumentError("Division by zero detected."));
+	a == 0.0 && return a;
+
+	num2 = -a*b.num2/b.num1
+	num3 = a*(-b.num3/b.num1+num2*num2)
+	
+	return Ban(-b.p, (a/b.num1, num2/b.num1, num3/b.num1), false)
+end
+
+
 # Power function
 function _pow_fast(b::Tuple{T,T,T}, e::Int64) where T<:Float64
 	e == 1 && return b;
@@ -712,7 +724,7 @@ Base.:(/)(a::Ban, b::T) where T<: Real = _div(a,b);
 Base.:(+)(a::T, b::Ban) where T<: Real = _sum(b,a);
 Base.:(-)(a::T, b::Ban) where T<: Real = _sum(-b, a);
 Base.:(*)(a::T, b::Ban) where T<: Real = _mul(b,a);
-Base.:(/)(a::T, b::Ban) where T<: Real = _div(Ban(a),b);
+Base.:(/)(a::T, b::Ban) where T<: Real = _div(a,b);
 
 Base.isless(a::Ban, b::Ban) = _isless(a, b);
 Base.isless(a::Ban, b::T) where T<: Real = _isless(a, b);

@@ -165,6 +165,18 @@ Ban Ban::operator/(const Ban &b) const{
 	return c;
 }
 
+Ban operator/(T n, const Ban &b){
+
+	T num2 = -n*b.num[2]/b.num[1];
+	T num[] = {a/b.num[1], num2/b.num[1], n*(-b.num[3]/b.num[1]+num2*num2)/b.num[1]};
+
+	Ban c(-b.p, num, false);
+
+	c.to_normal_form();
+	
+	return c;
+}
+
 ostream& operator<<(ostream& os, const Ban &b){
 	os<<"α^"<<b.p<<'('<<b.num[0];
 	for(unsigned i=1; i<SIZE; ++i)
