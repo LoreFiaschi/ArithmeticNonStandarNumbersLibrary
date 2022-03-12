@@ -561,7 +561,7 @@ end
 
 function denoise(a::Ban, tol::Real)
 	num = (denoise_check(a.num1, tol), denoise_check(a.num2, tol), denoise_check(a.num3, tol))
-	p, num = to_normal_form(p, num)
+	p, num = to_normal_form(a.p, num)
 	return Ban(p, num, false)
 end
 
