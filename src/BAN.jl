@@ -856,7 +856,7 @@ LinearAlgebra.normInf(A::AbstractArray{T}) where T <: Ban = _generic_normInf(A)
 LinearAlgebra.norm(a::Ban) = abs(a)
 
 LinearAlgebra.setindex!(A::Hermitian{T,S}, v, i::Integer, j::Integer) where {T<:AbstractAlgNum, S<:AbstractMatrix{<:T}} = _setindex!(A, v, i, j)
-#=
+
 LinearAlgebra.generic_lufact!(A::StridedMatrix{T}, pivot::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot} = _generic_lufact!(A, pivot; check=check)
 function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=LinearAlgebra.Val(true); check::Bool = true) where {T<:AbstractAlgNum, Pivot}
 	#println("custom lu")
@@ -870,9 +870,9 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
             # find index max
             kp = k
             if Pivot && k < m
-                amax = abs(A[k, k].num[1])
+                amax = abs(A[k, k]) # abs(A[k, k].num[1])
                 for i = k+1:m
-                    absi = abs(A[i,k].num[1])
+                    absi = abs(A[i,k]) # abs(A[i,k].num[1])
                     if absi > amax
                         kp = i
                         amax = absi
@@ -978,7 +978,7 @@ function _naivesub!(A::UnitLowerTriangular, b::AbstractVector, x::AbstractVector
     end
     x
 end
-=#
+
 end
 
 

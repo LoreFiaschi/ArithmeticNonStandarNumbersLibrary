@@ -603,7 +603,7 @@ function retrieve_infinitesimals(a::Ban, degree::Integer)
 	if base_idx == 1
 		num = (a.num2, a.num3, 0.0)
 	else # base_idx == 2
-		num = (a.num1, 0.0, 0.0)
+		num = (a.num3, 0.0, 0.0)
 	end
 	
 	p, num = to_normal_form(a.p-base_idx, num)
@@ -734,6 +734,8 @@ Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, Float64(a), 0.0, 0.0, false)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 
+Base.isinf(a::Ban) = (isinf(a.num1) || isinf(a.num2) || isinf(a.num3))
+
 Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num1)!=signbit(b.num1),  -a, a)
 Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num1)!=signbit(b), -a, a)
 Base.copysign(a::Real, b::Ban) = ifelse(signbit(a)!=signbit(b.num1), -a, a);
@@ -807,11 +809,38 @@ function _cholesky!(A::AbstractMatrix{T}, ::LinearAlgebra.Val{false}=LinearAlgeb
         return Cholesky(A, 'U', convert(LinearAlgebra.BlasInt, -1))
 	else
 		isa(A, Hermitian) && (A = convert(Matrix{T}, A))
-		C, info = LinearAlgebra._chol!(A, UpperTriangular);
+		C, info = _chol!(A, UpperTriangular); #LinearAlgebra._chol!(A, UpperTriangular);
 		check && LinearAlgebra.checkpositivedefinite(info);
 	
 		return Cholesky(C.data, 'U', info)
 	end
+end
+
+function _chol!(A::AbstractMatrix{T}, ::Type{UpperTriangular}) where T<:AbstractAlgNum
+    LinearAlgebra.require_one_based_indexing(A)
+    n = LinearAlgebra.checksquare(A)
+    @inbounds begin
+        for k = 1:n
+            Akk = A[k,k]
+            for i = 1:k - 1
+                Akk -= abs2(A[i,k])
+            end
+			A[k,k] = denoise(Akk, 1e-8)
+            Akk, info = _chol!(A[k,k], UpperTriangular)
+            if info != 0
+                return UpperTriangular(A), info
+            end
+            A[k,k] = Akk
+            AkkInv = inv(copy(Akk'))
+            for j = k + 1:n
+                for i = 1:k - 1
+                    A[k,j] -= A[i,k]'A[i,j]
+                end
+                A[k,j] = AkkInv*A[k,j]
+            end
+        end
+    end
+    return UpperTriangular(A), convert(LinearAlgebra.BlasInt, 0)
 end
 
 function _chol!(x::AbstractAlgNum, uplo)
