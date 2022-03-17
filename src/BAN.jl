@@ -870,9 +870,9 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
             # find index max
             kp = k
             if Pivot && k < m
-                amax = abs(A[k, k]) # abs(A[k, k].num[1])
+                amax = abs(A[k, k].num[1]) # abs(A[k, k]) # 
                 for i = k+1:m
-                    absi = abs(A[i,k]) # abs(A[i,k].num[1])
+                    absi = abs(A[i,k].num[1]) # abs(A[i,k]) # 
                     if absi > amax
                         kp = i
                         amax = absi
@@ -891,9 +891,10 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
                 end
                 # Scale first column
                 Akkinv = inv(A[k,k])
+				Akkinv = denoise(Akkinv, 1e-10)
                 for i = k+1:m
                     A[i,k] *= Akkinv
-					A[i,k] = denoise(A[i,k], 1e-8)
+					A[i,k] = denoise(A[i,k], 1e-10)
                 end
             elseif info == 0
                 info = k
@@ -902,7 +903,7 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
             for j = k+1:n
                 for i = k+1:m
                     A[i,j] -= A[i,k]*A[k,j]
-					A[i,j] = denoise(A[i,j], 1e-8)
+					A[i,j] = denoise(A[i,j], 1e-10)
                 end
             end
         end
@@ -922,9 +923,11 @@ function _naivesub!(A::UpperTriangular, b::AbstractVector, x::AbstractVector = b
     end
     @inbounds for j in n:-1:1
         iszero(A.data[j,j]) && throw(SingularException(j))
-        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
+        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-10)
+#        xj = x[j] = A.data[j,j] \ b[j]
         for i in j-1:-1:1 # counterintuitively 1:j-1 performs slightly better
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-10)
+#            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
@@ -940,7 +943,8 @@ function _naivesub!(A::UnitUpperTriangular, b::AbstractVector, x::AbstractVector
     @inbounds for j in n:-1:1
         xj = x[j] = b[j]
         for i in j-1:-1:1 # counterintuitively 1:j-1 performs slightly better
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-10)
+#            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
@@ -955,9 +959,11 @@ function _naivesub!(A::LowerTriangular, b::AbstractVector, x::AbstractVector = b
     end
     @inbounds for j in 1:n
         iszero(A.data[j,j]) && throw(SingularException(j))
-        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
+        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-10)
+#        xj = x[j] = A.data[j,j] \ b[j]
         for i in j+1:n
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-10)
+#            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
@@ -973,7 +979,8 @@ function _naivesub!(A::UnitLowerTriangular, b::AbstractVector, x::AbstractVector
     @inbounds for j in 1:n
         xj = x[j] = b[j]
         for i in j+1:n
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-10)
+#            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x

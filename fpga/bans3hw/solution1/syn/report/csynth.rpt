@@ -1,0 +1,174 @@
+
+
+================================================================
+== Synthesis Summary Report of 'ban_interface'
+================================================================
++ General Information: 
+    * Date:           Thu Mar 17 18:48:16 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        bans3hw
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |     Modules     |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |         |            |            |     |
+    |     & Loops     |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
+    +-----------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |+ ban_interface  |  Timing|  -0.12|       48|  480.000|         -|       49|     -|        no|     -|  24 (1%)|   6778 (1%)|  12614 (5%)|    -|
+    | + operator_2    |       -|   0.39|        5|   50.000|         -|        5|     -|        no|     -|  2 (~0%)|   651 (~0%)|  1620 (~0%)|    -|
+    | + operator_div  |       -|   0.24|       45|  450.000|         -|       45|     -|        no|     -|        -|   822 (~0%)|   879 (~0%)|    -|
+    | + operator_1    |       -|   0.09|       11|  110.000|         -|       11|     -|        no|     -|        -|   614 (~0%)|  1083 (~0%)|    -|
+    | + operator_add  |       -|   0.41|       14|  140.000|         -|       14|     -|        no|     -|  6 (~0%)|  1714 (~0%)|  2105 (~0%)|    -|
+    |  + p_sum        |       -|   0.41|        5|   50.000|         -|        5|     -|        no|     -|  6 (~0%)|  1106 (~0%)|  1416 (~0%)|    -|
+    +-----------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| ap_return |         | 160      |
+| b_op1     | ap_none | 128      |
+| b_op2     | ap_none | 128      |
+| f_op      | ap_none | 32       |
+| op        | ap_none | 32       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------+
+| Argument | Direction | Datatype    |
++----------+-----------+-------------+
+| b_op1    | in        | Ban const & |
+| b_op2    | in        | Ban const & |
+| f_op     | in        | float       |
+| op       | in        | op_type     |
+| return   | out       | output      |
++----------+-----------+-------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| b_op1    | b_op1        | port    |
+| b_op2    | b_op2        | port    |
+| f_op     | f_op         | port    |
+| op       | op           | port    |
+| return   | ap_return    | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+--------------+-------+---------+---------+
+| Name                                     | DSP | Pragma | Variable     | Op    | Impl    | Latency |
++------------------------------------------+-----+--------+--------------+-------+---------+---------+
+| + ban_interface                          | 24  |        |              |       |         |         |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | num2         | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | num          | fdiv  | fabric  | 8       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | mul_i        | fmul  | maxdsp  | 2       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | num_3        | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | div16_i      | fdiv  | fabric  | 8       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | mul17_i      | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | add_i        | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | mul18_i      | fmul  | maxdsp  | 2       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U50       | -   |        | c_num_8      | fdiv  | fabric  | 8       |
+|   c_p_5_fu_2665_p2                       | -   |        | c_p_5        | sub   | fabric  | 0       |
+|   c_p_8_fu_2801_p2                       | -   |        | c_p_8        | sub   | fabric  | 0       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | res_num_2    | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | res_num_3    | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U50       | -   |        | res_num_5    | fdiv  | fabric  | 8       |
+|   res_p_17_fu_2928_p2                    | -   |        | res_p_17     | add   | fabric  | 0       |
+|   res_p_16_fu_2974_p2                    | -   |        | res_p_16     | add   | fabric  | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | res_num      | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | res_num_1    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | res_num_4    | fmul  | maxdsp  | 2       |
+|   res_p_15_fu_3101_p2                    | -   |        | res_p_15     | add   | fabric  | 0       |
+|   res_p_14_fu_3148_p2                    | -   |        | res_p_14     | add   | fabric  | 0       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | eps_2        | fdiv  | fabric  | 8       |
+|   fdiv_32ns_32ns_32_9_no_dsp_1_U49       | -   |        | eps_2_1      | fdiv  | fabric  | 8       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | conv14_i     | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | conv19_i     | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | mul5_i_i1    | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | eps_3        | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | mul12_i_i1   | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | add16_i_i1   | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | mul19_i_i1   | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U44 | 2   |        | eps_3_1      | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U47      | 3   |        | mul27_i      | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | add29_i      | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U48      | 3   |        | mul31_i      | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U44 | 2   |        | add33_i      | fadd  | fulldsp | 3       |
+|   fsqrt_32ns_32ns_32_8_no_dsp_1_U60      | -   |        | normalizer_2 | fsqrt | fabric  | 7       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | num_res_11   | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | num_res_4    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | num_res      | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | mul5_i_i     | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U47      | 3   |        | mul8_i_i     | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | num_res_10   | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U45      | 3   |        | mul12_i_i    | fmul  | maxdsp  | 2       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U46      | 3   |        | mul15_i_i    | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | add16_i_i    | fadd  | fulldsp | 3       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U48      | 3   |        | mul19_i_i    | fmul  | maxdsp  | 2       |
+|   faddfsub_32ns_32ns_32_4_full_dsp_1_U43 | 2   |        | c_num_7      | fadd  | fulldsp | 3       |
+|   c_p_fu_4683_p2                         | -   |        | c_p          | add   | fabric  | 0       |
+|   c_p_7_fu_4771_p2                       | -   |        | c_p_7        | add   | fabric  | 0       |
+|   c_p_6_fu_4817_p2                       | -   |        | c_p_6        | add   | fabric  | 0       |
+|  + operator_2                            | 2   |        |              |       |         |         |
+|    add_ln279_fu_269_p2                   | -   |        | add_ln279    | add   | fabric  | 0       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U1     | 2   |        | add          | fadd  | fulldsp | 3       |
+|    res_p_1_fu_413_p2                     | -   |        | res_p_1      | add   | fabric  | 0       |
+|    res_p_2_fu_465_p2                     | -   |        | res_p_2      | add   | fabric  | 0       |
+|  + operator_div                          | 0   |        |              |       |         |         |
+|    c_p_fu_401_p2                         | -   |        | c_p          | sub   | fabric  | 0       |
+|    c_p_2_fu_500_p2                       | -   |        | c_p_2        | add   | fabric  | 0       |
+|    c_p_1_fu_546_p2                       | -   |        | c_p_1        | add   | fabric  | 0       |
+|  + operator_1                            | 0   |        |              |       |         |         |
+|    diff_p_fu_582_p2                      | -   |        | diff_p       | sub   | fabric  | 0       |
+|    c_p_4_fu_707_p2                       | -   |        | c_p_4        | add   | fabric  | 0       |
+|    c_p_3_fu_753_p2                       | -   |        | c_p_3        | add   | fabric  | 0       |
+|  + operator_add                          | 6   |        |              |       |         |         |
+|    diff_p_fu_528_p2                      | -   |        | diff_p       | sub   | fabric  | 0       |
+|    sub_ln94_fu_556_p2                    | -   |        | sub_ln94     | sub   | fabric  | 0       |
+|   + p_sum                                | 6   |        |              |       |         |         |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U31   | 2   |        | add1         | fadd  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U32   | 2   |        | add2         | fadd  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U33   | 2   |        | add3         | fadd  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U31   | 2   |        | add          | fadd  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U32   | 2   |        | add7         | fadd  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U31   | 2   |        | add4         | fadd  | fulldsp | 3       |
+|     add_ln53_fu_478_p2                   | -   |        | add_ln53     | add   | fabric  | 0       |
++------------------------------------------+-----+--------+--------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+  No pragmas found
+

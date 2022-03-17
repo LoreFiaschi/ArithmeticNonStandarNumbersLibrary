@@ -1,0 +1,616 @@
+
+
+================================================================
+== Vitis HLS Report for 'operator_div'
+================================================================
+* Date:           Thu Mar 17 18:48:02 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        bans3hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|       45|  30.000 ns|  0.450 us|    3|   45|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 46
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 46 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 46 
+45 --> 46 
+46 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.78>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_read_1 = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read14" [src/ban_s3.cpp:22]   --->   Operation 47 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln22 = trunc i128 %p_read_1" [src/ban_s3.cpp:22]   --->   Operation 48 'trunc' 'trunc_ln22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln22_s = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read_1, i32 32, i32 63" [src/ban_s3.cpp:22]   --->   Operation 49 'partselect' 'trunc_ln22_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%bitcast_ln22 = bitcast i32 %trunc_ln22_s" [src/ban_s3.cpp:22]   --->   Operation 50 'bitcast' 'bitcast_ln22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_1, i32 55, i32 62" [src/ban_s3.cpp:22]   --->   Operation 51 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln22_1 = partselect i23 @_ssdm_op_PartSelect.i23.i128.i32.i32, i128 %p_read_1, i32 32, i32 54" [src/ban_s3.cpp:22]   --->   Operation 52 'partselect' 'trunc_ln22_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.84ns)   --->   "%icmp_ln22_1 = icmp_ne  i8 %tmp_s, i8 255" [src/ban_s3.cpp:22]   --->   Operation 53 'icmp' 'icmp_ln22_1' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (1.05ns)   --->   "%icmp_ln22_2 = icmp_eq  i23 %trunc_ln22_1, i23 0" [src/ban_s3.cpp:22]   --->   Operation 54 'icmp' 'icmp_ln22_2' <Predicate = true> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [2/2] (2.78ns)   --->   "%tmp_1 = fcmp_oeq  i32 %bitcast_ln22, i32 0" [src/ban_s3.cpp:22]   --->   Operation 55 'fcmp' 'tmp_1' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read_1, i32 64, i32 95" [src/ban_s3.cpp:132]   --->   Operation 56 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%bitcast_ln132 = bitcast i32 %trunc_ln1" [src/ban_s3.cpp:132]   --->   Operation 57 'bitcast' 'bitcast_ln132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_1, i32 87, i32 94" [src/ban_s3.cpp:22]   --->   Operation 58 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%trunc_ln22_2 = partselect i23 @_ssdm_op_PartSelect.i23.i128.i32.i32, i128 %p_read_1, i32 64, i32 86" [src/ban_s3.cpp:22]   --->   Operation 59 'partselect' 'trunc_ln22_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.84ns)   --->   "%icmp_ln22_3 = icmp_ne  i8 %tmp_2, i8 255" [src/ban_s3.cpp:22]   --->   Operation 60 'icmp' 'icmp_ln22_3' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (1.05ns)   --->   "%icmp_ln22_4 = icmp_eq  i23 %trunc_ln22_2, i23 0" [src/ban_s3.cpp:22]   --->   Operation 61 'icmp' 'icmp_ln22_4' <Predicate = true> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 62 [2/2] (2.78ns)   --->   "%tmp_3 = fcmp_oeq  i32 %bitcast_ln132, i32 0" [src/ban_s3.cpp:22]   --->   Operation 62 'fcmp' 'tmp_3' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.35>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%p_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %p_read25" [src/ban_s3.cpp:22]   --->   Operation 63 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.99ns)   --->   "%icmp_ln22 = icmp_eq  i32 %trunc_ln22, i32 0" [src/ban_s3.cpp:22]   --->   Operation 64 'icmp' 'icmp_ln22' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node and_ln22_3)   --->   "%or_ln22 = or i1 %icmp_ln22_2, i1 %icmp_ln22_1" [src/ban_s3.cpp:22]   --->   Operation 65 'or' 'or_ln22' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/2] (2.78ns)   --->   "%tmp_1 = fcmp_oeq  i32 %bitcast_ln22, i32 0" [src/ban_s3.cpp:22]   --->   Operation 66 'fcmp' 'tmp_1' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node and_ln22_3)   --->   "%and_ln22 = and i1 %or_ln22, i1 %tmp_1" [src/ban_s3.cpp:22]   --->   Operation 67 'and' 'and_ln22' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node and_ln22_3)   --->   "%or_ln22_1 = or i1 %icmp_ln22_4, i1 %icmp_ln22_3" [src/ban_s3.cpp:22]   --->   Operation 68 'or' 'or_ln22_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 69 [1/2] (2.78ns)   --->   "%tmp_3 = fcmp_oeq  i32 %bitcast_ln132, i32 0" [src/ban_s3.cpp:22]   --->   Operation 69 'fcmp' 'tmp_3' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node and_ln22_3)   --->   "%and_ln22_1 = and i1 %or_ln22_1, i1 %tmp_3" [src/ban_s3.cpp:22]   --->   Operation 70 'and' 'and_ln22_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 71 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln22_3 = and i1 %and_ln22, i1 %and_ln22_1" [src/ban_s3.cpp:22]   --->   Operation 71 'and' 'and_ln22_3' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln22_2 = and i1 %and_ln22_3, i1 %icmp_ln22" [src/ban_s3.cpp:22]   --->   Operation 72 'and' 'and_ln22_2' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln22 = br i1 %and_ln22_2, void %_ZNK3BaneqEf.exit.thread, void %_ZNK3BaneqEf.exit" [src/ban_s3.cpp:22]   --->   Operation 73 'br' 'br_ln22' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln22_3 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read_1, i32 96, i32 127" [src/ban_s3.cpp:22]   --->   Operation 74 'partselect' 'trunc_ln22_3' <Predicate = (and_ln22_2)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%bitcast_ln22_1 = bitcast i32 %trunc_ln22_3" [src/ban_s3.cpp:22]   --->   Operation 75 'bitcast' 'bitcast_ln22_1' <Predicate = (and_ln22_2)> <Delay = 0.00>
+ST_2 : Operation 76 [2/2] (2.78ns)   --->   "%tmp_4 = fcmp_oeq  i32 %bitcast_ln22_1, i32 0" [src/ban_s3.cpp:22]   --->   Operation 76 'fcmp' 'tmp_4' <Predicate = (and_ln22_2)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 7.05>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %p_read_1, i32 119, i32 126" [src/ban_s3.cpp:22]   --->   Operation 77 'partselect' 'tmp' <Predicate = (and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%trunc_ln22_4 = partselect i23 @_ssdm_op_PartSelect.i23.i128.i32.i32, i128 %p_read_1, i32 96, i32 118" [src/ban_s3.cpp:22]   --->   Operation 78 'partselect' 'trunc_ln22_4' <Predicate = (and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.84ns)   --->   "%icmp_ln22_5 = icmp_ne  i8 %tmp, i8 255" [src/ban_s3.cpp:22]   --->   Operation 79 'icmp' 'icmp_ln22_5' <Predicate = (and_ln22_2)> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (1.05ns)   --->   "%icmp_ln22_6 = icmp_eq  i23 %trunc_ln22_4, i23 0" [src/ban_s3.cpp:22]   --->   Operation 80 'icmp' 'icmp_ln22_6' <Predicate = (and_ln22_2)> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node and_ln22_4)   --->   "%or_ln22_2 = or i1 %icmp_ln22_6, i1 %icmp_ln22_5" [src/ban_s3.cpp:22]   --->   Operation 81 'or' 'or_ln22_2' <Predicate = (and_ln22_2)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [1/2] (2.78ns)   --->   "%tmp_4 = fcmp_oeq  i32 %bitcast_ln22_1, i32 0" [src/ban_s3.cpp:22]   --->   Operation 82 'fcmp' 'tmp_4' <Predicate = (and_ln22_2)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln22_4 = and i1 %or_ln22_2, i1 %tmp_4" [src/ban_s3.cpp:22]   --->   Operation 83 'and' 'and_ln22_4' <Predicate = (and_ln22_2)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.52ns)   --->   "%br_ln127 = br i1 %and_ln22_4, void %_ZNK3BaneqEf.exit.thread, void %_ZN3Ban14to_normal_formEv.18.exit" [src/ban_s3.cpp:127]   --->   Operation 84 'br' 'br_ln127' <Predicate = (and_ln22_2)> <Delay = 0.52>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read, i32 32, i32 63" [src/ban_s3.cpp:131]   --->   Operation 85 'partselect' 'trunc_ln2' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%bitcast_ln131 = bitcast i32 %trunc_ln2" [src/ban_s3.cpp:131]   --->   Operation 86 'bitcast' 'bitcast_ln131' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 87 [9/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 87 'fdiv' 'num_res' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%trunc_ln132_1 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read, i32 64, i32 95" [src/ban_s3.cpp:132]   --->   Operation 88 'partselect' 'trunc_ln132_1' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%trunc_ln3 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read_1, i32 96, i32 127" [src/ban_s3.cpp:133]   --->   Operation 89 'partselect' 'trunc_ln3' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%trunc_ln133_1 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %p_read, i32 96, i32 127" [src/ban_s3.cpp:133]   --->   Operation 90 'partselect' 'trunc_ln133_1' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%trunc_ln135 = trunc i128 %p_read" [src/ban_s3.cpp:135]   --->   Operation 91 'trunc' 'trunc_ln135' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (1.01ns)   --->   "%c_p = sub i32 %trunc_ln22, i32 %trunc_ln135" [src/ban_s3.cpp:135]   --->   Operation 92 'sub' 'c_p' <Predicate = (!and_ln22_4) | (!and_ln22_2)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.05>
+ST_4 : Operation 93 [8/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 93 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.05>
+ST_5 : Operation 94 [7/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 94 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.05>
+ST_6 : Operation 95 [6/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 95 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.05>
+ST_7 : Operation 96 [5/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 96 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.05>
+ST_8 : Operation 97 [4/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 97 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.05>
+ST_9 : Operation 98 [3/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 98 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.05>
+ST_10 : Operation 99 [2/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 99 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.05>
+ST_11 : Operation 100 [1/9] (7.05ns)   --->   "%num_res = fdiv i32 %bitcast_ln22, i32 %bitcast_ln131" [src/ban_s3.cpp:131]   --->   Operation 100 'fdiv' 'num_res' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.01>
+ST_12 : Operation 101 [1/1] (0.00ns)   --->   "%bitcast_ln132_1 = bitcast i32 %trunc_ln132_1" [src/ban_s3.cpp:132]   --->   Operation 101 'bitcast' 'bitcast_ln132_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 102 [3/3] (7.01ns)   --->   "%mul = fmul i32 %num_res, i32 %bitcast_ln132_1" [src/ban_s3.cpp:132]   --->   Operation 102 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 103 [1/1] (0.00ns)   --->   "%bitcast_ln133_1 = bitcast i32 %trunc_ln133_1" [src/ban_s3.cpp:133]   --->   Operation 103 'bitcast' 'bitcast_ln133_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 104 [3/3] (7.01ns)   --->   "%mul1 = fmul i32 %num_res, i32 %bitcast_ln133_1" [src/ban_s3.cpp:133]   --->   Operation 104 'fmul' 'mul1' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.01>
+ST_13 : Operation 105 [2/3] (7.01ns)   --->   "%mul = fmul i32 %num_res, i32 %bitcast_ln132_1" [src/ban_s3.cpp:132]   --->   Operation 105 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 106 [2/3] (7.01ns)   --->   "%mul1 = fmul i32 %num_res, i32 %bitcast_ln133_1" [src/ban_s3.cpp:133]   --->   Operation 106 'fmul' 'mul1' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.01>
+ST_14 : Operation 107 [1/3] (7.01ns)   --->   "%mul = fmul i32 %num_res, i32 %bitcast_ln132_1" [src/ban_s3.cpp:132]   --->   Operation 107 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 108 [1/3] (7.01ns)   --->   "%mul1 = fmul i32 %num_res, i32 %bitcast_ln133_1" [src/ban_s3.cpp:133]   --->   Operation 108 'fmul' 'mul1' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.43>
+ST_15 : Operation 109 [4/4] (6.43ns)   --->   "%sub = fsub i32 %bitcast_ln132, i32 %mul" [src/ban_s3.cpp:132]   --->   Operation 109 'fsub' 'sub' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 110 [1/1] (0.00ns)   --->   "%bitcast_ln133 = bitcast i32 %trunc_ln3" [src/ban_s3.cpp:133]   --->   Operation 110 'bitcast' 'bitcast_ln133' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 111 [4/4] (6.43ns)   --->   "%sub1 = fsub i32 %bitcast_ln133, i32 %mul1" [src/ban_s3.cpp:133]   --->   Operation 111 'fsub' 'sub1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.43>
+ST_16 : Operation 112 [3/4] (6.43ns)   --->   "%sub = fsub i32 %bitcast_ln132, i32 %mul" [src/ban_s3.cpp:132]   --->   Operation 112 'fsub' 'sub' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 113 [3/4] (6.43ns)   --->   "%sub1 = fsub i32 %bitcast_ln133, i32 %mul1" [src/ban_s3.cpp:133]   --->   Operation 113 'fsub' 'sub1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.43>
+ST_17 : Operation 114 [2/4] (6.43ns)   --->   "%sub = fsub i32 %bitcast_ln132, i32 %mul" [src/ban_s3.cpp:132]   --->   Operation 114 'fsub' 'sub' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 115 [2/4] (6.43ns)   --->   "%sub1 = fsub i32 %bitcast_ln133, i32 %mul1" [src/ban_s3.cpp:133]   --->   Operation 115 'fsub' 'sub1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.43>
+ST_18 : Operation 116 [1/4] (6.43ns)   --->   "%sub = fsub i32 %bitcast_ln132, i32 %mul" [src/ban_s3.cpp:132]   --->   Operation 116 'fsub' 'sub' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 117 [1/4] (6.43ns)   --->   "%sub1 = fsub i32 %bitcast_ln133, i32 %mul1" [src/ban_s3.cpp:133]   --->   Operation 117 'fsub' 'sub1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 7.05>
+ST_19 : Operation 118 [9/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 118 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 7.05>
+ST_20 : Operation 119 [8/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 119 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 7.05>
+ST_21 : Operation 120 [7/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 120 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 7.05>
+ST_22 : Operation 121 [6/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 121 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.05>
+ST_23 : Operation 122 [5/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 122 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 7.05>
+ST_24 : Operation 123 [4/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 123 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 7.05>
+ST_25 : Operation 124 [3/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 124 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.05>
+ST_26 : Operation 125 [2/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 125 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 7.05>
+ST_27 : Operation 126 [1/9] (7.05ns)   --->   "%num_res_3 = fdiv i32 %sub, i32 %bitcast_ln131" [src/ban_s3.cpp:132]   --->   Operation 126 'fdiv' 'num_res_3' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 7.01>
+ST_28 : Operation 127 [3/3] (7.01ns)   --->   "%mul2 = fmul i32 %num_res_3, i32 %bitcast_ln132_1" [src/ban_s3.cpp:133]   --->   Operation 127 'fmul' 'mul2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 7.01>
+ST_29 : Operation 128 [2/3] (7.01ns)   --->   "%mul2 = fmul i32 %num_res_3, i32 %bitcast_ln132_1" [src/ban_s3.cpp:133]   --->   Operation 128 'fmul' 'mul2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 7.01>
+ST_30 : Operation 129 [1/3] (7.01ns)   --->   "%mul2 = fmul i32 %num_res_3, i32 %bitcast_ln132_1" [src/ban_s3.cpp:133]   --->   Operation 129 'fmul' 'mul2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 6.43>
+ST_31 : Operation 130 [4/4] (6.43ns)   --->   "%sub2 = fsub i32 %sub1, i32 %mul2" [src/ban_s3.cpp:133]   --->   Operation 130 'fsub' 'sub2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 6.43>
+ST_32 : Operation 131 [3/4] (6.43ns)   --->   "%sub2 = fsub i32 %sub1, i32 %mul2" [src/ban_s3.cpp:133]   --->   Operation 131 'fsub' 'sub2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 6.43>
+ST_33 : Operation 132 [2/4] (6.43ns)   --->   "%sub2 = fsub i32 %sub1, i32 %mul2" [src/ban_s3.cpp:133]   --->   Operation 132 'fsub' 'sub2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 6.43>
+ST_34 : Operation 133 [1/4] (6.43ns)   --->   "%sub2 = fsub i32 %sub1, i32 %mul2" [src/ban_s3.cpp:133]   --->   Operation 133 'fsub' 'sub2' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 7.05>
+ST_35 : Operation 134 [9/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 134 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 7.05>
+ST_36 : Operation 135 [8/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 135 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 7.05>
+ST_37 : Operation 136 [7/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 136 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 7.05>
+ST_38 : Operation 137 [6/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 137 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 7.05>
+ST_39 : Operation 138 [5/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 138 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 7.05>
+ST_40 : Operation 139 [4/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 139 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 7.05>
+ST_41 : Operation 140 [3/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 140 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 7.05>
+ST_42 : Operation 141 [2/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 141 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 7.05>
+ST_43 : Operation 142 [1/9] (7.05ns)   --->   "%c_num_2 = fdiv i32 %sub2, i32 %bitcast_ln131" [src/ban_s3.cpp:133]   --->   Operation 142 'fdiv' 'c_num_2' <Predicate = true> <Delay = 7.05> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 8> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 143 [2/2] (2.78ns)   --->   "%tmp_6 = fcmp_oeq  i32 %num_res, i32 0" [src/ban_s3.cpp:27]   --->   Operation 143 'fcmp' 'tmp_6' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 3.59>
+ST_44 : Operation 144 [1/1] (0.00ns)   --->   "%bitcast_ln27 = bitcast i32 %num_res" [src/ban_s3.cpp:27]   --->   Operation 144 'bitcast' 'bitcast_ln27' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln27, i32 23, i32 30" [src/ban_s3.cpp:27]   --->   Operation 145 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 146 [1/1] (0.00ns)   --->   "%trunc_ln27 = trunc i32 %bitcast_ln27" [src/ban_s3.cpp:27]   --->   Operation 146 'trunc' 'trunc_ln27' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 147 [1/1] (0.84ns)   --->   "%icmp_ln27 = icmp_ne  i8 %tmp_5, i8 255" [src/ban_s3.cpp:27]   --->   Operation 147 'icmp' 'icmp_ln27' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 148 [1/1] (1.05ns)   --->   "%icmp_ln27_1 = icmp_eq  i23 %trunc_ln27, i23 0" [src/ban_s3.cpp:27]   --->   Operation 148 'icmp' 'icmp_ln27_1' <Predicate = true> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node and_ln27)   --->   "%or_ln27 = or i1 %icmp_ln27_1, i1 %icmp_ln27" [src/ban_s3.cpp:27]   --->   Operation 149 'or' 'or_ln27' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 150 [1/2] (2.78ns)   --->   "%tmp_6 = fcmp_oeq  i32 %num_res, i32 0" [src/ban_s3.cpp:27]   --->   Operation 150 'fcmp' 'tmp_6' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 151 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln27 = and i1 %or_ln27, i1 %tmp_6" [src/ban_s3.cpp:27]   --->   Operation 151 'and' 'and_ln27' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 152 [1/1] (0.52ns)   --->   "%br_ln27 = br i1 %and_ln27, void %_ZN3Ban14to_normal_formEv.18.exit, void" [src/ban_s3.cpp:27]   --->   Operation 152 'br' 'br_ln27' <Predicate = true> <Delay = 0.52>
+ST_44 : Operation 153 [2/2] (2.78ns)   --->   "%tmp_8 = fcmp_oeq  i32 %num_res_3, i32 0" [src/ban_s3.cpp:30]   --->   Operation 153 'fcmp' 'tmp_8' <Predicate = (and_ln27)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 3.06>
+ST_45 : Operation 154 [1/1] (0.00ns)   --->   "%bitcast_ln30 = bitcast i32 %num_res_3" [src/ban_s3.cpp:30]   --->   Operation 154 'bitcast' 'bitcast_ln30' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 155 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln30, i32 23, i32 30" [src/ban_s3.cpp:30]   --->   Operation 155 'partselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 156 [1/1] (0.00ns)   --->   "%trunc_ln30 = trunc i32 %bitcast_ln30" [src/ban_s3.cpp:30]   --->   Operation 156 'trunc' 'trunc_ln30' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 157 [1/1] (0.84ns)   --->   "%icmp_ln30 = icmp_ne  i8 %tmp_7, i8 255" [src/ban_s3.cpp:30]   --->   Operation 157 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 158 [1/1] (1.05ns)   --->   "%icmp_ln30_1 = icmp_eq  i23 %trunc_ln30, i23 0" [src/ban_s3.cpp:30]   --->   Operation 158 'icmp' 'icmp_ln30_1' <Predicate = true> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node and_ln30)   --->   "%or_ln30 = or i1 %icmp_ln30_1, i1 %icmp_ln30" [src/ban_s3.cpp:30]   --->   Operation 159 'or' 'or_ln30' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 160 [1/2] (2.78ns)   --->   "%tmp_8 = fcmp_oeq  i32 %num_res_3, i32 0" [src/ban_s3.cpp:30]   --->   Operation 160 'fcmp' 'tmp_8' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 161 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln30 = and i1 %or_ln30, i1 %tmp_8" [src/ban_s3.cpp:30]   --->   Operation 161 'and' 'and_ln30' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 162 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %and_ln30, void, void" [src/ban_s3.cpp:30]   --->   Operation 162 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 163 [1/1] (1.01ns)   --->   "%c_p_2 = add i32 %c_p, i32 4294967295" [src/ban_s3.cpp:34]   --->   Operation 163 'add' 'c_p_2' <Predicate = (!and_ln30)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 164 [1/1] (0.52ns)   --->   "%br_ln35 = br void %_ZN3Ban14to_normal_formEv.18.exit" [src/ban_s3.cpp:35]   --->   Operation 164 'br' 'br_ln35' <Predicate = (!and_ln30)> <Delay = 0.52>
+ST_45 : Operation 165 [2/2] (2.78ns)   --->   "%tmp_10 = fcmp_oeq  i32 %c_num_2, i32 0" [src/ban_s3.cpp:38]   --->   Operation 165 'fcmp' 'tmp_10' <Predicate = (and_ln30)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 4.04>
+ST_46 : Operation 166 [1/1] (0.00ns)   --->   "%bitcast_ln38 = bitcast i32 %c_num_2" [src/ban_s3.cpp:38]   --->   Operation 166 'bitcast' 'bitcast_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.00>
+ST_46 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_9 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln38, i32 23, i32 30" [src/ban_s3.cpp:38]   --->   Operation 167 'partselect' 'tmp_9' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.00>
+ST_46 : Operation 168 [1/1] (0.00ns)   --->   "%trunc_ln38 = trunc i32 %bitcast_ln38" [src/ban_s3.cpp:38]   --->   Operation 168 'trunc' 'trunc_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.00>
+ST_46 : Operation 169 [1/1] (0.84ns)   --->   "%icmp_ln38 = icmp_ne  i8 %tmp_9, i8 255" [src/ban_s3.cpp:38]   --->   Operation 169 'icmp' 'icmp_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 170 [1/1] (1.05ns)   --->   "%icmp_ln38_1 = icmp_eq  i23 %trunc_ln38, i23 0" [src/ban_s3.cpp:38]   --->   Operation 170 'icmp' 'icmp_ln38_1' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node and_ln38)   --->   "%or_ln38 = or i1 %icmp_ln38_1, i1 %icmp_ln38" [src/ban_s3.cpp:38]   --->   Operation 171 'or' 'or_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 172 [1/2] (2.78ns)   --->   "%tmp_10 = fcmp_oeq  i32 %c_num_2, i32 0" [src/ban_s3.cpp:38]   --->   Operation 172 'fcmp' 'tmp_10' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 173 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln38 = and i1 %or_ln38, i1 %tmp_10" [src/ban_s3.cpp:38]   --->   Operation 173 'and' 'and_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 174 [1/1] (1.01ns)   --->   "%c_p_1 = add i32 %c_p, i32 4294967294" [src/ban_s3.cpp:41]   --->   Operation 174 'add' 'c_p_1' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 175 [1/1] (0.44ns)   --->   "%select_ln38 = select i1 %and_ln38, i32 %num_res, i32 %c_num_2" [src/ban_s3.cpp:38]   --->   Operation 175 'select' 'select_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 176 [1/1] (0.44ns)   --->   "%select_ln38_1 = select i1 %and_ln38, i32 %c_num_2, i32 0" [src/ban_s3.cpp:38]   --->   Operation 176 'select' 'select_ln38_1' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 177 [1/1] (0.44ns)   --->   "%select_ln38_2 = select i1 %and_ln38, i32 0, i32 %c_p_1" [src/ban_s3.cpp:38]   --->   Operation 177 'select' 'select_ln38_2' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 178 [1/1] (0.52ns)   --->   "%br_ln38 = br void %_ZN3Ban14to_normal_formEv.18.exit" [src/ban_s3.cpp:38]   --->   Operation 178 'br' 'br_ln38' <Predicate = (!and_ln22_4 & and_ln27 & and_ln30) | (!and_ln22_2 & and_ln27 & and_ln30)> <Delay = 0.52>
+ST_46 : Operation 179 [1/1] (0.00ns)   --->   "%agg_result_1_0_0 = phi i32 0, void %_ZNK3BaneqEf.exit, i32 %num_res_3, void, i32 %num_res, void %_ZNK3BaneqEf.exit.thread, i32 %select_ln38, void"   --->   Operation 179 'phi' 'agg_result_1_0_0' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 180 [1/1] (0.00ns)   --->   "%agg_result_1_1_0 = phi i32 0, void %_ZNK3BaneqEf.exit, i32 %c_num_2, void, i32 %num_res_3, void %_ZNK3BaneqEf.exit.thread, i32 %num_res_3, void"   --->   Operation 180 'phi' 'agg_result_1_1_0' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 181 [1/1] (0.00ns)   --->   "%agg_result_1_2_0 = phi i32 0, void %_ZNK3BaneqEf.exit, i32 0, void, i32 %c_num_2, void %_ZNK3BaneqEf.exit.thread, i32 %select_ln38_1, void"   --->   Operation 181 'phi' 'agg_result_1_2_0' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 182 [1/1] (0.00ns)   --->   "%agg_result_01_0 = phi i32 0, void %_ZNK3BaneqEf.exit, i32 %c_p_2, void, i32 %c_p, void %_ZNK3BaneqEf.exit.thread, i32 %select_ln38_2, void"   --->   Operation 182 'phi' 'agg_result_01_0' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 183 [1/1] (0.00ns)   --->   "%mrv = insertvalue i128 <undef>, i32 %agg_result_01_0" [src/ban_s3.cpp:140]   --->   Operation 183 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 184 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i128 %mrv, i32 %agg_result_1_0_0" [src/ban_s3.cpp:140]   --->   Operation 184 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 185 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i128 %mrv_1, i32 %agg_result_1_1_0" [src/ban_s3.cpp:140]   --->   Operation 185 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 186 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i128 %mrv_2, i32 %agg_result_1_2_0" [src/ban_s3.cpp:140]   --->   Operation 186 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 187 [1/1] (0.00ns)   --->   "%ret_ln140 = ret i128 %mrv_3" [src/ban_s3.cpp:140]   --->   Operation 187 'ret' 'ret_ln140' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.78ns
+The critical path consists of the following:
+	wire read operation ('p_read_1', src/ban_s3.cpp:22) on port 'p_read14' (src/ban_s3.cpp:22) [4]  (0 ns)
+	'fcmp' operation ('tmp_1', src/ban_s3.cpp:22) [14]  (2.78 ns)
+
+ <State 2>: 3.36ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_1', src/ban_s3.cpp:22) [14]  (2.78 ns)
+	'and' operation ('and_ln22', src/ban_s3.cpp:22) [15]  (0 ns)
+	'and' operation ('and_ln22_3', src/ban_s3.cpp:22) [25]  (0.287 ns)
+	'and' operation ('and_ln22_2', src/ban_s3.cpp:22) [26]  (0.287 ns)
+
+ <State 3>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 4>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 5>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 6>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 7>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 8>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 9>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 10>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 11>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:131) [42]  (7.06 ns)
+
+ <State 12>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul', src/ban_s3.cpp:132) [45]  (7.02 ns)
+
+ <State 13>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul', src/ban_s3.cpp:132) [45]  (7.02 ns)
+
+ <State 14>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul', src/ban_s3.cpp:132) [45]  (7.02 ns)
+
+ <State 15>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub', src/ban_s3.cpp:132) [46]  (6.44 ns)
+
+ <State 16>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub', src/ban_s3.cpp:132) [46]  (6.44 ns)
+
+ <State 17>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub', src/ban_s3.cpp:132) [46]  (6.44 ns)
+
+ <State 18>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub', src/ban_s3.cpp:132) [46]  (6.44 ns)
+
+ <State 19>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 20>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 21>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 22>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 23>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 24>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 25>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 26>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 27>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('num_res', src/ban_s3.cpp:132) [47]  (7.06 ns)
+
+ <State 28>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2', src/ban_s3.cpp:133) [54]  (7.02 ns)
+
+ <State 29>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2', src/ban_s3.cpp:133) [54]  (7.02 ns)
+
+ <State 30>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2', src/ban_s3.cpp:133) [54]  (7.02 ns)
+
+ <State 31>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub2', src/ban_s3.cpp:133) [55]  (6.44 ns)
+
+ <State 32>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub2', src/ban_s3.cpp:133) [55]  (6.44 ns)
+
+ <State 33>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub2', src/ban_s3.cpp:133) [55]  (6.44 ns)
+
+ <State 34>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('sub2', src/ban_s3.cpp:133) [55]  (6.44 ns)
+
+ <State 35>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 36>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 37>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 38>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 39>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 40>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 41>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 42>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 43>: 7.06ns
+The critical path consists of the following:
+	'fdiv' operation ('c.num', src/ban_s3.cpp:133) [56]  (7.06 ns)
+
+ <State 44>: 3.59ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_6', src/ban_s3.cpp:27) [65]  (2.78 ns)
+	'and' operation ('and_ln27', src/ban_s3.cpp:27) [66]  (0.287 ns)
+	multiplexor before 'phi' operation ('num_res') with incoming values : ('num_res', src/ban_s3.cpp:131) ('num_res', src/ban_s3.cpp:132) ('select_ln38', src/ban_s3.cpp:38) [96]  (0.525 ns)
+
+ <State 45>: 3.07ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_8', src/ban_s3.cpp:30) [75]  (2.78 ns)
+	'and' operation ('and_ln30', src/ban_s3.cpp:30) [76]  (0.287 ns)
+
+ <State 46>: 4.04ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_10', src/ban_s3.cpp:38) [88]  (2.78 ns)
+	'and' operation ('and_ln38', src/ban_s3.cpp:38) [89]  (0.287 ns)
+	'select' operation ('select_ln38', src/ban_s3.cpp:38) [91]  (0.449 ns)
+	multiplexor before 'phi' operation ('num_res') with incoming values : ('num_res', src/ban_s3.cpp:131) ('num_res', src/ban_s3.cpp:132) ('select_ln38', src/ban_s3.cpp:38) [96]  (0.525 ns)
+	'phi' operation ('num_res') with incoming values : ('num_res', src/ban_s3.cpp:131) ('num_res', src/ban_s3.cpp:132) ('select_ln38', src/ban_s3.cpp:38) [96]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

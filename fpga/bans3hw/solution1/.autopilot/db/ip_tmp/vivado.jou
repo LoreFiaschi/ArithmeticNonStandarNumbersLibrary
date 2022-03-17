@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Mar 17 18:50:07 2022
+# Process ID: 6412
+# Current directory: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1/.autopilot/db/ip_tmp/vivado.jou
+# Running On: lorenzo-System-Product-Name, OS: Linux, CPU Frequency: 4544.339 MHz, CPU Physical cores: 8, Host memory: 33511 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace

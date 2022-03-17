@@ -1,0 +1,2642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1647539289603">
+  <ports id="1" name="p_read14" type="PortType" coreId="3621216858" bitwidth="128">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="b_p_read" type="PortType" originalName="b.p" coreId="29" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="p_read8" type="PortType" originalName="b.num[0]" coreId="2794021904" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="p_read9" type="PortType" originalName="b.num[1]" coreId="2792500144" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="p_read10" type="PortType" originalName="b.num[2]" coreId="1574005760" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="16" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="17" name="ap_return_2" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="18" name="ap_return_3" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="186" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="188" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="190" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="193" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="196" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="197" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="198" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="201" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="202" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="203" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="206" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="211" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="214" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="225" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="228" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="231" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="232" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="233" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.7"/>
+  <edges id="236" source_obj="//@blocks.1/@node_objs.6" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="237" source_obj="//@blocks.1/@node_objs.7" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="238" source_obj="//@blocks.1/@node_objs.8" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="239" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="240" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="242" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="247" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="249" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="255" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="259" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="261" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="263" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="264" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="265" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="267" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="268" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="269" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="272" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="274" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="279" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="281" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="287" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="291" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="293" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="295" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="296" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="297" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="299" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="300" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="301" source_obj="//@blocks.4/@node_objs.8" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="302" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="303" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.4/@node_objs.9"/>
+  <edges id="304" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="306" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="309" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="314" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="315" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="317" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.5/@node_objs.5"/>
+  <edges id="319" source_obj="//@blocks.5/@node_objs.5" sink_obj="//@blocks.5/@node_objs.6"/>
+  <edges id="320" source_obj="//@blocks.5/@node_objs.4" sink_obj="//@blocks.5/@node_objs.6"/>
+  <edges id="321" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.5/@node_objs.7"/>
+  <edges id="323" source_obj="//@blocks.5/@node_objs.6" sink_obj="//@blocks.5/@node_objs.8"/>
+  <edges id="324" source_obj="//@blocks.5/@node_objs.7" sink_obj="//@blocks.5/@node_objs.8"/>
+  <edges id="325" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.5/@node_objs.9"/>
+  <edges id="327" source_obj="//@blocks.5/@node_objs.9" sink_obj="//@blocks.5/@node_objs.10"/>
+  <edges id="330" source_obj="//@blocks.5/@node_objs.9" sink_obj="//@blocks.5/@node_objs.11"/>
+  <edges id="331" source_obj="//@blocks.5/@node_objs.10" sink_obj="//@blocks.5/@node_objs.12"/>
+  <edges id="333" source_obj="//@blocks.5/@node_objs.11" sink_obj="//@blocks.5/@node_objs.13"/>
+  <edges id="335" source_obj="//@blocks.5/@node_objs.13" sink_obj="//@blocks.5/@node_objs.14"/>
+  <edges id="336" source_obj="//@blocks.5/@node_objs.12" sink_obj="//@blocks.5/@node_objs.14"/>
+  <edges id="337" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.5/@node_objs.15"/>
+  <edges id="339" source_obj="//@blocks.5/@node_objs.14" sink_obj="//@blocks.5/@node_objs.16"/>
+  <edges id="340" source_obj="//@blocks.5/@node_objs.15" sink_obj="//@blocks.5/@node_objs.16"/>
+  <edges id="341" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.5/@node_objs.17"/>
+  <edges id="343" source_obj="//@blocks.5/@node_objs.17" sink_obj="//@blocks.5/@node_objs.18"/>
+  <edges id="346" source_obj="//@blocks.5/@node_objs.17" sink_obj="//@blocks.5/@node_objs.19"/>
+  <edges id="347" source_obj="//@blocks.5/@node_objs.18" sink_obj="//@blocks.5/@node_objs.20"/>
+  <edges id="349" source_obj="//@blocks.5/@node_objs.19" sink_obj="//@blocks.5/@node_objs.21"/>
+  <edges id="351" source_obj="//@blocks.5/@node_objs.21" sink_obj="//@blocks.5/@node_objs.22"/>
+  <edges id="352" source_obj="//@blocks.5/@node_objs.20" sink_obj="//@blocks.5/@node_objs.22"/>
+  <edges id="353" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.5/@node_objs.23"/>
+  <edges id="355" source_obj="//@blocks.5/@node_objs.22" sink_obj="//@blocks.5/@node_objs.24"/>
+  <edges id="356" source_obj="//@blocks.5/@node_objs.23" sink_obj="//@blocks.5/@node_objs.24"/>
+  <edges id="357" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.25"/>
+  <edges id="358" source_obj="//@blocks.5/@node_objs.8" sink_obj="//@blocks.5/@node_objs.25"/>
+  <edges id="359" source_obj="//@blocks.5/@node_objs.16" sink_obj="//@blocks.5/@node_objs.26"/>
+  <edges id="360" source_obj="//@blocks.5/@node_objs.24" sink_obj="//@blocks.5/@node_objs.26"/>
+  <edges id="361" source_obj="//@blocks.5/@node_objs.26" sink_obj="//@blocks.5/@node_objs.27"/>
+  <edges id="362" source_obj="//@blocks.5/@node_objs.25" sink_obj="//@blocks.5/@node_objs.27"/>
+  <edges id="363" source_obj="//@blocks.5/@node_objs.27" sink_obj="//@blocks.5/@node_objs.28"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.28"/>
+  <edges id="365" edge_type="CtrlEdge" source_obj="//@blocks.20" sink_obj="//@blocks.5/@node_objs.28"/>
+  <edges id="367" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.20/@node_objs.0"/>
+  <edges id="370" source_obj="//@blocks.20/@node_objs.0" sink_obj="//@blocks.20/@node_objs.1"/>
+  <edges id="372" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.20/@node_objs.2"/>
+  <edges id="375" source_obj="//@blocks.20/@node_objs.2" sink_obj="//@blocks.20/@node_objs.3"/>
+  <edges id="377" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.20/@node_objs.4"/>
+  <edges id="380" source_obj="//@blocks.20/@node_objs.4" sink_obj="//@blocks.20/@node_objs.5"/>
+  <edges id="381" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.20/@node_objs.6"/>
+  <edges id="382" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="383" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="384" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="387" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="388" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="389" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="391" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.19/@node_objs.0"/>
+  <edges id="394" source_obj="//@blocks.19/@node_objs.0" sink_obj="//@blocks.19/@node_objs.1"/>
+  <edges id="396" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.19/@node_objs.2"/>
+  <edges id="399" source_obj="//@blocks.19/@node_objs.2" sink_obj="//@blocks.19/@node_objs.3"/>
+  <edges id="401" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.19/@node_objs.4"/>
+  <edges id="404" source_obj="//@blocks.19/@node_objs.4" sink_obj="//@blocks.19/@node_objs.5"/>
+  <edges id="405" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.19/@node_objs.6"/>
+  <edges id="406" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="409" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="410" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="411" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="414" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="418" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="421" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="422" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="423" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="425" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.16/@node_objs.0"/>
+  <edges id="427" source_obj="//@blocks.16/@node_objs.0" sink_obj="//@blocks.16/@node_objs.1"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.16/@node_objs.1"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.16/@node_objs.1"/>
+  <edges id="430" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="431" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="433" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.17/@node_objs.1"/>
+  <edges id="436" source_obj="//@blocks.17/@node_objs.1" sink_obj="//@blocks.17/@node_objs.2"/>
+  <edges id="437" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.17/@node_objs.3"/>
+  <edges id="438" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="439" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="440" source_obj="//@blocks.17/@node_objs.0" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="441" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="442" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.18/@node_objs.1"/>
+  <edges id="443" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.18/@node_objs.1"/>
+  <edges id="444" source_obj="//@blocks.17/@node_objs.2" sink_obj="//@blocks.18/@node_objs.1"/>
+  <edges id="445" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.18/@node_objs.1"/>
+  <edges id="446" source_obj="//@blocks.18/@node_objs.1" sink_obj="//@blocks.18/@node_objs.2"/>
+  <edges id="447" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.18/@node_objs.2"/>
+  <edges id="448" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.18/@node_objs.3"/>
+  <edges id="450" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="453" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="455" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.9/@node_objs.2"/>
+  <edges id="458" source_obj="//@blocks.9/@node_objs.2" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="459" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="460" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="463" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="465" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.9/@node_objs.4"/>
+  <edges id="466" source_obj="//@blocks.9/@node_objs.1" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="467" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="468" source_obj="//@blocks.9/@node_objs.3" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="469" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="470" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="471" source_obj="//@blocks.9/@node_objs.3" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="472" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="473" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="474" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="475" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="476" source_obj="//@blocks.9/@node_objs.1" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="477" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="478" source_obj="//@blocks.9/@node_objs.3" sink_obj="//@blocks.12/@node_objs.2"/>
+  <edges id="479" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.12/@node_objs.2"/>
+  <edges id="480" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="482" source_obj="//@blocks.12/@node_objs.3" sink_obj="//@blocks.12/@node_objs.4"/>
+  <edges id="485" source_obj="//@blocks.12/@node_objs.3" sink_obj="//@blocks.12/@node_objs.5"/>
+  <edges id="486" source_obj="//@blocks.12/@node_objs.4" sink_obj="//@blocks.12/@node_objs.6"/>
+  <edges id="488" source_obj="//@blocks.12/@node_objs.5" sink_obj="//@blocks.12/@node_objs.7"/>
+  <edges id="490" source_obj="//@blocks.12/@node_objs.7" sink_obj="//@blocks.12/@node_objs.8"/>
+  <edges id="491" source_obj="//@blocks.12/@node_objs.6" sink_obj="//@blocks.12/@node_objs.8"/>
+  <edges id="492" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.9"/>
+  <edges id="494" source_obj="//@blocks.12/@node_objs.8" sink_obj="//@blocks.12/@node_objs.10"/>
+  <edges id="495" source_obj="//@blocks.12/@node_objs.9" sink_obj="//@blocks.12/@node_objs.10"/>
+  <edges id="496" source_obj="//@blocks.12/@node_objs.10" sink_obj="//@blocks.12/@node_objs.11"/>
+  <edges id="497" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.12/@node_objs.11"/>
+  <edges id="498" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.12/@node_objs.11"/>
+  <edges id="499" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="501" source_obj="//@blocks.13/@node_objs.0" sink_obj="//@blocks.13/@node_objs.1"/>
+  <edges id="504" source_obj="//@blocks.13/@node_objs.0" sink_obj="//@blocks.13/@node_objs.2"/>
+  <edges id="505" source_obj="//@blocks.13/@node_objs.1" sink_obj="//@blocks.13/@node_objs.3"/>
+  <edges id="507" source_obj="//@blocks.13/@node_objs.2" sink_obj="//@blocks.13/@node_objs.4"/>
+  <edges id="509" source_obj="//@blocks.13/@node_objs.4" sink_obj="//@blocks.13/@node_objs.5"/>
+  <edges id="510" source_obj="//@blocks.13/@node_objs.3" sink_obj="//@blocks.13/@node_objs.5"/>
+  <edges id="511" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.13/@node_objs.6"/>
+  <edges id="513" source_obj="//@blocks.13/@node_objs.5" sink_obj="//@blocks.13/@node_objs.7"/>
+  <edges id="514" source_obj="//@blocks.13/@node_objs.6" sink_obj="//@blocks.13/@node_objs.7"/>
+  <edges id="515" source_obj="//@blocks.13/@node_objs.7" sink_obj="//@blocks.13/@node_objs.8"/>
+  <edges id="516" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.13/@node_objs.8"/>
+  <edges id="517" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.13/@node_objs.8"/>
+  <edges id="518" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.14/@node_objs.0"/>
+  <edges id="521" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.14/@node_objs.1"/>
+  <edges id="522" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.15/@node_objs.0"/>
+  <edges id="524" source_obj="//@blocks.15/@node_objs.0" sink_obj="//@blocks.15/@node_objs.1"/>
+  <edges id="527" source_obj="//@blocks.15/@node_objs.0" sink_obj="//@blocks.15/@node_objs.2"/>
+  <edges id="528" source_obj="//@blocks.15/@node_objs.1" sink_obj="//@blocks.15/@node_objs.3"/>
+  <edges id="530" source_obj="//@blocks.15/@node_objs.2" sink_obj="//@blocks.15/@node_objs.4"/>
+  <edges id="532" source_obj="//@blocks.15/@node_objs.4" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="533" source_obj="//@blocks.15/@node_objs.3" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="534" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.15/@node_objs.6"/>
+  <edges id="536" source_obj="//@blocks.15/@node_objs.5" sink_obj="//@blocks.15/@node_objs.7"/>
+  <edges id="537" source_obj="//@blocks.15/@node_objs.6" sink_obj="//@blocks.15/@node_objs.7"/>
+  <edges id="538" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.15/@node_objs.8"/>
+  <edges id="540" source_obj="//@blocks.15/@node_objs.7" sink_obj="//@blocks.15/@node_objs.9"/>
+  <edges id="541" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.15/@node_objs.9"/>
+  <edges id="542" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.15/@node_objs.9"/>
+  <edges id="543" source_obj="//@blocks.15/@node_objs.7" sink_obj="//@blocks.15/@node_objs.10"/>
+  <edges id="544" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.15/@node_objs.10"/>
+  <edges id="546" source_obj="//@blocks.15/@node_objs.7" sink_obj="//@blocks.15/@node_objs.11"/>
+  <edges id="548" source_obj="//@blocks.15/@node_objs.8" sink_obj="//@blocks.15/@node_objs.11"/>
+  <edges id="549" edge_type="CtrlEdge" source_obj="//@blocks.21" sink_obj="//@blocks.15/@node_objs.12"/>
+  <edges id="550" source_obj="//@blocks.20/@node_objs.1" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="551" edge_type="CtrlEdge" source_obj="//@blocks.20" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="552" source_obj="//@blocks.19/@node_objs.1" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="553" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="554" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="555" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="556" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="557" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="558" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="559" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="560" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="561" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="562" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="563" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="564" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="565" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="566" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="567" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="568" source_obj="//@blocks.15/@node_objs.9" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="569" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.21/@node_objs.0"/>
+  <edges id="570" source_obj="//@blocks.20/@node_objs.3" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="571" edge_type="CtrlEdge" source_obj="//@blocks.20" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="572" source_obj="//@blocks.19/@node_objs.3" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="573" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="574" source_obj="//@blocks.18/@node_objs.0" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="575" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="576" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="577" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="578" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="579" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="580" source_obj="//@blocks.9/@node_objs.1" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="581" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="582" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="583" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="584" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="585" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="586" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="587" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="588" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="589" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.21/@node_objs.1"/>
+  <edges id="590" source_obj="//@blocks.20/@node_objs.5" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="591" edge_type="CtrlEdge" source_obj="//@blocks.20" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="592" source_obj="//@blocks.19/@node_objs.5" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="593" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="594" source_obj="//@blocks.18/@node_objs.2" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="595" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="596" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="597" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="599" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="600" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="601" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="602" source_obj="//@blocks.11/@node_objs.1" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="603" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="604" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="605" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="606" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="607" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="608" source_obj="//@blocks.15/@node_objs.10" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="609" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.21/@node_objs.2"/>
+  <edges id="610" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="611" edge_type="CtrlEdge" source_obj="//@blocks.20" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="612" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="613" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="614" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="615" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="616" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="617" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="618" source_obj="//@blocks.14/@node_objs.0" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="619" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="620" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="621" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="622" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="623" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="624" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="625" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="626" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="627" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="628" source_obj="//@blocks.15/@node_objs.11" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="629" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.21/@node_objs.3"/>
+  <edges id="632" source_obj="//@blocks.21/@node_objs.3" sink_obj="//@blocks.21/@node_objs.4"/>
+  <edges id="633" source_obj="//@blocks.21/@node_objs.4" sink_obj="//@blocks.21/@node_objs.5"/>
+  <edges id="634" source_obj="//@blocks.21/@node_objs.0" sink_obj="//@blocks.21/@node_objs.5"/>
+  <edges id="635" source_obj="//@blocks.21/@node_objs.5" sink_obj="//@blocks.21/@node_objs.6"/>
+  <edges id="636" source_obj="//@blocks.21/@node_objs.1" sink_obj="//@blocks.21/@node_objs.6"/>
+  <edges id="637" source_obj="//@blocks.21/@node_objs.6" sink_obj="//@blocks.21/@node_objs.7"/>
+  <edges id="638" source_obj="//@blocks.21/@node_objs.2" sink_obj="//@blocks.21/@node_objs.7"/>
+  <edges id="639" source_obj="//@blocks.21/@node_objs.7" sink_obj="//@blocks.21/@node_objs.8"/>
+  <edges id="640" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="641" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="642" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="643" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="644" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="645" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="646" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="647" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.21"/>
+  <edges id="648" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="649" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.20"/>
+  <edges id="650" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="651" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.19"/>
+  <edges id="652" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="653" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.21"/>
+  <edges id="654" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="655" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.16"/>
+  <edges id="656" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="657" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.12"/>
+  <edges id="658" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11"/>
+  <edges id="659" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.10"/>
+  <edges id="660" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.21"/>
+  <edges id="661" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.21"/>
+  <edges id="662" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.13"/>
+  <edges id="663" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.21"/>
+  <edges id="664" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.15"/>
+  <edges id="665" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.14"/>
+  <edges id="666" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.21"/>
+  <edges id="667" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.21"/>
+  <edges id="668" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.18"/>
+  <edges id="669" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.17"/>
+  <edges id="670" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.18"/>
+  <edges id="671" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.21"/>
+  <edges id="672" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.21"/>
+  <edges id="673" edge_type="CtrlEdge" source_obj="//@blocks.20" sink_obj="//@blocks.21"/>
+  <edges source_obj="//@blocks.21/@node_objs.8" sink_obj="//@ports.5"/>
+  <edges source_obj="//@blocks.21/@node_objs.8" sink_obj="//@ports.6"/>
+  <edges source_obj="//@blocks.21/@node_objs.8" sink_obj="//@ports.7"/>
+  <edges source_obj="//@blocks.21/@node_objs.8" sink_obj="//@ports.8"/>
+  <blocks id="14" name="block_14" type="BlockType">
+    <controlOutputObjs>block_25</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.exit.thread</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="p_read" lineNumber="74" originalName="b.num[2]" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="74" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>p_read10</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="p_read_2" lineNumber="74" originalName="b.num[1]" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="74" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>p_read9</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="p_read_3" lineNumber="74" originalName="b.num[0]" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="74" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>p_read8</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="b_p_read_1" lineNumber="74" originalName="b.p" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794009376" contextFuncName="operator_add" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="74" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>b_p_read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="p_read_4" lineNumber="74" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794155360" contextFuncName="operator_add" bitwidth="128" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="74" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>p_read14</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="c_p" lineNumber="22" originalName="c.p" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_fu_285_p1" coreId="2794007424" contextFuncName="operator_eq" bitwidth="32" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="icmp_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_fu_289_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.99" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794096432" contextFuncName="operator_eq" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit.thread</controlInputObjs>
+      <controlInputObjs>block_25</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>22</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="25" name="block_25" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_36</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.exit.thread</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="trunc_ln22_s" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_257_p4" coreId="1" contextFuncName="operator_eq" bitwidth="32" opcode="partselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="bitcast_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln22_fu_295_p1" coreId="2794188224" contextFuncName="operator_eq" bitwidth="32" opcode="bitcast" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="tmp_s" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_s_fu_300_p4" coreId="2794471808" contextFuncName="operator_eq" bitwidth="8" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="trunc_ln22_5" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln22_5_fu_309_p4" coreId="2037672306" contextFuncName="operator_eq" bitwidth="23" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="icmp_ln22_7" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_7_fu_318_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.84" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="icmp_ln22_8" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_8_fu_324_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.05" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="or_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln22_fu_330_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_19" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_eq" bitwidth="1" opcode="fcmp" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="and_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln22_fu_336_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="and" nodeLabel="1.0" m_display="0" m_delay="0.28" m_topoIndex="17" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_eq" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit.thread</controlInputObjs>
+      <controlInputObjs>block_36</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>22</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="36" name="block_36" type="BlockType">
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.exit</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.exit.thread</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="trunc_ln22_6" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_267_p4" coreId="2794479776" contextFuncName="operator_eq" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="bitcast_ln22_2" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln22_2_fu_342_p1" coreId="2794481280" contextFuncName="operator_eq" bitwidth="32" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp_20" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_20_fu_347_p4" coreId="2794482352" contextFuncName="operator_eq" bitwidth="8" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="trunc_ln22_7" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln22_7_fu_356_p4" coreId="176" contextFuncName="operator_eq" bitwidth="23" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="icmp_ln22_9" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_9_fu_365_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.84" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="icmp_ln22_10" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_10_fu_371_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.05" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="or_ln22_3" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln22_3_fu_377_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_21" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_eq" bitwidth="1" opcode="fcmp" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="and_ln22_5" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln22_5_fu_383_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="and" nodeLabel="2.0" m_display="0" m_delay="0.28" m_topoIndex="27" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_eq" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit.thread</controlInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>22</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="38" name="_ZNK3BaneqEf.exit.thread" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlInputObjs>block_25</controlInputObjs>
+    <controlInputObjs>block_36</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.exit._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln77" lineNumber="77" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <controlInputObjs>_ZNK3BaneqEf.exit._crit_edge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>77</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="49" name="_ZNK3BaneqEf.exit" type="BlockType">
+    <controlInputObjs>block_36</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.exit._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="trunc_ln22_8" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_276_p4" coreId="2795074488" contextFuncName="operator_eq" bitwidth="32" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="bitcast_ln22_3" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln22_3_fu_389_p1" coreId="176" contextFuncName="operator_eq" bitwidth="32" opcode="bitcast" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tmp_22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_22_fu_394_p4" coreId="2795076032" contextFuncName="operator_eq" bitwidth="8" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="trunc_ln22_9" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln22_9_fu_403_p4" coreId="0" contextFuncName="operator_eq" bitwidth="23" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln22_11" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_11_fu_412_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.84" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln22_12" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_12_fu_418_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="1.05" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="or_ln22_4" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln22_4_fu_424_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="or" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="tmp_23" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_eq" bitwidth="1" opcode="fcmp" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="and_ln22_6" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln22_6_fu_430_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="and" nodeLabel="3.0" m_display="0" m_delay="0.28" m_topoIndex="38" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln77" lineNumber="77" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2560" contextFuncName="operator_add" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.77" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="77" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit._crit_edge</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="79" name="_ZNK3BaneqEf.exit._crit_edge" type="BlockType">
+    <controlInputObjs>_ZNK3BaneqEf.exit.thread</controlInputObjs>
+    <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_173</controlOutputObjs>
+    <controlOutputObjs>_ZNK3BaneqEf.12.exit._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="icmp_ln22_4" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_4_fu_436_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="bitcast_ln22_4" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln22_4_fu_441_p1" coreId="1330007625" contextFuncName="operator_eq" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp_24" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_24_fu_444_p4" coreId="1868767342" contextFuncName="operator_eq" bitwidth="8" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="trunc_ln22_1" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln22_1_fu_454_p1" coreId="2794496272" contextFuncName="operator_eq" bitwidth="23" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="icmp_ln22_13" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_13_fu_458_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.84" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="icmp_ln22_14" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_14_fu_464_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.05" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="or_ln22_5" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln22_5_fu_470_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="tmp_25" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_eq" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="and_ln22_7" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln22_7_fu_476_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="bitcast_ln22_5" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln22_5_fu_482_p1" coreId="2794502696" contextFuncName="operator_eq" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="tmp_26" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_26_fu_485_p4" coreId="1819113532" contextFuncName="operator_eq" bitwidth="8" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln22_2" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln22_2_fu_495_p1" coreId="1852795252" contextFuncName="operator_eq" bitwidth="23" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln22_15" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_15_fu_499_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.84" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="icmp_ln22_16" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_16_fu_505_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.05" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="or_ln22_6" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln22_6_fu_511_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="tmp_27" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_eq" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="and_ln22_8" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln22_8_fu_517_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="bitcast_ln22_6" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln22_6_fu_523_p1" coreId="2794511600" contextFuncName="operator_eq" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="tmp_28" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_28_fu_526_p4" coreId="2794512480" contextFuncName="operator_eq" bitwidth="8" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="trunc_ln22_3" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln22_3_fu_536_p1" coreId="176" contextFuncName="operator_eq" bitwidth="23" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="icmp_ln22_17" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_17_fu_540_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.84" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="icmp_ln22_18" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln22_18_fu_546_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_eq" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.05" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="or_ln22_7" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln22_7_fu_552_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="or" nodeLabel="4.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="tmp_29" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="operator_eq" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="and_ln22_9" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln22_9_fu_558_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_eq" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="and_ln80_1" lineNumber="80" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln80_1_fu_564_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_add" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.28" m_topoIndex="65" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="80" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="and_ln80_2" lineNumber="80" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln80_2_fu_570_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_add" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.28" m_topoIndex="66" m_clusterGroupNumber="5">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="80" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="and_ln80" lineNumber="80" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln80_fu_576_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="operator_add" bitwidth="1" opcode="and" nodeLabel="4.0" m_display="0" m_delay="0.28" m_topoIndex="67" m_clusterGroupNumber="6">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="80" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="br_ln22" lineNumber="22" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_eq" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="22" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator=="/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.12.exit._crit_edge</controlInputObjs>
+      <controlInputObjs>block_173</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>80</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="83" name="_ZNK3BaneqEf.12.exit._crit_edge" type="BlockType">
+    <controlInputObjs>_ZNK3BaneqEf.exit._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_165</controlOutputObjs>
+    <controlOutputObjs>block_86</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="diff_p" lineNumber="83" originalName="diff_p" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="diff_p_fu_582_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_add" bitwidth="32" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="1.01" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="83" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>switch</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="icmp_ln86" lineNumber="86" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln86_fu_586_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_add" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="86" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="br_ln86" lineNumber="86" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794527152" contextFuncName="operator_add" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="86" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_86</controlInputObjs>
+      <controlInputObjs>block_165</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>83</validLinenumbers>
+      <validLinenumbers>86</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="86" name="block_86" type="BlockType">
+    <controlInputObjs>_ZNK3BaneqEf.12.exit._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <controlOutputObjs>block_91</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="icmp_ln89" lineNumber="89" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln89_fu_592_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_add" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="89" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln89" lineNumber="89" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.77" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="89" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_91</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>89</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="91" name="block_91" type="BlockType">
+    <controlInputObjs>block_86</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_147</controlOutputObjs>
+    <controlOutputObjs>block_97</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="tmp_2" lineNumber="93" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_2_reg_945" coreId="2794531504" contextFuncName="operator_add" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="93" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="trunc_ln2" lineNumber="64" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_257_p4" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="64" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="bitcast_ln64" lineNumber="64" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln64_fu_606_p1" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="64" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln93" lineNumber="93" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794534608" contextFuncName="operator_add" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="93" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <controlInputObjs>block_97</controlInputObjs>
+      <controlInputObjs>block_147</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>93</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="97" name="block_97" type="BlockType">
+    <controlInputObjs>block_91</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_117</controlOutputObjs>
+    <controlOutputObjs>block_104</controlOutputObjs>
+    <controlOutputObjs>block_100</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="trunc_ln3" lineNumber="51" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_267_p4" coreId="4294967295" contextFuncName="p_sum" bitwidth="32" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="bitcast_ln51" lineNumber="51" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln51_fu_611_p1" coreId="2794536864" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="trunc_ln51_1" lineNumber="51" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_276_p4" coreId="2794537664" contextFuncName="p_sum" bitwidth="32" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="bitcast_ln51_1" lineNumber="51" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln51_1_fu_615_p1" coreId="2794540488" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="51" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="_ln53" lineNumber="53" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794538576" contextFuncName="p_sum" opcode="switch" nodeLabel="4.0" m_display="0" m_delay="0.58" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <controlInputObjs>block_117</controlInputObjs>
+      <controlInputObjs>block_104</controlInputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="100" name="block_100" type="BlockType">
+    <controlInputObjs>block_97</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="add12_i1" lineNumber="60" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="5.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="60" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="br_ln61" lineNumber="61" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="p_sum" opcode="br" nodeLabel="8.0" m_display="0" m_delay="0.77" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="61" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>61</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="104" name="block_104" type="BlockType">
+    <controlInputObjs>block_97</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="add_i1" lineNumber="55" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="9.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="55" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="add7_i1" lineNumber="56" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="9.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="br_ln57" lineNumber="57" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="p_sum" opcode="br" nodeLabel="12.0" m_display="0" m_delay="0.77" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="57" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="117" name="block_117" type="BlockType">
+    <controlInputObjs>block_97</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_127</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="add17_i1" lineNumber="64" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="4.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="64" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="add22_i1" lineNumber="65" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="13.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="65" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="add27_i1" lineNumber="66" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="14.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="66" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>fcmp</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="bitcast_ln27" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln27_fu_625_p1" coreId="176" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="17.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="tmp" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_fu_628_p4" coreId="0" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="17.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="trunc_ln27" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln27_fu_638_p1" coreId="0" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="17.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="icmp_ln27" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln27_fu_642_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="17.0" m_display="0" m_delay="0.84" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="icmp_ln27_3" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln27_3_fu_648_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="17.0" m_display="0" m_delay="1.05" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="or_ln27" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln27_fu_654_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="17.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="tmp_30" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="and_ln27" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln27_fu_660_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="17.0" m_display="0" m_delay="0.28" m_topoIndex="101" m_clusterGroupNumber="7">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="br_ln27" lineNumber="27" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795008472" contextFuncName="to_normal_form" opcode="br" nodeLabel="17.0" m_display="0" m_delay="0.77" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="27" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+      <controlInputObjs>block_127</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>65</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>27</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="127" name="block_127" type="BlockType">
+    <controlInputObjs>block_117</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_144</controlOutputObjs>
+    <controlOutputObjs>block_130</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="bitcast_ln30" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln30_fu_666_p1" coreId="2795005968" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="18.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="tmp_31" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_31_fu_669_p4" coreId="2795011280" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="18.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="trunc_ln30" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln30_fu_679_p1" coreId="2795008512" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="18.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="icmp_ln30" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln30_fu_683_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="18.0" m_display="0" m_delay="0.84" m_topoIndex="107" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="icmp_ln30_3" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln30_3_fu_689_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="18.0" m_display="0" m_delay="1.05" m_topoIndex="108" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="or_ln30" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln30_fu_695_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="18.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="tmp_32" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="17.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="103" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="and_ln30" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln30_fu_701_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="18.0" m_display="0" m_delay="0.28" m_topoIndex="110" m_clusterGroupNumber="8">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="br_ln30" lineNumber="30" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="to_normal_form" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="30" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlInputObjs>block_144</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>30</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="130" name="block_130" type="BlockType">
+    <controlInputObjs>block_127</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="c_p_4" lineNumber="34" originalName="c.p" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_4_fu_707_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="to_normal_form" bitwidth="32" opcode="add" nodeLabel="18.0" m_display="0" m_delay="1.01" m_topoIndex="112" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="34" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="br_ln35" lineNumber="35" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795011056" contextFuncName="to_normal_form" opcode="br" nodeLabel="18.0" m_display="0" m_delay="0.77" m_topoIndex="113" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="35" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>34</validLinenumbers>
+      <validLinenumbers>35</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="144" name="block_144" type="BlockType">
+    <controlInputObjs>block_127</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="bitcast_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln38_fu_712_p1" coreId="0" contextFuncName="to_normal_form" bitwidth="32" opcode="bitcast" nodeLabel="19.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="tmp_33" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="tmp_33_fu_715_p4" coreId="2795024016" contextFuncName="to_normal_form" bitwidth="8" opcode="partselect" nodeLabel="19.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="trunc_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="trunc_ln38_fu_725_p1" coreId="0" contextFuncName="to_normal_form" bitwidth="23" opcode="trunc" nodeLabel="19.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="icmp_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln38_fu_729_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="19.0" m_display="0" m_delay="0.84" m_topoIndex="118" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="icmp_ln38_3" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln38_3_fu_735_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="to_normal_form" bitwidth="1" opcode="icmp" nodeLabel="19.0" m_display="0" m_delay="1.05" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="or_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="or_ln38_fu_741_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="or" nodeLabel="19.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="tmp_34" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="to_normal_form" bitwidth="1" opcode="fcmp" nodeLabel="18.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="114" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="and_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="and_ln38_fu_747_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="to_normal_form" bitwidth="1" opcode="and" nodeLabel="19.0" m_display="0" m_delay="0.28" m_topoIndex="121" m_clusterGroupNumber="9">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataInputObjs>fcmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="c_p_3" lineNumber="41" originalName="c.p" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="c_p_3_fu_753_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="to_normal_form" bitwidth="32" opcode="add" nodeLabel="19.0" m_display="0" m_delay="1.01" m_topoIndex="122" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="41" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="select_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln38_fu_758_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="19.0" m_display="0" m_delay="0.44" m_topoIndex="123" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="select_ln38_6" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln38_6_fu_765_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="19.0" m_display="0" m_delay="0.44" m_topoIndex="124" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="select_ln38_7" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="select_ln38_7_fu_773_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="to_normal_form" bitwidth="32" opcode="select" nodeLabel="19.0" m_display="0" m_delay="0.44" m_topoIndex="125" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="br_ln38" lineNumber="38" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795013600" contextFuncName="to_normal_form" opcode="br" nodeLabel="19.0" m_display="0" m_delay="0.77" m_topoIndex="126" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="38" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="to_normal_form"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>38</validLinenumbers>
+      <validLinenumbers>41</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="147" name="block_147" type="BlockType">
+    <controlInputObjs>block_91</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlOutputObjs>
+    <controlOutputObjs>block_152</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="icmp_ln53" lineNumber="53" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="icmp_ln53_fu_619_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="p_sum" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="br_ln53" lineNumber="53" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795039032" contextFuncName="p_sum" opcode="br" nodeLabel="4.0" m_display="0" m_delay="0.42" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="53" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_152</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>53</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="152" name="block_152" type="BlockType">
+    <controlInputObjs>block_147</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="add_i" lineNumber="55" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="4.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="55" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="trunc_ln4" lineNumber="56" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_267_p4" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="partselect" nodeLabel="22.0" m_display="0" m_topoIndex="139" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="bitcast_ln56" lineNumber="56" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln56_fu_806_p1" coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="bitcast" nodeLabel="22.0" m_display="0" m_topoIndex="140" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="56" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="br_ln57" lineNumber="57" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795043968" contextFuncName="p_sum" opcode="br" nodeLabel="22.0" m_display="0" m_delay="0.42" m_topoIndex="141" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="57" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="157" name="_ZN3Ban4_sumERKS_S1_i.9.43.exit" type="BlockType">
+    <controlInputObjs>block_147</controlInputObjs>
+    <controlInputObjs>block_152</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="153" name="agg_result_1_1_0" lineNumber="74" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795047520" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="127" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="74" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>block_147</controlInputObjs>
+      <controlInputObjs>block_152</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="bitcast_ln56_pn" lineNumber="64" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="p_sum" bitwidth="32" opcode="phi" nodeLabel="23.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="64" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <controlInputObjs>block_147</controlInputObjs>
+      <controlInputObjs>block_152</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="storemerge" lineNumber="60" fileName="src/ban_s3.cpp" fileDirectory=".." coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="p_sum" bitwidth="32" opcode="fadd" nodeLabel="23.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="128" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="60" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="_sum"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="br_ln94" lineNumber="94" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" opcode="br" nodeLabel="19.0" m_display="0" m_delay="0.77" m_topoIndex="129" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="94" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>94</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="165" name="block_165" type="BlockType">
+    <controlInputObjs>_ZNK3BaneqEf.12.exit._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="trunc_ln1" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_257_p4" coreId="2795052512" contextFuncName="operator_add" bitwidth="32" opcode="partselect" nodeLabel="26.0" m_display="0" m_topoIndex="143" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="bitcast_ln87" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln87_fu_810_p1" coreId="2795053624" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="26.0" m_display="0" m_topoIndex="144" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="trunc_ln87_1" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_267_p4" coreId="0" contextFuncName="operator_add" bitwidth="32" opcode="partselect" nodeLabel="26.0" m_display="0" m_topoIndex="145" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="bitcast_ln87_1" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln87_1_fu_814_p1" coreId="2795055856" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="26.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="trunc_ln87_2" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_276_p4" coreId="0" contextFuncName="operator_add" bitwidth="32" opcode="partselect" nodeLabel="26.0" m_display="0" m_topoIndex="147" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="bitcast_ln87_2" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln87_2_fu_818_p1" coreId="2795058616" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="26.0" m_display="0" m_topoIndex="148" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="br_ln87" lineNumber="87" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2" contextFuncName="operator_add" opcode="br" nodeLabel="26.0" m_display="0" m_delay="0.77" m_topoIndex="149" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="87" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>87</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="173" name="block_173" type="BlockType">
+    <controlInputObjs>_ZNK3BaneqEf.exit._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="trunc_ln" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_257_p4" coreId="2795060800" contextFuncName="operator_add" bitwidth="32" opcode="partselect" nodeLabel="27.0" m_display="0" m_topoIndex="150" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="bitcast_ln81" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln81_fu_822_p1" coreId="2795039072" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="27.0" m_display="0" m_topoIndex="151" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="168" name="trunc_ln81_1" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_267_p4" coreId="7955819" contextFuncName="operator_add" bitwidth="32" opcode="partselect" nodeLabel="27.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="169" name="bitcast_ln81_1" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln81_1_fu_826_p1" coreId="336" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="27.0" m_display="0" m_topoIndex="153" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="trunc_ln81_2" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="grp_fu_276_p4" coreId="2795065200" contextFuncName="operator_add" bitwidth="32" opcode="partselect" nodeLabel="27.0" m_display="0" m_topoIndex="154" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="171" name="bitcast_ln81_2" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." rtlName="bitcast_ln81_2_fu_830_p1" coreId="223" contextFuncName="operator_add" bitwidth="32" opcode="bitcast" nodeLabel="27.0" m_display="0" m_topoIndex="155" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="br_ln81" lineNumber="81" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2795067488" contextFuncName="operator_add" opcode="br" nodeLabel="27.0" m_display="0" m_delay="0.77" m_topoIndex="156" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.6.40.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>81</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="183" name="_ZN3Ban4_sumERKS_S1_i.6.40.exit" type="BlockType">
+    <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+    <controlInputObjs>block_86</controlInputObjs>
+    <controlInputObjs>block_100</controlInputObjs>
+    <controlInputObjs>block_104</controlInputObjs>
+    <controlInputObjs>block_117</controlInputObjs>
+    <controlInputObjs>block_130</controlInputObjs>
+    <controlInputObjs>block_144</controlInputObjs>
+    <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+    <controlInputObjs>block_165</controlInputObjs>
+    <controlInputObjs>block_173</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="174" name="this_num_0_write_assign" lineNumber="81" originalName="this.num[0]" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794486288" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="130" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>block_173</controlInputObjs>
+      <controlInputObjs>block_165</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+      <controlInputObjs>block_117</controlInputObjs>
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+      <controlInputObjs>block_104</controlInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+      <controlInputObjs>block_86</controlInputObjs>
+      <controlInputObjs>block_144</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="this_num_1_write_assign" lineNumber="81" originalName="this.num[1]" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794542968" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>block_173</controlInputObjs>
+      <controlInputObjs>block_165</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+      <controlInputObjs>block_117</controlInputObjs>
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+      <controlInputObjs>block_104</controlInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+      <controlInputObjs>block_86</controlInputObjs>
+      <controlInputObjs>block_144</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="176" name="this_num_2_write_assign" lineNumber="81" originalName="this.num[2]" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="2794486288" contextFuncName="operator_add" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="81" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>block_173</controlInputObjs>
+      <controlInputObjs>block_165</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+      <controlInputObjs>block_117</controlInputObjs>
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+      <controlInputObjs>block_104</controlInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+      <controlInputObjs>block_86</controlInputObjs>
+      <controlInputObjs>block_144</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="177" name="this_p_write_assign" originalName="c.p" coreId="1819243365" bitwidth="32" opcode="phi" nodeLabel="19.0" m_display="0" m_topoIndex="133" m_clusterGroupNumber="-1">
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <controlInputObjs>block_173</controlInputObjs>
+      <controlInputObjs>block_165</controlInputObjs>
+      <controlInputObjs>_ZN3Ban4_sumERKS_S1_i.9.43.exit</controlInputObjs>
+      <controlInputObjs>block_117</controlInputObjs>
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlInputObjs>block_100</controlInputObjs>
+      <controlInputObjs>block_104</controlInputObjs>
+      <controlInputObjs>_ZNK3BaneqEf.exit</controlInputObjs>
+      <controlInputObjs>block_86</controlInputObjs>
+      <controlInputObjs>block_144</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="178" name="mrv" lineNumber="97" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="925969716" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="19.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="97" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="179" name="mrv_1" lineNumber="97" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="1936617315" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="19.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="97" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="180" name="mrv_2" lineNumber="97" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="0" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="19.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="97" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="181" name="mrv_3" lineNumber="97" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="1886337907" contextFuncName="operator_add" bitwidth="128" opcode="insertvalue" nodeLabel="19.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="97" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="182" name="_ln97" lineNumber="97" fileName="src/ban_s3.cpp" fileDirectory=".." coreId="144" contextFuncName="operator_add" opcode="ret" nodeLabel="19.0" m_display="0" m_topoIndex="138" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/ban_s3.cpp" linenumber="97" fileDirectory="/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga" functionName="operator+"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+      <dataOutputObjs>ap_return_2</dataOutputObjs>
+      <dataOutputObjs>ap_return_3</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/ban_s3.cpp">
+      <validLinenumbers>81</validLinenumbers>
+      <validLinenumbers>97</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <regnodes realName="bitcast_ln56_reg_1032">
+    <nodeIds>150</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln22_reg_907">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln51_reg_957">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="c_p_reg_886">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln80_reg_929">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="add_i_reg_1027">
+    <nodeIds>148</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln22_5_reg_916">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="add_i1_reg_977">
+    <nodeIds>101</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln87_2_reg_1047">
+    <nodeIds>163</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln86_reg_937">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="this_num_2_write_assign_reg_170">
+    <nodeIds>176</nodeIds>
+  </regnodes>
+  <regnodes realName="add17_i1_reg_987">
+    <nodeIds>105</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln22_2_reg_911">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln30_reg_1018">
+    <nodeIds>125</nodeIds>
+  </regnodes>
+  <regnodes realName="b_p_read_1_reg_864">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="c_p_4_reg_1022">
+    <nodeIds>128</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln81_1_reg_1057">
+    <nodeIds>169</nodeIds>
+  </regnodes>
+  <regnodes realName="this_num_0_write_assign_reg_119">
+    <nodeIds>174</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln64_reg_949">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read_reg_834">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln87_1_reg_1042">
+    <nodeIds>161</nodeIds>
+  </regnodes>
+  <regnodes realName="this_num_1_write_assign_reg_144">
+    <nodeIds>175</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln51_1_reg_963">
+    <nodeIds>95</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln89_reg_941">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read_4_reg_873">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln81_2_reg_1062">
+    <nodeIds>171</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read_3_reg_854">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="diff_p_reg_933">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="add7_i1_reg_982">
+    <nodeIds>102</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln81_reg_1052">
+    <nodeIds>167</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln27_reg_1014">
+    <nodeIds>115</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_reg_945">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln22_reg_898">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="add12_i1_reg_972">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="add27_i1_reg_1004">
+    <nodeIds>107</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln22_6_reg_925">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="agg_result_1_1_0_reg_110">
+    <nodeIds>153</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln22_reg_902">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln22_3_reg_920">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln87_reg_1037">
+    <nodeIds>159</nodeIds>
+  </regnodes>
+  <regnodes realName="add22_i1_reg_995">
+    <nodeIds>106</nodeIds>
+  </regnodes>
+  <regnodes realName="this_p_write_assign_reg_197">
+    <nodeIds>177</nodeIds>
+  </regnodes>
+  <regnodes realName="p_read_2_reg_843">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln56_pn_reg_222">
+    <nodeIds>154</nodeIds>
+  </regnodes>
+  <expressionNodes realName="and_ln80_fu_576">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_598">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_fu_289">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln30_fu_701">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln30_3_fu_689">
+    <nodeIds>122</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln87_fu_810">
+    <nodeIds>159</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_1_fu_788">
+    <nodeIds>179</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_2_fu_794">
+    <nodeIds>180</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="this_num_1_write_assign_phi_fu_147">
+    <nodeIds>175</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_22_fu_394">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln22_5_fu_470">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln22_2_fu_342">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln81_1_fu_826">
+    <nodeIds>169</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln38_6_fu_765">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_276">
+    <nodeIds>39</nodeIds>
+    <nodeIds>94</nodeIds>
+    <nodeIds>162</nodeIds>
+    <nodeIds>170</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_p_fu_285">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_33_fu_715">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln87_1_fu_814">
+    <nodeIds>161</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_782">
+    <nodeIds>178</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln22_2_fu_495">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln22_7_fu_476">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln38_fu_725">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln22_6_fu_511">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="this_num_0_write_assign_phi_fu_122">
+    <nodeIds>174</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="this_num_2_write_assign_phi_fu_174">
+    <nodeIds>176</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln81_2_fu_830">
+    <nodeIds>171</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_p_4_fu_707">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_267">
+    <nodeIds>26</nodeIds>
+    <nodeIds>92</nodeIds>
+    <nodeIds>149</nodeIds>
+    <nodeIds>160</nodeIds>
+    <nodeIds>168</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_24_fu_444">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln22_5_fu_309">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln80_1_fu_564">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln38_fu_729">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_10_fu_371">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln30_fu_683">
+    <nodeIds>121</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_8_fu_324">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln22_fu_330">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln22_3_fu_377">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln51_1_fu_615">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_17_fu_540">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_9_fu_365">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln86_fu_586">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="diff_p_fu_582">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_7_fu_318">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln53_fu_619">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_16_fu_505">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln38_fu_747">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="this_p_write_assign_phi_fu_200">
+    <nodeIds>177</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln64_fu_606">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_18_fu_546">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln22_4_fu_424">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln27_fu_638">
+    <nodeIds>110</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln81_fu_822">
+    <nodeIds>167</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_p_3_fu_753">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln30_fu_666">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln22_9_fu_403">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln38_fu_741">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln38_7_fu_773">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_20_fu_347">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln38_fu_758">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln38_fu_712">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln27_fu_642">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln30_fu_695">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln22_6_fu_430">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln22_fu_336">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln27_3_fu_648">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln22_7_fu_356">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln22_3_fu_389">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln56_fu_806">
+    <nodeIds>150</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_4_fu_436">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln22_9_fu_558">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_28_fu_526">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln80_2_fu_570">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln56_pn_phi_fu_225">
+    <nodeIds>154</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_26_fu_485">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_628">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_13_fu_458">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln89_fu_592">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_12_fu_418">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_15_fu_499">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_31_fu_669">
+    <nodeIds>119</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln38_3_fu_735">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_11_fu_412">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln22_6_fu_523">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_300">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln22_4_fu_441">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln27_fu_654">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="agg_result_1_1_0_phi_fu_113">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_3_fu_800">
+    <nodeIds>181</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln22_5_fu_482">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_257">
+    <nodeIds>15</nodeIds>
+    <nodeIds>88</nodeIds>
+    <nodeIds>158</nodeIds>
+    <nodeIds>166</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln51_fu_611">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln22_1_fu_454">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln22_3_fu_536">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln22_8_fu_517">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln22_14_fu_464">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln22_7_fu_552">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln27_fu_625">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln30_fu_679">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln22_5_fu_383">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln22_fu_295">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln87_2_fu_818">
+    <nodeIds>163</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln27_fu_660">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_236">
+    <nodeIds>102</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_247">
+    <nodeIds>65</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_252">
+    <nodeIds>73</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_242">
+    <nodeIds>22</nodeIds>
+    <nodeIds>33</nodeIds>
+    <nodeIds>46</nodeIds>
+    <nodeIds>57</nodeIds>
+    <nodeIds>114</nodeIds>
+    <nodeIds>124</nodeIds>
+    <nodeIds>137</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_232">
+    <nodeIds>105</nodeIds>
+    <nodeIds>148</nodeIds>
+    <nodeIds>98</nodeIds>
+    <nodeIds>101</nodeIds>
+    <nodeIds>106</nodeIds>
+    <nodeIds>107</nodeIds>
+    <nodeIds>155</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="b_p_read_1_read_fu_98">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_2_read_fu_86">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_3_read_fu_92">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_4_read_fu_104">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_read_read_fu_80">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioPorts name="b_p_read">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read10">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read14">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read8">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="p_read9">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>182</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>182</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_2">
+    <contents name="ret">
+      <nodeIds>182</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_3">
+    <contents name="ret">
+      <nodeIds>182</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="22" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="2"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="33" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="2"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="46" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="2"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="57" stage="2" latency="2"/>
+      <operations id="65" stage="2" latency="2"/>
+      <operations id="73" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="2"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="2"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="105" stage="4" latency="4"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="148" stage="4" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="98" stage="4" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="98" stage="3" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="98" stage="2" latency="4"/>
+    </states>
+    <states id="9">
+      <operations id="98" stage="1" latency="4"/>
+      <operations id="99" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="101" stage="4" latency="4"/>
+      <operations id="102" stage="4" latency="4"/>
+    </states>
+    <states id="11">
+      <operations id="101" stage="3" latency="4"/>
+      <operations id="102" stage="3" latency="4"/>
+    </states>
+    <states id="12">
+      <operations id="101" stage="2" latency="4"/>
+      <operations id="102" stage="2" latency="4"/>
+    </states>
+    <states id="13">
+      <operations id="101" stage="1" latency="4"/>
+      <operations id="102" stage="1" latency="4"/>
+      <operations id="103" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="105" stage="3" latency="4"/>
+      <operations id="106" stage="4" latency="4"/>
+    </states>
+    <states id="15">
+      <operations id="105" stage="2" latency="4"/>
+      <operations id="106" stage="3" latency="4"/>
+      <operations id="107" stage="4" latency="4"/>
+    </states>
+    <states id="16">
+      <operations id="105" stage="1" latency="4"/>
+      <operations id="106" stage="2" latency="4"/>
+      <operations id="107" stage="3" latency="4"/>
+    </states>
+    <states id="17">
+      <operations id="106" stage="1" latency="4"/>
+      <operations id="107" stage="2" latency="4"/>
+      <operations id="114" stage="2" latency="2"/>
+    </states>
+    <states id="18">
+      <operations id="107" stage="1" latency="4"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="2"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="124" stage="2" latency="2"/>
+    </states>
+    <states id="19">
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="2"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="137" stage="2" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="137" stage="1" latency="2"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="155" stage="1" latency="4"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="174" stage="1" latency="1"/>
+      <operations id="175" stage="1" latency="1"/>
+      <operations id="176" stage="1" latency="1"/>
+      <operations id="177" stage="1" latency="1"/>
+      <operations id="178" stage="1" latency="1"/>
+      <operations id="179" stage="1" latency="1"/>
+      <operations id="180" stage="1" latency="1"/>
+      <operations id="181" stage="1" latency="1"/>
+      <operations id="182" stage="1" latency="1"/>
+    </states>
+    <states id="21">
+      <operations id="148" stage="3" latency="4"/>
+    </states>
+    <states id="22">
+      <operations id="148" stage="2" latency="4"/>
+    </states>
+    <states id="23">
+      <operations id="148" stage="1" latency="4"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+    </states>
+    <states id="24">
+      <operations id="154" stage="1" latency="1"/>
+      <operations id="155" stage="4" latency="4"/>
+    </states>
+    <states id="25">
+      <operations id="155" stage="3" latency="4"/>
+    </states>
+    <states id="26">
+      <operations id="155" stage="2" latency="4"/>
+    </states>
+    <states id="27">
+      <operations id="158" stage="1" latency="1"/>
+      <operations id="159" stage="1" latency="1"/>
+      <operations id="160" stage="1" latency="1"/>
+      <operations id="161" stage="1" latency="1"/>
+      <operations id="162" stage="1" latency="1"/>
+      <operations id="163" stage="1" latency="1"/>
+      <operations id="164" stage="1" latency="1"/>
+    </states>
+    <states id="28">
+      <operations id="166" stage="1" latency="1"/>
+      <operations id="167" stage="1" latency="1"/>
+      <operations id="168" stage="1" latency="1"/>
+      <operations id="169" stage="1" latency="1"/>
+      <operations id="170" stage="1" latency="1"/>
+      <operations id="171" stage="1" latency="1"/>
+      <operations id="172" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="20">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="operator_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4" mMaxLatency="11">
+      <basicBlocks>14</basicBlocks>
+      <basicBlocks>25</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <basicBlocks>38</basicBlocks>
+      <basicBlocks>49</basicBlocks>
+      <basicBlocks>79</basicBlocks>
+      <basicBlocks>83</basicBlocks>
+      <basicBlocks>86</basicBlocks>
+      <basicBlocks>91</basicBlocks>
+      <basicBlocks>97</basicBlocks>
+      <basicBlocks>100</basicBlocks>
+      <basicBlocks>104</basicBlocks>
+      <basicBlocks>117</basicBlocks>
+      <basicBlocks>127</basicBlocks>
+      <basicBlocks>130</basicBlocks>
+      <basicBlocks>144</basicBlocks>
+      <basicBlocks>147</basicBlocks>
+      <basicBlocks>152</basicBlocks>
+      <basicBlocks>157</basicBlocks>
+      <basicBlocks>165</basicBlocks>
+      <basicBlocks>173</basicBlocks>
+      <basicBlocks>183</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

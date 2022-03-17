@@ -1,0 +1,242 @@
+
+
+================================================================
+== Vitis HLS Report for 'operator_div'
+================================================================
+* Date:           Thu Mar 17 18:48:08 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        bans3hw
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.057 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|       45|  30.000 ns|  0.450 us|    3|   45|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     423|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     456|    -|
+|Register         |        -|     -|     822|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     822|     879|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      624|  1728|  460800|  230400|   96|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |c_p_1_fu_546_p2          |         +|   0|  0|  39|          32|           3|
+    |c_p_2_fu_500_p2          |         +|   0|  0|  39|          32|           2|
+    |c_p_fu_401_p2            |         -|   0|  0|  39|          32|          32|
+    |and_ln22_1_fu_301_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln22_2_fu_313_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln22_3_fu_307_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln22_4_fu_360_p2     |       and|   0|  0|   2|           1|           1|
+    |and_ln22_fu_291_p2       |       and|   0|  0|   2|           1|           1|
+    |and_ln27_fu_453_p2       |       and|   0|  0|   2|           1|           1|
+    |and_ln30_fu_494_p2       |       and|   0|  0|   2|           1|           1|
+    |and_ln38_fu_540_p2       |       and|   0|  0|   2|           1|           1|
+    |icmp_ln22_1_fu_223_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_2_fu_229_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_3_fu_270_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_4_fu_276_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_5_fu_342_p2    |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln22_6_fu_348_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln22_fu_282_p2      |      icmp|   0|  0|  20|          32|           1|
+    |icmp_ln27_1_fu_441_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln27_fu_435_p2      |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln30_1_fu_482_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln30_fu_476_p2      |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln38_1_fu_528_p2    |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln38_fu_522_p2      |      icmp|   0|  0|  11|           8|           2|
+    |or_ln22_1_fu_297_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln22_2_fu_354_p2      |        or|   0|  0|   2|           1|           1|
+    |or_ln22_fu_287_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln27_fu_447_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln30_fu_488_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln38_fu_534_p2        |        or|   0|  0|   2|           1|           1|
+    |select_ln38_1_fu_558_p3  |    select|   0|  0|  32|           1|          32|
+    |select_ln38_2_fu_566_p3  |    select|   0|  0|  32|           1|           1|
+    |select_ln38_fu_551_p3    |    select|   0|  0|  32|           1|          32|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 423|         331|         135|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+-----+-----------+-----+-----------+
+    |                    Name                   | LUT | Input Size| Bits| Total Bits|
+    +-------------------------------------------+-----+-----------+-----+-----------+
+    |agg_result_01_0_reg_120                    |   20|          4|   32|        128|
+    |agg_result_1_0_0_reg_74                    |   20|          4|   32|        128|
+    |agg_result_1_1_0_reg_89                    |   14|          3|   32|         96|
+    |agg_result_1_2_0_reg_104                   |   14|          3|   32|         96|
+    |ap_NS_fsm                                  |  215|         47|    1|         47|
+    |ap_phi_mux_agg_result_01_0_phi_fu_124_p8   |    9|          2|   32|         64|
+    |ap_phi_mux_agg_result_1_0_0_phi_fu_78_p8   |    9|          2|   32|         64|
+    |ap_phi_mux_agg_result_1_1_0_phi_fu_93_p8   |    9|          2|   32|         64|
+    |ap_phi_mux_agg_result_1_2_0_phi_fu_108_p8  |    9|          2|   32|         64|
+    |ap_return_0                                |    9|          2|   32|         64|
+    |ap_return_1                                |    9|          2|   32|         64|
+    |ap_return_2                                |    9|          2|   32|         64|
+    |ap_return_3                                |    9|          2|   32|         64|
+    |grp_fu_135_p0                              |   14|          3|   32|         96|
+    |grp_fu_143_p0                              |   14|          3|   32|         96|
+    |grp_fu_143_p1                              |   14|          3|   32|         96|
+    |grp_fu_151_p0                              |   14|          3|   32|         96|
+    |grp_fu_151_p1                              |   14|          3|   32|         96|
+    |grp_fu_155_p0                              |   31|          6|   32|        192|
+    +-------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                      |  456|         98|  577|       1679|
+    +-------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |agg_result_01_0_reg_120   |  32|   0|   32|          0|
+    |agg_result_1_0_0_reg_74   |  32|   0|   32|          0|
+    |agg_result_1_1_0_reg_89   |  32|   0|   32|          0|
+    |agg_result_1_2_0_reg_104  |  32|   0|   32|          0|
+    |and_ln22_2_reg_652        |   1|   0|    1|          0|
+    |and_ln22_4_reg_661        |   1|   0|    1|          0|
+    |and_ln27_reg_747          |   1|   0|    1|          0|
+    |and_ln30_reg_751          |   1|   0|    1|          0|
+    |ap_CS_fsm                 |  46|   0|   46|          0|
+    |ap_return_0_preg          |  32|   0|   32|          0|
+    |ap_return_1_preg          |  32|   0|   32|          0|
+    |ap_return_2_preg          |  32|   0|   32|          0|
+    |ap_return_3_preg          |  32|   0|   32|          0|
+    |bitcast_ln131_reg_665     |  32|   0|   32|          0|
+    |bitcast_ln132_1_reg_702   |  32|   0|   32|          0|
+    |bitcast_ln132_reg_628     |  32|   0|   32|          0|
+    |bitcast_ln22_reg_612      |  32|   0|   32|          0|
+    |c_num_2_reg_737           |  32|   0|   32|          0|
+    |c_p_reg_685               |  32|   0|   32|          0|
+    |icmp_ln22_1_reg_618       |   1|   0|    1|          0|
+    |icmp_ln22_2_reg_623       |   1|   0|    1|          0|
+    |icmp_ln22_3_reg_634       |   1|   0|    1|          0|
+    |icmp_ln22_4_reg_639       |   1|   0|    1|          0|
+    |mul1_reg_712              |  32|   0|   32|          0|
+    |num_res_3_reg_727         |  32|   0|   32|          0|
+    |num_res_reg_692           |  32|   0|   32|          0|
+    |reg_174                   |  32|   0|   32|          0|
+    |reg_179                   |  32|   0|   32|          0|
+    |sub1_reg_722              |  32|   0|   32|          0|
+    |trunc_ln132_1_reg_670     |  32|   0|   32|          0|
+    |trunc_ln133_1_reg_680     |  32|   0|   32|          0|
+    |trunc_ln22_reg_606        |  32|   0|   32|          0|
+    |trunc_ln3_reg_675         |  32|   0|   32|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 822|   0|  822|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|     operator/|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|     operator/|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|     operator/|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|ap_return_0           |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|ap_return_1           |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|ap_return_2           |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|ap_return_3           |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1160_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1160_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1160_p_opcode  |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1160_p_dout0   |   in|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1160_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1164_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1164_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1164_p_opcode  |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1164_p_dout0   |   in|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1164_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1168_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1168_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1168_p_dout0   |   in|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1168_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1172_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1172_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1172_p_dout0   |   in|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1172_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1189_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1189_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1189_p_dout0   |   in|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1189_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1203_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1203_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1203_p_opcode  |  out|    5|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1203_p_dout0   |   in|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1203_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1208_p_din0    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1208_p_din1    |  out|   32|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1208_p_opcode  |  out|    5|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1208_p_dout0   |   in|    1|  ap_ctrl_hs|     operator/|  return value|
+|grp_fu_1208_p_ce      |  out|    1|  ap_ctrl_hs|     operator/|  return value|
+|p_read14              |   in|  128|     ap_none|      p_read14|        scalar|
+|p_read25              |   in|  128|     ap_none|      p_read25|        scalar|
++----------------------+-----+-----+------------+--------------+--------------+
+

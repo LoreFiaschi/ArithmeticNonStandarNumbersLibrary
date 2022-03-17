@@ -132,7 +132,7 @@ Ban Ban::operator/(const Ban &b) const{
 	num_res[1] = (num[1] - num_res[0]*b.num[1])/b.num[0];
 	num_res[2] = (num[2] - num_res[0]*b.num[2] - num_res[1]*b.num[1])/b.num[0];
 
-	Ban c(p-b.p, num_res, false);
+	Ban c(p-b.p, num_res);
 
 	c.to_normal_form();
 
@@ -144,7 +144,7 @@ Ban operator/(T n, const Ban &b){
 	T num2 = -b.num[1]/b.num[0];
 	T num[] = {n/b.num[0], n*num2/b.num[0], n*(-b.num[2]/b.num[0]+num2*num2)/b.num[0]};
 
-	Ban c(-b.p, num, false);
+	Ban c(-b.p, num);
 
 	c.to_normal_form();
 	
