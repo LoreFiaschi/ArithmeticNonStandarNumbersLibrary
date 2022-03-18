@@ -1,0 +1,690 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Mar 18 11:51:55 2022
+# Process ID: 18887
+# Current directory: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1
+# Command line: vivado -log design_1_ban_interface_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_ban_interface_0_0.tcl
+# Log file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/design_1_ban_interface_0_0.vds
+# Journal file: /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/vivado.jou
+# Running On: lorenzo-System-Product-Name, OS: Linux, CPU Frequency: 4455.484 MHz, CPU Physical cores: 8, Host memory: 33511 MB
+#-----------------------------------------------------------
+source design_1_ban_interface_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_ban_interface_0_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18922
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3121.379 ; gain = 151.762 ; free physical = 272 ; free virtual = 24249
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_ban_interface_0_0' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ip/design_1_ban_interface_0_0/synth/design_1_ban_interface_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_operator_2' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:60]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:62649]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (1#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:62649]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' (20#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1' (21#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' (25#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1' (26#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_mux_32_32_1_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_mux_32_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_mux_32_32_1_1' (27#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_mux_32_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_operator_2' (28#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_operator_div' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_div.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_operator_div' (29#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_div.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_operator_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_1.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_operator_1' (30#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_operator_add' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_add.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_p_sum' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_p_sum.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_p_sum' (31#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_p_sum.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_operator_add' (32#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_operator_add.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' (33#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1' (34#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' (42#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1' (43#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' (50#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1' (51#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' (56#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/ip/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1' (57#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ban_interface' (58#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ban_interface_0_0' (59#1) [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ip/design_1_ban_interface_0_0/synth/design_1_ban_interface_0_0.v:58]
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized98 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[11] in module carry_chain__parameterized41 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized80 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized71 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[7] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[6] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[5] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[4] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[3] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[2] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[1] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[0] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_INC_IN in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized169 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized169 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized169 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized167 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized167 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized167 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[31] in module special_detect__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized165 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized165 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized165 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized82 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized86 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized163 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized163 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized163 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized161 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized161 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3314.316 ; gain = 344.699 ; free physical = 1186 ; free virtual = 25115
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3332.129 ; gain = 362.512 ; free physical = 1210 ; free virtual = 25138
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3332.129 ; gain = 362.512 ; free physical = 1210 ; free virtual = 25138
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3338.066 ; gain = 0.000 ; free physical = 1141 ; free virtual = 25069
+INFO: [Netlist 29-17] Analyzing 4879 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ip/design_1_ban_interface_0_0/constraints/ban_interface_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ip/design_1_ban_interface_0_0/constraints/ban_interface_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3547.598 ; gain = 0.000 ; free physical = 927 ; free virtual = 24866
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 90 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 24 instances
+  FDE => FDRE: 66 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3550.566 ; gain = 2.969 ; free physical = 922 ; free virtual = 24862
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 3550.566 ; gain = 580.949 ; free physical = 1146 ; free virtual = 25086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 3550.566 ; gain = 580.949 ; free physical = 1146 ; free virtual = 25086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 3550.566 ; gain = 580.949 ; free physical = 1146 ; free virtual = 25086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3550.566 ; gain = 580.949 ; free physical = 1079 ; free virtual = 25029
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1:/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1:/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1:/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1:/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1:/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1:/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1:/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1:/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1:/ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1:/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1:/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1:/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1:/ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized28) to 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized28) to 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized0) to 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1:/ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized28) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized28) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_4_full_dsp_1_U32/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_4_full_dsp_1_U33/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fadd_32ns_32ns_32_4_full_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U34/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U35/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U35/din1_buf1_reg[31:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[31:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:74]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U35/opcode_buf1_reg[4:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:95]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U36/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U36/din1_buf1_reg[31:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[31:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:74]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U36/opcode_buf1_reg[4:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:95]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (fmul_32ns_32ns_32_3_max_dsp_1_U47/ce_r_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (fmul_32ns_32ns_32_3_max_dsp_1_U48/ce_r_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (fmul_32ns_32ns_32_3_max_dsp_1_U45/ce_r_reg)
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[31]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[29]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[30]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[28]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[23]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[24]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[25]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[26]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[27]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[18]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[19]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[20]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[21]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[22]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[17]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[12]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[13]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[14]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[15]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[16]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[11]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[6]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[7]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[8]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[9]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[10]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[5]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[0]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[1]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[2]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[3]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/din1_buf1_reg[4]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[3]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[1]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[0]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg'
+INFO: [Synth 8-3886] merging instance 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[2]' (FD) to 'grp_operator_add_fu_1154/grp_p_sum_fu_144/fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_operator_add_fu_1154/grp_p_sum_fu_144/\fcmp_32ns_32ns_1_2_no_dsp_1_U34/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_operator_add_fu_1154/grp_p_sum_fu_144/\fadd_32ns_32ns_32_4_full_dsp_1_U31/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_13_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_13_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_13_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_13_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_13_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_13_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized3__1.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U3/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U3/din1_buf1_reg[31:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[31:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:74]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U3/opcode_buf1_reg[4:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/opcode_buf1_reg[4:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:95]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U4/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U4/din1_buf1_reg[31:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[31:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:74]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U4/opcode_buf1_reg[4:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/opcode_buf1_reg[4:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:95]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U5/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U5/din1_buf1_reg[31:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[31:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:74]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U5/opcode_buf1_reg[4:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U2/opcode_buf1_reg[4:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:95]
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fadd_32ns_32ns_32_4_full_dsp_1_U1/ce_r_reg' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/ce_r_reg'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln282_reg_777_reg[0]' (FDE) to 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln282_reg_777_reg[1]' (FDE) to 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[0]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[1]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[2]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[3]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[4]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[5]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[6]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[7]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[7]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[8]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[8]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[9]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[9]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[10]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[11]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[11]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[12]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[12]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[13]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[13]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[14]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[14]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[15]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[15]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[16]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[17]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[17]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[18]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[18]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[19]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[19]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[20]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[20]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[21]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[21]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[22]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[23]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[23]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[24]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[24]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[25]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[25]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[26]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[26]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[27]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[27]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[28]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[28]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[29]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[29]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/trunc_ln276_reg_739_reg[30]' (FDE) to 'grp_operator_2_fu_1133/res_p_reg_729_reg[30]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/res_p_reg_729_reg[31]' (FDE) to 'grp_operator_2_fu_1133/tmp_reg_745_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[31]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[29]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[30]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[28]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[23]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[24]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[25]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[26]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[27]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[18]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[19]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[20]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[21]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[22]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[17]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[12]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[13]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[14]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[15]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[16]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[11]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[6]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[7]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[8]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[9]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[10]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[5]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[0]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[1]' (FD) to 'grp_operator_2_fu_1133/fcmp_32ns_32ns_1_2_no_dsp_1_U2/din1_buf1_reg[4]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_operator_2_fu_1133/\fcmp_32ns_32ns_1_2_no_dsp_1_U2/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_operator_2_fu_1133/\fcmp_32ns_32ns_1_2_no_dsp_1_U2/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_13_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_13_viv.
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U57/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U58/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fcmp_32ns_32ns_1_2_no_dsp_1_U58/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\fcmp_32ns_32ns_1_2_no_dsp_1_U58/ce_r_reg )
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '8' to '7' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[4].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '18' to '17' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[24].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '23' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[24].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '24' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '19' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[14].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '14' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '9' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '4' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsqrt_32ns_32ns_32_8_no_dsp_1_U60/ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip_u/inst /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_13_viv__parameterized3.
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[24].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '24' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '19' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[14].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '14' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '9' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '4' bits. [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U56/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U59/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U55/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U59/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U54/ce_r_reg' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U59/ce_r_reg' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:100]
+INFO: [Synth 8-4471] merging register 'fcmp_32ns_32ns_1_2_no_dsp_1_U54/opcode_buf1_reg[4:0]' into 'fcmp_32ns_32ns_1_2_no_dsp_1_U56/opcode_buf1_reg[4:0]' [/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.gen/sources_1/bd/design_1/ipshared/2b7f/hdl/verilog/ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1.v:95]
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (fdiv_32ns_32ns_32_9_no_dsp_1_U50/ce_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fcmp_32ns_32ns_1_2_no_dsp_1_U59/opcode_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\fcmp_32ns_32ns_1_2_no_dsp_1_U59/ce_r_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:13 . Memory (MB): peak = 3550.566 ; gain = 580.949 ; free physical = 419 ; free virtual = 18532
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:21 . Memory (MB): peak = 3790.105 ; gain = 820.488 ; free physical = 254 ; free virtual = 17997
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:02:09 . Memory (MB): peak = 4071.746 ; gain = 1102.129 ; free physical = 382 ; free virtual = 17889
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:02:25 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 438 ; free virtual = 17330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:02:30 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:02:30 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:02:32 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:02:32 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:02:32 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:02:33 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY8  |   102|
+|2     |DSP48E1 |    24|
+|3     |LUT1    |   532|
+|4     |LUT2    |  1215|
+|5     |LUT3    |  3148|
+|6     |LUT4    |  2001|
+|7     |LUT5    |  2387|
+|8     |LUT6    |  4426|
+|9     |MUXCY   |  2711|
+|10    |MUXF7   |    10|
+|11    |MUXF8   |     1|
+|12    |SRL16E  |    75|
+|13    |XORCY   |  1876|
+|14    |FDE     |    66|
+|15    |FDRE    |  8109|
+|16    |FDSE    |     6|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:02:33 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 415 ; free virtual = 17328
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 766 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:41 ; elapsed = 00:02:28 . Memory (MB): peak = 4083.672 ; gain = 895.617 ; free physical = 7822 ; free virtual = 24735
+Synthesis Optimization Complete : Time (s): cpu = 00:01:50 ; elapsed = 00:02:37 . Memory (MB): peak = 4083.672 ; gain = 1114.055 ; free physical = 7828 ; free virtual = 24734
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.24 . Memory (MB): peak = 4083.672 ; gain = 0.000 ; free physical = 7809 ; free virtual = 24716
+INFO: [Netlist 29-17] Analyzing 4790 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4127.773 ; gain = 0.000 ; free physical = 7735 ; free virtual = 24641
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 545 instances were transformed.
+  (CARRY4) => CARRY8: 455 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 24 instances
+  FDE => FDRE: 66 instances
+
+Synth Design complete, checksum: a62b02db
+INFO: [Common 17-83] Releasing license: Synthesis
+282 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:47 . Memory (MB): peak = 4127.773 ; gain = 1372.160 ; free physical = 7950 ; free virtual = 24857
+INFO: [Common 17-1381] The checkpoint '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/design_1_ban_interface_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_ban_interface_0_0, cache-ID = b04635fd422163dd
+INFO: [Coretcl 2-1174] Renamed 1115 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/bans3hw_vivado.runs/design_1_ban_interface_0_0_synth_1/design_1_ban_interface_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_ban_interface_0_0_utilization_synth.rpt -pb design_1_ban_interface_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 18 11:55:07 2022...
