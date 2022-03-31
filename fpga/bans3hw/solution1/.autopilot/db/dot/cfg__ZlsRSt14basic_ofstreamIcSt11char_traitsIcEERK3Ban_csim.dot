@@ -1,0 +1,18 @@
+digraph "CFG for 'operator\<\<' function" {
+	label="CFG for 'operator\<\<' function";
+
+	Node0x39f0610 [shape=record,filename="",linenumber="",label="{.predFake}"];
+	Node0x39f0610 -> Node0x3a59e70[ callList="" memoryops="" filename="../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x3aa7200 [shape=record,filename="../../../../src/ban_s3.cpp",linenumber="174",label="{.succFake2}"];
+subgraph cluster_0 {
+	label=".predFake1";
+	tripcount="0";
+	invocationtime="0";
+
+	Node0x3a59e70 [shape=record,filename="../../../../src/ban_s3.cpp",linenumber="171",label="{.predFake1}"];
+	Node0x3a59e70 -> Node0x3aa7130[ callList="" memoryops="" filename="../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x3aa7130 [shape=record,filename="../../../../src/ban_s3.cpp",linenumber="171",label="{.succFake|{<s0>T|<s1>F}}"];
+	Node0x3aa7130:s0 -> Node0x3a59e70[ callList="" memoryops="" filename="../../../../src/ban_s3.cpp" execusionnum="0"];
+	Node0x3aa7130:s1 -> Node0x3aa7200[ callList="" memoryops="" filename="../../../../src/ban_s3.cpp" execusionnum="0"];
+}
+}

@@ -1,0 +1,7 @@
+digraph "CFG for '__cxx_global_var_init.2.22' function" {
+	label="CFG for '__cxx_global_var_init.2.22' function";
+
+	Node0x39da240 [shape=record,filename="../../../../src/ban_s3.h",linenumber="107",label="{.predFake}"];
+	Node0x39da240 -> Node0x3980850[ callList="" memoryops="" filename="../../../../src/ban_s3.h" execusionnum="0"];
+	Node0x3980850 [shape=record,filename="../../../../src/ban_s3.h",linenumber="107",label="{.succFake}"];
+}

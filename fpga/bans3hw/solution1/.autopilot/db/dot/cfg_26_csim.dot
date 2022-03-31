@@ -1,0 +1,12 @@
+digraph "CFG for 'Ban::operator\>' function" {
+	label="CFG for 'Ban::operator\>' function";
+
+	Node0x3a228c0 [shape=record,filename="",linenumber="",label="{.predFake}"];
+	Node0x3a228c0 -> Node0x3a99f60[ callList="3:86" memoryops="" filename="../../../../test/../src/ban_s3.h" execusionnum="120"];
+	Node0x3a99f60 [shape=record,filename="../../../../test/../src/ban_s3.h",linenumber="86",label="{.succFake|{<s0>T|<s1>F}}"];
+	Node0x3a99f60:s0 -> Node0x3a23440[label="W:3"];
+	Node0x3a99f60:s1 -> Node0x3a23440[label="W:119" callList="25:86" memoryops="" filename="../../../../test/../src/ban_s3.h" execusionnum="118"];
+	Node0x3a23440 [shape=record,filename="../../../../test/../src/ban_s3.h",linenumber="86",label="{.predFake1}"];
+	Node0x3a23440 -> Node0x396c900[ callList="" memoryops="" filename="../../../../test/../src/ban_s3.h" execusionnum="120"];
+	Node0x396c900 [shape=record,filename="../../../../test/../src/ban_s3.h",linenumber="86",label="{.succFake2}"];
+}

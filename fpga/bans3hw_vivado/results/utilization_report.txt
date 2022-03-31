@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 18 12:07:20 2022
+| Date         : Mon Mar 21 11:13:52 2022
 | Host         : lorenzo-System-Product-Name running 64-bit Linux Mint 19.3 Tricia
 | Command      : report_utilization -file /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/results/utilization_report.txt -name utilization_1
 | Design       : design_1_wrapper
@@ -33,8 +33,8 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| CLB LUTs                   | 11656 |     0 |          0 |    230400 |  5.06 |
-|   LUT as Logic             | 11582 |     0 |          0 |    230400 |  5.03 |
+| CLB LUTs                   | 11662 |     0 |          0 |    230400 |  5.06 |
+|   LUT as Logic             | 11588 |     0 |          0 |    230400 |  5.03 |
 |   LUT as Memory            |    74 |     0 |          0 |    101760 |  0.07 |
 |     LUT as Distributed RAM |     0 |     0 |            |           |       |
 |     LUT as Shift Register  |    74 |     0 |            |           |       |
@@ -73,13 +73,13 @@ Table of Contents
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
-| CLB                                        |  2192 |     0 |          0 |     28800 |  7.61 |
-|   CLBL                                     |  1103 |     0 |            |           |       |
-|   CLBM                                     |  1089 |     0 |            |           |       |
-| LUT as Logic                               | 11582 |     0 |          0 |    230400 |  5.03 |
-|   using O5 output only                     |    66 |       |            |           |       |
-|   using O6 output only                     |  9870 |       |            |           |       |
-|   using O5 and O6                          |  1646 |       |            |           |       |
+| CLB                                        |  2202 |     0 |          0 |     28800 |  7.65 |
+|   CLBL                                     |  1122 |     0 |            |           |       |
+|   CLBM                                     |  1080 |     0 |            |           |       |
+| LUT as Logic                               | 11588 |     0 |          0 |    230400 |  5.03 |
+|   using O5 output only                     |    71 |       |            |           |       |
+|   using O6 output only                     |  9877 |       |            |           |       |
+|   using O5 and O6                          |  1640 |       |            |           |       |
 | LUT as Memory                              |    74 |     0 |          0 |    101760 |  0.07 |
 |   LUT as Distributed RAM                   |     0 |     0 |            |           |       |
 |   LUT as Shift Register                    |    74 |     0 |            |           |       |
@@ -87,10 +87,10 @@ Table of Contents
 |     using O6 output only                   |    74 |       |            |           |       |
 |     using O5 and O6                        |     0 |       |            |           |       |
 | CLB Registers                              |  8147 |     0 |          0 |    460800 |  1.77 |
-|   Register driven from within the CLB      |  3558 |       |            |           |       |
-|   Register driven from outside the CLB     |  4589 |       |            |           |       |
-|     LUT in front of the register is unused |  2071 |       |            |           |       |
-|     LUT in front of the register is used   |  2518 |       |            |           |       |
+|   Register driven from within the CLB      |  3566 |       |            |           |       |
+|   Register driven from outside the CLB     |  4581 |       |            |           |       |
+|     LUT in front of the register is unused |  1895 |       |            |           |       |
+|     LUT in front of the register is used   |  2686 |       |            |           |       |
 | Unique Control Sets                        |   109 |       |          0 |     57600 |  0.19 |
 +--------------------------------------------+-------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slices * 2, Review the Control Sets Report for more information regarding control sets.
@@ -128,15 +128,18 @@ Table of Contents
 |     Site Type    | Used | Fixed | Prohibited | Available | Util% |
 +------------------+------+-------+------------+-----------+-------+
 | Bonded IOB       |  296 |     1 |          0 |       360 | 82.22 |
-| HPIOB_M          |  138 |     0 |          0 |       144 | 95.83 |
-|   INPUT          |   61 |       |            |           |       |
+| HPIOB_M          |  137 |     0 |          0 |       144 | 95.14 |
+|   INPUT          |   60 |       |            |           |       |
 |   OUTPUT         |   77 |       |            |           |       |
 |   BIDIR          |    0 |       |            |           |       |
 | HPIOB_S          |  137 |     0 |          0 |       144 | 95.14 |
 |   INPUT          |   61 |       |            |           |       |
 |   OUTPUT         |   76 |       |            |           |       |
 |   BIDIR          |    0 |       |            |           |       |
-| HDIOB_M          |    0 |     0 |          0 |        24 |  0.00 |
+| HDIOB_M          |    1 |     0 |          0 |        24 |  4.17 |
+|   INPUT          |    1 |       |            |           |       |
+|   OUTPUT         |    0 |       |            |           |       |
+|   BIDIR          |    0 |       |            |           |       |
 | HDIOB_S          |    0 |     0 |          0 |        24 |  0.00 |
 | HPIOB_SNGL       |   21 |     1 |          0 |        24 | 87.50 |
 |   INPUT          |    9 |       |            |           |       |

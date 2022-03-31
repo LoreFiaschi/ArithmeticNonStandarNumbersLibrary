@@ -1,0 +1,7 @@
+digraph "CFG for 'Ban::operator*' function" {
+	label="CFG for 'Ban::operator*' function";
+
+	Node0x3a4bf30 [shape=record,filename="",linenumber="",label="{.predFake}"];
+	Node0x3a4bf30 -> Node0x39c76a0[ callList="9:116; 5:121" memoryops="" filename="../../../../src/ban_s3.cpp" execusionnum="289"];
+	Node0x39c76a0 [shape=record,filename="../../../../src/ban_s3.cpp",linenumber="123",label="{.succFake}"];
+}

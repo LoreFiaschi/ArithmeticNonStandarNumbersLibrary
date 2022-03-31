@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Fri Mar 18 12:05:52 2022
+| Date             : Mon Mar 21 11:13:38 2022
 | Host             : lorenzo-System-Product-Name running 64-bit Linux Mint 19.3 Tricia
 | Command          : report_power -file /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw_vivado/results/power_power_1.txt -name power_1
 | Design           : design_1_wrapper
@@ -52,15 +52,15 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.028 |        4 |       --- |             --- |
-| CLB Logic               |     0.029 |    23387 |       --- |             --- |
-|   LUT as Logic          |     0.025 |    12526 |    230400 |            5.44 |
+| Clocks                  |     0.027 |        4 |       --- |             --- |
+| CLB Logic               |     0.028 |    23387 |       --- |             --- |
+|   LUT as Logic          |     0.024 |    12526 |    230400 |            5.44 |
 |   CARRY8                |     0.002 |      548 |     28800 |            1.90 |
 |   Register              |     0.001 |     8147 |    460800 |            1.77 |
 |   LUT as Shift Register |    <0.001 |       74 |    101760 |            0.07 |
 |   Others                |     0.000 |     1379 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |       11 |    230400 |           <0.01 |
-| Signals                 |     0.037 |    19141 |       --- |             --- |
+| Signals                 |     0.038 |    19133 |       --- |             --- |
 | MMCM                    |     0.097 |        0 |       --- |             --- |
 | DSPs                    |     0.010 |       24 |      1728 |            1.39 |
 | I/O                     |     0.050 |      296 |       360 |           82.22 |
@@ -75,11 +75,11 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.260 |       0.123 |      0.137 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.259 |       0.122 |      0.137 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.071 |       0.001 |      0.070 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.202 |       0.054 |      0.148 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.081 |       0.026 |      0.055 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.082 |       0.027 |      0.055 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18          |       1.800 |     0.001 |       0.001 |      0.000 |       NA    | Unspecified | NA         |
@@ -165,9 +165,9 @@ Table of Contents
 | Name                | Power (W) |
 +---------------------+-----------+
 | design_1_wrapper    |     0.251 |
-|   design_1_i        |     0.191 |
-|     ban_interface_0 |     0.093 |
-|       inst          |     0.093 |
+|   design_1_i        |     0.190 |
+|     ban_interface_0 |     0.092 |
+|       inst          |     0.092 |
 |     clk_wiz         |     0.098 |
 |       inst          |     0.098 |
 +---------------------+-----------+

@@ -1,19 +1,19 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'lorenzo' on host 'lorenzo-System-Product-Name' (Linux_x86_64 version 5.4.0-104-generic) on Thu Mar 17 18:51:43 CET 2022
+INFO: [HLS 200-10] For user 'lorenzo' on host 'lorenzo-System-Product-Name' (Linux_x86_64 version 5.4.0-104-generic) on Mon Mar 21 09:22:10 CET 2022
 INFO: [HLS 200-10] On os Linux Mint 19.3 Tricia
 INFO: [HLS 200-10] In directory '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga'
-Sourcing Tcl script '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1/export.tcl'
+Sourcing Tcl script '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: open_project bans3hw 
 INFO: [HLS 200-10] Opening project '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw'.
 INFO: [HLS 200-1510] Running: set_top ban_interface 
-INFO: [HLS 200-1510] Running: add_files src/ban_interface.cpp 
-INFO: [HLS 200-10] Adding design file 'src/ban_interface.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files src/ban_s3.cpp 
-INFO: [HLS 200-10] Adding design file 'src/ban_s3.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files src/ban_s3.h 
 INFO: [HLS 200-10] Adding design file 'src/ban_s3.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test/vitis_test.cpp 
+INFO: [HLS 200-1510] Running: add_files src/ban_s3.cpp 
+INFO: [HLS 200-10] Adding design file 'src/ban_s3.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/ban_interface.cpp 
+INFO: [HLS 200-10] Adding design file 'src/ban_interface.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test/vitis_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'test/vitis_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1'.
@@ -22,44 +22,21 @@ INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1464] Running solution command: config_export -output=/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1510] Running: config_export -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2021.2 (64-bit)
-  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
-  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_faddfsub_32ns_32ns_32_4_full_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fdiv_32ns_32ns_32_9_no_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ban_interface_fsqrt_32ns_32ns_32_8_no_dsp_1_ip'...
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 17 18:51:58 2022...
-INFO: [HLS 200-802] Generated output file bans3hw/solution1/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 15.34 seconds. CPU system time: 1.01 seconds. Elapsed time: 16.83 seconds; current allocated memory: -929.301 MB.
-INFO: [HLS 200-112] Total CPU user time: 17.19 seconds. Total CPU system time: 1.35 seconds. Total elapsed time: 18.19 seconds; peak allocated memory: 261.793 MB.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/bans3hw/solution1 -rtl verilog 
+INFO: [HLS 200-1510] Running: set_directive_top -name ban_interface ban_interface 
+INFO: [HLS 200-1510] Running: csim_design -profile -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../test/vitis_test.cpp in debug mode
+   Compiling ../../../../src/ban_interface.cpp in debug mode
+   Compiling ../../../../src/ban_s3.cpp in debug mode
+   Generating csim.exe
+   Generating dot files
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.71 seconds. CPU system time: 0.28 seconds. Elapsed time: 3.34 seconds; current allocated memory: -937.109 MB.
+INFO: [HLS 200-112] Total CPU user time: 5.71 seconds. Total CPU system time: 0.62 seconds. Total elapsed time: 4.87 seconds; peak allocated memory: 254.223 MB.

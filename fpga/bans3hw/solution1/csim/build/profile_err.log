@@ -1,0 +1,258 @@
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanplERKS_ ---> FID:2
+Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZN3Ban4_sumERKS_S1_i ---> FID:4
+Function:_ZN3Ban14to_normal_formEv ---> FID:5
+Function:_ZNK3BanngEv ---> FID:6
+Function:_ZNK3BanmiERKS_ ---> FID:7
+Function:_ZNK3BanmlERKS_ ---> FID:8
+Function:_ZN3Ban4_mulEPKfS1_Pf ---> FID:9
+Function:_ZNK3BandvERKS_ ---> FID:10
+Function:_Z3absRK3Ban ---> FID:11
+Function:_Z4sqrtRK3Ban ---> FID:12
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_ZNK3BanneERKS_ ---> FID:14
+Function:_ZNK3BanltERKS_ ---> FID:15
+Function:_ZNK3BangtERKS_ ---> FID:16
+Function:_ZNK3BanleERKS_ ---> FID:17
+Function:_ZNK3BangeERKS_ ---> FID:18
+Function:_ZNK3BanplEf ---> FID:19
+Function:_ZNK3BanmiEf ---> FID:20
+Function:_ZNK3BanmlEf ---> FID:21
+Function:_ZNK3BandvEf ---> FID:22
+Function:_ZdvfRK3Ban ---> FID:23
+Function:_ZNK3BanneEf ---> FID:24
+Function:_ZNK3BanltEf ---> FID:25
+Function:_ZNK3BangtEf ---> FID:26
+Function:_ZNK3BanleEf ---> FID:27
+Function:_ZNK3BangeEf ---> FID:28
+CFGHierUserfilelist:[/home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/test/vitis_test.cpp /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_interface.cpp /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.cpp /home/lorenzo/Documents/PhD/GitHub/ArithmeticNonStandarNumbersLibrary/fpga/src/ban_s3.h]
+TopFunctionName:ban_interface
+Writing 'callgraphDemangle.dot'...Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanplERKS_ ---> FID:2
+Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZN3Ban4_sumERKS_S1_i ---> FID:4
+Function:_ZN3Ban14to_normal_formEv ---> FID:5
+Function:_ZNK3BanngEv ---> FID:6
+Function:_ZNK3BanmiERKS_ ---> FID:7
+Function:_ZNK3BanmlERKS_ ---> FID:8
+Function:_ZN3Ban4_mulEPKfS1_Pf ---> FID:9
+Function:_ZNK3BandvERKS_ ---> FID:10
+Function:_Z3absRK3Ban ---> FID:11
+Function:_Z4sqrtRK3Ban ---> FID:12
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_ZNK3BanneERKS_ ---> FID:14
+Function:_ZNK3BanltERKS_ ---> FID:15
+Function:_ZNK3BangtERKS_ ---> FID:16
+Function:_ZNK3BanleERKS_ ---> FID:17
+Function:_ZNK3BangeERKS_ ---> FID:18
+Function:_ZNK3BanplEf ---> FID:19
+Function:_ZNK3BanmiEf ---> FID:20
+Function:_ZNK3BanmlEf ---> FID:21
+Function:_ZNK3BandvEf ---> FID:22
+Function:_ZdvfRK3Ban ---> FID:23
+Function:_ZNK3BanneEf ---> FID:24
+Function:_ZNK3BanltEf ---> FID:25
+Function:_ZNK3BangtEf ---> FID:26
+Function:_ZNK3BanleEf ---> FID:27
+Function:_ZNK3BangeEf ---> FID:28
+
+Writing 'cfg__GLOBAL__sub_I_vitis_test.cpp_csim.dot'...
+Writing 'cfg___cxx_global_var_init_csim.dot'...
+Writing 'cfg___cxx_global_var_init.1_csim.dot'...
+Writing 'cfg___cxx_global_var_init.2_csim.dot'...
+Writing 'cfg___cxx_global_var_init.3_csim.dot'...
+Writing 'cfg___cxx_global_var_init.4_csim.dot'...
+Writing 'cfg_main_csim.dot'...Function:_ZNK3BanmlERKS_ ---> FID:8
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanplERKS_ ---> FID:2
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanmiERKS_ ---> FID:7
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanmlERKS_ ---> FID:8
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BandvERKS_ ---> FID:10
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanneERKS_ ---> FID:14
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanltERKS_ ---> FID:15
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BangtERKS_ ---> FID:16
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanleERKS_ ---> FID:17
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BangeERKS_ ---> FID:18
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanplEf ---> FID:19
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanmiEf ---> FID:20
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanmlEf ---> FID:21
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BandvEf ---> FID:22
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BaneqEf ---> FID:3
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanneEf ---> FID:24
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanltEf ---> FID:25
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BangtEf ---> FID:26
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanleEf ---> FID:27
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BangeEf ---> FID:28
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_ZNK3BanngEv ---> FID:6
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_Z3absRK3Ban ---> FID:11
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Function:_Z4sqrtRK3Ban ---> FID:12
+Function:_ZNK3BaneqERKS_ ---> FID:13
+
+Writing 'cfg__ZN6outputC2Ev_csim.dot'...
+Function:_ZNK3BanmiERKS_ ---> FID:7
+Writing 'cfg_7_csim.dot'...Function:_ZNK3BanngEv ---> FID:6
+Function:_ZNK3BanplERKS_ ---> FID:2
+
+Function:_ZNK3BanneERKS_ ---> FID:14
+Writing 'cfg_14_csim.dot'...Function:_ZNK3BaneqERKS_ ---> FID:13
+
+Function:_ZNK3BangtERKS_ ---> FID:16
+Writing 'cfg_16_csim.dot'...Function:_ZNK3BanltERKS_ ---> FID:15
+
+Function:_ZNK3BanleERKS_ ---> FID:17
+Writing 'cfg_17_csim.dot'...Function:_ZNK3BanltERKS_ ---> FID:15
+
+Function:_ZNK3BangeERKS_ ---> FID:18
+Writing 'cfg_18_csim.dot'...Function:_ZNK3BanltERKS_ ---> FID:15
+
+Function:_ZNK3BanmiEf ---> FID:20
+Writing 'cfg_20_csim.dot'...Function:_ZNK3BanplEf ---> FID:19
+
+Function:_ZNK3BanneEf ---> FID:24
+Writing 'cfg_24_csim.dot'...Function:_ZNK3BaneqEf ---> FID:3
+
+Function:_ZNK3BangtEf ---> FID:26
+Writing 'cfg_26_csim.dot'...Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZNK3BanltEf ---> FID:25
+
+Function:_ZNK3BanleEf ---> FID:27
+Writing 'cfg_27_csim.dot'...Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZNK3BanltEf ---> FID:25
+
+Function:_ZNK3BangeEf ---> FID:28
+Writing 'cfg_28_csim.dot'...Function:_ZNK3BanltEf ---> FID:25
+
+Writing 'cfg__GLOBAL__sub_I_ban_interface.cpp_csim.dot'...
+Writing 'cfg___cxx_global_var_init.5_csim.dot'...
+Writing 'cfg___cxx_global_var_init.1.6_csim.dot'...
+Writing 'cfg___cxx_global_var_init.2.7_csim.dot'...
+Writing 'cfg___cxx_global_var_init.3.8_csim.dot'...
+Writing 'cfg___cxx_global_var_init.4.9_csim.dot'...
+Function:_Z13ban_interfaceRK3BanS1_f7op_type ---> FID:1
+Writing 'cfg_1_csim.dot'...Function:_ZNK3BangeEf ---> FID:28
+Function:_ZNK3BanplERKS_ ---> FID:2
+Function:_ZNK3BanngEv ---> FID:6
+Function:_ZNK3BanmiERKS_ ---> FID:7
+Function:_ZNK3BanmlERKS_ ---> FID:8
+Function:_ZNK3BandvERKS_ ---> FID:10
+Function:_Z3absRK3Ban ---> FID:11
+Function:_Z4sqrtRK3Ban ---> FID:12
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Function:_ZNK3BanneERKS_ ---> FID:14
+Function:_ZNK3BanltERKS_ ---> FID:15
+Function:_ZNK3BangtERKS_ ---> FID:16
+Function:_ZNK3BanleERKS_ ---> FID:17
+Function:_ZNK3BangeERKS_ ---> FID:18
+Function:_ZNK3BanplEf ---> FID:19
+Function:_ZNK3BanmiEf ---> FID:20
+Function:_ZNK3BanmlEf ---> FID:21
+Function:_ZNK3BandvEf ---> FID:22
+Function:_ZdvfRK3Ban ---> FID:23
+Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZNK3BanneEf ---> FID:24
+Function:_ZNK3BanltEf ---> FID:25
+Function:_ZNK3BangtEf ---> FID:26
+Function:_ZNK3BanleEf ---> FID:27
+
+Writing 'cfg__GLOBAL__sub_I_ban_s3.cpp_csim.dot'...
+Writing 'cfg___cxx_global_var_init.20_csim.dot'...
+Writing 'cfg___cxx_global_var_init.1.21_csim.dot'...
+Writing 'cfg___cxx_global_var_init.2.22_csim.dot'...
+Writing 'cfg___cxx_global_var_init.3.23_csim.dot'...
+Writing 'cfg___cxx_global_var_init.4.24_csim.dot'...
+Writing 'cfg__ZN3BanC2EiPKf_csim.dot'...
+Writing 'cfg__ZN3BanC2Ef_csim.dot'...
+Function:_ZNK3BaneqERKS_ ---> FID:13
+Writing 'cfg_13_csim.dot'...
+Function:_ZNK3BaneqEf ---> FID:3
+Writing 'cfg_3_csim.dot'...
+Function:_ZN3Ban14to_normal_formEv ---> FID:5
+Writing 'cfg_5_csim.dot'...
+Function:_ZN3Ban4_sumERKS_S1_i ---> FID:4
+Writing 'cfg_4_csim.dot'...Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
+Function:_ZNK3BanplERKS_ ---> FID:2
+Writing 'cfg_2_csim.dot'...Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZN3Ban4_sumERKS_S1_i ---> FID:4
+Function:_ZN3Ban4_sumERKS_S1_i ---> FID:4
+
+Function:_ZNK3BanngEv ---> FID:6
+Writing 'cfg_6_csim.dot'...
+Function:_ZN3Ban4_mulEPKfS1_Pf ---> FID:9
+Writing 'cfg_9_csim.dot'...
+Function:_ZNK3BanmlERKS_ ---> FID:8
+Writing 'cfg_8_csim.dot'...Function:_ZN3Ban4_mulEPKfS1_Pf ---> FID:9
+Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
+Function:_ZNK3BandvERKS_ ---> FID:10
+Writing 'cfg_10_csim.dot'...Function:_ZNK3BaneqEf ---> FID:3
+Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
+Function:_ZdvfRK3Ban ---> FID:23
+Writing 'cfg_23_csim.dot'...Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
+Writing 'cfg__ZlsRSoRK3Ban_csim.dot'...
+Writing 'cfg__ZlsRSt14basic_ofstreamIcSt11char_traitsIcEERK3Ban_csim.dot'...
+Writing 'cfg__ZSt10scientificRSt8ios_base_csim.dot'...
+Writing 'cfg__ZSt12setprecisioni_csim.dot'...
+Writing 'cfg__ZNSt8ios_base4setfESt13_Ios_FmtflagsS0__csim.dot'...
+Writing 'cfg__ZStcoSt13_Ios_Fmtflags_csim.dot'...
+Writing 'cfg__ZStaNRSt13_Ios_FmtflagsS__csim.dot'...
+Writing 'cfg__ZStanSt13_Ios_FmtflagsS__csim.dot'...
+Writing 'cfg__ZStoRRSt13_Ios_FmtflagsS__csim.dot'...
+Writing 'cfg__ZStorSt13_Ios_FmtflagsS__csim.dot'...
+Function:_ZNK3BanltERKS_ ---> FID:15
+Writing 'cfg_15_csim.dot'...
+Function:_ZNK3BanltEf ---> FID:25
+Writing 'cfg_25_csim.dot'...
+Function:_Z3absRK3Ban ---> FID:11
+Writing 'cfg_11_csim.dot'...Function:_ZNK3BanngEv ---> FID:6
+
+Function:_Z4sqrtRK3Ban ---> FID:12
+Writing 'cfg_12_csim.dot'...Function:_ZN3Ban4_mulEPKfS1_Pf ---> FID:9
+
+Writing 'cfg__ZSt4sqrtf_csim.dot'...
+Function:_ZNK3BanplEf ---> FID:19
+Writing 'cfg_19_csim.dot'...Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
+Function:_ZNK3BanmlEf ---> FID:21
+Writing 'cfg_21_csim.dot'...Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
+Function:_ZNK3BandvEf ---> FID:22
+Writing 'cfg_22_csim.dot'...Function:_ZN3Ban14to_normal_formEv ---> FID:5
+
