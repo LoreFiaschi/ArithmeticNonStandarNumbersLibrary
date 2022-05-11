@@ -1,7 +1,7 @@
 __precompile__()
 module BAN
 
-# Library for HPC fixing SIZE = 3
+# Library for HPC fixing SIZE = 2
 
 using Printf, Format
 using Random, LinearAlgebra
@@ -25,7 +25,7 @@ export retrieve_infinitesimals, retrieve_most_informative
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 struct Ban <: AbstractAlgNum
@@ -34,30 +34,27 @@ struct Ban <: AbstractAlgNum
     p::Int64
     num1::Float64
 	num2::Float64
-	num3::Float64
     
     # Constructor
-    Ban(p::Int64,num::Vector{Float64}, check::Bool) = new(p,num[1],num[2],num[3])
+    Ban(p::Int64,num::Vector{Float64}, check::Bool) = new(p,num[1],num[2])
     Ban(p::Int64,num::Vector{T}, check::Bool) where T<:Real = Ban(p, Vector{Float64}(num), check)
-	Ban(p::Int64,num::Tuple{T,T,T}, check::Bool) where T<:Float64 = new(p,num[1],num[2],num[3])
-	Ban(p::Int64,num::Tuple{R,S,T}, check::Bool) where {R<:Real,S<:Real,T<:Real} = Ban(p, Tuple{Float64,Float64,Float64}(num), check)
-	Ban(p::Int64,num1::T,num2::T,num3::T, check::Bool) where T<:Float64 = new(p,num1,num2,num3)
-    Ban(p::Int64,num::Vector{Float64}) = (_constraints_satisfaction(p,num) && new(p,num[1],num[2],num[3]))
+	Ban(p::Int64,num::Tuple{T,T}, check::Bool) where T<:Float64 = new(p,num[1],num[2])
+	Ban(p::Int64,num::Tuple{S,T}, check::Bool) where {S<:Real,T<:Real} = Ban(p, Tuple{Float64,Float64}(num), check)
+	Ban(p::Int64,num1::T,num2::T, check::Bool) where T<:Float64 = new(p,num1,num2)
+    Ban(p::Int64,num::Vector{Float64}) = (_constraints_satisfaction(p,num) && new(p,num[1],num[2]))
     Ban(p::Int64,num::Vector{T}) where T<:Real = Ban(p, Vector{Float64}(num))
-    Ban(p::Int64,num::Tuple{T,T,T}) where T<:Float64 = (_constraints_satisfaction(p,num) && new(p,num[1],num[2],num[3]))
-    Ban(p::Int64,num::Tuple{R,S,T}) where {R<:Real,S<:Real,T<:Real} = Ban(p, Tuple{Float64,Float64,Float64}(num))
-	Ban(p::Int64,num1::T,num2::T,num3::T) where T<:Float64 = (_constraints_satisfaction(p,num1,num2,num3) && new(p,num1,num2,num3))
-    Ban(a::Ban) = new(a.p,a.num1,a.num2,a.num3)
+    Ban(p::Int64,num::Tuple{T,T}) where T<:Float64 = (_constraints_satisfaction(p,num) && new(p,num[1],num[2]))
+    Ban(p::Int64,num::Tuple{S,T}) where {S<:Real,T<:Real} = Ban(p, Tuple{Float64,Float64}(num))
+	Ban(p::Int64,num1::T,num2::T) where T<:Float64 = (_constraints_satisfaction(p,num1,num2) && new(p,num1,num2))
+    Ban(a::Ban) = new(a.p,a.num1,a.num2)
     Ban(x::Bool) = one(Ban)
-    Ban(x::T) where T<:Real= Ban(0, Float64(x), 0.0, 0.0, false)
+    Ban(x::T) where T<:Real= Ban(0, Float64(x), 0.0, false)
 end
 
 # α constant
-const α = Ban(1, 1.0, 0.0, 0.0, false);
+const α = Ban(1, 1.0, 0.0, false);
 # η constant
-const η = Ban(-1, 1.0, 0.0, 0.0, false);
-# coefficient to compute sqrt
-const sqrt_coef = -0.125;
+const η = Ban(-1, 1.0, 0.0, false);
 
 
 # Check if the Ban is in a correct form (which guarantees uniqueness of the representation)
@@ -67,13 +64,13 @@ const sqrt_coef = -0.125;
 function _constraints_satisfaction(p::Int64,num::Vector{Float64})
     
     length(num) != SIZE && throw(ArgumentError(string("Wrong input array dimension. Supposed ", SIZE, ", ", length(num), " given.")))
-    num[1] == 0.0 && (p != 0 || num[2] != 0.0 || num[3] != 0.0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
+    num[1] == 0.0 && (p != 0 || num[2] != 0.0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
     return true
 end
 
-function _constraints_satisfaction(p::Int64,num1::T,num2::T,num3::T) where T<:Float64
+function _constraints_satisfaction(p::Int64,num1::T,num2::T) where T<:Float64
 
-    num1 == 0.0 && (p != 0 || num2 != 0.0 || num3 != 0.0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
+    num1 == 0.0 && (p != 0 || num2 != 0.0) && throw(ArgumentError("The first entry of the input array can be 0 only if all the other entries and the degree are nil too."))
     return true
 end
 
@@ -91,12 +88,6 @@ function _show(io::IO, a::Ban)
         print(io, string(" - ", -a.num2, "η^1"))
     end
 
-    if a.num3 >= 0.0
-        print(io, string(" + ", a.num3, "η^2"))
-    else
-        print(io, string(" - ", -a.num3, "η^2"))
-    end
-
     print(io, ")")
 end
 
@@ -106,7 +97,6 @@ function _write(io::IO, a::Ban)
 	byte = write(io, a.p);
 	byte += write(io, a.num1);
     byte += write(io, a.num2);
-    byte += write(io, a.num3);
 
 	return byte
 end
@@ -117,7 +107,6 @@ function _read(io::IO, a::Type{Ban})
 	vec = Vector{Float64}(undef, SIZE);
     vec[1] = read(io, Float64);
     vec[2] = read(io, Float64);
-    vec[3] = read(io, Float64);
 
 	return Ban(p, vec, false)
 end
@@ -135,13 +124,6 @@ function print_ext(a::Ban)
                 @printf(" + %.3gα^%d", a.num2, q);
 		elseif a.num2 < 0.0
                 @printf(" - %.3gα^%d", -a.num2, q);
-        end
-			
-		q -= 1
-		if a.num3 > 0.0 
-                @printf(" + %.3gα^%d", a.num3, q);
-		elseif a.num3 < 0.0
-                @printf(" - %.3gα^%d", -a.num3, q);
         end
     end
 end
@@ -167,12 +149,6 @@ function print_latex(a::Ban; precision::Integer=16, digits::Integer=2)
 			printfmt(f, " -", -round(a.num2, digits=precision), "\\alpha^{$deg}");
 		end
 		
-		deg -= 1;
-		if a.num3 > 0.0
-			printfmt(f, " +", round(a.num3, digits=precision), "\\alpha^{$deg}");
-		elseif a.num3 < 0.0
-			printfmt(f, " -", -round(a.num3, digits=precision), "\\alpha^{$deg}");
-		end
     end
 end
 
@@ -217,14 +193,12 @@ end
 
 
 # Sum of two Bans
-function _sum_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}, diff_p::Int64) where T <: Float64
+function _sum_body(a::Tuple{T,T}, b::Tuple{T,T}, diff_p::Int64) where T <: Float64
 	
-	diff_p == 0 && return a[1]+b[1], a[2]+b[2], a[3]+b[3]
-	
-	diff_p == 1 && return a[1], a[2]+b[1], a[3]+b[2]
+	diff_p == 0 && return a[1]+b[1], a[2]+b[2]
 
-	# diff_p == 2
-	return a[1], a[2], a[3]+b[1];
+	# diff_p == 1
+	return return a[1], a[2]+b[1]
 end
 
 function _sum(a::Ban, b::Ban)
@@ -251,8 +225,8 @@ function _sum(a::Ban, b::Ban)
 end
 
 # Multiplication of two Bans
-function _mul_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}) where T<:Float64
-	return a[1] * b[1], a[2] * b[1] + a[1] * b[2], a[3] * b[1] + a[1] * b[3] + a[2] * b[2]
+function _mul_body(a::Tuple{T,T}, b::Tuple{T,T}) where T<:Float64
+	return a[1] * b[1], a[2] * b[1] + a[1] * b[2]
 end
 
 function _mul(a::Ban, b::Ban)
@@ -263,11 +237,10 @@ function _mul(a::Ban, b::Ban)
 end
 
 # Division of two Bans
-function _div_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}) where T<:Float64
+function _div_body(a::Tuple{T,T}, b::Tuple{T,T}) where T<:Float64
 	num1 = a[1]/b[1];
 	num2 = (a[2]-num1*b[2])/b[1];
-	num3 = (a[3] - num1*b[3] - num2*b[2])/b[1];
-	return num1, num2, num3;
+	return num1, num2;
 end
 
 function _div(a::Ban, b::Ban)
@@ -291,41 +264,31 @@ function _sum(a::Ban, b::T) where T<:Real
 			return a;
 		end
 		
-		num1, num2, num3 = get_monosemia(a)
+		num1, num2 = get_monosemia(a)
 		if a.p == 0
 			num1 += b
-		elseif a.p == 1
-			num2 += b
 		else
-			num3 += b
+			num2 += b
 		end
-		p, num = to_normal_form(a.p, (num1, num2, num3));
+		p, num = to_normal_form(a.p, (num1, num2));
 		return Ban(p, num, false);
 	end
 	
 	num1 = b;
 	
 	if a.p == -1
-		num3 = a.num2;
 		num2 = a.num1;
 	else
-		num2 = 0.0 ;
-		
-		if a.p == -2
-			num3 = a.num1;
-		else
-			num3 = 0.0 ;
-		end
-	
+		num2 = 0.0 ;	
 	end
 	
-	return Ban(0, (num1, num2, num3), false);
+	return Ban(0, (num1, num2), false);
 	
 end
 
 # Multiplication of ban and real
 function _mul(a::Ban, b::T) where T<:Real
-	p, num = to_normal_form(a.p, (a.num1*b, a.num2*b, a.num3*b));
+	p, num = to_normal_form(a.p, (a.num1*b, a.num2*b));
 	return Ban(p, num, false);
 end
 
@@ -334,7 +297,7 @@ function _div(a::Ban, b::T) where T<:Real
 	b == 0.0 && throw(ArgumentError("Division by zero detected."));
 	a == 0.0 && return a;
 
-	p, num = to_normal_form(a.p, (a.num1/b, a.num2/b, a.num3/b));
+	p, num = to_normal_form(a.p, (a.num1/b, a.num2/b));
 	return Ban(p, num, false);
 end
 
@@ -344,14 +307,13 @@ function _div(a::T, b::Ban) where T<:Real
 	a == 0.0 && return a;
 
 	num2 = -a*b.num2/b.num1
-	num3 = a*(-b.num3/b.num1+num2*num2)
 	
-	return Ban(-b.p, (a/b.num1, num2/b.num1, num3/b.num1), false)
+	return Ban(-b.p, (a/b.num1, num2/b.num1), false)
 end
 
 
 # Power function
-function _pow_fast(b::Tuple{T,T,T}, e::Int64) where T<:Float64
+function _pow_fast(b::Tuple{T,T}, e::Int64) where T<:Float64
 	e == 1 && return b;
 	
 	e == 2 && return _mul_body(b, b);
@@ -404,25 +366,10 @@ function _sqrt(a::Ban)
 		return a;
 	end
 	
-	normalizer = a.num1;
-	eps_ = (0.0, a.num2/normalizer, a.num3/normalizer) ;
-	num1 = 1.0 ;
-	num2 = 0.5*eps_[2];
-	num3 = 0.5*eps_[3];
+	num1 = sqrt(a.num1);
+	num2 = 0.5*a.num2/num1;
 	
-	eps_ = _mul_body(eps_, eps_);
-	
-	num1 += sqrt_coef*eps_[1];
-	num2 += sqrt_coef*eps_[2];
-	num3 += sqrt_coef*eps_[3];
-	
-	normalizer = sqrt(normalizer);
-
-	num1 *= normalizer;
-	num2 *= normalizer;
-	num3 *= normalizer;
-	
-	return Ban(a.p>>1, (num1, num2, num3), false);
+	return Ban(a.p>>1, (num1, num2), false);
 end
 
 #####################
@@ -437,9 +384,8 @@ function _isless(a::Ban, b::Ban)
 	#same leading power (i.e., magnitude)
 
 	eq0 = a.num1 == b.num1;
-	eq1 = a.num2 == b.num2;
 
-	return ( deq_p || (!pbp && !bpp && ( (!eq0 && a.num1 < b.num1) || (eq0 && ( (!eq1 && a.num2 < b.num2) || (eq1 && a.num3 < b.num3) ) ) ) ) );
+	return ( deq_p || (!pbp && !bpp && ( (!eq0 && a.num1 < b.num1) || (eq0 &&  a.num2 < b.num2) ) ) );
 end
 
 function _isless(a::Ban, b::T) where T<:Real
@@ -447,7 +393,7 @@ function _isless(a::Ban, b::T) where T<:Real
 	pl = a.p < 0;
 	n0 = a.num1 < 0;
 	
-	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0.0 || ( b == 0.0 && n0) ) ) || ( a.p == 0 && ( a.num1 < b || (a.num1 == b && ( a.num2 < 0.0 || ( a.num2 == 0.0 && a.num3 < 0.0 ) ) ) ) ) ); 
+	return ( ( pg &&  n0 ) || ( pl &&  ( b > 0.0 || ( b == 0.0 && n0) ) ) || ( a.p == 0 && ( a.num1 < b || (a.num1 == b &&  a.num2 < 0.0  ) ) ) ); 
 end
 
 function _isless(a::T, b::Ban) where T<:Real
@@ -455,7 +401,7 @@ function _isless(a::T, b::Ban) where T<:Real
 	pl = b.p < 0;
 	n0 = b.num1 > 0;
 
-	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0.0 || ( a == 0.0 && n0) ) ) || ( b.p == 0 && ( a < b.num1 || (b.num1 == a && ( 0.0 < b.num2  || ( b.num2 == 0.0 && 0.0 < b.num3 ) ) ) ) ) ); 
+	return ( ( pg &&  n0 ) || ( pl &&  ( a < 0.0 || ( a == 0.0 && n0) ) ) || ( b.p == 0 && ( a < b.num1 || (b.num1 == a &&  0.0 < b.num2   ) ) ) ); 
 end
 
 #####################
@@ -539,10 +485,6 @@ function _min_degree(a::Ban)
 		return 0 ;
 	end
 	
-	if a.num3 != 0.0
-		return a.p-2;
-	end
-	
 	if a.num2 != 0.0
 		return a.p-1 ;
 	end
@@ -552,7 +494,7 @@ end
 
 function get_monosemia(a::Ban)
 
-	return a.num1, a.num2, a.num3;
+	return a.num1, a.num2;
 end
 
 @inline function denoise_check(a::Float64, tol::Real)
@@ -560,7 +502,7 @@ end
 end
 
 function denoise(a::Ban, tol::Real)
-	num = (denoise_check(a.num1, tol), denoise_check(a.num2, tol), denoise_check(a.num3, tol))
+	num = (denoise_check(a.num1, tol), denoise_check(a.num2, tol))
 	p, num = to_normal_form(a.p, num)
 	return Ban(p, num, false)
 end
@@ -600,12 +542,9 @@ function retrieve_infinitesimals(a::Ban, degree::Integer)
 	base_idx = a.p-degree
 	base_idx <= 0 && return a
 	base_idx >= SIZE && return 0
-	if base_idx == 1
-		num = (a.num2, a.num3, 0.0)
-	else # base_idx == 2
-		num = (a.num3, 0.0, 0.0)
-	end
 	
+	num = (a.num2, 0.0)
+		
 	p, num = to_normal_form(a.p-base_idx, num)
 	
 	return Ban(p, num, false)
@@ -630,12 +569,9 @@ function retrieve_most_informative(a::Ban, degree::Integer)
 	base_idx = a.p-degree
 	base_idx < 0 && return 0
 	base_idx >= SIZE-1 && return a
-	if base_idx == 0
-		num = (a.num1, 0.0, 0.0)
-	else # base_idx == 1
-		num = (a.num1, a.num2, 0.0)
-	end
 	
+	num = (a.num1, 0.0)
+		
 	return Ban(a.p, num, false)
 end
 
@@ -655,9 +591,9 @@ function retrieve_most_informative(A::AbstractArray{Ban}, degree::Integer)
 end
 
 
-principal(a::Ban) = Ban(a.p, a.num1, 0.0, 0.0, false);
+principal(a::Ban) = Ban(a.p, a.num1, 0.0, false);
 principal(a::Real) = a
-magnitude(a::Ban) = Ban(a.p, 1.0, 0.0, 0.0, false)
+magnitude(a::Ban) = Ban(a.p, 1.0, 0.0, false)
 magnitude(a::Real) = one(Ban)
 degree(a::Ban) = a.p
 degree(a::Real) = 0
@@ -669,12 +605,10 @@ min_degree(a::Real) = 0
 ################################
 
 
-function to_normal_form(p::Int64, num::Tuple{T,T,T}) where T<:Float64
+function to_normal_form(p::Int64, num::Tuple{T,T}) where T<:Float64
 	num[1] != 0.0 && return p, num ;
 	
-	num[2] != 0.0 && return p-1, (num[2], num[3], 0.0)
-	
-	num[3] != 0.0 && return p-2, (num[3], 0.0, 0.0) ;
+	num[2] != 0.0 && return p-1, (num[2], 0.0)
 	
 	# all zero
 	return 0, num;
@@ -682,16 +616,16 @@ end
 
 function nextban(a::Ban, n::Integer)
     
-    return Ban(a.p, (a.num1, a.num2, nextfloat(a.num3, n)));
+    return Ban(a.p, (a.num1, nextfloat(a.num2, n)));
 end
 
 function prevban(a::Ban, n::Integer)
     
-    return Ban(a.p, (a.num1, a.num2, prevfloat(a.num3, n)));
+    return Ban(a.p, (a.num1, prevfloat(a.num2, n)));
 end
 
 Base.:(+)(a::Ban, b::Ban) = _sum(a,b);
-Base.:(-)(a::Ban) = Ban(a.p, -a.num1, -a.num2, -a.num3, false);
+Base.:(-)(a::Ban) = Ban(a.p, -a.num1, -a.num2, false);
 Base.:(-)(a::Ban, b::Ban) = _sum(a,-b);
 Base.:(*)(a::Ban, b::Ban) = _mul(a,b);
 Base.:(/)(a::Ban, b::Ban) = _div(a,b);
@@ -710,8 +644,8 @@ Base.:(/)(a::T, b::Ban) where T<: Real = _div(a,b);
 Base.isless(a::Ban, b::Ban) = _isless(a, b);
 Base.isless(a::Ban, b::T) where T<: Real = _isless(a, b);
 Base.isless(a::T, b::Ban) where T<: Real = _isless(a, b);
-Base.:(==)(a::Ban, b::Ban) = ((a.p == b.p) && (a.num1 == b.num1) && (a.num2 == b.num2) && (a.num3 == b.num3));
-Base.:(==)(a::Ban, b::T) where T<: Real = ((a.p == 0) && (a.num1 == b) && (a.num2 == 0.0) && (a.num3 == 0.0));
+Base.:(==)(a::Ban, b::Ban) = ((a.p == b.p) && (a.num1 == b.num1) && (a.num2 == b.num2));
+Base.:(==)(a::Ban, b::T) where T<: Real = ((a.p == 0) && (a.num1 == b) && (a.num2 == 0.0));
 
 Base.inv(a::Ban) = 1.0/a
 Base.abs(a::Ban) = (a[1] >= 0.0) ? a : -a
@@ -721,20 +655,20 @@ Base.sqrt(a::Ban) = _sqrt(a)
 Base.conj(a::Ban) = a
 Base.sign(a::Ban) = (a[1] == 0.0) ? 0 : sign(a[1])
 
-#Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num1<<b, a.num2<<b, a.num3<<b, false)
-#Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num1<<b, a.num2<<b, a.num3<<b, false)
+#Base.:(<<)(a::Ban, b::Int) = Ban(a.p, a.num1<<b, a.num2<<b, false)
+#Base.:(>>)(a::Ban, b::Int) = Ban(a.p, a.num1<<b, a.num2<<b, false)
 
-Base.zero(::Type{Ban}) = Ban(0, 0.0, 0.0, 0.0, false)
+Base.zero(::Type{Ban}) = Ban(0, 0.0, 0.0, false)
 Base.zeros(::Type{Ban}, n::Int) = _zeros(n)
 Base.zeros(::Type{Ban}, n::Int, m::Int) = _zeros(n,m)
-Base.one(::Type{Ban}) = Ban(0, 1.0, 0.0, 0.0, false)
+Base.one(::Type{Ban}) = Ban(0, 1.0, 0.0, false)
 Base.ones(::Type{Ban}, n::Int) = _ones(n)
 Base.ones(::Type{Ban}, n::Int, m::Int) = _ones(n,m)
 
-Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, Float64(a), 0.0, 0.0, false)
+Base.convert(::Type{Ban}, a::T) where T <: Real =  Ban(0, Float64(a), 0.0, false)
 Base.promote_rule(::Type{Ban}, ::Type{T}) where T <: Real = Ban
 
-Base.isinf(a::Ban) = (isinf(a.num1) || isinf(a.num2) || isinf(a.num3))
+Base.isinf(a::Ban) = (isinf(a.num1) || isinf(a.num2))
 
 Base.copysign(a::Ban, b::Ban)  = ifelse(signbit(a.num1)!=signbit(b.num1),  -a, a)
 Base.copysign(a::Ban, b::Real) = ifelse(signbit(a.num1)!=signbit(b), -a, a)
@@ -764,11 +698,10 @@ function _rand_Ban(r::MersenneTwister, sp::Random.SamplerTrivial{Random.CloseOpe
     Random.reserve(r, SIZE);
 	num1 =  Random.rand_inbounds(r, sp[])-1;
 	num2 = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
-	num3 = (Random.rand_inbounds(r, sp[])-1)*rand([-1,1]);
 
-	p, num = to_normal_form(0, (num1, num2, num3))
+	p, num = to_normal_form(0, (num1, num2))
 	if num[1] < 0
-		num = (-num[1], -num[2], -num[3])
+		num = (-num[1], -num[2])
 	end
 	
     return Ban(p, num, false);
@@ -929,10 +862,10 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
                     end
                 end
                 # Scale first column
-                #Akkinv = inv(A[k,k])
+                Akkinv = inv(A[k,k])
 				Akkinv = denoise(Akkinv, 1e-8)
                 for i = k+1:m
-                    #A[i,k] *= Akkinv
+                    A[i,k] *= Akkinv
 					A[i,k] = denoise(A[i,k], 1e-8)
                 end
             elseif info == 0
@@ -941,7 +874,7 @@ function _generic_lufact!(A::StridedMatrix{T}, ::LinearAlgebra.Val{Pivot}=Linear
             # Update the rest
             for j = k+1:n
                 for i = k+1:m
-                    #A[i,j] -= A[i,k]*A[k,j]
+                    A[i,j] -= A[i,k]*A[k,j]
 					A[i,j] = denoise(A[i,j], 1e-8)
                 end
             end
@@ -960,11 +893,11 @@ function _naivesub!(A::UpperTriangular, b::AbstractVector, x::AbstractVector = b
     end
     @inbounds for j in n:-1:1
         iszero(A.data[j,j]) && throw(SingularException(j))
-        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
-#        xj = x[j] = A.data[j,j] \ b[j]
+#        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
+        xj = x[j] = A.data[j,j] \ b[j]
         for i in j-1:-1:1 # counterintuitively 1:j-1 performs slightly better
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
-#            b[i] = b[i] - A.data[i,j] * xj
+#            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
@@ -980,8 +913,8 @@ function _naivesub!(A::UnitUpperTriangular, b::AbstractVector, x::AbstractVector
     @inbounds for j in n:-1:1
         xj = x[j] = b[j]
         for i in j-1:-1:1 # counterintuitively 1:j-1 performs slightly better
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
-#            b[i] = b[i] - A.data[i,j] * xj
+#            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
@@ -996,11 +929,11 @@ function _naivesub!(A::LowerTriangular, b::AbstractVector, x::AbstractVector = b
     end
     @inbounds for j in 1:n
         iszero(A.data[j,j]) && throw(SingularException(j))
-        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
-#        xj = x[j] = A.data[j,j] \ b[j]
+#        xj = x[j] = denoise(A.data[j,j] \ b[j], 1e-8)
+        xj = x[j] = A.data[j,j] \ b[j]
         for i in j+1:n
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
-#            b[i] = b[i] - A.data[i,j] * xj
+#            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
@@ -1016,8 +949,8 @@ function _naivesub!(A::UnitLowerTriangular, b::AbstractVector, x::AbstractVector
     @inbounds for j in 1:n
         xj = x[j] = b[j]
         for i in j+1:n
-            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
-#            b[i] = b[i] - A.data[i,j] * xj
+#            b[i] = denoise(b[i] - A.data[i,j] * xj, 1e-8)
+            b[i] = b[i] - A.data[i,j] * xj
         end
     end
     x
