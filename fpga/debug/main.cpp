@@ -6,7 +6,21 @@ using namespace std;
 typedef float T;
 
 int main(){
-
+	
+	T v0[] = {2.3, -1, 1};
+	Ban b0(2, v0);
+	
+	cout<<"Primo operando: "<<b0<<endl;
+	
+	T v00[] = {2, -3, 0.5};
+	Ban b00(1, v0);
+	
+	cout<<"Secondo operando: "<<b00<<endl;
+	
+	cout<<"Somma: "<<b0+b00<<endl;
+	cout<<"Prodotto: "<<b0*b00<<endl;
+	
+	/*
     
     T v1[] = {1.0,-2,4};
     Ban b1(0, v1);
@@ -16,7 +30,6 @@ int main(){
 
     cout<<b1/b1<<endl;
 
-    /*
 
     b1==0;
 
