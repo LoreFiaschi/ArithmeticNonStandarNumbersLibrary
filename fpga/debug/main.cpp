@@ -10,15 +10,18 @@ int main(){
 	T v0[] = {2.3, -1, 1};
 	Ban b0(2, v0);
 	
-	cout<<"Primo operando: "<<b0<<endl;
+	cout<<endl<<endl;
+	cout<<"First operand: "<<b0<<endl;
 	
 	T v00[] = {2, -3, 0.5};
-	Ban b00(1, v0);
+	Ban b00(1, v00);
 	
-	cout<<"Secondo operando: "<<b00<<endl;
+	cout<<"Second operand: "<<b00<<endl<<endl;
 	
-	cout<<"Somma: "<<b0+b00<<endl;
-	cout<<"Prodotto: "<<b0*b00<<endl;
+	cout<<"Sum: "<<b0+b00<<endl;
+	cout<<"Product: "<<b0*b00<<endl;
+	cout<<"Division: "<<b0/b00<<endl;
+	cout<<endl<<endl;
 	
 	/*
     
