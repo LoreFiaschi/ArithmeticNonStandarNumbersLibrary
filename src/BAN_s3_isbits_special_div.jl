@@ -271,7 +271,7 @@ function _div_body(a::Tuple{T,T,T}, b::Tuple{T,T,T}) where T<:Float64
 end
 
 function _div(a::Ban, b::Ban)
-	b == 0.0 && throw(ArgumentError("Division by zero detected."));
+	b == 0.0 && return Ban(0, copysign(Inf, a.num1), 0.0, 0.0, false); # ATTENZIONE QUESTO PUÒ GENERARE COMPORTAMENTI INASPETTATI
 	a == 0.0 && return a;
 
 	num = _div_body(get_monosemia(a), get_monosemia(b));

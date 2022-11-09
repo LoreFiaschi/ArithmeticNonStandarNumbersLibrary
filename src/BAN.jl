@@ -24,7 +24,7 @@ export component_wise_division, retrieve_infinitesimals
 abstract type AbstractAlgNum <: Number end
 
 # Ban dimension
-const SIZE = 3;
+const SIZE = 2;
 
 # Ban declaration
 mutable struct Ban <: AbstractAlgNum
@@ -990,6 +990,8 @@ end
 
 
 # TODO
+#
+# Make division compliant with Julia standard: 1/0 = Inf
 #
 # NA-IPM: rename solve_standardqp into solve_qp
 #
