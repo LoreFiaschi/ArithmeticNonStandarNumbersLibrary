@@ -1,7 +1,9 @@
 #include <limits>
 #include <cstdlib>
 #include <cmath>
-#include "../src/ban.h"
+//#include "../src/ban.h"
+//#include "../src/ban_basic.h"
+#include "../src/ban_s3.h"
 using namespace std;
 typedef float T;
 
